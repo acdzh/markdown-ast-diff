@@ -1,0 +1,236 @@
+<html><head>
+    <style>
+      /* 基本样式 */
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      
+      /* 标题样式 */
+      h1, h2, h3, h4, h5, h6 {
+        margin-top: 1.5em;
+        margin-bottom: 0.5em;
+        font-weight: 600;
+        line-height: 1.25;
+      }
+      h1 { font-size: 2em; border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; }
+      h2 { font-size: 1.5em; border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; }
+      h3 { font-size: 1.25em; }
+      h4 { font-size: 1em; }
+      h5 { font-size: 0.875em; }
+      h6 { font-size: 0.85em; color: #6a737d; }
+      
+      /* 段落样式 */
+      p {
+        margin-top: 0;
+        margin-bottom: 16px;
+      }
+      
+      /* 链接样式 */
+      a {
+        color: #0366d6;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      
+      /* 列表样式 */
+      ul, ol {
+        padding-left: 2em;
+        margin-top: 0;
+        margin-bottom: 16px;
+      }
+      li {
+        margin-bottom: 0.25em;
+      }
+      
+      /* 代码样式 */
+      code {
+        font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+        padding: 0.2em 0.4em;
+        margin: 0;
+        font-size: 85%;
+        background-color: rgba(27, 31, 35, 0.05);
+        border-radius: 3px;
+      }
+      pre {
+        font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+        padding: 16px;
+        overflow: auto;
+        font-size: 85%;
+        line-height: 1.45;
+        background-color: #f6f8fa;
+        border-radius: 3px;
+        margin-top: 0;
+        margin-bottom: 16px;
+      }
+      pre code {
+        padding: 0;
+        margin: 0;
+        background-color: transparent;
+        border: 0;
+      }
+      
+      /* 引用样式 */
+      blockquote {
+        padding: 0 1em;
+        color: #6a737d;
+        border-left: 0.25em solid #dfe2e5;
+        margin: 0 0 16px 0;
+      }
+      
+      /* 表格样式 */
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 16px;
+        display: block;
+        overflow-x: auto;
+      }
+      table th, table td {
+        padding: 6px 13px;
+        border: 1px solid #dfe2e5;
+      }
+      table tr {
+        background-color: #fff;
+        border-top: 1px solid #c6cbd1;
+      }
+      table tr:nth-child(2n) {
+        background-color: #f6f8fa;
+      }
+      table th {
+        font-weight: 600;
+        background-color: #f6f8fa;
+      }
+      .align-left {
+        text-align: left;
+      }
+      .align-center {
+        text-align: center;
+      }
+      .align-right {
+        text-align: right;
+      }
+      
+      /* 水平线样式 */
+      hr {
+        height: 0.25em;
+        padding: 0;
+        margin: 24px 0;
+        background-color: #e1e4e8;
+        border: 0;
+      }
+      
+      /* 差异标记样式 */
+      ins {
+        background-color: #e6ffec;
+        color: #24292e;
+        text-decoration: none;
+        border-radius: 2px;
+        padding: 0 2px;
+      }
+      
+      del {
+        background-color: #ffebe9;
+        color: #24292e;
+        text-decoration: line-through;
+        border-radius: 2px;
+        padding: 0 2px;
+      }
+
+      ins.diff-block, del.diff-block {
+        display: block;
+        padding-left: 10px;
+        border-left-width: 3px;
+        border-left-style: solid;
+      }
+      
+      ins.diff-block {
+        border-left-color: #2cbe4e;
+      }
+      
+      del.diff-block {
+        border-left-color: #cb2431;
+      }
+
+      ins > hr, ins > pre.code {
+        background-color: #e6ffec;
+      }
+
+      del > hr, del > pre.code {
+        background-color: #ffebe9;
+      }
+      
+      /* 列表项差异样式 */
+      li.list-item-ins, li[data-diff="ins"] {
+        background-color: #e6ffec;
+        border-radius: 2px;
+      }
+      
+      li.list-item-del, li[data-diff="del"] {
+        background-color: #ffebe9;
+        border-radius: 2px;
+        text-decoration: line-through;
+      }
+    </style>
+  </head><body><div class="markdown-content"><h1 class="heading-1"><span class="text">复杂 Markdown 文档示例</span><ins class="diff-inline"><span class="text">（更新版）</span></ins></h1><h2 class="heading-2"><span class="text">1. 文档概述</span></h2><p class="paragraph"><span class="text">这是一个包含多种 Markdown 元素的复杂文档示例，用于测试差异比较功能。</span><ins class="diff-inline"><span class="text">此版本包含了多处更新和修改。</span></ins></p><h2 class="heading-2"><span class="text">2. 文本格式</span><ins class="diff-inline"><span class="text">121212</span></ins></h2><p class="paragraph"><span class="text">这段文字包含</span><strong class="strong"><span class="text">粗体</span></strong><span class="text">、</span><em class="emphasis"><span class="text">斜体</span></em><del class="diff-inline"><span class="text">和</span></del><ins class="diff-inline"><span class="text">、</span></ins><del class="diff-inline"><em class="emphasis"><strong class="strong"><span class="text">粗斜体</span></strong></em></del><ins class="diff-inline"><em class="emphasis"><strong class="strong"><span class="text">粗斜体</span></strong></em></ins><span class="text">格式</span><del class="diff-inline"><span class="text">，还有</span></del><ins class="diff-inline"><span class="text">和</span></ins><ins class="diff-inline"><strong class="strong"><span class="text">新增的粗体</span></strong></ins><ins class="diff-inline"><span class="text">，还有</span></ins><del class="diff-inline"><code >行内代码</code></del><ins class="diff-inline"><code >更新的行内代码</code></ins><del class="diff-inline"><span class="text">和</span></del><del class="diff-inline"><del class="delete"><span class="text">删除线</span></del></del><del class="diff-inline"><span class="text">文本</span></del><span class="text">。</span></p><ins class="diff-block"><p class="paragraph"><del class="delete"><span class="text">删除线</span></del><span class="text">文本以及==新增的高亮==文本。</span></p></ins><h2 class="heading-2"><span class="text">3. 列表</span></h2><h3 class="heading-3"><span class="text">3.1 无序列表</span></h3><ul class="unordered-list"><li value="1" data-diff="del" class="list-item list-item-del"><p class="paragraph"><span class="text">主要功能</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">子功能 1</span></p></li><li value="2" class="list-item"><p class="paragraph"><span class="text">子功能 2</span></p></li></ul></li><li value="1" data-diff="ins" class="list-item list-item-ins"><p class="paragraph"><span class="text">主要功能（已更新）</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">子功能 1</span></p></li><li value="2" class="list-item"><p class="paragraph"><span class="text">新增子功能</span></p></li><li value="3" class="list-item"><p class="paragraph"><span class="text">子功能 2</span></p></li></ul></li><li value="2" data-diff="del" class="list-item list-item-del"><p class="paragraph"><span class="text">次要功能</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">子功能 A</span></p></li><li value="2" class="list-item"><p class="paragraph"><span class="text">子功能 B</span></p></li></ul></li><li value="2" data-diff="ins" class="list-item list-item-ins"><p class="paragraph"><span class="text">次要功能</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">子功能 A</span></p></li><li value="2" class="list-item"><p class="paragraph"><span class="text">子功能 C（新增）</span></p></li><li value="3" class="list-item"><p class="paragraph"><span class="text">子功能 B（已更新）</span></p></li></ul></li></ul><h3 class="heading-3"><span class="text">3.2 有序列表</span></h3><ol class="ordered-list"><li value="1" data-diff="del" class="list-item list-item-del"><p class="paragraph"><span class="text">第一步</span></p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">子步骤 1</span></p></li><li value="2" class="list-item"><p class="paragraph"><span class="text">子步骤 2</span></p></li></ol></li><li value="1" data-diff="ins" class="list-item list-item-ins"><p class="paragraph"><span class="text">第一步（已修改）</span></p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">子步骤 1</span></p></li><li value="2" class="list-item"><p class="paragraph"><span class="text">子步骤 2</span></p></li><li value="3" class="list-item"><p class="paragraph"><span class="text">新增子步骤</span></p></li></ol></li><li value="2" data-diff="del" class="list-item list-item-del"><p class="paragraph"><span class="text">第二步</span></p></li><li value="2" data-diff="ins" class="list-item list-item-ins"><p class="paragraph"><span class="text">新增步骤</span></p></li><li value="3" data-diff="del" class="list-item list-item-del"><p class="paragraph"><span class="text">第三步</span></p></li><li value="3" data-diff="ins" class="list-item list-item-ins"><p class="paragraph"><span class="text">第二步</span></p></li><li value="4" data-diff="ins" class="list-item list-item-ins"><p class="paragraph"><span class="text">第三步</span></p></li></ol><ins class="diff-block"><p class="paragraph"><span class="text">1</span></p></ins><ins class="diff-block"><p class="paragraph"><span class="text">2</span></p></ins><ins class="diff-block"><p class="paragraph"><span class="text">3</span></p></ins><h3 class="heading-3"><span class="text">3.3 任务列表</span></h3><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">已完成任务</span></p></li><li value="2" data-diff="del" class="list-item list-item-del"><p class="paragraph"><span class="text">未完成任务</span></p></li><li value="2" data-diff="ins" class="list-item list-item-ins"><p class="paragraph"><span class="text">未完成任务（现已完成）</span></p></li><li value="3" data-diff="del" class="list-item list-item-del"><p class="paragraph"><span class="text">待办事项</span></p></li><li value="3" data-diff="ins" class="list-item list-item-ins"><p class="paragraph"><span class="text">新增任务</span></p></li><li value="4" data-diff="ins" class="list-item list-item-ins"><p class="paragraph"><span class="text">待办事项</span></p></li></ul><h2 class="heading-2"><span class="text">4. 代码块</span></h2><del class="diff-block"><pre class="code" data-language="javascript"><code>function example() {
+  const message = &#39;Hello, World!&#39;;
+  console.log(message);
+  return {
+    status: &#39;success&#39;,
+    data: message
+  };
+}
+
+example();</code></pre></del><ins class="diff-block"><pre class="code" data-language="java"><code>function example(): { status: string; data: string } {
+  // 添加类型注解
+  const message: string = &#39;Hello, Updated World!&#39;;
+  console.log(message);
+  
+  // 添加错误处理
+  try {
+    return {
+      status: &#39;success&#39;,
+      data: message
+    };
+  } catch (error) {
+    console.error(&#39;An error occurred:&#39;, error);
+    return {
+      status: &#39;error&#39;,
+      data: &#39;Failed to process&#39;
+    };
+  }
+}
+
+example();</code></pre></ins><h2 class="heading-2"><span class="text">5. 表格</span></h2><del class="diff-block"><table class="markdown-table"><tr class="table-row"><td class="table-cell"><span class="text">功能</span></td><td class="table-cell"><span class="text">状态</span></td><td class="table-cell"><span class="text">优先级</span></td></tr><tr class="table-row"><td class="table-cell"><span class="text">功能 A</span></td><td class="table-cell"><span class="text">已完成</span></td><td class="table-cell"><span class="text">高</span></td></tr><tr class="table-row"><td class="table-cell"><span class="text">功能 B</span></td><td class="table-cell"><span class="text">进行中</span></td><td class="table-cell"><span class="text">中</span></td></tr><tr class="table-row"><td class="table-cell"><span class="text">功能 C</span></td><td class="table-cell"><span class="text">计划中</span></td><td class="table-cell"><span class="text">低</span></td></tr></table></del><ins class="diff-block"><table class="markdown-table"><tr class="table-row"><td class="table-cell"><span class="text">功能</span></td><td class="table-cell"><span class="text">状态</span></td><td class="table-cell"><span class="text">优先级</span></td><td class="table-cell"><span class="text">负责人</span></td></tr><tr class="table-row"><td class="table-cell"><span class="text">功能 A</span></td><td class="table-cell"><span class="text">已完成</span></td><td class="table-cell"><span class="text">高</span></td><td class="table-cell"><span class="text">张三</span></td></tr><tr class="table-row"><td class="table-cell"><span class="text">功能 B</span></td><td class="table-cell"><span class="text">已完成</span></td><td class="table-cell"><span class="text">中</span></td><td class="table-cell"><span class="text">李四</span></td></tr><tr class="table-row"><td class="table-cell"><span class="text">功能 D</span></td><td class="table-cell"><span class="text">新增</span></td><td class="table-cell"><span class="text">高</span></td><td class="table-cell"><span class="text">王五</span></td></tr><tr class="table-row"><td class="table-cell"><span class="text">功能 C</span></td><td class="table-cell"><span class="text">进行中</span></td><td class="table-cell"><span class="text">低</span></td><td class="table-cell"><span class="text">赵六</span></td></tr></table></ins><h2 class="heading-2"><span class="text">6. 引用</span></h2><blockquote ><p class="paragraph"><span class="text">这是一段</span><ins class="diff-inline"><span class="text">更新后的</span></ins><span class="text">引用文本</span></p><blockquote ><p class="paragraph"><span class="text">这是嵌套引用</span><ins class="diff-inline"><span class="text">（已更新）</span></ins></p><ins class="diff-block"><blockquote ><p class="paragraph"><span class="text">这是新增的三级引用</span></p></blockquote></ins></blockquote></blockquote><h2 class="heading-2"><span class="text">7. 链接和图片</span></h2><h3 class="heading-3"><span class="text">7.1 链接</span></h3><del class="diff-block"><p class="paragraph"><a href="https://example.com" title="null"><span class="text">示例链接</span></a></p></del><ins class="diff-block"><p class="paragraph"><a href="https://example.org" title="null"><span class="text">更新后的示例链接</span></a></p></ins><ins class="diff-block"><p class="paragraph"><a href="https://example.com/new" title="null"><span class="text">新增的链接</span></a></p></ins><h3 class="heading-3"><span class="text">7.2 图片</span></h3><del class="diff-block"><p class="paragraph"><img src="https://example.com/image.jpg" alt="示例图片" title="null" /></p></del><ins class="diff-block"><p class="paragraph"><img src="https://example.org/updated-image.jpg" alt="更新后的示例图片" title="null" /></p></ins><ins class="diff-block"><p class="paragraph"><img src="https://example.com/new-image.jpg" alt="新增的示例图片" title="null" /></p></ins><h2 class="heading-2"><span class="text">8. 水平线</span></h2><hr  /><ins class="diff-block"><hr  /></ins><h2 class="heading-2"><span class="text">9. 数学公式</span></h2><del class="diff-block"><p class="paragraph"><span class="text">行内公式：$E = mc^2$</span></p></del><ins class="diff-block"><p class="paragraph"><span class="text">行内公式：$E = mc^2$ 和新增的 $F = ma$</span></p></ins><del class="diff-block"><p class="paragraph"><span class="text">块级公式：</span></p></del><ins class="diff-block"><p class="paragraph"><span class="text">块级公式：</span></p></ins><del class="diff-block"><p class="paragraph"><span class="text">$$
+\frac{d}{dx}\left( \int_{a}^{x} f(u),du\right)=f(x)
+$$</span></p></del><ins class="diff-block"><p class="paragraph"><span class="text">$$
+\frac{d}{dx}\left( \int_{a}^{x} f(u),du\right)=f(x)
+$$</span></p></ins><ins class="diff-block"><p class="paragraph"><span class="text">新增的公式：</span></p></ins><ins class="diff-block"><p class="paragraph"><span class="text">$$
+\sum_{i=1}^{n} i = \frac{n(n+1)}{2}
+$$</span></p></ins><h2 class="heading-2"><span class="text">10. 脚注</span></h2><del class="diff-block"><p class="paragraph"><span class="text">这里有一个脚注</span><span class="text">。</span></p></del><ins class="diff-block"><p class="paragraph"><span class="text">这里有一个脚注</span><span class="text">和一个新增的脚注</span><span class="text">。</span></p></ins><del class="diff-block"><p class="paragraph"><span class="text">这是脚注内容。</span></p></del><ins class="diff-block"><p class="paragraph"><span class="text">这是更新</span><strong class="strong"><span class="text">后的</span></strong><span class="text">脚注内容。</span></p></ins><ins class="diff-block"><p class="paragraph"><span class="text">这是新增的脚注内容。</span></p></ins><h2 class="heading-2"><span class="text">11. 定义列表</span></h2><del class="diff-block"><p class="paragraph"><span class="text">术语 1
+: 定义 1</span></p></del><ins class="diff-block"><p class="paragraph"><span class="text">术语 1（已更新）
+: 更新后的定义 1</span></p></ins><del class="diff-block"><p class="paragraph"><span class="text">术语 2
+: 定义 2</span></p></del><ins class="diff-block"><p class="paragraph"><span class="text">术语 2
+: 定义 2</span></p></ins><ins class="diff-block"><p class="paragraph"><span class="text">新术语
+: 新定义</span></p></ins><h2 class="heading-2"><span class="text">12. HTML 内嵌</span></h2><del class="diff-block"><div ><div style="color:rgb(196, 29, 29); margin: 10px;">
+  <p>这是一个使用 HTML 的示例</p>
+  <ul>
+    <li>项目 1</li>
+    <li>项目 2</li>
+  </ul>
+</div></div></del><ins class="diff-block"><div ><div style="color:rgba(19, 157, 220, 0.86); margin: 15px; border-radius: 5px;">
+  <p>这是一个更新后使用 HTML 的示例</p>
+  <ul>
+    <li>更新的项目 1</li>
+    <li>项目 2</li>
+    <li>新增的项目 3</li>
+  </ul>
+  <button>新增的按钮</button>
+</div></div></ins><div ><div>1212</div></div><h2 class="heading-2"><span class="text">13. 总结</span></h2><del class="diff-block"><p class="paragraph"><span class="text">这个文档展示了多种 Markdown 元素的使用方式，可以用于测试差异比较功能。</span></p></del><ins class="diff-block"><p class="paragraph"><span class="text">这个更新后的文档展示了多种 Markdown 元素的使用方式及其变更，可以用于测试差异比较功能的效果。</span></p></ins><ins class="diff-block"><h2 class="heading-2"><span class="text">14. 新增章节</span></h2></ins><ins class="diff-block"><p class="paragraph"><span class="text">这是一个全新的章节，用于测试章节的添加。</span></p></ins><ins class="diff-block"><h3 class="heading-3"><span class="text">14.1 新增子章节</span></h3></ins><ins class="diff-block"><p class="paragraph"><span class="text">这是新增章节中的子章节内容。</span></p></ins><ins class="diff-block"><h2 class="heading-2"></h2></ins></div></body></html>

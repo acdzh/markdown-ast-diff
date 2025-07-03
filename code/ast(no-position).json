@@ -1,0 +1,106 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "heading",
+      "depth": 1,
+      "children": [
+        {
+          "type": "text",
+          "value": "代码示例"
+        },
+        {
+          "type": "text",
+          "value": "（更新版）",
+          "data": {
+            "diff": "ins"
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "JavaScript 代码"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "javascript",
+      "meta": null,
+      "value": "function calculateSum(a, b) {\n  return a + b;\n}\n\nconst result = calculateSum(5, 3);\nconsole.log(\"结果是:\", result);",
+      "data": {
+        "diff": "del"
+      }
+    },
+    {
+      "type": "code",
+      "lang": "javascript",
+      "meta": null,
+      "value": "function calculateSum(a, b) {\n  // 添加参数验证\n  if (typeof a !== 'number' || typeof b !== 'number') {\n    throw new Error('参数必须是数字');\n  }\n  return a + b;\n}\n\nconst result = calculateSum(10, 5);\nconsole.log(\"计算结果:\", result);",
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Python 代码"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "python",
+      "meta": null,
+      "value": "def calculate_sum(a, b):\n    return a + b\n\nresult = calculate_sum(5, 3)\nprint(\"结果是:\", result)",
+      "data": {
+        "diff": "del"
+      }
+    },
+    {
+      "type": "code",
+      "lang": "python",
+      "meta": null,
+      "value": "def calculate_sum(a, b):\n    # 添加参数验证\n    if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):\n        raise TypeError(\"参数必须是数字\")\n    return a + b\n\nresult = calculate_sum(10, 5)\nprint(f\"计算结果: {result}\")",
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "HTML 代码"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "html",
+      "meta": null,
+      "value": "<!DOCTYPE html>\n<html>\n<head>\n    <title>示例页面</title>\n</head>\n<body>\n    <h1>Hello World</h1>\n    <p>这是一个段落。</p>\n</body>\n</html>",
+      "data": {
+        "diff": "del"
+      }
+    },
+    {
+      "type": "code",
+      "lang": "html",
+      "meta": null,
+      "value": "<!DOCTYPE html>\n<html lang=\"zh-CN\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>更新后的示例页面</title>\n    <link rel=\"stylesheet\" href=\"styles.css\">\n</head>\n<body>\n    <header>\n        <h1>Hello World</h1>\n    </header>\n    <main>\n        <p>这是一个更新后的段落。</p>\n        <button>点击我</button>\n    </main>\n    <footer>\n        <p>© 2023 示例公司</p>\n    </footer>\n</body>\n</html>",
+      "data": {
+        "diff": "ins"
+      }
+    }
+  ]
+}

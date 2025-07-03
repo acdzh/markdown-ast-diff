@@ -1,0 +1,671 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "heading",
+      "depth": 1,
+      "children": [
+        {
+          "type": "text",
+          "value": "链接和图片示例"
+        },
+        {
+          "type": "text",
+          "value": "（更新版）",
+          "data": {
+            "diff": "ins"
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "链接"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "这是一个"
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://example.com",
+          "children": [
+            {
+              "type": "text",
+              "value": "内联链接"
+            }
+          ],
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://example.org",
+          "children": [
+            {
+              "type": "text",
+              "value": "更新的内联链接"
+            }
+          ],
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "text",
+          "value": "。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "这是一个"
+        },
+        {
+          "type": "link",
+          "title": "示例网站",
+          "url": "https://example.com",
+          "children": [
+            {
+              "type": "text",
+              "value": "带标题的链接"
+            }
+          ],
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "link",
+          "title": "更新后的示例网站",
+          "url": "https://example.com",
+          "children": [
+            {
+              "type": "text",
+              "value": "带标题的链接"
+            }
+          ],
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "text",
+          "value": "。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "这是一个"
+        },
+        {
+          "type": "linkReference",
+          "children": [
+            {
+              "type": "text",
+              "value": "参考链接"
+            }
+          ],
+          "label": "1",
+          "identifier": "1",
+          "referenceType": "full"
+        },
+        {
+          "type": "text",
+          "value": "。",
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "text",
+          "value": "和一个",
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "linkReference",
+          "children": [
+            {
+              "type": "text",
+              "value": "新增的参考链接"
+            }
+          ],
+          "label": "2",
+          "identifier": "2",
+          "referenceType": "full",
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "text",
+          "value": "。",
+          "data": {
+            "diff": "ins"
+          }
+        }
+      ]
+    },
+    {
+      "type": "definition",
+      "identifier": "1",
+      "label": "1",
+      "title": "参考链接",
+      "url": "https://example.com/reference",
+      "data": {
+        "diff": "del"
+      }
+    },
+    {
+      "type": "definition",
+      "identifier": "1",
+      "label": "1",
+      "title": "更新的参考链接",
+      "url": "https://example.org/reference",
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "definition",
+      "identifier": "2",
+      "label": "2",
+      "title": "新增的参考链接",
+      "url": "https://example.com/new-reference",
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "图片"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "image",
+          "title": null,
+          "url": "https://example.com/image.jpg",
+          "alt": "示例图片",
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "image",
+          "title": null,
+          "url": "https://example.org/updated-image.jpg",
+          "alt": "更新的示例图片",
+          "data": {
+            "diff": "ins"
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "image",
+          "title": "示例图片标题",
+          "url": "https://example.com/image.jpg",
+          "alt": "带标题的图片",
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "image",
+          "title": "更新后的示例图片标题",
+          "url": "https://example.com/image.jpg",
+          "alt": "带标题的图片",
+          "data": {
+            "diff": "ins"
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "imageReference",
+          "alt": "参考图片",
+          "label": "image1",
+          "identifier": "image1",
+          "referenceType": "full"
+        }
+      ]
+    },
+    {
+      "type": "definition",
+      "identifier": "image1",
+      "label": "image1",
+      "title": "参考图片标题",
+      "url": "https://example.com/reference-image.jpg",
+      "data": {
+        "diff": "del"
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "imageReference",
+          "alt": "新增的参考图片",
+          "label": "image2",
+          "identifier": "image2",
+          "referenceType": "full"
+        }
+      ],
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "definition",
+      "identifier": "image1",
+      "label": "image1",
+      "title": "更新的参考图片标题",
+      "url": "https://example.org/reference-image.jpg",
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "definition",
+      "identifier": "image2",
+      "label": "image2",
+      "title": "新增的参考图片标题",
+      "url": "https://example.com/new-reference-image.jpg",
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "链接列表"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://github.com",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "GitHub"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://google.com",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Google"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://microsoft.com",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Microsoft"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://baidu.com",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "百度"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://google.com",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Google"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://baidu.com",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "百度"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://example.com/new",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "新增链接"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "data": {
+            "diff": "ins"
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "图文混排"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://example.com",
+          "children": [
+            {
+              "type": "image",
+              "title": null,
+              "url": "https://example.com/linked-image.jpg",
+              "alt": "带链接的图片"
+            }
+          ]
+        }
+      ],
+      "data": {
+        "diff": "del"
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "这段文字包含一个",
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://example.com",
+          "children": [
+            {
+              "type": "text",
+              "value": "链接"
+            }
+          ],
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://example.org",
+          "children": [
+            {
+              "type": "image",
+              "title": null,
+              "url": "https://example.org/linked-image.jpg",
+              "alt": "更新的带链接的图片"
+            }
+          ],
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "text",
+          "value": "和一个",
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "image",
+          "title": null,
+          "url": "https://example.com/inline-image.jpg",
+          "alt": "内联图片",
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "text",
+          "value": "。",
+          "data": {
+            "diff": "del"
+          }
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "这段更新后的文字包含一个"
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://example.org",
+          "children": [
+            {
+              "type": "text",
+              "value": "更新的链接"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "和一个"
+        },
+        {
+          "type": "image",
+          "title": null,
+          "url": "https://example.org/inline-image.jpg",
+          "alt": "更新的内联图片"
+        },
+        {
+          "type": "text",
+          "value": "。"
+        }
+      ],
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "新增的段落，包含一个"
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://example.com/new",
+          "children": [
+            {
+              "type": "text",
+              "value": "新链接"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "。"
+        }
+      ],
+      "data": {
+        "diff": "ins"
+      }
+    }
+  ]
+}

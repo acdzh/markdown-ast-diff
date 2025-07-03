@@ -1,0 +1,182 @@
+<html><head>
+    <style>
+      /* 基本样式 */
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      
+      /* 标题样式 */
+      h1, h2, h3, h4, h5, h6 {
+        margin-top: 1.5em;
+        margin-bottom: 0.5em;
+        font-weight: 600;
+        line-height: 1.25;
+      }
+      h1 { font-size: 2em; border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; }
+      h2 { font-size: 1.5em; border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; }
+      h3 { font-size: 1.25em; }
+      h4 { font-size: 1em; }
+      h5 { font-size: 0.875em; }
+      h6 { font-size: 0.85em; color: #6a737d; }
+      
+      /* 段落样式 */
+      p {
+        margin-top: 0;
+        margin-bottom: 16px;
+      }
+      
+      /* 链接样式 */
+      a {
+        color: #0366d6;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      
+      /* 列表样式 */
+      ul, ol {
+        padding-left: 2em;
+        margin-top: 0;
+        margin-bottom: 16px;
+      }
+      li {
+        margin-bottom: 0.25em;
+      }
+      
+      /* 代码样式 */
+      code {
+        font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+        padding: 0.2em 0.4em;
+        margin: 0;
+        font-size: 85%;
+        background-color: rgba(27, 31, 35, 0.05);
+        border-radius: 3px;
+      }
+      pre {
+        font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+        padding: 16px;
+        overflow: auto;
+        font-size: 85%;
+        line-height: 1.45;
+        background-color: #f6f8fa;
+        border-radius: 3px;
+        margin-top: 0;
+        margin-bottom: 16px;
+      }
+      pre code {
+        padding: 0;
+        margin: 0;
+        background-color: transparent;
+        border: 0;
+      }
+      
+      /* 引用样式 */
+      blockquote {
+        padding: 0 1em;
+        color: #6a737d;
+        border-left: 0.25em solid #dfe2e5;
+        margin: 0 0 16px 0;
+      }
+      
+      /* 表格样式 */
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 16px;
+        display: block;
+        overflow-x: auto;
+      }
+      table th, table td {
+        padding: 6px 13px;
+        border: 1px solid #dfe2e5;
+      }
+      table tr {
+        background-color: #fff;
+        border-top: 1px solid #c6cbd1;
+      }
+      table tr:nth-child(2n) {
+        background-color: #f6f8fa;
+      }
+      table th {
+        font-weight: 600;
+        background-color: #f6f8fa;
+      }
+      .align-left {
+        text-align: left;
+      }
+      .align-center {
+        text-align: center;
+      }
+      .align-right {
+        text-align: right;
+      }
+      
+      /* 水平线样式 */
+      hr {
+        height: 0.25em;
+        padding: 0;
+        margin: 24px 0;
+        background-color: #e1e4e8;
+        border: 0;
+      }
+      
+      /* 差异标记样式 */
+      ins {
+        background-color: #e6ffec;
+        color: #24292e;
+        text-decoration: none;
+        border-radius: 2px;
+        padding: 0 2px;
+      }
+      
+      del {
+        background-color: #ffebe9;
+        color: #24292e;
+        text-decoration: line-through;
+        border-radius: 2px;
+        padding: 0 2px;
+      }
+
+      ins.diff-block, del.diff-block {
+        display: block;
+        padding-left: 10px;
+        border-left-width: 3px;
+        border-left-style: solid;
+      }
+      
+      ins.diff-block {
+        border-left-color: #2cbe4e;
+      }
+      
+      del.diff-block {
+        border-left-color: #cb2431;
+      }
+
+      ins > hr, ins > pre.code {
+        background-color: #e6ffec;
+      }
+
+      del > hr, del > pre.code {
+        background-color: #ffebe9;
+      }
+      
+      /* 列表项差异样式 */
+      li.list-item-ins, li[data-diff="ins"] {
+        background-color: #e6ffec;
+        border-radius: 2px;
+      }
+      
+      li.list-item-del, li[data-diff="del"] {
+        background-color: #ffebe9;
+        border-radius: 2px;
+        text-decoration: line-through;
+      }
+    </style>
+  </head><body><div class="markdown-content"><h1 class="heading-1"><span class="text">表格示例</span><ins class="diff-inline"><span class="text">（更新版）</span></ins></h1><h2 class="heading-2"><span class="text">简单表格</span></h2><del class="diff-block"><table class="markdown-table"><tr class="table-row"><td class="table-cell"><span class="text">姓名</span></td><td class="table-cell"><span class="text">年龄</span></td><td class="table-cell"><span class="text">职业</span></td></tr><tr class="table-row"><td class="table-cell"><span class="text">张三</span></td><td class="table-cell"><span class="text">25</span></td><td class="table-cell"><span class="text">工程师</span></td></tr><tr class="table-row"><td class="table-cell"><span class="text">李四</span></td><td class="table-cell"><span class="text">30</span></td><td class="table-cell"><span class="text">设计师</span></td></tr><tr class="table-row"><td class="table-cell"><span class="text">王五</span></td><td class="table-cell"><span class="text">28</span></td><td class="table-cell"><span class="text">产品经理</span></td></tr></table></del><ins class="diff-block"><table class="markdown-table"><tr class="table-row"><td class="table-cell"><span class="text">姓名</span></td><td class="table-cell"><span class="text">年龄</span></td><td class="table-cell"><span class="text">职业</span></td><td class="table-cell"><span class="text">部门</span></td></tr><tr class="table-row"><td class="table-cell"><span class="text">张三</span></td><td class="table-cell"><span class="text">26</span></td><td class="table-cell"><span class="text">高级工程师</span></td><td class="table-cell"><span class="text">研发部</span></td></tr><tr class="table-row"><td class="table-cell"><span class="text">李四</span></td><td class="table-cell"><span class="text">30</span></td><td class="table-cell"><span class="text">设计师</span></td><td class="table-cell"><span class="text">设计部</span></td></tr><tr class="table-row"><td class="table-cell"><span class="text">赵六</span></td><td class="table-cell"><span class="text">32</span></td><td class="table-cell"><span class="text">产品总监</span></td><td class="table-cell"><span class="text">产品部</span></td></tr><tr class="table-row"><td class="table-cell"><span class="text">王五</span></td><td class="table-cell"><span class="text">28</span></td><td class="table-cell"><span class="text">产品经理</span></td><td class="table-cell"><span class="text">产品部</span></td></tr></table></ins><h2 class="heading-2"><span class="text">对齐方式</span></h2><del class="diff-block"><table class="markdown-table"><tr class="table-row"><td class="table-cell"><span class="text">左对齐</span></td><td class="table-cell"><span class="text">居中</span></td><td class="table-cell"><span class="text">右对齐</span></td></tr><tr class="table-row"><td class="table-cell"><span class="text">内容1</span></td><td class="table-cell"><span class="text">内容2</span></td><td class="table-cell"><span class="text">内容3</span></td></tr><tr class="table-row"><td class="table-cell"><span class="text">长文本内容</span></td><td class="table-cell"><span class="text">长文本内容</span></td><td class="table-cell"><span class="text">长文本内容</span></td></tr></table></del><ins class="diff-block"><table class="markdown-table"><tr class="table-row"><td class="table-cell"><span class="text">左对齐</span></td><td class="table-cell"><span class="text">居中</span></td><td class="table-cell"><span class="text">右对齐</span></td></tr><tr class="table-row"><td class="table-cell"><span class="text">新内容1</span></td><td class="table-cell"><span class="text">新内容2</span></td><td class="table-cell"><span class="text">新内容3</span></td></tr><tr class="table-row"><td class="table-cell"><span class="text">长文本内容已修改</span></td><td class="table-cell"><span class="text">长文本内容已修改</span></td><td class="table-cell"><span class="text">长文本内容已修改</span></td></tr><tr class="table-row"><td class="table-cell"><span class="text">新增行</span></td><td class="table-cell"><span class="text">新增行</span></td><td class="table-cell"><span class="text">新增行</span></td></tr></table></ins><h2 class="heading-2"><span class="text">复杂表格</span></h2><del class="diff-block"><table class="markdown-table"><tr class="table-row"><td class="table-cell"><span class="text">项目</span></td><td class="table-cell"><span class="text">Q1</span></td><td class="table-cell"><span class="text">Q2</span></td><td class="table-cell"><span class="text">Q3</span></td><td class="table-cell"><span class="text">Q4</span></td><td class="table-cell"><span class="text">总计</span></td></tr><tr class="table-row"><td class="table-cell"><span class="text">收入</span></td><td class="table-cell"><span class="text">10,000</span></td><td class="table-cell"><span class="text">12,000</span></td><td class="table-cell"><span class="text">15,000</span></td><td class="table-cell"><span class="text">18,000</span></td><td class="table-cell"><span class="text">55,000</span></td></tr><tr class="table-row"><td class="table-cell"><span class="text">支出</span></td><td class="table-cell"><span class="text">8,000</span></td><td class="table-cell"><span class="text">9,000</span></td><td class="table-cell"><span class="text">10,000</span></td><td class="table-cell"><span class="text">12,000</span></td><td class="table-cell"><span class="text">39,000</span></td></tr><tr class="table-row"><td class="table-cell"><span class="text">利润</span></td><td class="table-cell"><span class="text">2,000</span></td><td class="table-cell"><span class="text">3,000</span></td><td class="table-cell"><span class="text">5,000</span></td><td class="table-cell"><span class="text">6,000</span></td><td class="table-cell"><span class="text">16,000</span></td></tr></table></del><ins class="diff-block"><table class="markdown-table"><tr class="table-row"><td class="table-cell"><span class="text">项目</span></td><td class="table-cell"><span class="text">Q1</span></td><td class="table-cell"><span class="text">Q2</span></td><td class="table-cell"><span class="text">Q3</span></td><td class="table-cell"><span class="text">Q4</span></td><td class="table-cell"><span class="text">总计</span></td><td class="table-cell"><span class="text">同比增长</span></td></tr><tr class="table-row"><td class="table-cell"><span class="text">收入</span></td><td class="table-cell"><span class="text">12,000</span></td><td class="table-cell"><span class="text">15,000</span></td><td class="table-cell"><span class="text">18,000</span></td><td class="table-cell"><span class="text">22,000</span></td><td class="table-cell"><span class="text">67,000</span></td><td class="table-cell"><span class="text">21.8%</span></td></tr><tr class="table-row"><td class="table-cell"><span class="text">支出</span></td><td class="table-cell"><span class="text">9,000</span></td><td class="table-cell"><span class="text">10,000</span></td><td class="table-cell"><span class="text">12,000</span></td><td class="table-cell"><span class="text">14,000</span></td><td class="table-cell"><span class="text">45,000</span></td><td class="table-cell"><span class="text">15.4%</span></td></tr><tr class="table-row"><td class="table-cell"><span class="text">利润</span></td><td class="table-cell"><span class="text">3,000</span></td><td class="table-cell"><span class="text">5,000</span></td><td class="table-cell"><span class="text">6,000</span></td><td class="table-cell"><span class="text">8,000</span></td><td class="table-cell"><span class="text">22,000</span></td><td class="table-cell"><span class="text">37.5%</span></td></tr><tr class="table-row"><td class="table-cell"><span class="text">税费</span></td><td class="table-cell"><span class="text">600</span></td><td class="table-cell"><span class="text">1,000</span></td><td class="table-cell"><span class="text">1,200</span></td><td class="table-cell"><span class="text">1,600</span></td><td class="table-cell"><span class="text">4,400</span></td><td class="table-cell"><span class="text">-</span></td></tr></table></ins></div></body></html>

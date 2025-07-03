@@ -1,0 +1,145 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "heading",
+      "depth": 1,
+      "children": [
+        {
+          "type": "text",
+          "value": "标题"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "这是第"
+        },
+        {
+          "type": "text",
+          "value": "一",
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "text",
+          "value": "二",
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "text",
+          "value": "版内容"
+        },
+        {
+          "type": "text",
+          "value": "，增加了内容",
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "text",
+          "value": "。"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "列表项1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "列表项2"
+                }
+              ]
+            }
+          ],
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "列表项3"
+                }
+              ]
+            }
+          ],
+          "data": {
+            "diff": "ins"
+          }
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "ts",
+      "meta": null,
+      "value": "const a = 1;",
+      "data": {
+        "diff": "del"
+      }
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "const a = 2;",
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "$$a=1$$"
+        }
+      ],
+      "data": {
+        "diff": "del"
+      }
+    }
+  ]
+}

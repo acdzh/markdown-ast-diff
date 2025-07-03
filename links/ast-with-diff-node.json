@@ -1,0 +1,1946 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "heading",
+      "depth": 1,
+      "children": [
+        {
+          "type": "text",
+          "value": "链接和图片示例"
+        },
+        {
+          "type": "ins",
+          "children": [
+            {
+              "type": "text",
+              "value": "（更新版）",
+              "data": {}
+            }
+          ]
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 15,
+          "offset": 14
+        }
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "链接",
+          "position": {
+            "start": {
+              "line": 3,
+              "column": 4,
+              "offset": 19
+            },
+            "end": {
+              "line": 3,
+              "column": 6,
+              "offset": 21
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 3,
+          "column": 1,
+          "offset": 16
+        },
+        "end": {
+          "line": 3,
+          "column": 6,
+          "offset": 21
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "这是一个",
+          "position": {
+            "start": {
+              "line": 5,
+              "column": 1,
+              "offset": 23
+            },
+            "end": {
+              "line": 5,
+              "column": 5,
+              "offset": 27
+            }
+          }
+        },
+        {
+          "type": "del",
+          "children": [
+            {
+              "type": "link",
+              "title": null,
+              "url": "https://example.com",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "内联链接",
+                  "position": {
+                    "start": {
+                      "line": 5,
+                      "column": 6,
+                      "offset": 23
+                    },
+                    "end": {
+                      "line": 5,
+                      "column": 10,
+                      "offset": 27
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 5,
+                  "column": 5,
+                  "offset": 22
+                },
+                "end": {
+                  "line": 5,
+                  "column": 32,
+                  "offset": 49
+                }
+              },
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "ins",
+          "children": [
+            {
+              "type": "link",
+              "title": null,
+              "url": "https://example.org",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "更新的内联链接",
+                  "position": {
+                    "start": {
+                      "line": 5,
+                      "column": 6,
+                      "offset": 28
+                    },
+                    "end": {
+                      "line": 5,
+                      "column": 13,
+                      "offset": 35
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 5,
+                  "column": 5,
+                  "offset": 27
+                },
+                "end": {
+                  "line": 5,
+                  "column": 35,
+                  "offset": 57
+                }
+              },
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "。",
+          "position": {
+            "start": {
+              "line": 5,
+              "column": 35,
+              "offset": 57
+            },
+            "end": {
+              "line": 5,
+              "column": 36,
+              "offset": 58
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 5,
+          "column": 1,
+          "offset": 23
+        },
+        "end": {
+          "line": 5,
+          "column": 36,
+          "offset": 58
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "这是一个",
+          "position": {
+            "start": {
+              "line": 7,
+              "column": 1,
+              "offset": 60
+            },
+            "end": {
+              "line": 7,
+              "column": 5,
+              "offset": 64
+            }
+          }
+        },
+        {
+          "type": "del",
+          "children": [
+            {
+              "type": "link",
+              "title": "示例网站",
+              "url": "https://example.com",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "带标题的链接",
+                  "position": {
+                    "start": {
+                      "line": 7,
+                      "column": 6,
+                      "offset": 57
+                    },
+                    "end": {
+                      "line": 7,
+                      "column": 12,
+                      "offset": 63
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 7,
+                  "column": 5,
+                  "offset": 56
+                },
+                "end": {
+                  "line": 7,
+                  "column": 41,
+                  "offset": 92
+                }
+              },
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "ins",
+          "children": [
+            {
+              "type": "link",
+              "title": "更新后的示例网站",
+              "url": "https://example.com",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "带标题的链接",
+                  "position": {
+                    "start": {
+                      "line": 7,
+                      "column": 6,
+                      "offset": 65
+                    },
+                    "end": {
+                      "line": 7,
+                      "column": 12,
+                      "offset": 71
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 7,
+                  "column": 5,
+                  "offset": 64
+                },
+                "end": {
+                  "line": 7,
+                  "column": 45,
+                  "offset": 104
+                }
+              },
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "。",
+          "position": {
+            "start": {
+              "line": 7,
+              "column": 45,
+              "offset": 104
+            },
+            "end": {
+              "line": 7,
+              "column": 46,
+              "offset": 105
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 7,
+          "column": 1,
+          "offset": 60
+        },
+        "end": {
+          "line": 7,
+          "column": 46,
+          "offset": 105
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "这是一个",
+          "position": {
+            "start": {
+              "line": 9,
+              "column": 1,
+              "offset": 107
+            },
+            "end": {
+              "line": 9,
+              "column": 5,
+              "offset": 111
+            }
+          }
+        },
+        {
+          "type": "linkReference",
+          "children": [
+            {
+              "type": "text",
+              "value": "参考链接",
+              "position": {
+                "start": {
+                  "line": 9,
+                  "column": 6,
+                  "offset": 112
+                },
+                "end": {
+                  "line": 9,
+                  "column": 10,
+                  "offset": 116
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 9,
+              "column": 5,
+              "offset": 111
+            },
+            "end": {
+              "line": 9,
+              "column": 14,
+              "offset": 120
+            }
+          },
+          "label": "1",
+          "identifier": "1",
+          "referenceType": "full"
+        },
+        {
+          "type": "del",
+          "children": [
+            {
+              "type": "text",
+              "value": "。",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "ins",
+          "children": [
+            {
+              "type": "text",
+              "value": "和一个",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "ins",
+          "children": [
+            {
+              "type": "linkReference",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "新增的参考链接",
+                  "position": {
+                    "start": {
+                      "line": 9,
+                      "column": 18,
+                      "offset": 124
+                    },
+                    "end": {
+                      "line": 9,
+                      "column": 25,
+                      "offset": 131
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 9,
+                  "column": 17,
+                  "offset": 123
+                },
+                "end": {
+                  "line": 9,
+                  "column": 29,
+                  "offset": 135
+                }
+              },
+              "label": "2",
+              "identifier": "2",
+              "referenceType": "full",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "ins",
+          "children": [
+            {
+              "type": "text",
+              "value": "。",
+              "position": {
+                "start": {
+                  "line": 9,
+                  "column": 29,
+                  "offset": 135
+                },
+                "end": {
+                  "line": 9,
+                  "column": 30,
+                  "offset": 136
+                }
+              },
+              "data": {}
+            }
+          ]
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 9,
+          "column": 1,
+          "offset": 107
+        },
+        "end": {
+          "line": 9,
+          "column": 30,
+          "offset": 136
+        }
+      }
+    },
+    {
+      "type": "del",
+      "children": [
+        {
+          "type": "definition",
+          "identifier": "1",
+          "label": "1",
+          "title": "参考链接",
+          "url": "https://example.com/reference",
+          "position": {
+            "start": {
+              "line": 11,
+              "column": 1,
+              "offset": 111
+            },
+            "end": {
+              "line": 11,
+              "column": 42,
+              "offset": 152
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "definition",
+          "identifier": "1",
+          "label": "1",
+          "title": "更新的参考链接",
+          "url": "https://example.org/reference",
+          "position": {
+            "start": {
+              "line": 11,
+              "column": 1,
+              "offset": 138
+            },
+            "end": {
+              "line": 11,
+              "column": 45,
+              "offset": 182
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "definition",
+          "identifier": "2",
+          "label": "2",
+          "title": "新增的参考链接",
+          "url": "https://example.com/new-reference",
+          "position": {
+            "start": {
+              "line": 12,
+              "column": 1,
+              "offset": 183
+            },
+            "end": {
+              "line": 12,
+              "column": 49,
+              "offset": 231
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "图片",
+          "position": {
+            "start": {
+              "line": 14,
+              "column": 4,
+              "offset": 236
+            },
+            "end": {
+              "line": 14,
+              "column": 6,
+              "offset": 238
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 14,
+          "column": 1,
+          "offset": 233
+        },
+        "end": {
+          "line": 14,
+          "column": 6,
+          "offset": 238
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "del",
+          "children": [
+            {
+              "type": "image",
+              "title": null,
+              "url": "https://example.com/image.jpg",
+              "alt": "示例图片",
+              "position": {
+                "start": {
+                  "line": 15,
+                  "column": 1,
+                  "offset": 161
+                },
+                "end": {
+                  "line": 15,
+                  "column": 39,
+                  "offset": 199
+                }
+              },
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "ins",
+          "children": [
+            {
+              "type": "image",
+              "title": null,
+              "url": "https://example.org/updated-image.jpg",
+              "alt": "更新的示例图片",
+              "position": {
+                "start": {
+                  "line": 16,
+                  "column": 1,
+                  "offset": 240
+                },
+                "end": {
+                  "line": 16,
+                  "column": 50,
+                  "offset": 289
+                }
+              },
+              "data": {}
+            }
+          ]
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 16,
+          "column": 1,
+          "offset": 240
+        },
+        "end": {
+          "line": 16,
+          "column": 50,
+          "offset": 289
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "del",
+          "children": [
+            {
+              "type": "image",
+              "title": "示例图片标题",
+              "url": "https://example.com/image.jpg",
+              "alt": "带标题的图片",
+              "position": {
+                "start": {
+                  "line": 17,
+                  "column": 1,
+                  "offset": 201
+                },
+                "end": {
+                  "line": 17,
+                  "column": 50,
+                  "offset": 250
+                }
+              },
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "ins",
+          "children": [
+            {
+              "type": "image",
+              "title": "更新后的示例图片标题",
+              "url": "https://example.com/image.jpg",
+              "alt": "带标题的图片",
+              "position": {
+                "start": {
+                  "line": 18,
+                  "column": 1,
+                  "offset": 291
+                },
+                "end": {
+                  "line": 18,
+                  "column": 54,
+                  "offset": 344
+                }
+              },
+              "data": {}
+            }
+          ]
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 18,
+          "column": 1,
+          "offset": 291
+        },
+        "end": {
+          "line": 18,
+          "column": 54,
+          "offset": 344
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "imageReference",
+          "alt": "参考图片",
+          "position": {
+            "start": {
+              "line": 20,
+              "column": 1,
+              "offset": 346
+            },
+            "end": {
+              "line": 20,
+              "column": 16,
+              "offset": 361
+            }
+          },
+          "label": "image1",
+          "identifier": "image1",
+          "referenceType": "full"
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 20,
+          "column": 1,
+          "offset": 346
+        },
+        "end": {
+          "line": 20,
+          "column": 16,
+          "offset": 361
+        }
+      }
+    },
+    {
+      "type": "del",
+      "children": [
+        {
+          "type": "definition",
+          "identifier": "image1",
+          "label": "image1",
+          "title": "参考图片标题",
+          "url": "https://example.com/reference-image.jpg",
+          "position": {
+            "start": {
+              "line": 21,
+              "column": 1,
+              "offset": 269
+            },
+            "end": {
+              "line": 21,
+              "column": 59,
+              "offset": 327
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "imageReference",
+              "alt": "新增的参考图片",
+              "position": {
+                "start": {
+                  "line": 22,
+                  "column": 1,
+                  "offset": 363
+                },
+                "end": {
+                  "line": 22,
+                  "column": 19,
+                  "offset": 381
+                }
+              },
+              "label": "image2",
+              "identifier": "image2",
+              "referenceType": "full"
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 22,
+              "column": 1,
+              "offset": 363
+            },
+            "end": {
+              "line": 22,
+              "column": 19,
+              "offset": 381
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "definition",
+          "identifier": "image1",
+          "label": "image1",
+          "title": "更新的参考图片标题",
+          "url": "https://example.org/reference-image.jpg",
+          "position": {
+            "start": {
+              "line": 24,
+              "column": 1,
+              "offset": 383
+            },
+            "end": {
+              "line": 24,
+              "column": 62,
+              "offset": 444
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "definition",
+          "identifier": "image2",
+          "label": "image2",
+          "title": "新增的参考图片标题",
+          "url": "https://example.com/new-reference-image.jpg",
+          "position": {
+            "start": {
+              "line": 25,
+              "column": 1,
+              "offset": 445
+            },
+            "end": {
+              "line": 25,
+              "column": 66,
+              "offset": 510
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "链接列表",
+          "position": {
+            "start": {
+              "line": 27,
+              "column": 4,
+              "offset": 515
+            },
+            "end": {
+              "line": 27,
+              "column": 8,
+              "offset": 519
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 27,
+          "column": 1,
+          "offset": 512
+        },
+        "end": {
+          "line": 27,
+          "column": 8,
+          "offset": 519
+        }
+      }
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://github.com",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "GitHub",
+                      "position": {
+                        "start": {
+                          "line": 29,
+                          "column": 4,
+                          "offset": 524
+                        },
+                        "end": {
+                          "line": 29,
+                          "column": 10,
+                          "offset": 530
+                        }
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 29,
+                      "column": 3,
+                      "offset": 523
+                    },
+                    "end": {
+                      "line": 29,
+                      "column": 31,
+                      "offset": 551
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 29,
+                  "column": 3,
+                  "offset": 523
+                },
+                "end": {
+                  "line": 29,
+                  "column": 31,
+                  "offset": 551
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 29,
+              "column": 1,
+              "offset": 521
+            },
+            "end": {
+              "line": 29,
+              "column": 31,
+              "offset": 551
+            }
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://google.com",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Google",
+                      "position": {
+                        "start": {
+                          "line": 26,
+                          "column": 4,
+                          "offset": 372
+                        },
+                        "end": {
+                          "line": 26,
+                          "column": 10,
+                          "offset": 378
+                        }
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 26,
+                      "column": 3,
+                      "offset": 371
+                    },
+                    "end": {
+                      "line": 26,
+                      "column": 31,
+                      "offset": 399
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 26,
+                  "column": 3,
+                  "offset": 371
+                },
+                "end": {
+                  "line": 26,
+                  "column": 31,
+                  "offset": 399
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 26,
+              "column": 1,
+              "offset": 369
+            },
+            "end": {
+              "line": 26,
+              "column": 31,
+              "offset": 399
+            }
+          },
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://microsoft.com",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Microsoft",
+                      "position": {
+                        "start": {
+                          "line": 30,
+                          "column": 4,
+                          "offset": 555
+                        },
+                        "end": {
+                          "line": 30,
+                          "column": 13,
+                          "offset": 564
+                        }
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 30,
+                      "column": 3,
+                      "offset": 554
+                    },
+                    "end": {
+                      "line": 30,
+                      "column": 37,
+                      "offset": 588
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 30,
+                  "column": 3,
+                  "offset": 554
+                },
+                "end": {
+                  "line": 30,
+                  "column": 37,
+                  "offset": 588
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 30,
+              "column": 1,
+              "offset": 552
+            },
+            "end": {
+              "line": 30,
+              "column": 37,
+              "offset": 588
+            }
+          },
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://baidu.com",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "百度",
+                      "position": {
+                        "start": {
+                          "line": 27,
+                          "column": 4,
+                          "offset": 403
+                        },
+                        "end": {
+                          "line": 27,
+                          "column": 6,
+                          "offset": 405
+                        }
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 27,
+                      "column": 3,
+                      "offset": 402
+                    },
+                    "end": {
+                      "line": 27,
+                      "column": 26,
+                      "offset": 425
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 27,
+                  "column": 3,
+                  "offset": 402
+                },
+                "end": {
+                  "line": 27,
+                  "column": 26,
+                  "offset": 425
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 27,
+              "column": 1,
+              "offset": 400
+            },
+            "end": {
+              "line": 27,
+              "column": 26,
+              "offset": 425
+            }
+          },
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://google.com",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Google",
+                      "position": {
+                        "start": {
+                          "line": 31,
+                          "column": 4,
+                          "offset": 592
+                        },
+                        "end": {
+                          "line": 31,
+                          "column": 10,
+                          "offset": 598
+                        }
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 31,
+                      "column": 3,
+                      "offset": 591
+                    },
+                    "end": {
+                      "line": 31,
+                      "column": 31,
+                      "offset": 619
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 31,
+                  "column": 3,
+                  "offset": 591
+                },
+                "end": {
+                  "line": 31,
+                  "column": 31,
+                  "offset": 619
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 31,
+              "column": 1,
+              "offset": 589
+            },
+            "end": {
+              "line": 31,
+              "column": 31,
+              "offset": 619
+            }
+          },
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://baidu.com",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "百度",
+                      "position": {
+                        "start": {
+                          "line": 32,
+                          "column": 4,
+                          "offset": 623
+                        },
+                        "end": {
+                          "line": 32,
+                          "column": 6,
+                          "offset": 625
+                        }
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 32,
+                      "column": 3,
+                      "offset": 622
+                    },
+                    "end": {
+                      "line": 32,
+                      "column": 26,
+                      "offset": 645
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 32,
+                  "column": 3,
+                  "offset": 622
+                },
+                "end": {
+                  "line": 32,
+                  "column": 26,
+                  "offset": 645
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 32,
+              "column": 1,
+              "offset": 620
+            },
+            "end": {
+              "line": 32,
+              "column": 26,
+              "offset": 645
+            }
+          },
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://example.com/new",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "新增链接",
+                      "position": {
+                        "start": {
+                          "line": 33,
+                          "column": 4,
+                          "offset": 649
+                        },
+                        "end": {
+                          "line": 33,
+                          "column": 8,
+                          "offset": 653
+                        }
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 33,
+                      "column": 3,
+                      "offset": 648
+                    },
+                    "end": {
+                      "line": 33,
+                      "column": 34,
+                      "offset": 679
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 33,
+                  "column": 3,
+                  "offset": 648
+                },
+                "end": {
+                  "line": 33,
+                  "column": 34,
+                  "offset": 679
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 33,
+              "column": 1,
+              "offset": 646
+            },
+            "end": {
+              "line": 33,
+              "column": 34,
+              "offset": 679
+            }
+          },
+          "data": {
+            "diff": "ins"
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 29,
+          "column": 1,
+          "offset": 521
+        },
+        "end": {
+          "line": 33,
+          "column": 34,
+          "offset": 679
+        }
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "图文混排",
+          "position": {
+            "start": {
+              "line": 35,
+              "column": 4,
+              "offset": 684
+            },
+            "end": {
+              "line": 35,
+              "column": 8,
+              "offset": 688
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 35,
+          "column": 1,
+          "offset": 681
+        },
+        "end": {
+          "line": 35,
+          "column": 8,
+          "offset": 688
+        }
+      }
+    },
+    {
+      "type": "del",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "link",
+              "title": null,
+              "url": "https://example.com",
+              "children": [
+                {
+                  "type": "image",
+                  "title": null,
+                  "url": "https://example.com/linked-image.jpg",
+                  "alt": "带链接的图片",
+                  "position": {
+                    "start": {
+                      "line": 31,
+                      "column": 2,
+                      "offset": 437
+                    },
+                    "end": {
+                      "line": 31,
+                      "column": 49,
+                      "offset": 484
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 31,
+                  "column": 1,
+                  "offset": 436
+                },
+                "end": {
+                  "line": 31,
+                  "column": 71,
+                  "offset": 506
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 31,
+              "column": 1,
+              "offset": 436
+            },
+            "end": {
+              "line": 31,
+              "column": 71,
+              "offset": 506
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "del",
+          "children": [
+            {
+              "type": "text",
+              "value": "这段文字包含一个",
+              "position": {
+                "start": {
+                  "line": 33,
+                  "column": 1,
+                  "offset": 508
+                },
+                "end": {
+                  "line": 33,
+                  "column": 9,
+                  "offset": 516
+                }
+              },
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "del",
+          "children": [
+            {
+              "type": "link",
+              "title": null,
+              "url": "https://example.com",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "链接",
+                  "position": {
+                    "start": {
+                      "line": 33,
+                      "column": 10,
+                      "offset": 517
+                    },
+                    "end": {
+                      "line": 33,
+                      "column": 12,
+                      "offset": 519
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 33,
+                  "column": 9,
+                  "offset": 516
+                },
+                "end": {
+                  "line": 33,
+                  "column": 34,
+                  "offset": 541
+                }
+              },
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "ins",
+          "children": [
+            {
+              "type": "link",
+              "title": null,
+              "url": "https://example.org",
+              "children": [
+                {
+                  "type": "image",
+                  "title": null,
+                  "url": "https://example.org/linked-image.jpg",
+                  "alt": "更新的带链接的图片",
+                  "position": {
+                    "start": {
+                      "line": 37,
+                      "column": 2,
+                      "offset": 691
+                    },
+                    "end": {
+                      "line": 37,
+                      "column": 52,
+                      "offset": 741
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 37,
+                  "column": 1,
+                  "offset": 690
+                },
+                "end": {
+                  "line": 37,
+                  "column": 74,
+                  "offset": 763
+                }
+              },
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "del",
+          "children": [
+            {
+              "type": "text",
+              "value": "和一个",
+              "position": {
+                "start": {
+                  "line": 33,
+                  "column": 34,
+                  "offset": 541
+                },
+                "end": {
+                  "line": 33,
+                  "column": 37,
+                  "offset": 544
+                }
+              },
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "del",
+          "children": [
+            {
+              "type": "image",
+              "title": null,
+              "url": "https://example.com/inline-image.jpg",
+              "alt": "内联图片",
+              "position": {
+                "start": {
+                  "line": 33,
+                  "column": 37,
+                  "offset": 544
+                },
+                "end": {
+                  "line": 33,
+                  "column": 82,
+                  "offset": 589
+                }
+              },
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "del",
+          "children": [
+            {
+              "type": "text",
+              "value": "。",
+              "position": {
+                "start": {
+                  "line": 33,
+                  "column": 82,
+                  "offset": 589
+                },
+                "end": {
+                  "line": 33,
+                  "column": 83,
+                  "offset": 590
+                }
+              },
+              "data": {}
+            }
+          ]
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 37,
+          "column": 1,
+          "offset": 690
+        },
+        "end": {
+          "line": 37,
+          "column": 74,
+          "offset": 763
+        }
+      }
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "这段更新后的文字包含一个",
+              "position": {
+                "start": {
+                  "line": 39,
+                  "column": 1,
+                  "offset": 765
+                },
+                "end": {
+                  "line": 39,
+                  "column": 13,
+                  "offset": 777
+                }
+              }
+            },
+            {
+              "type": "link",
+              "title": null,
+              "url": "https://example.org",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "更新的链接",
+                  "position": {
+                    "start": {
+                      "line": 39,
+                      "column": 14,
+                      "offset": 778
+                    },
+                    "end": {
+                      "line": 39,
+                      "column": 19,
+                      "offset": 783
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 39,
+                  "column": 13,
+                  "offset": 777
+                },
+                "end": {
+                  "line": 39,
+                  "column": 41,
+                  "offset": 805
+                }
+              }
+            },
+            {
+              "type": "text",
+              "value": "和一个",
+              "position": {
+                "start": {
+                  "line": 39,
+                  "column": 41,
+                  "offset": 805
+                },
+                "end": {
+                  "line": 39,
+                  "column": 44,
+                  "offset": 808
+                }
+              }
+            },
+            {
+              "type": "image",
+              "title": null,
+              "url": "https://example.org/inline-image.jpg",
+              "alt": "更新的内联图片",
+              "position": {
+                "start": {
+                  "line": 39,
+                  "column": 44,
+                  "offset": 808
+                },
+                "end": {
+                  "line": 39,
+                  "column": 92,
+                  "offset": 856
+                }
+              }
+            },
+            {
+              "type": "text",
+              "value": "。",
+              "position": {
+                "start": {
+                  "line": 39,
+                  "column": 92,
+                  "offset": 856
+                },
+                "end": {
+                  "line": 39,
+                  "column": 93,
+                  "offset": 857
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 39,
+              "column": 1,
+              "offset": 765
+            },
+            "end": {
+              "line": 39,
+              "column": 93,
+              "offset": 857
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "新增的段落，包含一个",
+              "position": {
+                "start": {
+                  "line": 41,
+                  "column": 1,
+                  "offset": 859
+                },
+                "end": {
+                  "line": 41,
+                  "column": 11,
+                  "offset": 869
+                }
+              }
+            },
+            {
+              "type": "link",
+              "title": null,
+              "url": "https://example.com/new",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "新链接",
+                  "position": {
+                    "start": {
+                      "line": 41,
+                      "column": 12,
+                      "offset": 870
+                    },
+                    "end": {
+                      "line": 41,
+                      "column": 15,
+                      "offset": 873
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 41,
+                  "column": 11,
+                  "offset": 869
+                },
+                "end": {
+                  "line": 41,
+                  "column": 41,
+                  "offset": 899
+                }
+              }
+            },
+            {
+              "type": "text",
+              "value": "。",
+              "position": {
+                "start": {
+                  "line": 41,
+                  "column": 41,
+                  "offset": 899
+                },
+                "end": {
+                  "line": 41,
+                  "column": 42,
+                  "offset": 900
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 41,
+              "column": 1,
+              "offset": 859
+            },
+            "end": {
+              "line": 41,
+              "column": 42,
+              "offset": 900
+            }
+          },
+          "data": {}
+        }
+      ]
+    }
+  ]
+}

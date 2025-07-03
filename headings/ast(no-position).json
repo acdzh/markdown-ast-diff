@@ -1,0 +1,122 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "heading",
+      "depth": 1,
+      "children": [
+        {
+          "type": "text",
+          "value": "修改后的",
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "text",
+          "value": "一级标题"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "二级标题"
+        },
+        {
+          "type": "text",
+          "value": "已更新",
+          "data": {
+            "diff": "ins"
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "三级标题"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "depth": 4,
+      "children": [
+        {
+          "type": "text",
+          "value": "四级标题"
+        }
+      ],
+      "data": {
+        "diff": "del"
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "这是一些普通文本内容"
+        },
+        {
+          "type": "text",
+          "value": "，增加了一些新内容",
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "text",
+          "value": "。"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "depth": 4,
+      "children": [
+        {
+          "type": "text",
+          "value": "新增的四级标题"
+        }
+      ],
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 5,
+      "children": [
+        {
+          "type": "text",
+          "value": "五级标题"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "depth": 6,
+      "children": [
+        {
+          "type": "text",
+          "value": "六级标题"
+        },
+        {
+          "type": "text",
+          "value": "已修改",
+          "data": {
+            "diff": "ins"
+          }
+        }
+      ]
+    }
+  ]
+}
