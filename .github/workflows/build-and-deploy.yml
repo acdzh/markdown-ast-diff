@@ -1,0 +1,64 @@
+# Workflow for building and deploying the markdown-ast-diff library and demos to GitHub Pages
+name: Build and Deploy
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch: # Allow manual triggering
+
+# Add permissions for deployment
+permissions:
+  contents: write
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    concurrency: ci-${{ github.ref }} # Prevents overlapping deployments
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Install pnpm
+      uses: pnpm/action-setup@v2
+      with:
+        version: 8
+        run_install: false
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        cache: 'pnpm'
+
+    - name: Install dependencies
+      run: pnpm install
+
+    - name: Run tests
+      run: pnpm test
+
+    - name: Build library
+      run: pnpm build
+
+    - name: Build preview
+      run: pnpm build:preview
+
+    - name: Deploy Node Tests to GitHub Pages
+      if: github.event_name == 'push'
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: test/node/output
+        branch: output-preview
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Deploy Browser Demo to GitHub Pages
+      if: github.event_name == 'push'
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: test/browser/output
+        branch: gh-pages
+        token: ${{ secrets.GITHUB_TOKEN }}

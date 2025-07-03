@@ -1,0 +1,60 @@
+{
+  "name": "markdown-ast-diff",
+  "version": "0.0.1",
+  "description": "使用 AST 比较两个 Markdown 文档并生成差异结果的 AST",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/types/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "tsx test/node/index.ts",
+    "dev": "vite ./test/browser",
+    "build": "rollup -c rollup.config.mjs",
+    "build:preview": "vite build ./test/browser --outDir output"
+  },
+  "keywords": [
+    "markdown",
+    "diff",
+    "ast"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "diff": "^8.0.2",
+    "unist-builder": "^4.0.0",
+    "unist-util-visit": "^5.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/diff": "^8.0.0",
+    "@types/node": "^20.10.0",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.2.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "remark-gfm": "^4.0.1",
+    "remark-parse": "^11.0.0",
+    "remark-stringify": "^11.0.0",
+    "rollup": "^4.9.6",
+    "rollup-plugin-cleaner": "^1.0.0",
+    "rollup-plugin-dts": "^6.1.0",
+    "tslib": "^2.8.1",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "unified": "^11.0.5",
+    "unist": "^0.0.1",
+    "vite": "^5.0.10"
+  }
+}
