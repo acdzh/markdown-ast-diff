@@ -14,6 +14,16 @@ import defaultOldMarkdown_formatting from '../testcases/formatting/old.md?raw';
 import defaultNewMarkdown_formatting from '../testcases/formatting/new.md?raw';
 import defaultOldMarkdown_complex from '../testcases/complex/old.md?raw';
 import defaultNewMarkdown_complex from '../testcases/complex/new.md?raw';
+import defaultOldMarkdown_extreme_long from '../testcases/extreme_long/old.md?raw';
+import defaultNewMarkdown_extreme_long from '../testcases/extreme_long/new.md?raw';
+import defaultOldMarkdown_nested_structures from '../testcases/nested_structures/old.md?raw';
+import defaultNewMarkdown_nested_structures from '../testcases/nested_structures/new.md?raw';
+import defaultOldMarkdown_special_characters from '../testcases/special_characters/old.md?raw';
+import defaultNewMarkdown_special_characters from '../testcases/special_characters/new.md?raw';
+import defaultOldMarkdown_whitespace from '../testcases/whitespace/old.md?raw';
+import defaultNewMarkdown_whitespace from '../testcases/whitespace/new.md?raw';
+import defaultOldMarkdown_mixed_content from '../testcases/mixed_content/old.md?raw';
+import defaultNewMarkdown_mixed_content from '../testcases/mixed_content/new.md?raw';
 
 
 import { Testcase } from './types';
@@ -58,5 +68,30 @@ export const testcases: Testcase[] = [
     name: 'complex',
     oldMarkdown: defaultOldMarkdown_complex,
     newMarkdown: defaultNewMarkdown_complex,
+  },
+  {
+    name: 'extreme_long',
+    oldMarkdown: defaultOldMarkdown_extreme_long,
+    newMarkdown: defaultNewMarkdown_extreme_long,
+  },
+  {
+    name: 'nested_structures',
+    oldMarkdown: defaultOldMarkdown_nested_structures,
+    newMarkdown: defaultNewMarkdown_nested_structures,
+  },
+  {
+    name: 'special_characters',
+    oldMarkdown: defaultOldMarkdown_special_characters,
+    newMarkdown: defaultNewMarkdown_special_characters,
+  },
+  {
+    name: 'whitespace',
+    oldMarkdown: defaultOldMarkdown_whitespace,
+    newMarkdown: defaultNewMarkdown_whitespace,
+  },
+  {
+    name: 'mixed_content',
+    oldMarkdown: defaultOldMarkdown_mixed_content,
+    newMarkdown: defaultNewMarkdown_mixed_content,
   }
 ]
