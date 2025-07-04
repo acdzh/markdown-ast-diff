@@ -1,50 +1,72 @@
+import type { Node } from '../type';
+
 /**
  * 表示两个数组中匹配元素的位置和数据
  */
-export interface Match<T> {
+export interface Match {
   sourceIndex: number;
   targetIndex: number;
-  sourceItem: T;
-  targetItem: T;
+  sourceItem: Node;
+  targetItem: Node;
 }
 
 /**
  * 找出两个数组之间的匹配元素
- * @param {T[]} sourceArray - 源数组
- * @param {T[]} targetArray - 目标数组
- * @param {Function} compareFunction - 比较函数，用于判断两个元素是否相等
- * @returns {Match<T>[]} 匹配结果数组
+ * @param {Node[]} sourceArray - 源数组
+ * @param {Node[]} targetArray - 目标数组
+ * @returns {Match[]} 匹配结果数组
  */
-export function findMatches<T>(
-  sourceArray: T[], 
-  targetArray: T[], 
-  compareFunction?: (source: T, target: T) => boolean
-): Match<T>[] {
-  const isEqual = compareFunction || ((source: T, target: T) => source === target);
+export function findMatchNodes<T>(
+  sourceArray: Node[], 
+  targetArray: Node[], 
+): Match[] {
+  const isEqual = (source: Node, target: Node) => {
+    if (source.type !== target.type) {
+      return false;
+    }
+    if (source.type === 'heading' || source.type === 'section' ) {
+      return source.depth === target.depth;
+    }
+    return true;
+  };
 
-  const matches: Match<T>[] = [];
+  const matches: Match[] = [];
   // 记录已匹配的目标索引，用Set提高查询效率
   const matchedTargetIndices = new Set<number>();
   
-  for (let sourceIndex = 0; sourceIndex < sourceArray.length; sourceIndex++) {
+  let sourceIndex = 0;
+  let targetIndex = 0;
+  
+  // 使用双指针方法，两个数组各遍历一次
+  while (sourceIndex < sourceArray.length && targetIndex < targetArray.length) {
     const sourceItem = sourceArray[sourceIndex];
+    const targetItem = targetArray[targetIndex];
     
-    for (let targetIndex = 0; targetIndex < targetArray.length; targetIndex++) {
-      // 跳过已匹配的目标元素
-      if (matchedTargetIndices.has(targetIndex)) continue;
+    // 如果当前目标元素已匹配，移动目标指针
+    if (matchedTargetIndices.has(targetIndex)) {
+      targetIndex++;
+      continue;
+    }
+    
+    // 检查是否相同
+    if (isEqual(sourceItem, targetItem)) {
+      matches.push({
+        sourceIndex,
+        targetIndex,
+        sourceItem,
+        targetItem,
+      });
+      matchedTargetIndices.add(targetIndex);
+      sourceIndex++;
+      targetIndex++;
+    } else {
+      // 不匹配时移动目标指针
+      targetIndex++;
       
-      const targetItem = targetArray[targetIndex];
-      
-      // 检查是否相同
-      if (isEqual(sourceItem, targetItem)) {
-        matches.push({
-          sourceIndex,
-          targetIndex,
-          sourceItem,
-          targetItem,
-        });
-        matchedTargetIndices.add(targetIndex);
-        break;
+      // 如果已经检查完所有目标元素，移动源指针并重置目标指针
+      if (targetIndex >= targetArray.length) {
+        sourceIndex++;
+        targetIndex = 0;
       }
     }
   }
@@ -59,3 +81,4 @@ export function findMatches<T>(
   
   return matches;
 }
+

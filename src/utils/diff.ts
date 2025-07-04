@@ -2,6 +2,7 @@ import { diffChars } from 'diff';
 import { u } from 'unist-builder';
 import { DiffType, type Node } from '../type';
 import { findMatches } from './match';
+import { findMatchNodes } from './match';
 import { cloneNodeWithDiff, isNodeEqual } from './node';
 
 /**
@@ -21,10 +22,10 @@ export function diffMarkdownAst(sourceAst: Node, targetAst: Node): Node {
   // 获取旧AST和新AST的子节点
   const sourceNodes = sourceAst.children || [];
   const targetNodes = targetAst.children || [];
-  
-  // 使用最长公共子序列算法找出匹配的节点
-  const matches = findMatches(sourceNodes, targetNodes, (source, target) => source.type === target.type);
-  
+
+  // 使用最长公共子序列算法找出匹配的节点(不需要精确 100% 的匹配)
+  const matches = findMatchNodes(sourceNodes, targetNodes);
+
   // 处理每个节点的差异
   let sourceIndex = 0;
   let targetIndex = 0;
