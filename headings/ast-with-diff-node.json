@@ -100,25 +100,24 @@
       }
     },
     {
-      "type": "del",
+      "type": "ins",
       "children": [
         {
-          "type": "heading",
-          "depth": 4,
+          "type": "paragraph",
           "children": [
             {
               "type": "text",
-              "value": "四级标题",
+              "value": "这是一些普通文本内容，增加了一些新内容。",
               "position": {
                 "start": {
                   "line": 7,
-                  "column": 6,
-                  "offset": 32
+                  "column": 1,
+                  "offset": 34
                 },
                 "end": {
                   "line": 7,
-                  "column": 10,
-                  "offset": 36
+                  "column": 21,
+                  "offset": 54
                 }
               }
             }
@@ -127,12 +126,12 @@
             "start": {
               "line": 7,
               "column": 1,
-              "offset": 27
+              "offset": 34
             },
             "end": {
               "line": 7,
-              "column": 10,
-              "offset": 36
+              "column": 21,
+              "offset": 54
             }
           },
           "data": {}
@@ -140,60 +139,56 @@
       ]
     },
     {
-      "type": "paragraph",
+      "type": "heading",
+      "depth": 4,
       "children": [
-        {
-          "type": "text",
-          "value": "这是一些普通文本内容"
-        },
         {
           "type": "inlineIns",
           "children": [
             {
               "type": "text",
-              "value": "，增加了一些新内容",
+              "value": "新增的",
               "data": {}
             }
           ]
         },
         {
           "type": "text",
-          "value": "。"
+          "value": "四级标题"
         }
       ],
       "position": {
         "start": {
-          "line": 7,
+          "line": 9,
           "column": 1,
-          "offset": 34
+          "offset": 56
         },
         "end": {
-          "line": 7,
-          "column": 21,
-          "offset": 54
+          "line": 9,
+          "column": 13,
+          "offset": 68
         }
       }
     },
     {
-      "type": "ins",
+      "type": "del",
       "children": [
         {
-          "type": "heading",
-          "depth": 4,
+          "type": "paragraph",
           "children": [
             {
               "type": "text",
-              "value": "新增的四级标题",
+              "value": "这是一些普通文本内容。",
               "position": {
                 "start": {
                   "line": 9,
-                  "column": 6,
-                  "offset": 61
+                  "column": 1,
+                  "offset": 38
                 },
                 "end": {
                   "line": 9,
-                  "column": 13,
-                  "offset": 68
+                  "column": 12,
+                  "offset": 49
                 }
               }
             }
@@ -202,12 +197,12 @@
             "start": {
               "line": 9,
               "column": 1,
-              "offset": 56
+              "offset": 38
             },
             "end": {
               "line": 9,
-              "column": 13,
-              "offset": 68
+              "column": 12,
+              "offset": 49
             }
           },
           "data": {}

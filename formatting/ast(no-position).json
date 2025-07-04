@@ -587,25 +587,19 @@
       "children": [
         {
           "type": "text",
-          "value": "引用"
-        }
-      ],
-      "data": {
-        "diff": "del"
-      }
-    },
-    {
-      "type": "heading",
-      "depth": 2,
-      "children": [
+          "value": "引用",
+          "data": {
+            "diff": "del"
+          }
+        },
         {
           "type": "text",
-          "value": "混合格式"
+          "value": "混合格式",
+          "data": {
+            "diff": "ins"
+          }
         }
-      ],
-      "data": {
-        "diff": "ins"
-      }
+      ]
     },
     {
       "type": "blockquote",

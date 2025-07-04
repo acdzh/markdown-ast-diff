@@ -1668,84 +1668,42 @@
       }
     },
     {
-      "type": "del",
+      "type": "heading",
+      "depth": 2,
       "children": [
         {
-          "type": "heading",
-          "depth": 2,
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
               "value": "引用",
-              "position": {
-                "start": {
-                  "line": 21,
-                  "column": 4,
-                  "offset": 105
-                },
-                "end": {
-                  "line": 21,
-                  "column": 6,
-                  "offset": 107
-                }
-              }
+              "data": {}
             }
-          ],
-          "position": {
-            "start": {
-              "line": 21,
-              "column": 1,
-              "offset": 102
-            },
-            "end": {
-              "line": 21,
-              "column": 6,
-              "offset": 107
-            }
-          },
-          "data": {}
-        }
-      ]
-    },
-    {
-      "type": "ins",
-      "children": [
+          ]
+        },
         {
-          "type": "heading",
-          "depth": 2,
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
               "value": "混合格式",
-              "position": {
-                "start": {
-                  "line": 42,
-                  "column": 4,
-                  "offset": 354
-                },
-                "end": {
-                  "line": 42,
-                  "column": 8,
-                  "offset": 358
-                }
-              }
+              "data": {}
             }
-          ],
-          "position": {
-            "start": {
-              "line": 42,
-              "column": 1,
-              "offset": 351
-            },
-            "end": {
-              "line": 42,
-              "column": 8,
-              "offset": 358
-            }
-          },
-          "data": {}
+          ]
         }
-      ]
+      ],
+      "position": {
+        "start": {
+          "line": 42,
+          "column": 1,
+          "offset": 351
+        },
+        "end": {
+          "line": 42,
+          "column": 8,
+          "offset": 358
+        }
+      }
     },
     {
       "type": "del",

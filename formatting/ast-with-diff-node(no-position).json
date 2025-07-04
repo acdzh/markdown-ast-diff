@@ -720,34 +720,28 @@
       ]
     },
     {
-      "type": "del",
+      "type": "heading",
+      "depth": 2,
       "children": [
         {
-          "type": "heading",
-          "depth": 2,
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
-              "value": "引用"
+              "value": "引用",
+              "data": {}
             }
-          ],
-          "data": {}
-        }
-      ]
-    },
-    {
-      "type": "ins",
-      "children": [
+          ]
+        },
         {
-          "type": "heading",
-          "depth": 2,
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
-              "value": "混合格式"
+              "value": "混合格式",
+              "data": {}
             }
-          ],
-          "data": {}
+          ]
         }
       ]
     },

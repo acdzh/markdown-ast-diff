@@ -314,19 +314,6 @@
       ]
     },
     {
-      "type": "del",
-      "children": [
-        {
-          "type": "definition",
-          "identifier": "image1",
-          "label": "image1",
-          "title": "参考图片标题",
-          "url": "https://example.com/reference-image.jpg",
-          "data": {}
-        }
-      ]
-    },
-    {
       "type": "ins",
       "children": [
         {
@@ -340,6 +327,19 @@
               "referenceType": "full"
             }
           ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "del",
+      "children": [
+        {
+          "type": "definition",
+          "identifier": "image1",
+          "label": "image1",
+          "title": "参考图片标题",
+          "url": "https://example.com/reference-image.jpg",
           "data": {}
         }
       ]
@@ -578,10 +578,10 @@
       ]
     },
     {
-      "type": "del",
+      "type": "paragraph",
       "children": [
         {
-          "type": "paragraph",
+          "type": "inlineDel",
           "children": [
             {
               "type": "link",
@@ -594,10 +594,29 @@
                   "url": "https://example.com/linked-image.jpg",
                   "alt": "带链接的图片"
                 }
-              ]
+              ],
+              "data": {}
             }
-          ],
-          "data": {}
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "link",
+              "title": null,
+              "url": "https://example.org",
+              "children": [
+                {
+                  "type": "image",
+                  "title": null,
+                  "url": "https://example.org/linked-image.jpg",
+                  "alt": "更新的带链接的图片"
+                }
+              ],
+              "data": {}
+            }
+          ]
         }
       ]
     },
@@ -605,14 +624,22 @@
       "type": "paragraph",
       "children": [
         {
-          "type": "inlineDel",
+          "type": "text",
+          "value": "这段"
+        },
+        {
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
-              "value": "这段文字包含一个",
+              "value": "更新后的",
               "data": {}
             }
           ]
+        },
+        {
+          "type": "text",
+          "value": "文字包含一个"
         },
         {
           "type": "inlineDel",
@@ -640,10 +667,8 @@
               "url": "https://example.org",
               "children": [
                 {
-                  "type": "image",
-                  "title": null,
-                  "url": "https://example.org/linked-image.jpg",
-                  "alt": "更新的带链接的图片"
+                  "type": "text",
+                  "value": "更新的链接"
                 }
               ],
               "data": {}
@@ -651,14 +676,8 @@
           ]
         },
         {
-          "type": "inlineDel",
-          "children": [
-            {
-              "type": "text",
-              "value": "和一个",
-              "data": {}
-            }
-          ]
+          "type": "text",
+          "value": "和一个"
         },
         {
           "type": "inlineDel",
@@ -673,54 +692,20 @@
           ]
         },
         {
-          "type": "inlineDel",
+          "type": "inlineIns",
           "children": [
-            {
-              "type": "text",
-              "value": "。",
-              "data": {}
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "ins",
-      "children": [
-        {
-          "type": "paragraph",
-          "children": [
-            {
-              "type": "text",
-              "value": "这段更新后的文字包含一个"
-            },
-            {
-              "type": "link",
-              "title": null,
-              "url": "https://example.org",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "更新的链接"
-                }
-              ]
-            },
-            {
-              "type": "text",
-              "value": "和一个"
-            },
             {
               "type": "image",
               "title": null,
               "url": "https://example.org/inline-image.jpg",
-              "alt": "更新的内联图片"
-            },
-            {
-              "type": "text",
-              "value": "。"
+              "alt": "更新的内联图片",
+              "data": {}
             }
-          ],
-          "data": {}
+          ]
+        },
+        {
+          "type": "text",
+          "value": "。"
         }
       ]
     },

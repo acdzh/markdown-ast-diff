@@ -958,23 +958,15 @@
         {
           "type": "text",
           "value": "< > & \" ' ¢ £ ¥ € © ® ™"
-        }
-      ],
-      "data": {
-        "diff": "del"
-      }
-    },
-    {
-      "type": "paragraph",
-      "children": [
+        },
         {
           "type": "text",
-          "value": "< > & \" ' ¢ £ ¥ € © ® ™ ° ± ¶ § µ"
+          "value": " ° ± ¶ § µ",
+          "data": {
+            "diff": "ins"
+          }
         }
-      ],
-      "data": {
-        "diff": "ins"
-      }
+      ]
     },
     {
       "type": "heading",
@@ -992,23 +984,15 @@
         {
           "type": "text",
           "value": "♠ ♣ ♥ ♦ ★ ☆"
-        }
-      ],
-      "data": {
-        "diff": "del"
-      }
-    },
-    {
-      "type": "paragraph",
-      "children": [
+        },
         {
           "type": "text",
-          "value": "♠ ♣ ♥ ♦ ★ ☆ ☎ ☑ ☒ ☠ ☢ ☣ ☮ ☯ ☸ ☹ ☺ ☻"
+          "value": " ☎ ☑ ☒ ☠ ☢ ☣ ☮ ☯ ☸ ☹ ☺ ☻",
+          "data": {
+            "diff": "ins"
+          }
         }
-      ],
-      "data": {
-        "diff": "ins"
-      }
+      ]
     },
     {
       "type": "heading",
@@ -1074,35 +1058,20 @@
       "children": [
         {
           "type": "text",
-          "value": "4.2",
-          "data": {
-            "diff": "del"
-          }
-        },
+          "value": "新增：包含 ∑ ∞ ∫ ∇ 的标题"
+        }
+      ],
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
         {
           "type": "text",
-          "value": "新增：包含",
-          "data": {
-            "diff": "ins"
-          }
-        },
-        {
-          "type": "text",
-          "value": " "
-        },
-        {
-          "type": "text",
-          "value": "特殊字符在列表中",
-          "data": {
-            "diff": "del"
-          }
-        },
-        {
-          "type": "text",
-          "value": "∑ ∞ ∫ ∇ 的标题",
-          "data": {
-            "diff": "ins"
-          }
+          "value": "4.2 特殊字符在列表中"
         }
       ]
     },
@@ -1126,145 +1095,11 @@
                 }
               ]
             }
-          ]
-        },
-        {
-          "type": "listItem",
-          "spread": false,
-          "checked": null,
-          "children": [
-            {
-              "type": "paragraph",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "项目 < 符号"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "listItem",
-          "spread": false,
-          "checked": null,
-          "children": [
-            {
-              "type": "paragraph",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "项目 > 符号"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "listItem",
-          "spread": false,
-          "checked": null,
-          "children": [
-            {
-              "type": "paragraph",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "项目 \" 符号"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "listItem",
-          "spread": false,
-          "checked": null,
-          "children": [
-            {
-              "type": "paragraph",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "项目 ' 符号"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "listItem",
-          "spread": false,
-          "checked": null,
-          "children": [
-            {
-              "type": "paragraph",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "项目 😀 符号"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "data": {
-        "diff": "del"
-      }
-    },
-    {
-      "type": "heading",
-      "depth": 3,
-      "children": [
-        {
-          "type": "text",
-          "value": "4."
-        },
-        {
-          "type": "text",
-          "value": "3",
+          ],
           "data": {
             "diff": "del"
           }
         },
-        {
-          "type": "text",
-          "value": "2",
-          "data": {
-            "diff": "ins"
-          }
-        },
-        {
-          "type": "text",
-          "value": " 特殊字符在"
-        },
-        {
-          "type": "text",
-          "value": "代码块",
-          "data": {
-            "diff": "del"
-          }
-        },
-        {
-          "type": "text",
-          "value": "列表",
-          "data": {
-            "diff": "ins"
-          }
-        },
-        {
-          "type": "text",
-          "value": "中"
-        }
-      ]
-    },
-    {
-      "type": "list",
-      "ordered": false,
-      "start": null,
-      "spread": false,
-      "children": [
         {
           "type": "listItem",
           "spread": false,
@@ -1279,7 +1114,10 @@
                 }
               ]
             }
-          ]
+          ],
+          "data": {
+            "diff": "ins"
+          }
         },
         {
           "type": "listItem",
@@ -1375,7 +1213,10 @@
                 }
               ]
             }
-          ]
+          ],
+          "data": {
+            "diff": "ins"
+          }
         },
         {
           "type": "listItem",
@@ -1391,12 +1232,12 @@
                 }
               ]
             }
-          ]
+          ],
+          "data": {
+            "diff": "ins"
+          }
         }
-      ],
-      "data": {
-        "diff": "ins"
-      }
+      ]
     },
     {
       "type": "heading",
@@ -1406,10 +1247,7 @@
           "type": "text",
           "value": "4.3 特殊字符在代码块中"
         }
-      ],
-      "data": {
-        "diff": "ins"
-      }
+      ]
     },
     {
       "type": "code",
@@ -1437,23 +1275,7 @@
           "type": "text",
           "value": "4.4 特殊字符在表格中"
         }
-      ],
-      "data": {
-        "diff": "del"
-      }
-    },
-    {
-      "type": "heading",
-      "depth": 3,
-      "children": [
-        {
-          "type": "text",
-          "value": "4.4 特殊字符在表格中"
-        }
-      ],
-      "data": {
-        "diff": "ins"
-      }
+      ]
     },
     {
       "type": "table",
@@ -1873,23 +1695,7 @@
           "type": "text",
           "value": "4.5 特殊字符在链接和图片中"
         }
-      ],
-      "data": {
-        "diff": "del"
-      }
-    },
-    {
-      "type": "heading",
-      "depth": 3,
-      "children": [
-        {
-          "type": "text",
-          "value": "4.5 特殊字符在链接和图片中"
-        }
-      ],
-      "data": {
-        "diff": "ins"
-      }
+      ]
     },
     {
       "type": "paragraph",
@@ -1903,21 +1709,7 @@
               "type": "text",
               "value": "包含特殊字符 & < > \" ' 的链接"
             }
-          ]
-        }
-      ],
-      "data": {
-        "diff": "del"
-      }
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "image",
-          "title": "图片 & 标题",
-          "url": "https://example.com/image.jpg",
-          "alt": "包含特殊字符 & < > \" ' 的图片描述",
+          ],
           "data": {
             "diff": "del"
           }
@@ -1939,31 +1731,27 @@
       ]
     },
     {
-      "type": "heading",
-      "depth": 3,
-      "children": [
-        {
-          "type": "text",
-          "value": "4.6 特殊字符在引用中"
-        }
-      ],
-      "data": {
-        "diff": "del"
-      }
-    },
-    {
       "type": "paragraph",
       "children": [
         {
           "type": "image",
+          "title": "图片 & 标题",
+          "url": "https://example.com/image.jpg",
+          "alt": "包含特殊字符 & < > \" ' 的图片描述",
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "image",
           "title": "图片 & 标题 © 2023",
           "url": "https://example.com/image.jpg",
-          "alt": "包含特殊字符 & < > \" ' 😀 的图片描述"
+          "alt": "包含特殊字符 & < > \" ' 😀 的图片描述",
+          "data": {
+            "diff": "ins"
+          }
         }
-      ],
-      "data": {
-        "diff": "ins"
-      }
+      ]
     },
     {
       "type": "paragraph",
@@ -1992,10 +1780,7 @@
           "type": "text",
           "value": "4.6 特殊字符在引用中"
         }
-      ],
-      "data": {
-        "diff": "ins"
-      }
+      ]
     },
     {
       "type": "blockquote",
@@ -2065,43 +1850,15 @@
           "type": "text",
           "value": "5. 极端情况"
         }
-      ],
-      "data": {
-        "diff": "del"
-      }
+      ]
     },
     {
       "type": "heading",
-      "depth": 2,
+      "depth": 3,
       "children": [
         {
           "type": "text",
-          "value": "5."
-        },
-        {
-          "type": "text",
-          "value": "1",
-          "data": {
-            "diff": "del"
-          }
-        },
-        {
-          "type": "text",
-          "value": " "
-        },
-        {
-          "type": "text",
-          "value": "大量重复特殊字符",
-          "data": {
-            "diff": "del"
-          }
-        },
-        {
-          "type": "text",
-          "value": "极端情况",
-          "data": {
-            "diff": "ins"
-          }
+          "value": "5.1 大量重复特殊字符"
         }
       ]
     },
@@ -2112,53 +1869,6 @@
           "type": "text",
           "value": "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
         }
-      ],
-      "data": {
-        "diff": "del"
-      }
-    },
-    {
-      "type": "heading",
-      "depth": 3,
-      "children": [
-        {
-          "type": "text",
-          "value": "5.1 大量重复特殊字符"
-        }
-      ],
-      "data": {
-        "diff": "ins"
-      }
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "value": "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
-        }
-      ],
-      "data": {
-        "diff": "del"
-      }
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "value": "################################################################",
-          "data": {
-            "diff": "del"
-          }
-        },
-        {
-          "type": "text",
-          "value": "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
-          "data": {
-            "diff": "ins"
-          }
-        }
       ]
     },
     {
@@ -2168,10 +1878,7 @@
           "type": "text",
           "value": "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
         }
-      ],
-      "data": {
-        "diff": "ins"
-      }
+      ]
     },
     {
       "type": "paragraph",
@@ -2180,26 +1887,10 @@
           "type": "text",
           "value": "################################################################"
         }
-      ],
-      "data": {
-        "diff": "ins"
-      }
+      ]
     },
     {
       "type": "thematicBreak"
-    },
-    {
-      "type": "heading",
-      "depth": 3,
-      "children": [
-        {
-          "type": "text",
-          "value": "5.2 混合特殊字符"
-        }
-      ],
-      "data": {
-        "diff": "del"
-      }
     },
     {
       "type": "paragraph",
@@ -2214,81 +1905,12 @@
       }
     },
     {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "value": "!@#$%^&"
-        },
-        {
-          "type": "emphasis",
-          "children": [
-            {
-              "type": "text",
-              "value": "()_+{}|:\"<>?~"
-            },
-            {
-              "type": "inlineCode",
-              "value": "-=[]\\;',./!@#$%^&*()_+{}|:\"<>?~"
-            },
-            {
-              "type": "text",
-              "value": "-=[];',./!@#$%^&"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "value": "()_+{}|:\"<>?~`-=[];',./"
-        }
-      ],
-      "data": {
-        "diff": "del"
-      }
-    },
-    {
       "type": "heading",
       "depth": 3,
       "children": [
         {
           "type": "text",
-          "value": "5."
-        },
-        {
-          "type": "text",
-          "value": "3",
-          "data": {
-            "diff": "del"
-          }
-        },
-        {
-          "type": "text",
-          "value": "2",
-          "data": {
-            "diff": "ins"
-          }
-        },
-        {
-          "type": "text",
-          "value": " "
-        },
-        {
-          "type": "text",
-          "value": "混合",
-          "data": {
-            "diff": "ins"
-          }
-        },
-        {
-          "type": "text",
-          "value": "特殊字符"
-        },
-        {
-          "type": "text",
-          "value": "组合",
-          "data": {
-            "diff": "del"
-          }
+          "value": "5.2 混合特殊字符"
         }
       ]
     },
@@ -2314,16 +1936,36 @@
               "type": "text",
               "value": "-=[];',./!@#$%^&"
             }
-          ]
+          ],
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "()_+{}|:\"<>?~"
+            },
+            {
+              "type": "inlineCode",
+              "value": "-=[]\\;',./!@#$%^&*()_+{}|:\"<>?~"
+            },
+            {
+              "type": "text",
+              "value": "-=[];',./!@#$%^&"
+            }
+          ],
+          "data": {
+            "diff": "ins"
+          }
         },
         {
           "type": "text",
           "value": "()_+{}|:\"<>?~`-=[];',./"
         }
-      ],
-      "data": {
-        "diff": "ins"
-      }
+      ]
     },
     {
       "type": "paragraph",
@@ -2345,10 +1987,7 @@
           "type": "text",
           "value": "5.3 特殊字符组合"
         }
-      ],
-      "data": {
-        "diff": "ins"
-      }
+      ]
     },
     {
       "type": "list",
@@ -2563,19 +2202,6 @@
     },
     {
       "type": "heading",
-      "depth": 2,
-      "children": [
-        {
-          "type": "text",
-          "value": "6. 总结"
-        }
-      ],
-      "data": {
-        "diff": "del"
-      }
-    },
-    {
-      "type": "heading",
       "depth": 3,
       "children": [
         {
@@ -2585,18 +2211,6 @@
       ],
       "data": {
         "diff": "ins"
-      }
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "value": "这个文档包含了各种特殊字符和符号，用于测试 Markdown 差异比较工具处理特殊字符的能力。"
-        }
-      ],
-      "data": {
-        "diff": "del"
       }
     },
     {
@@ -2631,22 +2245,23 @@
           "type": "text",
           "value": "6. 总结"
         }
-      ],
-      "data": {
-        "diff": "ins"
-      }
+      ]
     },
     {
       "type": "paragraph",
       "children": [
         {
           "type": "text",
-          "value": "这个文档包含了各种特殊字符和符号，用于测试 Markdown 差异比较工具处理特殊字符的能力。文档已经过更新，包含了多处修改、添加和删除内容，以测试差异比较功能的效果。"
+          "value": "这个文档包含了各种特殊字符和符号，用于测试 Markdown 差异比较工具处理特殊字符的能力。"
+        },
+        {
+          "type": "text",
+          "value": "文档已经过更新，包含了多处修改、添加和删除内容，以测试差异比较功能的效果。",
+          "data": {
+            "diff": "ins"
+          }
         }
-      ],
-      "data": {
-        "diff": "ins"
-      }
+      ]
     },
     {
       "type": "heading",

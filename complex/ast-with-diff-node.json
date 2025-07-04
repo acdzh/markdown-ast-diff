@@ -498,18 +498,16 @@
             {
               "type": "text",
               "value": "和",
-              "position": {
-                "start": {
-                  "line": 9,
-                  "column": 39,
-                  "offset": 123
-                },
-                "end": {
-                  "line": 9,
-                  "column": 40,
-                  "offset": 124
-                }
-              },
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": "。",
               "data": {}
             }
           ]
@@ -558,14 +556,22 @@
           "children": [
             {
               "type": "text",
-              "value": "文本",
+              "value": "文本。",
+              "position": {
+                "start": {
+                  "line": 9,
+                  "column": 47,
+                  "offset": 131
+                },
+                "end": {
+                  "line": 9,
+                  "column": 50,
+                  "offset": 134
+                }
+              },
               "data": {}
             }
           ]
-        },
-        {
-          "type": "text",
-          "value": "。"
         }
       ],
       "position": {
@@ -4439,10 +4445,10 @@
       }
     },
     {
-      "type": "del",
+      "type": "paragraph",
       "children": [
         {
-          "type": "paragraph",
+          "type": "inlineDel",
           "children": [
             {
               "type": "link",
@@ -4477,30 +4483,13 @@
                   "column": 28,
                   "offset": 703
                 }
-              }
+              },
+              "data": {}
             }
-          ],
-          "position": {
-            "start": {
-              "line": 69,
-              "column": 1,
-              "offset": 676
-            },
-            "end": {
-              "line": 69,
-              "column": 28,
-              "offset": 703
-            }
-          },
-          "data": {}
-        }
-      ]
-    },
-    {
-      "type": "ins",
-      "children": [
+          ]
+        },
         {
-          "type": "paragraph",
+          "type": "inlineIns",
           "children": [
             {
               "type": "link",
@@ -4535,24 +4524,24 @@
                   "column": 32,
                   "offset": 1164
                 }
-              }
+              },
+              "data": {}
             }
-          ],
-          "position": {
-            "start": {
-              "line": 100,
-              "column": 1,
-              "offset": 1133
-            },
-            "end": {
-              "line": 100,
-              "column": 32,
-              "offset": 1164
-            }
-          },
-          "data": {}
+          ]
         }
-      ]
+      ],
+      "position": {
+        "start": {
+          "line": 100,
+          "column": 1,
+          "offset": 1133
+        },
+        "end": {
+          "line": 100,
+          "column": 32,
+          "offset": 1164
+        }
+      }
     },
     {
       "type": "ins",
@@ -4647,10 +4636,10 @@
       }
     },
     {
-      "type": "del",
+      "type": "paragraph",
       "children": [
         {
-          "type": "paragraph",
+          "type": "inlineDel",
           "children": [
             {
               "type": "image",
@@ -4668,30 +4657,13 @@
                   "column": 39,
                   "offset": 755
                 }
-              }
+              },
+              "data": {}
             }
-          ],
-          "position": {
-            "start": {
-              "line": 73,
-              "column": 1,
-              "offset": 717
-            },
-            "end": {
-              "line": 73,
-              "column": 39,
-              "offset": 755
-            }
-          },
-          "data": {}
-        }
-      ]
-    },
-    {
-      "type": "ins",
-      "children": [
+          ]
+        },
         {
-          "type": "paragraph",
+          "type": "inlineIns",
           "children": [
             {
               "type": "image",
@@ -4709,24 +4681,24 @@
                   "column": 51,
                   "offset": 1262
                 }
-              }
+              },
+              "data": {}
             }
-          ],
-          "position": {
-            "start": {
-              "line": 106,
-              "column": 1,
-              "offset": 1212
-            },
-            "end": {
-              "line": 106,
-              "column": 51,
-              "offset": 1262
-            }
-          },
-          "data": {}
+          ]
         }
-      ]
+      ],
+      "position": {
+        "start": {
+          "line": 106,
+          "column": 1,
+          "offset": 1212
+        },
+        "end": {
+          "line": 106,
+          "column": 51,
+          "offset": 1262
+        }
+      }
     },
     {
       "type": "ins",
@@ -4874,145 +4846,42 @@
       }
     },
     {
-      "type": "del",
+      "type": "paragraph",
       "children": [
         {
-          "type": "paragraph",
+          "type": "text",
+          "value": "行内公式：$E = mc^2$"
+        },
+        {
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
-              "value": "行内公式：$E = mc^2$",
-              "position": {
-                "start": {
-                  "line": 81,
-                  "column": 1,
-                  "offset": 785
-                },
-                "end": {
-                  "line": 81,
-                  "column": 16,
-                  "offset": 800
-                }
-              }
+              "value": " 和新增的 $F = ma$",
+              "data": {}
             }
-          ],
-          "position": {
-            "start": {
-              "line": 81,
-              "column": 1,
-              "offset": 785
-            },
-            "end": {
-              "line": 81,
-              "column": 16,
-              "offset": 800
-            }
-          },
-          "data": {}
+          ]
         }
-      ]
+      ],
+      "position": {
+        "start": {
+          "line": 118,
+          "column": 1,
+          "offset": 1344
+        },
+        "end": {
+          "line": 118,
+          "column": 30,
+          "offset": 1373
+        }
+      }
     },
     {
-      "type": "ins",
+      "type": "paragraph",
       "children": [
         {
-          "type": "paragraph",
-          "children": [
-            {
-              "type": "text",
-              "value": "行内公式：$E = mc^2$ 和新增的 $F = ma$",
-              "position": {
-                "start": {
-                  "line": 118,
-                  "column": 1,
-                  "offset": 1344
-                },
-                "end": {
-                  "line": 118,
-                  "column": 30,
-                  "offset": 1373
-                }
-              }
-            }
-          ],
-          "position": {
-            "start": {
-              "line": 118,
-              "column": 1,
-              "offset": 1344
-            },
-            "end": {
-              "line": 118,
-              "column": 30,
-              "offset": 1373
-            }
-          },
-          "data": {}
-        }
-      ]
-    },
-    {
-      "type": "del",
-      "children": [
-        {
-          "type": "paragraph",
-          "children": [
-            {
-              "type": "text",
-              "value": "块级公式：",
-              "position": {
-                "start": {
-                  "line": 83,
-                  "column": 1,
-                  "offset": 802
-                },
-                "end": {
-                  "line": 83,
-                  "column": 6,
-                  "offset": 807
-                }
-              }
-            }
-          ],
-          "position": {
-            "start": {
-              "line": 83,
-              "column": 1,
-              "offset": 802
-            },
-            "end": {
-              "line": 83,
-              "column": 6,
-              "offset": 807
-            }
-          },
-          "data": {}
-        }
-      ]
-    },
-    {
-      "type": "ins",
-      "children": [
-        {
-          "type": "paragraph",
-          "children": [
-            {
-              "type": "text",
-              "value": "块级公式：",
-              "position": {
-                "start": {
-                  "line": 120,
-                  "column": 1,
-                  "offset": 1375
-                },
-                "end": {
-                  "line": 120,
-                  "column": 6,
-                  "offset": 1380
-                }
-              }
-            }
-          ],
+          "type": "text",
+          "value": "块级公式：",
           "position": {
             "start": {
               "line": 120,
@@ -5024,73 +4893,28 @@
               "column": 6,
               "offset": 1380
             }
-          },
-          "data": {}
+          }
         }
-      ]
+      ],
+      "position": {
+        "start": {
+          "line": 120,
+          "column": 1,
+          "offset": 1375
+        },
+        "end": {
+          "line": 120,
+          "column": 6,
+          "offset": 1380
+        }
+      }
     },
     {
-      "type": "del",
+      "type": "paragraph",
       "children": [
         {
-          "type": "paragraph",
-          "children": [
-            {
-              "type": "text",
-              "value": "$$\n\\frac{d}{dx}\\left( \\int_{a}^{x} f(u),du\\right)=f(x)\n$$",
-              "position": {
-                "start": {
-                  "line": 85,
-                  "column": 1,
-                  "offset": 809
-                },
-                "end": {
-                  "line": 87,
-                  "column": 3,
-                  "offset": 867
-                }
-              }
-            }
-          ],
-          "position": {
-            "start": {
-              "line": 85,
-              "column": 1,
-              "offset": 809
-            },
-            "end": {
-              "line": 87,
-              "column": 3,
-              "offset": 867
-            }
-          },
-          "data": {}
-        }
-      ]
-    },
-    {
-      "type": "ins",
-      "children": [
-        {
-          "type": "paragraph",
-          "children": [
-            {
-              "type": "text",
-              "value": "$$\n\\frac{d}{dx}\\left( \\int_{a}^{x} f(u),du\\right)=f(x)\n$$",
-              "position": {
-                "start": {
-                  "line": 122,
-                  "column": 1,
-                  "offset": 1382
-                },
-                "end": {
-                  "line": 124,
-                  "column": 3,
-                  "offset": 1440
-                }
-              }
-            }
-          ],
+          "type": "text",
+          "value": "$$\n\\frac{d}{dx}\\left( \\int_{a}^{x} f(u),du\\right)=f(x)\n$$",
           "position": {
             "start": {
               "line": 122,
@@ -5102,10 +4926,21 @@
               "column": 3,
               "offset": 1440
             }
-          },
-          "data": {}
+          }
         }
-      ]
+      ],
+      "position": {
+        "start": {
+          "line": 122,
+          "column": 1,
+          "offset": 1382
+        },
+        "end": {
+          "line": 124,
+          "column": 3,
+          "offset": 1440
+        }
+      }
     },
     {
       "type": "ins",
@@ -5220,132 +5055,64 @@
       }
     },
     {
-      "type": "del",
+      "type": "paragraph",
       "children": [
         {
-          "type": "paragraph",
+          "type": "text",
+          "value": "这里有一个脚注",
+          "position": {
+            "start": {
+              "line": 134,
+              "column": 1,
+              "offset": 1504
+            },
+            "end": {
+              "line": 134,
+              "column": 8,
+              "offset": 1511
+            }
+          }
+        },
+        {
+          "type": "footnoteReference",
+          "identifier": "1",
+          "label": "1",
+          "position": {
+            "start": {
+              "line": 134,
+              "column": 8,
+              "offset": 1511
+            },
+            "end": {
+              "line": 134,
+              "column": 12,
+              "offset": 1515
+            }
+          }
+        },
+        {
+          "type": "inlineDel",
           "children": [
-            {
-              "type": "text",
-              "value": "这里有一个脚注",
-              "position": {
-                "start": {
-                  "line": 91,
-                  "column": 1,
-                  "offset": 880
-                },
-                "end": {
-                  "line": 91,
-                  "column": 8,
-                  "offset": 887
-                }
-              }
-            },
-            {
-              "type": "footnoteReference",
-              "identifier": "1",
-              "label": "1",
-              "position": {
-                "start": {
-                  "line": 91,
-                  "column": 8,
-                  "offset": 887
-                },
-                "end": {
-                  "line": 91,
-                  "column": 12,
-                  "offset": 891
-                }
-              }
-            },
             {
               "type": "text",
               "value": "。",
-              "position": {
-                "start": {
-                  "line": 91,
-                  "column": 12,
-                  "offset": 891
-                },
-                "end": {
-                  "line": 91,
-                  "column": 13,
-                  "offset": 892
-                }
-              }
+              "data": {}
             }
-          ],
-          "position": {
-            "start": {
-              "line": 91,
-              "column": 1,
-              "offset": 880
-            },
-            "end": {
-              "line": 91,
-              "column": 13,
-              "offset": 892
-            }
-          },
-          "data": {}
-        }
-      ]
-    },
-    {
-      "type": "ins",
-      "children": [
+          ]
+        },
         {
-          "type": "paragraph",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
-              "value": "这里有一个脚注",
-              "position": {
-                "start": {
-                  "line": 134,
-                  "column": 1,
-                  "offset": 1504
-                },
-                "end": {
-                  "line": 134,
-                  "column": 8,
-                  "offset": 1511
-                }
-              }
-            },
-            {
-              "type": "footnoteReference",
-              "identifier": "1",
-              "label": "1",
-              "position": {
-                "start": {
-                  "line": 134,
-                  "column": 8,
-                  "offset": 1511
-                },
-                "end": {
-                  "line": 134,
-                  "column": 12,
-                  "offset": 1515
-                }
-              }
-            },
-            {
-              "type": "text",
               "value": "和一个新增的脚注",
-              "position": {
-                "start": {
-                  "line": 134,
-                  "column": 12,
-                  "offset": 1515
-                },
-                "end": {
-                  "line": 134,
-                  "column": 20,
-                  "offset": 1523
-                }
-              }
-            },
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
             {
               "type": "footnoteReference",
               "identifier": "2",
@@ -5361,8 +5128,14 @@
                   "column": 24,
                   "offset": 1527
                 }
-              }
-            },
+              },
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
             {
               "type": "text",
               "value": "。",
@@ -5377,24 +5150,24 @@
                   "column": 25,
                   "offset": 1528
                 }
-              }
+              },
+              "data": {}
             }
-          ],
-          "position": {
-            "start": {
-              "line": 134,
-              "column": 1,
-              "offset": 1504
-            },
-            "end": {
-              "line": 134,
-              "column": 25,
-              "offset": 1528
-            }
-          },
-          "data": {}
+          ]
         }
-      ]
+      ],
+      "position": {
+        "start": {
+          "line": 134,
+          "column": 1,
+          "offset": 1504
+        },
+        "end": {
+          "line": 134,
+          "column": 25,
+          "offset": 1528
+        }
+      }
     },
     {
       "type": "del",
@@ -5654,145 +5427,60 @@
       }
     },
     {
-      "type": "del",
+      "type": "paragraph",
       "children": [
         {
-          "type": "paragraph",
+          "type": "text",
+          "value": "术语 1"
+        },
+        {
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
-              "value": "术语 1\n: 定义 1",
-              "position": {
-                "start": {
-                  "line": 97,
-                  "column": 1,
-                  "offset": 922
-                },
-                "end": {
-                  "line": 98,
-                  "column": 7,
-                  "offset": 933
-                }
-              }
+              "value": "（已更新）",
+              "data": {}
             }
-          ],
-          "position": {
-            "start": {
-              "line": 97,
-              "column": 1,
-              "offset": 922
-            },
-            "end": {
-              "line": 98,
-              "column": 7,
-              "offset": 933
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n: "
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": "更新后的",
+              "data": {}
             }
-          },
-          "data": {}
+          ]
+        },
+        {
+          "type": "text",
+          "value": "定义 1"
         }
-      ]
+      ],
+      "position": {
+        "start": {
+          "line": 141,
+          "column": 1,
+          "offset": 1583
+        },
+        "end": {
+          "line": 142,
+          "column": 11,
+          "offset": 1603
+        }
+      }
     },
     {
-      "type": "ins",
+      "type": "paragraph",
       "children": [
         {
-          "type": "paragraph",
-          "children": [
-            {
-              "type": "text",
-              "value": "术语 1（已更新）\n: 更新后的定义 1",
-              "position": {
-                "start": {
-                  "line": 141,
-                  "column": 1,
-                  "offset": 1583
-                },
-                "end": {
-                  "line": 142,
-                  "column": 11,
-                  "offset": 1603
-                }
-              }
-            }
-          ],
-          "position": {
-            "start": {
-              "line": 141,
-              "column": 1,
-              "offset": 1583
-            },
-            "end": {
-              "line": 142,
-              "column": 11,
-              "offset": 1603
-            }
-          },
-          "data": {}
-        }
-      ]
-    },
-    {
-      "type": "del",
-      "children": [
-        {
-          "type": "paragraph",
-          "children": [
-            {
-              "type": "text",
-              "value": "术语 2\n: 定义 2",
-              "position": {
-                "start": {
-                  "line": 100,
-                  "column": 1,
-                  "offset": 935
-                },
-                "end": {
-                  "line": 101,
-                  "column": 7,
-                  "offset": 946
-                }
-              }
-            }
-          ],
-          "position": {
-            "start": {
-              "line": 100,
-              "column": 1,
-              "offset": 935
-            },
-            "end": {
-              "line": 101,
-              "column": 7,
-              "offset": 946
-            }
-          },
-          "data": {}
-        }
-      ]
-    },
-    {
-      "type": "ins",
-      "children": [
-        {
-          "type": "paragraph",
-          "children": [
-            {
-              "type": "text",
-              "value": "术语 2\n: 定义 2",
-              "position": {
-                "start": {
-                  "line": 144,
-                  "column": 1,
-                  "offset": 1605
-                },
-                "end": {
-                  "line": 145,
-                  "column": 7,
-                  "offset": 1616
-                }
-              }
-            }
-          ],
+          "type": "text",
+          "value": "术语 2\n: 定义 2",
           "position": {
             "start": {
               "line": 144,
@@ -5804,10 +5492,21 @@
               "column": 7,
               "offset": 1616
             }
-          },
-          "data": {}
+          }
         }
-      ]
+      ],
+      "position": {
+        "start": {
+          "line": 144,
+          "column": 1,
+          "offset": 1605
+        },
+        "end": {
+          "line": 145,
+          "column": 7,
+          "offset": 1616
+        }
+      }
     },
     {
       "type": "ins",
@@ -5977,82 +5676,67 @@
       }
     },
     {
-      "type": "del",
+      "type": "paragraph",
       "children": [
         {
-          "type": "paragraph",
+          "type": "text",
+          "value": "这个"
+        },
+        {
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
-              "value": "这个文档展示了多种 Markdown 元素的使用方式，可以用于测试差异比较功能。",
-              "position": {
-                "start": {
-                  "line": 118,
-                  "column": 1,
-                  "offset": 1129
-                },
-                "end": {
-                  "line": 118,
-                  "column": 41,
-                  "offset": 1169
-                }
-              }
+              "value": "更新后的",
+              "data": {}
             }
-          ],
-          "position": {
-            "start": {
-              "line": 118,
-              "column": 1,
-              "offset": 1129
-            },
-            "end": {
-              "line": 118,
-              "column": 41,
-              "offset": 1169
-            }
-          },
-          "data": {}
-        }
-      ]
-    },
-    {
-      "type": "ins",
-      "children": [
+          ]
+        },
         {
-          "type": "paragraph",
+          "type": "text",
+          "value": "文档展示了多种 Markdown 元素的使用方式"
+        },
+        {
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
-              "value": "这个更新后的文档展示了多种 Markdown 元素的使用方式及其变更，可以用于测试差异比较功能的效果。",
-              "position": {
-                "start": {
-                  "line": 168,
-                  "column": 1,
-                  "offset": 1891
-                },
-                "end": {
-                  "line": 168,
-                  "column": 52,
-                  "offset": 1942
-                }
-              }
+              "value": "及其变更",
+              "data": {}
             }
-          ],
-          "position": {
-            "start": {
-              "line": 168,
-              "column": 1,
-              "offset": 1891
-            },
-            "end": {
-              "line": 168,
-              "column": 52,
-              "offset": 1942
+          ]
+        },
+        {
+          "type": "text",
+          "value": "，可以用于测试差异比较功能"
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": "的效果",
+              "data": {}
             }
-          },
-          "data": {}
+          ]
+        },
+        {
+          "type": "text",
+          "value": "。"
         }
-      ]
+      ],
+      "position": {
+        "start": {
+          "line": 168,
+          "column": 1,
+          "offset": 1891
+        },
+        "end": {
+          "line": 168,
+          "column": 52,
+          "offset": 1942
+        }
+      }
     },
     {
       "type": "ins",

@@ -46,49 +46,44 @@
       ]
     },
     {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "这是一些普通文本内容，增加了一些新内容。"
+        }
+      ],
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
       "type": "heading",
       "depth": 4,
       "children": [
         {
           "type": "text",
-          "value": "四级标题"
-        }
-      ],
-      "data": {
-        "diff": "del"
-      }
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "value": "这是一些普通文本内容"
-        },
-        {
-          "type": "text",
-          "value": "，增加了一些新内容",
+          "value": "新增的",
           "data": {
             "diff": "ins"
           }
         },
         {
           "type": "text",
-          "value": "。"
+          "value": "四级标题"
         }
       ]
     },
     {
-      "type": "heading",
-      "depth": 4,
+      "type": "paragraph",
       "children": [
         {
           "type": "text",
-          "value": "新增的四级标题"
+          "value": "这是一些普通文本内容。"
         }
       ],
       "data": {
-        "diff": "ins"
+        "diff": "del"
       }
     },
     {

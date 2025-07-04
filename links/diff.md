@@ -28,13 +28,13 @@
 
 ![参考图片][image1]
 
-{----
-[image1]: https://example.com/reference-image.jpg "参考图片标题"
-----}
-
 {++++
 ![新增的参考图片][image2]
 ++++}
+
+{----
+[image1]: https://example.com/reference-image.jpg "参考图片标题"
+----}
 
 {++++
 [image1]: https://example.org/reference-image.jpg "更新的参考图片标题"
@@ -56,15 +56,9 @@
 
 ## 图文混排
 
-{----
-[![带链接的图片](https://example.com/linked-image.jpg)](https://example.com)
-----}
+{----[![带链接的图片](https://example.com/linked-image.jpg)](https://example.com)----}{++++[![更新的带链接的图片](https://example.org/linked-image.jpg)](https://example.org)++++}
 
-{----这段文字包含一个----}{----[链接](https://example.com)----}{++++[![更新的带链接的图片](https://example.org/linked-image.jpg)](https://example.org)++++}{----和一个----}{----![内联图片](https://example.com/inline-image.jpg)----}{----。----}
-
-{++++
-这段更新后的文字包含一个[更新的链接](https://example.org)和一个![更新的内联图片](https://example.org/inline-image.jpg)。
-++++}
+这段{++++更新后的++++}文字包含一个{----[链接](https://example.com)----}{++++[更新的链接](https://example.org)++++}和一个{----![内联图片](https://example.com/inline-image.jpg)----}{++++![更新的内联图片](https://example.org/inline-image.jpg)++++}。
 
 {++++
 新增的段落，包含一个[新链接](https://example.com/new)。

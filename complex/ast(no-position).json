@@ -197,6 +197,13 @@
           }
         },
         {
+          "type": "text",
+          "value": "。",
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
           "type": "delete",
           "children": [
             {
@@ -210,14 +217,10 @@
         },
         {
           "type": "text",
-          "value": "文本",
+          "value": "文本。",
           "data": {
             "diff": "del"
           }
-        },
-        {
-          "type": "text",
-          "value": "。"
         }
       ]
     },
@@ -1453,16 +1456,11 @@
               "type": "text",
               "value": "示例链接"
             }
-          ]
-        }
-      ],
-      "data": {
-        "diff": "del"
-      }
-    },
-    {
-      "type": "paragraph",
-      "children": [
+          ],
+          "data": {
+            "diff": "del"
+          }
+        },
         {
           "type": "link",
           "title": null,
@@ -1472,12 +1470,12 @@
               "type": "text",
               "value": "更新后的示例链接"
             }
-          ]
+          ],
+          "data": {
+            "diff": "ins"
+          }
         }
-      ],
-      "data": {
-        "diff": "ins"
-      }
+      ]
     },
     {
       "type": "paragraph",
@@ -1515,26 +1513,21 @@
           "type": "image",
           "title": null,
           "url": "https://example.com/image.jpg",
-          "alt": "示例图片"
-        }
-      ],
-      "data": {
-        "diff": "del"
-      }
-    },
-    {
-      "type": "paragraph",
-      "children": [
+          "alt": "示例图片",
+          "data": {
+            "diff": "del"
+          }
+        },
         {
           "type": "image",
           "title": null,
           "url": "https://example.org/updated-image.jpg",
-          "alt": "更新后的示例图片"
+          "alt": "更新后的示例图片",
+          "data": {
+            "diff": "ins"
+          }
         }
-      ],
-      "data": {
-        "diff": "ins"
-      }
+      ]
     },
     {
       "type": "paragraph",
@@ -1585,23 +1578,15 @@
         {
           "type": "text",
           "value": "行内公式：$E = mc^2$"
-        }
-      ],
-      "data": {
-        "diff": "del"
-      }
-    },
-    {
-      "type": "paragraph",
-      "children": [
+        },
         {
           "type": "text",
-          "value": "行内公式：$E = mc^2$ 和新增的 $F = ma$"
+          "value": " 和新增的 $F = ma$",
+          "data": {
+            "diff": "ins"
+          }
         }
-      ],
-      "data": {
-        "diff": "ins"
-      }
+      ]
     },
     {
       "type": "paragraph",
@@ -1610,22 +1595,7 @@
           "type": "text",
           "value": "块级公式："
         }
-      ],
-      "data": {
-        "diff": "del"
-      }
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "value": "块级公式："
-        }
-      ],
-      "data": {
-        "diff": "ins"
-      }
+      ]
     },
     {
       "type": "paragraph",
@@ -1634,22 +1604,7 @@
           "type": "text",
           "value": "$$\n\\frac{d}{dx}\\left( \\int_{a}^{x} f(u),du\\right)=f(x)\n$$"
         }
-      ],
-      "data": {
-        "diff": "del"
-      }
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "value": "$$\n\\frac{d}{dx}\\left( \\int_{a}^{x} f(u),du\\right)=f(x)\n$$"
-        }
-      ],
-      "data": {
-        "diff": "ins"
-      }
+      ]
     },
     {
       "type": "paragraph",
@@ -1699,42 +1654,34 @@
         },
         {
           "type": "text",
-          "value": "。"
-        }
-      ],
-      "data": {
-        "diff": "del"
-      }
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "value": "这里有一个脚注"
-        },
-        {
-          "type": "footnoteReference",
-          "identifier": "1",
-          "label": "1"
+          "value": "。",
+          "data": {
+            "diff": "del"
+          }
         },
         {
           "type": "text",
-          "value": "和一个新增的脚注"
+          "value": "和一个新增的脚注",
+          "data": {
+            "diff": "ins"
+          }
         },
         {
           "type": "footnoteReference",
           "identifier": "2",
-          "label": "2"
+          "label": "2",
+          "data": {
+            "diff": "ins"
+          }
         },
         {
           "type": "text",
-          "value": "。"
+          "value": "。",
+          "data": {
+            "diff": "ins"
+          }
         }
-      ],
-      "data": {
-        "diff": "ins"
-      }
+      ]
     },
     {
       "type": "footnoteDefinition",
@@ -1821,24 +1768,31 @@
       "children": [
         {
           "type": "text",
-          "value": "术语 1\n: 定义 1"
-        }
-      ],
-      "data": {
-        "diff": "del"
-      }
-    },
-    {
-      "type": "paragraph",
-      "children": [
+          "value": "术语 1"
+        },
         {
           "type": "text",
-          "value": "术语 1（已更新）\n: 更新后的定义 1"
+          "value": "（已更新）",
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n: "
+        },
+        {
+          "type": "text",
+          "value": "更新后的",
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "text",
+          "value": "定义 1"
         }
-      ],
-      "data": {
-        "diff": "ins"
-      }
+      ]
     },
     {
       "type": "paragraph",
@@ -1847,22 +1801,7 @@
           "type": "text",
           "value": "术语 2\n: 定义 2"
         }
-      ],
-      "data": {
-        "diff": "del"
-      }
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "value": "术语 2\n: 定义 2"
-        }
-      ],
-      "data": {
-        "diff": "ins"
-      }
+      ]
     },
     {
       "type": "paragraph",
@@ -1919,24 +1858,42 @@
       "children": [
         {
           "type": "text",
-          "value": "这个文档展示了多种 Markdown 元素的使用方式，可以用于测试差异比较功能。"
-        }
-      ],
-      "data": {
-        "diff": "del"
-      }
-    },
-    {
-      "type": "paragraph",
-      "children": [
+          "value": "这个"
+        },
         {
           "type": "text",
-          "value": "这个更新后的文档展示了多种 Markdown 元素的使用方式及其变更，可以用于测试差异比较功能的效果。"
+          "value": "更新后的",
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "text",
+          "value": "文档展示了多种 Markdown 元素的使用方式"
+        },
+        {
+          "type": "text",
+          "value": "及其变更",
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "text",
+          "value": "，可以用于测试差异比较功能"
+        },
+        {
+          "type": "text",
+          "value": "的效果",
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "text",
+          "value": "。"
         }
-      ],
-      "data": {
-        "diff": "ins"
-      }
+      ]
     },
     {
       "type": "heading",

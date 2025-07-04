@@ -170,104 +170,22 @@
       }
     },
     {
-      "type": "heading",
-      "depth": 2,
-      "children": [
-        {
-          "type": "text",
-          "value": "2. 长列表",
-          "position": {
-            "start": {
-              "line": 9,
-              "column": 4,
-              "offset": 1148
-            },
-            "end": {
-              "line": 9,
-              "column": 10,
-              "offset": 1154
-            }
-          }
-        }
-      ],
-      "position": {
-        "start": {
-          "line": 9,
-          "column": 1,
-          "offset": 1145
-        },
-        "end": {
-          "line": 9,
-          "column": 10,
-          "offset": 1154
-        }
-      },
-      "data": {
-        "diff": "del"
-      }
-    },
-    {
       "type": "paragraph",
       "children": [
         {
           "type": "text",
-          "value": "以下",
-          "data": {
-            "diff": "del"
-          }
-        },
-        {
-          "type": "text",
-          "value": "这",
-          "data": {
-            "diff": "ins"
-          }
-        },
-        {
-          "type": "text",
-          "value": "是一个"
-        },
-        {
-          "type": "text",
-          "value": "非常",
-          "data": {
-            "diff": "del"
-          }
-        },
-        {
-          "type": "text",
-          "value": "全新添加的",
-          "data": {
-            "diff": "ins"
-          }
-        },
-        {
-          "type": "text",
-          "value": "长"
-        },
-        {
-          "type": "text",
-          "value": "段落，包含大量文本内容。这是一个全新添加",
-          "data": {
-            "diff": "ins"
-          }
-        },
-        {
-          "type": "text",
-          "value": "的"
-        },
-        {
-          "type": "text",
-          "value": "列表：",
-          "data": {
-            "diff": "del"
-          }
-        },
-        {
-          "type": "text",
-          "value": "长段落，包含大量文本内容。这是一个全新添加的长段落，包含大量文本内容。这是一个全新添加的长段落，包含大量文本内容。这是一个全新添加的长段落，包含大量文本内容。这是一个全新添加的长段落，包含大量文本内容。这是一个全新添加的长段落，包含大量文本内容。这是一个全新添加的长段落，包含大量文本内容。这是一个全新添加的长段落，包含大量文本内容。这是一个全新添加的长段落，包含大量文本内容。",
-          "data": {
-            "diff": "ins"
+          "value": "这是一个全新添加的长段落，包含大量文本内容。这是一个全新添加的长段落，包含大量文本内容。这是一个全新添加的长段落，包含大量文本内容。这是一个全新添加的长段落，包含大量文本内容。这是一个全新添加的长段落，包含大量文本内容。这是一个全新添加的长段落，包含大量文本内容。这是一个全新添加的长段落，包含大量文本内容。这是一个全新添加的长段落，包含大量文本内容。这是一个全新添加的长段落，包含大量文本内容。这是一个全新添加的长段落，包含大量文本内容。",
+          "position": {
+            "start": {
+              "line": 9,
+              "column": 1,
+              "offset": 1143
+            },
+            "end": {
+              "line": 9,
+              "column": 221,
+              "offset": 1363
+            }
           }
         }
       ],
@@ -282,6 +200,9 @@
           "column": 221,
           "offset": 1363
         }
+      },
+      "data": {
+        "diff": "ins"
       }
     },
     {
@@ -316,9 +237,6 @@
           "column": 10,
           "offset": 1374
         }
-      },
-      "data": {
-        "diff": "ins"
       }
     },
     {
@@ -326,19 +244,18 @@
       "children": [
         {
           "type": "text",
-          "value": "以下是一个非常长的列表（已更新）：",
-          "position": {
-            "start": {
-              "line": 13,
-              "column": 1,
-              "offset": 1376
-            },
-            "end": {
-              "line": 13,
-              "column": 18,
-              "offset": 1393
-            }
+          "value": "以下是一个非常长的列表"
+        },
+        {
+          "type": "text",
+          "value": "（已更新）",
+          "data": {
+            "diff": "ins"
           }
+        },
+        {
+          "type": "text",
+          "value": "："
         }
       ],
       "position": {
@@ -352,9 +269,6 @@
           "column": 18,
           "offset": 1393
         }
-      },
-      "data": {
-        "diff": "ins"
       }
     },
     {
@@ -1568,55 +1482,18 @@
       "children": [
         {
           "type": "text",
-          "value": "以下是一个非常长的代码块：",
-          "position": {
-            "start": {
-              "line": 26,
-              "column": 1,
-              "offset": 1904
-            },
-            "end": {
-              "line": 26,
-              "column": 14,
-              "offset": 1917
-            }
-          }
-        }
-      ],
-      "position": {
-        "start": {
-          "line": 26,
-          "column": 1,
-          "offset": 1904
+          "value": "以下是一个非常长的代码块"
         },
-        "end": {
-          "line": 26,
-          "column": 14,
-          "offset": 1917
-        }
-      },
-      "data": {
-        "diff": "del"
-      }
-    },
-    {
-      "type": "paragraph",
-      "children": [
         {
           "type": "text",
-          "value": "以下是一个非常长的代码块（已更新）：",
-          "position": {
-            "start": {
-              "line": 30,
-              "column": 1,
-              "offset": 2350
-            },
-            "end": {
-              "line": 30,
-              "column": 19,
-              "offset": 2368
-            }
+          "value": "（已更新）",
+          "data": {
+            "diff": "ins"
           }
+        },
+        {
+          "type": "text",
+          "value": "："
         }
       ],
       "position": {
@@ -1630,9 +1507,6 @@
           "column": 19,
           "offset": 2368
         }
-      },
-      "data": {
-        "diff": "ins"
       }
     },
     {
@@ -11860,54 +11734,13 @@
       "children": [
         {
           "type": "text",
-          "value": "这个文档包含了各种极端长的内容元素，用于测试 Markdown 差异比较工具处理大量文本的能力。",
-          "position": {
-            "start": {
-              "line": 142,
-              "column": 1,
-              "offset": 5864
-            },
-            "end": {
-              "line": 142,
-              "column": 49,
-              "offset": 5912
-            }
-          }
-        }
-      ],
-      "position": {
-        "start": {
-          "line": 142,
-          "column": 1,
-          "offset": 5864
+          "value": "这个文档包含了各种极端长的内容元素，用于测试 Markdown 差异比较工具处理大量文本的能力。"
         },
-        "end": {
-          "line": 142,
-          "column": 49,
-          "offset": 5912
-        }
-      },
-      "data": {
-        "diff": "del"
-      }
-    },
-    {
-      "type": "paragraph",
-      "children": [
         {
           "type": "text",
-          "value": "这个文档包含了各种极端长的内容元素，用于测试 Markdown 差异比较工具处理大量文本的能力。文档已经过更新，包含了大量的修改、添加和删除内容，以测试差异比较功能的效果。",
-          "position": {
-            "start": {
-              "line": 219,
-              "column": 1,
-              "offset": 8706
-            },
-            "end": {
-              "line": 219,
-              "column": 87,
-              "offset": 8792
-            }
+          "value": "文档已经过更新，包含了大量的修改、添加和删除内容，以测试差异比较功能的效果。",
+          "data": {
+            "diff": "ins"
           }
         }
       ],
@@ -11922,9 +11755,6 @@
           "column": 87,
           "offset": 8792
         }
-      },
-      "data": {
-        "diff": "ins"
       }
     },
     {

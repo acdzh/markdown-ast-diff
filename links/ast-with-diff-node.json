@@ -758,31 +758,6 @@
       }
     },
     {
-      "type": "del",
-      "children": [
-        {
-          "type": "definition",
-          "identifier": "image1",
-          "label": "image1",
-          "title": "参考图片标题",
-          "url": "https://example.com/reference-image.jpg",
-          "position": {
-            "start": {
-              "line": 21,
-              "column": 1,
-              "offset": 269
-            },
-            "end": {
-              "line": 21,
-              "column": 59,
-              "offset": 327
-            }
-          },
-          "data": {}
-        }
-      ]
-    },
-    {
       "type": "ins",
       "children": [
         {
@@ -818,6 +793,31 @@
               "line": 22,
               "column": 19,
               "offset": 381
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "del",
+      "children": [
+        {
+          "type": "definition",
+          "identifier": "image1",
+          "label": "image1",
+          "title": "参考图片标题",
+          "url": "https://example.com/reference-image.jpg",
+          "position": {
+            "start": {
+              "line": 21,
+              "column": 1,
+              "offset": 269
+            },
+            "end": {
+              "line": 21,
+              "column": 59,
+              "offset": 327
             }
           },
           "data": {}
@@ -1478,10 +1478,10 @@
       }
     },
     {
-      "type": "del",
+      "type": "paragraph",
       "children": [
         {
-          "type": "paragraph",
+          "type": "inlineDel",
           "children": [
             {
               "type": "link",
@@ -1518,49 +1518,88 @@
                   "column": 71,
                   "offset": 506
                 }
-              }
+              },
+              "data": {}
             }
-          ],
-          "position": {
-            "start": {
-              "line": 31,
-              "column": 1,
-              "offset": 436
-            },
-            "end": {
-              "line": 31,
-              "column": 71,
-              "offset": 506
-            }
-          },
-          "data": {}
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
+          ]
+        },
         {
-          "type": "inlineDel",
+          "type": "inlineIns",
           "children": [
             {
-              "type": "text",
-              "value": "这段文字包含一个",
+              "type": "link",
+              "title": null,
+              "url": "https://example.org",
+              "children": [
+                {
+                  "type": "image",
+                  "title": null,
+                  "url": "https://example.org/linked-image.jpg",
+                  "alt": "更新的带链接的图片",
+                  "position": {
+                    "start": {
+                      "line": 37,
+                      "column": 2,
+                      "offset": 691
+                    },
+                    "end": {
+                      "line": 37,
+                      "column": 52,
+                      "offset": 741
+                    }
+                  }
+                }
+              ],
               "position": {
                 "start": {
-                  "line": 33,
+                  "line": 37,
                   "column": 1,
-                  "offset": 508
+                  "offset": 690
                 },
                 "end": {
-                  "line": 33,
-                  "column": 9,
-                  "offset": 516
+                  "line": 37,
+                  "column": 74,
+                  "offset": 763
                 }
               },
               "data": {}
             }
           ]
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 37,
+          "column": 1,
+          "offset": 690
+        },
+        "end": {
+          "line": 37,
+          "column": 74,
+          "offset": 763
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "这段"
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": "更新后的",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "文字包含一个"
         },
         {
           "type": "inlineDel",
@@ -1612,150 +1651,6 @@
               "url": "https://example.org",
               "children": [
                 {
-                  "type": "image",
-                  "title": null,
-                  "url": "https://example.org/linked-image.jpg",
-                  "alt": "更新的带链接的图片",
-                  "position": {
-                    "start": {
-                      "line": 37,
-                      "column": 2,
-                      "offset": 691
-                    },
-                    "end": {
-                      "line": 37,
-                      "column": 52,
-                      "offset": 741
-                    }
-                  }
-                }
-              ],
-              "position": {
-                "start": {
-                  "line": 37,
-                  "column": 1,
-                  "offset": 690
-                },
-                "end": {
-                  "line": 37,
-                  "column": 74,
-                  "offset": 763
-                }
-              },
-              "data": {}
-            }
-          ]
-        },
-        {
-          "type": "inlineDel",
-          "children": [
-            {
-              "type": "text",
-              "value": "和一个",
-              "position": {
-                "start": {
-                  "line": 33,
-                  "column": 34,
-                  "offset": 541
-                },
-                "end": {
-                  "line": 33,
-                  "column": 37,
-                  "offset": 544
-                }
-              },
-              "data": {}
-            }
-          ]
-        },
-        {
-          "type": "inlineDel",
-          "children": [
-            {
-              "type": "image",
-              "title": null,
-              "url": "https://example.com/inline-image.jpg",
-              "alt": "内联图片",
-              "position": {
-                "start": {
-                  "line": 33,
-                  "column": 37,
-                  "offset": 544
-                },
-                "end": {
-                  "line": 33,
-                  "column": 82,
-                  "offset": 589
-                }
-              },
-              "data": {}
-            }
-          ]
-        },
-        {
-          "type": "inlineDel",
-          "children": [
-            {
-              "type": "text",
-              "value": "。",
-              "position": {
-                "start": {
-                  "line": 33,
-                  "column": 82,
-                  "offset": 589
-                },
-                "end": {
-                  "line": 33,
-                  "column": 83,
-                  "offset": 590
-                }
-              },
-              "data": {}
-            }
-          ]
-        }
-      ],
-      "position": {
-        "start": {
-          "line": 37,
-          "column": 1,
-          "offset": 690
-        },
-        "end": {
-          "line": 37,
-          "column": 74,
-          "offset": 763
-        }
-      }
-    },
-    {
-      "type": "ins",
-      "children": [
-        {
-          "type": "paragraph",
-          "children": [
-            {
-              "type": "text",
-              "value": "这段更新后的文字包含一个",
-              "position": {
-                "start": {
-                  "line": 39,
-                  "column": 1,
-                  "offset": 765
-                },
-                "end": {
-                  "line": 39,
-                  "column": 13,
-                  "offset": 777
-                }
-              }
-            },
-            {
-              "type": "link",
-              "title": null,
-              "url": "https://example.org",
-              "children": [
-                {
                   "type": "text",
                   "value": "更新的链接",
                   "position": {
@@ -1783,24 +1678,54 @@
                   "column": 41,
                   "offset": 805
                 }
-              }
+              },
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "和一个",
+          "position": {
+            "start": {
+              "line": 39,
+              "column": 41,
+              "offset": 805
             },
+            "end": {
+              "line": 39,
+              "column": 44,
+              "offset": 808
+            }
+          }
+        },
+        {
+          "type": "inlineDel",
+          "children": [
             {
-              "type": "text",
-              "value": "和一个",
+              "type": "image",
+              "title": null,
+              "url": "https://example.com/inline-image.jpg",
+              "alt": "内联图片",
               "position": {
                 "start": {
-                  "line": 39,
-                  "column": 41,
-                  "offset": 805
+                  "line": 33,
+                  "column": 37,
+                  "offset": 544
                 },
                 "end": {
-                  "line": 39,
-                  "column": 44,
-                  "offset": 808
+                  "line": 33,
+                  "column": 82,
+                  "offset": 589
                 }
-              }
-            },
+              },
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
             {
               "type": "image",
               "title": null,
@@ -1817,40 +1742,40 @@
                   "column": 92,
                   "offset": 856
                 }
-              }
-            },
-            {
-              "type": "text",
-              "value": "。",
-              "position": {
-                "start": {
-                  "line": 39,
-                  "column": 92,
-                  "offset": 856
-                },
-                "end": {
-                  "line": 39,
-                  "column": 93,
-                  "offset": 857
-                }
-              }
+              },
+              "data": {}
             }
-          ],
+          ]
+        },
+        {
+          "type": "text",
+          "value": "。",
           "position": {
             "start": {
               "line": 39,
-              "column": 1,
-              "offset": 765
+              "column": 92,
+              "offset": 856
             },
             "end": {
               "line": 39,
               "column": 93,
               "offset": 857
             }
-          },
-          "data": {}
+          }
         }
-      ]
+      ],
+      "position": {
+        "start": {
+          "line": 39,
+          "column": 1,
+          "offset": 765
+        },
+        "end": {
+          "line": 39,
+          "column": 93,
+          "offset": 857
+        }
+      }
     },
     {
       "type": "ins",
