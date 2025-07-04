@@ -1,19 +1,32 @@
 import { diffChars } from 'diff';
 import { u } from 'unist-builder';
 import { DiffType, type Node } from '../type';
-import { findMatches } from './match';
 import { findMatchNodes } from './match';
 import { cloneNodeWithDiff, isNodeEqual } from './node';
+import { preprocessAstForCustomOperation, restoreAstFromCustomOperation } from './transform';
 
 /**
  * 比较两个Markdown AST并生成差异结果
- * @param {Object} sourceAst - 旧版本的AST
- * @param {Object} targetAst - 新版本的AST
- * @param {Object} options - 配置选项
- * @returns {Object} 包含差异信息的AST
+ * @param sourceAst - 旧版本的AST
+ * @param targetAst - 新版本的AST
+ * @returns 包含差异信息的AST
  */
 export function diffMarkdownAst(sourceAst: Node, targetAst: Node): Node {
-  // 创建一个新的AST作为结果
+  const source = preprocessAstForCustomOperation(sourceAst);
+  const target = preprocessAstForCustomOperation(targetAst);
+  const diff = diffMarkdownAstCore(source, target, true);
+  return restoreAstFromCustomOperation(diff);
+}
+
+/**
+ * 比较两个Markdown AST并生成差异结果（核心实现）
+ * @param sourceAst - 旧版本的AST
+ * @param targetAst - 新版本的AST
+ * @param out - 是否为外部调用，默认为false
+ * @returns 包含差异信息的AST
+ */
+function diffMarkdownAstCore(sourceAst: Node, targetAst: Node, out = false): Node {
+  // 创建一个新的根节点AST作为结果
   const diffAst: Node & { children: Node[] } = {
     type: 'root',
     children: []
@@ -23,7 +36,7 @@ export function diffMarkdownAst(sourceAst: Node, targetAst: Node): Node {
   const sourceNodes = sourceAst.children || [];
   const targetNodes = targetAst.children || [];
 
-  // 使用最长公共子序列算法找出匹配的节点(不需要精确 100% 的匹配)
+  // 使用匹配算法找出相似的节点(不需要精确 100% 的匹配)
   const matches = findMatchNodes(sourceNodes, targetNodes);
 
   // 处理每个节点的差异
@@ -88,9 +101,9 @@ export function diffMarkdownAst(sourceAst: Node, targetAst: Node): Node {
 
 /**
  * 比较两个相同类型的节点
- * @param {Object} sourceNode - 旧节点
- * @param {Object} targetNode - 新节点
- * @returns {Array} 包含差异信息的节点数组
+ * @param sourceNode - 旧节点
+ * @param targetNode - 新节点
+ * @returns 包含差异信息的节点数组
  */
 export function compareNode(sourceNode: Node, targetNode: Node): Node[] {
   // 如果节点类型不同，直接返回删除和添加
@@ -104,18 +117,20 @@ export function compareNode(sourceNode: Node, targetNode: Node): Node[] {
   // 根据节点类型进行不同的比较
   switch (sourceNode.type) {
     case 'thematicBreak':
+      // 主题分隔符不需要比较，直接返回
       return [sourceNode]
     case 'blockquote':
     case 'list':
+    case 'section':
       // 递归比较子节点
       return [compareContainerNode(sourceNode, targetNode)];
       
     case 'heading':
     case 'paragraph':
-      // 转换为文本进行比较
+      // 递归比较容器节点内容
       return [compareContainerNode(sourceNode, targetNode)];
     
-    // 对特定类型的节点进行字符级别的diff
+    // 对文本和格式化节点进行字符级别的diff
     case 'text':
     case 'strong':
     case 'emphasis':
@@ -127,25 +142,27 @@ export function compareNode(sourceNode: Node, targetNode: Node): Node[] {
     case 'html':
     case 'listItem':
     case 'definition':
+      // 对于表格、代码块等结构化内容，使用原始节点比较
       return compareRawNode(sourceNode, targetNode)
       
     default:
+      // 对于其他未特殊处理的节点类型，使用原始节点比较
       return compareRawNode(sourceNode, targetNode);
   }
 }
 
 /**
  * 比较容器类型节点（如blockquote、list）
- * @param {Object} sourceNode - 旧节点
- * @param {Object} targetNode - 新节点
- * @returns {Object} 包含差异信息的节点
+ * @param sourceNode - 旧节点
+ * @param targetNode - 新节点
+ * @returns 包含差异信息的节点
  */
 function compareContainerNode(sourceNode: Node, targetNode: Node): Node {
   // 递归比较子节点
   if (sourceNode.children && targetNode.children) {
-    const childDiffAST = diffMarkdownAst(
+    const childDiffAST = diffMarkdownAstCore(
       u('root', sourceNode.children ),
-      u('root', targetNode.children)
+      u('root', targetNode.children),
     );
     return { ...targetNode, children: childDiffAST.children };
   }
@@ -154,16 +171,14 @@ function compareContainerNode(sourceNode: Node, targetNode: Node): Node {
 }
 
 /**
- * 比较两个节点的所有属性是否完全相同（忽略position属性）
- * @param {Object} sourceNode - 旧节点
- * @param {Object} targetNode - 新节点
- * @returns {Array} 包含差异信息的节点数组
+ * 比较两个节点是否相同，如果不同则返回删除和添加的节点
+ * @param sourceNode - 旧节点
+ * @param targetNode - 新节点
+ * @returns 包含差异信息的节点数组
  */
 function compareRawNode(sourceNode: Node, targetNode: Node): Node[] {
-  // 复制 old 和 new 递归判断所有属性是否完全一样，除了 position
-  
-  // 比较两个节点是否相同
-  if (isNodeEqual(sourceNode, targetNode, ['position'])) {
+  // 比较两个节点是否相同（忽略指定的属性）
+  if (isNodeEqual(sourceNode, targetNode, ['data', 'position'])) {
     return [targetNode]; // 没有变化
   } else {
     return [
@@ -176,17 +191,12 @@ function compareRawNode(sourceNode: Node, targetNode: Node): Node[] {
 
 
 /**
- * 对文本、加粗、斜体、粗斜体和删除线节点进行字符级别的diff
- * @param {Object} sourceNode - 旧节点
- * @param {Object} targetNode - 新节点
- * @returns {Array} 包含差异信息的节点数组
+ * 对文本、加粗、斜体和删除线节点进行字符级别的diff
+ * @param sourceNode - 旧节点
+ * @param targetNode - 新节点
+ * @returns 包含差异信息的节点数组
  */
-function compareCharByChar(sourceNode: Node, targetNode: Node) {
-  // 如果节点完全相同，直接返回新节点
-  if (JSON.stringify(sourceNode) === JSON.stringify(targetNode)) {
-    return [targetNode];
-  }
-  
+function compareCharByChar(sourceNode: Node, targetNode: Node): Node[] {  
   // 如果节点类型不同，直接返回删除和添加
   if (sourceNode.type !== targetNode.type) {
     return [

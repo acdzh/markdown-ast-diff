@@ -26,10 +26,11 @@ export function isInlineElement(node: Node) {
  * @param parent 父节点
  * @param node 要替换的节点
  * @param newNode 替换后的节点或节点数组
+ * @param deleteCount 要删除的节点数量
  * @returns void
  */
 
-export function replaceChildNode(parent?: Node, node?: Node, newNode?: Node | Node[]): void {
+export function replaceChildNode(parent?: Node, node?: Node, newNode?: Node | Node[], deleteCount = 1): void {
   // 参数有效性检查
   if (!parent || !node || !newNode || !parent.children) {
     return;
@@ -43,11 +44,9 @@ export function replaceChildNode(parent?: Node, node?: Node, newNode?: Node | No
   
   // 替换节点
   if (Array.isArray(newNode)) {
-    // 使用展开操作符将节点数组插入到原位置
-    parent.children.splice(index, 1, ...newNode);
+    parent.children.splice(index, deleteCount, ...newNode);
   } else {
-    // 直接替换单个节点
-    parent.children[index] = newNode;
+    parent.children.splice(index, deleteCount, newNode);
   }
 }
 

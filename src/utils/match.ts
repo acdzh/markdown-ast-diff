@@ -20,12 +20,15 @@ export function findMatchNodes<T>(
   sourceArray: Node[], 
   targetArray: Node[], 
 ): Match[] {
+  // TODO 升级成相似度算法
   const isEqual = (source: Node, target: Node) => {
     if (source.type !== target.type) {
       return false;
     }
     if (source.type === 'heading' || source.type === 'section' ) {
-      return source.depth === target.depth;
+      if(source.depth !== target.depth) {
+        return false;
+      }
     }
     return true;
   };
