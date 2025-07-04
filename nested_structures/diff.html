@@ -1,0 +1,294 @@
+<html><head>
+    <style>
+      /* 基本样式 */
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      
+      /* 标题样式 */
+      h1, h2, h3, h4, h5, h6 {
+        margin-top: 1.5em;
+        margin-bottom: 0.5em;
+        font-weight: 600;
+        line-height: 1.25;
+      }
+      h1 { font-size: 2em; border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; }
+      h2 { font-size: 1.5em; border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; }
+      h3 { font-size: 1.25em; }
+      h4 { font-size: 1em; }
+      h5 { font-size: 0.875em; }
+      h6 { font-size: 0.85em; color: #6a737d; }
+      
+      /* 段落样式 */
+      p {
+        margin-top: 0;
+        margin-bottom: 16px;
+      }
+      
+      /* 链接样式 */
+      a {
+        color: #0366d6;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      
+      /* 列表样式 */
+      ul, ol {
+        padding-left: 2em;
+        margin-top: 0;
+        margin-bottom: 16px;
+      }
+      li {
+        margin-bottom: 0.25em;
+      }
+      
+      /* 代码样式 */
+      code {
+        font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+        padding: 0.2em 0.4em;
+        margin: 0;
+        font-size: 85%;
+        background-color: rgba(27, 31, 35, 0.05);
+        border-radius: 3px;
+      }
+      pre {
+        font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+        padding: 16px;
+        overflow: auto;
+        font-size: 85%;
+        line-height: 1.45;
+        background-color: #f6f8fa;
+        border-radius: 3px;
+        margin-top: 0;
+        margin-bottom: 16px;
+      }
+      pre code {
+        padding: 0;
+        margin: 0;
+        background-color: transparent;
+        border: 0;
+      }
+      
+      /* 引用样式 */
+      blockquote {
+        padding: 0 1em;
+        color: #6a737d;
+        border-left: 0.25em solid #dfe2e5;
+        margin: 0 0 16px 0;
+      }
+      
+      /* 表格样式 */
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 16px;
+        display: block;
+        overflow-x: auto;
+      }
+      table th, table td {
+        padding: 6px 13px;
+        border: 1px solid #dfe2e5;
+      }
+      table tr {
+        background-color: #fff;
+        border-top: 1px solid #c6cbd1;
+      }
+      table tr:nth-child(2n) {
+        background-color: #f6f8fa;
+      }
+      table th {
+        font-weight: 600;
+        background-color: #f6f8fa;
+      }
+      .align-left {
+        text-align: left;
+      }
+      .align-center {
+        text-align: center;
+      }
+      .align-right {
+        text-align: right;
+      }
+      
+      /* 水平线样式 */
+      hr {
+        height: 0.25em;
+        padding: 0;
+        margin: 24px 0;
+        background-color: #e1e4e8;
+        border: 0;
+      }
+      
+      /* 差异标记样式 */
+      ins {
+        background-color: #e6ffec;
+        color: #24292e;
+        text-decoration: none;
+        border-radius: 2px;
+        padding: 0 2px;
+      }
+      
+      del {
+        background-color: #ffebe9;
+        color: #24292e;
+        text-decoration: line-through;
+        border-radius: 2px;
+        padding: 0 2px;
+      }
+
+      ins.diff-block, del.diff-block {
+        display: block;
+        padding-left: 10px;
+        border-left-width: 3px;
+        border-left-style: solid;
+      }
+      
+      ins.diff-block {
+        border-left-color: #2cbe4e;
+      }
+      
+      del.diff-block {
+        border-left-color: #cb2431;
+      }
+
+      ins > hr, ins > pre.code {
+        background-color: #e6ffec;
+      }
+
+      del > hr, del > pre.code {
+        background-color: #ffebe9;
+      }
+      
+      /* 列表项差异样式 */
+      li.list-item-ins, li[data-diff="ins"] {
+        background-color: #e6ffec;
+        border-radius: 2px;
+      }
+      
+      li.list-item-del, li[data-diff="del"] {
+        background-color: #ffebe9;
+        border-radius: 2px;
+        text-decoration: line-through;
+      }
+    </style>
+  </head><body><div class="markdown-content"><h1 class="heading-1"><span class="text">嵌套结构测试</span><ins class="diff-inline"><span class="text">（更新版）</span></ins></h1><h2 class="heading-2"><span class="text">1. 深度嵌套列表</span></h2><h3 class="heading-3"><span class="text">1.1 无序列表嵌套</span></h3><ul class="unordered-list"><li value="1" data-diff="del" class="list-item list-item-del"><p class="paragraph"><span class="text">第一级列表项</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第二级列表项</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第三级列表项</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第四级列表项</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第五级列表项</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第六级列表项</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第七级列表项</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第八级列表项</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第九级列表项</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第十级列表项</span></p></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li><li value="1" data-diff="ins" class="list-item list-item-ins"><p class="paragraph"><span class="text">第一级列表项（已修改）</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第二级列表项</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第三级列表项（已修改）</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第四级列表项</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第五级列表项</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第六级列表项（已修改）</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第七级列表项</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第八级列表项</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第九级列表项</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第十级列表项</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">新增的第十一级列表项</span></p></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li><li value="2" data-diff="del" class="list-item list-item-del"><p class="paragraph"><span class="text">另一个第一级列表项</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第二级列表项 A</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第三级列表项 A</span></p></li></ul></li><li value="2" class="list-item"><p class="paragraph"><span class="text">第二级列表项 B</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第三级列表项 B</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第四级列表项 B</span></p></li></ul></li></ul></li></ul></li><li value="2" data-diff="ins" class="list-item list-item-ins"><p class="paragraph"><span class="text">另一个第一级列表项</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第二级列表项 A</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第三级列表项 A</span></p></li><li value="2" class="list-item"><p class="paragraph"><span class="text">新增的第三级列表项</span></p></li></ul></li><li value="2" class="list-item"><p class="paragraph"><span class="text">第二级列表项 B</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第三级列表项 B</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第四级列表项 B</span></p></li><li value="2" class="list-item"><p class="paragraph"><span class="text">新增的第四级列表项</span></p></li></ul></li></ul></li></ul></li><li value="3" data-diff="ins" class="list-item list-item-ins"><p class="paragraph"><span class="text">新增的第一级列表项</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">新增的第二级列表项</span></p></li></ul></li></ul><h3 class="heading-3"><span class="text">1.2 有序列表嵌套</span></h3><ol class="ordered-list"><li value="1" data-diff="del" class="list-item list-item-del"><p class="paragraph"><span class="text">第一级有序列表</span></p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第二级有序列表</span></p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第三级有序列表</span></p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第四级有序列表</span></p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第五级有序列表</span></p></li></ol></li></ol></li></ol></li></ol></li><li value="1" data-diff="ins" class="list-item list-item-ins"><p class="paragraph"><span class="text">第一级有序列表（已修改）</span></p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第二级有序列表</span></p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第三级有序列表</span></p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第四级有序列表</span></p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第五级有序列表</span></p></li><li value="2" class="list-item"><p class="paragraph"><span class="text">新增的第五级有序列表</span></p></li></ol></li></ol></li></ol></li></ol></li><li value="2" data-diff="del" class="list-item list-item-del"><p class="paragraph"><span class="text">另一个第一级有序列表</span></p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第二级有序列表 A</span></p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第三级有序列表 A</span></p></li></ol></li><li value="2" class="list-item"><p class="paragraph"><span class="text">第二级有序列表 B</span></p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第三级有序列表 B</span></p></li></ol></li></ol></li><li value="2" data-diff="ins" class="list-item list-item-ins"><p class="paragraph"><span class="text">另一个第一级有序列表</span></p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第二级有序列表 A</span></p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第三级有序列表 A</span></p></li></ol></li><li value="2" class="list-item"><p class="paragraph"><span class="text">第二级有序列表 B</span></p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第三级有序列表 B</span></p></li><li value="2" class="list-item"><p class="paragraph"><span class="text">新增的第三级有序列表</span></p></li></ol></li></ol></li><li value="3" data-diff="ins" class="list-item list-item-ins"><p class="paragraph"><span class="text">新增的第一级有序列表</span></p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">新增的第二级有序列表</span></p></li></ol></li></ol><h3 class="heading-3"><span class="text">1.3 混合列表嵌套</span></h3><ol class="ordered-list"><li value="1" data-diff="del" class="list-item list-item-del"><p class="paragraph"><span class="text">第一级有序列表</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第二级无序列表</span></p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第三级有序列表</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第四级无序列表</span></p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第五级有序列表</span></p></li></ol></li></ul></li></ol></li></ul></li><li value="1" data-diff="ins" class="list-item list-item-ins"><p class="paragraph"><span class="text">第一级有序列表</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第二级无序列表（已修改）</span></p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第三级有序列表</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第四级无序列表</span></p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第五级有序列表</span></p></li><li value="2" class="list-item"><p class="paragraph"><span class="text">新增的第五级有序列表</span></p></li></ol></li></ul></li></ol></li><li value="2" class="list-item"><p class="paragraph"><span class="text">新增的第二级无序列表</span></p></li></ul></li><li value="2" data-diff="del" class="list-item list-item-del"><p class="paragraph"><span class="text">另一个第一级有序列表</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第二级无序列表 A</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第三级无序列表 A</span></p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第四级有序列表 A</span></p></li></ol></li></ul></li><li value="2" class="list-item"><p class="paragraph"><span class="text">第二级无序列表 B</span></p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第三级有序列表 B</span></p></li></ol></li></ul></li><li value="2" data-diff="ins" class="list-item list-item-ins"><p class="paragraph"><span class="text">另一个第一级有序列表</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第二级无序列表 A</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第三级无序列表 A</span></p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第四级有序列表 A</span></p></li><li value="2" class="list-item"><p class="paragraph"><span class="text">新增的第四级有序列表</span></p></li></ol></li></ul></li><li value="2" class="list-item"><p class="paragraph"><span class="text">第二级无序列表 B</span></p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">第三级有序列表 B</span></p></li><li value="2" class="list-item"><p class="paragraph"><span class="text">新增的第三级有序列表</span></p></li></ol></li></ul></li><li value="3" data-diff="ins" class="list-item list-item-ins"><p class="paragraph"><span class="text">新增的第一级有序列表</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">新增的第二级无序列表</span></p></li></ul></li></ol><h3 class="heading-3"><span class="text">1.4 任务列表嵌套</span></h3><ul class="unordered-list"><li value="1" data-diff="del" class="list-item list-item-del"><p class="paragraph"><span class="text">未完成任务</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">子任务 1</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">子任务 1.1</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">子任务 1.1.1</span></p></li></ul></li></ul></li><li value="2" class="list-item"><p class="paragraph"><span class="text">子任务 2</span></p></li></ul></li><li value="1" data-diff="ins" class="list-item list-item-ins"><p class="paragraph"><span class="text">未完成任务</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">子任务 1</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">子任务 1.1（已完成）</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">子任务 1.1.1</span></p></li><li value="2" class="list-item"><p class="paragraph"><span class="text">新增的子任务（已完成）</span></p></li></ul></li></ul></li><li value="2" class="list-item"><p class="paragraph"><span class="text">子任务 2</span></p></li></ul></li><li value="2" data-diff="del" class="list-item list-item-del"><p class="paragraph"><span class="text">已完成任务</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">已完成子任务 1</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">未完成子任务 1.1</span></p></li></ul></li><li value="2" class="list-item"><p class="paragraph"><span class="text">未完成子任务 2</span></p></li></ul></li><li value="2" data-diff="ins" class="list-item list-item-ins"><p class="paragraph"><span class="text">已完成任务</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">已完成子任务 1</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">未完成子任务 1.1（现已完成）</span></p></li><li value="2" class="list-item"><p class="paragraph"><span class="text">新增的子任务</span></p></li></ul></li><li value="2" class="list-item"><p class="paragraph"><span class="text">未完成子任务 2</span></p></li></ul></li><li value="3" data-diff="ins" class="list-item list-item-ins"><p class="paragraph"><span class="text">新增的未完成任务</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">新增的子任务</span></p></li></ul></li></ul><h2 class="heading-2"><span class="text">2. 深度嵌套引用</span></h2><blockquote ><p class="paragraph"><span class="text">第一级引用</span><ins class="diff-inline"><span class="text">（已修改）</span></ins></p><blockquote ><p class="paragraph"><span class="text">第二级引用</span></p><blockquote ><p class="paragraph"><span class="text">第三级引用</span><ins class="diff-inline"><span class="text">（已修改）</span></ins></p><blockquote ><p class="paragraph"><span class="text">第四级引用</span></p><blockquote ><p class="paragraph"><span class="text">第五级引用</span><ins class="diff-inline"><span class="text">（已修改）</span></ins></p><blockquote ><p class="paragraph"><span class="text">第六级引用</span></p><ins class="diff-block"><blockquote ><p class="paragraph"><span class="text">新增的第七级引用</span></p></blockquote></ins></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote><blockquote ><p class="paragraph"><span class="text">另一个第一级引用</span></p><blockquote ><p class="paragraph"><span class="text">第二级引用 A</span><ins class="diff-inline"><span class="text">（已修改）</span></ins></p><blockquote ><p class="paragraph"><span class="text">第三级引用 A</span></p><ins class="diff-block"><p class="paragraph"><span class="text">新增的第三级引用</span></p></ins></blockquote></blockquote><blockquote ><p class="paragraph"><span class="text">第二级引用 B</span></p><blockquote ><p class="paragraph"><span class="text">第三级引用 B</span><ins class="diff-inline"><span class="text">（已修改）</span></ins></p></blockquote></blockquote></blockquote><ins class="diff-block"><blockquote ><p class="paragraph"><span class="text">新增的第一级引用</span></p><blockquote ><p class="paragraph"><span class="text">新增的第二级引用</span></p></blockquote></blockquote></ins><h2 class="heading-2"><span class="text">3. 嵌套代码块</span></h2><del class="diff-block"><pre class="code" data-language="markdown"><code># 代码块中的 Markdown
+
+## 子标题
+
+```javascript
+// 代码块中的代码块
+function nestedExample() {
+  console.log(&#39;这是嵌套在 Markdown 代码块中的 JavaScript 代码块&#39;);
+}
+```
+
+- 列表项 1
+- 列表项 2
+  - 嵌套列表项</code></pre></del><ins class="diff-block"><pre class="code" data-language="markdown"><code># 代码块中的 Markdown（已修改）
+
+## 子标题
+
+```javascript
+// 代码块中的代码块（已修改）
+function nestedExample() {
+  console.log(&#39;这是嵌套在 Markdown 代码块中的 JavaScript 代码块&#39;);
+  // 新增的注释
+  return &#39;新增的返回值&#39;;
+}
+```
+
+- 列表项 1
+- 列表项 2（已修改）
+  - 嵌套列表项
+  - 新增的嵌套列表项
+
+```python
+# 新增的 Python 代码块
+def nested_function():
+    print(&quot;这是新增的 Python 代码块&quot;)
+    return &quot;新增的返回值&quot;
+```</code></pre></ins><h2 class="heading-2"><span class="text">4. 嵌套表格</span></h2><del class="diff-block"><table class="markdown-table"><tr class="table-row"><td class="table-cell"><span class="text">外部表格</span></td><td class="table-cell"><span class="text">描述</span></td></tr><tr class="table-row"><td class="table-cell"><span class="text">行 1</span></td><td class="table-cell"><span class="text">普通内容</span></td></tr><tr class="table-row"><td class="table-cell"><span class="text">行 2</span></td><td class="table-cell"><div ><table></div><div ><tr></div><div ><th></div><span class="text">嵌套表格</span><div ></th></div><div ><th></div><span class="text">值</span><div ></th></div><div ></tr></div><div ><tr></div><div ><td></div><span class="text">嵌套行 1</span><div ></td></div><div ><td></div><span class="text">100</span><div ></td></div><div ></tr></div><div ><tr></div><div ><td></div><span class="text">嵌套行 2</span><div ></td></div><div ><td></div><span class="text">200</span><div ></td></div><div ></tr></div><div ></table></div></td></tr><tr class="table-row"><td class="table-cell"><span class="text">行 3</span></td><td class="table-cell"><span class="text">普通内容</span></td></tr></table></del><ins class="diff-block"><table class="markdown-table"><tr class="table-row"><td class="table-cell"><span class="text">外部表格</span></td><td class="table-cell"><span class="text">描述</span></td><td class="table-cell"><span class="text">新增列</span></td></tr><tr class="table-row"><td class="table-cell"><span class="text">行 1</span></td><td class="table-cell"><span class="text">普通内容</span></td><td class="table-cell"><span class="text">新值 1</span></td></tr><tr class="table-row"><td class="table-cell"><span class="text">行 2</span></td><td class="table-cell"><div ><table></div><div ><tr></div><div ><th></div><span class="text">嵌套表格</span><div ></th></div><div ><th></div><span class="text">值</span><div ></th></div><div ><th></div><span class="text">新增列</span><div ></th></div><div ></tr></div><div ><tr></div><div ><td></div><span class="text">嵌套行 1</span><div ></td></div><div ><td></div><span class="text">100</span><div ></td></div><div ><td></div><span class="text">新值 A</span><div ></td></div><div ></tr></div><div ><tr></div><div ><td></div><span class="text">嵌套行 2</span><div ></td></div><div ><td></div><span class="text">200</span><div ></td></div><div ><td></div><span class="text">新值 B</span><div ></td></div><div ></tr></div><div ><tr></div><div ><td></div><span class="text">新增嵌套行</span><div ></td></div><div ><td></div><span class="text">300</span><div ></td></div><div ><td></div><span class="text">新值 C</span><div ></td></div><div ></tr></div><div ></table></div></td><td class="table-cell"><span class="text">新值 2</span></td></tr><tr class="table-row"><td class="table-cell"><span class="text">行 3</span></td><td class="table-cell"><span class="text">普通内容（已修改）</span></td><td class="table-cell"><span class="text">新值 3</span></td></tr><tr class="table-row"><td class="table-cell"><span class="text">新增行</span></td><td class="table-cell"><span class="text">新增内容</span></td><td class="table-cell"><span class="text">新值 4</span></td></tr></table></ins><h2 class="heading-2"><span class="text">5. 混合嵌套结构</span></h2><ol class="ordered-list"><li value="1" data-diff="del" class="list-item list-item-del"><p class="paragraph"><span class="text">第一级有序列表</span></p><blockquote ><p class="paragraph"><span class="text">嵌套在列表中的引用</span></p><pre class="code" data-language="javascript"><code>// 嵌套在引用中的代码块
+function nestedInQuote() {
+  return &#39;这是嵌套在引用中的代码&#39;;
+}</code></pre></blockquote><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">嵌套的无序列表</span></p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">再次嵌套的有序列表</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">嵌套的任务列表</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">深度嵌套的任务</span></p></li></ul></li></ul></li></ol></li></ul></li><li value="1" data-diff="ins" class="list-item list-item-ins"><p class="paragraph"><span class="text">第一级有序列表（已修改）</span></p><blockquote ><p class="paragraph"><span class="text">嵌套在列表中的引用（已修改）</span></p><pre class="code" data-language="javascript"><code>// 嵌套在引用中的代码块（已修改）
+function nestedInQuote() {
+  console.log(&quot;新增的日志&quot;);
+  return &#39;这是嵌套在引用中的代码（已修改）&#39;;
+}</code></pre><p class="paragraph"><span class="text">新增的引用内容</span></p></blockquote><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">嵌套的无序列表</span></p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">再次嵌套的有序列表（已修改）</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">嵌套的任务列表（已完成）</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">深度嵌套的任务</span></p></li><li value="2" class="list-item"><p class="paragraph"><span class="text">新增的深度嵌套任务（已完成）</span></p></li></ul></li></ul></li><li value="2" class="list-item"><p class="paragraph"><span class="text">新增的嵌套有序列表</span></p></li></ol></li><li value="2" class="list-item"><p class="paragraph"><span class="text">新增的嵌套无序列表</span></p></li></ul></li><li value="2" data-diff="del" class="list-item list-item-del"><p class="paragraph"><span class="text">第二级有序列表</span></p><div ><table>
+<tr><th>嵌套在列表中的表格</th><th>值</th></tr>
+<tr><td>数据 1</td><td>300</td></tr>
+<tr><td>数据 2</td><td>400</td></tr>
+</table></div></li><li value="2" data-diff="ins" class="list-item list-item-ins"><p class="paragraph"><span class="text">第二级有序列表</span></p><div ><table>
+<tr><th>嵌套在列表中的表格</th><th>值</th><th>新增列</th></tr>
+<tr><td>数据 1</td><td>300</td><td>新值 X</td></tr>
+<tr><td>数据 2</td><td>400</td><td>新值 Y</td></tr>
+<tr><td>新增数据</td><td>500</td><td>新值 Z</td></tr>
+</table></div></li><li value="3" data-diff="ins" class="list-item list-item-ins"><p class="paragraph"><span class="text">新增的有序列表</span></p><blockquote ><p class="paragraph"><span class="text">新增的嵌套引用</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">新增的嵌套列表</span></p></li></ul></blockquote></li></ol><h2 class="heading-2"><span class="text">6. 嵌套 HTML 结构</span></h2><del class="diff-block"><div ><div style="border: 1px solid #ccc; padding: 10px;">
+  <h3>HTML 中的标题</h3>
+  <p>一些文本内容</p>
+  <div style="background-color: #f0f0f0; padding: 10px;">
+    <h4>嵌套 div 中的标题</h4>
+    <ul>
+      <li>列表项 1</li>
+      <li>列表项 2
+        <ol>
+          <li>嵌套的有序列表项 1</li>
+          <li>嵌套的有序列表项 2</li>
+        </ol>
+      </li>
+    </ul>
+    <div style="border: 1px dashed #999; padding: 5px;">
+      <p>更深层次的嵌套 div</p>
+      <blockquote>
+        <p>嵌套在 HTML 中的引用</p>
+        <pre><code>// 嵌套在引用中的代码
+function deeplyNested() {
+  return '这是深度嵌套的代码';
+}</code></pre>
+      </blockquote>
+    </div>
+  </div>
+</div></div></del><ins class="diff-block"><div ><div style="border: 1px solid #ccc; padding: 10px;">
+  <h3>HTML 中的标题（已修改）</h3>
+  <p>一些文本内容（已修改）</p>
+  <div style="background-color: #f0f0f0; padding: 10px;">
+    <h4>嵌套 div 中的标题</h4>
+    <ul>
+      <li>列表项 1（已修改）</li>
+      <li>列表项 2
+        <ol>
+          <li>嵌套的有序列表项 1</li>
+          <li>嵌套的有序列表项 2（已修改）</li>
+          <li>新增的嵌套有序列表项</li>
+        </ol>
+      </li>
+      <li>新增的列表项</li>
+    </ul>
+    <div style="border: 1px dashed #999; padding: 5px;">
+      <p>更深层次的嵌套 div（已修改）</p>
+      <blockquote>
+        <p>嵌套在 HTML 中的引用（已修改）</p>
+        <pre><code>// 嵌套在引用中的代码（已修改）
+function deeplyNested() {
+  console.log("新增的日志");
+  return '这是深度嵌套的代码（已修改）';
+}</code></pre>
+      </blockquote>
+      <p>新增的段落</p>
+    </div>
+    <div style="border: 1px dotted #666; margin-top: 10px; padding: 5px;">
+      <p>新增的嵌套 div</p>
+    </div>
+  </div>
+</div></div></ins><h2 class="heading-2"><span class="text">7. 总结</span></h2><p class="paragraph"><span class="text">这个文档包含了各种深度嵌套的结构，用于测试 Markdown 差异比较工具处理复杂嵌套内容的能力。</span><ins class="diff-inline"><span class="text">文档已经过更新，包含了多处修改、添加和删除内容，以测试差异比较功能的效果。</span></ins></p><ins class="diff-block"><h2 class="heading-2"><span class="text">8. 新增章节</span></h2></ins><ins class="diff-block"><p class="paragraph"><span class="text">这是一个新增的章节，包含嵌套结构：</span></p></ins><ins class="diff-block"><blockquote ><p class="paragraph"><span class="text">新章节中的引用</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">引用中的列表</span></p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><span class="text">嵌套列表</span></p><pre class="code" data-language="javascript"><code>// 嵌套在列表中的代码
+function newSectionNested() {
+  return &#39;新章节中的嵌套代码&#39;;
+}</code></pre></li></ul></li></ul></blockquote></ins></div></body></html>

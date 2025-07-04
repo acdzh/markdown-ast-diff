@@ -1,0 +1,4013 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "heading",
+      "depth": 1,
+      "children": [
+        {
+          "type": "text",
+          "value": "嵌套结构测试"
+        },
+        {
+          "type": "ins",
+          "children": [
+            {
+              "type": "text",
+              "value": "（更新版）",
+              "data": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "1. 深度嵌套列表"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "1.1 无序列表嵌套"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "第一级列表项"
+                }
+              ]
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "start": null,
+              "spread": false,
+              "children": [
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "第二级列表项"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list",
+                      "ordered": false,
+                      "start": null,
+                      "spread": false,
+                      "children": [
+                        {
+                          "type": "listItem",
+                          "spread": false,
+                          "checked": null,
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "第三级列表项"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "list",
+                              "ordered": false,
+                              "start": null,
+                              "spread": false,
+                              "children": [
+                                {
+                                  "type": "listItem",
+                                  "spread": false,
+                                  "checked": null,
+                                  "children": [
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "第四级列表项"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "list",
+                                      "ordered": false,
+                                      "start": null,
+                                      "spread": false,
+                                      "children": [
+                                        {
+                                          "type": "listItem",
+                                          "spread": false,
+                                          "checked": null,
+                                          "children": [
+                                            {
+                                              "type": "paragraph",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "value": "第五级列表项"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "list",
+                                              "ordered": false,
+                                              "start": null,
+                                              "spread": false,
+                                              "children": [
+                                                {
+                                                  "type": "listItem",
+                                                  "spread": false,
+                                                  "checked": null,
+                                                  "children": [
+                                                    {
+                                                      "type": "paragraph",
+                                                      "children": [
+                                                        {
+                                                          "type": "text",
+                                                          "value": "第六级列表项"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "list",
+                                                      "ordered": false,
+                                                      "start": null,
+                                                      "spread": false,
+                                                      "children": [
+                                                        {
+                                                          "type": "listItem",
+                                                          "spread": false,
+                                                          "checked": null,
+                                                          "children": [
+                                                            {
+                                                              "type": "paragraph",
+                                                              "children": [
+                                                                {
+                                                                  "type": "text",
+                                                                  "value": "第七级列表项"
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "type": "list",
+                                                              "ordered": false,
+                                                              "start": null,
+                                                              "spread": false,
+                                                              "children": [
+                                                                {
+                                                                  "type": "listItem",
+                                                                  "spread": false,
+                                                                  "checked": null,
+                                                                  "children": [
+                                                                    {
+                                                                      "type": "paragraph",
+                                                                      "children": [
+                                                                        {
+                                                                          "type": "text",
+                                                                          "value": "第八级列表项"
+                                                                        }
+                                                                      ]
+                                                                    },
+                                                                    {
+                                                                      "type": "list",
+                                                                      "ordered": false,
+                                                                      "start": null,
+                                                                      "spread": false,
+                                                                      "children": [
+                                                                        {
+                                                                          "type": "listItem",
+                                                                          "spread": false,
+                                                                          "checked": null,
+                                                                          "children": [
+                                                                            {
+                                                                              "type": "paragraph",
+                                                                              "children": [
+                                                                                {
+                                                                                  "type": "text",
+                                                                                  "value": "第九级列表项"
+                                                                                }
+                                                                              ]
+                                                                            },
+                                                                            {
+                                                                              "type": "list",
+                                                                              "ordered": false,
+                                                                              "start": null,
+                                                                              "spread": false,
+                                                                              "children": [
+                                                                                {
+                                                                                  "type": "listItem",
+                                                                                  "spread": false,
+                                                                                  "checked": null,
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "type": "paragraph",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "type": "text",
+                                                                                          "value": "第十级列表项"
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "第一级列表项（已修改）"
+                }
+              ]
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "start": null,
+              "spread": false,
+              "children": [
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "第二级列表项"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list",
+                      "ordered": false,
+                      "start": null,
+                      "spread": false,
+                      "children": [
+                        {
+                          "type": "listItem",
+                          "spread": false,
+                          "checked": null,
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "第三级列表项（已修改）"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "list",
+                              "ordered": false,
+                              "start": null,
+                              "spread": false,
+                              "children": [
+                                {
+                                  "type": "listItem",
+                                  "spread": false,
+                                  "checked": null,
+                                  "children": [
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "第四级列表项"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "list",
+                                      "ordered": false,
+                                      "start": null,
+                                      "spread": false,
+                                      "children": [
+                                        {
+                                          "type": "listItem",
+                                          "spread": false,
+                                          "checked": null,
+                                          "children": [
+                                            {
+                                              "type": "paragraph",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "value": "第五级列表项"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "list",
+                                              "ordered": false,
+                                              "start": null,
+                                              "spread": false,
+                                              "children": [
+                                                {
+                                                  "type": "listItem",
+                                                  "spread": false,
+                                                  "checked": null,
+                                                  "children": [
+                                                    {
+                                                      "type": "paragraph",
+                                                      "children": [
+                                                        {
+                                                          "type": "text",
+                                                          "value": "第六级列表项（已修改）"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "list",
+                                                      "ordered": false,
+                                                      "start": null,
+                                                      "spread": false,
+                                                      "children": [
+                                                        {
+                                                          "type": "listItem",
+                                                          "spread": false,
+                                                          "checked": null,
+                                                          "children": [
+                                                            {
+                                                              "type": "paragraph",
+                                                              "children": [
+                                                                {
+                                                                  "type": "text",
+                                                                  "value": "第七级列表项"
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "type": "list",
+                                                              "ordered": false,
+                                                              "start": null,
+                                                              "spread": false,
+                                                              "children": [
+                                                                {
+                                                                  "type": "listItem",
+                                                                  "spread": false,
+                                                                  "checked": null,
+                                                                  "children": [
+                                                                    {
+                                                                      "type": "paragraph",
+                                                                      "children": [
+                                                                        {
+                                                                          "type": "text",
+                                                                          "value": "第八级列表项"
+                                                                        }
+                                                                      ]
+                                                                    },
+                                                                    {
+                                                                      "type": "list",
+                                                                      "ordered": false,
+                                                                      "start": null,
+                                                                      "spread": false,
+                                                                      "children": [
+                                                                        {
+                                                                          "type": "listItem",
+                                                                          "spread": false,
+                                                                          "checked": null,
+                                                                          "children": [
+                                                                            {
+                                                                              "type": "paragraph",
+                                                                              "children": [
+                                                                                {
+                                                                                  "type": "text",
+                                                                                  "value": "第九级列表项"
+                                                                                }
+                                                                              ]
+                                                                            },
+                                                                            {
+                                                                              "type": "list",
+                                                                              "ordered": false,
+                                                                              "start": null,
+                                                                              "spread": false,
+                                                                              "children": [
+                                                                                {
+                                                                                  "type": "listItem",
+                                                                                  "spread": false,
+                                                                                  "checked": null,
+                                                                                  "children": [
+                                                                                    {
+                                                                                      "type": "paragraph",
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "type": "text",
+                                                                                          "value": "第十级列表项"
+                                                                                        }
+                                                                                      ]
+                                                                                    },
+                                                                                    {
+                                                                                      "type": "list",
+                                                                                      "ordered": false,
+                                                                                      "start": null,
+                                                                                      "spread": false,
+                                                                                      "children": [
+                                                                                        {
+                                                                                          "type": "listItem",
+                                                                                          "spread": false,
+                                                                                          "checked": null,
+                                                                                          "children": [
+                                                                                            {
+                                                                                              "type": "paragraph",
+                                                                                              "children": [
+                                                                                                {
+                                                                                                  "type": "text",
+                                                                                                  "value": "新增的第十一级列表项"
+                                                                                                }
+                                                                                              ]
+                                                                                            }
+                                                                                          ]
+                                                                                        }
+                                                                                      ]
+                                                                                    }
+                                                                                  ]
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "另一个第一级列表项"
+                }
+              ]
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "start": null,
+              "spread": false,
+              "children": [
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "第二级列表项 A"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list",
+                      "ordered": false,
+                      "start": null,
+                      "spread": false,
+                      "children": [
+                        {
+                          "type": "listItem",
+                          "spread": false,
+                          "checked": null,
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "第三级列表项 A"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "第二级列表项 B"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list",
+                      "ordered": false,
+                      "start": null,
+                      "spread": false,
+                      "children": [
+                        {
+                          "type": "listItem",
+                          "spread": false,
+                          "checked": null,
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "第三级列表项 B"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "list",
+                              "ordered": false,
+                              "start": null,
+                              "spread": false,
+                              "children": [
+                                {
+                                  "type": "listItem",
+                                  "spread": false,
+                                  "checked": null,
+                                  "children": [
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "第四级列表项 B"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "另一个第一级列表项"
+                }
+              ]
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "start": null,
+              "spread": false,
+              "children": [
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "第二级列表项 A"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list",
+                      "ordered": false,
+                      "start": null,
+                      "spread": false,
+                      "children": [
+                        {
+                          "type": "listItem",
+                          "spread": false,
+                          "checked": null,
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "第三级列表项 A"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "spread": false,
+                          "checked": null,
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "新增的第三级列表项"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "第二级列表项 B"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list",
+                      "ordered": false,
+                      "start": null,
+                      "spread": false,
+                      "children": [
+                        {
+                          "type": "listItem",
+                          "spread": false,
+                          "checked": null,
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "第三级列表项 B"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "list",
+                              "ordered": false,
+                              "start": null,
+                              "spread": false,
+                              "children": [
+                                {
+                                  "type": "listItem",
+                                  "spread": false,
+                                  "checked": null,
+                                  "children": [
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "第四级列表项 B"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "listItem",
+                                  "spread": false,
+                                  "checked": null,
+                                  "children": [
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "新增的第四级列表项"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "新增的第一级列表项"
+                }
+              ]
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "start": null,
+              "spread": false,
+              "children": [
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "新增的第二级列表项"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "data": {
+            "diff": "ins"
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "1.2 有序列表嵌套"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 1,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "第一级有序列表"
+                }
+              ]
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "start": 1,
+              "spread": false,
+              "children": [
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "第二级有序列表"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list",
+                      "ordered": true,
+                      "start": 1,
+                      "spread": false,
+                      "children": [
+                        {
+                          "type": "listItem",
+                          "spread": false,
+                          "checked": null,
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "第三级有序列表"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "list",
+                              "ordered": true,
+                              "start": 1,
+                              "spread": false,
+                              "children": [
+                                {
+                                  "type": "listItem",
+                                  "spread": false,
+                                  "checked": null,
+                                  "children": [
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "第四级有序列表"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "list",
+                                      "ordered": true,
+                                      "start": 1,
+                                      "spread": false,
+                                      "children": [
+                                        {
+                                          "type": "listItem",
+                                          "spread": false,
+                                          "checked": null,
+                                          "children": [
+                                            {
+                                              "type": "paragraph",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "value": "第五级有序列表"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "第一级有序列表（已修改）"
+                }
+              ]
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "start": 1,
+              "spread": false,
+              "children": [
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "第二级有序列表"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list",
+                      "ordered": true,
+                      "start": 1,
+                      "spread": false,
+                      "children": [
+                        {
+                          "type": "listItem",
+                          "spread": false,
+                          "checked": null,
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "第三级有序列表"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "list",
+                              "ordered": true,
+                              "start": 1,
+                              "spread": false,
+                              "children": [
+                                {
+                                  "type": "listItem",
+                                  "spread": false,
+                                  "checked": null,
+                                  "children": [
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "第四级有序列表"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "list",
+                                      "ordered": true,
+                                      "start": 1,
+                                      "spread": false,
+                                      "children": [
+                                        {
+                                          "type": "listItem",
+                                          "spread": false,
+                                          "checked": null,
+                                          "children": [
+                                            {
+                                              "type": "paragraph",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "value": "第五级有序列表"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "listItem",
+                                          "spread": false,
+                                          "checked": null,
+                                          "children": [
+                                            {
+                                              "type": "paragraph",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "value": "新增的第五级有序列表"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "另一个第一级有序列表"
+                }
+              ]
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "start": 1,
+              "spread": false,
+              "children": [
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "第二级有序列表 A"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list",
+                      "ordered": true,
+                      "start": 1,
+                      "spread": false,
+                      "children": [
+                        {
+                          "type": "listItem",
+                          "spread": false,
+                          "checked": null,
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "第三级有序列表 A"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "第二级有序列表 B"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list",
+                      "ordered": true,
+                      "start": 1,
+                      "spread": false,
+                      "children": [
+                        {
+                          "type": "listItem",
+                          "spread": false,
+                          "checked": null,
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "第三级有序列表 B"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "另一个第一级有序列表"
+                }
+              ]
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "start": 1,
+              "spread": false,
+              "children": [
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "第二级有序列表 A"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list",
+                      "ordered": true,
+                      "start": 1,
+                      "spread": false,
+                      "children": [
+                        {
+                          "type": "listItem",
+                          "spread": false,
+                          "checked": null,
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "第三级有序列表 A"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "第二级有序列表 B"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list",
+                      "ordered": true,
+                      "start": 1,
+                      "spread": false,
+                      "children": [
+                        {
+                          "type": "listItem",
+                          "spread": false,
+                          "checked": null,
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "第三级有序列表 B"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "spread": false,
+                          "checked": null,
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "新增的第三级有序列表"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "新增的第一级有序列表"
+                }
+              ]
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "start": 1,
+              "spread": false,
+              "children": [
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "新增的第二级有序列表"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "data": {
+            "diff": "ins"
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "1.3 混合列表嵌套"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 1,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "第一级有序列表"
+                }
+              ]
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "start": null,
+              "spread": false,
+              "children": [
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "第二级无序列表"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list",
+                      "ordered": true,
+                      "start": 1,
+                      "spread": false,
+                      "children": [
+                        {
+                          "type": "listItem",
+                          "spread": false,
+                          "checked": null,
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "第三级有序列表"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "list",
+                              "ordered": false,
+                              "start": null,
+                              "spread": false,
+                              "children": [
+                                {
+                                  "type": "listItem",
+                                  "spread": false,
+                                  "checked": null,
+                                  "children": [
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "第四级无序列表"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "list",
+                                      "ordered": true,
+                                      "start": 1,
+                                      "spread": false,
+                                      "children": [
+                                        {
+                                          "type": "listItem",
+                                          "spread": false,
+                                          "checked": null,
+                                          "children": [
+                                            {
+                                              "type": "paragraph",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "value": "第五级有序列表"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "第一级有序列表"
+                }
+              ]
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "start": null,
+              "spread": false,
+              "children": [
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "第二级无序列表（已修改）"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list",
+                      "ordered": true,
+                      "start": 1,
+                      "spread": false,
+                      "children": [
+                        {
+                          "type": "listItem",
+                          "spread": false,
+                          "checked": null,
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "第三级有序列表"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "list",
+                              "ordered": false,
+                              "start": null,
+                              "spread": false,
+                              "children": [
+                                {
+                                  "type": "listItem",
+                                  "spread": false,
+                                  "checked": null,
+                                  "children": [
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "第四级无序列表"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "list",
+                                      "ordered": true,
+                                      "start": 1,
+                                      "spread": false,
+                                      "children": [
+                                        {
+                                          "type": "listItem",
+                                          "spread": false,
+                                          "checked": null,
+                                          "children": [
+                                            {
+                                              "type": "paragraph",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "value": "第五级有序列表"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "listItem",
+                                          "spread": false,
+                                          "checked": null,
+                                          "children": [
+                                            {
+                                              "type": "paragraph",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "value": "新增的第五级有序列表"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "新增的第二级无序列表"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "另一个第一级有序列表"
+                }
+              ]
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "start": null,
+              "spread": false,
+              "children": [
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "第二级无序列表 A"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list",
+                      "ordered": false,
+                      "start": null,
+                      "spread": false,
+                      "children": [
+                        {
+                          "type": "listItem",
+                          "spread": false,
+                          "checked": null,
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "第三级无序列表 A"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "list",
+                              "ordered": true,
+                              "start": 1,
+                              "spread": false,
+                              "children": [
+                                {
+                                  "type": "listItem",
+                                  "spread": false,
+                                  "checked": null,
+                                  "children": [
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "第四级有序列表 A"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "第二级无序列表 B"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list",
+                      "ordered": true,
+                      "start": 1,
+                      "spread": false,
+                      "children": [
+                        {
+                          "type": "listItem",
+                          "spread": false,
+                          "checked": null,
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "第三级有序列表 B"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "另一个第一级有序列表"
+                }
+              ]
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "start": null,
+              "spread": false,
+              "children": [
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "第二级无序列表 A"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list",
+                      "ordered": false,
+                      "start": null,
+                      "spread": false,
+                      "children": [
+                        {
+                          "type": "listItem",
+                          "spread": false,
+                          "checked": null,
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "第三级无序列表 A"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "list",
+                              "ordered": true,
+                              "start": 1,
+                              "spread": false,
+                              "children": [
+                                {
+                                  "type": "listItem",
+                                  "spread": false,
+                                  "checked": null,
+                                  "children": [
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "第四级有序列表 A"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "listItem",
+                                  "spread": false,
+                                  "checked": null,
+                                  "children": [
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "新增的第四级有序列表"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "第二级无序列表 B"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list",
+                      "ordered": true,
+                      "start": 1,
+                      "spread": false,
+                      "children": [
+                        {
+                          "type": "listItem",
+                          "spread": false,
+                          "checked": null,
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "第三级有序列表 B"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "spread": false,
+                          "checked": null,
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "新增的第三级有序列表"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "新增的第一级有序列表"
+                }
+              ]
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "start": null,
+              "spread": false,
+              "children": [
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "新增的第二级无序列表"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "data": {
+            "diff": "ins"
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "1.4 任务列表嵌套"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": false,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "未完成任务"
+                }
+              ]
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "start": null,
+              "spread": false,
+              "children": [
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": false,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "子任务 1"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list",
+                      "ordered": false,
+                      "start": null,
+                      "spread": false,
+                      "children": [
+                        {
+                          "type": "listItem",
+                          "spread": false,
+                          "checked": false,
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "子任务 1.1"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "list",
+                              "ordered": false,
+                              "start": null,
+                              "spread": false,
+                              "children": [
+                                {
+                                  "type": "listItem",
+                                  "spread": false,
+                                  "checked": false,
+                                  "children": [
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "子任务 1.1.1"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": false,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "子任务 2"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": false,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "未完成任务"
+                }
+              ]
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "start": null,
+              "spread": false,
+              "children": [
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": false,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "子任务 1"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list",
+                      "ordered": false,
+                      "start": null,
+                      "spread": false,
+                      "children": [
+                        {
+                          "type": "listItem",
+                          "spread": false,
+                          "checked": true,
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "子任务 1.1（已完成）"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "list",
+                              "ordered": false,
+                              "start": null,
+                              "spread": false,
+                              "children": [
+                                {
+                                  "type": "listItem",
+                                  "spread": false,
+                                  "checked": false,
+                                  "children": [
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "子任务 1.1.1"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "listItem",
+                                  "spread": false,
+                                  "checked": true,
+                                  "children": [
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "新增的子任务（已完成）"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": false,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "子任务 2"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": true,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "已完成任务"
+                }
+              ]
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "start": null,
+              "spread": false,
+              "children": [
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": true,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "已完成子任务 1"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list",
+                      "ordered": false,
+                      "start": null,
+                      "spread": false,
+                      "children": [
+                        {
+                          "type": "listItem",
+                          "spread": false,
+                          "checked": false,
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "未完成子任务 1.1"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": false,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "未完成子任务 2"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": true,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "已完成任务"
+                }
+              ]
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "start": null,
+              "spread": false,
+              "children": [
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": true,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "已完成子任务 1"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list",
+                      "ordered": false,
+                      "start": null,
+                      "spread": false,
+                      "children": [
+                        {
+                          "type": "listItem",
+                          "spread": false,
+                          "checked": true,
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "未完成子任务 1.1（现已完成）"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "spread": false,
+                          "checked": false,
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "新增的子任务"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": false,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "未完成子任务 2"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": false,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "新增的未完成任务"
+                }
+              ]
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "start": null,
+              "spread": false,
+              "children": [
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": false,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "新增的子任务"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "data": {
+            "diff": "ins"
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "2. 深度嵌套引用"
+        }
+      ]
+    },
+    {
+      "type": "blockquote",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "第一级引用"
+            },
+            {
+              "type": "ins",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "（已修改）",
+                  "data": {}
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "blockquote",
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "第二级引用"
+                }
+              ]
+            },
+            {
+              "type": "blockquote",
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "第三级引用"
+                    },
+                    {
+                      "type": "ins",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "（已修改）",
+                          "data": {}
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "blockquote",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "第四级引用"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "blockquote",
+                      "children": [
+                        {
+                          "type": "paragraph",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "第五级引用"
+                            },
+                            {
+                              "type": "ins",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "（已修改）",
+                                  "data": {}
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "blockquote",
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "第六级引用"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "ins",
+                              "children": [
+                                {
+                                  "type": "blockquote",
+                                  "children": [
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "新增的第七级引用"
+                                        }
+                                      ]
+                                    }
+                                  ],
+                                  "data": {}
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "blockquote",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "另一个第一级引用"
+            }
+          ]
+        },
+        {
+          "type": "blockquote",
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "第二级引用 A"
+                },
+                {
+                  "type": "ins",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "（已修改）",
+                      "data": {}
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "blockquote",
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "第三级引用 A"
+                    }
+                  ]
+                },
+                {
+                  "type": "ins",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "新增的第三级引用"
+                        }
+                      ],
+                      "data": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "blockquote",
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "第二级引用 B"
+                }
+              ]
+            },
+            {
+              "type": "blockquote",
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "第三级引用 B"
+                    },
+                    {
+                      "type": "ins",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "（已修改）",
+                          "data": {}
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "blockquote",
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "新增的第一级引用"
+                }
+              ]
+            },
+            {
+              "type": "blockquote",
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "新增的第二级引用"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "3. 嵌套代码块"
+        }
+      ]
+    },
+    {
+      "type": "del",
+      "children": [
+        {
+          "type": "code",
+          "lang": "markdown",
+          "meta": null,
+          "value": "# 代码块中的 Markdown\n\n## 子标题\n\n```javascript\n// 代码块中的代码块\nfunction nestedExample() {\n  console.log('这是嵌套在 Markdown 代码块中的 JavaScript 代码块');\n}\n```\n\n- 列表项 1\n- 列表项 2\n  - 嵌套列表项",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "code",
+          "lang": "markdown",
+          "meta": null,
+          "value": "# 代码块中的 Markdown（已修改）\n\n## 子标题\n\n```javascript\n// 代码块中的代码块（已修改）\nfunction nestedExample() {\n  console.log('这是嵌套在 Markdown 代码块中的 JavaScript 代码块');\n  // 新增的注释\n  return '新增的返回值';\n}\n```\n\n- 列表项 1\n- 列表项 2（已修改）\n  - 嵌套列表项\n  - 新增的嵌套列表项\n\n```python\n# 新增的 Python 代码块\ndef nested_function():\n    print(\"这是新增的 Python 代码块\")\n    return \"新增的返回值\"\n```",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "4. 嵌套表格"
+        }
+      ]
+    },
+    {
+      "type": "del",
+      "children": [
+        {
+          "type": "table",
+          "align": [
+            null,
+            null
+          ],
+          "children": [
+            {
+              "type": "tableRow",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "外部表格"
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "描述"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "tableRow",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "行 1"
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "普通内容"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "tableRow",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "行 2"
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "html",
+                      "value": "<table>"
+                    },
+                    {
+                      "type": "html",
+                      "value": "<tr>"
+                    },
+                    {
+                      "type": "html",
+                      "value": "<th>"
+                    },
+                    {
+                      "type": "text",
+                      "value": "嵌套表格"
+                    },
+                    {
+                      "type": "html",
+                      "value": "</th>"
+                    },
+                    {
+                      "type": "html",
+                      "value": "<th>"
+                    },
+                    {
+                      "type": "text",
+                      "value": "值"
+                    },
+                    {
+                      "type": "html",
+                      "value": "</th>"
+                    },
+                    {
+                      "type": "html",
+                      "value": "</tr>"
+                    },
+                    {
+                      "type": "html",
+                      "value": "<tr>"
+                    },
+                    {
+                      "type": "html",
+                      "value": "<td>"
+                    },
+                    {
+                      "type": "text",
+                      "value": "嵌套行 1"
+                    },
+                    {
+                      "type": "html",
+                      "value": "</td>"
+                    },
+                    {
+                      "type": "html",
+                      "value": "<td>"
+                    },
+                    {
+                      "type": "text",
+                      "value": "100"
+                    },
+                    {
+                      "type": "html",
+                      "value": "</td>"
+                    },
+                    {
+                      "type": "html",
+                      "value": "</tr>"
+                    },
+                    {
+                      "type": "html",
+                      "value": "<tr>"
+                    },
+                    {
+                      "type": "html",
+                      "value": "<td>"
+                    },
+                    {
+                      "type": "text",
+                      "value": "嵌套行 2"
+                    },
+                    {
+                      "type": "html",
+                      "value": "</td>"
+                    },
+                    {
+                      "type": "html",
+                      "value": "<td>"
+                    },
+                    {
+                      "type": "text",
+                      "value": "200"
+                    },
+                    {
+                      "type": "html",
+                      "value": "</td>"
+                    },
+                    {
+                      "type": "html",
+                      "value": "</tr>"
+                    },
+                    {
+                      "type": "html",
+                      "value": "</table>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "tableRow",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "行 3"
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "普通内容"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "table",
+          "align": [
+            null,
+            null,
+            null
+          ],
+          "children": [
+            {
+              "type": "tableRow",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "外部表格"
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "描述"
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "新增列"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "tableRow",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "行 1"
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "普通内容"
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "新值 1"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "tableRow",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "行 2"
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "html",
+                      "value": "<table>"
+                    },
+                    {
+                      "type": "html",
+                      "value": "<tr>"
+                    },
+                    {
+                      "type": "html",
+                      "value": "<th>"
+                    },
+                    {
+                      "type": "text",
+                      "value": "嵌套表格"
+                    },
+                    {
+                      "type": "html",
+                      "value": "</th>"
+                    },
+                    {
+                      "type": "html",
+                      "value": "<th>"
+                    },
+                    {
+                      "type": "text",
+                      "value": "值"
+                    },
+                    {
+                      "type": "html",
+                      "value": "</th>"
+                    },
+                    {
+                      "type": "html",
+                      "value": "<th>"
+                    },
+                    {
+                      "type": "text",
+                      "value": "新增列"
+                    },
+                    {
+                      "type": "html",
+                      "value": "</th>"
+                    },
+                    {
+                      "type": "html",
+                      "value": "</tr>"
+                    },
+                    {
+                      "type": "html",
+                      "value": "<tr>"
+                    },
+                    {
+                      "type": "html",
+                      "value": "<td>"
+                    },
+                    {
+                      "type": "text",
+                      "value": "嵌套行 1"
+                    },
+                    {
+                      "type": "html",
+                      "value": "</td>"
+                    },
+                    {
+                      "type": "html",
+                      "value": "<td>"
+                    },
+                    {
+                      "type": "text",
+                      "value": "100"
+                    },
+                    {
+                      "type": "html",
+                      "value": "</td>"
+                    },
+                    {
+                      "type": "html",
+                      "value": "<td>"
+                    },
+                    {
+                      "type": "text",
+                      "value": "新值 A"
+                    },
+                    {
+                      "type": "html",
+                      "value": "</td>"
+                    },
+                    {
+                      "type": "html",
+                      "value": "</tr>"
+                    },
+                    {
+                      "type": "html",
+                      "value": "<tr>"
+                    },
+                    {
+                      "type": "html",
+                      "value": "<td>"
+                    },
+                    {
+                      "type": "text",
+                      "value": "嵌套行 2"
+                    },
+                    {
+                      "type": "html",
+                      "value": "</td>"
+                    },
+                    {
+                      "type": "html",
+                      "value": "<td>"
+                    },
+                    {
+                      "type": "text",
+                      "value": "200"
+                    },
+                    {
+                      "type": "html",
+                      "value": "</td>"
+                    },
+                    {
+                      "type": "html",
+                      "value": "<td>"
+                    },
+                    {
+                      "type": "text",
+                      "value": "新值 B"
+                    },
+                    {
+                      "type": "html",
+                      "value": "</td>"
+                    },
+                    {
+                      "type": "html",
+                      "value": "</tr>"
+                    },
+                    {
+                      "type": "html",
+                      "value": "<tr>"
+                    },
+                    {
+                      "type": "html",
+                      "value": "<td>"
+                    },
+                    {
+                      "type": "text",
+                      "value": "新增嵌套行"
+                    },
+                    {
+                      "type": "html",
+                      "value": "</td>"
+                    },
+                    {
+                      "type": "html",
+                      "value": "<td>"
+                    },
+                    {
+                      "type": "text",
+                      "value": "300"
+                    },
+                    {
+                      "type": "html",
+                      "value": "</td>"
+                    },
+                    {
+                      "type": "html",
+                      "value": "<td>"
+                    },
+                    {
+                      "type": "text",
+                      "value": "新值 C"
+                    },
+                    {
+                      "type": "html",
+                      "value": "</td>"
+                    },
+                    {
+                      "type": "html",
+                      "value": "</tr>"
+                    },
+                    {
+                      "type": "html",
+                      "value": "</table>"
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "新值 2"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "tableRow",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "行 3"
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "普通内容（已修改）"
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "新值 3"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "tableRow",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "新增行"
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "新增内容"
+                    }
+                  ]
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "新值 4"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "5. 混合嵌套结构"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 1,
+      "spread": true,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": true,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "第一级有序列表"
+                }
+              ]
+            },
+            {
+              "type": "blockquote",
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "嵌套在列表中的引用"
+                    }
+                  ]
+                },
+                {
+                  "type": "code",
+                  "lang": "javascript",
+                  "meta": null,
+                  "value": "// 嵌套在引用中的代码块\nfunction nestedInQuote() {\n  return '这是嵌套在引用中的代码';\n}"
+                }
+              ]
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "start": null,
+              "spread": false,
+              "children": [
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "嵌套的无序列表"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list",
+                      "ordered": true,
+                      "start": 1,
+                      "spread": false,
+                      "children": [
+                        {
+                          "type": "listItem",
+                          "spread": false,
+                          "checked": null,
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "再次嵌套的有序列表"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "list",
+                              "ordered": false,
+                              "start": null,
+                              "spread": false,
+                              "children": [
+                                {
+                                  "type": "listItem",
+                                  "spread": false,
+                                  "checked": false,
+                                  "children": [
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "嵌套的任务列表"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "list",
+                                      "ordered": false,
+                                      "start": null,
+                                      "spread": false,
+                                      "children": [
+                                        {
+                                          "type": "listItem",
+                                          "spread": false,
+                                          "checked": false,
+                                          "children": [
+                                            {
+                                              "type": "paragraph",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "value": "深度嵌套的任务"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": true,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "第一级有序列表（已修改）"
+                }
+              ]
+            },
+            {
+              "type": "blockquote",
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "嵌套在列表中的引用（已修改）"
+                    }
+                  ]
+                },
+                {
+                  "type": "code",
+                  "lang": "javascript",
+                  "meta": null,
+                  "value": "// 嵌套在引用中的代码块（已修改）\nfunction nestedInQuote() {\n  console.log(\"新增的日志\");\n  return '这是嵌套在引用中的代码（已修改）';\n}"
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "新增的引用内容"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "start": null,
+              "spread": false,
+              "children": [
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "嵌套的无序列表"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list",
+                      "ordered": true,
+                      "start": 1,
+                      "spread": false,
+                      "children": [
+                        {
+                          "type": "listItem",
+                          "spread": false,
+                          "checked": null,
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "再次嵌套的有序列表（已修改）"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "list",
+                              "ordered": false,
+                              "start": null,
+                              "spread": false,
+                              "children": [
+                                {
+                                  "type": "listItem",
+                                  "spread": false,
+                                  "checked": true,
+                                  "children": [
+                                    {
+                                      "type": "paragraph",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "嵌套的任务列表（已完成）"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "list",
+                                      "ordered": false,
+                                      "start": null,
+                                      "spread": false,
+                                      "children": [
+                                        {
+                                          "type": "listItem",
+                                          "spread": false,
+                                          "checked": false,
+                                          "children": [
+                                            {
+                                              "type": "paragraph",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "value": "深度嵌套的任务"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "listItem",
+                                          "spread": false,
+                                          "checked": true,
+                                          "children": [
+                                            {
+                                              "type": "paragraph",
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "value": "新增的深度嵌套任务（已完成）"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "listItem",
+                          "spread": false,
+                          "checked": null,
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "新增的嵌套有序列表"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "新增的嵌套无序列表"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "第二级有序列表"
+                }
+              ]
+            },
+            {
+              "type": "html",
+              "value": "<table>\n<tr><th>嵌套在列表中的表格</th><th>值</th></tr>\n<tr><td>数据 1</td><td>300</td></tr>\n<tr><td>数据 2</td><td>400</td></tr>\n</table>"
+            }
+          ],
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "第二级有序列表"
+                }
+              ]
+            },
+            {
+              "type": "html",
+              "value": "<table>\n<tr><th>嵌套在列表中的表格</th><th>值</th><th>新增列</th></tr>\n<tr><td>数据 1</td><td>300</td><td>新值 X</td></tr>\n<tr><td>数据 2</td><td>400</td><td>新值 Y</td></tr>\n<tr><td>新增数据</td><td>500</td><td>新值 Z</td></tr>\n</table>"
+            }
+          ],
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "新增的有序列表"
+                }
+              ]
+            },
+            {
+              "type": "blockquote",
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "新增的嵌套引用"
+                    }
+                  ]
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "start": null,
+                  "spread": false,
+                  "children": [
+                    {
+                      "type": "listItem",
+                      "spread": false,
+                      "checked": null,
+                      "children": [
+                        {
+                          "type": "paragraph",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "新增的嵌套列表"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "data": {
+            "diff": "ins"
+          }
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "6. 嵌套 HTML 结构"
+        }
+      ]
+    },
+    {
+      "type": "del",
+      "children": [
+        {
+          "type": "html",
+          "value": "<div style=\"border: 1px solid #ccc; padding: 10px;\">\n  <h3>HTML 中的标题</h3>\n  <p>一些文本内容</p>\n  <div style=\"background-color: #f0f0f0; padding: 10px;\">\n    <h4>嵌套 div 中的标题</h4>\n    <ul>\n      <li>列表项 1</li>\n      <li>列表项 2\n        <ol>\n          <li>嵌套的有序列表项 1</li>\n          <li>嵌套的有序列表项 2</li>\n        </ol>\n      </li>\n    </ul>\n    <div style=\"border: 1px dashed #999; padding: 5px;\">\n      <p>更深层次的嵌套 div</p>\n      <blockquote>\n        <p>嵌套在 HTML 中的引用</p>\n        <pre><code>// 嵌套在引用中的代码\nfunction deeplyNested() {\n  return '这是深度嵌套的代码';\n}</code></pre>\n      </blockquote>\n    </div>\n  </div>\n</div>",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "<div style=\"border: 1px solid #ccc; padding: 10px;\">\n  <h3>HTML 中的标题（已修改）</h3>\n  <p>一些文本内容（已修改）</p>\n  <div style=\"background-color: #f0f0f0; padding: 10px;\">\n    <h4>嵌套 div 中的标题</h4>\n    <ul>\n      <li>列表项 1（已修改）</li>\n      <li>列表项 2\n        <ol>\n          <li>嵌套的有序列表项 1</li>\n          <li>嵌套的有序列表项 2（已修改）</li>\n          <li>新增的嵌套有序列表项</li>\n        </ol>\n      </li>\n      <li>新增的列表项</li>\n    </ul>\n    <div style=\"border: 1px dashed #999; padding: 5px;\">\n      <p>更深层次的嵌套 div（已修改）</p>\n      <blockquote>\n        <p>嵌套在 HTML 中的引用（已修改）</p>\n        <pre><code>// 嵌套在引用中的代码（已修改）\nfunction deeplyNested() {\n  console.log(\"新增的日志\");\n  return '这是深度嵌套的代码（已修改）';\n}</code></pre>\n      </blockquote>\n      <p>新增的段落</p>\n    </div>\n    <div style=\"border: 1px dotted #666; margin-top: 10px; padding: 5px;\">\n      <p>新增的嵌套 div</p>\n    </div>\n  </div>\n</div>",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "7. 总结"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "这个文档包含了各种深度嵌套的结构，用于测试 Markdown 差异比较工具处理复杂嵌套内容的能力。"
+        },
+        {
+          "type": "ins",
+          "children": [
+            {
+              "type": "text",
+              "value": "文档已经过更新，包含了多处修改、添加和删除内容，以测试差异比较功能的效果。",
+              "data": {}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 2,
+          "children": [
+            {
+              "type": "text",
+              "value": "8. 新增章节"
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "这是一个新增的章节，包含嵌套结构："
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "blockquote",
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "新章节中的引用"
+                }
+              ]
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "start": null,
+              "spread": false,
+              "children": [
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "引用中的列表"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "list",
+                      "ordered": false,
+                      "start": null,
+                      "spread": false,
+                      "children": [
+                        {
+                          "type": "listItem",
+                          "spread": false,
+                          "checked": null,
+                          "children": [
+                            {
+                              "type": "paragraph",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "嵌套列表"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "code",
+                              "lang": "javascript",
+                              "meta": null,
+                              "value": "// 嵌套在列表中的代码\nfunction newSectionNested() {\n  return '新章节中的嵌套代码';\n}"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ]
+    }
+  ]
+}

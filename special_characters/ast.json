@@ -1,0 +1,8023 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "heading",
+      "depth": 1,
+      "children": [
+        {
+          "type": "text",
+          "value": "特殊字符测试"
+        },
+        {
+          "type": "text",
+          "value": "（更新版）",
+          "data": {
+            "diff": "ins"
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 14,
+          "offset": 13
+        }
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "1. 基本特殊字符",
+          "position": {
+            "start": {
+              "line": 3,
+              "column": 4,
+              "offset": 18
+            },
+            "end": {
+              "line": 3,
+              "column": 13,
+              "offset": 27
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 3,
+          "column": 1,
+          "offset": 15
+        },
+        "end": {
+          "line": 3,
+          "column": 13,
+          "offset": 27
+        }
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "1.1 标点符号",
+          "position": {
+            "start": {
+              "line": 5,
+              "column": 5,
+              "offset": 33
+            },
+            "end": {
+              "line": 5,
+              "column": 13,
+              "offset": 41
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 5,
+          "column": 1,
+          "offset": 29
+        },
+        "end": {
+          "line": 5,
+          "column": 13,
+          "offset": 41
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "以下是常见的标点符号"
+        },
+        {
+          "type": "text",
+          "value": "（已更新）",
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "text",
+          "value": "："
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 7,
+          "column": 1,
+          "offset": 43
+        },
+        "end": {
+          "line": 7,
+          "column": 17,
+          "offset": 59
+        }
+      }
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "句号 (.) 逗号 (,) 分号 (;) 冒号 (:)",
+                  "position": {
+                    "start": {
+                      "line": 9,
+                      "column": 3,
+                      "offset": 63
+                    },
+                    "end": {
+                      "line": 9,
+                      "column": 30,
+                      "offset": 90
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 9,
+                  "column": 3,
+                  "offset": 63
+                },
+                "end": {
+                  "line": 9,
+                  "column": 30,
+                  "offset": 90
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 9,
+              "column": 1,
+              "offset": 61
+            },
+            "end": {
+              "line": 9,
+              "column": 30,
+              "offset": 90
+            }
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "感叹号 (!) 问号 (?)",
+                  "position": {
+                    "start": {
+                      "line": 10,
+                      "column": 3,
+                      "offset": 83
+                    },
+                    "end": {
+                      "line": 10,
+                      "column": 17,
+                      "offset": 97
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 10,
+                  "column": 3,
+                  "offset": 83
+                },
+                "end": {
+                  "line": 10,
+                  "column": 17,
+                  "offset": 97
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 10,
+              "column": 1,
+              "offset": 81
+            },
+            "end": {
+              "line": 10,
+              "column": 17,
+              "offset": 97
+            }
+          },
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "感叹号 (!) 问号 (?) 双问号 (??)",
+                  "position": {
+                    "start": {
+                      "line": 10,
+                      "column": 3,
+                      "offset": 93
+                    },
+                    "end": {
+                      "line": 10,
+                      "column": 26,
+                      "offset": 116
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 10,
+                  "column": 3,
+                  "offset": 93
+                },
+                "end": {
+                  "line": 10,
+                  "column": 26,
+                  "offset": 116
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 10,
+              "column": 1,
+              "offset": 91
+            },
+            "end": {
+              "line": 10,
+              "column": 26,
+              "offset": 116
+            }
+          },
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "引号 (\") 单引号 (')",
+                  "position": {
+                    "start": {
+                      "line": 11,
+                      "column": 3,
+                      "offset": 100
+                    },
+                    "end": {
+                      "line": 11,
+                      "column": 17,
+                      "offset": 114
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 11,
+                  "column": 3,
+                  "offset": 100
+                },
+                "end": {
+                  "line": 11,
+                  "column": 17,
+                  "offset": 114
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 11,
+              "column": 1,
+              "offset": 98
+            },
+            "end": {
+              "line": 11,
+              "column": 17,
+              "offset": 114
+            }
+          },
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "引号 (\") 单引号 (') 反引号 (`)",
+                  "position": {
+                    "start": {
+                      "line": 11,
+                      "column": 3,
+                      "offset": 119
+                    },
+                    "end": {
+                      "line": 11,
+                      "column": 25,
+                      "offset": 141
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 11,
+                  "column": 3,
+                  "offset": 119
+                },
+                "end": {
+                  "line": 11,
+                  "column": 25,
+                  "offset": 141
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 11,
+              "column": 1,
+              "offset": 117
+            },
+            "end": {
+              "line": 11,
+              "column": 25,
+              "offset": 141
+            }
+          },
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "括号 () [] {}",
+                  "position": {
+                    "start": {
+                      "line": 12,
+                      "column": 3,
+                      "offset": 117
+                    },
+                    "end": {
+                      "line": 12,
+                      "column": 14,
+                      "offset": 128
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 12,
+                  "column": 3,
+                  "offset": 117
+                },
+                "end": {
+                  "line": 12,
+                  "column": 14,
+                  "offset": 128
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 12,
+              "column": 1,
+              "offset": 115
+            },
+            "end": {
+              "line": 12,
+              "column": 14,
+              "offset": 128
+            }
+          },
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "括号 () [] {} 〈〉 《》",
+                  "position": {
+                    "start": {
+                      "line": 12,
+                      "column": 3,
+                      "offset": 144
+                    },
+                    "end": {
+                      "line": 12,
+                      "column": 20,
+                      "offset": 161
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 12,
+                  "column": 3,
+                  "offset": 144
+                },
+                "end": {
+                  "line": 12,
+                  "column": 20,
+                  "offset": 161
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 12,
+              "column": 1,
+              "offset": 142
+            },
+            "end": {
+              "line": 12,
+              "column": 20,
+              "offset": 161
+            }
+          },
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "连字符 (-) 下划线 (_) 波浪线 (~)",
+                  "position": {
+                    "start": {
+                      "line": 13,
+                      "column": 3,
+                      "offset": 131
+                    },
+                    "end": {
+                      "line": 13,
+                      "column": 26,
+                      "offset": 154
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 13,
+                  "column": 3,
+                  "offset": 131
+                },
+                "end": {
+                  "line": 13,
+                  "column": 26,
+                  "offset": 154
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 13,
+              "column": 1,
+              "offset": 129
+            },
+            "end": {
+              "line": 13,
+              "column": 26,
+              "offset": 154
+            }
+          },
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "连字符 (-) 下划线 (_) 波浪线 (~) 长破折号 (—)",
+                  "position": {
+                    "start": {
+                      "line": 13,
+                      "column": 3,
+                      "offset": 164
+                    },
+                    "end": {
+                      "line": 13,
+                      "column": 35,
+                      "offset": 196
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 13,
+                  "column": 3,
+                  "offset": 164
+                },
+                "end": {
+                  "line": 13,
+                  "column": 35,
+                  "offset": 196
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 13,
+              "column": 1,
+              "offset": 162
+            },
+            "end": {
+              "line": 13,
+              "column": 35,
+              "offset": 196
+            }
+          },
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "井号 (#) 百分号 (%) 美元符号 ($)",
+                  "position": {
+                    "start": {
+                      "line": 14,
+                      "column": 3,
+                      "offset": 157
+                    },
+                    "end": {
+                      "line": 14,
+                      "column": 26,
+                      "offset": 180
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 14,
+                  "column": 3,
+                  "offset": 157
+                },
+                "end": {
+                  "line": 14,
+                  "column": 26,
+                  "offset": 180
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 14,
+              "column": 1,
+              "offset": 155
+            },
+            "end": {
+              "line": 14,
+              "column": 26,
+              "offset": 180
+            }
+          },
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "井号 (#) 百分号 (%) 美元符号 ($) 人民币符号 (¥)",
+                  "position": {
+                    "start": {
+                      "line": 14,
+                      "column": 3,
+                      "offset": 199
+                    },
+                    "end": {
+                      "line": 14,
+                      "column": 36,
+                      "offset": 232
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 14,
+                  "column": 3,
+                  "offset": 199
+                },
+                "end": {
+                  "line": 14,
+                  "column": 36,
+                  "offset": 232
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 14,
+              "column": 1,
+              "offset": 197
+            },
+            "end": {
+              "line": 14,
+              "column": 36,
+              "offset": 232
+            }
+          },
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "加号 (+) 等号 (=) 星号 (*)",
+                  "position": {
+                    "start": {
+                      "line": 15,
+                      "column": 3,
+                      "offset": 183
+                    },
+                    "end": {
+                      "line": 15,
+                      "column": 23,
+                      "offset": 203
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 15,
+                  "column": 3,
+                  "offset": 183
+                },
+                "end": {
+                  "line": 15,
+                  "column": 23,
+                  "offset": 203
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 15,
+              "column": 1,
+              "offset": 181
+            },
+            "end": {
+              "line": 15,
+              "column": 23,
+              "offset": 203
+            }
+          },
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "加号 (+) 等号 (=) 星号 (*) 乘方符号 (^)",
+                  "position": {
+                    "start": {
+                      "line": 15,
+                      "column": 3,
+                      "offset": 235
+                    },
+                    "end": {
+                      "line": 15,
+                      "column": 32,
+                      "offset": 264
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 15,
+                  "column": 3,
+                  "offset": 235
+                },
+                "end": {
+                  "line": 15,
+                  "column": 32,
+                  "offset": 264
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 15,
+              "column": 1,
+              "offset": 233
+            },
+            "end": {
+              "line": 15,
+              "column": 32,
+              "offset": 264
+            }
+          },
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "斜杠 (/) 反斜杠 ()",
+                  "position": {
+                    "start": {
+                      "line": 16,
+                      "column": 3,
+                      "offset": 206
+                    },
+                    "end": {
+                      "line": 16,
+                      "column": 17,
+                      "offset": 220
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 16,
+                  "column": 3,
+                  "offset": 206
+                },
+                "end": {
+                  "line": 16,
+                  "column": 17,
+                  "offset": 220
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 16,
+              "column": 1,
+              "offset": 204
+            },
+            "end": {
+              "line": 16,
+              "column": 17,
+              "offset": 220
+            }
+          },
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "斜杠 (/) 反斜杠 () 双斜杠 (//)",
+                  "position": {
+                    "start": {
+                      "line": 16,
+                      "column": 3,
+                      "offset": 267
+                    },
+                    "end": {
+                      "line": 16,
+                      "column": 26,
+                      "offset": 290
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 16,
+                  "column": 3,
+                  "offset": 267
+                },
+                "end": {
+                  "line": 16,
+                  "column": 26,
+                  "offset": 290
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 16,
+              "column": 1,
+              "offset": 265
+            },
+            "end": {
+              "line": 16,
+              "column": 26,
+              "offset": 290
+            }
+          },
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "小于号 (<) 大于号 (>)",
+                  "position": {
+                    "start": {
+                      "line": 17,
+                      "column": 3,
+                      "offset": 223
+                    },
+                    "end": {
+                      "line": 17,
+                      "column": 18,
+                      "offset": 238
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 17,
+                  "column": 3,
+                  "offset": 223
+                },
+                "end": {
+                  "line": 17,
+                  "column": 18,
+                  "offset": 238
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 17,
+              "column": 1,
+              "offset": 221
+            },
+            "end": {
+              "line": 17,
+              "column": 18,
+              "offset": 238
+            }
+          },
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "小于号 (<) 大于号 (>) 不等号 (≠)",
+                  "position": {
+                    "start": {
+                      "line": 17,
+                      "column": 3,
+                      "offset": 293
+                    },
+                    "end": {
+                      "line": 17,
+                      "column": 26,
+                      "offset": 316
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 17,
+                  "column": 3,
+                  "offset": 293
+                },
+                "end": {
+                  "line": 17,
+                  "column": 26,
+                  "offset": 316
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 17,
+              "column": 1,
+              "offset": 291
+            },
+            "end": {
+              "line": 17,
+              "column": 26,
+              "offset": 316
+            }
+          },
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "管道符 (|) 和号 (&) 脱字符 (^)",
+                  "position": {
+                    "start": {
+                      "line": 18,
+                      "column": 3,
+                      "offset": 241
+                    },
+                    "end": {
+                      "line": 18,
+                      "column": 25,
+                      "offset": 263
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 18,
+                  "column": 3,
+                  "offset": 241
+                },
+                "end": {
+                  "line": 18,
+                  "column": 25,
+                  "offset": 263
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 18,
+              "column": 1,
+              "offset": 239
+            },
+            "end": {
+              "line": 18,
+              "column": 25,
+              "offset": 263
+            }
+          },
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "管道符 (|) 和号 (&) 脱字符 (^) 版权符号 (©)",
+                  "position": {
+                    "start": {
+                      "line": 18,
+                      "column": 3,
+                      "offset": 319
+                    },
+                    "end": {
+                      "line": 18,
+                      "column": 34,
+                      "offset": 350
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 18,
+                  "column": 3,
+                  "offset": 319
+                },
+                "end": {
+                  "line": 18,
+                  "column": 34,
+                  "offset": 350
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 18,
+              "column": 1,
+              "offset": 317
+            },
+            "end": {
+              "line": 18,
+              "column": 34,
+              "offset": 350
+            }
+          },
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "重音符 (`) 省略号 (...)",
+                  "position": {
+                    "start": {
+                      "line": 19,
+                      "column": 3,
+                      "offset": 266
+                    },
+                    "end": {
+                      "line": 19,
+                      "column": 20,
+                      "offset": 283
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 19,
+                  "column": 3,
+                  "offset": 266
+                },
+                "end": {
+                  "line": 19,
+                  "column": 20,
+                  "offset": 283
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 19,
+              "column": 1,
+              "offset": 264
+            },
+            "end": {
+              "line": 19,
+              "column": 20,
+              "offset": 283
+            }
+          },
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "重音符 (`) 省略号 (...) 缩进符号 (→)",
+                  "position": {
+                    "start": {
+                      "line": 19,
+                      "column": 3,
+                      "offset": 353
+                    },
+                    "end": {
+                      "line": 19,
+                      "column": 29,
+                      "offset": 379
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 19,
+                  "column": 3,
+                  "offset": 353
+                },
+                "end": {
+                  "line": 19,
+                  "column": 29,
+                  "offset": 379
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 19,
+              "column": 1,
+              "offset": 351
+            },
+            "end": {
+              "line": 19,
+              "column": 29,
+              "offset": 379
+            }
+          },
+          "data": {
+            "diff": "ins"
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 9,
+          "column": 1,
+          "offset": 61
+        },
+        "end": {
+          "line": 19,
+          "column": 29,
+          "offset": 379
+        }
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "1.2 转义字符",
+          "position": {
+            "start": {
+              "line": 21,
+              "column": 5,
+              "offset": 385
+            },
+            "end": {
+              "line": 21,
+              "column": 13,
+              "offset": 393
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 21,
+          "column": 1,
+          "offset": 381
+        },
+        "end": {
+          "line": 21,
+          "column": 13,
+          "offset": 393
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "以下是一些转义字符的示例"
+        },
+        {
+          "type": "text",
+          "value": "（已更新）",
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "text",
+          "value": "："
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 23,
+          "column": 1,
+          "offset": 395
+        },
+        "end": {
+          "line": 23,
+          "column": 19,
+          "offset": 413
+        }
+      }
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "反斜杠: \\",
+                  "position": {
+                    "start": {
+                      "line": 25,
+                      "column": 3,
+                      "offset": 417
+                    },
+                    "end": {
+                      "line": 25,
+                      "column": 10,
+                      "offset": 424
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 25,
+                  "column": 3,
+                  "offset": 417
+                },
+                "end": {
+                  "line": 25,
+                  "column": 10,
+                  "offset": 424
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 25,
+              "column": 1,
+              "offset": 415
+            },
+            "end": {
+              "line": 25,
+              "column": 10,
+              "offset": 424
+            }
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "反引号: `",
+                  "position": {
+                    "start": {
+                      "line": 26,
+                      "column": 3,
+                      "offset": 427
+                    },
+                    "end": {
+                      "line": 26,
+                      "column": 10,
+                      "offset": 434
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 26,
+                  "column": 3,
+                  "offset": 427
+                },
+                "end": {
+                  "line": 26,
+                  "column": 10,
+                  "offset": 434
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 26,
+              "column": 1,
+              "offset": 425
+            },
+            "end": {
+              "line": 26,
+              "column": 10,
+              "offset": 434
+            }
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "星号: *",
+                  "position": {
+                    "start": {
+                      "line": 27,
+                      "column": 3,
+                      "offset": 437
+                    },
+                    "end": {
+                      "line": 27,
+                      "column": 9,
+                      "offset": 443
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 27,
+                  "column": 3,
+                  "offset": 437
+                },
+                "end": {
+                  "line": 27,
+                  "column": 9,
+                  "offset": 443
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 27,
+              "column": 1,
+              "offset": 435
+            },
+            "end": {
+              "line": 27,
+              "column": 9,
+              "offset": 443
+            }
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "下划线: _",
+                  "position": {
+                    "start": {
+                      "line": 28,
+                      "column": 3,
+                      "offset": 446
+                    },
+                    "end": {
+                      "line": 28,
+                      "column": 10,
+                      "offset": 453
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 28,
+                  "column": 3,
+                  "offset": 446
+                },
+                "end": {
+                  "line": 28,
+                  "column": 10,
+                  "offset": 453
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 28,
+              "column": 1,
+              "offset": 444
+            },
+            "end": {
+              "line": 28,
+              "column": 10,
+              "offset": 453
+            }
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "花括号: { }",
+                  "position": {
+                    "start": {
+                      "line": 29,
+                      "column": 3,
+                      "offset": 456
+                    },
+                    "end": {
+                      "line": 29,
+                      "column": 13,
+                      "offset": 466
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 29,
+                  "column": 3,
+                  "offset": 456
+                },
+                "end": {
+                  "line": 29,
+                  "column": 13,
+                  "offset": 466
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 29,
+              "column": 1,
+              "offset": 454
+            },
+            "end": {
+              "line": 29,
+              "column": 13,
+              "offset": 466
+            }
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "方括号: [ ]",
+                  "position": {
+                    "start": {
+                      "line": 30,
+                      "column": 3,
+                      "offset": 469
+                    },
+                    "end": {
+                      "line": 30,
+                      "column": 13,
+                      "offset": 479
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 30,
+                  "column": 3,
+                  "offset": 469
+                },
+                "end": {
+                  "line": 30,
+                  "column": 13,
+                  "offset": 479
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 30,
+              "column": 1,
+              "offset": 467
+            },
+            "end": {
+              "line": 30,
+              "column": 13,
+              "offset": 479
+            }
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "圆括号: ( )",
+                  "position": {
+                    "start": {
+                      "line": 31,
+                      "column": 3,
+                      "offset": 482
+                    },
+                    "end": {
+                      "line": 31,
+                      "column": 13,
+                      "offset": 492
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 31,
+                  "column": 3,
+                  "offset": 482
+                },
+                "end": {
+                  "line": 31,
+                  "column": 13,
+                  "offset": 492
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 31,
+              "column": 1,
+              "offset": 480
+            },
+            "end": {
+              "line": 31,
+              "column": 13,
+              "offset": 492
+            }
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "井号: #",
+                  "position": {
+                    "start": {
+                      "line": 32,
+                      "column": 3,
+                      "offset": 495
+                    },
+                    "end": {
+                      "line": 32,
+                      "column": 9,
+                      "offset": 501
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 32,
+                  "column": 3,
+                  "offset": 495
+                },
+                "end": {
+                  "line": 32,
+                  "column": 9,
+                  "offset": 501
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 32,
+              "column": 1,
+              "offset": 493
+            },
+            "end": {
+              "line": 32,
+              "column": 9,
+              "offset": 501
+            }
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "加号: +",
+                  "position": {
+                    "start": {
+                      "line": 33,
+                      "column": 3,
+                      "offset": 504
+                    },
+                    "end": {
+                      "line": 33,
+                      "column": 9,
+                      "offset": 510
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 33,
+                  "column": 3,
+                  "offset": 504
+                },
+                "end": {
+                  "line": 33,
+                  "column": 9,
+                  "offset": 510
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 33,
+              "column": 1,
+              "offset": 502
+            },
+            "end": {
+              "line": 33,
+              "column": 9,
+              "offset": 510
+            }
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "减号: -",
+                  "position": {
+                    "start": {
+                      "line": 34,
+                      "column": 3,
+                      "offset": 513
+                    },
+                    "end": {
+                      "line": 34,
+                      "column": 9,
+                      "offset": 519
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 34,
+                  "column": 3,
+                  "offset": 513
+                },
+                "end": {
+                  "line": 34,
+                  "column": 9,
+                  "offset": 519
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 34,
+              "column": 1,
+              "offset": 511
+            },
+            "end": {
+              "line": 34,
+              "column": 9,
+              "offset": 519
+            }
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "句点: .",
+                  "position": {
+                    "start": {
+                      "line": 35,
+                      "column": 3,
+                      "offset": 522
+                    },
+                    "end": {
+                      "line": 35,
+                      "column": 9,
+                      "offset": 528
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 35,
+                  "column": 3,
+                  "offset": 522
+                },
+                "end": {
+                  "line": 35,
+                  "column": 9,
+                  "offset": 528
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 35,
+              "column": 1,
+              "offset": 520
+            },
+            "end": {
+              "line": 35,
+              "column": 9,
+              "offset": 528
+            }
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "感叹号: !",
+                  "position": {
+                    "start": {
+                      "line": 36,
+                      "column": 3,
+                      "offset": 531
+                    },
+                    "end": {
+                      "line": 36,
+                      "column": 10,
+                      "offset": 538
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 36,
+                  "column": 3,
+                  "offset": 531
+                },
+                "end": {
+                  "line": 36,
+                  "column": 10,
+                  "offset": 538
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 36,
+              "column": 1,
+              "offset": 529
+            },
+            "end": {
+              "line": 36,
+              "column": 10,
+              "offset": 538
+            }
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "尖括号: < >",
+                  "position": {
+                    "start": {
+                      "line": 37,
+                      "column": 3,
+                      "offset": 541
+                    },
+                    "end": {
+                      "line": 37,
+                      "column": 13,
+                      "offset": 551
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 37,
+                  "column": 3,
+                  "offset": 541
+                },
+                "end": {
+                  "line": 37,
+                  "column": 13,
+                  "offset": 551
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 37,
+              "column": 1,
+              "offset": 539
+            },
+            "end": {
+              "line": 37,
+              "column": 13,
+              "offset": 551
+            }
+          },
+          "data": {
+            "diff": "ins"
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 25,
+          "column": 1,
+          "offset": 415
+        },
+        "end": {
+          "line": 37,
+          "column": 13,
+          "offset": 551
+        }
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "2. Unicode 字符",
+          "position": {
+            "start": {
+              "line": 39,
+              "column": 4,
+              "offset": 556
+            },
+            "end": {
+              "line": 39,
+              "column": 17,
+              "offset": 569
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 39,
+          "column": 1,
+          "offset": 553
+        },
+        "end": {
+          "line": 39,
+          "column": 17,
+          "offset": 569
+        }
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "2.1 拉丁字母变体",
+          "position": {
+            "start": {
+              "line": 41,
+              "column": 5,
+              "offset": 575
+            },
+            "end": {
+              "line": 41,
+              "column": 15,
+              "offset": 585
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 41,
+          "column": 1,
+          "offset": 571
+        },
+        "end": {
+          "line": 41,
+          "column": 15,
+          "offset": 585
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "À Á Â Ã Ä Å Æ Ç È É Ê Ë Ì Í Î Ï Ð Ñ Ò Ó Ô Õ Ö × Ø Ù Ú Û Ü Ý Þ ß\nà á â ã ä å æ ç è é ê ë ì í î ï ð ñ ò ó ô õ ö ÷ ø ù ú û ü ý þ ÿ"
+        },
+        {
+          "type": "text",
+          "value": "\nĀ ā Ă ă Ą ą Ć ć Ĉ ĉ Ċ ċ Č č Ď ď Đ đ Ē ē Ĕ ĕ Ė ė Ę ę Ě ě",
+          "data": {
+            "diff": "ins"
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 43,
+          "column": 1,
+          "offset": 587
+        },
+        "end": {
+          "line": 45,
+          "column": 56,
+          "offset": 770
+        }
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "2.2 数学符号",
+          "position": {
+            "start": {
+              "line": 47,
+              "column": 5,
+              "offset": 776
+            },
+            "end": {
+              "line": 47,
+              "column": 13,
+              "offset": 784
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 47,
+          "column": 1,
+          "offset": 772
+        },
+        "end": {
+          "line": 47,
+          "column": 13,
+          "offset": 784
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "± ÷ × ∑ ∏ √ ∞ ∫ ∮ ∇ ∂ ∆ ∩ ∪ ⊂ ⊃ ⊆ ⊇ ≠ ≡ ≤ ≥ ≈ ∝ ∧ ∨ ¬ ∀ ∃ ∈ ∉ ∋ ∅ ℵ"
+        },
+        {
+          "type": "text",
+          "value": "\n⁰ ¹ ² ³ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹ ⁺ ⁻ ⁼ ⁽ ⁾ ₀ ₁ ₂ ₃ ₄ ₅ ₆ ₇ ₈ ₉ ₊ ₋ ₌ ₍ ₎",
+          "data": {
+            "diff": "ins"
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 49,
+          "column": 1,
+          "offset": 786
+        },
+        "end": {
+          "line": 50,
+          "column": 60,
+          "offset": 913
+        }
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "2.3 货币符号",
+          "position": {
+            "start": {
+              "line": 52,
+              "column": 5,
+              "offset": 919
+            },
+            "end": {
+              "line": 52,
+              "column": 13,
+              "offset": 927
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 52,
+          "column": 1,
+          "offset": 915
+        },
+        "end": {
+          "line": 52,
+          "column": 13,
+          "offset": 927
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "$ ¢ € £ ¥ ₹ ₽ ₩ ₱ ₿"
+        },
+        {
+          "type": "text",
+          "value": " ¤ ₫ ₲ ₴ ₸",
+          "data": {
+            "diff": "ins"
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 54,
+          "column": 1,
+          "offset": 929
+        },
+        "end": {
+          "line": 54,
+          "column": 30,
+          "offset": 958
+        }
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "2.4 箭头和几何符号",
+          "position": {
+            "start": {
+              "line": 56,
+              "column": 5,
+              "offset": 964
+            },
+            "end": {
+              "line": 56,
+              "column": 16,
+              "offset": 975
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 56,
+          "column": 1,
+          "offset": 960
+        },
+        "end": {
+          "line": 56,
+          "column": 16,
+          "offset": 975
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "← ↑ → ↓ ↔ ↕ ↖ ↗ ↘ ↙ ⇐ ⇑ ⇒ ⇓ ⇔ ⇕ ⇖ ⇗ ⇘ ⇙"
+        },
+        {
+          "type": "text",
+          "value": " ↩ ↪ ↻ ↺ ⟲ ⟳",
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n△ ▲ ▴ ▵ ▶ ▷ ▸ ▹ ► ▻ ▼ ▽ ▾ ▿ ◀ ◁ ◂ ◃ ◄ ◅ ◆ ◇ ◈ ◉ ◊ ○ ◌ ◍ ◎ ●"
+        },
+        {
+          "type": "text",
+          "value": " ◐ ◑ ◒ ◓ ◔ ◕ ◖ ◗ ◘ ◙ ◚ ◛ ◜ ◝ ◞ ◟",
+          "data": {
+            "diff": "ins"
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 58,
+          "column": 1,
+          "offset": 977
+        },
+        "end": {
+          "line": 59,
+          "column": 92,
+          "offset": 1120
+        }
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "2.5 表情符号",
+          "position": {
+            "start": {
+              "line": 61,
+              "column": 5,
+              "offset": 1126
+            },
+            "end": {
+              "line": 61,
+              "column": 13,
+              "offset": 1134
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 61,
+          "column": 1,
+          "offset": 1122
+        },
+        "end": {
+          "line": 61,
+          "column": 13,
+          "offset": 1134
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "😀 😁 😂 🤣 😃 😄 😅 😆 😉 😊 😋 😎 😍 😘 🥰 😗 😙 😚 ☺️ 🙂 🤗 🤩 🤔 🤨"
+        },
+        {
+          "type": "text",
+          "value": "\n😐 😑 😶 🙄 😏 😣 😥 😮 🤐 😯 😪 😫 😴 😌 😛 😜 😝 🤤 😒 😓 😔 😕 🙃 🤑",
+          "data": {
+            "diff": "ins"
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 63,
+          "column": 1,
+          "offset": 1136
+        },
+        "end": {
+          "line": 64,
+          "column": 72,
+          "offset": 1279
+        }
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "2.6 中文和日文字符",
+          "position": {
+            "start": {
+              "line": 66,
+              "column": 5,
+              "offset": 1285
+            },
+            "end": {
+              "line": 66,
+              "column": 16,
+              "offset": 1296
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 66,
+          "column": 1,
+          "offset": 1281
+        },
+        "end": {
+          "line": 66,
+          "column": 16,
+          "offset": 1296
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "你好，世界！こんにちは、世界！"
+        },
+        {
+          "type": "text",
+          "value": "안녕하세요, 세계!",
+          "data": {
+            "diff": "ins"
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 68,
+          "column": 1,
+          "offset": 1298
+        },
+        "end": {
+          "line": 68,
+          "column": 26,
+          "offset": 1323
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "汉字测试：中国、日本、韩国、台湾"
+        },
+        {
+          "type": "text",
+          "value": "、香港、澳门",
+          "data": {
+            "diff": "ins"
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 70,
+          "column": 1,
+          "offset": 1325
+        },
+        "end": {
+          "line": 70,
+          "column": 23,
+          "offset": 1347
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "日文测试：ひらがな、カタカナ、漢字"
+        },
+        {
+          "type": "text",
+          "value": "、絵文字",
+          "data": {
+            "diff": "ins"
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 72,
+          "column": 1,
+          "offset": 1349
+        },
+        "end": {
+          "line": 72,
+          "column": 22,
+          "offset": 1370
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "韩文测试：한글, 조선글, 아름다운 한국",
+          "position": {
+            "start": {
+              "line": 74,
+              "column": 1,
+              "offset": 1372
+            },
+            "end": {
+              "line": 74,
+              "column": 22,
+              "offset": 1393
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 74,
+          "column": 1,
+          "offset": 1372
+        },
+        "end": {
+          "line": 74,
+          "column": 22,
+          "offset": 1393
+        }
+      },
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "3. HTML 实体",
+          "position": {
+            "start": {
+              "line": 76,
+              "column": 4,
+              "offset": 1398
+            },
+            "end": {
+              "line": 76,
+              "column": 14,
+              "offset": 1408
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 76,
+          "column": 1,
+          "offset": 1395
+        },
+        "end": {
+          "line": 76,
+          "column": 14,
+          "offset": 1408
+        }
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "3.1 命名实体",
+          "position": {
+            "start": {
+              "line": 78,
+              "column": 5,
+              "offset": 1414
+            },
+            "end": {
+              "line": 78,
+              "column": 13,
+              "offset": 1422
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 78,
+          "column": 1,
+          "offset": 1410
+        },
+        "end": {
+          "line": 78,
+          "column": 13,
+          "offset": 1422
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "< > & \" ' ¢ £ ¥ € © ® ™",
+          "position": {
+            "start": {
+              "line": 74,
+              "column": 1,
+              "offset": 1025
+            },
+            "end": {
+              "line": 74,
+              "column": 79,
+              "offset": 1103
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 74,
+          "column": 1,
+          "offset": 1025
+        },
+        "end": {
+          "line": 74,
+          "column": 79,
+          "offset": 1103
+        }
+      },
+      "data": {
+        "diff": "del"
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "< > & \" ' ¢ £ ¥ € © ® ™ ° ± ¶ § µ",
+          "position": {
+            "start": {
+              "line": 80,
+              "column": 1,
+              "offset": 1424
+            },
+            "end": {
+              "line": 80,
+              "column": 116,
+              "offset": 1539
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 80,
+          "column": 1,
+          "offset": 1424
+        },
+        "end": {
+          "line": 80,
+          "column": 116,
+          "offset": 1539
+        }
+      },
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "3.2 数字实体",
+          "position": {
+            "start": {
+              "line": 82,
+              "column": 5,
+              "offset": 1545
+            },
+            "end": {
+              "line": 82,
+              "column": 13,
+              "offset": 1553
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 82,
+          "column": 1,
+          "offset": 1541
+        },
+        "end": {
+          "line": 82,
+          "column": 13,
+          "offset": 1553
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "♠ ♣ ♥ ♦ ★ ☆",
+          "position": {
+            "start": {
+              "line": 78,
+              "column": 1,
+              "offset": 1119
+            },
+            "end": {
+              "line": 78,
+              "column": 48,
+              "offset": 1166
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 78,
+          "column": 1,
+          "offset": 1119
+        },
+        "end": {
+          "line": 78,
+          "column": 48,
+          "offset": 1166
+        }
+      },
+      "data": {
+        "diff": "del"
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "♠ ♣ ♥ ♦ ★ ☆ ☎ ☑ ☒ ☠ ☢ ☣ ☮ ☯ ☸ ☹ ☺ ☻",
+          "position": {
+            "start": {
+              "line": 84,
+              "column": 1,
+              "offset": 1555
+            },
+            "end": {
+              "line": 84,
+              "column": 144,
+              "offset": 1698
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 84,
+          "column": 1,
+          "offset": 1555
+        },
+        "end": {
+          "line": 84,
+          "column": 144,
+          "offset": 1698
+        }
+      },
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "4. 特殊字符在 Markdown 元素中",
+          "position": {
+            "start": {
+              "line": 86,
+              "column": 4,
+              "offset": 1703
+            },
+            "end": {
+              "line": 86,
+              "column": 25,
+              "offset": 1724
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 86,
+          "column": 1,
+          "offset": 1700
+        },
+        "end": {
+          "line": 86,
+          "column": 25,
+          "offset": 1724
+        }
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "4.1 特殊字符在标题中",
+          "position": {
+            "start": {
+              "line": 88,
+              "column": 5,
+              "offset": 1730
+            },
+            "end": {
+              "line": 88,
+              "column": 17,
+              "offset": 1742
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 88,
+          "column": 1,
+          "offset": 1726
+        },
+        "end": {
+          "line": 88,
+          "column": 17,
+          "offset": 1742
+        }
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 4,
+      "children": [
+        {
+          "type": "text",
+          "value": "包含 & < > \" ' 的标题"
+        },
+        {
+          "type": "text",
+          "value": "（已更新）",
+          "data": {
+            "diff": "ins"
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 90,
+          "column": 1,
+          "offset": 1744
+        },
+        "end": {
+          "line": 90,
+          "column": 27,
+          "offset": 1770
+        }
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 4,
+      "children": [
+        {
+          "type": "text",
+          "value": "包含 😀 🤔 👍 "
+        },
+        {
+          "type": "text",
+          "value": "🎉 ",
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "text",
+          "value": "的标题"
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 92,
+          "column": 1,
+          "offset": 1772
+        },
+        "end": {
+          "line": 92,
+          "column": 24,
+          "offset": 1795
+        }
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 4,
+      "children": [
+        {
+          "type": "text",
+          "value": "4.2",
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "text",
+          "value": "新增：包含",
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "text",
+          "value": " "
+        },
+        {
+          "type": "text",
+          "value": "特殊字符在列表中",
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "text",
+          "value": "∑ ∞ ∫ ∇ 的标题",
+          "data": {
+            "diff": "ins"
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 94,
+          "column": 1,
+          "offset": 1797
+        },
+        "end": {
+          "line": 94,
+          "column": 23,
+          "offset": 1819
+        }
+      }
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "项目 & 符号",
+                  "position": {
+                    "start": {
+                      "line": 90,
+                      "column": 3,
+                      "offset": 1277
+                    },
+                    "end": {
+                      "line": 90,
+                      "column": 10,
+                      "offset": 1284
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 90,
+                  "column": 3,
+                  "offset": 1277
+                },
+                "end": {
+                  "line": 90,
+                  "column": 10,
+                  "offset": 1284
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 90,
+              "column": 1,
+              "offset": 1275
+            },
+            "end": {
+              "line": 90,
+              "column": 10,
+              "offset": 1284
+            }
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "项目 < 符号",
+                  "position": {
+                    "start": {
+                      "line": 91,
+                      "column": 3,
+                      "offset": 1287
+                    },
+                    "end": {
+                      "line": 91,
+                      "column": 10,
+                      "offset": 1294
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 91,
+                  "column": 3,
+                  "offset": 1287
+                },
+                "end": {
+                  "line": 91,
+                  "column": 10,
+                  "offset": 1294
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 91,
+              "column": 1,
+              "offset": 1285
+            },
+            "end": {
+              "line": 91,
+              "column": 10,
+              "offset": 1294
+            }
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "项目 > 符号",
+                  "position": {
+                    "start": {
+                      "line": 92,
+                      "column": 3,
+                      "offset": 1297
+                    },
+                    "end": {
+                      "line": 92,
+                      "column": 10,
+                      "offset": 1304
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 92,
+                  "column": 3,
+                  "offset": 1297
+                },
+                "end": {
+                  "line": 92,
+                  "column": 10,
+                  "offset": 1304
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 92,
+              "column": 1,
+              "offset": 1295
+            },
+            "end": {
+              "line": 92,
+              "column": 10,
+              "offset": 1304
+            }
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "项目 \" 符号",
+                  "position": {
+                    "start": {
+                      "line": 93,
+                      "column": 3,
+                      "offset": 1307
+                    },
+                    "end": {
+                      "line": 93,
+                      "column": 10,
+                      "offset": 1314
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 93,
+                  "column": 3,
+                  "offset": 1307
+                },
+                "end": {
+                  "line": 93,
+                  "column": 10,
+                  "offset": 1314
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 93,
+              "column": 1,
+              "offset": 1305
+            },
+            "end": {
+              "line": 93,
+              "column": 10,
+              "offset": 1314
+            }
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "项目 ' 符号",
+                  "position": {
+                    "start": {
+                      "line": 94,
+                      "column": 3,
+                      "offset": 1317
+                    },
+                    "end": {
+                      "line": 94,
+                      "column": 10,
+                      "offset": 1324
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 94,
+                  "column": 3,
+                  "offset": 1317
+                },
+                "end": {
+                  "line": 94,
+                  "column": 10,
+                  "offset": 1324
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 94,
+              "column": 1,
+              "offset": 1315
+            },
+            "end": {
+              "line": 94,
+              "column": 10,
+              "offset": 1324
+            }
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "项目 😀 符号",
+                  "position": {
+                    "start": {
+                      "line": 95,
+                      "column": 3,
+                      "offset": 1327
+                    },
+                    "end": {
+                      "line": 95,
+                      "column": 11,
+                      "offset": 1335
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 95,
+                  "column": 3,
+                  "offset": 1327
+                },
+                "end": {
+                  "line": 95,
+                  "column": 11,
+                  "offset": 1335
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 95,
+              "column": 1,
+              "offset": 1325
+            },
+            "end": {
+              "line": 95,
+              "column": 11,
+              "offset": 1335
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 90,
+          "column": 1,
+          "offset": 1275
+        },
+        "end": {
+          "line": 95,
+          "column": 11,
+          "offset": 1335
+        }
+      },
+      "data": {
+        "diff": "del"
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "4."
+        },
+        {
+          "type": "text",
+          "value": "3",
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "text",
+          "value": "2",
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "text",
+          "value": " 特殊字符在"
+        },
+        {
+          "type": "text",
+          "value": "代码块",
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "text",
+          "value": "列表",
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "text",
+          "value": "中"
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 96,
+          "column": 1,
+          "offset": 1821
+        },
+        "end": {
+          "line": 96,
+          "column": 17,
+          "offset": 1837
+        }
+      }
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "项目 & 符号（已更新）",
+                  "position": {
+                    "start": {
+                      "line": 98,
+                      "column": 3,
+                      "offset": 1841
+                    },
+                    "end": {
+                      "line": 98,
+                      "column": 15,
+                      "offset": 1853
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 98,
+                  "column": 3,
+                  "offset": 1841
+                },
+                "end": {
+                  "line": 98,
+                  "column": 15,
+                  "offset": 1853
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 98,
+              "column": 1,
+              "offset": 1839
+            },
+            "end": {
+              "line": 98,
+              "column": 15,
+              "offset": 1853
+            }
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "项目 < 符号",
+                  "position": {
+                    "start": {
+                      "line": 99,
+                      "column": 3,
+                      "offset": 1856
+                    },
+                    "end": {
+                      "line": 99,
+                      "column": 10,
+                      "offset": 1863
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 99,
+                  "column": 3,
+                  "offset": 1856
+                },
+                "end": {
+                  "line": 99,
+                  "column": 10,
+                  "offset": 1863
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 99,
+              "column": 1,
+              "offset": 1854
+            },
+            "end": {
+              "line": 99,
+              "column": 10,
+              "offset": 1863
+            }
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "项目 > 符号",
+                  "position": {
+                    "start": {
+                      "line": 100,
+                      "column": 3,
+                      "offset": 1866
+                    },
+                    "end": {
+                      "line": 100,
+                      "column": 10,
+                      "offset": 1873
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 100,
+                  "column": 3,
+                  "offset": 1866
+                },
+                "end": {
+                  "line": 100,
+                  "column": 10,
+                  "offset": 1873
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 100,
+              "column": 1,
+              "offset": 1864
+            },
+            "end": {
+              "line": 100,
+              "column": 10,
+              "offset": 1873
+            }
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "项目 \" 符号",
+                  "position": {
+                    "start": {
+                      "line": 101,
+                      "column": 3,
+                      "offset": 1876
+                    },
+                    "end": {
+                      "line": 101,
+                      "column": 10,
+                      "offset": 1883
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 101,
+                  "column": 3,
+                  "offset": 1876
+                },
+                "end": {
+                  "line": 101,
+                  "column": 10,
+                  "offset": 1883
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 101,
+              "column": 1,
+              "offset": 1874
+            },
+            "end": {
+              "line": 101,
+              "column": 10,
+              "offset": 1883
+            }
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "项目 ' 符号",
+                  "position": {
+                    "start": {
+                      "line": 102,
+                      "column": 3,
+                      "offset": 1886
+                    },
+                    "end": {
+                      "line": 102,
+                      "column": 10,
+                      "offset": 1893
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 102,
+                  "column": 3,
+                  "offset": 1886
+                },
+                "end": {
+                  "line": 102,
+                  "column": 10,
+                  "offset": 1893
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 102,
+              "column": 1,
+              "offset": 1884
+            },
+            "end": {
+              "line": 102,
+              "column": 10,
+              "offset": 1893
+            }
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "项目 😀 符号",
+                  "position": {
+                    "start": {
+                      "line": 103,
+                      "column": 3,
+                      "offset": 1896
+                    },
+                    "end": {
+                      "line": 103,
+                      "column": 11,
+                      "offset": 1904
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 103,
+                  "column": 3,
+                  "offset": 1896
+                },
+                "end": {
+                  "line": 103,
+                  "column": 11,
+                  "offset": 1904
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 103,
+              "column": 1,
+              "offset": 1894
+            },
+            "end": {
+              "line": 103,
+              "column": 11,
+              "offset": 1904
+            }
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "新增：项目 ∞ 符号",
+                  "position": {
+                    "start": {
+                      "line": 104,
+                      "column": 3,
+                      "offset": 1907
+                    },
+                    "end": {
+                      "line": 104,
+                      "column": 13,
+                      "offset": 1917
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 104,
+                  "column": 3,
+                  "offset": 1907
+                },
+                "end": {
+                  "line": 104,
+                  "column": 13,
+                  "offset": 1917
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 104,
+              "column": 1,
+              "offset": 1905
+            },
+            "end": {
+              "line": 104,
+              "column": 13,
+              "offset": 1917
+            }
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "新增：项目 ₿ 符号",
+                  "position": {
+                    "start": {
+                      "line": 105,
+                      "column": 3,
+                      "offset": 1920
+                    },
+                    "end": {
+                      "line": 105,
+                      "column": 13,
+                      "offset": 1930
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 105,
+                  "column": 3,
+                  "offset": 1920
+                },
+                "end": {
+                  "line": 105,
+                  "column": 13,
+                  "offset": 1930
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 105,
+              "column": 1,
+              "offset": 1918
+            },
+            "end": {
+              "line": 105,
+              "column": 13,
+              "offset": 1930
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 98,
+          "column": 1,
+          "offset": 1839
+        },
+        "end": {
+          "line": 105,
+          "column": 13,
+          "offset": 1930
+        }
+      },
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "4.3 特殊字符在代码块中",
+          "position": {
+            "start": {
+              "line": 107,
+              "column": 5,
+              "offset": 1936
+            },
+            "end": {
+              "line": 107,
+              "column": 18,
+              "offset": 1949
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 107,
+          "column": 1,
+          "offset": 1932
+        },
+        "end": {
+          "line": 107,
+          "column": 18,
+          "offset": 1949
+        }
+      },
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "code",
+      "lang": null,
+      "meta": null,
+      "value": "function specialChars() {\n  const symbols = '!@#$%^&*()_+-=[]{}\\|;:\",./<>?';\n  const emoji = '😀 🤔 👍';\n  return `特殊符号: ${symbols}, 表情: ${emoji}`;\n}",
+      "position": {
+        "start": {
+          "line": 99,
+          "column": 1,
+          "offset": 1356
+        },
+        "end": {
+          "line": 105,
+          "column": 4,
+          "offset": 1513
+        }
+      },
+      "data": {
+        "diff": "del"
+      }
+    },
+    {
+      "type": "code",
+      "lang": "javascript",
+      "meta": null,
+      "value": "function specialChars() {\n  // 更新了特殊字符集\n  const symbols = '!@#$%^&*()_+-=[]{}\\|;:\",./<>?~`';\n  const emoji = '😀 🤔 👍 🎉 🚀';\n  const math = '∑ ∞ ∫ ∇ ∂ ∆';\n  return `特殊符号: ${symbols}, 表情: ${emoji}, 数学符号: ${math}`;\n}",
+      "position": {
+        "start": {
+          "line": 109,
+          "column": 1,
+          "offset": 1951
+        },
+        "end": {
+          "line": 117,
+          "column": 4,
+          "offset": 2185
+        }
+      },
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "4.4 特殊字符在表格中",
+          "position": {
+            "start": {
+              "line": 107,
+              "column": 5,
+              "offset": 1519
+            },
+            "end": {
+              "line": 107,
+              "column": 17,
+              "offset": 1531
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 107,
+          "column": 1,
+          "offset": 1515
+        },
+        "end": {
+          "line": 107,
+          "column": 17,
+          "offset": 1531
+        }
+      },
+      "data": {
+        "diff": "del"
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "4.4 特殊字符在表格中",
+          "position": {
+            "start": {
+              "line": 119,
+              "column": 5,
+              "offset": 2191
+            },
+            "end": {
+              "line": 119,
+              "column": 17,
+              "offset": 2203
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 119,
+          "column": 1,
+          "offset": 2187
+        },
+        "end": {
+          "line": 119,
+          "column": 17,
+          "offset": 2203
+        }
+      },
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "table",
+      "align": [
+        null,
+        null,
+        null
+      ],
+      "children": [
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "符号类型",
+                  "position": {
+                    "start": {
+                      "line": 109,
+                      "column": 3,
+                      "offset": 1535
+                    },
+                    "end": {
+                      "line": 109,
+                      "column": 7,
+                      "offset": 1539
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 109,
+                  "column": 1,
+                  "offset": 1533
+                },
+                "end": {
+                  "line": 109,
+                  "column": 8,
+                  "offset": 1540
+                }
+              }
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "示例",
+                  "position": {
+                    "start": {
+                      "line": 109,
+                      "column": 10,
+                      "offset": 1542
+                    },
+                    "end": {
+                      "line": 109,
+                      "column": 12,
+                      "offset": 1544
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 109,
+                  "column": 8,
+                  "offset": 1540
+                },
+                "end": {
+                  "line": 109,
+                  "column": 13,
+                  "offset": 1545
+                }
+              }
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "描述",
+                  "position": {
+                    "start": {
+                      "line": 109,
+                      "column": 15,
+                      "offset": 1547
+                    },
+                    "end": {
+                      "line": 109,
+                      "column": 17,
+                      "offset": 1549
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 109,
+                  "column": 13,
+                  "offset": 1545
+                },
+                "end": {
+                  "line": 109,
+                  "column": 19,
+                  "offset": 1551
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 109,
+              "column": 1,
+              "offset": 1533
+            },
+            "end": {
+              "line": 109,
+              "column": 19,
+              "offset": 1551
+            }
+          }
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "HTML 特殊字符",
+                  "position": {
+                    "start": {
+                      "line": 111,
+                      "column": 3,
+                      "offset": 1574
+                    },
+                    "end": {
+                      "line": 111,
+                      "column": 12,
+                      "offset": 1583
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 111,
+                  "column": 1,
+                  "offset": 1572
+                },
+                "end": {
+                  "line": 111,
+                  "column": 13,
+                  "offset": 1584
+                }
+              }
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "& < > \" '",
+                  "position": {
+                    "start": {
+                      "line": 111,
+                      "column": 15,
+                      "offset": 1586
+                    },
+                    "end": {
+                      "line": 111,
+                      "column": 24,
+                      "offset": 1595
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 111,
+                  "column": 13,
+                  "offset": 1584
+                },
+                "end": {
+                  "line": 111,
+                  "column": 25,
+                  "offset": 1596
+                }
+              }
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "需要在 HTML 中转义",
+                  "position": {
+                    "start": {
+                      "line": 111,
+                      "column": 27,
+                      "offset": 1598
+                    },
+                    "end": {
+                      "line": 111,
+                      "column": 39,
+                      "offset": 1610
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 111,
+                  "column": 25,
+                  "offset": 1596
+                },
+                "end": {
+                  "line": 111,
+                  "column": 41,
+                  "offset": 1612
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 111,
+              "column": 1,
+              "offset": 1572
+            },
+            "end": {
+              "line": 111,
+              "column": 41,
+              "offset": 1612
+            }
+          }
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "数学符号",
+                  "position": {
+                    "start": {
+                      "line": 112,
+                      "column": 3,
+                      "offset": 1615
+                    },
+                    "end": {
+                      "line": 112,
+                      "column": 7,
+                      "offset": 1619
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 112,
+                  "column": 1,
+                  "offset": 1613
+                },
+                "end": {
+                  "line": 112,
+                  "column": 8,
+                  "offset": 1620
+                }
+              }
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "± ÷ ×",
+                  "position": {
+                    "start": {
+                      "line": 112,
+                      "column": 10,
+                      "offset": 1622
+                    },
+                    "end": {
+                      "line": 112,
+                      "column": 15,
+                      "offset": 1627
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 112,
+                  "column": 8,
+                  "offset": 1620
+                },
+                "end": {
+                  "line": 112,
+                  "column": 16,
+                  "offset": 1628
+                }
+              }
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "数学运算符号",
+                  "position": {
+                    "start": {
+                      "line": 112,
+                      "column": 18,
+                      "offset": 1630
+                    },
+                    "end": {
+                      "line": 112,
+                      "column": 24,
+                      "offset": 1636
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 112,
+                  "column": 16,
+                  "offset": 1628
+                },
+                "end": {
+                  "line": 112,
+                  "column": 26,
+                  "offset": 1638
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 112,
+              "column": 1,
+              "offset": 1613
+            },
+            "end": {
+              "line": 112,
+              "column": 26,
+              "offset": 1638
+            }
+          }
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "表情符号",
+                  "position": {
+                    "start": {
+                      "line": 113,
+                      "column": 3,
+                      "offset": 1641
+                    },
+                    "end": {
+                      "line": 113,
+                      "column": 7,
+                      "offset": 1645
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 113,
+                  "column": 1,
+                  "offset": 1639
+                },
+                "end": {
+                  "line": 113,
+                  "column": 8,
+                  "offset": 1646
+                }
+              }
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "😀 🤔 👍",
+                  "position": {
+                    "start": {
+                      "line": 113,
+                      "column": 10,
+                      "offset": 1648
+                    },
+                    "end": {
+                      "line": 113,
+                      "column": 18,
+                      "offset": 1656
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 113,
+                  "column": 8,
+                  "offset": 1646
+                },
+                "end": {
+                  "line": 113,
+                  "column": 19,
+                  "offset": 1657
+                }
+              }
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Unicode 表情",
+                  "position": {
+                    "start": {
+                      "line": 113,
+                      "column": 21,
+                      "offset": 1659
+                    },
+                    "end": {
+                      "line": 113,
+                      "column": 31,
+                      "offset": 1669
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 113,
+                  "column": 19,
+                  "offset": 1657
+                },
+                "end": {
+                  "line": 113,
+                  "column": 33,
+                  "offset": 1671
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 113,
+              "column": 1,
+              "offset": 1639
+            },
+            "end": {
+              "line": 113,
+              "column": 33,
+              "offset": 1671
+            }
+          }
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "箭头",
+                  "position": {
+                    "start": {
+                      "line": 114,
+                      "column": 3,
+                      "offset": 1674
+                    },
+                    "end": {
+                      "line": 114,
+                      "column": 5,
+                      "offset": 1676
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 114,
+                  "column": 1,
+                  "offset": 1672
+                },
+                "end": {
+                  "line": 114,
+                  "column": 6,
+                  "offset": 1677
+                }
+              }
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "← ↑ → ↓",
+                  "position": {
+                    "start": {
+                      "line": 114,
+                      "column": 8,
+                      "offset": 1679
+                    },
+                    "end": {
+                      "line": 114,
+                      "column": 15,
+                      "offset": 1686
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 114,
+                  "column": 6,
+                  "offset": 1677
+                },
+                "end": {
+                  "line": 114,
+                  "column": 16,
+                  "offset": 1687
+                }
+              }
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "方向指示",
+                  "position": {
+                    "start": {
+                      "line": 114,
+                      "column": 18,
+                      "offset": 1689
+                    },
+                    "end": {
+                      "line": 114,
+                      "column": 22,
+                      "offset": 1693
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 114,
+                  "column": 16,
+                  "offset": 1687
+                },
+                "end": {
+                  "line": 114,
+                  "column": 24,
+                  "offset": 1695
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 114,
+              "column": 1,
+              "offset": 1672
+            },
+            "end": {
+              "line": 114,
+              "column": 24,
+              "offset": 1695
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 109,
+          "column": 1,
+          "offset": 1533
+        },
+        "end": {
+          "line": 114,
+          "column": 24,
+          "offset": 1695
+        }
+      },
+      "data": {
+        "diff": "del"
+      }
+    },
+    {
+      "type": "table",
+      "align": [
+        null,
+        null,
+        null
+      ],
+      "children": [
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "符号类型",
+                  "position": {
+                    "start": {
+                      "line": 121,
+                      "column": 3,
+                      "offset": 2207
+                    },
+                    "end": {
+                      "line": 121,
+                      "column": 7,
+                      "offset": 2211
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 121,
+                  "column": 1,
+                  "offset": 2205
+                },
+                "end": {
+                  "line": 121,
+                  "column": 8,
+                  "offset": 2212
+                }
+              }
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "示例",
+                  "position": {
+                    "start": {
+                      "line": 121,
+                      "column": 10,
+                      "offset": 2214
+                    },
+                    "end": {
+                      "line": 121,
+                      "column": 12,
+                      "offset": 2216
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 121,
+                  "column": 8,
+                  "offset": 2212
+                },
+                "end": {
+                  "line": 121,
+                  "column": 13,
+                  "offset": 2217
+                }
+              }
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "描述",
+                  "position": {
+                    "start": {
+                      "line": 121,
+                      "column": 15,
+                      "offset": 2219
+                    },
+                    "end": {
+                      "line": 121,
+                      "column": 17,
+                      "offset": 2221
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 121,
+                  "column": 13,
+                  "offset": 2217
+                },
+                "end": {
+                  "line": 121,
+                  "column": 19,
+                  "offset": 2223
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 121,
+              "column": 1,
+              "offset": 2205
+            },
+            "end": {
+              "line": 121,
+              "column": 19,
+              "offset": 2223
+            }
+          }
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "HTML 特殊字符",
+                  "position": {
+                    "start": {
+                      "line": 123,
+                      "column": 3,
+                      "offset": 2246
+                    },
+                    "end": {
+                      "line": 123,
+                      "column": 12,
+                      "offset": 2255
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 123,
+                  "column": 1,
+                  "offset": 2244
+                },
+                "end": {
+                  "line": 123,
+                  "column": 13,
+                  "offset": 2256
+                }
+              }
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "& < > \" '",
+                  "position": {
+                    "start": {
+                      "line": 123,
+                      "column": 15,
+                      "offset": 2258
+                    },
+                    "end": {
+                      "line": 123,
+                      "column": 24,
+                      "offset": 2267
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 123,
+                  "column": 13,
+                  "offset": 2256
+                },
+                "end": {
+                  "line": 123,
+                  "column": 25,
+                  "offset": 2268
+                }
+              }
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "需要在 HTML 中转义",
+                  "position": {
+                    "start": {
+                      "line": 123,
+                      "column": 27,
+                      "offset": 2270
+                    },
+                    "end": {
+                      "line": 123,
+                      "column": 39,
+                      "offset": 2282
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 123,
+                  "column": 25,
+                  "offset": 2268
+                },
+                "end": {
+                  "line": 123,
+                  "column": 41,
+                  "offset": 2284
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 123,
+              "column": 1,
+              "offset": 2244
+            },
+            "end": {
+              "line": 123,
+              "column": 41,
+              "offset": 2284
+            }
+          }
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "数学符号",
+                  "position": {
+                    "start": {
+                      "line": 124,
+                      "column": 3,
+                      "offset": 2287
+                    },
+                    "end": {
+                      "line": 124,
+                      "column": 7,
+                      "offset": 2291
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 124,
+                  "column": 1,
+                  "offset": 2285
+                },
+                "end": {
+                  "line": 124,
+                  "column": 8,
+                  "offset": 2292
+                }
+              }
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "± ÷ × ∑ ∞",
+                  "position": {
+                    "start": {
+                      "line": 124,
+                      "column": 10,
+                      "offset": 2294
+                    },
+                    "end": {
+                      "line": 124,
+                      "column": 19,
+                      "offset": 2303
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 124,
+                  "column": 8,
+                  "offset": 2292
+                },
+                "end": {
+                  "line": 124,
+                  "column": 20,
+                  "offset": 2304
+                }
+              }
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "数学运算符号",
+                  "position": {
+                    "start": {
+                      "line": 124,
+                      "column": 22,
+                      "offset": 2306
+                    },
+                    "end": {
+                      "line": 124,
+                      "column": 28,
+                      "offset": 2312
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 124,
+                  "column": 20,
+                  "offset": 2304
+                },
+                "end": {
+                  "line": 124,
+                  "column": 30,
+                  "offset": 2314
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 124,
+              "column": 1,
+              "offset": 2285
+            },
+            "end": {
+              "line": 124,
+              "column": 30,
+              "offset": 2314
+            }
+          }
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "表情符号",
+                  "position": {
+                    "start": {
+                      "line": 125,
+                      "column": 3,
+                      "offset": 2317
+                    },
+                    "end": {
+                      "line": 125,
+                      "column": 7,
+                      "offset": 2321
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 125,
+                  "column": 1,
+                  "offset": 2315
+                },
+                "end": {
+                  "line": 125,
+                  "column": 8,
+                  "offset": 2322
+                }
+              }
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "😀 🤔 👍 🎉",
+                  "position": {
+                    "start": {
+                      "line": 125,
+                      "column": 10,
+                      "offset": 2324
+                    },
+                    "end": {
+                      "line": 125,
+                      "column": 21,
+                      "offset": 2335
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 125,
+                  "column": 8,
+                  "offset": 2322
+                },
+                "end": {
+                  "line": 125,
+                  "column": 22,
+                  "offset": 2336
+                }
+              }
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Unicode 表情",
+                  "position": {
+                    "start": {
+                      "line": 125,
+                      "column": 24,
+                      "offset": 2338
+                    },
+                    "end": {
+                      "line": 125,
+                      "column": 34,
+                      "offset": 2348
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 125,
+                  "column": 22,
+                  "offset": 2336
+                },
+                "end": {
+                  "line": 125,
+                  "column": 36,
+                  "offset": 2350
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 125,
+              "column": 1,
+              "offset": 2315
+            },
+            "end": {
+              "line": 125,
+              "column": 36,
+              "offset": 2350
+            }
+          }
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "箭头",
+                  "position": {
+                    "start": {
+                      "line": 126,
+                      "column": 3,
+                      "offset": 2353
+                    },
+                    "end": {
+                      "line": 126,
+                      "column": 5,
+                      "offset": 2355
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 126,
+                  "column": 1,
+                  "offset": 2351
+                },
+                "end": {
+                  "line": 126,
+                  "column": 6,
+                  "offset": 2356
+                }
+              }
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "← ↑ → ↓ ↔",
+                  "position": {
+                    "start": {
+                      "line": 126,
+                      "column": 8,
+                      "offset": 2358
+                    },
+                    "end": {
+                      "line": 126,
+                      "column": 17,
+                      "offset": 2367
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 126,
+                  "column": 6,
+                  "offset": 2356
+                },
+                "end": {
+                  "line": 126,
+                  "column": 18,
+                  "offset": 2368
+                }
+              }
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "方向指示",
+                  "position": {
+                    "start": {
+                      "line": 126,
+                      "column": 20,
+                      "offset": 2370
+                    },
+                    "end": {
+                      "line": 126,
+                      "column": 24,
+                      "offset": 2374
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 126,
+                  "column": 18,
+                  "offset": 2368
+                },
+                "end": {
+                  "line": 126,
+                  "column": 26,
+                  "offset": 2376
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 126,
+              "column": 1,
+              "offset": 2351
+            },
+            "end": {
+              "line": 126,
+              "column": 26,
+              "offset": 2376
+            }
+          }
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "货币符号",
+                  "position": {
+                    "start": {
+                      "line": 127,
+                      "column": 3,
+                      "offset": 2379
+                    },
+                    "end": {
+                      "line": 127,
+                      "column": 7,
+                      "offset": 2383
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 127,
+                  "column": 1,
+                  "offset": 2377
+                },
+                "end": {
+                  "line": 127,
+                  "column": 8,
+                  "offset": 2384
+                }
+              }
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "$ € £ ¥ ₿",
+                  "position": {
+                    "start": {
+                      "line": 127,
+                      "column": 10,
+                      "offset": 2386
+                    },
+                    "end": {
+                      "line": 127,
+                      "column": 19,
+                      "offset": 2395
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 127,
+                  "column": 8,
+                  "offset": 2384
+                },
+                "end": {
+                  "line": 127,
+                  "column": 20,
+                  "offset": 2396
+                }
+              }
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "全球货币",
+                  "position": {
+                    "start": {
+                      "line": 127,
+                      "column": 22,
+                      "offset": 2398
+                    },
+                    "end": {
+                      "line": 127,
+                      "column": 26,
+                      "offset": 2402
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 127,
+                  "column": 20,
+                  "offset": 2396
+                },
+                "end": {
+                  "line": 127,
+                  "column": 28,
+                  "offset": 2404
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 127,
+              "column": 1,
+              "offset": 2377
+            },
+            "end": {
+              "line": 127,
+              "column": 28,
+              "offset": 2404
+            }
+          }
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "上下标",
+                  "position": {
+                    "start": {
+                      "line": 128,
+                      "column": 3,
+                      "offset": 2407
+                    },
+                    "end": {
+                      "line": 128,
+                      "column": 6,
+                      "offset": 2410
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 128,
+                  "column": 1,
+                  "offset": 2405
+                },
+                "end": {
+                  "line": 128,
+                  "column": 7,
+                  "offset": 2411
+                }
+              }
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "x² y³ a₁ b₂",
+                  "position": {
+                    "start": {
+                      "line": 128,
+                      "column": 9,
+                      "offset": 2413
+                    },
+                    "end": {
+                      "line": 128,
+                      "column": 20,
+                      "offset": 2424
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 128,
+                  "column": 7,
+                  "offset": 2411
+                },
+                "end": {
+                  "line": 128,
+                  "column": 21,
+                  "offset": 2425
+                }
+              }
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "数学表示法",
+                  "position": {
+                    "start": {
+                      "line": 128,
+                      "column": 23,
+                      "offset": 2427
+                    },
+                    "end": {
+                      "line": 128,
+                      "column": 28,
+                      "offset": 2432
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 128,
+                  "column": 21,
+                  "offset": 2425
+                },
+                "end": {
+                  "line": 128,
+                  "column": 30,
+                  "offset": 2434
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 128,
+              "column": 1,
+              "offset": 2405
+            },
+            "end": {
+              "line": 128,
+              "column": 30,
+              "offset": 2434
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 121,
+          "column": 1,
+          "offset": 2205
+        },
+        "end": {
+          "line": 128,
+          "column": 30,
+          "offset": 2434
+        }
+      },
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "4.5 特殊字符在链接和图片中",
+          "position": {
+            "start": {
+              "line": 116,
+              "column": 5,
+              "offset": 1701
+            },
+            "end": {
+              "line": 116,
+              "column": 20,
+              "offset": 1716
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 116,
+          "column": 1,
+          "offset": 1697
+        },
+        "end": {
+          "line": 116,
+          "column": 20,
+          "offset": 1716
+        }
+      },
+      "data": {
+        "diff": "del"
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "4.5 特殊字符在链接和图片中",
+          "position": {
+            "start": {
+              "line": 130,
+              "column": 5,
+              "offset": 2440
+            },
+            "end": {
+              "line": 130,
+              "column": 20,
+              "offset": 2455
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 130,
+          "column": 1,
+          "offset": 2436
+        },
+        "end": {
+          "line": 130,
+          "column": 20,
+          "offset": 2455
+        }
+      },
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://example.com/search?q=special&symbols=true",
+          "children": [
+            {
+              "type": "text",
+              "value": "包含特殊字符 & < > \" ' 的链接",
+              "position": {
+                "start": {
+                  "line": 118,
+                  "column": 2,
+                  "offset": 1719
+                },
+                "end": {
+                  "line": 118,
+                  "column": 22,
+                  "offset": 1739
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 118,
+              "column": 1,
+              "offset": 1718
+            },
+            "end": {
+              "line": 118,
+              "column": 74,
+              "offset": 1791
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 118,
+          "column": 1,
+          "offset": 1718
+        },
+        "end": {
+          "line": 118,
+          "column": 74,
+          "offset": 1791
+        }
+      },
+      "data": {
+        "diff": "del"
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "image",
+          "title": "图片 & 标题",
+          "url": "https://example.com/image.jpg",
+          "alt": "包含特殊字符 & < > \" ' 的图片描述",
+          "position": {
+            "start": {
+              "line": 120,
+              "column": 1,
+              "offset": 1793
+            },
+            "end": {
+              "line": 120,
+              "column": 67,
+              "offset": 1859
+            }
+          },
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://example.com/search?q=special&symbols=true&emoji=😀",
+          "children": [
+            {
+              "type": "text",
+              "value": "包含特殊字符 & < > \" ' 的链接（已更新）",
+              "position": {
+                "start": {
+                  "line": 132,
+                  "column": 2,
+                  "offset": 2458
+                },
+                "end": {
+                  "line": 132,
+                  "column": 27,
+                  "offset": 2483
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 132,
+              "column": 1,
+              "offset": 2457
+            },
+            "end": {
+              "line": 132,
+              "column": 88,
+              "offset": 2544
+            }
+          },
+          "data": {
+            "diff": "ins"
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 132,
+          "column": 1,
+          "offset": 2457
+        },
+        "end": {
+          "line": 132,
+          "column": 88,
+          "offset": 2544
+        }
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "4.6 特殊字符在引用中",
+          "position": {
+            "start": {
+              "line": 122,
+              "column": 5,
+              "offset": 1865
+            },
+            "end": {
+              "line": 122,
+              "column": 17,
+              "offset": 1877
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 122,
+          "column": 1,
+          "offset": 1861
+        },
+        "end": {
+          "line": 122,
+          "column": 17,
+          "offset": 1877
+        }
+      },
+      "data": {
+        "diff": "del"
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "image",
+          "title": "图片 & 标题 © 2023",
+          "url": "https://example.com/image.jpg",
+          "alt": "包含特殊字符 & < > \" ' 😀 的图片描述",
+          "position": {
+            "start": {
+              "line": 134,
+              "column": 1,
+              "offset": 2546
+            },
+            "end": {
+              "line": 134,
+              "column": 77,
+              "offset": 2622
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 134,
+          "column": 1,
+          "offset": 2546
+        },
+        "end": {
+          "line": 134,
+          "column": 77,
+          "offset": 2622
+        }
+      },
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://example.com/math?symbols=∑∞∫",
+          "children": [
+            {
+              "type": "text",
+              "value": "新增：包含数学符号 ∑ ∞ ∫ 的链接",
+              "position": {
+                "start": {
+                  "line": 136,
+                  "column": 2,
+                  "offset": 2625
+                },
+                "end": {
+                  "line": 136,
+                  "column": 21,
+                  "offset": 2644
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 136,
+              "column": 1,
+              "offset": 2624
+            },
+            "end": {
+              "line": 136,
+              "column": 60,
+              "offset": 2683
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 136,
+          "column": 1,
+          "offset": 2624
+        },
+        "end": {
+          "line": 136,
+          "column": 60,
+          "offset": 2683
+        }
+      },
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "4.6 特殊字符在引用中",
+          "position": {
+            "start": {
+              "line": 138,
+              "column": 5,
+              "offset": 2689
+            },
+            "end": {
+              "line": 138,
+              "column": 17,
+              "offset": 2701
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 138,
+          "column": 1,
+          "offset": 2685
+        },
+        "end": {
+          "line": 138,
+          "column": 17,
+          "offset": 2701
+        }
+      },
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "blockquote",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "这是包含特殊字符的引用"
+            },
+            {
+              "type": "text",
+              "value": "（已更新）",
+              "data": {
+                "diff": "ins"
+              }
+            },
+            {
+              "type": "text",
+              "value": "：& < > \" '"
+            },
+            {
+              "type": "text",
+              "value": " © ®",
+              "data": {
+                "diff": "ins"
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 140,
+              "column": 3,
+              "offset": 2705
+            },
+            "end": {
+              "line": 140,
+              "column": 33,
+              "offset": 2735
+            }
+          }
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "这是包含表情符号的引用：😀 🤔 👍"
+            },
+            {
+              "type": "text",
+              "value": " 🎉 🚀",
+              "data": {
+                "diff": "ins"
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 142,
+              "column": 3,
+              "offset": 2741
+            },
+            "end": {
+              "line": 142,
+              "column": 29,
+              "offset": 2767
+            }
+          }
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "新增：这是包含数学符号的引用：∑ ∞ ∫ ∇ ∂ ∆",
+              "position": {
+                "start": {
+                  "line": 144,
+                  "column": 3,
+                  "offset": 2773
+                },
+                "end": {
+                  "line": 144,
+                  "column": 29,
+                  "offset": 2799
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 144,
+              "column": 3,
+              "offset": 2773
+            },
+            "end": {
+              "line": 144,
+              "column": 29,
+              "offset": 2799
+            }
+          },
+          "data": {
+            "diff": "ins"
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 140,
+          "column": 1,
+          "offset": 2703
+        },
+        "end": {
+          "line": 144,
+          "column": 29,
+          "offset": 2799
+        }
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "5. 极端情况",
+          "position": {
+            "start": {
+              "line": 128,
+              "column": 4,
+              "offset": 1933
+            },
+            "end": {
+              "line": 128,
+              "column": 11,
+              "offset": 1940
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 128,
+          "column": 1,
+          "offset": 1930
+        },
+        "end": {
+          "line": 128,
+          "column": 11,
+          "offset": 1940
+        }
+      },
+      "data": {
+        "diff": "del"
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "5."
+        },
+        {
+          "type": "text",
+          "value": "1",
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "text",
+          "value": " "
+        },
+        {
+          "type": "text",
+          "value": "大量重复特殊字符",
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "text",
+          "value": "极端情况",
+          "data": {
+            "diff": "ins"
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 146,
+          "column": 1,
+          "offset": 2801
+        },
+        "end": {
+          "line": 146,
+          "column": 11,
+          "offset": 2811
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+          "position": {
+            "start": {
+              "line": 132,
+              "column": 1,
+              "offset": 1960
+            },
+            "end": {
+              "line": 132,
+              "column": 81,
+              "offset": 2040
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 132,
+          "column": 1,
+          "offset": 1960
+        },
+        "end": {
+          "line": 132,
+          "column": 81,
+          "offset": 2040
+        }
+      },
+      "data": {
+        "diff": "del"
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "5.1 大量重复特殊字符",
+          "position": {
+            "start": {
+              "line": 148,
+              "column": 5,
+              "offset": 2817
+            },
+            "end": {
+              "line": 148,
+              "column": 17,
+              "offset": 2829
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 148,
+          "column": 1,
+          "offset": 2813
+        },
+        "end": {
+          "line": 148,
+          "column": 17,
+          "offset": 2829
+        }
+      },
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
+          "position": {
+            "start": {
+              "line": 134,
+              "column": 1,
+              "offset": 2042
+            },
+            "end": {
+              "line": 134,
+              "column": 81,
+              "offset": 2122
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 134,
+          "column": 1,
+          "offset": 2042
+        },
+        "end": {
+          "line": 134,
+          "column": 81,
+          "offset": 2122
+        }
+      },
+      "data": {
+        "diff": "del"
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "################################################################",
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "text",
+          "value": "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+          "data": {
+            "diff": "ins"
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 150,
+          "column": 1,
+          "offset": 2831
+        },
+        "end": {
+          "line": 150,
+          "column": 81,
+          "offset": 2911
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
+          "position": {
+            "start": {
+              "line": 152,
+              "column": 1,
+              "offset": 2913
+            },
+            "end": {
+              "line": 152,
+              "column": 81,
+              "offset": 2993
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 152,
+          "column": 1,
+          "offset": 2913
+        },
+        "end": {
+          "line": 152,
+          "column": 81,
+          "offset": 2993
+        }
+      },
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "################################################################",
+          "position": {
+            "start": {
+              "line": 154,
+              "column": 1,
+              "offset": 2995
+            },
+            "end": {
+              "line": 154,
+              "column": 65,
+              "offset": 3059
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 154,
+          "column": 1,
+          "offset": 2995
+        },
+        "end": {
+          "line": 154,
+          "column": 65,
+          "offset": 3059
+        }
+      },
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "thematicBreak",
+      "position": {
+        "start": {
+          "line": 138,
+          "column": 1,
+          "offset": 2190
+        },
+        "end": {
+          "line": 138,
+          "column": 67,
+          "offset": 2256
+        }
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "5.2 混合特殊字符",
+          "position": {
+            "start": {
+              "line": 140,
+              "column": 5,
+              "offset": 2262
+            },
+            "end": {
+              "line": 140,
+              "column": 15,
+              "offset": 2272
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 140,
+          "column": 1,
+          "offset": 2258
+        },
+        "end": {
+          "line": 140,
+          "column": 15,
+          "offset": 2272
+        }
+      },
+      "data": {
+        "diff": "del"
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀",
+          "position": {
+            "start": {
+              "line": 158,
+              "column": 1,
+              "offset": 3129
+            },
+            "end": {
+              "line": 158,
+              "column": 81,
+              "offset": 3209
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 158,
+          "column": 1,
+          "offset": 3129
+        },
+        "end": {
+          "line": 158,
+          "column": 81,
+          "offset": 3209
+        }
+      },
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "!@#$%^&",
+          "position": {
+            "start": {
+              "line": 142,
+              "column": 1,
+              "offset": 2274
+            },
+            "end": {
+              "line": 142,
+              "column": 8,
+              "offset": 2281
+            }
+          }
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "()_+{}|:\"<>?~",
+              "position": {
+                "start": {
+                  "line": 142,
+                  "column": 9,
+                  "offset": 2282
+                },
+                "end": {
+                  "line": 142,
+                  "column": 22,
+                  "offset": 2295
+                }
+              }
+            },
+            {
+              "type": "inlineCode",
+              "value": "-=[]\\;',./!@#$%^&*()_+{}|:\"<>?~",
+              "position": {
+                "start": {
+                  "line": 142,
+                  "column": 22,
+                  "offset": 2295
+                },
+                "end": {
+                  "line": 142,
+                  "column": 55,
+                  "offset": 2328
+                }
+              }
+            },
+            {
+              "type": "text",
+              "value": "-=[];',./!@#$%^&",
+              "position": {
+                "start": {
+                  "line": 142,
+                  "column": 55,
+                  "offset": 2328
+                },
+                "end": {
+                  "line": 142,
+                  "column": 72,
+                  "offset": 2345
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 142,
+              "column": 8,
+              "offset": 2281
+            },
+            "end": {
+              "line": 142,
+              "column": 73,
+              "offset": 2346
+            }
+          }
+        },
+        {
+          "type": "text",
+          "value": "()_+{}|:\"<>?~`-=[];',./",
+          "position": {
+            "start": {
+              "line": 142,
+              "column": 73,
+              "offset": 2346
+            },
+            "end": {
+              "line": 142,
+              "column": 97,
+              "offset": 2370
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 142,
+          "column": 1,
+          "offset": 2274
+        },
+        "end": {
+          "line": 142,
+          "column": 97,
+          "offset": 2370
+        }
+      },
+      "data": {
+        "diff": "del"
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "5."
+        },
+        {
+          "type": "text",
+          "value": "3",
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "text",
+          "value": "2",
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "text",
+          "value": " "
+        },
+        {
+          "type": "text",
+          "value": "混合",
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "text",
+          "value": "特殊字符"
+        },
+        {
+          "type": "text",
+          "value": "组合",
+          "data": {
+            "diff": "del"
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 160,
+          "column": 1,
+          "offset": 3211
+        },
+        "end": {
+          "line": 160,
+          "column": 15,
+          "offset": 3225
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "!@#$%^&",
+          "position": {
+            "start": {
+              "line": 162,
+              "column": 1,
+              "offset": 3227
+            },
+            "end": {
+              "line": 162,
+              "column": 8,
+              "offset": 3234
+            }
+          }
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "()_+{}|:\"<>?~",
+              "position": {
+                "start": {
+                  "line": 162,
+                  "column": 9,
+                  "offset": 3235
+                },
+                "end": {
+                  "line": 162,
+                  "column": 22,
+                  "offset": 3248
+                }
+              }
+            },
+            {
+              "type": "inlineCode",
+              "value": "-=[]\\;',./!@#$%^&*()_+{}|:\"<>?~",
+              "position": {
+                "start": {
+                  "line": 162,
+                  "column": 22,
+                  "offset": 3248
+                },
+                "end": {
+                  "line": 162,
+                  "column": 55,
+                  "offset": 3281
+                }
+              }
+            },
+            {
+              "type": "text",
+              "value": "-=[];',./!@#$%^&",
+              "position": {
+                "start": {
+                  "line": 162,
+                  "column": 55,
+                  "offset": 3281
+                },
+                "end": {
+                  "line": 162,
+                  "column": 72,
+                  "offset": 3298
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 162,
+              "column": 8,
+              "offset": 3234
+            },
+            "end": {
+              "line": 162,
+              "column": 73,
+              "offset": 3299
+            }
+          }
+        },
+        {
+          "type": "text",
+          "value": "()_+{}|:\"<>?~`-=[];',./",
+          "position": {
+            "start": {
+              "line": 162,
+              "column": 73,
+              "offset": 3299
+            },
+            "end": {
+              "line": 162,
+              "column": 97,
+              "offset": 3323
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 162,
+          "column": 1,
+          "offset": 3227
+        },
+        "end": {
+          "line": 162,
+          "column": 97,
+          "offset": 3323
+        }
+      },
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "∑∞∫∇∂∆∑∞∫∇∂∆∑∞∫∇∂∆∑∞∫∇∂∆∑∞∫∇∂∆∑∞∫∇∂∆∑∞∫∇∂∆∑∞∫∇∂∆∑∞∫∇∂∆∑∞∫∇∂∆∑∞∫∇∂∆∑∞∫∇∂∆",
+          "position": {
+            "start": {
+              "line": 164,
+              "column": 1,
+              "offset": 3325
+            },
+            "end": {
+              "line": 164,
+              "column": 73,
+              "offset": 3397
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 164,
+          "column": 1,
+          "offset": 3325
+        },
+        "end": {
+          "line": 164,
+          "column": 73,
+          "offset": 3397
+        }
+      },
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "5.3 特殊字符组合",
+          "position": {
+            "start": {
+              "line": 166,
+              "column": 5,
+              "offset": 3403
+            },
+            "end": {
+              "line": 166,
+              "column": 15,
+              "offset": 3413
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 166,
+          "column": 1,
+          "offset": 3399
+        },
+        "end": {
+          "line": 166,
+          "column": 15,
+          "offset": 3413
+        }
+      },
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "¯_(ツ)_/¯",
+                  "position": {
+                    "start": {
+                      "line": 168,
+                      "column": 3,
+                      "offset": 3417
+                    },
+                    "end": {
+                      "line": 168,
+                      "column": 12,
+                      "offset": 3426
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 168,
+                  "column": 3,
+                  "offset": 3417
+                },
+                "end": {
+                  "line": 168,
+                  "column": 12,
+                  "offset": 3426
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 168,
+              "column": 1,
+              "offset": 3415
+            },
+            "end": {
+              "line": 168,
+              "column": 12,
+              "offset": 3426
+            }
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "(╯°□°）╯︵ ┻━┻",
+                  "position": {
+                    "start": {
+                      "line": 169,
+                      "column": 3,
+                      "offset": 3429
+                    },
+                    "end": {
+                      "line": 169,
+                      "column": 15,
+                      "offset": 3441
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 169,
+                  "column": 3,
+                  "offset": 3429
+                },
+                "end": {
+                  "line": 169,
+                  "column": 15,
+                  "offset": 3441
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 169,
+              "column": 1,
+              "offset": 3427
+            },
+            "end": {
+              "line": 169,
+              "column": 15,
+              "offset": 3441
+            }
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ಠ_ಠ",
+                  "position": {
+                    "start": {
+                      "line": 148,
+                      "column": 3,
+                      "offset": 2417
+                    },
+                    "end": {
+                      "line": 148,
+                      "column": 6,
+                      "offset": 2420
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 148,
+                  "column": 3,
+                  "offset": 2417
+                },
+                "end": {
+                  "line": 148,
+                  "column": 6,
+                  "offset": 2420
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 148,
+              "column": 1,
+              "offset": 2415
+            },
+            "end": {
+              "line": 148,
+              "column": 6,
+              "offset": 2420
+            }
+          },
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "┬─┬ノ( º _ ºノ)",
+                  "position": {
+                    "start": {
+                      "line": 170,
+                      "column": 3,
+                      "offset": 3444
+                    },
+                    "end": {
+                      "line": 170,
+                      "column": 16,
+                      "offset": 3457
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 170,
+                  "column": 3,
+                  "offset": 3444
+                },
+                "end": {
+                  "line": 170,
+                  "column": 16,
+                  "offset": 3457
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 170,
+              "column": 1,
+              "offset": 3442
+            },
+            "end": {
+              "line": 170,
+              "column": 16,
+              "offset": 3457
+            }
+          },
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ʕ•ᴥ•ʔ",
+                  "position": {
+                    "start": {
+                      "line": 149,
+                      "column": 3,
+                      "offset": 2423
+                    },
+                    "end": {
+                      "line": 149,
+                      "column": 8,
+                      "offset": 2428
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 149,
+                  "column": 3,
+                  "offset": 2423
+                },
+                "end": {
+                  "line": 149,
+                  "column": 8,
+                  "offset": 2428
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 149,
+              "column": 1,
+              "offset": 2421
+            },
+            "end": {
+              "line": 149,
+              "column": 8,
+              "offset": 2428
+            }
+          },
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ಠ_ಠ",
+                  "position": {
+                    "start": {
+                      "line": 171,
+                      "column": 3,
+                      "offset": 3460
+                    },
+                    "end": {
+                      "line": 171,
+                      "column": 6,
+                      "offset": 3463
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 171,
+                  "column": 3,
+                  "offset": 3460
+                },
+                "end": {
+                  "line": 171,
+                  "column": 6,
+                  "offset": 3463
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 171,
+              "column": 1,
+              "offset": 3458
+            },
+            "end": {
+              "line": 171,
+              "column": 6,
+              "offset": 3463
+            }
+          },
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "(⌐■_■)",
+                  "position": {
+                    "start": {
+                      "line": 150,
+                      "column": 3,
+                      "offset": 2431
+                    },
+                    "end": {
+                      "line": 150,
+                      "column": 9,
+                      "offset": 2437
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 150,
+                  "column": 3,
+                  "offset": 2431
+                },
+                "end": {
+                  "line": 150,
+                  "column": 9,
+                  "offset": 2437
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 150,
+              "column": 1,
+              "offset": 2429
+            },
+            "end": {
+              "line": 150,
+              "column": 9,
+              "offset": 2437
+            }
+          },
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ʕ•ᴥ•ʔ",
+                  "position": {
+                    "start": {
+                      "line": 172,
+                      "column": 3,
+                      "offset": 3466
+                    },
+                    "end": {
+                      "line": 172,
+                      "column": 8,
+                      "offset": 3471
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 172,
+                  "column": 3,
+                  "offset": 3466
+                },
+                "end": {
+                  "line": 172,
+                  "column": 8,
+                  "offset": 3471
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 172,
+              "column": 1,
+              "offset": 3464
+            },
+            "end": {
+              "line": 172,
+              "column": 8,
+              "offset": 3471
+            }
+          },
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "(⌐■_■)",
+                  "position": {
+                    "start": {
+                      "line": 173,
+                      "column": 3,
+                      "offset": 3474
+                    },
+                    "end": {
+                      "line": 173,
+                      "column": 9,
+                      "offset": 3480
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 173,
+                  "column": 3,
+                  "offset": 3474
+                },
+                "end": {
+                  "line": 173,
+                  "column": 9,
+                  "offset": 3480
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 173,
+              "column": 1,
+              "offset": 3472
+            },
+            "end": {
+              "line": 173,
+              "column": 9,
+              "offset": 3480
+            }
+          },
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "(づ｡◕‿‿◕｡)づ",
+                  "position": {
+                    "start": {
+                      "line": 174,
+                      "column": 3,
+                      "offset": 3483
+                    },
+                    "end": {
+                      "line": 174,
+                      "column": 13,
+                      "offset": 3493
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 174,
+                  "column": 3,
+                  "offset": 3483
+                },
+                "end": {
+                  "line": 174,
+                  "column": 13,
+                  "offset": 3493
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 174,
+              "column": 1,
+              "offset": 3481
+            },
+            "end": {
+              "line": 174,
+              "column": 13,
+              "offset": 3493
+            }
+          },
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧",
+                  "position": {
+                    "start": {
+                      "line": 175,
+                      "column": 3,
+                      "offset": 3496
+                    },
+                    "end": {
+                      "line": 175,
+                      "column": 15,
+                      "offset": 3508
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 175,
+                  "column": 3,
+                  "offset": 3496
+                },
+                "end": {
+                  "line": 175,
+                  "column": 15,
+                  "offset": 3508
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 175,
+              "column": 1,
+              "offset": 3494
+            },
+            "end": {
+              "line": 175,
+              "column": 15,
+              "offset": 3508
+            }
+          },
+          "data": {
+            "diff": "ins"
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 168,
+          "column": 1,
+          "offset": 3415
+        },
+        "end": {
+          "line": 175,
+          "column": 15,
+          "offset": 3508
+        }
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "6. 总结",
+          "position": {
+            "start": {
+              "line": 152,
+              "column": 4,
+              "offset": 2442
+            },
+            "end": {
+              "line": 152,
+              "column": 9,
+              "offset": 2447
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 152,
+          "column": 1,
+          "offset": 2439
+        },
+        "end": {
+          "line": 152,
+          "column": 9,
+          "offset": 2447
+        }
+      },
+      "data": {
+        "diff": "del"
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "5.4 新增：零宽字符和不可见字符",
+          "position": {
+            "start": {
+              "line": 177,
+              "column": 5,
+              "offset": 3514
+            },
+            "end": {
+              "line": 177,
+              "column": 22,
+              "offset": 3531
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 177,
+          "column": 1,
+          "offset": 3510
+        },
+        "end": {
+          "line": 177,
+          "column": 22,
+          "offset": 3531
+        }
+      },
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "这个文档包含了各种特殊字符和符号，用于测试 Markdown 差异比较工具处理特殊字符的能力。",
+          "position": {
+            "start": {
+              "line": 154,
+              "column": 1,
+              "offset": 2449
+            },
+            "end": {
+              "line": 154,
+              "column": 48,
+              "offset": 2496
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 154,
+          "column": 1,
+          "offset": 2449
+        },
+        "end": {
+          "line": 154,
+          "column": 48,
+          "offset": 2496
+        }
+      },
+      "data": {
+        "diff": "del"
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "这段文本包含零宽空格(​)、零宽连字(‍)和零宽非连字(‌)等不可见字符。",
+          "position": {
+            "start": {
+              "line": 179,
+              "column": 1,
+              "offset": 3533
+            },
+            "end": {
+              "line": 179,
+              "column": 38,
+              "offset": 3570
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 179,
+          "column": 1,
+          "offset": 3533
+        },
+        "end": {
+          "line": 179,
+          "column": 38,
+          "offset": 3570
+        }
+      },
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "这段文本包含控制字符如制表符(\t)、换行符(\n)和回车符(\n)。",
+          "position": {
+            "start": {
+              "line": 181,
+              "column": 1,
+              "offset": 3572
+            },
+            "end": {
+              "line": 183,
+              "column": 3,
+              "offset": 3604
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 181,
+          "column": 1,
+          "offset": 3572
+        },
+        "end": {
+          "line": 183,
+          "column": 3,
+          "offset": 3604
+        }
+      },
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "6. 总结",
+          "position": {
+            "start": {
+              "line": 185,
+              "column": 4,
+              "offset": 3609
+            },
+            "end": {
+              "line": 185,
+              "column": 9,
+              "offset": 3614
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 185,
+          "column": 1,
+          "offset": 3606
+        },
+        "end": {
+          "line": 185,
+          "column": 9,
+          "offset": 3614
+        }
+      },
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "这个文档包含了各种特殊字符和符号，用于测试 Markdown 差异比较工具处理特殊字符的能力。文档已经过更新，包含了多处修改、添加和删除内容，以测试差异比较功能的效果。",
+          "position": {
+            "start": {
+              "line": 187,
+              "column": 1,
+              "offset": 3616
+            },
+            "end": {
+              "line": 187,
+              "column": 85,
+              "offset": 3700
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 187,
+          "column": 1,
+          "offset": 3616
+        },
+        "end": {
+          "line": 187,
+          "column": 85,
+          "offset": 3700
+        }
+      },
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "7. 新增：国际化字符集",
+          "position": {
+            "start": {
+              "line": 189,
+              "column": 4,
+              "offset": 3705
+            },
+            "end": {
+              "line": 189,
+              "column": 16,
+              "offset": 3717
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 189,
+          "column": 1,
+          "offset": 3702
+        },
+        "end": {
+          "line": 189,
+          "column": 16,
+          "offset": 3717
+        }
+      },
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "7.1 阿拉伯文",
+          "position": {
+            "start": {
+              "line": 191,
+              "column": 5,
+              "offset": 3723
+            },
+            "end": {
+              "line": 191,
+              "column": 13,
+              "offset": 3731
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 191,
+          "column": 1,
+          "offset": 3719
+        },
+        "end": {
+          "line": 191,
+          "column": 13,
+          "offset": 3731
+        }
+      },
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "مرحبا بالعالم! هذا اختبار للغة العربية.",
+          "position": {
+            "start": {
+              "line": 193,
+              "column": 1,
+              "offset": 3733
+            },
+            "end": {
+              "line": 193,
+              "column": 40,
+              "offset": 3772
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 193,
+          "column": 1,
+          "offset": 3733
+        },
+        "end": {
+          "line": 193,
+          "column": 40,
+          "offset": 3772
+        }
+      },
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "7.2 俄语西里尔字母",
+          "position": {
+            "start": {
+              "line": 195,
+              "column": 5,
+              "offset": 3778
+            },
+            "end": {
+              "line": 195,
+              "column": 16,
+              "offset": 3789
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 195,
+          "column": 1,
+          "offset": 3774
+        },
+        "end": {
+          "line": 195,
+          "column": 16,
+          "offset": 3789
+        }
+      },
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Привет, мир! Это тест для кириллицы.",
+          "position": {
+            "start": {
+              "line": 197,
+              "column": 1,
+              "offset": 3791
+            },
+            "end": {
+              "line": 197,
+              "column": 37,
+              "offset": 3827
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 197,
+          "column": 1,
+          "offset": 3791
+        },
+        "end": {
+          "line": 197,
+          "column": 37,
+          "offset": 3827
+        }
+      },
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "7.3 希腊字母",
+          "position": {
+            "start": {
+              "line": 199,
+              "column": 5,
+              "offset": 3833
+            },
+            "end": {
+              "line": 199,
+              "column": 13,
+              "offset": 3841
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 199,
+          "column": 1,
+          "offset": 3829
+        },
+        "end": {
+          "line": 199,
+          "column": 13,
+          "offset": 3841
+        }
+      },
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Γειά σου Κόσμε! Αυτή είναι μια δοκιμή για ελληνικά.",
+          "position": {
+            "start": {
+              "line": 201,
+              "column": 1,
+              "offset": 3843
+            },
+            "end": {
+              "line": 201,
+              "column": 52,
+              "offset": 3894
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 201,
+          "column": 1,
+          "offset": 3843
+        },
+        "end": {
+          "line": 201,
+          "column": 52,
+          "offset": 3894
+        }
+      },
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "7.4 希伯来文",
+          "position": {
+            "start": {
+              "line": 203,
+              "column": 5,
+              "offset": 3900
+            },
+            "end": {
+              "line": 203,
+              "column": 13,
+              "offset": 3908
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 203,
+          "column": 1,
+          "offset": 3896
+        },
+        "end": {
+          "line": 203,
+          "column": 13,
+          "offset": 3908
+        }
+      },
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "שלום עולם! זהו מבחן לעברית.",
+          "position": {
+            "start": {
+              "line": 205,
+              "column": 1,
+              "offset": 3910
+            },
+            "end": {
+              "line": 205,
+              "column": 28,
+              "offset": 3937
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 205,
+          "column": 1,
+          "offset": 3910
+        },
+        "end": {
+          "line": 205,
+          "column": 28,
+          "offset": 3937
+        }
+      },
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "7.5 泰文",
+          "position": {
+            "start": {
+              "line": 207,
+              "column": 5,
+              "offset": 3943
+            },
+            "end": {
+              "line": 207,
+              "column": 11,
+              "offset": 3949
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 207,
+          "column": 1,
+          "offset": 3939
+        },
+        "end": {
+          "line": 207,
+          "column": 11,
+          "offset": 3949
+        }
+      },
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "สวัสดีชาวโลก! นี่คือการทดสอบสำหรับภาษาไทย.",
+          "position": {
+            "start": {
+              "line": 209,
+              "column": 1,
+              "offset": 3951
+            },
+            "end": {
+              "line": 209,
+              "column": 43,
+              "offset": 3993
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 209,
+          "column": 1,
+          "offset": 3951
+        },
+        "end": {
+          "line": 209,
+          "column": 43,
+          "offset": 3993
+        }
+      },
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "7.6 梵文",
+          "position": {
+            "start": {
+              "line": 211,
+              "column": 5,
+              "offset": 3999
+            },
+            "end": {
+              "line": 211,
+              "column": 11,
+              "offset": 4005
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 211,
+          "column": 1,
+          "offset": 3995
+        },
+        "end": {
+          "line": 211,
+          "column": 11,
+          "offset": 4005
+        }
+      },
+      "data": {
+        "diff": "ins"
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "नमस्ते दुनिया! यह संस्कृत के लिए एक परीक्षण है.",
+          "position": {
+            "start": {
+              "line": 213,
+              "column": 1,
+              "offset": 4007
+            },
+            "end": {
+              "line": 213,
+              "column": 48,
+              "offset": 4054
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 213,
+          "column": 1,
+          "offset": 4007
+        },
+        "end": {
+          "line": 213,
+          "column": 48,
+          "offset": 4054
+        }
+      },
+      "data": {
+        "diff": "ins"
+      }
+    }
+  ]
+}
