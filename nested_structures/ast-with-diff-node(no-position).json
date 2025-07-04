@@ -10,7 +10,7 @@
           "value": "嵌套结构测试"
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -2528,7 +2528,7 @@
               "value": "第一级引用"
             },
             {
-              "type": "ins",
+              "type": "inlineIns",
               "children": [
                 {
                   "type": "text",
@@ -2562,7 +2562,7 @@
                       "value": "第三级引用"
                     },
                     {
-                      "type": "ins",
+                      "type": "inlineIns",
                       "children": [
                         {
                           "type": "text",
@@ -2596,7 +2596,7 @@
                               "value": "第五级引用"
                             },
                             {
-                              "type": "ins",
+                              "type": "inlineIns",
                               "children": [
                                 {
                                   "type": "text",
@@ -2674,7 +2674,7 @@
                   "value": "第二级引用 A"
                 },
                 {
-                  "type": "ins",
+                  "type": "inlineIns",
                   "children": [
                     {
                       "type": "text",
@@ -2739,7 +2739,7 @@
                       "value": "第三级引用 B"
                     },
                     {
-                      "type": "ins",
+                      "type": "inlineIns",
                       "children": [
                         {
                           "type": "text",
@@ -3893,7 +3893,7 @@
           "value": "这个文档包含了各种深度嵌套的结构，用于测试 Markdown 差异比较工具处理复杂嵌套内容的能力。"
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",

@@ -10,7 +10,7 @@
           "value": "混合内容测试"
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -3207,7 +3207,7 @@
               "value": "这是引用的第一行"
             },
             {
-              "type": "ins",
+              "type": "inlineIns",
               "children": [
                 {
                   "type": "text",
@@ -4005,7 +4005,7 @@
               "value": "这是引用的最后一行"
             },
             {
-              "type": "ins",
+              "type": "inlineIns",
               "children": [
                 {
                   "type": "text",
@@ -5248,7 +5248,7 @@
               "value": "这是第一级引用"
             },
             {
-              "type": "ins",
+              "type": "inlineIns",
               "children": [
                 {
                   "type": "text",
@@ -11762,7 +11762,7 @@
               "value": "这是一个包含表格的引用"
             },
             {
-              "type": "ins",
+              "type": "inlineIns",
               "children": [
                 {
                   "type": "text",
@@ -13327,7 +13327,7 @@
           "value": "这是普通的Markdown段落"
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -13406,7 +13406,7 @@
           "value": "这是另一个普通的Markdown段落"
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -13509,7 +13509,7 @@
           "value": "这个段落包含行内数学公式 $E = mc^2$ 和更多文本"
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -13523,7 +13523,7 @@
           "value": "。另一个公式 $F = ma$ 也在同一行。"
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -13588,7 +13588,7 @@
           "value": "下面是一个块级数学公式"
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -13656,7 +13656,7 @@
           "value": "公式后面的文本段落"
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",

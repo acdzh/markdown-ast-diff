@@ -10,7 +10,7 @@
           "value": "复杂 Markdown 文档示例"
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -75,7 +75,7 @@
           "value": "这是一个包含多种 Markdown 元素的复杂文档示例，用于测试差异比较功能。"
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -107,7 +107,7 @@
           "value": "2. 文本格式"
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -232,7 +232,7 @@
           }
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -242,7 +242,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -252,7 +252,7 @@
           ]
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "emphasis",
@@ -308,7 +308,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "emphasis",
@@ -368,7 +368,7 @@
           "value": "格式"
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -378,7 +378,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -388,7 +388,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "strong",
@@ -427,7 +427,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -449,7 +449,7 @@
           ]
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "inlineCode",
@@ -471,7 +471,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "inlineCode",
@@ -493,7 +493,7 @@
           ]
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -515,7 +515,7 @@
           ]
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "delete",
@@ -554,7 +554,7 @@
           ]
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -4225,7 +4225,7 @@
               "value": "这是一段"
             },
             {
-              "type": "ins",
+              "type": "inlineIns",
               "children": [
                 {
                   "type": "text",
@@ -4263,7 +4263,7 @@
                   "value": "这是嵌套引用"
                 },
                 {
-                  "type": "ins",
+                  "type": "inlineIns",
                   "children": [
                     {
                       "type": "text",

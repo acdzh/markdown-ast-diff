@@ -10,7 +10,7 @@
           "value": "文本格式化示例"
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -71,7 +71,7 @@
       "type": "paragraph",
       "children": [
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -81,7 +81,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -91,7 +91,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "strong",
@@ -130,7 +130,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -152,7 +152,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "strong",
@@ -191,7 +191,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -230,7 +230,7 @@
       "type": "paragraph",
       "children": [
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -240,7 +240,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -250,7 +250,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "emphasis",
@@ -289,7 +289,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -311,7 +311,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "emphasis",
@@ -350,7 +350,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -405,7 +405,7 @@
           }
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "strong",
@@ -444,7 +444,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "emphasis",
@@ -589,7 +589,7 @@
           }
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "emphasis",
@@ -628,7 +628,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "delete",
@@ -671,7 +671,7 @@
           "value": "文本"
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -681,7 +681,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -691,7 +691,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "delete",
@@ -730,7 +730,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -785,7 +785,7 @@
           }
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "emphasis",
@@ -841,7 +841,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "inlineCode",
@@ -863,7 +863,7 @@
           ]
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -1266,7 +1266,7 @@
           "value": "这"
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -1276,7 +1276,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -1286,7 +1286,7 @@
           ]
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "delete",
@@ -1325,7 +1325,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "footnoteReference",
@@ -1348,7 +1348,7 @@
           ]
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -1358,7 +1358,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -1368,7 +1368,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "footnoteReference",
@@ -1391,7 +1391,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -1590,7 +1590,7 @@
           "value": "这"
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -1600,7 +1600,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -1610,7 +1610,7 @@
           ]
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "inlineCode",
@@ -1632,7 +1632,7 @@
           ]
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",

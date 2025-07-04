@@ -10,7 +10,7 @@
           "value": "表格示例"
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",

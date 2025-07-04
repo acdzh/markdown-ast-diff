@@ -6,7 +6,7 @@
       "depth": 1,
       "children": [
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -42,7 +42,7 @@
           "value": "二级标题"
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -147,7 +147,7 @@
           "value": "这是一些普通文本内容"
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -257,7 +257,7 @@
           "value": "六级标题"
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",

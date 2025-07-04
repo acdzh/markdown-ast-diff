@@ -10,7 +10,7 @@
           "value": "空白处理测试"
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -142,7 +142,7 @@
           "value": "这是一个  "
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -156,7 +156,7 @@
           "value": "有些单词之间  "
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -170,7 +170,7 @@
           "value": "有"
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -184,7 +184,7 @@
           "value": "多"
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -198,7 +198,7 @@
           "value": "空格  "
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -267,7 +267,7 @@
           "value": "普通行，没有行首空格。\n这行有"
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -277,7 +277,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -291,7 +291,7 @@
           "value": "个行首空格。\n这行有"
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -301,7 +301,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -315,7 +315,7 @@
           "value": "个行首空格。\n这行有"
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -325,7 +325,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -339,7 +339,7 @@
           "value": "个行首空格。\n这行有"
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -349,7 +349,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -418,7 +418,7 @@
           "value": "这行没有行尾空格。\n这行有"
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -451,7 +451,7 @@
           "value": "这行有"
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -461,7 +461,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -494,7 +494,7 @@
           "value": "这行有"
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -504,7 +504,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -518,7 +518,7 @@
           "value": "个行尾空格。"
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "break",
@@ -539,7 +539,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -650,7 +650,7 @@
           "value": "这是第一段。"
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -664,7 +664,7 @@
           "value": "这是第二段。"
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -1033,7 +1033,7 @@
           "value": "普通行，没有缩进。\n这行使用一个制表符缩进。\n这行使用"
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -1043,7 +1043,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -1057,7 +1057,7 @@
           "value": "个制表符缩进。\n这行使用"
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -1067,7 +1067,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -1081,7 +1081,7 @@
           "value": "个制表符缩进。\n这行使用"
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -1091,7 +1091,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -1160,7 +1160,7 @@
           "value": "普通行，没有缩进。\n这行使用"
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -1170,7 +1170,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -1184,7 +1184,7 @@
           "value": "个空格和一个制表符。\n这行使用一个制表符和"
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -1194,7 +1194,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -1208,7 +1208,7 @@
           "value": "个空格。\n这行使用"
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -1218,7 +1218,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -1232,7 +1232,7 @@
           "value": "个空格、一个制表符和"
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -1242,7 +1242,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -1256,7 +1256,7 @@
           "value": "个空格。\n这行使用一个制表符、"
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -1266,7 +1266,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -7278,7 +7278,7 @@
               "value": "这是一个普通的引用。\n这是引用的第二行。"
             },
             {
-              "type": "del",
+              "type": "inlineDel",
               "children": [
                 {
                   "type": "text",
@@ -7399,7 +7399,7 @@
               "value": "这是一个普通的引用。\n这行在引用中有"
             },
             {
-              "type": "del",
+              "type": "inlineDel",
               "children": [
                 {
                   "type": "text",
@@ -7409,7 +7409,7 @@
               ]
             },
             {
-              "type": "ins",
+              "type": "inlineIns",
               "children": [
                 {
                   "type": "text",
@@ -7423,7 +7423,7 @@
               "value": "缩进。\n这行在引用中有更"
             },
             {
-              "type": "ins",
+              "type": "inlineIns",
               "children": [
                 {
                   "type": "text",
@@ -7746,7 +7746,7 @@
           "value": "这个文档包含了各种空白字符的使用情况，用于测试 Markdown 差异比较工具处理空白字符的能力。"
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",

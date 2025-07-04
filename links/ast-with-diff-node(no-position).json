@@ -10,7 +10,7 @@
           "value": "链接和图片示例"
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -39,7 +39,7 @@
           "value": "这是一个"
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "link",
@@ -56,7 +56,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "link",
@@ -86,7 +86,7 @@
           "value": "这是一个"
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "link",
@@ -103,7 +103,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "link",
@@ -145,7 +145,7 @@
           "referenceType": "full"
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -155,7 +155,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -165,7 +165,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "linkReference",
@@ -183,7 +183,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -247,7 +247,7 @@
       "type": "paragraph",
       "children": [
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "image",
@@ -259,7 +259,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "image",
@@ -276,7 +276,7 @@
       "type": "paragraph",
       "children": [
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "image",
@@ -288,7 +288,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "image",
@@ -605,7 +605,7 @@
       "type": "paragraph",
       "children": [
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -615,7 +615,7 @@
           ]
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "link",
@@ -632,7 +632,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "link",
@@ -651,7 +651,7 @@
           ]
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -661,7 +661,7 @@
           ]
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "image",
@@ -673,7 +673,7 @@
           ]
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",

@@ -10,7 +10,7 @@
           "value": "特殊字符测试"
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -109,7 +109,7 @@
           "value": "以下是常见的标点符号"
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -1350,7 +1350,7 @@
           "value": "以下是一些转义字符的示例"
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -2152,7 +2152,7 @@
           "value": "À Á Â Ã Ä Å Æ Ç È É Ê Ë Ì Í Î Ï Ð Ñ Ò Ó Ô Õ Ö × Ø Ù Ú Û Ü Ý Þ ß\nà á â ã ä å æ ç è é ê ë ì í î ï ð ñ ò ó ô õ ö ÷ ø ù ú û ü ý þ ÿ"
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -2217,7 +2217,7 @@
           "value": "± ÷ × ∑ ∏ √ ∞ ∫ ∮ ∇ ∂ ∆ ∩ ∪ ⊂ ⊃ ⊆ ⊇ ≠ ≡ ≤ ≥ ≈ ∝ ∧ ∨ ¬ ∀ ∃ ∈ ∉ ∋ ∅ ℵ"
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -2282,7 +2282,7 @@
           "value": "$ ¢ € £ ¥ ₹ ₽ ₩ ₱ ₿"
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -2347,7 +2347,7 @@
           "value": "← ↑ → ↓ ↔ ↕ ↖ ↗ ↘ ↙ ⇐ ⇑ ⇒ ⇓ ⇔ ⇕ ⇖ ⇗ ⇘ ⇙"
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -2361,7 +2361,7 @@
           "value": "\n△ ▲ ▴ ▵ ▶ ▷ ▸ ▹ ► ▻ ▼ ▽ ▾ ▿ ◀ ◁ ◂ ◃ ◄ ◅ ◆ ◇ ◈ ◉ ◊ ○ ◌ ◍ ◎ ●"
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -2426,7 +2426,7 @@
           "value": "😀 😁 😂 🤣 😃 😄 😅 😆 😉 😊 😋 😎 😍 😘 🥰 😗 😙 😚 ☺️ 🙂 🤗 🤩 🤔 🤨"
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -2491,7 +2491,7 @@
           "value": "你好，世界！こんにちは、世界！"
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -2522,7 +2522,7 @@
           "value": "汉字测试：中国、日本、韩国、台湾"
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -2553,7 +2553,7 @@
           "value": "日文测试：ひらがな、カタカナ、漢字"
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -2950,7 +2950,7 @@
           "value": "包含 & < > \" ' 的标题"
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -2982,7 +2982,7 @@
           "value": "包含 😀 🤔 👍 "
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -3014,7 +3014,7 @@
       "depth": 4,
       "children": [
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -3024,7 +3024,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -3038,7 +3038,7 @@
           "value": " "
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -3048,7 +3048,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -3418,7 +3418,7 @@
           "value": "4."
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -3428,7 +3428,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -3442,7 +3442,7 @@
           "value": " 特殊字符在"
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -3452,7 +3452,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -5679,7 +5679,7 @@
       "type": "paragraph",
       "children": [
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "image",
@@ -5703,7 +5703,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "link",
@@ -5947,7 +5947,7 @@
               "value": "这是包含特殊字符的引用"
             },
             {
-              "type": "ins",
+              "type": "inlineIns",
               "children": [
                 {
                   "type": "text",
@@ -5961,7 +5961,7 @@
               "value": "：& < > \" '"
             },
             {
-              "type": "ins",
+              "type": "inlineIns",
               "children": [
                 {
                   "type": "text",
@@ -5992,7 +5992,7 @@
               "value": "这是包含表情符号的引用：😀 🤔 👍"
             },
             {
-              "type": "ins",
+              "type": "inlineIns",
               "children": [
                 {
                   "type": "text",
@@ -6117,7 +6117,7 @@
           "value": "5."
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -6131,7 +6131,7 @@
           "value": " "
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -6141,7 +6141,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -6286,7 +6286,7 @@
       "type": "paragraph",
       "children": [
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -6296,7 +6296,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -6620,7 +6620,7 @@
           "value": "5."
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -6630,7 +6630,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -6644,7 +6644,7 @@
           "value": " "
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -6658,7 +6658,7 @@
           "value": "特殊字符"
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",

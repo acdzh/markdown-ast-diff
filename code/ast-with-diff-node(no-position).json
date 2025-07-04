@@ -10,7 +10,7 @@
           "value": "代码示例"
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",

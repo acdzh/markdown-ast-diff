@@ -10,7 +10,7 @@
           "value": "列表示例"
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",

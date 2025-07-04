@@ -10,7 +10,7 @@
           "value": "极端长文本测试"
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -48,7 +48,7 @@
           "value": "这是另一个长段落，包含中文内容。这是一个非常长的段落，用于测试工具处理大量文本的能力。这是一个非常长的段落，用于测试工具处理大量文本的能力。这"
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -62,7 +62,7 @@
           "value": "段"
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -76,7 +76,7 @@
           "value": "文本"
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -90,7 +90,7 @@
           "value": "的"
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -100,7 +100,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -135,7 +135,7 @@
       "type": "paragraph",
       "children": [
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -145,7 +145,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -159,7 +159,7 @@
           "value": "是一个"
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -169,7 +169,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -183,7 +183,7 @@
           "value": "长"
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -197,7 +197,7 @@
           "value": "的"
         },
         {
-          "type": "del",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
@@ -207,7 +207,7 @@
           ]
         },
         {
-          "type": "ins",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
@@ -3473,7 +3473,7 @@
               "value": "这是引用中的第二段，同样非常长"
             },
             {
-              "type": "del",
+              "type": "inlineDel",
               "children": [
                 {
                   "type": "text",
@@ -3487,7 +3487,7 @@
               "value": "，"
             },
             {
-              "type": "del",
+              "type": "inlineDel",
               "children": [
                 {
                   "type": "text",
@@ -3497,7 +3497,7 @@
               ]
             },
             {
-              "type": "ins",
+              "type": "inlineIns",
               "children": [
                 {
                   "type": "text",
@@ -3511,7 +3511,7 @@
               "value": "。这是引用中的第二段，同样非常长"
             },
             {
-              "type": "del",
+              "type": "inlineDel",
               "children": [
                 {
                   "type": "text",
@@ -3525,7 +3525,7 @@
               "value": "，"
             },
             {
-              "type": "del",
+              "type": "inlineDel",
               "children": [
                 {
                   "type": "text",
@@ -3535,7 +3535,7 @@
               ]
             },
             {
-              "type": "ins",
+              "type": "inlineIns",
               "children": [
                 {
                   "type": "text",
@@ -3549,7 +3549,7 @@
               "value": "。这是引用中的第二段，同样非常长"
             },
             {
-              "type": "ins",
+              "type": "inlineIns",
               "children": [
                 {
                   "type": "text",
@@ -3563,7 +3563,7 @@
               "value": "。这是引用中的第二段，同样非常长"
             },
             {
-              "type": "ins",
+              "type": "inlineIns",
               "children": [
                 {
                   "type": "text",
@@ -3577,7 +3577,7 @@
               "value": "。这是引用中的第二段，同样非常长"
             },
             {
-              "type": "ins",
+              "type": "inlineIns",
               "children": [
                 {
                   "type": "text",
@@ -3627,7 +3627,7 @@
                   "value": "嵌套引用的第二段"
                 },
                 {
-                  "type": "ins",
+                  "type": "inlineIns",
                   "children": [
                     {
                       "type": "text",
@@ -3641,7 +3641,7 @@
                   "value": "。嵌套引用的第二段"
                 },
                 {
-                  "type": "ins",
+                  "type": "inlineIns",
                   "children": [
                     {
                       "type": "text",
@@ -3655,7 +3655,7 @@
                   "value": "。嵌套引用的第二段"
                 },
                 {
-                  "type": "ins",
+                  "type": "inlineIns",
                   "children": [
                     {
                       "type": "text",
@@ -3669,7 +3669,7 @@
                   "value": "。嵌套引用的第二段"
                 },
                 {
-                  "type": "ins",
+                  "type": "inlineIns",
                   "children": [
                     {
                       "type": "text",
@@ -3683,7 +3683,7 @@
                   "value": "。嵌套引用的第二段"
                 },
                 {
-                  "type": "ins",
+                  "type": "inlineIns",
                   "children": [
                     {
                       "type": "text",
@@ -3697,7 +3697,7 @@
                   "value": "。嵌套引用的第二段"
                 },
                 {
-                  "type": "ins",
+                  "type": "inlineIns",
                   "children": [
                     {
                       "type": "text",
@@ -3711,7 +3711,7 @@
                   "value": "。嵌套引用的第二段"
                 },
                 {
-                  "type": "ins",
+                  "type": "inlineIns",
                   "children": [
                     {
                       "type": "text",
@@ -3725,7 +3725,7 @@
                   "value": "。"
                 },
                 {
-                  "type": "del",
+                  "type": "inlineDel",
                   "children": [
                     {
                       "type": "text",
