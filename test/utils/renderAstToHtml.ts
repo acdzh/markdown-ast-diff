@@ -1,5 +1,4 @@
 import type { Node } from '../../src/type';
-import { isInlineElement } from './node';
 
 /**
  * 将AST渲染为HTML文本
@@ -59,11 +58,11 @@ function prepareNodeForHtml(node) {
   switch (node.type) {
     case 'ins':
     case 'del':
-      if (node?.children?.some(child => !isInlineElement(child))) {
-        node.data.hProperties.class = 'diff-block';
-      } else {
-        node.data.hProperties.class = 'diff-inline';
-      }
+      node.data.hProperties.class = 'diff-block';
+      break;
+    case 'inlineIns':
+    case 'inlineDel':
+      node.data.hProperties.class = 'diff-inline';
       break;
     case 'heading':
       node.data.hProperties.class = `heading-${node.depth}`;
@@ -381,6 +380,12 @@ function nodeToHtml(node) {
       html = `<ins ${propsStr}>${childrenToHtml(node)}</ins>`;
       break;
     case 'del':
+      html = `<del ${propsStr}>${childrenToHtml(node)}</del>`;
+      break;
+    case 'inlineIns':
+      html = `<ins ${propsStr}>${childrenToHtml(node)}</ins>`;
+      break;
+    case 'inlineDel':
       html = `<del ${propsStr}>${childrenToHtml(node)}</del>`;
       break;
     case 'heading':

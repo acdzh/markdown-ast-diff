@@ -2,7 +2,6 @@ import remarkStringify from "remark-stringify";
 import { unified } from "unified";
 import { Node }from '../../src/type'; 
 import { visit } from "unist-util-visit";
-import { isInlineElement } from './node';
 import remarkGfm from 'remark-gfm'
 
 /**
@@ -43,33 +42,33 @@ export function renderAstToMarkdown(_ast: Node): string {
       return tree;
     })
     .use(remarkStringify, {
-    handlers: {
-      ins: (node: Node, _, context: any, info: any) => {
+      handlers: {
+        ins: (node: Node, _: any, context: any, info: any) => {
           const content = (node.children || [])
             .map(child => context.handle(child, node, context, info))
             .join('');
-
-            // 如果内容中包含代码块或其他块级元素，需要特殊处理
-          if (node?.children?.some(n => !isInlineElement(n))) {
-            return `{++++\n${content}\n++++}`;
-          } else {
-            return `{++++${content}++++}`;
-          }
+          return `{++++\n${content}\n++++}`;
         },
         del: (node: Node, _, context: any, info: any) => {
           const content = (node.children || [])
             .map(child => context.handle(child, node, context, info))
             .join('');
-
-            // 如果内容中包含代码块或其他块级元素，需要特殊处理
-          if (node?.children?.some(n => !isInlineElement(n))) {
-            return `{----\n${content}\n----}`;
-          } else {
-            return `{----${content}----}`;
-          }
-        }
-    }
-  });
+          return `{----\n${content}\n----}`;
+        },
+        inlineIns: (node: Node, _, context: any, info: any) => {
+          const content = (node.children || [])
+            .map(child => context.handle(child, node, context, info))
+            .join('');
+          return `{++++${content}++++}`;
+        },
+        inlineDel: (node: Node, _, context: any, info: any) => {
+          const content = (node.children || [])
+            .map(child => context.handle(child, node, context, info))
+            .join('');
+          return `{----${content}----}`;
+        },
+      }
+    });
   return processor.stringify(
     processor.runSync(ast)
   );

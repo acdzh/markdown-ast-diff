@@ -1,14 +1,43 @@
 import type { Node } from '../type';
 import { visit } from 'unist-util-visit';
-import { DiffType } from '../type';
-import { replaceChildNode } from './node';
+import { DiffNodeType, DiffType } from '../type';
+import { isInlineElement, replaceChildNode } from './node';
 import { u } from 'unist-builder';
 
+function diffTypeToDiffNodeType(diffType: DiffType, isInline?: boolean): DiffNodeType {
+  if (isInline) {
+    switch (diffType) {
+      case DiffType.Ins:
+        return DiffNodeType.InlineIns;
+      case DiffType.Del:
+        return DiffNodeType.InlineDel;
+    }
+  } else {
+    switch (diffType) {
+      case DiffType.Ins:
+        return DiffNodeType.Ins;
+      case DiffType.Del:
+        return DiffNodeType.Del;
+    }
+  }
+}
+
+function diffNodeTypeToDiffType(diffNodeType: DiffNodeType): DiffType {
+  switch (diffNodeType) {
+    case DiffNodeType.Ins:
+    case DiffNodeType.InlineIns:
+      return DiffType.Ins;
+    case DiffNodeType.Del:
+    case DiffNodeType.InlineDel:
+      return DiffType.Del;
+  }
+}
 
 
 /**
  * 
- * 将带有 data.diff 属性的节点转换为 ins 或 del 包裹的普通节点
+ * 将带有 data.diff 属性的节点转换为 ins(inlineIns) 或 del(inlineDel) 包裹的普通节点
+ * （listItem 不会被处理）
  * 
  * 示例：
  * 原始节点：
@@ -47,7 +76,9 @@ export function transformAstWithDiffDataToAstWithDiffNode(ast: Node): Node {
 
       const diff = node.data.diff as DiffType;
       delete node.data.diff;
-      replaceChildNode(parent, node, u(diff, [node]))
+
+      const isInline = isInlineElement(node);
+      replaceChildNode(parent, node, u(diffTypeToDiffNodeType(diff, isInline), [node]))
 
       return true;
   });
@@ -84,16 +115,17 @@ export function transformAstWithDiffDataToAstWithDiffNode(ast: Node): Node {
  * ```
  */
 export function transformAstWithDiffNodeToAstWithDiffData(ast: Node): Node {
-  visit(ast, [DiffType.Ins, DiffType.Del], (node: Node, _?: number, parent?: Node) => {
+  visit(ast, [DiffNodeType.Ins, DiffNodeType.Del, DiffNodeType.InlineIns, DiffNodeType.InlineDel], (node: Node, _?: number, parent?: Node) => {
     if (!node.children) {
       return true;
     }
+    const diff = diffNodeTypeToDiffType(node.type as DiffNodeType);
     node['children'].forEach((child: Node) => {
       if (child.type !== DiffType.Del && child.type === DiffType.Ins) {
         if (!child.data) {
           child.data = {};
         }
-        child.data.diff = node.type as DiffType;
+        child.data.diff = diff;
       }
     });
     replaceChildNode(parent, node, node['children']);
