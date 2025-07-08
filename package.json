@@ -1,6 +1,6 @@
 {
   "name": "markdown-ast-diff",
-  "version": "0.0.3-chore-test-25070803",
+  "version": "0.1.0",
   "description": "使用 AST 比较两个 Markdown 文档并生成差异结果的 AST",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
