@@ -1,72 +1,76 @@
-import React, { useState, useEffect, ChangeEvent } from 'react'
-import { testcases } from './testcases'
-import { Testcase } from './types'
-import * as diffLib from 'diff'
-import './App.css'
+import React, { useState, useEffect, ChangeEvent } from 'react';
+import { testcases } from './testcases';
+import { Testcase } from './types';
+import * as diffLib from 'diff';
+import './App.css';
 
 // 导入diff相关函数
-import { diffMarkdown } from '../utils/diff'
-import { renderAstToMarkdown } from '../utils/renderAstToMarkdown'
-import { renderAstToHtml } from '../utils/renderAstToHtml'
+import { diffMarkdownAst, transformAstWithDiffDataToAstWithDiffNode } from '../../src/index';
+import { renderAstToMarkdown } from '../utils/renderAstToMarkdown';
+import { renderAstToHtml } from '../utils/renderAstToHtml';
 
 // 导入子组件
-import TestcaseSelector from './components/TestcaseSelector'
-import MarkdownEditor from './components/MarkdownEditor'
-import TextDiffViewer from './components/TextDiffViewer'
-import AstDiffViewer from './components/AstDiffViewer'
-import HtmlPreview from './components/HtmlPreview'
-import AstJsonViewer from './components/AstJsonViewer'
+import TestcaseSelector from './components/TestcaseSelector';
+import MarkdownEditor from './components/MarkdownEditor';
+import TextDiffViewer from './components/TextDiffViewer';
+import AstDiffViewer from './components/AstDiffViewer';
+import HtmlPreview from './components/HtmlPreview';
+import AstJsonViewer from './components/AstJsonViewer';
+import { markdownToAst } from '../utils/transform';
 
 function App(): JSX.Element {
-  const [selectedTestcase, setSelectedTestcase] = useState<string>('simple')
-  const [oldMarkdown, setOldMarkdown] = useState<string>('')
-  const [newMarkdown, setNewMarkdown] = useState<string>('')
-  const [diffResult, setDiffResult] = useState<diffLib.Change[]>([])
-  const [diffMarkdownText, setDiffMarkdownText] = useState<string>('')
-  const [diffHtmlContent, setDiffHtmlContent] = useState<string>('')
-  const [diffAst, setDiffAst] = useState<any>(null)
+  const [selectedTestcase, setSelectedTestcase] = useState<string>('formatting');
+  const [oldMarkdown, setOldMarkdown] = useState<string>('');
+  const [newMarkdown, setNewMarkdown] = useState<string>('');
+  const [diffResult, setDiffResult] = useState<diffLib.Change[]>([]);
+  const [diffMarkdownText, setDiffMarkdownText] = useState<string>('');
+  const [diffHtmlContent, setDiffHtmlContent] = useState<string>('');
+  const [diffAst, setDiffAst] = useState<any>(null);
 
   useEffect(() => {
     // 根据选择的测试用例加载对应的Markdown内容
-    const testcase = testcases.find((tc: Testcase) => tc.name === selectedTestcase)
+    const testcase = testcases.find((tc: Testcase) => tc.name === selectedTestcase);
     if (testcase) {
-      setOldMarkdown(testcase.oldMarkdown)
-      setNewMarkdown(testcase.newMarkdown)
+      setOldMarkdown(testcase.oldMarkdown);
+      setNewMarkdown(testcase.newMarkdown);
       
       // 计算差异
-      updateDiff(testcase.oldMarkdown, testcase.newMarkdown)
+      updateDiff(testcase.oldMarkdown, testcase.newMarkdown);
     }
-  }, [selectedTestcase])
+  }, [selectedTestcase]);
 
   const updateDiff = (oldText: string, newText: string): void => {
-    const diff = diffLib.diffWords(oldText, newText)
-    setDiffResult(diff)
+    const diff = diffLib.diffWords(oldText, newText);
+    setDiffResult(diff);
 
     // 更新AST差异
-    const diffAst = diffMarkdown(oldText, newText, { enableDiffNode: true })
-    const diffMarkdownText = renderAstToMarkdown(diffAst)
-    const diffHtml = renderAstToHtml(diffAst)
+    const diffAst = transformAstWithDiffDataToAstWithDiffNode(diffMarkdownAst(
+      markdownToAst(oldText),
+      markdownToAst(newText),
+    ));
+    const diffMarkdownText = renderAstToMarkdown(diffAst);
+    const diffHtml = renderAstToHtml(diffAst);
     
-    setDiffAst(diffAst)
-    setDiffMarkdownText(diffMarkdownText)
-    setDiffHtmlContent(diffHtml)
-  }
+    setDiffAst(diffAst);
+    setDiffMarkdownText(diffMarkdownText);
+    setDiffHtmlContent(diffHtml);
+  };
 
   const handleTestcaseChange = (testcaseName: string): void => {
-    setSelectedTestcase(testcaseName)
-  }
+    setSelectedTestcase(testcaseName);
+  };
 
   const handleOldMarkdownChange = (e: ChangeEvent<HTMLTextAreaElement>): void => {
-    const newValue = e.target.value
-    setOldMarkdown(newValue)
-    updateDiff(newValue, newMarkdown)
-  }
+    const newValue = e.target.value;
+    setOldMarkdown(newValue);
+    updateDiff(newValue, newMarkdown);
+  };
 
   const handleNewMarkdownChange = (e: ChangeEvent<HTMLTextAreaElement>): void => {
-    const newValue = e.target.value
-    setNewMarkdown(newValue)
-    updateDiff(oldMarkdown, newValue)
-  }
+    const newValue = e.target.value;
+    setNewMarkdown(newValue);
+    updateDiff(oldMarkdown, newValue);
+  };
 
   return (
     <div className="container">
@@ -123,7 +127,7 @@ function App(): JSX.Element {
         <p>Markdown Diff Viewer - 高效比较Markdown文档差异的工具</p>
       </footer>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

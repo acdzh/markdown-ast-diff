@@ -94,4 +94,4 @@ export const testcases: Testcase[] = [
     oldMarkdown: defaultOldMarkdown_mixed_content,
     newMarkdown: defaultNewMarkdown_mixed_content,
   }
-]
+];

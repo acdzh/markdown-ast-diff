@@ -16,7 +16,7 @@ const AstDiffViewer: React.FC<AstDiffViewerProps> = ({ diffMarkdownText }) => {
   
   const renderDiffContent = () => {
     const text = decodeHtmlEntities(diffMarkdownText);
-    let segments = [];
+    const segments = [];
     let currentIndex = 0;
     
     // 查找所有的添加和删除标记

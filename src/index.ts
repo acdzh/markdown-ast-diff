@@ -1,2 +1,6 @@
-export { diffMarkdownAst } from './utils/diff';
-export { remarkMarkdownDiff, REMARK_DIFF_SEPARATOR } from './remarkMarkdownDiff';
+export { diffMarkdownAst } from './diff';
+export {
+  REMARK_DIFF_SEPARATOR, remarkMarkdownDiff
+} from './remarkMarkdownDiff';
+
+export { transformAstWithDiffDataToAstWithDiffNode, transformAstWithDiffNodeToAstWithDiffData } from './utils/transform';

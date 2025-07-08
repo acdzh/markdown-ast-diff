@@ -1,6 +1,6 @@
 {
   "name": "markdown-ast-diff",
-  "version": "0.0.3",
+  "version": "0.0.3-chore-test-25070803",
   "description": "使用 AST 比较两个 Markdown 文档并生成差异结果的 AST",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -22,16 +22,20 @@
     "test": "tsx test/node/index.ts",
     "dev": "vite ./test/browser",
     "build": "rollup -c rollup.config.mjs",
-    "build:preview": "vite build ./test/browser --outDir output"
+    "build:preview": "vite build ./test/browser --outDir output",
+    "lint": "eslint --ext .ts,.tsx src/ test/",
+    "lint:fix": "eslint --ext .ts,.tsx src/ test/ --fix"
   },
   "keywords": [
     "markdown",
     "diff",
-    "ast"
+    "ast",
+    "lowdown"
   ],
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@datastructures-js/priority-queue": "^6.3.3",
     "diff": "^8.0.2",
     "unist-builder": "^4.0.0",
     "unist-util-visit": "^5.0.0"
@@ -44,7 +48,10 @@
     "@types/node": "^20.10.0",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
     "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.57.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "remark-gfm": "^4.0.1",

@@ -1,8 +1,8 @@
-import remarkStringify from "remark-stringify";
-import { unified } from "unified";
+import remarkStringify from 'remark-stringify';
+import { unified } from 'unified';
 import { Node }from '../../src/type'; 
-import { visit } from "unist-util-visit";
-import remarkGfm from 'remark-gfm'
+import { visit } from 'unist-util-visit';
+import remarkGfm from 'remark-gfm';
 
 /**
  * 将AST转换回Markdown文本
@@ -16,17 +16,17 @@ export function renderAstToMarkdown(_ast: Node): string {
     .use(() => (tree: Node) => {
       visit(tree, 'listItem', (node: Node) => {
         if (node?.data?.diff) {
-          const marker = node?.data?.diff === 'ins' ? '{++listItem++}' : '{--listItem--}'
+          const marker = node?.data?.diff === 'ins' ? '{++listItem++}' : '{--listItem--}';
           if (!node.children) {
             node.children = [];
           }
-          const firstChild = node.children[0];
+          const firstChild = node.children?.[0];
           if (firstChild?.type === 'paragraph') {
             if (firstChild.children) {
               firstChild.children.unshift({
                 type: 'text',
                 value: marker
-              })
+              });
             }
           } else {
             node.children.unshift({
@@ -35,7 +35,7 @@ export function renderAstToMarkdown(_ast: Node): string {
                 type: 'text',
                 value: marker
               }]
-            })
+            });
           }
         }
       });

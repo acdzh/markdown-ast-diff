@@ -1,4 +1,4 @@
-import type { Node } from '../../src/type';
+import type { Node } from 'unist';
 
 /**
  * 将AST渲染为HTML文本
@@ -56,86 +56,88 @@ function prepareNodeForHtml(node) {
   
   // 根据节点类型添加特定的HTML属性
   switch (node.type) {
-    case 'ins':
-    case 'del':
-      node.data.hProperties.class = 'diff-block';
-      break;
-    case 'inlineIns':
-    case 'inlineDel':
-      node.data.hProperties.class = 'diff-inline';
-      break;
-    case 'heading':
-      node.data.hProperties.class = `heading-${node.depth}`;
-      break;
-    case 'list':
-      node.data.hProperties.class = node.ordered ? 'ordered-list' : 'unordered-list';
-      let index = 1;
-      node.children.forEach(child => {
-        if (child.type === 'listItem') {
-          if (!child.data) child.data = {};
-          if (!child.data.hProperties) child.data.hProperties = {};
-          child.data.hProperties.value = index;
-          if (child.data.diff !== 'del') {
-            index++;
+          case 'ins':
+          case 'del':
+            node.data.hProperties.class = 'diff-block';
+            break;
+          case 'inlineIns':
+          case 'inlineDel':
+            node.data.hProperties.class = 'diff-inline';
+            break;
+          case 'heading':
+            node.data.hProperties.class = `heading-${node.depth}`;
+            break;
+          case 'list':
+          {
+            node.data.hProperties.class = node.ordered ? 'ordered-list' : 'unordered-list';
+            let index = 1;
+            node.children.forEach(child => {
+              if (child.type === 'listItem') {
+                if (!child.data) child.data = {};
+                if (!child.data.hProperties) child.data.hProperties = {};
+                child.data.hProperties.value = index;
+                if (child.data.diff !== 'del') {
+                  index++;
+                }
+              }
+            });
+            break;
           }
-        }
-      })
-      break;
-    case 'listItem':
-      node.data.hProperties.class = 'list-item';
-      // 为 listItem 添加 diff 相关的类，以便特殊处理样式
-      if (node.data && node.data.diff) {
-        node.data.hProperties.class += ` list-item-${node.data.diff}`;
-      }
-      break;
-    case 'paragraph':
-      node.data.hProperties.class = 'paragraph';
-      break;
-    case 'text':
-      // 为文本节点添加默认的 class
-      node.data.hProperties.class = 'text';
-      break;
-    case 'strong':
-      node.data.hProperties.class = 'strong';
-      break;
-    case 'emphasis':
-      node.data.hProperties.class = 'emphasis';
-      break;
-    case 'delete':
-      node.data.hProperties.class = 'delete';
-      break;
-    case 'code':
-      node.data.hProperties.class = 'code';
-      if (node.lang) {
-        node.data.hProperties['data-language'] = node.lang;
-      }
-      break;
-    case 'link':
-      node.data.hProperties.href = node.url;
-      node.data.hProperties.title = node.title;
-      break;
-    case 'image':
-      node.data.hProperties.src = node.url;
-      node.data.hProperties.alt = node.alt;
-      node.data.hProperties.title = node.title;
-      break;
-    case 'table':
-      node.data.hProperties.class = 'markdown-table';
-      break;
-    case 'tableRow':
-      node.data.hProperties.class = 'table-row';
-      break;
-    case 'tableCell':
-      node.data.hProperties.class = 'table-cell';
-      // 处理表头单元格
-      if (node.isHeader) {
-        node.data.hProperties.class += ' table-header-cell';
-      }
-      // 处理对齐方式
-      if (node.align) {
-        node.data.hProperties.class += ` align-${node.align}`;
-      }
-      break;
+          case 'listItem':
+            node.data.hProperties.class = 'list-item';
+            // 为 listItem 添加 diff 相关的类，以便特殊处理样式
+            if (node.data && node.data.diff) {
+              node.data.hProperties.class += ` list-item-${node.data.diff}`;
+            }
+            break;
+          case 'paragraph':
+            node.data.hProperties.class = 'paragraph';
+            break;
+          case 'text':
+            // 为文本节点添加默认的 class
+            node.data.hProperties.class = 'text';
+            break;
+          case 'strong':
+            node.data.hProperties.class = 'strong';
+            break;
+          case 'emphasis':
+            node.data.hProperties.class = 'emphasis';
+            break;
+          case 'delete':
+            node.data.hProperties.class = 'delete';
+            break;
+          case 'code':
+            node.data.hProperties.class = 'code';
+            if (node.lang) {
+              node.data.hProperties['data-language'] = node.lang;
+            }
+            break;
+          case 'link':
+            node.data.hProperties.href = node.url;
+            node.data.hProperties.title = node.title;
+            break;
+          case 'image':
+            node.data.hProperties.src = node.url;
+            node.data.hProperties.alt = node.alt;
+            node.data.hProperties.title = node.title;
+            break;
+          case 'table':
+            node.data.hProperties.class = 'markdown-table';
+            break;
+          case 'tableRow':
+            node.data.hProperties.class = 'table-row';
+            break;
+          case 'tableCell':
+            node.data.hProperties.class = 'table-cell';
+            // 处理表头单元格
+            if (node.isHeader) {
+              node.data.hProperties.class += ' table-header-cell';
+            }
+            // 处理对齐方式
+            if (node.align) {
+              node.data.hProperties.class += ` align-${node.align}`;
+            }
+            break;
   }
 }
 
@@ -376,85 +378,90 @@ function nodeToHtml(node) {
   let html = '';
   
   switch (node.type) {
-    case 'ins': 
-      html = `<ins ${propsStr}>${childrenToHtml(node)}</ins>`;
-      break;
-    case 'del':
-      html = `<del ${propsStr}>${childrenToHtml(node)}</del>`;
-      break;
-    case 'inlineIns':
-      html = `<ins ${propsStr}>${childrenToHtml(node)}</ins>`;
-      break;
-    case 'inlineDel':
-      html = `<del ${propsStr}>${childrenToHtml(node)}</del>`;
-      break;
-    case 'heading':
-      html = `<h${node.depth} ${propsStr}>${childrenToHtml(node)}</h${node.depth}>`;
-      break;
-    case 'paragraph':
-      html = `<p ${propsStr}>${childrenToHtml(node)}</p>`;
-      break;
-    case 'text':
-      // 将文本节点渲染为 span 元素，以便应用样式
-      html = `<span ${propsStr}>${escapeHtml(node.value)}</span>`;
-      break;
-    case 'strong':
-      html = `<strong ${propsStr}>${childrenToHtml(node)}</strong>`;
-      break;
-    case 'emphasis':
-      html = `<em ${propsStr}>${childrenToHtml(node)}</em>`;
-      break;
-    case 'delete':
-      html = `<del ${propsStr}>${childrenToHtml(node)}</del>`;
-      break;
-    case 'link':
-      html = `<a ${propsStr}>${childrenToHtml(node)}</a>`;
-      break;
-    case 'image':
-      html = `<img ${propsStr} />`;
-      break;
-    case 'list':
-      const listTag = node.ordered ? 'ol' : 'ul';
-      html = `<${listTag} ${propsStr}>${childrenToHtml(node)}</${listTag}>`;
-      break;
-    case 'listItem':
-      html = `<li ${propsStr}>${childrenToHtml(node)}</li>`;
-      break;
-    case 'code':
-      if (node.lang) {
-        html = `<pre ${propsStr}><code>${escapeHtml(node.value)}</code></pre>`;
-      } else {
-        html = `<code ${propsStr}>${escapeHtml(node.value)}</code>`;
-      }
-      break;
-    case 'inlineCode':
-      html = `<code ${propsStr}>${escapeHtml(node.value)}</code>`;
-      break;
-    case 'blockquote':
-      html = `<blockquote ${propsStr}>${childrenToHtml(node)}</blockquote>`;
-      break;
-    case 'thematicBreak':
-      html = `<hr ${propsStr} />`;
-      break;
-    case 'html':
-      // 原始HTML直接传递
-      html = `<div ${propsStr}>${node.value}</div>`
-      break;
-    // 表格相关节点处理
-    case 'table':
-      html = `<table ${propsStr}>${childrenToHtml(node)}</table>`;
-      break;
-    case 'tableRow':
-      html = `<tr ${propsStr}>${childrenToHtml(node)}</tr>`;
-      break;
-    case 'tableCell':
-      // 根据是否为表头选择使用 th 或 td
-      const cellTag = node.isHeader ? 'th' : 'td';
-      html = `<${cellTag} ${propsStr}>${childrenToHtml(node)}</${cellTag}>`;
-      break;
-    default:
-      // 对于未知类型，尝试处理子节点
-      html = childrenToHtml(node);
+          case 'ins': 
+            html = `<ins ${propsStr}>${childrenToHtml(node)}</ins>`;
+            break;
+          case 'del':
+            html = `<del ${propsStr}>${childrenToHtml(node)}</del>`;
+            break;
+          case 'inlineIns':
+            html = `<ins ${propsStr}>${childrenToHtml(node)}</ins>`;
+            break;
+          case 'inlineDel':
+            html = `<del ${propsStr}>${childrenToHtml(node)}</del>`;
+            break;
+          case 'heading':
+            html = `<h${node.depth} ${propsStr}>${childrenToHtml(node)}</h${node.depth}>`;
+            break;
+          case 'paragraph':
+            html = `<p ${propsStr}>${childrenToHtml(node)}</p>`;
+            break;
+          case 'text':
+            // 将文本节点渲染为 span 元素，以便应用样式
+            html = escapeHtml(node.value);
+            break;
+          case 'strong':
+            html = `<strong ${propsStr}>${childrenToHtml(node)}</strong>`;
+            break;
+          case 'emphasis':
+            html = `<em ${propsStr}>${childrenToHtml(node)}</em>`;
+            break;
+          case 'delete':
+            html = `<del ${propsStr}>${childrenToHtml(node)}</del>`;
+            break;
+          case 'link':
+            html = `<a ${propsStr}>${childrenToHtml(node)}</a>`;
+            break;
+          case 'image':
+            html = `<img ${propsStr} />`;
+            break;
+          case 'list':
+          {
+            const listTag = node.ordered ? 'ol' : 'ul';
+            html = `<${listTag} ${propsStr}>${childrenToHtml(node)}</${listTag}>`;
+            break;
+          }
+          case 'listItem':
+            html = `<li ${propsStr}>${childrenToHtml(node)}</li>`;
+            break;
+          case 'code':
+            if (node.lang) {
+              html = `<pre ${propsStr}><code>${escapeHtml(node.value)}</code></pre>`;
+            } else {
+              html = `<code ${propsStr}>${escapeHtml(node.value)}</code>`;
+            }
+            break;
+          case 'inlineCode':
+            html = `<code ${propsStr}>${escapeHtml(node.value)}</code>`;
+            break;
+          case 'blockquote':
+            html = `<blockquote ${propsStr}>${childrenToHtml(node)}</blockquote>`;
+            break;
+          case 'thematicBreak':
+            html = `<hr ${propsStr} />`;
+            break;
+          case 'html':
+            // 原始HTML直接传递
+            html = `<div ${propsStr}>${node.value}</div>`;
+            break;
+            // 表格相关节点处理
+          case 'table':
+            html = `<table ${propsStr}>${childrenToHtml(node)}</table>`;
+            break;
+          case 'tableRow':
+            html = `<tr ${propsStr}>${childrenToHtml(node)}</tr>`;
+            break;
+          case 'tableCell':
+          {
+            // 根据是否为表头选择使用 th 或 td
+            const cellTag = node.isHeader ? 'th' : 'td';
+            html = `<${cellTag} ${propsStr}>${childrenToHtml(node)}</${cellTag}>`;
+            break;
+          }
+          default:
+            console.warn(`[markdown-ast-diff] renderAstToHtml: unhandled node type ${node.type}`);
+            // 对于未知类型，尝试处理子节点
+            html = childrenToHtml(node);
   }
   
   return html;
