@@ -1,0 +1,265 @@
+<html><head>
+    <style>
+      /* 基本样式 */
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      
+      /* 标题样式 */
+      h1, h2, h3, h4, h5, h6 {
+        margin-top: 1.5em;
+        margin-bottom: 0.5em;
+        font-weight: 600;
+        line-height: 1.25;
+      }
+      h1 { font-size: 2em; border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; }
+      h2 { font-size: 1.5em; border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; }
+      h3 { font-size: 1.25em; }
+      h4 { font-size: 1em; }
+      h5 { font-size: 0.875em; }
+      h6 { font-size: 0.85em; color: #6a737d; }
+      
+      /* 段落样式 */
+      p {
+        margin-top: 0;
+        margin-bottom: 16px;
+      }
+      
+      /* 链接样式 */
+      a {
+        color: #0366d6;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      
+      /* 列表样式 */
+      ul, ol {
+        padding-left: 2em;
+        margin-top: 0;
+        margin-bottom: 16px;
+      }
+      li {
+        margin-bottom: 0.25em;
+      }
+      
+      /* 代码样式 */
+      code {
+        font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+        padding: 0.2em 0.4em;
+        margin: 0;
+        font-size: 85%;
+        background-color: rgba(27, 31, 35, 0.05);
+        border-radius: 3px;
+      }
+      pre {
+        font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+        padding: 16px;
+        overflow: auto;
+        font-size: 85%;
+        line-height: 1.45;
+        background-color: #f6f8fa;
+        border-radius: 3px;
+        margin-top: 0;
+        margin-bottom: 16px;
+      }
+      pre code {
+        padding: 0;
+        margin: 0;
+        background-color: transparent;
+        border: 0;
+      }
+      
+      /* 引用样式 */
+      blockquote {
+        padding: 0 1em;
+        color: #6a737d;
+        border-left: 0.25em solid #dfe2e5;
+        margin: 0 0 16px 0;
+      }
+      
+      /* 表格样式 */
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 16px;
+        display: block;
+        overflow-x: auto;
+      }
+      table th, table td {
+        padding: 6px 13px;
+        border: 1px solid #dfe2e5;
+      }
+      table tr {
+        background-color: #fff;
+        border-top: 1px solid #c6cbd1;
+      }
+      table tr:nth-child(2n) {
+        background-color: #f6f8fa;
+      }
+      table th {
+        font-weight: 600;
+        background-color: #f6f8fa;
+      }
+      .align-left {
+        text-align: left;
+      }
+      .align-center {
+        text-align: center;
+      }
+      .align-right {
+        text-align: right;
+      }
+      
+      /* 水平线样式 */
+      hr {
+        height: 0.25em;
+        padding: 0;
+        margin: 24px 0;
+        background-color: #e1e4e8;
+        border: 0;
+      }
+      
+      /* 差异标记样式 */
+      ins {
+        background-color: #e6ffec;
+        color: #24292e;
+        text-decoration: none;
+        border-radius: 2px;
+        padding: 0 2px;
+      }
+      
+      del {
+        background-color: #ffebe9;
+        color: #24292e;
+        text-decoration: line-through;
+        border-radius: 2px;
+        padding: 0 2px;
+      }
+
+      ins.diff-block, del.diff-block {
+        display: block;
+        padding-left: 10px;
+        border-left-width: 3px;
+        border-left-style: solid;
+      }
+      
+      ins.diff-block {
+        border-left-color: #2cbe4e;
+      }
+      
+      del.diff-block {
+        border-left-color: #cb2431;
+      }
+
+      ins > hr, ins > pre.code {
+        background-color: #e6ffec;
+      }
+
+      del > hr, del > pre.code {
+        background-color: #ffebe9;
+      }
+      
+      /* 列表项差异样式 */
+      li.list-item-ins, li[data-diff="ins"] {
+        background-color: #e6ffec;
+        border-radius: 2px;
+      }
+      
+      li.list-item-del, li[data-diff="del"] {
+        background-color: #ffebe9;
+        border-radius: 2px;
+        text-decoration: line-through;
+      }
+    </style>
+  </head><body><div class="markdown-content"><h1 class="heading-1">极端长文本测试</h1><h2 class="heading-2">1. 长段落</h2><p class="paragraph">这是一个非常长的段落，用于测试工具处理大量文本的能力。Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl.</p><p class="paragraph">这是另一个长段落，包含中文内容。这是一个非常长的段落，用于测试工具处理大量文本的能力。这是一个非常长的段落，用于测试工具处理大量文本的能力。这是一个非常长的段落，用于测试工具处理大量文本的能力。这是一个非常长的段落，用于测试工具处理大量文本的能力。这是一个非常长的段落，用于测试工具处理大量文本的能力。这是一个非常长的段落，用于测试工具处理大量文本的能力。这是一个非常长的段落，用于测试工具处理大量文本的能力。这是一个非常长的段落，用于测试工具处理大量文本的能力。这是一个非常长的段落，用于测试工具处理大量文本的能力。这是一个非常长的段落，用于测试工具处理大量文本的能力。</p><h2 class="heading-2">2. 长列表</h2><p class="paragraph">以下是一个非常长的列表：</p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">列表项 1：这是一个非常长的列表项，包含大量文本内容。这是一个非常长的列表项，包含大量文本内容。这是一个非常长的列表项，包含大量文本内容。</p></li><li value="2" class="list-item"><p class="paragraph">列表项 2：这是一个非常长的列表项，包含大量文本内容。这是一个非常长的列表项，包含大量文本内容。这是一个非常长的列表项，包含大量文本内容。</p></li><li value="3" class="list-item"><p class="paragraph">列表项 3：这是一个非常长的列表项，包含大量文本内容。这是一个非常长的列表项，包含大量文本内容。这是一个非常长的列表项，包含大量文本内容。</p></li><li value="4" class="list-item"><p class="paragraph">列表项 4：这是一个非常长的列表项，包含大量文本内容。这是一个非常长的列表项，包含大量文本内容。这是一个非常长的列表项，包含大量文本内容。</p></li><li value="5" class="list-item"><p class="paragraph">列表项 5：这是一个非常长的列表项，包含大量文本内容。这是一个非常长的列表项，包含大量文本内容。这是一个非常长的列表项，包含大量文本内容。</p></li><li value="6" class="list-item"><p class="paragraph">列表项 6：这是一个非常长的列表项，包含大量文本内容。这是一个非常长的列表项，包含大量文本内容。这是一个非常长的列表项，包含大量文本内容。</p></li><li value="7" class="list-item"><p class="paragraph">列表项 7：这是一个非常长的列表项，包含大量文本内容。这是一个非常长的列表项，包含大量文本内容。这是一个非常长的列表项，包含大量文本内容。</p></li><li value="8" class="list-item"><p class="paragraph">列表项 8：这是一个非常长的列表项，包含大量文本内容。这是一个非常长的列表项，包含大量文本内容。这是一个非常长的列表项，包含大量文本内容。</p></li><li value="9" class="list-item"><p class="paragraph">列表项 9：这是一个非常长的列表项，包含大量文本内容。这是一个非常长的列表项，包含大量文本内容。这是一个非常长的列表项，包含大量文本内容。</p></li><li value="10" class="list-item"><p class="paragraph">列表项 10：这是一个非常长的列表项，包含大量文本内容。这是一个非常长的列表项，包含大量文本内容。这是一个非常长的列表项，包含大量文本内容。</p></li></ul><h2 class="heading-2">3. 长代码块</h2><p class="paragraph">以下是一个非常长的代码块：</p><pre class="code" data-language="javascript"><code>// 这是一个非常长的代码块
+function processLargeData(data) {
+  // 初始化结果数组
+  const results = [];
+  
+  // 处理每一项数据
+  for (let i = 0; i &lt; data.length; i++) {
+    // 复杂的数据处理逻辑
+    const item = data[i];
+    const processedItem = {
+      id: item.id,
+      name: item.name,
+      value: item.value * 2,
+      category: item.category,
+      tags: item.tags.filter(tag =&gt; tag.length &gt; 3),
+      metadata: {
+        createdAt: item.createdAt,
+        updatedAt: new Date().toISOString(),
+        version: item.version + 1,
+        status: item.status === &#39;active&#39; ? &#39;processed&#39; : &#39;skipped&#39;,
+        processingTime: Date.now() - new Date(item.createdAt).getTime(),
+        processingSteps: [
+          &#39;validation&#39;,
+          &#39;transformation&#39;,
+          &#39;enrichment&#39;,
+          &#39;categorization&#39;,
+          &#39;finalization&#39;
+        ]
+      }
+    };
+    
+    // 添加到结果数组
+    results.push(processedItem);
+    
+    // 记录处理进度
+    if (i % 100 === 0) {
+      console.log(`Processed ${i} items out of ${data.length}`);
+    }
+  }
+  
+  // 汇总统计信息
+  const summary = {
+    totalItems: results.length,
+    categories: {},
+    averageValue: results.reduce((sum, item) =&gt; sum + item.value, 0) / results.length,
+    processingTime: results.reduce((sum, item) =&gt; sum + item.metadata.processingTime, 0) / results.length
+  };
+  
+  // 计算每个类别的数量
+  results.forEach(item =&gt; {
+    if (!summary.categories[item.category]) {
+      summary.categories[item.category] = 0;
+    }
+    summary.categories[item.category]++;
+  });
+  
+  return {
+    results,
+    summary
+  };
+}
+
+// 使用示例
+const sampleData = Array.from({ length: 1000 }, (_, index) =&gt; ({
+  id: `item-${index}`,
+  name: `Item ${index}`,
+  value: Math.random() * 100,
+  category: [&#39;A&#39;, &#39;B&#39;, &#39;C&#39;, &#39;D&#39;][Math.floor(Math.random() * 4)],
+  tags: [
+    &#39;tag1&#39;,
+    &#39;tag2&#39;,
+    &#39;longTag&#39;,
+    &#39;anotherTag&#39;,
+    &#39;specialTag&#39;
+  ].slice(0, Math.floor(Math.random() * 5) + 1),
+  createdAt: new Date(Date.now() - Math.random() * 10000000).toISOString(),
+  version: Math.floor(Math.random() * 5),
+  status: Math.random() &gt; 0.3 ? &#39;active&#39; : &#39;inactive&#39;
+}));
+
+const result = processLargeData(sampleData);
+console.log(`Processed ${result.results.length} items`);
+console.log(`Average value: ${result.summary.averageValue.toFixed(2)}`);
+console.log(&#39;Category distribution:&#39;, result.summary.categories);</code></pre><h2 class="heading-2">4. 长表格</h2><table class="markdown-table"><tr class="table-row"><td class="table-cell">ID</td><td class="table-cell">姓名</td><td class="table-cell">年龄</td><td class="table-cell">职业</td><td class="table-cell">地址</td><td class="table-cell">电话</td><td class="table-cell">邮箱</td><td class="table-cell">注册日期</td><td class="table-cell">最后登录</td><td class="table-cell">状态</td></tr><tr class="table-row"><td class="table-cell">001</td><td class="table-cell">张三</td><td class="table-cell">28</td><td class="table-cell">软件工程师</td><td class="table-cell">北京市海淀区中关村南大街5号</td><td class="table-cell">13800138000</td><td class="table-cell"><a href="mailto:zhangsan@example.com" title="null">zhangsan@example.com</a></td><td class="table-cell">2020-01-01</td><td class="table-cell">2023-05-15</td><td class="table-cell">活跃</td></tr><tr class="table-row"><td class="table-cell">002</td><td class="table-cell">李四</td><td class="table-cell">32</td><td class="table-cell">产品经理</td><td class="table-cell">上海市浦东新区张江高科技园区</td><td class="table-cell">13900139000</td><td class="table-cell"><a href="mailto:lisi@example.com" title="null">lisi@example.com</a></td><td class="table-cell">2020-02-15</td><td class="table-cell">2023-05-14</td><td class="table-cell">活跃</td></tr><tr class="table-row"><td class="table-cell">003</td><td class="table-cell">王五</td><td class="table-cell">45</td><td class="table-cell">技术总监</td><td class="table-cell">广州市天河区珠江新城</td><td class="table-cell">13700137000</td><td class="table-cell"><a href="mailto:wangwu@example.com" title="null">wangwu@example.com</a></td><td class="table-cell">2020-03-20</td><td class="table-cell">2023-05-10</td><td class="table-cell">活跃</td></tr><tr class="table-row"><td class="table-cell">004</td><td class="table-cell">赵六</td><td class="table-cell">36</td><td class="table-cell">UI设计师</td><td class="table-cell">深圳市南山区科技园</td><td class="table-cell">13600136000</td><td class="table-cell"><a href="mailto:zhaoliu@example.com" title="null">zhaoliu@example.com</a></td><td class="table-cell">2020-04-10</td><td class="table-cell">2023-05-12</td><td class="table-cell">活跃</td></tr><tr class="table-row"><td class="table-cell">005</td><td class="table-cell">钱七</td><td class="table-cell">29</td><td class="table-cell">前端开发</td><td class="table-cell">杭州市西湖区文三路</td><td class="table-cell">13500135000</td><td class="table-cell"><a href="mailto:qianqi@example.com" title="null">qianqi@example.com</a></td><td class="table-cell">2020-05-05</td><td class="table-cell">2023-05-13</td><td class="table-cell">活跃</td></tr><tr class="table-row"><td class="table-cell">006</td><td class="table-cell">孙八</td><td class="table-cell">31</td><td class="table-cell">后端开发</td><td class="table-cell">成都市高新区天府大道</td><td class="table-cell">13400134000</td><td class="table-cell"><a href="mailto:sunba@example.com" title="null">sunba@example.com</a></td><td class="table-cell">2020-06-18</td><td class="table-cell">2023-05-11</td><td class="table-cell">休眠</td></tr><tr class="table-row"><td class="table-cell">007</td><td class="table-cell">周九</td><td class="table-cell">27</td><td class="table-cell">测试工程师</td><td class="table-cell">武汉市洪山区光谷大道</td><td class="table-cell">13300133000</td><td class="table-cell"><a href="mailto:zhoujiu@example.com" title="null">zhoujiu@example.com</a></td><td class="table-cell">2020-07-22</td><td class="table-cell">2023-05-09</td><td class="table-cell">活跃</td></tr><tr class="table-row"><td class="table-cell">008</td><td class="table-cell">吴十</td><td class="table-cell">33</td><td class="table-cell">运维工程师</td><td class="table-cell">南京市建邺区奥体大街</td><td class="table-cell">13200132000</td><td class="table-cell"><a href="mailto:wushi@example.com" title="null">wushi@example.com</a></td><td class="table-cell">2020-08-30</td><td class="table-cell">2023-05-08</td><td class="table-cell">活跃</td></tr><tr class="table-row"><td class="table-cell">009</td><td class="table-cell">郑十一</td><td class="table-cell">30</td><td class="table-cell">数据分析师</td><td class="table-cell">西安市雁塔区高新路</td><td class="table-cell">13100131000</td><td class="table-cell"><a href="mailto:zhengshiyi@example.com" title="null">zhengshiyi@example.com</a></td><td class="table-cell">2020-09-15</td><td class="table-cell">2023-05-07</td><td class="table-cell">活跃</td></tr><tr class="table-row"><td class="table-cell">010</td><td class="table-cell">王十二</td><td class="table-cell">34</td><td class="table-cell">项目经理</td><td class="table-cell">重庆市渝中区解放碑</td><td class="table-cell">13000130000</td><td class="table-cell"><a href="mailto:wangshier@example.com" title="null">wangshier@example.com</a></td><td class="table-cell">2020-10-10</td><td class="table-cell">2023-05-06</td><td class="table-cell">休眠</td></tr></table><h2 class="heading-2">5. 长引用</h2><blockquote ><p class="paragraph">这是一个非常长的引用，包含大量文本内容。这是一个非常长的引用，包含大量文本内容。这是一个非常长的引用，包含大量文本内容。这是一个非常长的引用，包含大量文本内容。这是一个非常长的引用，包含大量文本内容。这是一个非常长的引用，包含大量文本内容。</p><p class="paragraph">这是引用中的第二段，同样非常长。这是引用中的第二段，同样非常长。这是引用中的第二段，同样非常长。这是引用中的第二段，同样非常长。这是引用中的第二段，同样非常长。这是引用中的第二段，同样非常长。这是引用中的第二段，同样非常长。</p><blockquote ><p class="paragraph">这是嵌套引用，内容也很长。这是嵌套引用，内容也很长。这是嵌套引用，内容也很长。这是嵌套引用，内容也很长。这是嵌套引用，内容也很长。这是嵌套引用，内容也很长。这是嵌套引用，内容也很长。</p><p class="paragraph">嵌套引用的第二段。嵌套引用的第二段。嵌套引用的第二段。嵌套引用的第二段。嵌套引用的第二段。嵌套引用的第二段。嵌套引用的第二段。嵌套引用的第二段。嵌套引用的第二段。</p></blockquote></blockquote><h2 class="heading-2">6. 总结</h2><p class="paragraph">这个文档包含了各种极端长的内容元素，用于测试 Markdown 差异比较工具处理大量文本的能力。</p></div></body></html>

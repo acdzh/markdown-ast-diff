@@ -7,7 +7,8 @@
       "children": [
         {
           "type": "text",
-          "value": "链接和图片示例"
+          "value": "链接和图片示例",
+          "data": {}
         },
         {
           "type": "inlineIns",
@@ -31,7 +32,8 @@
           "column": 15,
           "offset": 14
         }
-      }
+      },
+      "data": {}
     },
     {
       "type": "heading",
@@ -51,7 +53,9 @@
               "column": 6,
               "offset": 21
             }
-          }
+          },
+          "data": {},
+          "children": []
         }
       ],
       "position": {
@@ -65,7 +69,8 @@
           "column": 6,
           "offset": 21
         }
-      }
+      },
+      "data": {}
     },
     {
       "type": "paragraph",
@@ -84,7 +89,9 @@
               "column": 5,
               "offset": 27
             }
-          }
+          },
+          "data": {},
+          "children": []
         },
         {
           "type": "inlineDel",
@@ -108,7 +115,8 @@
                       "column": 10,
                       "offset": 27
                     }
-                  }
+                  },
+                  "data": {}
                 }
               ],
               "position": {
@@ -149,7 +157,8 @@
                       "column": 13,
                       "offset": 35
                     }
-                  }
+                  },
+                  "data": {}
                 }
               ],
               "position": {
@@ -182,7 +191,9 @@
               "column": 36,
               "offset": 58
             }
-          }
+          },
+          "data": {},
+          "children": []
         }
       ],
       "position": {
@@ -196,7 +207,8 @@
           "column": 36,
           "offset": 58
         }
-      }
+      },
+      "data": {}
     },
     {
       "type": "paragraph",
@@ -215,7 +227,9 @@
               "column": 5,
               "offset": 64
             }
-          }
+          },
+          "data": {},
+          "children": []
         },
         {
           "type": "inlineDel",
@@ -239,7 +253,8 @@
                       "column": 12,
                       "offset": 63
                     }
-                  }
+                  },
+                  "data": {}
                 }
               ],
               "position": {
@@ -280,7 +295,8 @@
                       "column": 12,
                       "offset": 71
                     }
-                  }
+                  },
+                  "data": {}
                 }
               ],
               "position": {
@@ -313,7 +329,9 @@
               "column": 46,
               "offset": 105
             }
-          }
+          },
+          "data": {},
+          "children": []
         }
       ],
       "position": {
@@ -327,7 +345,8 @@
           "column": 46,
           "offset": 105
         }
-      }
+      },
+      "data": {}
     },
     {
       "type": "paragraph",
@@ -346,7 +365,9 @@
               "column": 5,
               "offset": 111
             }
-          }
+          },
+          "data": {},
+          "children": []
         },
         {
           "type": "linkReference",
@@ -365,7 +386,9 @@
                   "column": 10,
                   "offset": 116
                 }
-              }
+              },
+              "data": {},
+              "children": []
             }
           ],
           "position": {
@@ -382,17 +405,8 @@
           },
           "label": "1",
           "identifier": "1",
-          "referenceType": "full"
-        },
-        {
-          "type": "inlineDel",
-          "children": [
-            {
-              "type": "text",
-              "value": "。",
-              "data": {}
-            }
-          ]
+          "referenceType": "full",
+          "data": {}
         },
         {
           "type": "inlineIns",
@@ -400,6 +414,18 @@
             {
               "type": "text",
               "value": "和一个",
+              "position": {
+                "start": {
+                  "line": 9,
+                  "column": 14,
+                  "offset": 120
+                },
+                "end": {
+                  "line": 9,
+                  "column": 17,
+                  "offset": 123
+                }
+              },
               "data": {}
             }
           ]
@@ -424,7 +450,8 @@
                       "column": 25,
                       "offset": 131
                     }
-                  }
+                  },
+                  "data": {}
                 }
               ],
               "position": {
@@ -447,26 +474,22 @@
           ]
         },
         {
-          "type": "inlineIns",
-          "children": [
-            {
-              "type": "text",
-              "value": "。",
-              "position": {
-                "start": {
-                  "line": 9,
-                  "column": 29,
-                  "offset": 135
-                },
-                "end": {
-                  "line": 9,
-                  "column": 30,
-                  "offset": 136
-                }
-              },
-              "data": {}
+          "type": "text",
+          "value": "。",
+          "position": {
+            "start": {
+              "line": 9,
+              "column": 29,
+              "offset": 135
+            },
+            "end": {
+              "line": 9,
+              "column": 30,
+              "offset": 136
             }
-          ]
+          },
+          "data": {},
+          "children": []
         }
       ],
       "position": {
@@ -480,122 +503,76 @@
           "column": 30,
           "offset": 136
         }
-      }
+      },
+      "data": {}
+    },
+    {
+      "type": "definition",
+      "identifier": "1",
+      "label": "1",
+      "title": "更新的参考链接",
+      "url": "https://example.org/reference",
+      "position": {
+        "start": {
+          "line": 11,
+          "column": 1,
+          "offset": 138
+        },
+        "end": {
+          "line": 11,
+          "column": 45,
+          "offset": 182
+        }
+      },
+      "data": {},
+      "children": []
     },
     {
       "type": "del",
       "children": [
         {
-          "type": "definition",
-          "identifier": "1",
-          "label": "1",
-          "title": "参考链接",
-          "url": "https://example.com/reference",
-          "position": {
-            "start": {
-              "line": 11,
-              "column": 1,
-              "offset": 111
-            },
-            "end": {
-              "line": 11,
-              "column": 42,
-              "offset": 152
+          "type": "heading",
+          "depth": 2,
+          "children": [
+            {
+              "type": "text",
+              "value": "图片",
+              "position": {
+                "start": {
+                  "line": 13,
+                  "column": 4,
+                  "offset": 157
+                },
+                "end": {
+                  "line": 13,
+                  "column": 6,
+                  "offset": 159
+                }
+              },
+              "data": {}
             }
-          },
-          "data": {}
-        }
-      ]
-    },
-    {
-      "type": "ins",
-      "children": [
-        {
-          "type": "definition",
-          "identifier": "1",
-          "label": "1",
-          "title": "更新的参考链接",
-          "url": "https://example.org/reference",
+          ],
           "position": {
             "start": {
-              "line": 11,
+              "line": 13,
               "column": 1,
-              "offset": 138
+              "offset": 154
             },
             "end": {
-              "line": 11,
-              "column": 45,
-              "offset": 182
-            }
-          },
-          "data": {}
-        }
-      ]
-    },
-    {
-      "type": "ins",
-      "children": [
-        {
-          "type": "definition",
-          "identifier": "2",
-          "label": "2",
-          "title": "新增的参考链接",
-          "url": "https://example.com/new-reference",
-          "position": {
-            "start": {
-              "line": 12,
-              "column": 1,
-              "offset": 183
-            },
-            "end": {
-              "line": 12,
-              "column": 49,
-              "offset": 231
-            }
-          },
-          "data": {}
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "depth": 2,
-      "children": [
-        {
-          "type": "text",
-          "value": "图片",
-          "position": {
-            "start": {
-              "line": 14,
-              "column": 4,
-              "offset": 236
-            },
-            "end": {
-              "line": 14,
+              "line": 13,
               "column": 6,
-              "offset": 238
+              "offset": 159
             }
-          }
+          },
+          "data": {}
         }
-      ],
-      "position": {
-        "start": {
-          "line": 14,
-          "column": 1,
-          "offset": 233
-        },
-        "end": {
-          "line": 14,
-          "column": 6,
-          "offset": 238
-        }
-      }
+      ]
     },
     {
-      "type": "paragraph",
+      "type": "del",
       "children": [
         {
-          "type": "inlineDel",
+          "type": "paragraph",
           "children": [
             {
               "type": "image",
@@ -616,51 +593,28 @@
               },
               "data": {}
             }
-          ]
-        },
-        {
-          "type": "inlineIns",
-          "children": [
-            {
-              "type": "image",
-              "title": null,
-              "url": "https://example.org/updated-image.jpg",
-              "alt": "更新的示例图片",
-              "position": {
-                "start": {
-                  "line": 16,
-                  "column": 1,
-                  "offset": 240
-                },
-                "end": {
-                  "line": 16,
-                  "column": 50,
-                  "offset": 289
-                }
-              },
-              "data": {}
+          ],
+          "position": {
+            "start": {
+              "line": 15,
+              "column": 1,
+              "offset": 161
+            },
+            "end": {
+              "line": 15,
+              "column": 39,
+              "offset": 199
             }
-          ]
+          },
+          "data": {}
         }
-      ],
-      "position": {
-        "start": {
-          "line": 16,
-          "column": 1,
-          "offset": 240
-        },
-        "end": {
-          "line": 16,
-          "column": 50,
-          "offset": 289
-        }
-      }
+      ]
     },
     {
-      "type": "paragraph",
+      "type": "del",
       "children": [
         {
-          "type": "inlineDel",
+          "type": "paragraph",
           "children": [
             {
               "type": "image",
@@ -681,10 +635,175 @@
               },
               "data": {}
             }
-          ]
-        },
+          ],
+          "position": {
+            "start": {
+              "line": 17,
+              "column": 1,
+              "offset": 201
+            },
+            "end": {
+              "line": 17,
+              "column": 50,
+              "offset": 250
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "del",
+      "children": [
         {
-          "type": "inlineIns",
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "imageReference",
+              "alt": "参考图片",
+              "position": {
+                "start": {
+                  "line": 19,
+                  "column": 1,
+                  "offset": 252
+                },
+                "end": {
+                  "line": 19,
+                  "column": 16,
+                  "offset": 267
+                }
+              },
+              "label": "image1",
+              "identifier": "image1",
+              "referenceType": "full",
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 19,
+              "column": 1,
+              "offset": 252
+            },
+            "end": {
+              "line": 19,
+              "column": 16,
+              "offset": 267
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "definition",
+      "identifier": "2",
+      "label": "2",
+      "title": "新增的参考链接",
+      "url": "https://example.com/new-reference",
+      "position": {
+        "start": {
+          "line": 12,
+          "column": 1,
+          "offset": 183
+        },
+        "end": {
+          "line": 12,
+          "column": 49,
+          "offset": 231
+        }
+      },
+      "data": {},
+      "children": []
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 2,
+          "children": [
+            {
+              "type": "text",
+              "value": "图片",
+              "position": {
+                "start": {
+                  "line": 14,
+                  "column": 4,
+                  "offset": 236
+                },
+                "end": {
+                  "line": 14,
+                  "column": 6,
+                  "offset": 238
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 14,
+              "column": 1,
+              "offset": 233
+            },
+            "end": {
+              "line": 14,
+              "column": 6,
+              "offset": 238
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "image",
+              "title": null,
+              "url": "https://example.org/updated-image.jpg",
+              "alt": "更新的示例图片",
+              "position": {
+                "start": {
+                  "line": 16,
+                  "column": 1,
+                  "offset": 240
+                },
+                "end": {
+                  "line": 16,
+                  "column": 50,
+                  "offset": 289
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 16,
+              "column": 1,
+              "offset": 240
+            },
+            "end": {
+              "line": 16,
+              "column": 50,
+              "offset": 289
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
           "children": [
             {
               "type": "image",
@@ -705,28 +824,50 @@
               },
               "data": {}
             }
-          ]
+          ],
+          "position": {
+            "start": {
+              "line": 18,
+              "column": 1,
+              "offset": 291
+            },
+            "end": {
+              "line": 18,
+              "column": 54,
+              "offset": 344
+            }
+          },
+          "data": {}
         }
-      ],
-      "position": {
-        "start": {
-          "line": 18,
-          "column": 1,
-          "offset": 291
-        },
-        "end": {
-          "line": 18,
-          "column": 54,
-          "offset": 344
-        }
-      }
+      ]
     },
     {
-      "type": "paragraph",
+      "type": "ins",
       "children": [
         {
-          "type": "imageReference",
-          "alt": "参考图片",
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "imageReference",
+              "alt": "参考图片",
+              "position": {
+                "start": {
+                  "line": 20,
+                  "column": 1,
+                  "offset": 346
+                },
+                "end": {
+                  "line": 20,
+                  "column": 16,
+                  "offset": 361
+                }
+              },
+              "label": "image1",
+              "identifier": "image1",
+              "referenceType": "full",
+              "data": {}
+            }
+          ],
           "position": {
             "start": {
               "line": 20,
@@ -739,23 +880,9 @@
               "offset": 361
             }
           },
-          "label": "image1",
-          "identifier": "image1",
-          "referenceType": "full"
+          "data": {}
         }
-      ],
-      "position": {
-        "start": {
-          "line": 20,
-          "column": 1,
-          "offset": 346
-        },
-        "end": {
-          "line": 20,
-          "column": 16,
-          "offset": 361
-        }
-      }
+      ]
     },
     {
       "type": "ins",
@@ -780,7 +907,8 @@
               },
               "label": "image2",
               "identifier": "image2",
-              "referenceType": "full"
+              "referenceType": "full",
+              "data": {}
             }
           ],
           "position": {
@@ -793,31 +921,6 @@
               "line": 22,
               "column": 19,
               "offset": 381
-            }
-          },
-          "data": {}
-        }
-      ]
-    },
-    {
-      "type": "del",
-      "children": [
-        {
-          "type": "definition",
-          "identifier": "image1",
-          "label": "image1",
-          "title": "参考图片标题",
-          "url": "https://example.com/reference-image.jpg",
-          "position": {
-            "start": {
-              "line": 21,
-              "column": 1,
-              "offset": 269
-            },
-            "end": {
-              "line": 21,
-              "column": 59,
-              "offset": 327
             }
           },
           "data": {}
@@ -892,7 +995,9 @@
               "column": 8,
               "offset": 519
             }
-          }
+          },
+          "data": {},
+          "children": []
         }
       ],
       "position": {
@@ -906,7 +1011,8 @@
           "column": 8,
           "offset": 519
         }
-      }
+      },
+      "data": {}
     },
     {
       "type": "list",
@@ -941,7 +1047,9 @@
                           "column": 10,
                           "offset": 530
                         }
-                      }
+                      },
+                      "data": {},
+                      "children": []
                     }
                   ],
                   "position": {
@@ -955,7 +1063,8 @@
                       "column": 31,
                       "offset": 551
                     }
-                  }
+                  },
+                  "data": {}
                 }
               ],
               "position": {
@@ -983,81 +1092,8 @@
               "column": 31,
               "offset": 551
             }
-          }
-        },
-        {
-          "type": "listItem",
-          "spread": false,
-          "checked": null,
-          "children": [
-            {
-              "type": "paragraph",
-              "children": [
-                {
-                  "type": "link",
-                  "title": null,
-                  "url": "https://google.com",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "Google",
-                      "position": {
-                        "start": {
-                          "line": 26,
-                          "column": 4,
-                          "offset": 372
-                        },
-                        "end": {
-                          "line": 26,
-                          "column": 10,
-                          "offset": 378
-                        }
-                      }
-                    }
-                  ],
-                  "position": {
-                    "start": {
-                      "line": 26,
-                      "column": 3,
-                      "offset": 371
-                    },
-                    "end": {
-                      "line": 26,
-                      "column": 31,
-                      "offset": 399
-                    }
-                  }
-                }
-              ],
-              "position": {
-                "start": {
-                  "line": 26,
-                  "column": 3,
-                  "offset": 371
-                },
-                "end": {
-                  "line": 26,
-                  "column": 31,
-                  "offset": 399
-                }
-              }
-            }
-          ],
-          "position": {
-            "start": {
-              "line": 26,
-              "column": 1,
-              "offset": 369
-            },
-            "end": {
-              "line": 26,
-              "column": 31,
-              "offset": 399
-            }
           },
-          "data": {
-            "diff": "del"
-          }
+          "data": {}
         },
         {
           "type": "listItem",
@@ -1086,7 +1122,8 @@
                           "column": 13,
                           "offset": 564
                         }
-                      }
+                      },
+                      "data": {}
                     }
                   ],
                   "position": {
@@ -1100,7 +1137,8 @@
                       "column": 37,
                       "offset": 588
                     }
-                  }
+                  },
+                  "data": {}
                 }
               ],
               "position": {
@@ -1144,80 +1182,6 @@
                 {
                   "type": "link",
                   "title": null,
-                  "url": "https://baidu.com",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "百度",
-                      "position": {
-                        "start": {
-                          "line": 27,
-                          "column": 4,
-                          "offset": 403
-                        },
-                        "end": {
-                          "line": 27,
-                          "column": 6,
-                          "offset": 405
-                        }
-                      }
-                    }
-                  ],
-                  "position": {
-                    "start": {
-                      "line": 27,
-                      "column": 3,
-                      "offset": 402
-                    },
-                    "end": {
-                      "line": 27,
-                      "column": 26,
-                      "offset": 425
-                    }
-                  }
-                }
-              ],
-              "position": {
-                "start": {
-                  "line": 27,
-                  "column": 3,
-                  "offset": 402
-                },
-                "end": {
-                  "line": 27,
-                  "column": 26,
-                  "offset": 425
-                }
-              }
-            }
-          ],
-          "position": {
-            "start": {
-              "line": 27,
-              "column": 1,
-              "offset": 400
-            },
-            "end": {
-              "line": 27,
-              "column": 26,
-              "offset": 425
-            }
-          },
-          "data": {
-            "diff": "del"
-          }
-        },
-        {
-          "type": "listItem",
-          "spread": false,
-          "checked": null,
-          "children": [
-            {
-              "type": "paragraph",
-              "children": [
-                {
-                  "type": "link",
-                  "title": null,
                   "url": "https://google.com",
                   "children": [
                     {
@@ -1234,7 +1198,9 @@
                           "column": 10,
                           "offset": 598
                         }
-                      }
+                      },
+                      "data": {},
+                      "children": []
                     }
                   ],
                   "position": {
@@ -1248,7 +1214,8 @@
                       "column": 31,
                       "offset": 619
                     }
-                  }
+                  },
+                  "data": {}
                 }
               ],
               "position": {
@@ -1277,9 +1244,7 @@
               "offset": 619
             }
           },
-          "data": {
-            "diff": "ins"
-          }
+          "data": {}
         },
         {
           "type": "listItem",
@@ -1308,7 +1273,9 @@
                           "column": 6,
                           "offset": 625
                         }
-                      }
+                      },
+                      "data": {},
+                      "children": []
                     }
                   ],
                   "position": {
@@ -1322,7 +1289,8 @@
                       "column": 26,
                       "offset": 645
                     }
-                  }
+                  },
+                  "data": {}
                 }
               ],
               "position": {
@@ -1351,9 +1319,7 @@
               "offset": 645
             }
           },
-          "data": {
-            "diff": "ins"
-          }
+          "data": {}
         },
         {
           "type": "listItem",
@@ -1382,7 +1348,8 @@
                           "column": 8,
                           "offset": 653
                         }
-                      }
+                      },
+                      "data": {}
                     }
                   ],
                   "position": {
@@ -1396,7 +1363,8 @@
                       "column": 34,
                       "offset": 679
                     }
-                  }
+                  },
+                  "data": {}
                 }
               ],
               "position": {
@@ -1441,7 +1409,8 @@
           "column": 34,
           "offset": 679
         }
-      }
+      },
+      "data": {}
     },
     {
       "type": "heading",
@@ -1461,7 +1430,9 @@
               "column": 8,
               "offset": 688
             }
-          }
+          },
+          "data": {},
+          "children": []
         }
       ],
       "position": {
@@ -1475,7 +1446,8 @@
           "column": 8,
           "offset": 688
         }
-      }
+      },
+      "data": {}
     },
     {
       "type": "paragraph",
@@ -1504,7 +1476,8 @@
                       "column": 49,
                       "offset": 484
                     }
-                  }
+                  },
+                  "data": {}
                 }
               ],
               "position": {
@@ -1547,7 +1520,8 @@
                       "column": 52,
                       "offset": 741
                     }
-                  }
+                  },
+                  "data": {}
                 }
               ],
               "position": {
@@ -1578,14 +1552,16 @@
           "column": 74,
           "offset": 763
         }
-      }
+      },
+      "data": {}
     },
     {
       "type": "paragraph",
       "children": [
         {
           "type": "text",
-          "value": "这段"
+          "value": "这段",
+          "data": {}
         },
         {
           "type": "inlineIns",
@@ -1599,7 +1575,8 @@
         },
         {
           "type": "text",
-          "value": "文字包含一个"
+          "value": "文字包含一个",
+          "data": {}
         },
         {
           "type": "inlineDel",
@@ -1623,7 +1600,8 @@
                       "column": 12,
                       "offset": 519
                     }
-                  }
+                  },
+                  "data": {}
                 }
               ],
               "position": {
@@ -1664,7 +1642,8 @@
                       "column": 19,
                       "offset": 783
                     }
-                  }
+                  },
+                  "data": {}
                 }
               ],
               "position": {
@@ -1684,39 +1663,21 @@
           ]
         },
         {
-          "type": "text",
-          "value": "和一个",
-          "position": {
-            "start": {
-              "line": 39,
-              "column": 41,
-              "offset": 805
-            },
-            "end": {
-              "line": 39,
-              "column": 44,
-              "offset": 808
-            }
-          }
-        },
-        {
-          "type": "inlineDel",
+          "type": "inlineIns",
           "children": [
             {
-              "type": "image",
-              "title": null,
-              "url": "https://example.com/inline-image.jpg",
-              "alt": "内联图片",
+              "type": "text",
+              "value": "和一个",
               "position": {
                 "start": {
-                  "line": 33,
-                  "column": 37,
-                  "offset": 544
+                  "line": 39,
+                  "column": 41,
+                  "offset": 805
                 },
                 "end": {
-                  "line": 33,
-                  "column": 82,
-                  "offset": 589
+                  "line": 39,
+                  "column": 44,
+                  "offset": 808
                 }
               },
               "data": {}
@@ -1748,6 +1709,52 @@
           ]
         },
         {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": "和一个",
+              "position": {
+                "start": {
+                  "line": 33,
+                  "column": 34,
+                  "offset": 541
+                },
+                "end": {
+                  "line": 33,
+                  "column": 37,
+                  "offset": 544
+                }
+              },
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "image",
+              "title": null,
+              "url": "https://example.com/inline-image.jpg",
+              "alt": "内联图片",
+              "position": {
+                "start": {
+                  "line": 33,
+                  "column": 37,
+                  "offset": 544
+                },
+                "end": {
+                  "line": 33,
+                  "column": 82,
+                  "offset": 589
+                }
+              },
+              "data": {}
+            }
+          ]
+        },
+        {
           "type": "text",
           "value": "。",
           "position": {
@@ -1761,7 +1768,9 @@
               "column": 93,
               "offset": 857
             }
-          }
+          },
+          "data": {},
+          "children": []
         }
       ],
       "position": {
@@ -1775,7 +1784,8 @@
           "column": 93,
           "offset": 857
         }
-      }
+      },
+      "data": {}
     },
     {
       "type": "ins",
@@ -1797,7 +1807,8 @@
                   "column": 11,
                   "offset": 869
                 }
-              }
+              },
+              "data": {}
             },
             {
               "type": "link",
@@ -1818,7 +1829,8 @@
                       "column": 15,
                       "offset": 873
                     }
-                  }
+                  },
+                  "data": {}
                 }
               ],
               "position": {
@@ -1832,7 +1844,8 @@
                   "column": 41,
                   "offset": 899
                 }
-              }
+              },
+              "data": {}
             },
             {
               "type": "text",
@@ -1848,7 +1861,8 @@
                   "column": 42,
                   "offset": 900
                 }
-              }
+              },
+              "data": {}
             }
           ],
           "position": {
@@ -1867,5 +1881,18 @@
         }
       ]
     }
-  ]
+  ],
+  "position": {
+    "start": {
+      "line": 1,
+      "column": 1,
+      "offset": 0
+    },
+    "end": {
+      "line": 41,
+      "column": 42,
+      "offset": 900
+    }
+  },
+  "data": {}
 }

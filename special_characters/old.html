@@ -1,0 +1,188 @@
+<html><head>
+    <style>
+      /* 基本样式 */
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      
+      /* 标题样式 */
+      h1, h2, h3, h4, h5, h6 {
+        margin-top: 1.5em;
+        margin-bottom: 0.5em;
+        font-weight: 600;
+        line-height: 1.25;
+      }
+      h1 { font-size: 2em; border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; }
+      h2 { font-size: 1.5em; border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; }
+      h3 { font-size: 1.25em; }
+      h4 { font-size: 1em; }
+      h5 { font-size: 0.875em; }
+      h6 { font-size: 0.85em; color: #6a737d; }
+      
+      /* 段落样式 */
+      p {
+        margin-top: 0;
+        margin-bottom: 16px;
+      }
+      
+      /* 链接样式 */
+      a {
+        color: #0366d6;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      
+      /* 列表样式 */
+      ul, ol {
+        padding-left: 2em;
+        margin-top: 0;
+        margin-bottom: 16px;
+      }
+      li {
+        margin-bottom: 0.25em;
+      }
+      
+      /* 代码样式 */
+      code {
+        font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+        padding: 0.2em 0.4em;
+        margin: 0;
+        font-size: 85%;
+        background-color: rgba(27, 31, 35, 0.05);
+        border-radius: 3px;
+      }
+      pre {
+        font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+        padding: 16px;
+        overflow: auto;
+        font-size: 85%;
+        line-height: 1.45;
+        background-color: #f6f8fa;
+        border-radius: 3px;
+        margin-top: 0;
+        margin-bottom: 16px;
+      }
+      pre code {
+        padding: 0;
+        margin: 0;
+        background-color: transparent;
+        border: 0;
+      }
+      
+      /* 引用样式 */
+      blockquote {
+        padding: 0 1em;
+        color: #6a737d;
+        border-left: 0.25em solid #dfe2e5;
+        margin: 0 0 16px 0;
+      }
+      
+      /* 表格样式 */
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 16px;
+        display: block;
+        overflow-x: auto;
+      }
+      table th, table td {
+        padding: 6px 13px;
+        border: 1px solid #dfe2e5;
+      }
+      table tr {
+        background-color: #fff;
+        border-top: 1px solid #c6cbd1;
+      }
+      table tr:nth-child(2n) {
+        background-color: #f6f8fa;
+      }
+      table th {
+        font-weight: 600;
+        background-color: #f6f8fa;
+      }
+      .align-left {
+        text-align: left;
+      }
+      .align-center {
+        text-align: center;
+      }
+      .align-right {
+        text-align: right;
+      }
+      
+      /* 水平线样式 */
+      hr {
+        height: 0.25em;
+        padding: 0;
+        margin: 24px 0;
+        background-color: #e1e4e8;
+        border: 0;
+      }
+      
+      /* 差异标记样式 */
+      ins {
+        background-color: #e6ffec;
+        color: #24292e;
+        text-decoration: none;
+        border-radius: 2px;
+        padding: 0 2px;
+      }
+      
+      del {
+        background-color: #ffebe9;
+        color: #24292e;
+        text-decoration: line-through;
+        border-radius: 2px;
+        padding: 0 2px;
+      }
+
+      ins.diff-block, del.diff-block {
+        display: block;
+        padding-left: 10px;
+        border-left-width: 3px;
+        border-left-style: solid;
+      }
+      
+      ins.diff-block {
+        border-left-color: #2cbe4e;
+      }
+      
+      del.diff-block {
+        border-left-color: #cb2431;
+      }
+
+      ins > hr, ins > pre.code {
+        background-color: #e6ffec;
+      }
+
+      del > hr, del > pre.code {
+        background-color: #ffebe9;
+      }
+      
+      /* 列表项差异样式 */
+      li.list-item-ins, li[data-diff="ins"] {
+        background-color: #e6ffec;
+        border-radius: 2px;
+      }
+      
+      li.list-item-del, li[data-diff="del"] {
+        background-color: #ffebe9;
+        border-radius: 2px;
+        text-decoration: line-through;
+      }
+    </style>
+  </head><body><div class="markdown-content"><h1 class="heading-1">特殊字符测试</h1><h2 class="heading-2">1. 基本特殊字符</h2><h3 class="heading-3">1.1 标点符号</h3><p class="paragraph">以下是常见的标点符号：</p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">句号 (.) 逗号 (,) 分号 (;) 冒号 (:)</p></li><li value="2" class="list-item"><p class="paragraph">感叹号 (!) 问号 (?)</p></li><li value="3" class="list-item"><p class="paragraph">引号 (&quot;) 单引号 (&#39;)</p></li><li value="4" class="list-item"><p class="paragraph">括号 () [] {}</p></li><li value="5" class="list-item"><p class="paragraph">连字符 (-) 下划线 (_) 波浪线 (~)</p></li><li value="6" class="list-item"><p class="paragraph">井号 (#) 百分号 (%) 美元符号 ($)</p></li><li value="7" class="list-item"><p class="paragraph">加号 (+) 等号 (=) 星号 (*)</p></li><li value="8" class="list-item"><p class="paragraph">斜杠 (/) 反斜杠 ()</p></li><li value="9" class="list-item"><p class="paragraph">小于号 (&lt;) 大于号 (&gt;)</p></li><li value="10" class="list-item"><p class="paragraph">管道符 (|) 和号 (&amp;) 脱字符 (^)</p></li><li value="11" class="list-item"><p class="paragraph">重音符 (`) 省略号 (...)</p></li></ul><h3 class="heading-3">1.2 转义字符</h3><p class="paragraph">以下是一些转义字符的示例：</p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">反斜杠: \</p></li><li value="2" class="list-item"><p class="paragraph">反引号: `</p></li><li value="3" class="list-item"><p class="paragraph">星号: *</p></li><li value="4" class="list-item"><p class="paragraph">下划线: _</p></li><li value="5" class="list-item"><p class="paragraph">花括号: { }</p></li><li value="6" class="list-item"><p class="paragraph">方括号: [ ]</p></li><li value="7" class="list-item"><p class="paragraph">圆括号: ( )</p></li><li value="8" class="list-item"><p class="paragraph">井号: #</p></li><li value="9" class="list-item"><p class="paragraph">加号: +</p></li><li value="10" class="list-item"><p class="paragraph">减号: -</p></li><li value="11" class="list-item"><p class="paragraph">句点: .</p></li><li value="12" class="list-item"><p class="paragraph">感叹号: !</p></li></ul><h2 class="heading-2">2. Unicode 字符</h2><h3 class="heading-3">2.1 拉丁字母变体</h3><p class="paragraph">À Á Â Ã Ä Å Æ Ç È É Ê Ë Ì Í Î Ï Ð Ñ Ò Ó Ô Õ Ö × Ø Ù Ú Û Ü Ý Þ ß
+à á â ã ä å æ ç è é ê ë ì í î ï ð ñ ò ó ô õ ö ÷ ø ù ú û ü ý þ ÿ</p><h3 class="heading-3">2.2 数学符号</h3><p class="paragraph">± ÷ × ∑ ∏ √ ∞ ∫ ∮ ∇ ∂ ∆ ∩ ∪ ⊂ ⊃ ⊆ ⊇ ≠ ≡ ≤ ≥ ≈ ∝ ∧ ∨ ¬ ∀ ∃ ∈ ∉ ∋ ∅ ℵ</p><h3 class="heading-3">2.3 货币符号</h3><p class="paragraph">$ ¢ € £ ¥ ₹ ₽ ₩ ₱ ₿</p><h3 class="heading-3">2.4 箭头和几何符号</h3><p class="paragraph">← ↑ → ↓ ↔ ↕ ↖ ↗ ↘ ↙ ⇐ ⇑ ⇒ ⇓ ⇔ ⇕ ⇖ ⇗ ⇘ ⇙
+△ ▲ ▴ ▵ ▶ ▷ ▸ ▹ ► ▻ ▼ ▽ ▾ ▿ ◀ ◁ ◂ ◃ ◄ ◅ ◆ ◇ ◈ ◉ ◊ ○ ◌ ◍ ◎ ●</p><h3 class="heading-3">2.5 表情符号</h3><p class="paragraph">😀 😁 😂 🤣 😃 😄 😅 😆 😉 😊 😋 😎 😍 😘 🥰 😗 😙 😚 ☺️ 🙂 🤗 🤩 🤔 🤨</p><h3 class="heading-3">2.6 中文和日文字符</h3><p class="paragraph">你好，世界！こんにちは、世界！</p><p class="paragraph">汉字测试：中国、日本、韩国、台湾</p><p class="paragraph">日文测试：ひらがな、カタカナ、漢字</p><h2 class="heading-2">3. HTML 实体</h2><h3 class="heading-3">3.1 命名实体</h3><p class="paragraph">&lt; &gt; &amp; &quot; &#39; ¢ £ ¥ € © ® ™</p><h3 class="heading-3">3.2 数字实体</h3><p class="paragraph">♠ ♣ ♥ ♦ ★ ☆</p><h2 class="heading-2">4. 特殊字符在 Markdown 元素中</h2><h3 class="heading-3">4.1 特殊字符在标题中</h3><h4 class="heading-4">包含 &amp; &lt; &gt; &quot; &#39; 的标题</h4><h4 class="heading-4">包含 😀 🤔 👍 的标题</h4><h3 class="heading-3">4.2 特殊字符在列表中</h3><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">项目 &amp; 符号</p></li><li value="2" class="list-item"><p class="paragraph">项目 &lt; 符号</p></li><li value="3" class="list-item"><p class="paragraph">项目 &gt; 符号</p></li><li value="4" class="list-item"><p class="paragraph">项目 &quot; 符号</p></li><li value="5" class="list-item"><p class="paragraph">项目 &#39; 符号</p></li><li value="6" class="list-item"><p class="paragraph">项目 😀 符号</p></li></ul><h3 class="heading-3">4.3 特殊字符在代码块中</h3><code class="code">function specialChars() {
+  const symbols = &#39;!@#$%^&amp;*()_+-=[]{}\|;:&quot;,./&lt;&gt;?&#39;;
+  const emoji = &#39;😀 🤔 👍&#39;;
+  return `特殊符号: ${symbols}, 表情: ${emoji}`;
+}</code><h3 class="heading-3">4.4 特殊字符在表格中</h3><table class="markdown-table"><tr class="table-row"><td class="table-cell">符号类型</td><td class="table-cell">示例</td><td class="table-cell">描述</td></tr><tr class="table-row"><td class="table-cell">HTML 特殊字符</td><td class="table-cell">&amp; &lt; &gt; &quot; &#39;</td><td class="table-cell">需要在 HTML 中转义</td></tr><tr class="table-row"><td class="table-cell">数学符号</td><td class="table-cell">± ÷ ×</td><td class="table-cell">数学运算符号</td></tr><tr class="table-row"><td class="table-cell">表情符号</td><td class="table-cell">😀 🤔 👍</td><td class="table-cell">Unicode 表情</td></tr><tr class="table-row"><td class="table-cell">箭头</td><td class="table-cell">← ↑ → ↓</td><td class="table-cell">方向指示</td></tr></table><h3 class="heading-3">4.5 特殊字符在链接和图片中</h3><p class="paragraph"><a href="https://example.com/search?q=special&symbols=true" title="null">包含特殊字符 &amp; &lt; &gt; &quot; &#39; 的链接</a></p><p class="paragraph"><img src="https://example.com/image.jpg" alt="包含特殊字符 & < > " ' 的图片描述" title="图片 & 标题" /></p><h3 class="heading-3">4.6 特殊字符在引用中</h3><blockquote ><p class="paragraph">这是包含特殊字符的引用：&amp; &lt; &gt; &quot; &#39;</p><p class="paragraph">这是包含表情符号的引用：😀 🤔 👍</p></blockquote><h2 class="heading-2">5. 极端情况</h2><h3 class="heading-3">5.1 大量重复特殊字符</h3><p class="paragraph">!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</p><p class="paragraph">@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@</p><p class="paragraph">################################################################</p><hr  /><h3 class="heading-3">5.2 混合特殊字符</h3><p class="paragraph">!@#$%^&amp;<em class="emphasis">()_+{}|:&quot;&lt;&gt;?~<code >-=[]\;&#39;,./!@#$%^&amp;*()_+{}|:&quot;&lt;&gt;?~</code>-=[];&#39;,./!@#$%^&amp;</em>()_+{}|:&quot;&lt;&gt;?~`-=[];&#39;,./</p><h3 class="heading-3">5.3 特殊字符组合</h3><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">¯_(ツ)_/¯</p></li><li value="2" class="list-item"><p class="paragraph">(╯°□°）╯︵ ┻━┻</p></li><li value="3" class="list-item"><p class="paragraph">ಠ_ಠ</p></li><li value="4" class="list-item"><p class="paragraph">ʕ•ᴥ•ʔ</p></li><li value="5" class="list-item"><p class="paragraph">(⌐■_■)</p></li></ul><h2 class="heading-2">6. 总结</h2><p class="paragraph">这个文档包含了各种特殊字符和符号，用于测试 Markdown 差异比较工具处理特殊字符的能力。</p></div></body></html>

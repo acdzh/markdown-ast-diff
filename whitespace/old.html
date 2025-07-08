@@ -1,0 +1,208 @@
+<html><head>
+    <style>
+      /* 基本样式 */
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      
+      /* 标题样式 */
+      h1, h2, h3, h4, h5, h6 {
+        margin-top: 1.5em;
+        margin-bottom: 0.5em;
+        font-weight: 600;
+        line-height: 1.25;
+      }
+      h1 { font-size: 2em; border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; }
+      h2 { font-size: 1.5em; border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; }
+      h3 { font-size: 1.25em; }
+      h4 { font-size: 1em; }
+      h5 { font-size: 0.875em; }
+      h6 { font-size: 0.85em; color: #6a737d; }
+      
+      /* 段落样式 */
+      p {
+        margin-top: 0;
+        margin-bottom: 16px;
+      }
+      
+      /* 链接样式 */
+      a {
+        color: #0366d6;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      
+      /* 列表样式 */
+      ul, ol {
+        padding-left: 2em;
+        margin-top: 0;
+        margin-bottom: 16px;
+      }
+      li {
+        margin-bottom: 0.25em;
+      }
+      
+      /* 代码样式 */
+      code {
+        font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+        padding: 0.2em 0.4em;
+        margin: 0;
+        font-size: 85%;
+        background-color: rgba(27, 31, 35, 0.05);
+        border-radius: 3px;
+      }
+      pre {
+        font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+        padding: 16px;
+        overflow: auto;
+        font-size: 85%;
+        line-height: 1.45;
+        background-color: #f6f8fa;
+        border-radius: 3px;
+        margin-top: 0;
+        margin-bottom: 16px;
+      }
+      pre code {
+        padding: 0;
+        margin: 0;
+        background-color: transparent;
+        border: 0;
+      }
+      
+      /* 引用样式 */
+      blockquote {
+        padding: 0 1em;
+        color: #6a737d;
+        border-left: 0.25em solid #dfe2e5;
+        margin: 0 0 16px 0;
+      }
+      
+      /* 表格样式 */
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 16px;
+        display: block;
+        overflow-x: auto;
+      }
+      table th, table td {
+        padding: 6px 13px;
+        border: 1px solid #dfe2e5;
+      }
+      table tr {
+        background-color: #fff;
+        border-top: 1px solid #c6cbd1;
+      }
+      table tr:nth-child(2n) {
+        background-color: #f6f8fa;
+      }
+      table th {
+        font-weight: 600;
+        background-color: #f6f8fa;
+      }
+      .align-left {
+        text-align: left;
+      }
+      .align-center {
+        text-align: center;
+      }
+      .align-right {
+        text-align: right;
+      }
+      
+      /* 水平线样式 */
+      hr {
+        height: 0.25em;
+        padding: 0;
+        margin: 24px 0;
+        background-color: #e1e4e8;
+        border: 0;
+      }
+      
+      /* 差异标记样式 */
+      ins {
+        background-color: #e6ffec;
+        color: #24292e;
+        text-decoration: none;
+        border-radius: 2px;
+        padding: 0 2px;
+      }
+      
+      del {
+        background-color: #ffebe9;
+        color: #24292e;
+        text-decoration: line-through;
+        border-radius: 2px;
+        padding: 0 2px;
+      }
+
+      ins.diff-block, del.diff-block {
+        display: block;
+        padding-left: 10px;
+        border-left-width: 3px;
+        border-left-style: solid;
+      }
+      
+      ins.diff-block {
+        border-left-color: #2cbe4e;
+      }
+      
+      del.diff-block {
+        border-left-color: #cb2431;
+      }
+
+      ins > hr, ins > pre.code {
+        background-color: #e6ffec;
+      }
+
+      del > hr, del > pre.code {
+        background-color: #ffebe9;
+      }
+      
+      /* 列表项差异样式 */
+      li.list-item-ins, li[data-diff="ins"] {
+        background-color: #e6ffec;
+        border-radius: 2px;
+      }
+      
+      li.list-item-del, li[data-diff="del"] {
+        background-color: #ffebe9;
+        border-radius: 2px;
+        text-decoration: line-through;
+      }
+    </style>
+  </head><body><div class="markdown-content"><h1 class="heading-1">空白处理测试</h1><h2 class="heading-2">1. 空格变化</h2><h3 class="heading-3">1.1 单词间空格</h3><p class="paragraph">这是一个普通的句子，单词之间有一个空格。</p><p class="paragraph">这是一个  有些单词之间  有多个空格  的句子。</p><h3 class="heading-3">1.2 行首空格</h3><p class="paragraph">普通行，没有行首空格。
+这行有一个行首空格。
+这行有两个行首空格。
+这行有三个行首空格。
+这行有四个行首空格。</p><h3 class="heading-3">1.3 行尾空格</h3><p class="paragraph">这行没有行尾空格。
+这行有一个行尾空格。
+这行有两个行尾空格。这行有三个行尾空格。这行有四个行尾空格。</p><h2 class="heading-2">2. 空行变化</h2><h3 class="heading-3">2.1 无空行</h3><p class="paragraph">这是第一段。
+这是第二段。
+这是第三段。</p><h3 class="heading-3">2.2 单空行</h3><p class="paragraph">这是第一段。</p><p class="paragraph">这是第二段。</p><p class="paragraph">这是第三段。</p><h3 class="heading-3">2.3 多空行</h3><p class="paragraph">这是第一段。</p><p class="paragraph">这是第二段。</p><p class="paragraph">这是第三段。</p><h2 class="heading-2">3. 制表符</h2><h3 class="heading-3">3.1 制表符缩进</h3><p class="paragraph">普通行，没有缩进。
+这行使用一个制表符缩进。
+这行使用两个制表符缩进。
+这行使用三个制表符缩进。
+这行使用四个制表符缩进。</p><h3 class="heading-3">3.2 混合空格和制表符</h3><p class="paragraph">普通行，没有缩进。
+这行使用一个空格和一个制表符。
+这行使用一个制表符和一个空格。
+这行使用一个空格、一个制表符和一个空格。
+这行使用一个制表符、一个空格和一个制表符。</p><h2 class="heading-2">4. 代码块中的空白</h2><h3 class="heading-3">4.1 缩进代码块</h3><code class="code">这是一个缩进代码块的第一行。
+这是第二行，保持相同缩进。
+这是第三行，保持相同缩进。</code><h3 class="heading-3">4.2 围栏代码块</h3><code class="code">这是一个围栏代码块的第一行。
+  这是第二行，有两个空格缩进。
+    这是第三行，有四个空格缩进。
+	这是第四行，有一个制表符缩进。
+  	这是第五行，有两个空格和一个制表符缩进。</code><h2 class="heading-2">5. 列表中的空白</h2><h3 class="heading-3">5.1 无序列表缩进</h3><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">第一级列表项</p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">第二级列表项</p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">第三级列表项</p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">第四级列表项</p></li></ul></li></ul></li></ul></li><li value="2" class="list-item"><p class="paragraph">另一个第一级列表项</p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">第二级列表项</p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">第三级列表项</p></li></ul></li></ul></li></ul><h3 class="heading-3">5.2 有序列表缩进</h3><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph">第一级有序列表</p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph">第二级有序列表</p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph">第三级有序列表</p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph">第四级有序列表</p></li></ol></li></ol></li></ol></li><li value="2" class="list-item"><p class="paragraph">另一个第一级有序列表</p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph">第二级有序列表</p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph">第三级有序列表</p></li></ol></li></ol></li></ol><h3 class="heading-3">5.3 混合列表缩进</h3><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">第一级无序列表</p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph">第二级有序列表</p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">第三级无序列表</p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph">第四级有序列表</p></li></ol></li></ul></li></ol></li><li value="2" class="list-item"><p class="paragraph">另一个第一级无序列表</p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph">第二级有序列表</p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">第三级无序列表</p></li></ul></li></ol></li></ul><h2 class="heading-2">6. 表格中的空白</h2><h3 class="heading-3">6.1 紧凑表格</h3><table class="markdown-table"><tr class="table-row"><td class="table-cell">列1</td><td class="table-cell">列2</td><td class="table-cell">列3</td></tr><tr class="table-row"><td class="table-cell">数据1</td><td class="table-cell">数据2</td><td class="table-cell">数据3</td></tr><tr class="table-row"><td class="table-cell">数据4</td><td class="table-cell">数据5</td><td class="table-cell">数据6</td></tr></table><h3 class="heading-3">6.2 宽松表格</h3><table class="markdown-table"><tr class="table-row"><td class="table-cell">列1</td><td class="table-cell">列2</td><td class="table-cell">列3</td></tr><tr class="table-row"><td class="table-cell">数据1</td><td class="table-cell">数据2</td><td class="table-cell">数据3</td></tr><tr class="table-row"><td class="table-cell">数据4</td><td class="table-cell">数据5</td><td class="table-cell">数据6</td></tr></table><h3 class="heading-3">6.3 不规则表格</h3><table class="markdown-table"><tr class="table-row"><td class="table-cell">列1</td><td class="table-cell">列2</td><td class="table-cell">列3</td></tr><tr class="table-row"><td class="table-cell">数据1</td><td class="table-cell">数据2</td><td class="table-cell">数据3</td></tr><tr class="table-row"><td class="table-cell">数据4</td><td class="table-cell">数据5</td><td class="table-cell">数据6</td></tr></table><h2 class="heading-2">7. 引用中的空白</h2><h3 class="heading-3">7.1 普通引用</h3><blockquote ><p class="paragraph">这是一个普通的引用。
+这是引用的第二行。
+这是引用的第三行。</p></blockquote><h3 class="heading-3">7.2 带缩进的引用</h3><blockquote ><p class="paragraph">这是一个普通的引用。
+这行在引用中有额外缩进。
+这行在引用中有更多缩进。</p></blockquote><h3 class="heading-3">7.3 嵌套引用</h3><blockquote ><p class="paragraph">这是第一级引用。</p><blockquote ><p class="paragraph">这是第二级引用。</p><blockquote ><p class="paragraph">这是第三级引用。</p></blockquote></blockquote></blockquote><h2 class="heading-2">8. 总结</h2><p class="paragraph">这个文档包含了各种空白字符的使用情况，用于测试 Markdown 差异比较工具处理空白字符的能力。</p></div></body></html>

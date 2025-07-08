@@ -7,16 +7,20 @@
       "children": [
         {
           "type": "text",
-          "value": "标题"
+          "value": "标题",
+          "data": {},
+          "children": []
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "paragraph",
       "children": [
         {
           "type": "text",
-          "value": "这是第"
+          "value": "这是第",
+          "data": {}
         },
         {
           "type": "inlineDel",
@@ -40,7 +44,8 @@
         },
         {
           "type": "text",
-          "value": "版内容"
+          "value": "版内容",
+          "data": {}
         },
         {
           "type": "inlineIns",
@@ -54,9 +59,11 @@
         },
         {
           "type": "text",
-          "value": "。"
+          "value": "。",
+          "data": {}
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "list",
@@ -74,11 +81,14 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "列表项1"
+                  "value": "列表项1",
+                  "data": {},
+                  "children": []
                 }
               ]
             }
-          ]
+          ],
+          "data": {}
         },
         {
           "type": "listItem",
@@ -90,35 +100,36 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "列表项2"
-                }
-              ]
-            }
-          ],
-          "data": {
-            "diff": "del"
-          }
-        },
-        {
-          "type": "listItem",
-          "spread": false,
-          "checked": null,
-          "children": [
-            {
-              "type": "paragraph",
-              "children": [
+                  "value": "列表项",
+                  "data": {}
+                },
                 {
-                  "type": "text",
-                  "value": "列表项3"
+                  "type": "inlineDel",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "2",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "inlineIns",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "3",
+                      "data": {}
+                    }
+                  ]
                 }
               ]
             }
           ],
-          "data": {
-            "diff": "ins"
-          }
+          "data": {}
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "del",
@@ -128,6 +139,22 @@
           "lang": "ts",
           "meta": null,
           "value": "const a = 1;",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "del",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "$$a=1$$",
+              "data": {}
+            }
+          ],
           "data": {}
         }
       ]
@@ -143,21 +170,7 @@
           "data": {}
         }
       ]
-    },
-    {
-      "type": "del",
-      "children": [
-        {
-          "type": "paragraph",
-          "children": [
-            {
-              "type": "text",
-              "value": "$$a=1$$"
-            }
-          ],
-          "data": {}
-        }
-      ]
     }
-  ]
+  ],
+  "data": {}
 }

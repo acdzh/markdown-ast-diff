@@ -2,19 +2,36 @@
   "type": "root",
   "children": [
     {
-      "type": "heading",
-      "depth": 1,
+      "type": "del",
       "children": [
         {
-          "type": "text",
-          "value": "修改后的",
-          "data": {
-            "diff": "ins"
-          }
-        },
+          "type": "heading",
+          "depth": 1,
+          "children": [
+            {
+              "type": "text",
+              "value": "一级标题",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
         {
-          "type": "text",
-          "value": "一级标题"
+          "type": "heading",
+          "depth": 1,
+          "children": [
+            {
+              "type": "text",
+              "value": "修改后的一级标题",
+              "data": {}
+            }
+          ],
+          "data": {}
         }
       ]
     },
@@ -24,16 +41,21 @@
       "children": [
         {
           "type": "text",
-          "value": "二级标题"
+          "value": "二级标题",
+          "data": {}
         },
         {
-          "type": "text",
-          "value": "已更新",
-          "data": {
-            "diff": "ins"
-          }
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": "已更新",
+              "data": {}
+            }
+          ]
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "heading",
@@ -41,50 +63,66 @@
       "children": [
         {
           "type": "text",
-          "value": "三级标题"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "value": "这是一些普通文本内容，增加了一些新内容。"
+          "value": "三级标题",
+          "data": {},
+          "children": []
         }
       ],
-      "data": {
-        "diff": "ins"
-      }
+      "data": {}
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "这是一些普通文本内容，增加了一些新内容。",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ]
     },
     {
       "type": "heading",
       "depth": 4,
       "children": [
         {
-          "type": "text",
-          "value": "新增的",
-          "data": {
-            "diff": "ins"
-          }
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": "新增的",
+              "data": {}
+            }
+          ]
         },
         {
           "type": "text",
-          "value": "四级标题"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "value": "这是一些普通文本内容。"
+          "value": "四级标题",
+          "data": {}
         }
       ],
-      "data": {
-        "diff": "del"
-      }
+      "data": {}
+    },
+    {
+      "type": "del",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "这是一些普通文本内容。",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ]
     },
     {
       "type": "heading",
@@ -92,9 +130,12 @@
       "children": [
         {
           "type": "text",
-          "value": "五级标题"
+          "value": "五级标题",
+          "data": {},
+          "children": []
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "heading",
@@ -102,16 +143,22 @@
       "children": [
         {
           "type": "text",
-          "value": "六级标题"
+          "value": "六级标题",
+          "data": {}
         },
         {
-          "type": "text",
-          "value": "已修改",
-          "data": {
-            "diff": "ins"
-          }
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": "已修改",
+              "data": {}
+            }
+          ]
         }
-      ]
+      ],
+      "data": {}
     }
-  ]
+  ],
+  "data": {}
 }

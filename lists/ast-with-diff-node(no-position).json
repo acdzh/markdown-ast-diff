@@ -2,22 +2,36 @@
   "type": "root",
   "children": [
     {
-      "type": "heading",
-      "depth": 1,
+      "type": "del",
       "children": [
         {
-          "type": "text",
-          "value": "列表示例"
-        },
-        {
-          "type": "inlineIns",
+          "type": "heading",
+          "depth": 1,
           "children": [
             {
               "type": "text",
-              "value": "（更新版）",
+              "value": "列表示例",
               "data": {}
             }
-          ]
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 1,
+          "children": [
+            {
+              "type": "text",
+              "value": "列表示例（更新版）",
+              "data": {}
+            }
+          ],
+          "data": {}
         }
       ]
     },
@@ -27,9 +41,12 @@
       "children": [
         {
           "type": "text",
-          "value": "无序列表"
+          "value": "无序列表",
+          "data": {},
+          "children": []
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "list",
@@ -47,30 +64,14 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "项目 1"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "listItem",
-          "spread": false,
-          "checked": null,
-          "children": [
-            {
-              "type": "paragraph",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "项目 2"
+                  "value": "项目 1",
+                  "data": {},
+                  "children": []
                 }
               ]
             }
           ],
-          "data": {
-            "diff": "del"
-          }
+          "data": {}
         },
         {
           "type": "listItem",
@@ -81,15 +82,34 @@
               "type": "paragraph",
               "children": [
                 {
+                  "type": "inlineIns",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "新增",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
                   "type": "text",
-                  "value": "新增项目"
+                  "value": "项目",
+                  "data": {}
+                },
+                {
+                  "type": "inlineDel",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " 2",
+                      "data": {}
+                    }
+                  ]
                 }
               ]
             }
           ],
-          "data": {
-            "diff": "ins"
-          }
+          "data": {}
         },
         {
           "type": "listItem",
@@ -101,9 +121,12 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "项目 3"
+                  "value": "项目 3",
+                  "data": {},
+                  "children": []
                 }
-              ]
+              ],
+              "data": {}
             },
             {
               "type": "list",
@@ -121,11 +144,14 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "子项目 3.1"
+                          "value": "子项目 3.1",
+                          "data": {},
+                          "children": []
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "data": {}
                 },
                 {
                   "type": "listItem",
@@ -137,54 +163,15 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "子项目 3.2"
+                          "value": "新增子项目",
+                          "data": {}
                         }
                       ]
                     }
-                  ]
-                }
-              ]
-            }
-          ],
-          "data": {
-            "diff": "del"
-          }
-        },
-        {
-          "type": "listItem",
-          "spread": false,
-          "checked": null,
-          "children": [
-            {
-              "type": "paragraph",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "项目 3"
-                }
-              ]
-            },
-            {
-              "type": "list",
-              "ordered": false,
-              "start": null,
-              "spread": false,
-              "children": [
-                {
-                  "type": "listItem",
-                  "spread": false,
-                  "checked": null,
-                  "children": [
-                    {
-                      "type": "paragraph",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "子项目 3.1"
-                        }
-                      ]
-                    }
-                  ]
+                  ],
+                  "data": {
+                    "diff": "ins"
+                  }
                 },
                 {
                   "type": "listItem",
@@ -196,74 +183,61 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "新增子项目"
+                          "value": "子项目 3.2",
+                          "data": {},
+                          "children": []
                         }
                       ]
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "项目 ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineDel",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "4",
+                      "data": {}
                     }
                   ]
                 },
                 {
-                  "type": "listItem",
-                  "spread": false,
-                  "checked": null,
+                  "type": "inlineIns",
                   "children": [
                     {
-                      "type": "paragraph",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "子项目 3.2"
-                        }
-                      ]
+                      "type": "text",
+                      "value": "5",
+                      "data": {}
                     }
                   ]
                 }
               ]
             }
           ],
-          "data": {
-            "diff": "ins"
-          }
-        },
-        {
-          "type": "listItem",
-          "spread": false,
-          "checked": null,
-          "children": [
-            {
-              "type": "paragraph",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "项目 4"
-                }
-              ]
-            }
-          ],
-          "data": {
-            "diff": "del"
-          }
-        },
-        {
-          "type": "listItem",
-          "spread": false,
-          "checked": null,
-          "children": [
-            {
-              "type": "paragraph",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "项目 5"
-                }
-              ]
-            }
-          ],
-          "data": {
-            "diff": "ins"
-          }
+          "data": {}
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "heading",
@@ -271,9 +245,12 @@
       "children": [
         {
           "type": "text",
-          "value": "有序列表"
+          "value": "有序列表",
+          "data": {},
+          "children": []
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "list",
@@ -291,7 +268,8 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "第一步"
+                  "value": "第一步",
+                  "data": {}
                 }
               ]
             }
@@ -310,7 +288,8 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "第一步（已修改）"
+                  "value": "第一步（已修改）",
+                  "data": {}
                 }
               ]
             }
@@ -329,11 +308,14 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "第二步"
+                  "value": "第二步",
+                  "data": {},
+                  "children": []
                 }
               ]
             }
-          ]
+          ],
+          "data": {}
         },
         {
           "type": "listItem",
@@ -345,9 +327,32 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "第三步"
+                  "value": "新增步骤",
+                  "data": {}
                 }
               ]
+            }
+          ],
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "第三步",
+                  "data": {},
+                  "children": []
+                }
+              ],
+              "data": {}
             },
             {
               "type": "list",
@@ -365,11 +370,14 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "子步骤 3.1"
+                          "value": "子步骤 3.1",
+                          "data": {},
+                          "children": []
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "data": {}
                 },
                 {
                   "type": "listItem",
@@ -381,92 +389,14 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "子步骤 3.2"
+                          "value": "子步骤 3.2",
+                          "data": {},
+                          "children": []
                         }
                       ]
                     }
-                  ]
-                }
-              ]
-            }
-          ],
-          "data": {
-            "diff": "del"
-          }
-        },
-        {
-          "type": "listItem",
-          "spread": false,
-          "checked": null,
-          "children": [
-            {
-              "type": "paragraph",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "新增步骤"
-                }
-              ]
-            }
-          ],
-          "data": {
-            "diff": "ins"
-          }
-        },
-        {
-          "type": "listItem",
-          "spread": false,
-          "checked": null,
-          "children": [
-            {
-              "type": "paragraph",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "第四步"
-                }
-              ]
-            }
-          ],
-          "data": {
-            "diff": "del"
-          }
-        },
-        {
-          "type": "listItem",
-          "spread": false,
-          "checked": null,
-          "children": [
-            {
-              "type": "paragraph",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "第三步"
-                }
-              ]
-            },
-            {
-              "type": "list",
-              "ordered": true,
-              "start": 1,
-              "spread": false,
-              "children": [
-                {
-                  "type": "listItem",
-                  "spread": false,
-                  "checked": null,
-                  "children": [
-                    {
-                      "type": "paragraph",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "子步骤 3.1"
-                        }
-                      ]
-                    }
-                  ]
+                  ],
+                  "data": {}
                 },
                 {
                   "type": "listItem",
@@ -478,34 +408,21 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "子步骤 3.2"
+                          "value": "新增子步骤",
+                          "data": {}
                         }
                       ]
                     }
-                  ]
-                },
-                {
-                  "type": "listItem",
-                  "spread": false,
-                  "checked": null,
-                  "children": [
-                    {
-                      "type": "paragraph",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "新增子步骤"
-                        }
-                      ]
-                    }
-                  ]
+                  ],
+                  "data": {
+                    "diff": "ins"
+                  }
                 }
-              ]
+              ],
+              "data": {}
             }
           ],
-          "data": {
-            "diff": "ins"
-          }
+          "data": {}
         },
         {
           "type": "listItem",
@@ -517,16 +434,17 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "第四步"
+                  "value": "第四步",
+                  "data": {},
+                  "children": []
                 }
               ]
             }
           ],
-          "data": {
-            "diff": "ins"
-          }
+          "data": {}
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "heading",
@@ -534,9 +452,12 @@
       "children": [
         {
           "type": "text",
-          "value": "任务列表"
+          "value": "任务列表",
+          "data": {},
+          "children": []
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "list",
@@ -554,7 +475,8 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "待办任务 1"
+                  "value": "待办任务 1",
+                  "data": {}
                 }
               ]
             }
@@ -573,7 +495,8 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "待办任务 1（已完成）"
+                  "value": "待办任务 1（已完成）",
+                  "data": {}
                 }
               ]
             }
@@ -592,30 +515,14 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "已完成任务 2"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "listItem",
-          "spread": false,
-          "checked": false,
-          "children": [
-            {
-              "type": "paragraph",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "待办任务 3"
+                  "value": "已完成任务 2",
+                  "data": {},
+                  "children": []
                 }
               ]
             }
           ],
-          "data": {
-            "diff": "del"
-          }
+          "data": {}
         },
         {
           "type": "listItem",
@@ -627,7 +534,8 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "新增待办任务"
+                  "value": "新增待办任务",
+                  "data": {}
                 }
               ]
             }
@@ -646,16 +554,18 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "待办任务 3"
+                  "value": "待办任务 3",
+                  "data": {},
+                  "children": []
                 }
               ]
             }
           ],
-          "data": {
-            "diff": "ins"
-          }
+          "data": {}
         }
-      ]
+      ],
+      "data": {}
     }
-  ]
+  ],
+  "data": {}
 }

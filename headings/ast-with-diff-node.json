@@ -2,36 +2,86 @@
   "type": "root",
   "children": [
     {
-      "type": "heading",
-      "depth": 1,
+      "type": "del",
       "children": [
         {
-          "type": "inlineIns",
+          "type": "heading",
+          "depth": 1,
           "children": [
             {
               "type": "text",
-              "value": "修改后的",
+              "value": "一级标题",
+              "position": {
+                "start": {
+                  "line": 1,
+                  "column": 3,
+                  "offset": 2
+                },
+                "end": {
+                  "line": 1,
+                  "column": 7,
+                  "offset": 6
+                }
+              },
               "data": {}
             }
-          ]
-        },
+          ],
+          "position": {
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 7,
+              "offset": 6
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
         {
-          "type": "text",
-          "value": "一级标题"
+          "type": "heading",
+          "depth": 1,
+          "children": [
+            {
+              "type": "text",
+              "value": "修改后的一级标题",
+              "position": {
+                "start": {
+                  "line": 1,
+                  "column": 3,
+                  "offset": 2
+                },
+                "end": {
+                  "line": 1,
+                  "column": 11,
+                  "offset": 10
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 11,
+              "offset": 10
+            }
+          },
+          "data": {}
         }
-      ],
-      "position": {
-        "start": {
-          "line": 1,
-          "column": 1,
-          "offset": 0
-        },
-        "end": {
-          "line": 1,
-          "column": 11,
-          "offset": 10
-        }
-      }
+      ]
     },
     {
       "type": "heading",
@@ -39,7 +89,8 @@
       "children": [
         {
           "type": "text",
-          "value": "二级标题"
+          "value": "二级标题",
+          "data": {}
         },
         {
           "type": "inlineIns",
@@ -63,7 +114,8 @@
           "column": 11,
           "offset": 22
         }
-      }
+      },
+      "data": {}
     },
     {
       "type": "heading",
@@ -83,7 +135,9 @@
               "column": 9,
               "offset": 32
             }
-          }
+          },
+          "data": {},
+          "children": []
         }
       ],
       "position": {
@@ -97,7 +151,8 @@
           "column": 9,
           "offset": 32
         }
-      }
+      },
+      "data": {}
     },
     {
       "type": "ins",
@@ -119,7 +174,8 @@
                   "column": 21,
                   "offset": 54
                 }
-              }
+              },
+              "data": {}
             }
           ],
           "position": {
@@ -154,7 +210,8 @@
         },
         {
           "type": "text",
-          "value": "四级标题"
+          "value": "四级标题",
+          "data": {}
         }
       ],
       "position": {
@@ -168,7 +225,8 @@
           "column": 13,
           "offset": 68
         }
-      }
+      },
+      "data": {}
     },
     {
       "type": "del",
@@ -190,7 +248,8 @@
                   "column": 12,
                   "offset": 49
                 }
-              }
+              },
+              "data": {}
             }
           ],
           "position": {
@@ -227,7 +286,9 @@
               "column": 11,
               "offset": 80
             }
-          }
+          },
+          "data": {},
+          "children": []
         }
       ],
       "position": {
@@ -241,7 +302,8 @@
           "column": 11,
           "offset": 80
         }
-      }
+      },
+      "data": {}
     },
     {
       "type": "heading",
@@ -249,7 +311,8 @@
       "children": [
         {
           "type": "text",
-          "value": "六级标题"
+          "value": "六级标题",
+          "data": {}
         },
         {
           "type": "inlineIns",
@@ -273,7 +336,21 @@
           "column": 15,
           "offset": 96
         }
-      }
+      },
+      "data": {}
     }
-  ]
+  ],
+  "position": {
+    "start": {
+      "line": 1,
+      "column": 1,
+      "offset": 0
+    },
+    "end": {
+      "line": 13,
+      "column": 15,
+      "offset": 96
+    }
+  },
+  "data": {}
 }

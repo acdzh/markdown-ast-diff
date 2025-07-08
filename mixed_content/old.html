@@ -1,0 +1,236 @@
+<html><head>
+    <style>
+      /* 基本样式 */
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      
+      /* 标题样式 */
+      h1, h2, h3, h4, h5, h6 {
+        margin-top: 1.5em;
+        margin-bottom: 0.5em;
+        font-weight: 600;
+        line-height: 1.25;
+      }
+      h1 { font-size: 2em; border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; }
+      h2 { font-size: 1.5em; border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; }
+      h3 { font-size: 1.25em; }
+      h4 { font-size: 1em; }
+      h5 { font-size: 0.875em; }
+      h6 { font-size: 0.85em; color: #6a737d; }
+      
+      /* 段落样式 */
+      p {
+        margin-top: 0;
+        margin-bottom: 16px;
+      }
+      
+      /* 链接样式 */
+      a {
+        color: #0366d6;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      
+      /* 列表样式 */
+      ul, ol {
+        padding-left: 2em;
+        margin-top: 0;
+        margin-bottom: 16px;
+      }
+      li {
+        margin-bottom: 0.25em;
+      }
+      
+      /* 代码样式 */
+      code {
+        font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+        padding: 0.2em 0.4em;
+        margin: 0;
+        font-size: 85%;
+        background-color: rgba(27, 31, 35, 0.05);
+        border-radius: 3px;
+      }
+      pre {
+        font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+        padding: 16px;
+        overflow: auto;
+        font-size: 85%;
+        line-height: 1.45;
+        background-color: #f6f8fa;
+        border-radius: 3px;
+        margin-top: 0;
+        margin-bottom: 16px;
+      }
+      pre code {
+        padding: 0;
+        margin: 0;
+        background-color: transparent;
+        border: 0;
+      }
+      
+      /* 引用样式 */
+      blockquote {
+        padding: 0 1em;
+        color: #6a737d;
+        border-left: 0.25em solid #dfe2e5;
+        margin: 0 0 16px 0;
+      }
+      
+      /* 表格样式 */
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 16px;
+        display: block;
+        overflow-x: auto;
+      }
+      table th, table td {
+        padding: 6px 13px;
+        border: 1px solid #dfe2e5;
+      }
+      table tr {
+        background-color: #fff;
+        border-top: 1px solid #c6cbd1;
+      }
+      table tr:nth-child(2n) {
+        background-color: #f6f8fa;
+      }
+      table th {
+        font-weight: 600;
+        background-color: #f6f8fa;
+      }
+      .align-left {
+        text-align: left;
+      }
+      .align-center {
+        text-align: center;
+      }
+      .align-right {
+        text-align: right;
+      }
+      
+      /* 水平线样式 */
+      hr {
+        height: 0.25em;
+        padding: 0;
+        margin: 24px 0;
+        background-color: #e1e4e8;
+        border: 0;
+      }
+      
+      /* 差异标记样式 */
+      ins {
+        background-color: #e6ffec;
+        color: #24292e;
+        text-decoration: none;
+        border-radius: 2px;
+        padding: 0 2px;
+      }
+      
+      del {
+        background-color: #ffebe9;
+        color: #24292e;
+        text-decoration: line-through;
+        border-radius: 2px;
+        padding: 0 2px;
+      }
+
+      ins.diff-block, del.diff-block {
+        display: block;
+        padding-left: 10px;
+        border-left-width: 3px;
+        border-left-style: solid;
+      }
+      
+      ins.diff-block {
+        border-left-color: #2cbe4e;
+      }
+      
+      del.diff-block {
+        border-left-color: #cb2431;
+      }
+
+      ins > hr, ins > pre.code {
+        background-color: #e6ffec;
+      }
+
+      del > hr, del > pre.code {
+        background-color: #ffebe9;
+      }
+      
+      /* 列表项差异样式 */
+      li.list-item-ins, li[data-diff="ins"] {
+        background-color: #e6ffec;
+        border-radius: 2px;
+      }
+      
+      li.list-item-del, li[data-diff="del"] {
+        background-color: #ffebe9;
+        border-radius: 2px;
+        text-decoration: line-through;
+      }
+    </style>
+  </head><body><div class="markdown-content"><h1 class="heading-1">混合内容测试</h1><h2 class="heading-2">1. 列表中嵌入其他元素</h2><h3 class="heading-3">1.1 列表中嵌入代码块</h3><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">第一个列表项</p></li><li value="2" class="list-item"><p class="paragraph">第二个列表项，包含代码块：</p><pre class="code" data-language="javascript"><code>function example() {
+  console.log(&#39;这是嵌入在列表中的代码块&#39;);
+  return true;
+}</code></pre></li><li value="3" class="list-item"><p class="paragraph">第三个列表项</p></li></ul><h3 class="heading-3">1.2 列表中嵌入表格</h3><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph">第一个有序列表项</p></li><li value="2" class="list-item"><p class="paragraph">第二个有序列表项，包含表格：</p><table class="markdown-table"><tr class="table-row"><td class="table-cell">列1</td><td class="table-cell">列2</td><td class="table-cell">列3</td></tr><tr class="table-row"><td class="table-cell">数据1</td><td class="table-cell">数据2</td><td class="table-cell">数据3</td></tr><tr class="table-row"><td class="table-cell">数据4</td><td class="table-cell">数据5</td><td class="table-cell">数据6</td></tr></table></li><li value="3" class="list-item"><p class="paragraph">第三个有序列表项</p></li></ol><h3 class="heading-3">1.3 列表中嵌入引用</h3><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">第一个列表项</p></li><li value="2" class="list-item"><p class="paragraph">第二个列表项，包含引用：</p><blockquote ><p class="paragraph">这是嵌入在列表项中的引用。
+引用的第二行。</p></blockquote></li><li value="3" class="list-item"><p class="paragraph">第三个列表项</p></li></ul><h3 class="heading-3">1.4 列表中嵌入图片和链接</h3><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">第一个列表项</p></li><li value="2" class="list-item"><p class="paragraph">第二个列表项，包含链接和图片：
+这是一个<a href="https://example.com" title="null">链接</a>，这是一个图片：
+<img src="https://example.com/image.jpg" alt="示例图片" title="null" /></p></li><li value="3" class="list-item"><p class="paragraph">第三个列表项</p></li></ul><h2 class="heading-2">2. 引用中嵌入其他元素</h2><h3 class="heading-3">2.1 引用中嵌入代码块</h3><blockquote ><p class="paragraph">这是引用的第一行。</p><pre class="code" data-language="python"><code>def example():
+    print(&quot;这是嵌入在引用中的代码块&quot;)
+    return True</code></pre><p class="paragraph">这是引用的最后一行。</p></blockquote><h3 class="heading-3">2.2 引用中嵌入列表</h3><blockquote ><p class="paragraph">这是引用的第一行。</p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">这是嵌入在引用中的列表项1</p></li><li value="2" class="list-item"><p class="paragraph">这是嵌入在引用中的列表项2</p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">这是嵌套的列表项</p></li></ul></li><li value="3" class="list-item"><p class="paragraph">这是嵌入在引用中的列表项3</p></li></ul><p class="paragraph">这是引用的最后一行。</p></blockquote><h3 class="heading-3">2.3 引用中嵌入表格</h3><blockquote ><p class="paragraph">这是引用的第一行。</p><table class="markdown-table"><tr class="table-row"><td class="table-cell">列1</td><td class="table-cell">列2</td><td class="table-cell">列3</td></tr><tr class="table-row"><td class="table-cell">数据1</td><td class="table-cell">数据2</td><td class="table-cell">数据3</td></tr><tr class="table-row"><td class="table-cell">数据4</td><td class="table-cell">数据5</td><td class="table-cell">数据6</td></tr></table><p class="paragraph">这是引用的最后一行。</p></blockquote><h3 class="heading-3">2.4 嵌套引用中的混合内容</h3><blockquote ><p class="paragraph">这是第一级引用。</p><blockquote ><p class="paragraph">这是第二级引用，包含列表：</p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph">第一个列表项</p></li><li value="2" class="list-item"><p class="paragraph">第二个列表项，包含代码：<code >const x = 10;</code></p></li><li value="3" class="list-item"><p class="paragraph">第三个列表项</p></li></ol></blockquote><p class="paragraph">回到第一级引用。</p></blockquote><h2 class="heading-2">3. 表格中的复杂内容</h2><h3 class="heading-3">3.1 表格中的格式化文本</h3><table class="markdown-table"><tr class="table-row"><td class="table-cell">标题</td><td class="table-cell">描述</td><td class="table-cell">示例</td></tr><tr class="table-row"><td class="table-cell">粗体和斜体</td><td class="table-cell">文本可以<strong class="strong">加粗</strong>或<em class="emphasis">倾斜</em></td><td class="table-cell"><strong class="strong">重要信息</strong>和<em class="emphasis">补充说明</em></td></tr><tr class="table-row"><td class="table-cell">代码</td><td class="table-cell">可以包含<code >行内代码</code></td><td class="table-cell"><code >const x = 10;</code></td></tr><tr class="table-row"><td class="table-cell">链接</td><td class="table-cell">可以包含<a href="https://example.com" title="null">链接</a></td><td class="table-cell">点击<a href="https://example.com" title="null">这里</a>查看详情</td></tr></table><h3 class="heading-3">3.2 表格中的列表</h3><table class="markdown-table"><tr class="table-row"><td class="table-cell">类型</td><td class="table-cell">内容</td><td class="table-cell">备注</td></tr><tr class="table-row"><td class="table-cell">无序列表</td><td class="table-cell"><div ><ul></div><div ><li></div>项目1<div ></li></div><div ><li></div>项目2<div ></li></div><div ><li></div>项目3<div ></li></div><div ></ul></div></td><td class="table-cell">使用HTML标签</td></tr><tr class="table-row"><td class="table-cell">有序列表</td><td class="table-cell"><div ><ol></div><div ><li></div>第一步<div ></li></div><div ><li></div>第二步<div ></li></div><div ><li></div>第三步<div ></li></div><div ></ol></div></td><td class="table-cell">使用HTML标签</td></tr></table><h2 class="heading-2">4. 代码块中的特殊情况</h2><h3 class="heading-3">4.1 代码块中包含Markdown语法</h3><pre class="code" data-language="markdown"><code># 这是代码块中的Markdown标题
+
+- 这是代码块中的列表项1
+- 这是代码块中的列表项2
+
+&gt; 这是代码块中的引用
+
+| 列1 | 列2 |
+| --- | --- |
+| 数据1 | 数据2 |</code></pre><h3 class="heading-3">4.2 代码块中包含围栏字符</h3><code class="code">```
+这是代码块中的代码块
+```</code><h2 class="heading-2">5. 复杂嵌套结构</h2><h3 class="heading-3">5.1 多层嵌套列表中的混合内容</h3><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">第一级列表项</p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">第二级列表项</p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">第三级列表项，包含代码块：</p><pre class="code" data-language="javascript"><code>function nestedExample() {
+  return &#39;这是深度嵌套的代码&#39;;
+}</code></pre></li><li value="2" class="list-item"><p class="paragraph">另一个第三级列表项，包含表格：</p><table class="markdown-table"><tr class="table-row"><td class="table-cell">列1</td><td class="table-cell">列2</td></tr><tr class="table-row"><td class="table-cell">嵌套数据1</td><td class="table-cell">嵌套数据2</td></tr></table></li></ul></li><li value="2" class="list-item"><p class="paragraph">另一个第二级列表项，包含引用：</p><blockquote ><p class="paragraph">这是嵌套在列表中的引用。</p><p class="paragraph">引用中包含代码：<code >const y = 20;</code></p></blockquote></li></ul></li></ul><h3 class="heading-3">5.2 表格、引用和列表的组合</h3><blockquote ><p class="paragraph">这是一个包含表格的引用：</p><table class="markdown-table"><tr class="table-row"><td class="table-cell">列1</td><td class="table-cell">列2</td></tr><tr class="table-row"><td class="table-cell">数据1</td><td class="table-cell">数据2</td></tr><tr class="table-row"><td class="table-cell">数据3</td><td class="table-cell">数据4</td></tr></table><p class="paragraph">引用中的列表：</p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph">第一个列表项</p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">嵌套的无序列表项</p></li><li value="2" class="list-item"><p class="paragraph">包含代码的列表项：<code >const z = 30;</code></p></li></ul></li><li value="2" class="list-item"><p class="paragraph">第二个列表项</p></li></ol></blockquote><h2 class="heading-2">6. HTML和Markdown混合</h2><h3 class="heading-3">6.1 HTML中嵌入Markdown</h3><div ><div style="border: 1px solid #ccc; padding: 10px;">
+  <h4>HTML容器中的Markdown内容</h4>
+  <p>
+    这里有一些<strong>加粗文本</strong>和<em>斜体文本</em>。
+  </p>
+  <p>
+    下面是Markdown列表（但在HTML中不会被解析为Markdown）：
+    - 列表项1
+    - 列表项2
+  </p>
+  <pre><code>
+  function htmlExample() {
+    return 'HTML中的代码块';
+  }
+  </code></pre>
+</div></div><h3 class="heading-3">6.2 Markdown中嵌入HTML</h3><p class="paragraph">这是普通的Markdown段落。</p><div ><table>
+  <tr>
+    <th>列1</th>
+    <th>列2</th>
+  </tr>
+  <tr>
+    <td>
+      这个单元格包含Markdown格式的**粗体文本**（但可能不会被解析）
+    </td>
+    <td>
+      这个单元格包含Markdown格式的*斜体文本*（但可能不会被解析）
+    </td>
+  </tr>
+</table></div><p class="paragraph">这是另一个普通的Markdown段落。</p><h2 class="heading-2">7. 数学公式与文本混合</h2><h3 class="heading-3">7.1 行内公式与文本</h3><p class="paragraph">这个段落包含行内数学公式 $E = mc^2$ 和更多文本。另一个公式 $F = ma$ 也在同一行。</p><h3 class="heading-3">7.2 块级公式与文本</h3><p class="paragraph">下面是一个块级数学公式：</p><p class="paragraph">$$
+\frac{d}{dx}\left( \int_{a}^{x} f(u),du\right)=f(x)
+$$</p><p class="paragraph">公式后面的文本段落。</p><h3 class="heading-3">7.3 列表中的数学公式</h3><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">第一个列表项</p></li><li value="2" class="list-item"><p class="paragraph">包含行内公式 $a^2 + b^2 = c^2$ 的列表项</p></li><li value="3" class="list-item"><p class="paragraph">包含块级公式的列表项：
+$$
+\sum_{i=1}^{n} i = \frac{n(n+1)}{2}
+$$</p></li><li value="4" class="list-item"><p class="paragraph">最后一个列表项</p></li></ul><h2 class="heading-2">8. 总结</h2><p class="paragraph">这个文档包含了各种混合内容的情况，用于测试 Markdown 差异比较工具处理复杂混合内容的能力。</p></div></body></html>

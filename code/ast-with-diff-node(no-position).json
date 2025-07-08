@@ -2,22 +2,36 @@
   "type": "root",
   "children": [
     {
-      "type": "heading",
-      "depth": 1,
+      "type": "del",
       "children": [
         {
-          "type": "text",
-          "value": "代码示例"
-        },
-        {
-          "type": "inlineIns",
+          "type": "heading",
+          "depth": 1,
           "children": [
             {
               "type": "text",
-              "value": "（更新版）",
+              "value": "代码示例",
               "data": {}
             }
-          ]
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 1,
+          "children": [
+            {
+              "type": "text",
+              "value": "代码示例（更新版）",
+              "data": {}
+            }
+          ],
+          "data": {}
         }
       ]
     },
@@ -27,9 +41,12 @@
       "children": [
         {
           "type": "text",
-          "value": "JavaScript 代码"
+          "value": "JavaScript 代码",
+          "data": {},
+          "children": []
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "del",
@@ -61,9 +78,12 @@
       "children": [
         {
           "type": "text",
-          "value": "Python 代码"
+          "value": "Python 代码",
+          "data": {},
+          "children": []
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "del",
@@ -95,9 +115,12 @@
       "children": [
         {
           "type": "text",
-          "value": "HTML 代码"
+          "value": "HTML 代码",
+          "data": {},
+          "children": []
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "del",
@@ -123,5 +146,6 @@
         }
       ]
     }
-  ]
+  ],
+  "data": {}
 }

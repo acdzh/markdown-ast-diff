@@ -2,19 +2,36 @@
   "type": "root",
   "children": [
     {
-      "type": "heading",
-      "depth": 1,
+      "type": "del",
       "children": [
         {
-          "type": "text",
-          "value": "表格示例"
-        },
+          "type": "heading",
+          "depth": 1,
+          "children": [
+            {
+              "type": "text",
+              "value": "表格示例",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
         {
-          "type": "text",
-          "value": "（更新版）",
-          "data": {
-            "diff": "ins"
-          }
+          "type": "heading",
+          "depth": 1,
+          "children": [
+            {
+              "type": "text",
+              "value": "表格示例（更新版）",
+              "data": {}
+            }
+          ],
+          "data": {}
         }
       ]
     },
@@ -24,369 +41,451 @@
       "children": [
         {
           "type": "text",
-          "value": "简单表格"
+          "value": "简单表格",
+          "data": {},
+          "children": []
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "del",
+      "children": [
+        {
+          "type": "table",
+          "align": [
+            null,
+            null,
+            null
+          ],
+          "children": [
+            {
+              "type": "tableRow",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "姓名",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "年龄",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "职业",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableRow",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "张三",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "25",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "工程师",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableRow",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "李四",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "30",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "设计师",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableRow",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "王五",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "28",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "产品经理",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {}
         }
       ]
     },
     {
-      "type": "table",
-      "align": [
-        null,
-        null,
-        null
-      ],
+      "type": "ins",
       "children": [
         {
-          "type": "tableRow",
+          "type": "table",
+          "align": [
+            null,
+            null,
+            null,
+            null
+          ],
           "children": [
             {
-              "type": "tableCell",
+              "type": "tableRow",
               "children": [
                 {
-                  "type": "text",
-                  "value": "姓名"
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "姓名",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "年龄",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "职业",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "部门",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
                 }
-              ]
+              ],
+              "data": {}
             },
             {
-              "type": "tableCell",
+              "type": "tableRow",
               "children": [
                 {
-                  "type": "text",
-                  "value": "年龄"
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "张三",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "26",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "高级工程师",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "研发部",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
                 }
-              ]
+              ],
+              "data": {}
             },
             {
-              "type": "tableCell",
+              "type": "tableRow",
               "children": [
                 {
-                  "type": "text",
-                  "value": "职业"
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "李四",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "30",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "设计师",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "设计部",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
                 }
-              ]
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableRow",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "赵六",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "32",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "产品总监",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "产品部",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableRow",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "王五",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "28",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "产品经理",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "产品部",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
             }
-          ]
-        },
-        {
-          "type": "tableRow",
-          "children": [
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "张三"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "25"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "工程师"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "tableRow",
-          "children": [
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "李四"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "30"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "设计师"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "tableRow",
-          "children": [
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "王五"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "28"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "产品经理"
-                }
-              ]
-            }
-          ]
+          ],
+          "data": {}
         }
-      ],
-      "data": {
-        "diff": "del"
-      }
-    },
-    {
-      "type": "table",
-      "align": [
-        null,
-        null,
-        null,
-        null
-      ],
-      "children": [
-        {
-          "type": "tableRow",
-          "children": [
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "姓名"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "年龄"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "职业"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "部门"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "tableRow",
-          "children": [
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "张三"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "26"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "高级工程师"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "研发部"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "tableRow",
-          "children": [
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "李四"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "30"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "设计师"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "设计部"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "tableRow",
-          "children": [
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "赵六"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "32"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "产品总监"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "产品部"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "tableRow",
-          "children": [
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "王五"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "28"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "产品经理"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "产品部"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "data": {
-        "diff": "ins"
-      }
+      ]
     },
     {
       "type": "heading",
@@ -394,259 +493,317 @@
       "children": [
         {
           "type": "text",
-          "value": "对齐方式"
+          "value": "对齐方式",
+          "data": {},
+          "children": []
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "del",
+      "children": [
+        {
+          "type": "table",
+          "align": [
+            "left",
+            "center",
+            "right"
+          ],
+          "children": [
+            {
+              "type": "tableRow",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "左对齐",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "居中",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "右对齐",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableRow",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "内容1",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "内容2",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "内容3",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableRow",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "长文本内容",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "长文本内容",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "长文本内容",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {}
         }
       ]
     },
     {
-      "type": "table",
-      "align": [
-        "left",
-        "center",
-        "right"
-      ],
+      "type": "ins",
       "children": [
         {
-          "type": "tableRow",
+          "type": "table",
+          "align": [
+            "left",
+            "center",
+            "right"
+          ],
           "children": [
             {
-              "type": "tableCell",
+              "type": "tableRow",
               "children": [
                 {
-                  "type": "text",
-                  "value": "左对齐"
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "左对齐",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "居中",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "右对齐",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
                 }
-              ]
+              ],
+              "data": {}
             },
             {
-              "type": "tableCell",
+              "type": "tableRow",
               "children": [
                 {
-                  "type": "text",
-                  "value": "居中"
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "新内容1",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "新内容2",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "新内容3",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
                 }
-              ]
+              ],
+              "data": {}
             },
             {
-              "type": "tableCell",
+              "type": "tableRow",
               "children": [
                 {
-                  "type": "text",
-                  "value": "右对齐"
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "长文本内容已修改",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "长文本内容已修改",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "长文本内容已修改",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
                 }
-              ]
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableRow",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "新增行",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "新增行",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "新增行",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
             }
-          ]
-        },
-        {
-          "type": "tableRow",
-          "children": [
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "内容1"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "内容2"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "内容3"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "tableRow",
-          "children": [
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "长文本内容"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "长文本内容"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "长文本内容"
-                }
-              ]
-            }
-          ]
+          ],
+          "data": {}
         }
-      ],
-      "data": {
-        "diff": "del"
-      }
-    },
-    {
-      "type": "table",
-      "align": [
-        "left",
-        "center",
-        "right"
-      ],
-      "children": [
-        {
-          "type": "tableRow",
-          "children": [
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "左对齐"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "居中"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "右对齐"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "tableRow",
-          "children": [
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "新内容1"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "新内容2"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "新内容3"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "tableRow",
-          "children": [
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "长文本内容已修改"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "长文本内容已修改"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "长文本内容已修改"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "tableRow",
-          "children": [
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "新增行"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "新增行"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "新增行"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "data": {
-        "diff": "ins"
-      }
+      ]
     },
     {
       "type": "heading",
@@ -654,618 +811,755 @@
       "children": [
         {
           "type": "text",
-          "value": "复杂表格"
+          "value": "复杂表格",
+          "data": {},
+          "children": []
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "del",
+      "children": [
+        {
+          "type": "table",
+          "align": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
+          "children": [
+            {
+              "type": "tableRow",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "项目",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Q1",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Q2",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Q3",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Q4",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "总计",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableRow",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "收入",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "10,000",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "12,000",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "15,000",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "18,000",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "55,000",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableRow",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "支出",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "8,000",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "9,000",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "10,000",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "12,000",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "39,000",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableRow",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "利润",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "2,000",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "3,000",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "5,000",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "6,000",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "16,000",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {}
         }
       ]
     },
     {
-      "type": "table",
-      "align": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
+      "type": "ins",
       "children": [
         {
-          "type": "tableRow",
+          "type": "table",
+          "align": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ],
           "children": [
             {
-              "type": "tableCell",
+              "type": "tableRow",
               "children": [
                 {
-                  "type": "text",
-                  "value": "项目"
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "项目",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Q1",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Q2",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Q3",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Q4",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "总计",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "同比增长",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
                 }
-              ]
+              ],
+              "data": {}
             },
             {
-              "type": "tableCell",
+              "type": "tableRow",
               "children": [
                 {
-                  "type": "text",
-                  "value": "Q1"
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "收入",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "12,000",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "15,000",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "18,000",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "22,000",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "67,000",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "21.8%",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
                 }
-              ]
+              ],
+              "data": {}
             },
             {
-              "type": "tableCell",
+              "type": "tableRow",
               "children": [
                 {
-                  "type": "text",
-                  "value": "Q2"
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "支出",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "9,000",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "10,000",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "12,000",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "14,000",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "45,000",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "15.4%",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
                 }
-              ]
+              ],
+              "data": {}
             },
             {
-              "type": "tableCell",
+              "type": "tableRow",
               "children": [
                 {
-                  "type": "text",
-                  "value": "Q3"
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "利润",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "3,000",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "5,000",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "6,000",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "8,000",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "22,000",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "37.5%",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
                 }
-              ]
+              ],
+              "data": {}
             },
             {
-              "type": "tableCell",
+              "type": "tableRow",
               "children": [
                 {
-                  "type": "text",
-                  "value": "Q4"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "税费",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
                 {
-                  "type": "text",
-                  "value": "总计"
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "600",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "1,000",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "1,200",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "1,600",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "4,400",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "-",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
                 }
-              ]
+              ],
+              "data": {}
             }
-          ]
-        },
-        {
-          "type": "tableRow",
-          "children": [
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "收入"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "10,000"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "12,000"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "15,000"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "18,000"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "55,000"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "tableRow",
-          "children": [
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "支出"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "8,000"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "9,000"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "10,000"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "12,000"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "39,000"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "tableRow",
-          "children": [
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "利润"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "2,000"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "3,000"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "5,000"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "6,000"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "16,000"
-                }
-              ]
-            }
-          ]
+          ],
+          "data": {}
         }
-      ],
-      "data": {
-        "diff": "del"
-      }
-    },
-    {
-      "type": "table",
-      "align": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "children": [
-        {
-          "type": "tableRow",
-          "children": [
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "项目"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "Q1"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "Q2"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "Q3"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "Q4"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "总计"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "同比增长"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "tableRow",
-          "children": [
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "收入"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "12,000"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "15,000"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "18,000"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "22,000"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "67,000"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "21.8%"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "tableRow",
-          "children": [
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "支出"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "9,000"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "10,000"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "12,000"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "14,000"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "45,000"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "15.4%"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "tableRow",
-          "children": [
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "利润"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "3,000"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "5,000"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "6,000"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "8,000"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "22,000"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "37.5%"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "tableRow",
-          "children": [
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "税费"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "600"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "1,000"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "1,200"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "1,600"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "4,400"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "-"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "data": {
-        "diff": "ins"
-      }
+      ]
     }
-  ]
+  ],
+  "data": {}
 }

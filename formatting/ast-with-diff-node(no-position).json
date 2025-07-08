@@ -7,7 +7,8 @@
       "children": [
         {
           "type": "text",
-          "value": "文本格式化示例"
+          "value": "文本格式化示例",
+          "data": {}
         },
         {
           "type": "inlineIns",
@@ -19,7 +20,8 @@
             }
           ]
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "heading",
@@ -27,122 +29,65 @@
       "children": [
         {
           "type": "text",
-          "value": "基本格式"
+          "value": "基本格式",
+          "data": {},
+          "children": []
         }
-      ]
+      ],
+      "data": {}
     },
     {
-      "type": "paragraph",
+      "type": "del",
       "children": [
         {
-          "type": "inlineDel",
+          "type": "paragraph",
           "children": [
             {
               "type": "text",
               "value": "11",
               "data": {}
             }
-          ]
-        },
-        {
-          "type": "inlineIns",
-          "children": [
-            {
-              "type": "text",
-              "value": "这是",
-              "data": {}
-            }
-          ]
-        },
-        {
-          "type": "inlineIns",
-          "children": [
-            {
-              "type": "strong",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "粗体"
-                }
-              ],
-              "data": {}
-            }
-          ]
-        },
-        {
-          "type": "inlineIns",
-          "children": [
-            {
-              "type": "text",
-              "value": "文本和",
-              "data": {}
-            }
-          ]
-        },
-        {
-          "type": "inlineIns",
-          "children": [
-            {
-              "type": "strong",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "新增的粗体"
-                }
-              ],
-              "data": {}
-            }
-          ]
-        },
-        {
-          "type": "inlineIns",
-          "children": [
-            {
-              "type": "text",
-              "value": "文本。",
-              "data": {}
-            }
-          ]
+          ],
+          "data": {}
         }
       ]
     },
     {
-      "type": "paragraph",
+      "type": "del",
       "children": [
         {
-          "type": "inlineDel",
+          "type": "paragraph",
           "children": [
             {
               "type": "text",
               "value": "22",
               "data": {}
             }
-          ]
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "这是",
+          "data": {},
+          "children": []
         },
         {
-          "type": "inlineIns",
+          "type": "strong",
           "children": [
             {
               "type": "text",
-              "value": "这是",
-              "data": {}
+              "value": "粗体",
+              "data": {},
+              "children": []
             }
-          ]
-        },
-        {
-          "type": "inlineIns",
-          "children": [
-            {
-              "type": "emphasis",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "斜体"
-                }
-              ],
-              "data": {}
-            }
-          ]
+          ],
+          "data": {}
         },
         {
           "type": "inlineIns",
@@ -158,65 +103,12 @@
           "type": "inlineIns",
           "children": [
             {
-              "type": "emphasis",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "新增的斜体"
-                }
-              ],
-              "data": {}
-            }
-          ]
-        },
-        {
-          "type": "inlineIns",
-          "children": [
-            {
-              "type": "text",
-              "value": "文本。",
-              "data": {}
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "value": "这是"
-        },
-        {
-          "type": "inlineDel",
-          "children": [
-            {
               "type": "strong",
               "children": [
                 {
                   "type": "text",
-                  "value": "粗体"
-                }
-              ],
-              "data": {}
-            }
-          ]
-        },
-        {
-          "type": "inlineIns",
-          "children": [
-            {
-              "type": "emphasis",
-              "children": [
-                {
-                  "type": "strong",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "更新的粗斜体"
-                    }
-                  ]
+                  "value": "新增的粗体",
+                  "data": {}
                 }
               ],
               "data": {}
@@ -225,9 +117,12 @@
         },
         {
           "type": "text",
-          "value": "文本。"
+          "value": "文本。",
+          "data": {},
+          "children": []
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "del",
@@ -238,7 +133,8 @@
           "children": [
             {
               "type": "text",
-              "value": "123"
+              "value": "123",
+              "data": {}
             }
           ],
           "data": {}
@@ -246,43 +142,73 @@
       ]
     },
     {
-      "type": "del",
+      "type": "paragraph",
       "children": [
         {
-          "type": "paragraph",
+          "type": "text",
+          "value": "这是",
+          "data": {},
+          "children": []
+        },
+        {
+          "type": "emphasis",
           "children": [
             {
               "type": "text",
-              "value": "这是"
-            },
+              "value": "斜体",
+              "data": {},
+              "children": []
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": "文本和",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
             {
               "type": "emphasis",
               "children": [
                 {
                   "type": "text",
-                  "value": "斜体"
+                  "value": "新增的斜体",
+                  "data": {}
                 }
-              ]
-            },
-            {
-              "type": "text",
-              "value": "文本。"
+              ],
+              "data": {}
             }
-          ],
-          "data": {}
+          ]
+        },
+        {
+          "type": "text",
+          "value": "文本。",
+          "data": {},
+          "children": []
         }
-      ]
+      ],
+      "data": {}
     },
     {
-      "type": "del",
+      "type": "paragraph",
       "children": [
         {
-          "type": "paragraph",
+          "type": "text",
+          "value": "这是",
+          "data": {},
+          "children": []
+        },
+        {
+          "type": "inlineDel",
           "children": [
-            {
-              "type": "text",
-              "value": "这是"
-            },
             {
               "type": "emphasis",
               "children": [
@@ -291,135 +217,141 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "粗斜体"
+                      "value": "粗斜体",
+                      "data": {}
                     }
-                  ]
+                  ],
+                  "data": {}
                 }
-              ]
-            },
-            {
-              "type": "text",
-              "value": "文本。"
+              ],
+              "data": {}
             }
-          ],
-          "data": {}
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "emphasis",
+              "children": [
+                {
+                  "type": "strong",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "更新的粗斜体",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "文本。",
+          "data": {},
+          "children": []
         }
-      ]
+      ],
+      "data": {}
     },
     {
-      "type": "del",
+      "type": "paragraph",
       "children": [
         {
-          "type": "paragraph",
+          "type": "text",
+          "value": "这是",
+          "data": {},
+          "children": []
+        },
+        {
+          "type": "delete",
           "children": [
             {
               "type": "text",
-              "value": "这是"
-            },
+              "value": "删除线",
+              "data": {},
+              "children": []
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": "文本和",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
             {
               "type": "delete",
               "children": [
                 {
                   "type": "text",
-                  "value": "删除线"
+                  "value": "新增的删除线",
+                  "data": {}
                 }
-              ]
-            },
-            {
-              "type": "text",
-              "value": "文本。"
+              ],
+              "data": {}
             }
-          ],
-          "data": {}
+          ]
+        },
+        {
+          "type": "text",
+          "value": "文本。",
+          "data": {},
+          "children": []
         }
-      ]
+      ],
+      "data": {}
     },
     {
-      "type": "del",
+      "type": "paragraph",
       "children": [
         {
-          "type": "paragraph",
+          "type": "text",
+          "value": "这是",
+          "data": {},
+          "children": []
+        },
+        {
+          "type": "inlineDel",
           "children": [
-            {
-              "type": "text",
-              "value": "这是"
-            },
             {
               "type": "inlineCode",
-              "value": "行内代码"
-            },
-            {
-              "type": "text",
-              "value": "。"
+              "value": "行内代码",
+              "data": {}
             }
-          ],
-          "data": {}
-        }
-      ]
-    },
-    {
-      "type": "ins",
-      "children": [
+          ]
+        },
         {
-          "type": "paragraph",
+          "type": "inlineIns",
           "children": [
-            {
-              "type": "text",
-              "value": "这是"
-            },
-            {
-              "type": "delete",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "删除线"
-                }
-              ]
-            },
-            {
-              "type": "text",
-              "value": "文本和"
-            },
-            {
-              "type": "delete",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "新增的删除线"
-                }
-              ]
-            },
-            {
-              "type": "text",
-              "value": "文本。"
-            }
-          ],
-          "data": {}
-        }
-      ]
-    },
-    {
-      "type": "ins",
-      "children": [
-        {
-          "type": "paragraph",
-          "children": [
-            {
-              "type": "text",
-              "value": "这是"
-            },
             {
               "type": "inlineCode",
-              "value": "更新的行内代码"
-            },
-            {
-              "type": "text",
-              "value": "。"
+              "value": "更新的行内代码",
+              "data": {}
             }
-          ],
-          "data": {}
+          ]
+        },
+        {
+          "type": "text",
+          "value": "。",
+          "data": {},
+          "children": []
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "heading",
@@ -427,33 +359,45 @@
       "children": [
         {
           "type": "text",
-          "value": "引用"
+          "value": "引用",
+          "data": {},
+          "children": []
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "blockquote",
       "children": [
         {
-          "type": "paragraph",
+          "type": "del",
           "children": [
             {
-              "type": "text",
-              "value": "这是"
-            },
-            {
-              "type": "inlineIns",
+              "type": "paragraph",
               "children": [
                 {
                   "type": "text",
-                  "value": "更新后的",
+                  "value": "这是一级引用",
                   "data": {}
                 }
-              ]
-            },
+              ],
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "ins",
+          "children": [
             {
-              "type": "text",
-              "value": "一级引用"
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "这是更新后的一级引用",
+                  "data": {}
+                }
+              ],
+              "data": {}
             }
           ]
         },
@@ -465,33 +409,45 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "这是嵌套引用"
+                  "value": "这是嵌套引用",
+                  "data": {},
+                  "children": []
                 }
-              ]
+              ],
+              "data": {}
             },
             {
               "type": "blockquote",
               "children": [
                 {
-                  "type": "paragraph",
+                  "type": "del",
                   "children": [
                     {
-                      "type": "text",
-                      "value": "这是"
-                    },
-                    {
-                      "type": "inlineIns",
+                      "type": "paragraph",
                       "children": [
                         {
                           "type": "text",
-                          "value": "更新后的",
+                          "value": "这是三级引用",
                           "data": {}
                         }
-                      ]
-                    },
+                      ],
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "ins",
+                  "children": [
                     {
-                      "type": "text",
-                      "value": "三级引用"
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "这是更新后的三级引用",
+                          "data": {}
+                        }
+                      ],
+                      "data": {}
                     }
                   ]
                 },
@@ -506,20 +462,25 @@
                           "children": [
                             {
                               "type": "text",
-                              "value": "这是新增的四级引用"
+                              "value": "这是新增的四级引用",
+                              "data": {}
                             }
-                          ]
+                          ],
+                          "data": {}
                         }
                       ],
                       "data": {}
                     }
                   ]
                 }
-              ]
+              ],
+              "data": {}
             }
-          ]
+          ],
+          "data": {}
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "heading",
@@ -527,12 +488,17 @@
       "children": [
         {
           "type": "text",
-          "value": "水平线"
+          "value": "水平线",
+          "data": {},
+          "children": []
         }
-      ]
+      ],
+      "data": {}
     },
     {
-      "type": "thematicBreak"
+      "type": "thematicBreak",
+      "data": {},
+      "children": []
     },
     {
       "type": "ins",
@@ -549,31 +515,28 @@
       "children": [
         {
           "type": "text",
-          "value": "脚注"
+          "value": "脚注",
+          "data": {},
+          "children": []
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "paragraph",
       "children": [
         {
           "type": "text",
-          "value": "这里有一个脚注"
+          "value": "这里有一个脚注",
+          "data": {},
+          "children": []
         },
         {
           "type": "footnoteReference",
           "identifier": "1",
-          "label": "1"
-        },
-        {
-          "type": "inlineDel",
-          "children": [
-            {
-              "type": "text",
-              "value": "。",
-              "data": {}
-            }
-          ]
+          "label": "1",
+          "data": {},
+          "children": []
         },
         {
           "type": "inlineIns",
@@ -597,60 +560,53 @@
           ]
         },
         {
-          "type": "inlineIns",
+          "type": "text",
+          "value": "。",
+          "data": {},
+          "children": []
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "footnoteDefinition",
+      "identifier": "1",
+      "label": "1",
+      "children": [
+        {
+          "type": "del",
           "children": [
             {
-              "type": "text",
-              "value": "。",
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "这是脚注内容。",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "ins",
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "这是更新后的脚注内容。",
+                  "data": {}
+                }
+              ],
               "data": {}
             }
           ]
         }
-      ]
-    },
-    {
-      "type": "del",
-      "children": [
-        {
-          "type": "footnoteDefinition",
-          "identifier": "1",
-          "label": "1",
-          "children": [
-            {
-              "type": "paragraph",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "这是脚注内容。"
-                }
-              ]
-            }
-          ],
-          "data": {}
-        }
-      ]
-    },
-    {
-      "type": "ins",
-      "children": [
-        {
-          "type": "footnoteDefinition",
-          "identifier": "1",
-          "label": "1",
-          "children": [
-            {
-              "type": "paragraph",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "这是更新后的脚注内容。"
-                }
-              ]
-            }
-          ],
-          "data": {}
-        }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "ins",
@@ -665,9 +621,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "这是新增的脚注内容。"
+                  "value": "这是新增的脚注内容。",
+                  "data": {}
                 }
-              ]
+              ],
+              "data": {}
             }
           ],
           "data": {}
@@ -680,16 +638,20 @@
       "children": [
         {
           "type": "text",
-          "value": "特殊字符"
+          "value": "特殊字符",
+          "data": {},
+          "children": []
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "paragraph",
       "children": [
         {
           "type": "text",
-          "value": "这里展示一些"
+          "value": "这里展示一些",
+          "data": {}
         },
         {
           "type": "inlineIns",
@@ -703,7 +665,8 @@
         },
         {
           "type": "text",
-          "value": "特殊字符：**非粗体**，`非代码`"
+          "value": "特殊字符：**非粗体**，`非代码`",
+          "data": {}
         },
         {
           "type": "inlineIns",
@@ -717,9 +680,11 @@
         },
         {
           "type": "text",
-          "value": "。"
+          "value": "。",
+          "data": {}
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "heading",
@@ -727,16 +692,20 @@
       "children": [
         {
           "type": "text",
-          "value": "混合格式"
+          "value": "混合格式",
+          "data": {},
+          "children": []
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "paragraph",
       "children": [
         {
           "type": "text",
-          "value": "这段"
+          "value": "这段",
+          "data": {}
         },
         {
           "type": "inlineIns",
@@ -750,90 +719,62 @@
         },
         {
           "type": "text",
-          "value": "文字"
+          "value": "文字",
+          "data": {}
         },
         {
-          "type": "inlineDel",
+          "type": "strong",
           "children": [
             {
-              "type": "strong",
+              "type": "text",
+              "value": "包含",
+              "data": {},
+              "children": []
+            },
+            {
+              "type": "emphasis",
               "children": [
                 {
                   "type": "text",
-                  "value": "包含"
-                },
-                {
-                  "type": "emphasis",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "混合的"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": "格式"
+                  "value": "混合的",
+                  "data": {},
+                  "children": []
                 }
               ],
               "data": {}
-            }
-          ]
-        },
-        {
-          "type": "inlineIns",
-          "children": [
+            },
             {
-              "type": "strong",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "包含"
-                },
-                {
-                  "type": "emphasis",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "混合的"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": "格式"
-                }
-              ],
-              "data": {}
+              "type": "text",
+              "value": "格式",
+              "data": {},
+              "children": []
             }
-          ]
+          ],
+          "data": {}
         },
         {
           "type": "text",
-          "value": "，还有"
+          "value": "，还有",
+          "data": {},
+          "children": []
         },
         {
           "type": "delete",
           "children": [
             {
               "type": "text",
-              "value": "一些"
+              "value": "一些",
+              "data": {},
+              "children": []
             }
-          ]
+          ],
+          "data": {}
         },
         {
           "type": "inlineCode",
-          "value": "代码"
-        },
-        {
-          "type": "inlineDel",
-          "children": [
-            {
-              "type": "text",
-              "value": "。",
-              "data": {}
-            }
-          ]
+          "value": "代码",
+          "data": {},
+          "children": []
         },
         {
           "type": "inlineIns",
@@ -853,20 +794,24 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "新增的"
+                  "value": "新增的",
+                  "data": {}
                 },
                 {
                   "type": "emphasis",
                   "children": [
                     {
                       "type": "text",
-                      "value": "混合"
+                      "value": "混合",
+                      "data": {}
                     }
-                  ]
+                  ],
+                  "data": {}
                 },
                 {
                   "type": "text",
-                  "value": "格式"
+                  "value": "格式",
+                  "data": {}
                 }
               ],
               "data": {}
@@ -874,16 +819,13 @@
           ]
         },
         {
-          "type": "inlineIns",
-          "children": [
-            {
-              "type": "text",
-              "value": "。",
-              "data": {}
-            }
-          ]
+          "type": "text",
+          "value": "。",
+          "data": {},
+          "children": []
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "ins",
@@ -894,7 +836,8 @@
           "children": [
             {
               "type": "text",
-              "value": "新增的高亮"
+              "value": "新增的高亮",
+              "data": {}
             }
           ],
           "data": {}
@@ -909,12 +852,14 @@
           "children": [
             {
               "type": "text",
-              "value": "这里有一些==高亮文本==。"
+              "value": "这里有一些==高亮文本==。",
+              "data": {}
             }
           ],
           "data": {}
         }
       ]
     }
-  ]
+  ],
+  "data": {}
 }

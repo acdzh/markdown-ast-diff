@@ -1,0 +1,227 @@
+<html><head>
+    <style>
+      /* 基本样式 */
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      
+      /* 标题样式 */
+      h1, h2, h3, h4, h5, h6 {
+        margin-top: 1.5em;
+        margin-bottom: 0.5em;
+        font-weight: 600;
+        line-height: 1.25;
+      }
+      h1 { font-size: 2em; border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; }
+      h2 { font-size: 1.5em; border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; }
+      h3 { font-size: 1.25em; }
+      h4 { font-size: 1em; }
+      h5 { font-size: 0.875em; }
+      h6 { font-size: 0.85em; color: #6a737d; }
+      
+      /* 段落样式 */
+      p {
+        margin-top: 0;
+        margin-bottom: 16px;
+      }
+      
+      /* 链接样式 */
+      a {
+        color: #0366d6;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      
+      /* 列表样式 */
+      ul, ol {
+        padding-left: 2em;
+        margin-top: 0;
+        margin-bottom: 16px;
+      }
+      li {
+        margin-bottom: 0.25em;
+      }
+      
+      /* 代码样式 */
+      code {
+        font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+        padding: 0.2em 0.4em;
+        margin: 0;
+        font-size: 85%;
+        background-color: rgba(27, 31, 35, 0.05);
+        border-radius: 3px;
+      }
+      pre {
+        font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+        padding: 16px;
+        overflow: auto;
+        font-size: 85%;
+        line-height: 1.45;
+        background-color: #f6f8fa;
+        border-radius: 3px;
+        margin-top: 0;
+        margin-bottom: 16px;
+      }
+      pre code {
+        padding: 0;
+        margin: 0;
+        background-color: transparent;
+        border: 0;
+      }
+      
+      /* 引用样式 */
+      blockquote {
+        padding: 0 1em;
+        color: #6a737d;
+        border-left: 0.25em solid #dfe2e5;
+        margin: 0 0 16px 0;
+      }
+      
+      /* 表格样式 */
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 16px;
+        display: block;
+        overflow-x: auto;
+      }
+      table th, table td {
+        padding: 6px 13px;
+        border: 1px solid #dfe2e5;
+      }
+      table tr {
+        background-color: #fff;
+        border-top: 1px solid #c6cbd1;
+      }
+      table tr:nth-child(2n) {
+        background-color: #f6f8fa;
+      }
+      table th {
+        font-weight: 600;
+        background-color: #f6f8fa;
+      }
+      .align-left {
+        text-align: left;
+      }
+      .align-center {
+        text-align: center;
+      }
+      .align-right {
+        text-align: right;
+      }
+      
+      /* 水平线样式 */
+      hr {
+        height: 0.25em;
+        padding: 0;
+        margin: 24px 0;
+        background-color: #e1e4e8;
+        border: 0;
+      }
+      
+      /* 差异标记样式 */
+      ins {
+        background-color: #e6ffec;
+        color: #24292e;
+        text-decoration: none;
+        border-radius: 2px;
+        padding: 0 2px;
+      }
+      
+      del {
+        background-color: #ffebe9;
+        color: #24292e;
+        text-decoration: line-through;
+        border-radius: 2px;
+        padding: 0 2px;
+      }
+
+      ins.diff-block, del.diff-block {
+        display: block;
+        padding-left: 10px;
+        border-left-width: 3px;
+        border-left-style: solid;
+      }
+      
+      ins.diff-block {
+        border-left-color: #2cbe4e;
+      }
+      
+      del.diff-block {
+        border-left-color: #cb2431;
+      }
+
+      ins > hr, ins > pre.code {
+        background-color: #e6ffec;
+      }
+
+      del > hr, del > pre.code {
+        background-color: #ffebe9;
+      }
+      
+      /* 列表项差异样式 */
+      li.list-item-ins, li[data-diff="ins"] {
+        background-color: #e6ffec;
+        border-radius: 2px;
+      }
+      
+      li.list-item-del, li[data-diff="del"] {
+        background-color: #ffebe9;
+        border-radius: 2px;
+        text-decoration: line-through;
+      }
+    </style>
+  </head><body><div class="markdown-content"><h1 class="heading-1">嵌套结构测试</h1><h2 class="heading-2">1. 深度嵌套列表</h2><h3 class="heading-3">1.1 无序列表嵌套</h3><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">第一级列表项</p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">第二级列表项</p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">第三级列表项</p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">第四级列表项</p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">第五级列表项</p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">第六级列表项</p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">第七级列表项</p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">第八级列表项</p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">第九级列表项</p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">第十级列表项</p></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul></li><li value="2" class="list-item"><p class="paragraph">另一个第一级列表项</p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">第二级列表项 A</p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">第三级列表项 A</p></li></ul></li><li value="2" class="list-item"><p class="paragraph">第二级列表项 B</p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">第三级列表项 B</p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">第四级列表项 B</p></li></ul></li></ul></li></ul></li></ul><h3 class="heading-3">1.2 有序列表嵌套</h3><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph">第一级有序列表</p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph">第二级有序列表</p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph">第三级有序列表</p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph">第四级有序列表</p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph">第五级有序列表</p></li></ol></li></ol></li></ol></li></ol></li><li value="2" class="list-item"><p class="paragraph">另一个第一级有序列表</p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph">第二级有序列表 A</p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph">第三级有序列表 A</p></li></ol></li><li value="2" class="list-item"><p class="paragraph">第二级有序列表 B</p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph">第三级有序列表 B</p></li></ol></li></ol></li></ol><h3 class="heading-3">1.3 混合列表嵌套</h3><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph">第一级有序列表</p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">第二级无序列表</p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph">第三级有序列表</p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">第四级无序列表</p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph">第五级有序列表</p></li></ol></li></ul></li></ol></li></ul></li><li value="2" class="list-item"><p class="paragraph">另一个第一级有序列表</p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">第二级无序列表 A</p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">第三级无序列表 A</p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph">第四级有序列表 A</p></li></ol></li></ul></li><li value="2" class="list-item"><p class="paragraph">第二级无序列表 B</p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph">第三级有序列表 B</p></li></ol></li></ul></li></ol><h3 class="heading-3">1.4 任务列表嵌套</h3><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">未完成任务</p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">子任务 1</p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">子任务 1.1</p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">子任务 1.1.1</p></li></ul></li></ul></li><li value="2" class="list-item"><p class="paragraph">子任务 2</p></li></ul></li><li value="2" class="list-item"><p class="paragraph">已完成任务</p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">已完成子任务 1</p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">未完成子任务 1.1</p></li></ul></li><li value="2" class="list-item"><p class="paragraph">未完成子任务 2</p></li></ul></li></ul><h2 class="heading-2">2. 深度嵌套引用</h2><blockquote ><p class="paragraph">第一级引用</p><blockquote ><p class="paragraph">第二级引用</p><blockquote ><p class="paragraph">第三级引用</p><blockquote ><p class="paragraph">第四级引用</p><blockquote ><p class="paragraph">第五级引用</p><blockquote ><p class="paragraph">第六级引用</p></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote><blockquote ><p class="paragraph">另一个第一级引用</p><blockquote ><p class="paragraph">第二级引用 A</p><blockquote ><p class="paragraph">第三级引用 A</p></blockquote></blockquote><blockquote ><p class="paragraph">第二级引用 B</p><blockquote ><p class="paragraph">第三级引用 B</p></blockquote></blockquote></blockquote><h2 class="heading-2">3. 嵌套代码块</h2><pre class="code" data-language="markdown"><code># 代码块中的 Markdown
+
+## 子标题
+
+```javascript
+// 代码块中的代码块
+function nestedExample() {
+  console.log(&#39;这是嵌套在 Markdown 代码块中的 JavaScript 代码块&#39;);
+}
+```
+
+- 列表项 1
+- 列表项 2
+  - 嵌套列表项</code></pre><h2 class="heading-2">4. 嵌套表格</h2><table class="markdown-table"><tr class="table-row"><td class="table-cell">外部表格</td><td class="table-cell">描述</td></tr><tr class="table-row"><td class="table-cell">行 1</td><td class="table-cell">普通内容</td></tr><tr class="table-row"><td class="table-cell">行 2</td><td class="table-cell"><div ><table></div><div ><tr></div><div ><th></div>嵌套表格<div ></th></div><div ><th></div>值<div ></th></div><div ></tr></div><div ><tr></div><div ><td></div>嵌套行 1<div ></td></div><div ><td></div>100<div ></td></div><div ></tr></div><div ><tr></div><div ><td></div>嵌套行 2<div ></td></div><div ><td></div>200<div ></td></div><div ></tr></div><div ></table></div></td></tr><tr class="table-row"><td class="table-cell">行 3</td><td class="table-cell">普通内容</td></tr></table><h2 class="heading-2">5. 混合嵌套结构</h2><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph">第一级有序列表</p><blockquote ><p class="paragraph">嵌套在列表中的引用</p><pre class="code" data-language="javascript"><code>// 嵌套在引用中的代码块
+function nestedInQuote() {
+  return &#39;这是嵌套在引用中的代码&#39;;
+}</code></pre></blockquote><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">嵌套的无序列表</p><ol class="ordered-list"><li value="1" class="list-item"><p class="paragraph">再次嵌套的有序列表</p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">嵌套的任务列表</p><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph">深度嵌套的任务</p></li></ul></li></ul></li></ol></li></ul></li><li value="2" class="list-item"><p class="paragraph">第二级有序列表</p><div ><table>
+<tr><th>嵌套在列表中的表格</th><th>值</th></tr>
+<tr><td>数据 1</td><td>300</td></tr>
+<tr><td>数据 2</td><td>400</td></tr>
+</table></div></li></ol><h2 class="heading-2">6. 嵌套 HTML 结构</h2><div ><div style="border: 1px solid #ccc; padding: 10px;">
+  <h3>HTML 中的标题</h3>
+  <p>一些文本内容</p>
+  <div style="background-color: #f0f0f0; padding: 10px;">
+    <h4>嵌套 div 中的标题</h4>
+    <ul>
+      <li>列表项 1</li>
+      <li>列表项 2
+        <ol>
+          <li>嵌套的有序列表项 1</li>
+          <li>嵌套的有序列表项 2</li>
+        </ol>
+      </li>
+    </ul>
+    <div style="border: 1px dashed #999; padding: 5px;">
+      <p>更深层次的嵌套 div</p>
+      <blockquote>
+        <p>嵌套在 HTML 中的引用</p>
+        <pre><code>// 嵌套在引用中的代码
+function deeplyNested() {
+  return '这是深度嵌套的代码';
+}</code></pre>
+      </blockquote>
+    </div>
+  </div>
+</div></div><h2 class="heading-2">7. 总结</h2><p class="paragraph">这个文档包含了各种深度嵌套的结构，用于测试 Markdown 差异比较工具处理复杂嵌套内容的能力。</p></div></body></html>

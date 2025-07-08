@@ -7,7 +7,8 @@
       "children": [
         {
           "type": "text",
-          "value": "链接和图片示例"
+          "value": "链接和图片示例",
+          "data": {}
         },
         {
           "type": "inlineIns",
@@ -19,7 +20,8 @@
             }
           ]
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "heading",
@@ -27,16 +29,21 @@
       "children": [
         {
           "type": "text",
-          "value": "链接"
+          "value": "链接",
+          "data": {},
+          "children": []
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "paragraph",
       "children": [
         {
           "type": "text",
-          "value": "这是一个"
+          "value": "这是一个",
+          "data": {},
+          "children": []
         },
         {
           "type": "inlineDel",
@@ -48,7 +55,8 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "内联链接"
+                  "value": "内联链接",
+                  "data": {}
                 }
               ],
               "data": {}
@@ -65,7 +73,8 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "更新的内联链接"
+                  "value": "更新的内联链接",
+                  "data": {}
                 }
               ],
               "data": {}
@@ -74,16 +83,21 @@
         },
         {
           "type": "text",
-          "value": "。"
+          "value": "。",
+          "data": {},
+          "children": []
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "paragraph",
       "children": [
         {
           "type": "text",
-          "value": "这是一个"
+          "value": "这是一个",
+          "data": {},
+          "children": []
         },
         {
           "type": "inlineDel",
@@ -95,7 +109,8 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "带标题的链接"
+                  "value": "带标题的链接",
+                  "data": {}
                 }
               ],
               "data": {}
@@ -112,7 +127,8 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "带标题的链接"
+                  "value": "带标题的链接",
+                  "data": {}
                 }
               ],
               "data": {}
@@ -121,38 +137,36 @@
         },
         {
           "type": "text",
-          "value": "。"
+          "value": "。",
+          "data": {},
+          "children": []
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "paragraph",
       "children": [
         {
           "type": "text",
-          "value": "这是一个"
+          "value": "这是一个",
+          "data": {},
+          "children": []
         },
         {
           "type": "linkReference",
           "children": [
             {
               "type": "text",
-              "value": "参考链接"
+              "value": "参考链接",
+              "data": {},
+              "children": []
             }
           ],
           "label": "1",
           "identifier": "1",
-          "referenceType": "full"
-        },
-        {
-          "type": "inlineDel",
-          "children": [
-            {
-              "type": "text",
-              "value": "。",
-              "data": {}
-            }
-          ]
+          "referenceType": "full",
+          "data": {}
         },
         {
           "type": "inlineIns",
@@ -172,7 +186,8 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "新增的参考链接"
+                  "value": "新增的参考链接",
+                  "data": {}
                 }
               ],
               "label": "2",
@@ -183,14 +198,37 @@
           ]
         },
         {
-          "type": "inlineIns",
+          "type": "text",
+          "value": "。",
+          "data": {},
+          "children": []
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "definition",
+      "identifier": "1",
+      "label": "1",
+      "title": "更新的参考链接",
+      "url": "https://example.org/reference",
+      "data": {},
+      "children": []
+    },
+    {
+      "type": "del",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 2,
           "children": [
             {
               "type": "text",
-              "value": "。",
+              "value": "图片",
               "data": {}
             }
-          ]
+          ],
+          "data": {}
         }
       ]
     },
@@ -198,56 +236,7 @@
       "type": "del",
       "children": [
         {
-          "type": "definition",
-          "identifier": "1",
-          "label": "1",
-          "title": "参考链接",
-          "url": "https://example.com/reference",
-          "data": {}
-        }
-      ]
-    },
-    {
-      "type": "ins",
-      "children": [
-        {
-          "type": "definition",
-          "identifier": "1",
-          "label": "1",
-          "title": "更新的参考链接",
-          "url": "https://example.org/reference",
-          "data": {}
-        }
-      ]
-    },
-    {
-      "type": "ins",
-      "children": [
-        {
-          "type": "definition",
-          "identifier": "2",
-          "label": "2",
-          "title": "新增的参考链接",
-          "url": "https://example.com/new-reference",
-          "data": {}
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "depth": 2,
-      "children": [
-        {
-          "type": "text",
-          "value": "图片"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "inlineDel",
+          "type": "paragraph",
           "children": [
             {
               "type": "image",
@@ -256,27 +245,16 @@
               "alt": "示例图片",
               "data": {}
             }
-          ]
-        },
-        {
-          "type": "inlineIns",
-          "children": [
-            {
-              "type": "image",
-              "title": null,
-              "url": "https://example.org/updated-image.jpg",
-              "alt": "更新的示例图片",
-              "data": {}
-            }
-          ]
+          ],
+          "data": {}
         }
       ]
     },
     {
-      "type": "paragraph",
+      "type": "del",
       "children": [
         {
-          "type": "inlineDel",
+          "type": "paragraph",
           "children": [
             {
               "type": "image",
@@ -285,10 +263,79 @@
               "alt": "带标题的图片",
               "data": {}
             }
-          ]
-        },
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "del",
+      "children": [
         {
-          "type": "inlineIns",
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "imageReference",
+              "alt": "参考图片",
+              "label": "image1",
+              "identifier": "image1",
+              "referenceType": "full",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "definition",
+      "identifier": "2",
+      "label": "2",
+      "title": "新增的参考链接",
+      "url": "https://example.com/new-reference",
+      "data": {},
+      "children": []
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 2,
+          "children": [
+            {
+              "type": "text",
+              "value": "图片",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "image",
+              "title": null,
+              "url": "https://example.org/updated-image.jpg",
+              "alt": "更新的示例图片",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
           "children": [
             {
               "type": "image",
@@ -297,19 +344,27 @@
               "alt": "带标题的图片",
               "data": {}
             }
-          ]
+          ],
+          "data": {}
         }
       ]
     },
     {
-      "type": "paragraph",
+      "type": "ins",
       "children": [
         {
-          "type": "imageReference",
-          "alt": "参考图片",
-          "label": "image1",
-          "identifier": "image1",
-          "referenceType": "full"
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "imageReference",
+              "alt": "参考图片",
+              "label": "image1",
+              "identifier": "image1",
+              "referenceType": "full",
+              "data": {}
+            }
+          ],
+          "data": {}
         }
       ]
     },
@@ -324,22 +379,10 @@
               "alt": "新增的参考图片",
               "label": "image2",
               "identifier": "image2",
-              "referenceType": "full"
+              "referenceType": "full",
+              "data": {}
             }
           ],
-          "data": {}
-        }
-      ]
-    },
-    {
-      "type": "del",
-      "children": [
-        {
-          "type": "definition",
-          "identifier": "image1",
-          "label": "image1",
-          "title": "参考图片标题",
-          "url": "https://example.com/reference-image.jpg",
           "data": {}
         }
       ]
@@ -376,9 +419,12 @@
       "children": [
         {
           "type": "text",
-          "value": "链接列表"
+          "value": "链接列表",
+          "data": {},
+          "children": []
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "list",
@@ -401,39 +447,17 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "GitHub"
+                      "value": "GitHub",
+                      "data": {},
+                      "children": []
                     }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "listItem",
-          "spread": false,
-          "checked": null,
-          "children": [
-            {
-              "type": "paragraph",
-              "children": [
-                {
-                  "type": "link",
-                  "title": null,
-                  "url": "https://google.com",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "Google"
-                    }
-                  ]
+                  ],
+                  "data": {}
                 }
               ]
             }
           ],
-          "data": {
-            "diff": "del"
-          }
+          "data": {}
         },
         {
           "type": "listItem",
@@ -450,41 +474,17 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "Microsoft"
+                      "value": "Microsoft",
+                      "data": {}
                     }
-                  ]
+                  ],
+                  "data": {}
                 }
               ]
             }
           ],
           "data": {
             "diff": "ins"
-          }
-        },
-        {
-          "type": "listItem",
-          "spread": false,
-          "checked": null,
-          "children": [
-            {
-              "type": "paragraph",
-              "children": [
-                {
-                  "type": "link",
-                  "title": null,
-                  "url": "https://baidu.com",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "百度"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "data": {
-            "diff": "del"
           }
         },
         {
@@ -502,16 +502,17 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "Google"
+                      "value": "Google",
+                      "data": {},
+                      "children": []
                     }
-                  ]
+                  ],
+                  "data": {}
                 }
               ]
             }
           ],
-          "data": {
-            "diff": "ins"
-          }
+          "data": {}
         },
         {
           "type": "listItem",
@@ -528,16 +529,17 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "百度"
+                      "value": "百度",
+                      "data": {},
+                      "children": []
                     }
-                  ]
+                  ],
+                  "data": {}
                 }
               ]
             }
           ],
-          "data": {
-            "diff": "ins"
-          }
+          "data": {}
         },
         {
           "type": "listItem",
@@ -554,9 +556,11 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "新增链接"
+                      "value": "新增链接",
+                      "data": {}
                     }
-                  ]
+                  ],
+                  "data": {}
                 }
               ]
             }
@@ -565,7 +569,8 @@
             "diff": "ins"
           }
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "heading",
@@ -573,9 +578,12 @@
       "children": [
         {
           "type": "text",
-          "value": "图文混排"
+          "value": "图文混排",
+          "data": {},
+          "children": []
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "paragraph",
@@ -592,7 +600,8 @@
                   "type": "image",
                   "title": null,
                   "url": "https://example.com/linked-image.jpg",
-                  "alt": "带链接的图片"
+                  "alt": "带链接的图片",
+                  "data": {}
                 }
               ],
               "data": {}
@@ -611,21 +620,24 @@
                   "type": "image",
                   "title": null,
                   "url": "https://example.org/linked-image.jpg",
-                  "alt": "更新的带链接的图片"
+                  "alt": "更新的带链接的图片",
+                  "data": {}
                 }
               ],
               "data": {}
             }
           ]
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "paragraph",
       "children": [
         {
           "type": "text",
-          "value": "这段"
+          "value": "这段",
+          "data": {}
         },
         {
           "type": "inlineIns",
@@ -639,7 +651,8 @@
         },
         {
           "type": "text",
-          "value": "文字包含一个"
+          "value": "文字包含一个",
+          "data": {}
         },
         {
           "type": "inlineDel",
@@ -651,7 +664,8 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "链接"
+                  "value": "链接",
+                  "data": {}
                 }
               ],
               "data": {}
@@ -668,7 +682,8 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "更新的链接"
+                  "value": "更新的链接",
+                  "data": {}
                 }
               ],
               "data": {}
@@ -676,17 +691,11 @@
           ]
         },
         {
-          "type": "text",
-          "value": "和一个"
-        },
-        {
-          "type": "inlineDel",
+          "type": "inlineIns",
           "children": [
             {
-              "type": "image",
-              "title": null,
-              "url": "https://example.com/inline-image.jpg",
-              "alt": "内联图片",
+              "type": "text",
+              "value": "和一个",
               "data": {}
             }
           ]
@@ -704,10 +713,35 @@
           ]
         },
         {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": "和一个",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "image",
+              "title": null,
+              "url": "https://example.com/inline-image.jpg",
+              "alt": "内联图片",
+              "data": {}
+            }
+          ]
+        },
+        {
           "type": "text",
-          "value": "。"
+          "value": "。",
+          "data": {},
+          "children": []
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "ins",
@@ -717,7 +751,8 @@
           "children": [
             {
               "type": "text",
-              "value": "新增的段落，包含一个"
+              "value": "新增的段落，包含一个",
+              "data": {}
             },
             {
               "type": "link",
@@ -726,18 +761,22 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "新链接"
+                  "value": "新链接",
+                  "data": {}
                 }
-              ]
+              ],
+              "data": {}
             },
             {
               "type": "text",
-              "value": "。"
+              "value": "。",
+              "data": {}
             }
           ],
           "data": {}
         }
       ]
     }
-  ]
+  ],
+  "data": {}
 }

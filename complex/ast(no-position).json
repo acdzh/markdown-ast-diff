@@ -7,16 +7,21 @@
       "children": [
         {
           "type": "text",
-          "value": "复杂 Markdown 文档示例"
+          "value": "复杂 Markdown 文档示例",
+          "data": {}
         },
         {
-          "type": "text",
-          "value": "（更新版）",
-          "data": {
-            "diff": "ins"
-          }
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": "（更新版）",
+              "data": {}
+            }
+          ]
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "heading",
@@ -24,25 +29,33 @@
       "children": [
         {
           "type": "text",
-          "value": "1. 文档概述"
+          "value": "1. 文档概述",
+          "data": {},
+          "children": []
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "paragraph",
       "children": [
         {
           "type": "text",
-          "value": "这是一个包含多种 Markdown 元素的复杂文档示例，用于测试差异比较功能。"
+          "value": "这是一个包含多种 Markdown 元素的复杂文档示例，用于测试差异比较功能。",
+          "data": {}
         },
         {
-          "type": "text",
-          "value": "此版本包含了多处更新和修改。",
-          "data": {
-            "diff": "ins"
-          }
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": "此版本包含了多处更新和修改。",
+              "data": {}
+            }
+          ]
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "heading",
@@ -50,200 +63,245 @@
       "children": [
         {
           "type": "text",
-          "value": "2. 文本格式"
+          "value": "2. 文本格式",
+          "data": {}
         },
         {
-          "type": "text",
-          "value": "121212",
-          "data": {
-            "diff": "ins"
-          }
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": "121212",
+              "data": {}
+            }
+          ]
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "paragraph",
       "children": [
         {
           "type": "text",
-          "value": "这段文字包含"
+          "value": "这段文字包含",
+          "data": {},
+          "children": []
         },
         {
           "type": "strong",
           "children": [
             {
               "type": "text",
-              "value": "粗体"
+              "value": "粗体",
+              "data": {},
+              "children": []
             }
-          ]
-        },
-        {
-          "type": "text",
-          "value": "、"
-        },
-        {
-          "type": "emphasis",
-          "children": [
-            {
-              "type": "text",
-              "value": "斜体"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "value": "和",
-          "data": {
-            "diff": "del"
-          }
+          ],
+          "data": {}
         },
         {
           "type": "text",
           "value": "、",
-          "data": {
-            "diff": "ins"
-          }
+          "data": {},
+          "children": []
         },
         {
           "type": "emphasis",
           "children": [
             {
-              "type": "strong",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "粗斜体"
-                }
-              ]
+              "type": "text",
+              "value": "斜体",
+              "data": {},
+              "children": []
             }
           ],
-          "data": {
-            "diff": "del"
-          }
+          "data": {}
         },
         {
-          "type": "emphasis",
-          "children": [
-            {
-              "type": "strong",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "粗斜体"
-                }
-              ]
-            }
-          ],
-          "data": {
-            "diff": "ins"
-          }
-        },
-        {
-          "type": "text",
-          "value": "格式"
-        },
-        {
-          "type": "text",
-          "value": "，还有",
-          "data": {
-            "diff": "del"
-          }
-        },
-        {
-          "type": "text",
-          "value": "和",
-          "data": {
-            "diff": "ins"
-          }
-        },
-        {
-          "type": "strong",
+          "type": "inlineDel",
           "children": [
             {
               "type": "text",
-              "value": "新增的粗体"
-            }
-          ],
-          "data": {
-            "diff": "ins"
-          }
-        },
-        {
-          "type": "text",
-          "value": "，还有",
-          "data": {
-            "diff": "ins"
-          }
-        },
-        {
-          "type": "inlineCode",
-          "value": "行内代码",
-          "data": {
-            "diff": "del"
-          }
-        },
-        {
-          "type": "inlineCode",
-          "value": "更新的行内代码",
-          "data": {
-            "diff": "ins"
-          }
-        },
-        {
-          "type": "text",
-          "value": "和",
-          "data": {
-            "diff": "del"
-          }
-        },
-        {
-          "type": "text",
-          "value": "。",
-          "data": {
-            "diff": "ins"
-          }
-        },
-        {
-          "type": "delete",
-          "children": [
-            {
-              "type": "text",
-              "value": "删除线"
-            }
-          ],
-          "data": {
-            "diff": "del"
-          }
-        },
-        {
-          "type": "text",
-          "value": "文本。",
-          "data": {
-            "diff": "del"
-          }
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "delete",
-          "children": [
-            {
-              "type": "text",
-              "value": "删除线"
+              "value": "和",
+              "data": {}
             }
           ]
         },
         {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": "、",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "strong",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "粗斜体",
+                  "data": {},
+                  "children": []
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
           "type": "text",
-          "value": "文本以及==新增的高亮==文本。"
+          "value": "格式",
+          "data": {}
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": "，还有",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": "和",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "行内代码",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": "和",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "strong",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "新增的粗体",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": "，还有",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "更新的行内代码",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": "。",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "delete",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "删除线",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": "文本。",
+              "data": {}
+            }
+          ]
         }
       ],
-      "data": {
-        "diff": "ins"
-      }
+      "data": {}
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "delete",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "删除线",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "text",
+              "value": "文本以及==新增的高亮==文本。",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ]
     },
     {
       "type": "heading",
@@ -251,9 +309,12 @@
       "children": [
         {
           "type": "text",
-          "value": "3. 列表"
+          "value": "3. 列表",
+          "data": {},
+          "children": []
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "heading",
@@ -261,9 +322,12 @@
       "children": [
         {
           "type": "text",
-          "value": "3.1 无序列表"
+          "value": "3.1 无序列表",
+          "data": {},
+          "children": []
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "list",
@@ -277,11 +341,34 @@
           "checked": null,
           "children": [
             {
-              "type": "paragraph",
+              "type": "del",
               "children": [
                 {
-                  "type": "text",
-                  "value": "主要功能"
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "主要功能",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ]
+            },
+            {
+              "type": "ins",
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "主要功能（已更新）",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
                 }
               ]
             },
@@ -301,11 +388,14 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "子功能 1"
+                          "value": "子功能 1",
+                          "data": {},
+                          "children": []
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "data": {}
                 },
                 {
                   "type": "listItem",
@@ -317,18 +407,40 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "子功能 2"
+                          "value": "新增子功能",
+                          "data": {}
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "data": {
+                    "diff": "ins"
+                  }
+                },
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "子功能 2",
+                          "data": {},
+                          "children": []
+                        }
+                      ]
+                    }
+                  ],
+                  "data": {}
                 }
-              ]
+              ],
+              "data": {}
             }
           ],
-          "data": {
-            "diff": "del"
-          }
+          "data": {}
         },
         {
           "type": "listItem",
@@ -340,9 +452,12 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "主要功能（已更新）"
+                  "value": "次要功能",
+                  "data": {},
+                  "children": []
                 }
-              ]
+              ],
+              "data": {}
             },
             {
               "type": "list",
@@ -360,11 +475,14 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "子功能 1"
+                          "value": "子功能 A",
+                          "data": {},
+                          "children": []
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "data": {}
                 },
                 {
                   "type": "listItem",
@@ -376,11 +494,33 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "新增子功能"
+                          "value": "子功能 ",
+                          "data": {}
+                        },
+                        {
+                          "type": "inlineDel",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "B",
+                              "data": {}
+                            }
+                          ]
+                        },
+                        {
+                          "type": "inlineIns",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "C（新增）",
+                              "data": {}
+                            }
+                          ]
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "data": {}
                 },
                 {
                   "type": "listItem",
@@ -392,154 +532,24 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "子功能 2"
+                          "value": "子功能 B（已更新）",
+                          "data": {}
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "data": {
+                    "diff": "ins"
+                  }
                 }
-              ]
+              ],
+              "data": {}
             }
           ],
-          "data": {
-            "diff": "ins"
-          }
-        },
-        {
-          "type": "listItem",
-          "spread": false,
-          "checked": null,
-          "children": [
-            {
-              "type": "paragraph",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "次要功能"
-                }
-              ]
-            },
-            {
-              "type": "list",
-              "ordered": false,
-              "start": null,
-              "spread": false,
-              "children": [
-                {
-                  "type": "listItem",
-                  "spread": false,
-                  "checked": null,
-                  "children": [
-                    {
-                      "type": "paragraph",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "子功能 A"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "listItem",
-                  "spread": false,
-                  "checked": null,
-                  "children": [
-                    {
-                      "type": "paragraph",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "子功能 B"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "data": {
-            "diff": "del"
-          }
-        },
-        {
-          "type": "listItem",
-          "spread": false,
-          "checked": null,
-          "children": [
-            {
-              "type": "paragraph",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "次要功能"
-                }
-              ]
-            },
-            {
-              "type": "list",
-              "ordered": false,
-              "start": null,
-              "spread": false,
-              "children": [
-                {
-                  "type": "listItem",
-                  "spread": false,
-                  "checked": null,
-                  "children": [
-                    {
-                      "type": "paragraph",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "子功能 A"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "listItem",
-                  "spread": false,
-                  "checked": null,
-                  "children": [
-                    {
-                      "type": "paragraph",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "子功能 C（新增）"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "listItem",
-                  "spread": false,
-                  "checked": null,
-                  "children": [
-                    {
-                      "type": "paragraph",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "子功能 B（已更新）"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "data": {
-            "diff": "ins"
-          }
+          "data": {}
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "heading",
@@ -547,9 +557,12 @@
       "children": [
         {
           "type": "text",
-          "value": "3.2 有序列表"
+          "value": "3.2 有序列表",
+          "data": {},
+          "children": []
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "list",
@@ -563,11 +576,34 @@
           "checked": null,
           "children": [
             {
-              "type": "paragraph",
+              "type": "del",
               "children": [
                 {
-                  "type": "text",
-                  "value": "第一步"
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "第一步",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ]
+            },
+            {
+              "type": "ins",
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "第一步（已修改）",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
                 }
               ]
             },
@@ -587,11 +623,14 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "子步骤 1"
+                          "value": "子步骤 1",
+                          "data": {},
+                          "children": []
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "data": {}
                 },
                 {
                   "type": "listItem",
@@ -603,54 +642,14 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "子步骤 2"
+                          "value": "子步骤 2",
+                          "data": {},
+                          "children": []
                         }
                       ]
                     }
-                  ]
-                }
-              ]
-            }
-          ],
-          "data": {
-            "diff": "del"
-          }
-        },
-        {
-          "type": "listItem",
-          "spread": false,
-          "checked": null,
-          "children": [
-            {
-              "type": "paragraph",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "第一步（已修改）"
-                }
-              ]
-            },
-            {
-              "type": "list",
-              "ordered": true,
-              "start": 1,
-              "spread": false,
-              "children": [
-                {
-                  "type": "listItem",
-                  "spread": false,
-                  "checked": null,
-                  "children": [
-                    {
-                      "type": "paragraph",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "子步骤 1"
-                        }
-                      ]
-                    }
-                  ]
+                  ],
+                  "data": {}
                 },
                 {
                   "type": "listItem",
@@ -662,27 +661,34 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "子步骤 2"
+                          "value": "新增子步骤",
+                          "data": {}
                         }
                       ]
                     }
-                  ]
-                },
+                  ],
+                  "data": {
+                    "diff": "ins"
+                  }
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
                 {
-                  "type": "listItem",
-                  "spread": false,
-                  "checked": null,
-                  "children": [
-                    {
-                      "type": "paragraph",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "新增子步骤"
-                        }
-                      ]
-                    }
-                  ]
+                  "type": "text",
+                  "value": "新增步骤",
+                  "data": {}
                 }
               ]
             }
@@ -701,14 +707,14 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "第二步"
+                  "value": "第二步",
+                  "data": {},
+                  "children": []
                 }
               ]
             }
           ],
-          "data": {
-            "diff": "del"
-          }
+          "data": {}
         },
         {
           "type": "listItem",
@@ -720,109 +726,65 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "新增步骤"
+                  "value": "第三步",
+                  "data": {},
+                  "children": []
                 }
               ]
             }
           ],
-          "data": {
-            "diff": "ins"
-          }
-        },
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "ins",
+      "children": [
         {
-          "type": "listItem",
-          "spread": false,
-          "checked": null,
+          "type": "paragraph",
           "children": [
             {
-              "type": "paragraph",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "第三步"
-                }
-              ]
+              "type": "text",
+              "value": "1",
+              "data": {}
             }
           ],
-          "data": {
-            "diff": "del"
-          }
-        },
-        {
-          "type": "listItem",
-          "spread": false,
-          "checked": null,
-          "children": [
-            {
-              "type": "paragraph",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "第二步"
-                }
-              ]
-            }
-          ],
-          "data": {
-            "diff": "ins"
-          }
-        },
-        {
-          "type": "listItem",
-          "spread": false,
-          "checked": null,
-          "children": [
-            {
-              "type": "paragraph",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "第三步"
-                }
-              ]
-            }
-          ],
-          "data": {
-            "diff": "ins"
-          }
+          "data": {}
         }
       ]
     },
     {
-      "type": "paragraph",
+      "type": "ins",
       "children": [
         {
-          "type": "text",
-          "value": "1"
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "2",
+              "data": {}
+            }
+          ],
+          "data": {}
         }
-      ],
-      "data": {
-        "diff": "ins"
-      }
+      ]
     },
     {
-      "type": "paragraph",
+      "type": "ins",
       "children": [
         {
-          "type": "text",
-          "value": "2"
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "3",
+              "data": {}
+            }
+          ],
+          "data": {}
         }
-      ],
-      "data": {
-        "diff": "ins"
-      }
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "value": "3"
-        }
-      ],
-      "data": {
-        "diff": "ins"
-      }
+      ]
     },
     {
       "type": "heading",
@@ -830,9 +792,12 @@
       "children": [
         {
           "type": "text",
-          "value": "3.3 任务列表"
+          "value": "3.3 任务列表",
+          "data": {},
+          "children": []
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "list",
@@ -850,11 +815,14 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "已完成任务"
+                  "value": "已完成任务",
+                  "data": {},
+                  "children": []
                 }
               ]
             }
-          ]
+          ],
+          "data": {}
         },
         {
           "type": "listItem",
@@ -866,7 +834,8 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "未完成任务"
+                  "value": "未完成任务",
+                  "data": {}
                 }
               ]
             }
@@ -885,7 +854,8 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "未完成任务（现已完成）"
+                  "value": "未完成任务（现已完成）",
+                  "data": {}
                 }
               ]
             }
@@ -904,26 +874,8 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "待办事项"
-                }
-              ]
-            }
-          ],
-          "data": {
-            "diff": "del"
-          }
-        },
-        {
-          "type": "listItem",
-          "spread": false,
-          "checked": false,
-          "children": [
-            {
-              "type": "paragraph",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "新增任务"
+                  "value": "新增任务",
+                  "data": {}
                 }
               ]
             }
@@ -942,14 +894,52 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "待办事项"
+                  "value": "待办事项",
+                  "data": {},
+                  "children": []
                 }
               ]
             }
           ],
-          "data": {
-            "diff": "ins"
-          }
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "4. 代码块",
+          "data": {},
+          "children": []
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "del",
+      "children": [
+        {
+          "type": "code",
+          "lang": "javascript",
+          "meta": null,
+          "value": "function example() {\n  const message = 'Hello, World!';\n  console.log(message);\n  return {\n    status: 'success',\n    data: message\n  };\n}\n\nexample();",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "code",
+          "lang": "java",
+          "meta": null,
+          "value": "function example(): { status: string; data: string } {\n  // 添加类型注解\n  const message: string = 'Hello, Updated World!';\n  console.log(message);\n  \n  // 添加错误处理\n  try {\n    return {\n      status: 'success',\n      data: message\n    };\n  } catch (error) {\n    console.error('An error occurred:', error);\n    return {\n      status: 'error',\n      data: 'Failed to process'\n    };\n  }\n}\n\nexample();",
+          "data": {}
         }
       ]
     },
@@ -959,27 +949,451 @@
       "children": [
         {
           "type": "text",
-          "value": "4. 代码块"
+          "value": "5. 表格",
+          "data": {},
+          "children": []
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "del",
+      "children": [
+        {
+          "type": "table",
+          "align": [
+            null,
+            null,
+            null
+          ],
+          "children": [
+            {
+              "type": "tableRow",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "功能",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "状态",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "优先级",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableRow",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "功能 A",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "已完成",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "高",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableRow",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "功能 B",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "进行中",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "中",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableRow",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "功能 C",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "计划中",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "低",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {}
         }
       ]
     },
     {
-      "type": "code",
-      "lang": "javascript",
-      "meta": null,
-      "value": "function example() {\n  const message = 'Hello, World!';\n  console.log(message);\n  return {\n    status: 'success',\n    data: message\n  };\n}\n\nexample();",
-      "data": {
-        "diff": "del"
-      }
-    },
-    {
-      "type": "code",
-      "lang": "java",
-      "meta": null,
-      "value": "function example(): { status: string; data: string } {\n  // 添加类型注解\n  const message: string = 'Hello, Updated World!';\n  console.log(message);\n  \n  // 添加错误处理\n  try {\n    return {\n      status: 'success',\n      data: message\n    };\n  } catch (error) {\n    console.error('An error occurred:', error);\n    return {\n      status: 'error',\n      data: 'Failed to process'\n    };\n  }\n}\n\nexample();",
-      "data": {
-        "diff": "ins"
-      }
+      "type": "ins",
+      "children": [
+        {
+          "type": "table",
+          "align": [
+            null,
+            null,
+            null,
+            null
+          ],
+          "children": [
+            {
+              "type": "tableRow",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "功能",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "状态",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "优先级",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "负责人",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableRow",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "功能 A",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "已完成",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "高",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "张三",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableRow",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "功能 B",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "已完成",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "中",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "李四",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableRow",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "功能 D",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "新增",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "高",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "王五",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableRow",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "功能 C",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "进行中",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "低",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "赵六",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ]
     },
     {
       "type": "heading",
@@ -987,422 +1401,35 @@
       "children": [
         {
           "type": "text",
-          "value": "5. 表格"
-        }
-      ]
-    },
-    {
-      "type": "table",
-      "align": [
-        null,
-        null,
-        null
-      ],
-      "children": [
-        {
-          "type": "tableRow",
-          "children": [
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "功能"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "状态"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "优先级"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "tableRow",
-          "children": [
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "功能 A"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "已完成"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "高"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "tableRow",
-          "children": [
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "功能 B"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "进行中"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "中"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "tableRow",
-          "children": [
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "功能 C"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "计划中"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "低"
-                }
-              ]
-            }
-          ]
+          "value": "6. 引用",
+          "data": {},
+          "children": []
         }
       ],
-      "data": {
-        "diff": "del"
-      }
-    },
-    {
-      "type": "table",
-      "align": [
-        null,
-        null,
-        null,
-        null
-      ],
-      "children": [
-        {
-          "type": "tableRow",
-          "children": [
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "功能"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "状态"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "优先级"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "负责人"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "tableRow",
-          "children": [
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "功能 A"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "已完成"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "高"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "张三"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "tableRow",
-          "children": [
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "功能 B"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "已完成"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "中"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "李四"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "tableRow",
-          "children": [
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "功能 D"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "新增"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "高"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "王五"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "tableRow",
-          "children": [
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "功能 C"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "进行中"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "低"
-                }
-              ]
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "赵六"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "data": {
-        "diff": "ins"
-      }
-    },
-    {
-      "type": "heading",
-      "depth": 2,
-      "children": [
-        {
-          "type": "text",
-          "value": "6. 引用"
-        }
-      ]
+      "data": {}
     },
     {
       "type": "blockquote",
       "children": [
         {
-          "type": "paragraph",
-          "children": [
-            {
-              "type": "text",
-              "value": "这是一段"
-            },
-            {
-              "type": "text",
-              "value": "更新后的",
-              "data": {
-                "diff": "ins"
-              }
-            },
-            {
-              "type": "text",
-              "value": "引用文本"
-            }
-          ]
-        },
-        {
-          "type": "blockquote",
+          "type": "del",
           "children": [
             {
               "type": "paragraph",
               "children": [
                 {
                   "type": "text",
-                  "value": "这是嵌套引用"
-                },
-                {
-                  "type": "text",
-                  "value": "（已更新）",
-                  "data": {
-                    "diff": "ins"
-                  }
+                  "value": "这是一段引用文本",
+                  "data": {}
                 }
-              ]
-            },
+              ],
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "del",
+          "children": [
             {
               "type": "blockquote",
               "children": [
@@ -1411,18 +1438,74 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "这是新增的三级引用"
+                      "value": "这是嵌套引用",
+                      "data": {}
                     }
-                  ]
+                  ],
+                  "data": {}
                 }
               ],
-              "data": {
-                "diff": "ins"
-              }
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "ins",
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "这是一段更新后的引用文本",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "ins",
+          "children": [
+            {
+              "type": "blockquote",
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "这是嵌套引用（已更新）",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "blockquote",
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "这是新增的三级引用",
+                          "data": {}
+                        }
+                      ],
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
             }
           ]
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "heading",
@@ -1430,7 +1513,89 @@
       "children": [
         {
           "type": "text",
-          "value": "7. 链接和图片"
+          "value": "7. 链接和图片",
+          "data": {},
+          "children": []
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "7.1 链接",
+          "data": {},
+          "children": []
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "link",
+              "title": null,
+              "url": "https://example.com",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "示例链接",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "link",
+              "title": null,
+              "url": "https://example.org",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "更新后的示例链接",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ]
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "link",
+              "title": null,
+              "url": "https://example.com/new",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "新增的链接",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {}
         }
       ]
     },
@@ -1440,108 +1605,60 @@
       "children": [
         {
           "type": "text",
-          "value": "7.1 链接"
+          "value": "7.2 图片",
+          "data": {},
+          "children": []
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "paragraph",
       "children": [
         {
-          "type": "link",
-          "title": null,
-          "url": "https://example.com",
+          "type": "inlineDel",
           "children": [
             {
-              "type": "text",
-              "value": "示例链接"
+              "type": "image",
+              "title": null,
+              "url": "https://example.com/image.jpg",
+              "alt": "示例图片",
+              "data": {}
             }
-          ],
-          "data": {
-            "diff": "del"
-          }
+          ]
         },
         {
-          "type": "link",
-          "title": null,
-          "url": "https://example.org",
+          "type": "inlineIns",
           "children": [
             {
-              "type": "text",
-              "value": "更新后的示例链接"
-            }
-          ],
-          "data": {
-            "diff": "ins"
-          }
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "link",
-          "title": null,
-          "url": "https://example.com/new",
-          "children": [
-            {
-              "type": "text",
-              "value": "新增的链接"
+              "type": "image",
+              "title": null,
+              "url": "https://example.org/updated-image.jpg",
+              "alt": "更新后的示例图片",
+              "data": {}
             }
           ]
         }
       ],
-      "data": {
-        "diff": "ins"
-      }
+      "data": {}
     },
     {
-      "type": "heading",
-      "depth": 3,
+      "type": "ins",
       "children": [
         {
-          "type": "text",
-          "value": "7.2 图片"
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "image",
+              "title": null,
+              "url": "https://example.com/new-image.jpg",
+              "alt": "新增的示例图片",
+              "data": {}
+            }
+          ],
+          "data": {}
         }
       ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "image",
-          "title": null,
-          "url": "https://example.com/image.jpg",
-          "alt": "示例图片",
-          "data": {
-            "diff": "del"
-          }
-        },
-        {
-          "type": "image",
-          "title": null,
-          "url": "https://example.org/updated-image.jpg",
-          "alt": "更新后的示例图片",
-          "data": {
-            "diff": "ins"
-          }
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "image",
-          "title": null,
-          "url": "https://example.com/new-image.jpg",
-          "alt": "新增的示例图片"
-        }
-      ],
-      "data": {
-        "diff": "ins"
-      }
     },
     {
       "type": "heading",
@@ -1549,18 +1666,26 @@
       "children": [
         {
           "type": "text",
-          "value": "8. 水平线"
+          "value": "8. 水平线",
+          "data": {},
+          "children": []
         }
-      ]
-    },
-    {
-      "type": "thematicBreak"
+      ],
+      "data": {}
     },
     {
       "type": "thematicBreak",
-      "data": {
-        "diff": "ins"
-      }
+      "data": {},
+      "children": []
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "thematicBreak",
+          "data": {}
+        }
+      ]
     },
     {
       "type": "heading",
@@ -1568,67 +1693,89 @@
       "children": [
         {
           "type": "text",
-          "value": "9. 数学公式"
+          "value": "9. 数学公式",
+          "data": {},
+          "children": []
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "paragraph",
       "children": [
         {
           "type": "text",
-          "value": "行内公式：$E = mc^2$"
+          "value": "行内公式：$E = mc^2$",
+          "data": {}
         },
         {
-          "type": "text",
-          "value": " 和新增的 $F = ma$",
-          "data": {
-            "diff": "ins"
-          }
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "value": "块级公式："
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "value": "$$\n\\frac{d}{dx}\\left( \\int_{a}^{x} f(u),du\\right)=f(x)\n$$"
-        }
-      ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "value": "新增的公式："
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": " 和新增的 $F = ma$",
+              "data": {}
+            }
+          ]
         }
       ],
-      "data": {
-        "diff": "ins"
-      }
+      "data": {}
     },
     {
       "type": "paragraph",
       "children": [
         {
           "type": "text",
-          "value": "$$\n\\sum_{i=1}^{n} i = \\frac{n(n+1)}{2}\n$$"
+          "value": "块级公式：",
+          "data": {},
+          "children": []
         }
       ],
-      "data": {
-        "diff": "ins"
-      }
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "$$\n\\frac{d}{dx}\\left( \\int_{a}^{x} f(u),du\\right)=f(x)\n$$",
+          "data": {},
+          "children": []
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "新增的公式：",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "$$\n\\sum_{i=1}^{n} i = \\frac{n(n+1)}{2}\n$$",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ]
     },
     {
       "type": "heading",
@@ -1636,71 +1783,72 @@
       "children": [
         {
           "type": "text",
-          "value": "10. 脚注"
+          "value": "10. 脚注",
+          "data": {},
+          "children": []
         }
-      ]
+      ],
+      "data": {}
     },
     {
       "type": "paragraph",
       "children": [
         {
           "type": "text",
-          "value": "这里有一个脚注"
+          "value": "这里有一个脚注",
+          "data": {},
+          "children": []
         },
         {
           "type": "footnoteReference",
           "identifier": "1",
-          "label": "1"
+          "label": "1",
+          "data": {},
+          "children": []
         },
         {
-          "type": "text",
-          "value": "。",
-          "data": {
-            "diff": "del"
-          }
-        },
-        {
-          "type": "text",
-          "value": "和一个新增的脚注",
-          "data": {
-            "diff": "ins"
-          }
-        },
-        {
-          "type": "footnoteReference",
-          "identifier": "2",
-          "label": "2",
-          "data": {
-            "diff": "ins"
-          }
-        },
-        {
-          "type": "text",
-          "value": "。",
-          "data": {
-            "diff": "ins"
-          }
-        }
-      ]
-    },
-    {
-      "type": "footnoteDefinition",
-      "identifier": "1",
-      "label": "1",
-      "children": [
-        {
-          "type": "paragraph",
+          "type": "inlineIns",
           "children": [
             {
               "type": "text",
-              "value": "这是脚注内容。"
+              "value": "和一个新增的脚注",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "footnoteReference",
+              "identifier": "2",
+              "label": "2",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": "。",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": "。",
+              "data": {}
             }
           ]
         }
       ],
-      "data": {
-        "diff": "del"
-      }
+      "data": {}
     },
     {
       "type": "footnoteDefinition",
@@ -1708,250 +1856,347 @@
       "label": "1",
       "children": [
         {
-          "type": "paragraph",
+          "type": "del",
           "children": [
             {
-              "type": "text",
-              "value": "这是更新"
-            },
-            {
-              "type": "strong",
+              "type": "paragraph",
               "children": [
                 {
                   "type": "text",
-                  "value": "后的"
+                  "value": "这是脚注内容。",
+                  "data": {}
                 }
-              ]
-            },
+              ],
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "ins",
+          "children": [
             {
-              "type": "text",
-              "value": "脚注内容。"
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "这是更新",
+                  "data": {}
+                },
+                {
+                  "type": "strong",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "后的",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": "脚注内容。",
+                  "data": {}
+                }
+              ],
+              "data": {}
             }
           ]
         }
       ],
-      "data": {
-        "diff": "ins"
-      }
+      "data": {}
     },
     {
-      "type": "footnoteDefinition",
-      "identifier": "2",
-      "label": "2",
+      "type": "ins",
+      "children": [
+        {
+          "type": "footnoteDefinition",
+          "identifier": "2",
+          "label": "2",
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "这是新增的脚注内容。",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "11. 定义列表",
+          "data": {},
+          "children": []
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "术语 1",
+          "data": {}
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": "（已更新）",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n: ",
+          "data": {}
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": "更新后的",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "定义 1",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "术语 2\n: 定义 2",
+          "data": {},
+          "children": []
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "ins",
       "children": [
         {
           "type": "paragraph",
           "children": [
             {
               "type": "text",
-              "value": "这是新增的脚注内容。"
+              "value": "新术语\n: 新定义",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "12. HTML 内嵌",
+          "data": {},
+          "children": []
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "del",
+      "children": [
+        {
+          "type": "html",
+          "value": "<div style=\"color:rgb(196, 29, 29); margin: 10px;\">\n  <p>这是一个使用 HTML 的示例</p>\n  <ul>\n    <li>项目 1</li>\n    <li>项目 2</li>\n  </ul>\n</div>",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "<div style=\"color:rgba(19, 157, 220, 0.86); margin: 15px; border-radius: 5px;\">\n  <p>这是一个更新后使用 HTML 的示例</p>\n  <ul>\n    <li>更新的项目 1</li>\n    <li>项目 2</li>\n    <li>新增的项目 3</li>\n  </ul>\n  <button>新增的按钮</button>\n</div>",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "html",
+      "value": "<div>1212</div>",
+      "data": {},
+      "children": []
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "13. 总结",
+          "data": {},
+          "children": []
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "这个",
+          "data": {}
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": "更新后的",
+              "data": {}
             }
           ]
-        }
-      ],
-      "data": {
-        "diff": "ins"
-      }
-    },
-    {
-      "type": "heading",
-      "depth": 2,
-      "children": [
+        },
         {
           "type": "text",
-          "value": "11. 定义列表"
+          "value": "文档展示了多种 Markdown 元素的使用方式",
+          "data": {}
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": "及其变更",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "，可以用于测试差异比较功能",
+          "data": {}
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": "的效果",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "。",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 2,
+          "children": [
+            {
+              "type": "text",
+              "value": "14. 新增章节",
+              "data": {}
+            }
+          ],
+          "data": {}
         }
       ]
     },
     {
-      "type": "paragraph",
+      "type": "ins",
       "children": [
         {
-          "type": "text",
-          "value": "术语 1"
-        },
-        {
-          "type": "text",
-          "value": "（已更新）",
-          "data": {
-            "diff": "ins"
-          }
-        },
-        {
-          "type": "text",
-          "value": "\n: "
-        },
-        {
-          "type": "text",
-          "value": "更新后的",
-          "data": {
-            "diff": "ins"
-          }
-        },
-        {
-          "type": "text",
-          "value": "定义 1"
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "这是一个全新的章节，用于测试章节的添加。",
+              "data": {}
+            }
+          ],
+          "data": {}
         }
       ]
     },
     {
-      "type": "paragraph",
+      "type": "ins",
       "children": [
         {
-          "type": "text",
-          "value": "术语 2\n: 定义 2"
+          "type": "heading",
+          "depth": 3,
+          "children": [
+            {
+              "type": "text",
+              "value": "14.1 新增子章节",
+              "data": {}
+            }
+          ],
+          "data": {}
         }
       ]
     },
     {
-      "type": "paragraph",
+      "type": "ins",
       "children": [
         {
-          "type": "text",
-          "value": "新术语\n: 新定义"
-        }
-      ],
-      "data": {
-        "diff": "ins"
-      }
-    },
-    {
-      "type": "heading",
-      "depth": 2,
-      "children": [
-        {
-          "type": "text",
-          "value": "12. HTML 内嵌"
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "这是新增章节中的子章节内容。",
+              "data": {}
+            }
+          ],
+          "data": {}
         }
       ]
     },
     {
-      "type": "html",
-      "value": "<div style=\"color:rgb(196, 29, 29); margin: 10px;\">\n  <p>这是一个使用 HTML 的示例</p>\n  <ul>\n    <li>项目 1</li>\n    <li>项目 2</li>\n  </ul>\n</div>",
-      "data": {
-        "diff": "del"
-      }
-    },
-    {
-      "type": "html",
-      "value": "<div style=\"color:rgba(19, 157, 220, 0.86); margin: 15px; border-radius: 5px;\">\n  <p>这是一个更新后使用 HTML 的示例</p>\n  <ul>\n    <li>更新的项目 1</li>\n    <li>项目 2</li>\n    <li>新增的项目 3</li>\n  </ul>\n  <button>新增的按钮</button>\n</div>",
-      "data": {
-        "diff": "ins"
-      }
-    },
-    {
-      "type": "html",
-      "value": "<div>1212</div>"
-    },
-    {
-      "type": "heading",
-      "depth": 2,
+      "type": "ins",
       "children": [
         {
-          "type": "text",
-          "value": "13. 总结"
+          "type": "heading",
+          "depth": 2,
+          "children": [],
+          "data": {}
         }
       ]
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "value": "这个"
-        },
-        {
-          "type": "text",
-          "value": "更新后的",
-          "data": {
-            "diff": "ins"
-          }
-        },
-        {
-          "type": "text",
-          "value": "文档展示了多种 Markdown 元素的使用方式"
-        },
-        {
-          "type": "text",
-          "value": "及其变更",
-          "data": {
-            "diff": "ins"
-          }
-        },
-        {
-          "type": "text",
-          "value": "，可以用于测试差异比较功能"
-        },
-        {
-          "type": "text",
-          "value": "的效果",
-          "data": {
-            "diff": "ins"
-          }
-        },
-        {
-          "type": "text",
-          "value": "。"
-        }
-      ]
-    },
-    {
-      "type": "heading",
-      "depth": 2,
-      "children": [
-        {
-          "type": "text",
-          "value": "14. 新增章节"
-        }
-      ],
-      "data": {
-        "diff": "ins"
-      }
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "value": "这是一个全新的章节，用于测试章节的添加。"
-        }
-      ],
-      "data": {
-        "diff": "ins"
-      }
-    },
-    {
-      "type": "heading",
-      "depth": 3,
-      "children": [
-        {
-          "type": "text",
-          "value": "14.1 新增子章节"
-        }
-      ],
-      "data": {
-        "diff": "ins"
-      }
-    },
-    {
-      "type": "paragraph",
-      "children": [
-        {
-          "type": "text",
-          "value": "这是新增章节中的子章节内容。"
-        }
-      ],
-      "data": {
-        "diff": "ins"
-      }
-    },
-    {
-      "type": "heading",
-      "depth": 2,
-      "children": [],
-      "data": {
-        "diff": "ins"
-      }
     }
-  ]
+  ],
+  "data": {}
 }

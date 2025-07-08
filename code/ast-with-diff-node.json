@@ -2,36 +2,86 @@
   "type": "root",
   "children": [
     {
-      "type": "heading",
-      "depth": 1,
+      "type": "del",
       "children": [
         {
-          "type": "text",
-          "value": "代码示例"
-        },
-        {
-          "type": "inlineIns",
+          "type": "heading",
+          "depth": 1,
           "children": [
             {
               "type": "text",
-              "value": "（更新版）",
+              "value": "代码示例",
+              "position": {
+                "start": {
+                  "line": 1,
+                  "column": 3,
+                  "offset": 2
+                },
+                "end": {
+                  "line": 1,
+                  "column": 7,
+                  "offset": 6
+                }
+              },
               "data": {}
             }
-          ]
+          ],
+          "position": {
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 7,
+              "offset": 6
+            }
+          },
+          "data": {}
         }
-      ],
-      "position": {
-        "start": {
-          "line": 1,
-          "column": 1,
-          "offset": 0
-        },
-        "end": {
-          "line": 1,
-          "column": 12,
-          "offset": 11
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 1,
+          "children": [
+            {
+              "type": "text",
+              "value": "代码示例（更新版）",
+              "position": {
+                "start": {
+                  "line": 1,
+                  "column": 3,
+                  "offset": 2
+                },
+                "end": {
+                  "line": 1,
+                  "column": 12,
+                  "offset": 11
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 12,
+              "offset": 11
+            }
+          },
+          "data": {}
         }
-      }
+      ]
     },
     {
       "type": "heading",
@@ -51,7 +101,9 @@
               "column": 17,
               "offset": 29
             }
-          }
+          },
+          "data": {},
+          "children": []
         }
       ],
       "position": {
@@ -65,7 +117,8 @@
           "column": 17,
           "offset": 29
         }
-      }
+      },
+      "data": {}
     },
     {
       "type": "del",
@@ -133,7 +186,9 @@
               "column": 13,
               "offset": 281
             }
-          }
+          },
+          "data": {},
+          "children": []
         }
       ],
       "position": {
@@ -147,7 +202,8 @@
           "column": 13,
           "offset": 281
         }
-      }
+      },
+      "data": {}
     },
     {
       "type": "del",
@@ -215,7 +271,9 @@
               "column": 11,
               "offset": 529
             }
-          }
+          },
+          "data": {},
+          "children": []
         }
       ],
       "position": {
@@ -229,7 +287,8 @@
           "column": 11,
           "offset": 529
         }
-      }
+      },
+      "data": {}
     },
     {
       "type": "del",
@@ -279,5 +338,18 @@
         }
       ]
     }
-  ]
+  ],
+  "position": {
+    "start": {
+      "line": 1,
+      "column": 1,
+      "offset": 0
+    },
+    "end": {
+      "line": 55,
+      "column": 4,
+      "offset": 981
+    }
+  },
+  "data": {}
 }
