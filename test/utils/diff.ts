@@ -1,7 +1,7 @@
 import { Node } from '../../src/type';
-import { diffMarkdownAst } from "../../src/utils/diff";
-import { transformAstWithDiffDataToAstWithDiffNode } from "../../src/utils/transform";
-import { markdownToAst } from "./transform";
+import { diffMarkdownAst } from '../../src/diff';
+import { transformAstWithDiffDataToAstWithDiffNode } from '../../src/utils/transform';
+import { markdownToAst } from './transform';
 
 /**
  * 比较两个Markdown文件并生成差异结果

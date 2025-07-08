@@ -4,6 +4,8 @@
 
 一个基于AST的Markdown差异比较工具，能够精确识别两个Markdown文档之间的差异，并生成可视化的差异结果。
 
+使用 BULD 算法进行 diff，原理来自 [lowdown](https://kristaps.bsd.lv/lowdown/diff.html);
+
 ## 特性
 
 - 基于AST（抽象语法树）进行Markdown文档比较

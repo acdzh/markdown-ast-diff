@@ -1,6 +1,6 @@
 import typescript from '@rollup/plugin-typescript';
 import json from '@rollup/plugin-json';
-import dts from "rollup-plugin-dts";
+import dts from 'rollup-plugin-dts';
 import cleaner from 'rollup-plugin-cleaner';
 import commonjs from '@rollup/plugin-commonjs';
 import { readFileSync } from 'fs';
@@ -44,12 +44,12 @@ export default [
         tsconfig: './tsconfig.json',
         outputToFilesystem: true
       }),
-      json()
+      json(),
     ]
   },
   {
-    input: "src/index.ts",
-    output: [{ file: "dist/types/index.d.ts", format: "es" }],
+    input: 'src/index.ts',
+    output: [{ file: 'dist/types/index.d.ts', format: 'es' }],
     plugins: [dts()],
   }
 ];
