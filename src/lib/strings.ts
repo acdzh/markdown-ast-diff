@@ -2,21 +2,21 @@
  * See http://en.wikipedia.org/wiki/Surrogate_pair
  */
 export function isHighSurrogate(charCode: number): boolean {
-	return (0xD800 <= charCode && charCode <= 0xDBFF);
+  return (0xD800 <= charCode && charCode <= 0xDBFF);
 }
 
 /**
  * See http://en.wikipedia.org/wiki/Surrogate_pair
  */
 export function isLowSurrogate(charCode: number): boolean {
-	return (0xDC00 <= charCode && charCode <= 0xDFFF);
+  return (0xDC00 <= charCode && charCode <= 0xDFFF);
 }
 
 /**
  * See http://en.wikipedia.org/wiki/Surrogate_pair
  */
 export function computeCodePoint(highSurrogate: number, lowSurrogate: number): number {
-	return ((highSurrogate - 0xD800) << 10) + (lowSurrogate - 0xDC00) + 0x10000;
+  return ((highSurrogate - 0xD800) << 10) + (lowSurrogate - 0xDC00) + 0x10000;
 }
 
 const DEFAULT_RANDOM_CHARSET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';

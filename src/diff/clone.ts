@@ -1,5 +1,5 @@
 import type { Node, Parent } from 'unist';
-import { buildBidirectionalLinks } from "./bidirectional";
+import { buildBidirectionalLinks } from './bidirectional';
 import { IdBox } from '../types/base';
 
 /*

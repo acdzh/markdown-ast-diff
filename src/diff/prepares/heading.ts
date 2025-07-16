@@ -84,21 +84,21 @@ export function prepareHeading(oldTree: Root, newTree: Root) {
 
     const token = random(16);
 
-    const oldText: Text = {
+    const oldText = {
       type: NodeType.Text,
       value: token,
       data: {
         headingDiffToken: true,
       }
-    };
+    } as Text;
 
-    const newText: Text = {
+    const newText = {
       type: NodeType.Text,
       value: token,
       data: {
         headingDiffToken: true,
       }
-    };
+    } as Text;
 
     oldHeading.children.push(oldText);
     newHeading.children.push(newText);
@@ -106,9 +106,9 @@ export function prepareHeading(oldTree: Root, newTree: Root) {
 
   return (compTree: Root) => {
     visit(compTree, NodeType.Text, (t: Text, _, parent: Parent) => {
-      if (t.data?.headingDiffToken) {
+      if ((t.data as any)?.headingDiffToken) {
         replaceChildNode(parent, t, []);
       }
-    })
-  }
+    });
+  };
 }

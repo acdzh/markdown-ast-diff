@@ -27,16 +27,21 @@ export function remarkMarkdownDiff(options: Options = { }) {
       return tree;
     }
 
-    const comp = diffMarkdownAst(
-      // @ts-expect-error node type
-      u('root', tree.children.slice(0, separatorIndex)),
-      u('root', tree.children.slice(separatorIndex + 1)),
-    );
+    try {
+      const comp = diffMarkdownAst(
+        // @ts-expect-error node type
+        u('root', tree.children.slice(0, separatorIndex)),
+        u('root', tree.children.slice(separatorIndex + 1)),
+      );
+  
+      if (options.enableDiffNode) {
+        transformAstWithDiffDataToAstWithDiffNode(comp);
+      }
 
-    if (options.enableDiffNode) {
-      transformAstWithDiffDataToAstWithDiffNode(comp);
+      return comp;
+    } catch (error) {
+      console.error(error);
+      return u('root', tree.children.slice(separatorIndex + 1));
     }
-
-    return comp;
   };
 }

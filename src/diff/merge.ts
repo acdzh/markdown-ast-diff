@@ -1,8 +1,8 @@
+import assert from 'assert';
 import type { Text } from 'mdast';
 import type { Node, Parent } from 'unist';
 import { XMap } from '../lib/XMap';
 import { XNode } from '../lib/XNode';
-import assert from '../lib/assert';
 import { DiffType, IdBox, NodeType } from '../types/base';
 import { isOpaque } from '../utils/node';
 import { nodeClone, nodeCloneTree } from './clone';
@@ -19,7 +19,7 @@ import { nodeLcs } from './lcs';
  */
 export function nodeMerge(_nOld: Node, xOldMap: XMap, _nNew: Node, xNewMap: XMap, idBox: IdBox /* max id in new tree */) {
   let xOld: XNode | undefined, xNew: XNode | undefined;
-  let n: Parent, nn: Node;
+  let nn: Node;
 
   /*
    * Invariant: the current nodes are matched.
@@ -35,7 +35,7 @@ export function nodeMerge(_nOld: Node, xOldMap: XMap, _nNew: Node, xNewMap: XMap
   assert(xNew.match);
   assert(xNew.match === xOld.node);
 
-  n = nodeClone(_nNew, idBox.value) as Parent;
+  const n = nodeClone(_nNew, idBox.value) as Parent;
   n.children = [];
 
   /* Now walk through the children on both sides. */
@@ -112,7 +112,8 @@ export function nodeMerge(_nOld: Node, xOldMap: XMap, _nNew: Node, xNewMap: XMap
       }
       nn = nodeCloneTree(nOld, idBox);
       nn._parent = n;
-      (nn.data!.diff = DiffType.Del), n.children.push(nn);
+      nn.data!.diff = DiffType.Del;
+      n.children.push(nn);
       nOld = nOld._next;
     }
 
@@ -124,7 +125,8 @@ export function nodeMerge(_nOld: Node, xOldMap: XMap, _nNew: Node, xNewMap: XMap
       }
       nn = nodeCloneTree(nNew, idBox);
       nn._parent = n;
-      (nn.data!.diff = DiffType.Ins), n.children.push(nn);
+      nn.data!.diff = DiffType.Ins;
+      n.children.push(nn);
       nNew = nNew._next;
     }
 
@@ -168,7 +170,8 @@ export function nodeMerge(_nOld: Node, xOldMap: XMap, _nNew: Node, xNewMap: XMap
     if (!nnOld) {
       nn = nodeCloneTree(nNew, idBox);
       nn._parent = n;
-      (nn.data!.diff = DiffType.Ins), n.children.push(nn);
+      nn.data!.diff = DiffType.Ins;
+      n.children.push(nn);
       nNew = nNew._next;
       continue;
     }
@@ -183,7 +186,8 @@ export function nodeMerge(_nOld: Node, xOldMap: XMap, _nNew: Node, xNewMap: XMap
       }
       nn = nodeCloneTree(nOld, idBox);
       nn._parent = n;
-      (nn.data!.diff = DiffType.Del), n.children.push(nn);
+      nn.data!.diff = DiffType.Del;
+      n.children.push(nn);
       nOld = nOld._next;
     }
 
@@ -216,7 +220,8 @@ export function nodeMerge(_nOld: Node, xOldMap: XMap, _nNew: Node, xNewMap: XMap
   while (nOld) {
     nn = nodeCloneTree(nOld, idBox);
     nn._parent = n;
-    (nn.data!.diff = DiffType.Del), n.children.push(nn);
+    nn.data!.diff = DiffType.Del;
+    n.children.push(nn);
     nOld = nOld._next;
   }
 

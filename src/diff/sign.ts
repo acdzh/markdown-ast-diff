@@ -86,11 +86,11 @@ export function assignSigns(parentHashContext: HashContext | null, map: XMap, no
   }
 
   /*
-	 * Augment our signature from our attributes.
-	 * This depends upon the node.
-	 * Avoid using attributes that are "mutable" relative to the
-	 * generated output, e.g., list display numbers.
-	 */
+   * Augment our signature from our attributes.
+   * This depends upon the node.
+   * Avoid using attributes that are "mutable" relative to the
+   * generated output, e.g., list display numbers.
+   */
   switch (node.type) {
     case NodeType.List:
       hashContext.update((node as List).ordered);
@@ -147,25 +147,12 @@ export function assignSigns(parentHashContext: HashContext | null, map: XMap, no
   return xNode.weight;
 }
 
-class DebugSha {
-  private content: string = '';
-
-  update(i: string) {
-    this.content += i;
-  }
-
-  digest() {
-    return this.content;
-  }
-}
-
 /**
  * HashContext class for calculating hash values of content
  * Supports string, number, boolean, null, undefined and array types
  */
 class HashContext {
-  private sha: DebugSha = new DebugSha();
-  // private sha: StringSHA1 = new StringSHA1();
+  private sha: StringSHA1 = new StringSHA1();
 
   /**
    * Creates a new HashContext instance

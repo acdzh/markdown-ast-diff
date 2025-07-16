@@ -1,10 +1,9 @@
+import assert from 'assert';
 import { Root } from 'mdast';
-import assert from '../lib/assert';
 import { XMap } from '../lib/XMap';
 import { XNode } from '../lib/XNode';
-import { DiffType, IdBox, NodeType, Options } from '../types/base';
+import { DiffType, IdBox, NodeType } from '../types/base';
 import { isOpaque } from '../utils/node';
-import { transformAstWithDiffDataToAstWithDiffNode } from '../utils/transform';
 import { candidate } from './candidate';
 import { matchDown, matchUp } from './match';
 import { nodeMerge } from './merge';
@@ -24,7 +23,7 @@ function diff(nOld: Root, nNew: Root): Root {
 
   const cleanupPrepares = (comp: Root) => {
     cleanups.reverse().forEach(cleanup => cleanup(comp));
-  }
+  };
 
   let xOld: XNode | undefined, xNew: XNode | undefined;
 

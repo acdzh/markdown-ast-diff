@@ -4,7 +4,7 @@ import { visit } from 'unist-util-visit';
 import { buildBidirectionalLinks } from '../bidirectional';
 
 export function prepareMeta(oldTree: Root, newTree: Root) {
-  for (let tree of [oldTree, newTree]) {
+  for (const tree of [oldTree, newTree]) {
     let index = 0;
     visit(tree, (node: Node, _, parent?: Parent) => {
       node._parent = parent;
@@ -27,5 +27,5 @@ export function prepareMeta(oldTree: Root, newTree: Root) {
       delete node._before;
       delete node._next;
     });
-  }
+  };
 }

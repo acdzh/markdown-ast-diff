@@ -3,6 +3,7 @@ import json from '@rollup/plugin-json';
 import dts from 'rollup-plugin-dts';
 import cleaner from 'rollup-plugin-cleaner';
 import commonjs from '@rollup/plugin-commonjs';
+import unassert from 'rollup-plugin-unassert';
 import { readFileSync } from 'fs';
 
 // 读取 package.json
@@ -10,6 +11,7 @@ const pkg = JSON.parse(readFileSync('./package.json', 'utf8'));
 
 // 外部依赖，这些不会被打包进最终的构建文件中
 const externalModules = [
+  'assert',
   'diff',
   'unist-builder',
   'unist-util-visit',
@@ -43,6 +45,9 @@ export default [
       typescript({
         tsconfig: './tsconfig.json',
         outputToFilesystem: true
+      }),
+      unassert({
+        include: ['**/*.js', '**/*.ts'],
       }),
       json(),
     ]

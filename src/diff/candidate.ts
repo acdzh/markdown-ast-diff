@@ -1,8 +1,6 @@
-
-import assert from '../lib/assert';
+import assert from 'assert';
 import { XMap } from '../lib/XMap';
 import { XNode } from '../lib/XNode';
-
 
 const BASE_OPTIMALITY = 1;
 

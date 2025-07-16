@@ -1,8 +1,8 @@
+import assert from 'assert';
 import type { Heading, Link, ListItem } from 'mdast';
 import type { Node } from 'unist';
 import { XMap } from '../lib/XMap';
 import { XNode } from '../lib/XNode';
-import assert from '../lib/assert';
 import { NodeType } from '../types/base';
 import { isOpaque } from '../utils/node';
 

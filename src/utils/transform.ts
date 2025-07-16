@@ -65,21 +65,21 @@ function diffNodeTypeToDiffType(diffNodeType: DiffNodeType): DiffType {
  */
 export function transformAstWithDiffDataToAstWithDiffNode(ast: Node): Node {
   visit(ast,  (node: Node, _?: number, parent?: Node) => {
-      if (node.type === 'listItem'|| node.type === DiffType.Ins || node.type === DiffType.Del) {
-        return true;
-      }
-
-      if (!node.data?.diff) {
-        return true;
-      }
-
-      const diff = node.data.diff as DiffType;
-      delete node.data.diff;
-
-      const isInline = isInlineElement(node);
-      replaceChildNode(parent, node, u(diffTypeToDiffNodeType(diff, isInline), [node]))
-
+    if (node.type === 'listItem'|| node.type === DiffType.Ins || node.type === DiffType.Del) {
       return true;
+    }
+
+    if (!node.data?.diff) {
+      return true;
+    }
+
+    const diff = node.data.diff as DiffType;
+    delete node.data.diff;
+
+    const isInline = isInlineElement(node);
+    replaceChildNode(parent, node, u(diffTypeToDiffNodeType(diff, isInline), [node]));
+
+    return true;
   });
   return ast;
 }

@@ -1,8 +1,8 @@
+import assert from 'assert';
 import type { Node } from 'unist';
-import assert from '../lib/assert';
 import { XMap } from '../lib/XMap';
-import { matchEq } from './match';
 import { isOpaque } from '../utils/node';
+import { matchEq } from './match';
 
 function hasChildren(node: Node): node is (Node & { children: Node[] }) {
   return Boolean(node.children) && node.children!.length > 0;
@@ -38,7 +38,7 @@ export function nodeOptimiseTopDown(n: Node) {
   const xMatch = match._xNode;
   assert(xMatch);
 
-  for (let nChild of n.children!) {
+  for (const nChild of n.children!) {
     if (isOpaque(nChild) || !hasChildren(nChild)) {
       continue;
     }
@@ -94,7 +94,7 @@ export function nodeOptimiseTopDown(n: Node) {
     xmNext.match = nNext;
   }
 
-  for (let nChild of n.children) {
+  for (const nChild of n.children) {
     nodeOptimiseTopDown(nChild);
   }
 }
@@ -123,7 +123,7 @@ export function nodeOptimiseBottomUp(n: Node, oldMap: XMap, newMap: XMap) {
 
   /* Do a depth-first pre-order search. */
 
-  for (let nn of n.children) {
+  for (const nn of n.children) {
     assert(nn._xNode);
     totalWeight += nn._xNode?.weight || 0;
     nodeOptimiseBottomUp(nn, oldMap, newMap);
@@ -138,7 +138,7 @@ export function nodeOptimiseBottomUp(n: Node, oldMap: XMap, newMap: XMap) {
     return;
   }
 
-  for (let nn of n.children) {
+  for (const nn of n.children) {
     assert(nn._xNode);
     if (!nn._xNode.match) {
       continue;
@@ -164,7 +164,7 @@ export function nodeOptimiseBottomUp(n: Node, oldMap: XMap, newMap: XMap) {
      */
 
     let weight = 0;
-    for (let nnn of n.children) {
+    for (const nnn of n.children) {
       assert(nnn._xNode);
       if (!nnn._xNode.match) {
         continue;
