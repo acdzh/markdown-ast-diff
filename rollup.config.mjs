@@ -12,9 +12,6 @@ const pkg = JSON.parse(readFileSync('./package.json', 'utf8'));
 // 外部依赖，这些不会被打包进最终的构建文件中
 const externalModules = [
   'assert',
-  'diff',
-  'unist-builder',
-  'unist-util-visit',
   ...Object.keys(pkg.dependencies || {}),
   ...Object.keys(pkg.peerDependencies || {})
 ];

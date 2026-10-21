@@ -130,7 +130,6 @@ export function assignSigns(parentHashContext: HashContext | null, map: XMap, no
       hashContext.update((node as Image).alt);
       break;
     default:
-      // console.warn(`[markdown-ast-diff] assignSigns (calc hash): unhandled node type ${node.type}`);
       break;
   }
 

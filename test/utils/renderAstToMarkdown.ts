@@ -1,6 +1,6 @@
 import remarkStringify from 'remark-stringify';
 import { unified } from 'unified';
-import { Node }from '../../src/type'; 
+import type { Node } from 'unist';
 import { visit } from 'unist-util-visit';
 import remarkGfm from 'remark-gfm';
 

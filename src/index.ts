@@ -4,3 +4,5 @@ export {
 } from './remarkMarkdownDiff';
 
 export { transformAstWithDiffDataToAstWithDiffNode, transformAstWithDiffNodeToAstWithDiffData } from './utils/transform';
+
+export { DiffType, DiffNodeType, Options } from './types/base';

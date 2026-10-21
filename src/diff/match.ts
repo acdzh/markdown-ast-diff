@@ -37,7 +37,6 @@ export function matchEq(n1: Node, n2: Node): boolean {
       }
       break;
     default:
-      // console.warn(`[markdown-ast-diff] matchEq: unhandled node type ${n1.type}`);
       break;
   }
 

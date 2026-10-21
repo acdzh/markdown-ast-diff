@@ -28,15 +28,15 @@ export function prepareHeading(oldTree: Root, newTree: Root) {
   
   visit(oldTree, 'heading', (h: Heading) => {
     if (isHeadingOk(h)) {
-      oldHeadingTextSet.add((h.children[0] as any).value);
-      oldHeadings.push([h, (h.children[0] as any).value]);
+      oldHeadingTextSet.add((h.children[0] as Text).value);
+      oldHeadings.push([h, (h.children[0] as Text).value]);
     }
   });
 
   visit(newTree, 'heading', (h: Heading) => {
     if (isHeadingOk(h)) {
-      newHeadingTextSet.add((h.children[0] as any).value);
-      newHeadings.push([h, (h.children[0] as any).value]);
+      newHeadingTextSet.add((h.children[0] as Text).value);
+      newHeadings.push([h, (h.children[0] as Text).value]);
     }
   });
   
@@ -106,7 +106,7 @@ export function prepareHeading(oldTree: Root, newTree: Root) {
 
   return (compTree: Root) => {
     visit(compTree, NodeType.Text, (t: Text, _, parent: Parent) => {
-      if ((t.data as any)?.headingDiffToken) {
+      if (t.data?.headingDiffToken) {
         replaceChildNode(parent, t, []);
       }
     });

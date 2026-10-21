@@ -22,19 +22,11 @@ export function computeCodePoint(highSurrogate: number, lowSurrogate: number): n
 const DEFAULT_RANDOM_CHARSET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 const DEFAULT_RANDOM_CHARSET_LENGTH = DEFAULT_RANDOM_CHARSET.length;
 
-export function random(length: number): string {  
+export function random(length: number): string {
   let result = '';
-
-  const randomValues = new Uint8Array(length);
-  
   for (let i = 0; i < length; i++) {
-    randomValues[i] = Math.floor(Math.random() * 256);
+    result += DEFAULT_RANDOM_CHARSET.charAt(Math.floor(Math.random() * DEFAULT_RANDOM_CHARSET_LENGTH));
   }
-
-  for (let i = 0; i < length; i++) {
-    result += DEFAULT_RANDOM_CHARSET.charAt(randomValues[i] % DEFAULT_RANDOM_CHARSET_LENGTH);
-  }
-  
   return result;
 }
 
