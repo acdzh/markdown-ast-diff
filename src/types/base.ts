@@ -31,7 +31,7 @@ export enum NodeType {
   Strong = 'strong',
   Text = 'text',
   ThematicBreak = 'thematicBreak',
-  
+
   // GFM 扩展节点类型
   Delete = 'delete',
   FootnoteDefinition = 'footnoteDefinition',
@@ -39,21 +39,24 @@ export enum NodeType {
   Table = 'table',
   TableRow = 'tableRow',
   TableCell = 'tableCell',
-  
+
   // Directive 扩展节点类型
   ContainerDirective = 'containerDirective',
   LeafDirective = 'leafDirective',
   TextDirective = 'textDirective',
-  
+
   // Frontmatter 扩展节点类型
   YAML = 'yaml',
   TOML = 'toml',
-  
+
   // MDX 扩展节点类型
   MDXJSEsm = 'mdxjsEsm',
   MDXJSExpression = 'mdxJsExpression',
   MDXFlowExpression = 'mdxFlowExpression',
-  MDXTextExpression = 'mdxTextExpression'
+  MDXTextExpression = 'mdxTextExpression',
+
+  // Diff 扩展节点类型
+  Collapse = 'collapse',
 }
 
 
@@ -66,4 +69,9 @@ export interface IdBox {
 
 export interface Options {
   enableDiffNode?: boolean;
+  contextLines?: number | false;
+  changedLineRanges?: {
+    from: [number, number][];
+    to: [number, number][];
+  };
 }

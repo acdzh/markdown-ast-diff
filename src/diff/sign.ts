@@ -5,6 +5,7 @@ import { XMap } from '../lib/XMap';
 import { XNode } from '../lib/XNode';
 import { NodeType } from '../types/base';
 import { isOpaque } from '../utils/node';
+import { CONSTANTS } from './constants';
 
 /*
  * Assign signatures and weights.
@@ -105,18 +106,18 @@ export function assignSigns(parentHashContext: HashContext | null, map: XMap, no
       hashContext.update((node as Heading).depth);
       break;
     case NodeType.Text:
-      hashContext.update((node as Text).value);
+      hashContext.update((node as Text).value.substring(0, CONSTANTS.SIGN_TEXT_TRUNCATE_LEN));
       break;
     case NodeType.Html:
-      hashContext.update((node as HTML).value);
+      hashContext.update((node as HTML).value.substring(0, CONSTANTS.SIGN_TEXT_TRUNCATE_LEN));
       break;
     case NodeType.Link:
       hashContext.update((node as Link).url);
       hashContext.update((node as Link).title);
       break;
     case NodeType.Code:
-      hashContext.update((node as Code).value);
       hashContext.update((node as Code).lang);
+      hashContext.update((node as Code).value.substring(0, 100));
       break;
     case NodeType.InlineCode:
       hashContext.update((node as InlineCode).value);

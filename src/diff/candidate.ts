@@ -1,6 +1,7 @@
 import { assert } from '../lib/assert';
 import { XMap } from '../lib/XMap';
 import { XNode } from '../lib/XNode';
+import { CONSTANTS } from './constants';
 
 const BASE_OPTIMALITY = 1;
 
@@ -35,7 +36,16 @@ function optimality(xOld: XNode, xNew: XNode, xOldMap: XMap, xNewMap: XMap) {
       opt += 1;
     }
   }
-  
+
+  const oldMaxId = Math.max(1, xOldMap.maxId);
+  const newMaxId = Math.max(1, xNewMap.maxId);
+  const oldPosRatio = (xOld.node?._id ?? 0) / oldMaxId;
+  const newPosRatio = (xNew.node?._id ?? 0) / newMaxId;
+  const posDiff = Math.abs(oldPosRatio - newPosRatio);
+  if (posDiff < CONSTANTS.MAX_POS_DIFF) {
+    opt += (CONSTANTS.MAX_POS_DIFF - posDiff) * (CONSTANTS.MAX_POS_BONUS / CONSTANTS.MAX_POS_DIFF);
+  }
+
   return opt;
 }
 

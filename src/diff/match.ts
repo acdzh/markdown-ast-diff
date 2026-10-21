@@ -167,6 +167,13 @@ export function matchDown(
     xOld.match = undefined;
   }
 
+  if (xNew.match) {
+    assert(xNew.match._xNode);
+    assert(xNew.node === xNew.match._xNode.match);
+    xNew.match._xNode.match = undefined;
+    xNew.match = undefined;
+  }
+
   assert(!xNew.match);
   assert(!xOld.match);
 
@@ -183,8 +190,7 @@ export function matchDown(
   nOld = xOld.node.children?.[0];
   nNew = xNew.node.children?.[0];
 
-  while (nNew) {
-    assert(nOld);
+  while (nNew && nOld) {
     assert(nOld._xNode);
     assert(nNew._xNode);
     matchDown(
@@ -196,6 +202,4 @@ export function matchDown(
     nOld = nOld._next;
     nNew = nNew._next;
   }
-
-  assert(!nOld);
 }

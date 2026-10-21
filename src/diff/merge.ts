@@ -4,9 +4,47 @@ import type { Node, Parent } from 'unist';
 import { XMap } from '../lib/XMap';
 import { XNode } from '../lib/XNode';
 import { DiffType, IdBox, NodeType } from '../types/base';
-import { isOpaque } from '../utils/node';
+import { isOpaque, isInlineOnlyChildren } from '../utils/node';
 import { nodeClone, nodeCloneTree } from './clone';
 import { nodeLcs } from './lcs';
+import { diffInlineChildren } from './inline-diff';
+import { diffSentenceSegments, hasSentenceBoundary } from './sentence-diff';
+
+function collectChildren(node: Node): Node[] {
+  const result: Node[] = [];
+  let child = node.children?.[0];
+  while (child) {
+    result.push(child);
+    child = child._next;
+  }
+  return result;
+}
+
+function hasAnyDiff(node: Node): boolean {
+  if (node.data?.diff) {
+    return true;
+  }
+  if (node.data?.diffOldContent) {
+    return true;
+  }
+  if (node.children) {
+    for (const child of node.children) {
+      if (hasAnyDiff(child)) {
+        return true;
+      }
+    }
+  }
+  return false;
+}
+
+function markUnchangedIfClean(node: Node): void {
+  if (!hasAnyDiff(node)) {
+    if (!node.data) {
+      node.data = {};
+    }
+    node.data.diffUnchanged = true;
+  }
+}
 
 /*
  * Merge the new tree "nNew" with the old "nOld" using a depth-first
@@ -204,6 +242,35 @@ export function nodeMerge(_nOld: Node, xOldMap: XMap, _nNew: Node, xNewMap: XMap
       nn = nodeCloneTree(nNew, idBox);
       nn._parent = n;
       n.children.push(nn);
+    } else if (nNew.type === NodeType.Code && nOld.type === NodeType.Code) {
+      nn = nodeCloneTree(nNew, idBox);
+      nn._parent = n;
+      const oldValue = (nOld as any).value as string;
+      const newValue = (nNew as any).value as string;
+      if (oldValue !== newValue && (nNew as any).lang !== 'mermaid') {
+        if (!nn.data) {
+          nn.data = {};
+        }
+        nn.data.diffOldContent = oldValue;
+      }
+      n.children.push(nn);
+    } else if (isInlineOnlyChildren(nOld) && isInlineOnlyChildren(nNew)) {
+      const oldInline = collectChildren(nOld);
+      const newInline = collectChildren(nNew);
+      let result = diffInlineChildren(oldInline, newInline, idBox, n);
+      if (result.shouldFallback && hasSentenceBoundary(oldInline)) {
+        result = diffSentenceSegments(oldInline, newInline, idBox, n);
+      }
+      if (!result.shouldFallback) {
+        nn = nodeClone(nNew, ++idBox.value) as Parent;
+        nn._parent = n;
+        nn.children = result.nodes;
+        n.children.push(nn);
+      } else {
+        nn = nodeMerge(nOld, xOldMap, nNew, xNewMap, idBox);
+        nn._parent = n;
+        n.children.push(nn);
+      }
     } else {
       assert(!isOpaque(nOld));
       nn = nodeMerge(nOld, xOldMap, nNew, xNewMap, idBox);
@@ -224,6 +291,8 @@ export function nodeMerge(_nOld: Node, xOldMap: XMap, _nNew: Node, xNewMap: XMap
     n.children.push(nn);
     nOld = nOld._next;
   }
+
+  markUnchangedIfClean(n);
 
   return n;
 }
