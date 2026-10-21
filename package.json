@@ -25,6 +25,7 @@
   ],
   "scripts": {
     "test": "tsx test/node/index.ts",
+    "evaluate": "tsx test/evaluate/index.ts",
     "dev": "vite ./test/browser",
     "build": "tsup",
     "build:preview": "vite build ./test/browser --outDir output",
