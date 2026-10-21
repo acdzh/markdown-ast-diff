@@ -21,10 +21,6 @@ export interface InlineDiffResult {
 
 const dmp = new DiffMatchPatch();
 
-function isPlaceholder(token: string): boolean {
-  return token.length === 1 && token.codePointAt(0)! >= CONSTANTS.INLINE_PLACEHOLDER_BASE;
-}
-
 function tokensToNodes(
   tokens: string[],
   diff: DiffType | undefined,
@@ -54,20 +50,18 @@ function tokensToNodes(
   }
 
   for (const token of tokens) {
-    if (isPlaceholder(token)) {
+    const originalNode = pmap.placeholderToNode.get(token);
+    if (originalNode) {
       flushText();
-      const originalNode = pmap.placeholderToNode.get(token);
-      if (originalNode) {
-        const cloned = nodeCloneTree(originalNode, idBox);
-        cloned._parent = parentNode as Parent;
-        if (diff) {
-          if (!cloned.data) {
-            cloned.data = {};
-          }
-          cloned.data.diff = diff;
+      const cloned = nodeCloneTree(originalNode, idBox);
+      cloned._parent = parentNode as Parent;
+      if (diff) {
+        if (!cloned.data) {
+          cloned.data = {};
         }
-        result.push(cloned);
+        cloned.data.diff = diff;
       }
+      result.push(cloned);
     } else {
       textBuf += token;
     }

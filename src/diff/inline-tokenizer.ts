@@ -68,6 +68,12 @@ export function buildInlineSignature(node: Node): string {
   if ((node as any).alt !== undefined) {
     parts.push(String((node as any).alt));
   }
+  if ((node as any).identifier !== undefined) {
+    parts.push(String((node as any).identifier));
+  }
+  if ((node as any).label !== undefined) {
+    parts.push(String((node as any).label));
+  }
   if (node.children && node.children.length > 0) {
     for (const child of node.children) {
       parts.push(buildInlineSignature(child));
