@@ -23,29 +23,23 @@ jobs:
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Install pnpm
-      uses: pnpm/action-setup@v2
-      with:
-        version: 8
-        run_install: false
-
     - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
         node-version: '18'
-        cache: 'pnpm'
+        cache: 'npm'
 
     - name: Install dependencies
-      run: pnpm install
+      run: npm ci
 
     - name: Run tests
-      run: pnpm test
+      run: npm test
 
     - name: Build library
-      run: pnpm build
+      run: npm run build
 
     - name: Build preview
-      run: pnpm build:preview
+      run: npm run build:preview
 
     - name: Deploy Node Tests to GitHub Pages
       if: github.event_name == 'push'
