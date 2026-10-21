@@ -1,4 +1,4 @@
-import assert from 'assert';
+import { assert } from '../lib/assert';
 import type { Heading, Link, ListItem } from 'mdast';
 import type { Node } from 'unist';
 import { XMap } from '../lib/XMap';
@@ -37,7 +37,6 @@ export function matchEq(n1: Node, n2: Node): boolean {
       }
       break;
     default:
-      // console.warn(`[markdown-ast-diff] matchEq: unhandled node type ${n1.type}`);
       break;
   }
 

@@ -1,4 +1,4 @@
-import assert from 'assert';
+import { assert } from '../lib/assert';
 import { XMap } from '../lib/XMap';
 import { XNode } from '../lib/XNode';
 

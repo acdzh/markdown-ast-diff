@@ -8,7 +8,7 @@ export function prepareListItem(oldTree: Root, newTree: Root) {
         if (!node.data) {
           node.data = {};
         }
-        (node.data as any).backupParagraph = node.children[0];
+        node.data.backupParagraph = node.children[0];
         node.children = (node.children[0] as Paragraph).children as unknown as ListItem['children'];
       }
     });
@@ -16,13 +16,13 @@ export function prepareListItem(oldTree: Root, newTree: Root) {
 
   return (compTree: Root) => {
     visit(compTree, 'listItem', (node: ListItem) => {
-      if ((node.data as any)?.backupParagraph) {
+      if (node.data?.backupParagraph) {
         node.children = [{
-          ...((node.data as any).backupParagraph as Paragraph),
+          ...(node.data.backupParagraph as Paragraph),
           children: node.children,
         }] as ListItem['children'];
-        delete (node.data as any).backupParagraph;
+        delete node.data.backupParagraph;
       }
     });
-  }; 
+  };
 }

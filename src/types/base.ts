@@ -1,16 +1,16 @@
-export const enum DiffType {
+export enum DiffType {
   Ins = 'ins',
   Del = 'del',
 }
 
-export const enum DiffNodeType {
+export enum DiffNodeType {
   Ins = 'ins',
   Del = 'del',
   InlineIns = 'inlineIns',
   InlineDel = 'inlineDel',
 }
 
-export const enum NodeType {
+export enum NodeType {
   // 基本节点类型
   Root = 'root',
   Blockquote = 'blockquote',

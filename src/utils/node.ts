@@ -1,25 +1,24 @@
 import type { Node } from 'unist';
 import { NodeType } from '../types/base';
 
-// List of inline elements (PhrasingContent) according to mdast specification
-export function isInlineElement(node: Node) {
-  // All inline element types (PhrasingContent) defined in mdast specification and GFM extension
-  const inlineTypes = [
-    'break',
-    'delete',  // GFM extension
-    'emphasis',
-    'footnote',  // GFM extension
-    'footnoteReference',  // GFM extension
-    'image',
-    'imageReference',
-    'inlineCode',
-    'link',
-    'linkReference',
-    'strong',
-    'text',
-    'inlineMath',  // Math formula extension
-  ];
-  return inlineTypes.includes(node.type);
+const INLINE_TYPES: ReadonlySet<string> = new Set([
+  'break',
+  'delete',
+  'emphasis',
+  'footnote',
+  'footnoteReference',
+  'image',
+  'imageReference',
+  'inlineCode',
+  'link',
+  'linkReference',
+  'strong',
+  'text',
+  'inlineMath',
+]);
+
+export function isInlineElement(node: Node): boolean {
+  return INLINE_TYPES.has(node.type);
 }
 
 /*

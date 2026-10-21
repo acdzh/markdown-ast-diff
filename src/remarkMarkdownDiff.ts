@@ -1,6 +1,5 @@
-import type { Text } from 'mdast';
+import type { Text, Root } from 'mdast';
 import type { Node } from 'unist';
-import { u } from 'unist-builder';
 import { diffMarkdownAst } from './diff';
 import { Options } from './types/base';
 import { transformAstWithDiffDataToAstWithDiffNode } from './utils/transform';
@@ -28,12 +27,10 @@ export function remarkMarkdownDiff(options: Options = { }) {
     }
 
     try {
-      const comp = diffMarkdownAst(
-        // @ts-expect-error node type
-        u('root', tree.children.slice(0, separatorIndex)),
-        u('root', tree.children.slice(separatorIndex + 1)),
-      );
-  
+      const oldRoot: Root = { type: 'root', children: tree.children.slice(0, separatorIndex) as Root['children'] };
+      const newRoot: Root = { type: 'root', children: tree.children.slice(separatorIndex + 1) as Root['children'] };
+      const comp = diffMarkdownAst(oldRoot, newRoot);
+
       if (options.enableDiffNode) {
         transformAstWithDiffDataToAstWithDiffNode(comp);
       }
@@ -41,7 +38,7 @@ export function remarkMarkdownDiff(options: Options = { }) {
       return comp;
     } catch (error) {
       console.error(error);
-      return u('root', tree.children.slice(separatorIndex + 1));
+      return { type: 'root', children: tree.children.slice(separatorIndex + 1) } as Root;
     }
   };
 }

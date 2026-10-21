@@ -1,5 +1,6 @@
-import assert from 'assert';
+import { assert } from '../lib/assert';
 import { Root } from 'mdast';
+import type { Node } from 'unist';
 import { XMap } from '../lib/XMap';
 import { XNode } from '../lib/XNode';
 import { DiffType, IdBox, NodeType } from '../types/base';
@@ -103,12 +104,9 @@ function diff(nOld: Root, nNew: Root): Root {
      * See "Phase 3", sec. 5.2.
      */
     assert(!xNew.match);
-    // @ts-expect-error ts bug
-    assert(!xNew.optMatch._xNode.match);
-
-    // @ts-expect-error ts bug
-    const xOldOptMatch = xNew.optMatch._xNode;
-    assert(xOldOptMatch);
+    const optMatchNode = xNew.optMatch as Node;
+    const xOldOptMatch = optMatchNode._xNode!;
+    assert(!xOldOptMatch.match);
     matchDown(xOldOptMatch, xOldMap, xNew, xNewMap);
     matchUp(xOldOptMatch, xOldMap, xNew, xNewMap);
   }
@@ -131,24 +129,6 @@ function diff(nOld: Root, nNew: Root): Root {
     xNew.match = xOld.node;
     xOld.match = xNew.node;
   }
-
-  // /*
-  //  * Following the above, make sure that our LOWDOWN_DOC_HEADER
-  //  * nodes are also matched, because they are fixed in the tree.
-  //  */
-
-  // n = nNew.children?.[0];
-  // nn = nOld.children?.[0];
-  // if (n && nn &&
-  //     n.type == LOWDOWN_DOC_HEADER &&
-  //     nn.type == LOWDOWN_DOC_HEADER) {
-  //   xnew = &xnewmap.nodes[n->id];
-  //   xold = &xoldmap.nodes[nn->id];
-  //   if (xnew->match == NULL) {
-  //     xnew->match = xold->node;
-  //     xold->match = xnew->node;
-  //   }
-  // }
 
   /*
    * All nodes have been processed.

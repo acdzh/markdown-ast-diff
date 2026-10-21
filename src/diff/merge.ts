@@ -1,4 +1,4 @@
-import assert from 'assert';
+import { assert } from '../lib/assert';
 import type { Text } from 'mdast';
 import type { Node, Parent } from 'unist';
 import { XMap } from '../lib/XMap';

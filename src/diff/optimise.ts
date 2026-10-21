@@ -1,4 +1,4 @@
-import assert from 'assert';
+import { assert } from '../lib/assert';
 import type { Node } from 'unist';
 import { XMap } from '../lib/XMap';
 import { isOpaque } from '../utils/node';

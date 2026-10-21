@@ -1,5 +1,4 @@
 import type { Node } from 'unist';
-import { u } from 'unist-builder';
 import { visit } from 'unist-util-visit';
 import { DiffNodeType, DiffType } from '../types/base';
 import { isInlineElement, replaceChildNode } from './node';
@@ -77,7 +76,7 @@ export function transformAstWithDiffDataToAstWithDiffNode(ast: Node): Node {
     delete node.data.diff;
 
     const isInline = isInlineElement(node);
-    replaceChildNode(parent, node, u(diffTypeToDiffNodeType(diff, isInline), [node]));
+    replaceChildNode(parent, node, { type: diffTypeToDiffNodeType(diff, isInline), children: [node] } as Node);
 
     return true;
   });
@@ -120,7 +119,7 @@ export function transformAstWithDiffNodeToAstWithDiffData(ast: Node): Node {
     }
     const diff = diffNodeTypeToDiffType(node.type as DiffNodeType);
     node['children'].forEach((child: Node) => {
-      if (child.type !== DiffType.Del && child.type === DiffType.Ins) {
+      if (child.type !== DiffType.Del && child.type !== DiffType.Ins) {
         if (!child.data) {
           child.data = {};
         }

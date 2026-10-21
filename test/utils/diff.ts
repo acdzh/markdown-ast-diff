@@ -1,4 +1,4 @@
-import { Node } from '../../src/type';
+import type { Node } from 'unist';
 import { diffMarkdownAst } from '../../src/diff';
 import { transformAstWithDiffDataToAstWithDiffNode } from '../../src/utils/transform';
 import { markdownToAst } from './transform';

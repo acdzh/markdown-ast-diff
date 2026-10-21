@@ -1,4 +1,4 @@
-import type { Node } from '../../src/type';
+import type { Node } from 'unist';
 
 /**
  * 递归移除节点及其子节点中的position属性

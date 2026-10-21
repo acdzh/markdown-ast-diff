@@ -12,9 +12,6 @@ export class XNode {
     return this._match;
   }
   public set match(value: Node | undefined) {
-    if (this.node?.type === 'listItem') {
-      // debugger;
-    }
     this._match = value;
   }
   public optMatch: Node | undefined;
