@@ -1,182 +1,59 @@
-<html><head>
-    <style>
-      /* 基本样式 */
-      body {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        line-height: 1.6;
-        color: #333;
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 20px;
-      }
-      
-      /* 标题样式 */
-      h1, h2, h3, h4, h5, h6 {
-        margin-top: 1.5em;
-        margin-bottom: 0.5em;
-        font-weight: 600;
-        line-height: 1.25;
-      }
-      h1 { font-size: 2em; border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; }
-      h2 { font-size: 1.5em; border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; }
-      h3 { font-size: 1.25em; }
-      h4 { font-size: 1em; }
-      h5 { font-size: 0.875em; }
-      h6 { font-size: 0.85em; color: #6a737d; }
-      
-      /* 段落样式 */
-      p {
-        margin-top: 0;
-        margin-bottom: 16px;
-      }
-      
-      /* 链接样式 */
-      a {
-        color: #0366d6;
-        text-decoration: none;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-      
-      /* 列表样式 */
-      ul, ol {
-        padding-left: 2em;
-        margin-top: 0;
-        margin-bottom: 16px;
-      }
-      li {
-        margin-bottom: 0.25em;
-      }
-      
-      /* 代码样式 */
-      code {
-        font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
-        padding: 0.2em 0.4em;
-        margin: 0;
-        font-size: 85%;
-        background-color: rgba(27, 31, 35, 0.05);
-        border-radius: 3px;
-      }
-      pre {
-        font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
-        padding: 16px;
-        overflow: auto;
-        font-size: 85%;
-        line-height: 1.45;
-        background-color: #f6f8fa;
-        border-radius: 3px;
-        margin-top: 0;
-        margin-bottom: 16px;
-      }
-      pre code {
-        padding: 0;
-        margin: 0;
-        background-color: transparent;
-        border: 0;
-      }
-      
-      /* 引用样式 */
-      blockquote {
-        padding: 0 1em;
-        color: #6a737d;
-        border-left: 0.25em solid #dfe2e5;
-        margin: 0 0 16px 0;
-      }
-      
-      /* 表格样式 */
-      table {
-        border-collapse: collapse;
-        width: 100%;
-        margin-top: 0;
-        margin-bottom: 16px;
-        display: block;
-        overflow-x: auto;
-      }
-      table th, table td {
-        padding: 6px 13px;
-        border: 1px solid #dfe2e5;
-      }
-      table tr {
-        background-color: #fff;
-        border-top: 1px solid #c6cbd1;
-      }
-      table tr:nth-child(2n) {
-        background-color: #f6f8fa;
-      }
-      table th {
-        font-weight: 600;
-        background-color: #f6f8fa;
-      }
-      .align-left {
-        text-align: left;
-      }
-      .align-center {
-        text-align: center;
-      }
-      .align-right {
-        text-align: right;
-      }
-      
-      /* 水平线样式 */
-      hr {
-        height: 0.25em;
-        padding: 0;
-        margin: 24px 0;
-        background-color: #e1e4e8;
-        border: 0;
-      }
-      
-      /* 差异标记样式 */
-      ins {
-        background-color: #e6ffec;
-        color: #24292e;
-        text-decoration: none;
-        border-radius: 2px;
-        padding: 0 2px;
-      }
-      
-      del {
-        background-color: #ffebe9;
-        color: #24292e;
-        text-decoration: line-through;
-        border-radius: 2px;
-        padding: 0 2px;
-      }
-
-      ins.diff-block, del.diff-block {
-        display: block;
-        padding-left: 10px;
-        border-left-width: 3px;
-        border-left-style: solid;
-      }
-      
-      ins.diff-block {
-        border-left-color: #2cbe4e;
-      }
-      
-      del.diff-block {
-        border-left-color: #cb2431;
-      }
-
-      ins > hr, ins > pre.code {
-        background-color: #e6ffec;
-      }
-
-      del > hr, del > pre.code {
-        background-color: #ffebe9;
-      }
-      
-      /* 列表项差异样式 */
-      li.list-item-ins, li[data-diff="ins"] {
-        background-color: #e6ffec;
-        border-radius: 2px;
-      }
-      
-      li.list-item-del, li[data-diff="del"] {
-        background-color: #ffebe9;
-        border-radius: 2px;
-        text-decoration: line-through;
-      }
-    </style>
-  </head><body><div class="markdown-content"><h1 class="heading-1">文本格式化示例<ins class="diff-inline">（更新版）</ins></h1><h2 class="heading-2">基本格式</h2><del class="diff-block"><p class="paragraph">11</p></del><del class="diff-block"><p class="paragraph">22</p></del><p class="paragraph">这是<strong class="strong">粗体</strong><ins class="diff-inline">文本和</ins><ins class="diff-inline"><strong class="strong">新增的粗体</strong></ins>文本。</p><del class="diff-block"><h3 class="heading-3">123</h3></del><p class="paragraph">这是<em class="emphasis">斜体</em><ins class="diff-inline">文本和</ins><ins class="diff-inline"><em class="emphasis">新增的斜体</em></ins>文本。</p><p class="paragraph">这是<del class="diff-inline"><em class="emphasis"><strong class="strong">粗斜体</strong></em></del><ins class="diff-inline"><em class="emphasis"><strong class="strong">更新的粗斜体</strong></em></ins>文本。</p><p class="paragraph">这是<del class="delete">删除线</del><ins class="diff-inline">文本和</ins><ins class="diff-inline"><del class="delete">新增的删除线</del></ins>文本。</p><p class="paragraph">这是<del class="diff-inline"><code >行内代码</code></del><ins class="diff-inline"><code >更新的行内代码</code></ins>。</p><h2 class="heading-2">引用</h2><blockquote ><del class="diff-block"><p class="paragraph">这是一级引用</p></del><ins class="diff-block"><p class="paragraph">这是更新后的一级引用</p></ins><blockquote ><p class="paragraph">这是嵌套引用</p><blockquote ><del class="diff-block"><p class="paragraph">这是三级引用</p></del><ins class="diff-block"><p class="paragraph">这是更新后的三级引用</p></ins><ins class="diff-block"><blockquote ><p class="paragraph">这是新增的四级引用</p></blockquote></ins></blockquote></blockquote></blockquote><h2 class="heading-2">水平线</h2><hr  /><ins class="diff-block"><hr  /></ins><h2 class="heading-2">脚注</h2><p class="paragraph">这里有一个脚注<ins class="diff-inline">和一个新增的脚注</ins><ins class="diff-inline"></ins>。</p><del class="diff-block"><p class="paragraph">这是脚注内容。</p></del><ins class="diff-block"><p class="paragraph">这是更新后的脚注内容。</p></ins><ins class="diff-block"><p class="paragraph">这是新增的脚注内容。</p></ins><h2 class="heading-2">特殊字符</h2><p class="paragraph">这里展示一些<ins class="diff-inline">更新后的</ins>特殊字符：**非粗体**，`非代码`<ins class="diff-inline">，[非链接]</ins>。</p><h2 class="heading-2">混合格式</h2><p class="paragraph">这段<ins class="diff-inline">更新后的</ins>文字<strong class="strong">包含<em class="emphasis">混合的</em>格式</strong>，还有<del class="delete">一些</del><code >代码</code><ins class="diff-inline">和</ins><ins class="diff-inline"><strong class="strong">新增的<em class="emphasis">混合</em>格式</strong></ins>。</p><ins class="diff-block"><h2 class="heading-2">新增的高亮</h2></ins><ins class="diff-block"><p class="paragraph">这里有一些==高亮文本==。</p></ins></div></body></html>
+<html><head><style>
+ins { background-color: #e6ffec; text-decoration: none; border-radius: 2px; padding: 0 2px; }
+del { background-color: #ffebe9; text-decoration: line-through; border-radius: 2px; padding: 0 2px; }
+ins.diff-block, del.diff-block { display: block; padding-left: 10px; border-left: 3px solid; }
+ins.diff-block { border-left-color: #2cbe4e; }
+del.diff-block { border-left-color: #cb2431; }
+ins > hr, ins > pre { background-color: #e6ffec; }
+del > hr, del > pre { background-color: #ffebe9; }
+li[data-diff="ins"] { background-color: #e6ffec; border-radius: 2px; }
+li[data-diff="del"] { background-color: #ffebe9; border-radius: 2px; text-decoration: line-through; }
+</style></head><body><h1>文本格式化示例<ins class="diff-inline">（更新版）</ins></h1>
+<h2>基本格式</h2>
+<del class="diff-block"><p>11</p></del>
+<del class="diff-block"><p>22</p></del>
+<p>这是<strong>粗体</strong><ins class="diff-inline">文本和</ins><ins class="diff-inline"><strong>新增的粗体</strong></ins>文本。</p>
+<del class="diff-block"><h3>123</h3></del>
+<p>这是<em>斜体</em><ins class="diff-inline">文本和</ins><ins class="diff-inline"><em>新增的斜体</em></ins>文本。</p>
+<p>这是<del class="diff-inline"><em><strong>粗斜体</strong></em></del><ins class="diff-inline"><em><strong>更新的粗斜体</strong></em></ins>文本。</p>
+<p>这是<del>删除线</del><ins class="diff-inline">文本和</ins><ins class="diff-inline"><del>新增的删除线</del></ins>文本。</p>
+<p>这是<del class="diff-inline"><code>行内代码</code></del><ins class="diff-inline"><code>更新的行内代码</code></ins>。</p>
+<h2>引用</h2>
+<blockquote>
+<del class="diff-block"><p>这是一级引用</p></del>
+<ins class="diff-block"><p>这是更新后的一级引用</p></ins>
+<blockquote>
+<p>这是嵌套引用</p>
+<blockquote>
+<del class="diff-block"><p>这是三级引用</p></del>
+<ins class="diff-block"><p>这是更新后的三级引用</p></ins>
+<ins class="diff-block"><blockquote>
+<p>这是新增的四级引用</p>
+</blockquote></ins>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2>水平线</h2>
+<hr>
+<ins class="diff-block"><hr></ins>
+<h2>脚注</h2>
+<p>这里有一个脚注<sup><a href="#user-content-fn-1" id="user-content-fnref-1" data-footnote-ref aria-describedby="footnote-label">1</a></sup><ins class="diff-inline">和一个新增的脚注</ins><ins class="diff-inline"><sup><a href="#user-content-fn-2" id="user-content-fnref-2" data-footnote-ref aria-describedby="footnote-label">2</a></sup></ins>。</p>
+<ins class="diff-block"></ins>
+<h2>特殊字符</h2>
+<p>这里展示一些<ins class="diff-inline">更新后的</ins>特殊字符：**非粗体**，`非代码`<ins class="diff-inline">，[非链接]</ins>。</p>
+<h2>混合格式</h2>
+<p>这段<ins class="diff-inline">更新后的</ins>文字<strong>包含<em>混合的</em>格式</strong>，还有<del>一些</del><code>代码</code><ins class="diff-inline">和</ins><ins class="diff-inline"><strong>新增的<em>混合</em>格式</strong></ins>。</p>
+<ins class="diff-block"><h2>新增的高亮</h2></ins>
+<ins class="diff-block"><p>这里有一些==高亮文本==。</p></ins>
+<section data-footnotes class="footnotes"><h2 class="sr-only" id="footnote-label">Footnotes</h2>
+<ol>
+<li id="user-content-fn-1">
+<del class="diff-block"><p>这是脚注内容。</p></del>
+<ins class="diff-block"><p>这是更新后的脚注内容。</p></ins>
+<a href="#user-content-fnref-1" data-footnote-backref="" aria-label="Back to reference 1" class="data-footnote-backref">↩</a>
+</li>
+<li id="user-content-fn-2">
+<p>这是新增的脚注内容。 <a href="#user-content-fnref-2" data-footnote-backref="" aria-label="Back to reference 2" class="data-footnote-backref">↩</a></p>
+</li>
+</ol>
+</section></body></html>

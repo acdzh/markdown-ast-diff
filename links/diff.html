@@ -1,182 +1,38 @@
-<html><head>
-    <style>
-      /* 基本样式 */
-      body {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        line-height: 1.6;
-        color: #333;
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 20px;
-      }
-      
-      /* 标题样式 */
-      h1, h2, h3, h4, h5, h6 {
-        margin-top: 1.5em;
-        margin-bottom: 0.5em;
-        font-weight: 600;
-        line-height: 1.25;
-      }
-      h1 { font-size: 2em; border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; }
-      h2 { font-size: 1.5em; border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; }
-      h3 { font-size: 1.25em; }
-      h4 { font-size: 1em; }
-      h5 { font-size: 0.875em; }
-      h6 { font-size: 0.85em; color: #6a737d; }
-      
-      /* 段落样式 */
-      p {
-        margin-top: 0;
-        margin-bottom: 16px;
-      }
-      
-      /* 链接样式 */
-      a {
-        color: #0366d6;
-        text-decoration: none;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-      
-      /* 列表样式 */
-      ul, ol {
-        padding-left: 2em;
-        margin-top: 0;
-        margin-bottom: 16px;
-      }
-      li {
-        margin-bottom: 0.25em;
-      }
-      
-      /* 代码样式 */
-      code {
-        font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
-        padding: 0.2em 0.4em;
-        margin: 0;
-        font-size: 85%;
-        background-color: rgba(27, 31, 35, 0.05);
-        border-radius: 3px;
-      }
-      pre {
-        font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
-        padding: 16px;
-        overflow: auto;
-        font-size: 85%;
-        line-height: 1.45;
-        background-color: #f6f8fa;
-        border-radius: 3px;
-        margin-top: 0;
-        margin-bottom: 16px;
-      }
-      pre code {
-        padding: 0;
-        margin: 0;
-        background-color: transparent;
-        border: 0;
-      }
-      
-      /* 引用样式 */
-      blockquote {
-        padding: 0 1em;
-        color: #6a737d;
-        border-left: 0.25em solid #dfe2e5;
-        margin: 0 0 16px 0;
-      }
-      
-      /* 表格样式 */
-      table {
-        border-collapse: collapse;
-        width: 100%;
-        margin-top: 0;
-        margin-bottom: 16px;
-        display: block;
-        overflow-x: auto;
-      }
-      table th, table td {
-        padding: 6px 13px;
-        border: 1px solid #dfe2e5;
-      }
-      table tr {
-        background-color: #fff;
-        border-top: 1px solid #c6cbd1;
-      }
-      table tr:nth-child(2n) {
-        background-color: #f6f8fa;
-      }
-      table th {
-        font-weight: 600;
-        background-color: #f6f8fa;
-      }
-      .align-left {
-        text-align: left;
-      }
-      .align-center {
-        text-align: center;
-      }
-      .align-right {
-        text-align: right;
-      }
-      
-      /* 水平线样式 */
-      hr {
-        height: 0.25em;
-        padding: 0;
-        margin: 24px 0;
-        background-color: #e1e4e8;
-        border: 0;
-      }
-      
-      /* 差异标记样式 */
-      ins {
-        background-color: #e6ffec;
-        color: #24292e;
-        text-decoration: none;
-        border-radius: 2px;
-        padding: 0 2px;
-      }
-      
-      del {
-        background-color: #ffebe9;
-        color: #24292e;
-        text-decoration: line-through;
-        border-radius: 2px;
-        padding: 0 2px;
-      }
-
-      ins.diff-block, del.diff-block {
-        display: block;
-        padding-left: 10px;
-        border-left-width: 3px;
-        border-left-style: solid;
-      }
-      
-      ins.diff-block {
-        border-left-color: #2cbe4e;
-      }
-      
-      del.diff-block {
-        border-left-color: #cb2431;
-      }
-
-      ins > hr, ins > pre.code {
-        background-color: #e6ffec;
-      }
-
-      del > hr, del > pre.code {
-        background-color: #ffebe9;
-      }
-      
-      /* 列表项差异样式 */
-      li.list-item-ins, li[data-diff="ins"] {
-        background-color: #e6ffec;
-        border-radius: 2px;
-      }
-      
-      li.list-item-del, li[data-diff="del"] {
-        background-color: #ffebe9;
-        border-radius: 2px;
-        text-decoration: line-through;
-      }
-    </style>
-  </head><body><div class="markdown-content"><h1 class="heading-1">链接和图片示例<ins class="diff-inline">（更新版）</ins></h1><h2 class="heading-2">链接</h2><p class="paragraph">这是一个<del class="diff-inline"><a href="https://example.com" title="null">内联链接</a></del><ins class="diff-inline"><a href="https://example.org" title="null">更新的内联链接</a></ins>。</p><p class="paragraph">这是一个<del class="diff-inline"><a href="https://example.com" title="示例网站">带标题的链接</a></del><ins class="diff-inline"><a href="https://example.com" title="更新后的示例网站">带标题的链接</a></ins>。</p><p class="paragraph">这是一个参考链接<ins class="diff-inline">和一个</ins><ins class="diff-inline">新增的参考链接</ins>。</p><del class="diff-block"><h2 class="heading-2">图片</h2></del><del class="diff-block"><p class="paragraph"><img src="https://example.com/image.jpg" alt="示例图片" title="null" /></p></del><del class="diff-block"><p class="paragraph"><img src="https://example.com/image.jpg" alt="带标题的图片" title="示例图片标题" /></p></del><del class="diff-block"><p class="paragraph"></p></del><ins class="diff-block"><h2 class="heading-2">图片</h2></ins><ins class="diff-block"><p class="paragraph"><img src="https://example.org/updated-image.jpg" alt="更新的示例图片" title="null" /></p></ins><ins class="diff-block"><p class="paragraph"><img src="https://example.com/image.jpg" alt="带标题的图片" title="更新后的示例图片标题" /></p></ins><ins class="diff-block"><p class="paragraph"></p></ins><ins class="diff-block"><p class="paragraph"></p></ins><ins class="diff-block"></ins><ins class="diff-block"></ins><h2 class="heading-2">链接列表</h2><ul class="unordered-list"><li value="1" class="list-item"><p class="paragraph"><a href="https://github.com" title="null">GitHub</a></p></li><li value="2" data-diff="ins" class="list-item list-item-ins"><p class="paragraph"><a href="https://microsoft.com" title="null">Microsoft</a></p></li><li value="3" class="list-item"><p class="paragraph"><a href="https://google.com" title="null">Google</a></p></li><li value="4" class="list-item"><p class="paragraph"><a href="https://baidu.com" title="null">百度</a></p></li><li value="5" data-diff="ins" class="list-item list-item-ins"><p class="paragraph"><a href="https://example.com/new" title="null">新增链接</a></p></li></ul><h2 class="heading-2">图文混排</h2><p class="paragraph"><del class="diff-inline"><a href="https://example.com" title="null"><img src="https://example.com/linked-image.jpg" alt="带链接的图片" title="null" /></a></del><ins class="diff-inline"><a href="https://example.org" title="null"><img src="https://example.org/linked-image.jpg" alt="更新的带链接的图片" title="null" /></a></ins></p><p class="paragraph">这段<ins class="diff-inline">更新后的</ins>文字包含一个<del class="diff-inline"><a href="https://example.com" title="null">链接</a></del><ins class="diff-inline"><a href="https://example.org" title="null">更新的链接</a></ins><ins class="diff-inline">和一个</ins><ins class="diff-inline"><img src="https://example.org/inline-image.jpg" alt="更新的内联图片" title="null" /></ins><del class="diff-inline">和一个</del><del class="diff-inline"><img src="https://example.com/inline-image.jpg" alt="内联图片" title="null" /></del>。</p><ins class="diff-block"><p class="paragraph">新增的段落，包含一个<a href="https://example.com/new" title="null">新链接</a>。</p></ins></div></body></html>
+<html><head><style>
+ins { background-color: #e6ffec; text-decoration: none; border-radius: 2px; padding: 0 2px; }
+del { background-color: #ffebe9; text-decoration: line-through; border-radius: 2px; padding: 0 2px; }
+ins.diff-block, del.diff-block { display: block; padding-left: 10px; border-left: 3px solid; }
+ins.diff-block { border-left-color: #2cbe4e; }
+del.diff-block { border-left-color: #cb2431; }
+ins > hr, ins > pre { background-color: #e6ffec; }
+del > hr, del > pre { background-color: #ffebe9; }
+li[data-diff="ins"] { background-color: #e6ffec; border-radius: 2px; }
+li[data-diff="del"] { background-color: #ffebe9; border-radius: 2px; text-decoration: line-through; }
+</style></head><body><h1>链接和图片示例<ins class="diff-inline">（更新版）</ins></h1>
+<h2>链接</h2>
+<p>这是一个<del class="diff-inline"><a href="https://example.com">内联链接</a></del><ins class="diff-inline"><a href="https://example.org">更新的内联链接</a></ins>。</p>
+<p>这是一个<del class="diff-inline"><a href="https://example.com" title="示例网站">带标题的链接</a></del><ins class="diff-inline"><a href="https://example.com" title="更新后的示例网站">带标题的链接</a></ins>。</p>
+<p>这是一个<a href="https://example.org/reference" title="更新的参考链接">参考链接</a><ins class="diff-inline">和一个</ins><ins class="diff-inline"><a href="https://example.com/new-reference" title="新增的参考链接">新增的参考链接</a></ins>。</p>
+<del class="diff-block"><h2>图片</h2></del>
+<del class="diff-block"><p><img src="https://example.com/image.jpg" alt="示例图片"></p></del>
+<del class="diff-block"><p><img src="https://example.com/image.jpg" alt="带标题的图片" title="示例图片标题"></p></del>
+<del class="diff-block"><p><img src="https://example.org/reference-image.jpg" alt="参考图片" title="更新的参考图片标题"></p></del>
+<ins class="diff-block"><h2>图片</h2></ins>
+<ins class="diff-block"><p><img src="https://example.org/updated-image.jpg" alt="更新的示例图片"></p></ins>
+<ins class="diff-block"><p><img src="https://example.com/image.jpg" alt="带标题的图片" title="更新后的示例图片标题"></p></ins>
+<ins class="diff-block"><p><img src="https://example.org/reference-image.jpg" alt="参考图片" title="更新的参考图片标题"></p></ins>
+<ins class="diff-block"><p><img src="https://example.com/new-reference-image.jpg" alt="新增的参考图片" title="新增的参考图片标题"></p></ins>
+<ins class="diff-block"></ins>
+<ins class="diff-block"></ins>
+<h2>链接列表</h2>
+<ul>
+<li><a href="https://github.com">GitHub</a></li>
+<li data-diff="ins"><a href="https://microsoft.com">Microsoft</a></li>
+<li><a href="https://google.com">Google</a></li>
+<li><a href="https://baidu.com">百度</a></li>
+<li data-diff="ins"><a href="https://example.com/new">新增链接</a></li>
+</ul>
+<h2>图文混排</h2>
+<p><del class="diff-inline"><a href="https://example.com"><img src="https://example.com/linked-image.jpg" alt="带链接的图片"></a></del><ins class="diff-inline"><a href="https://example.org"><img src="https://example.org/linked-image.jpg" alt="更新的带链接的图片"></a></ins></p>
+<p>这段<ins class="diff-inline">更新后的</ins>文字包含一个<del class="diff-inline"><a href="https://example.com">链接</a></del><ins class="diff-inline"><a href="https://example.org">更新的链接</a></ins><ins class="diff-inline">和一个</ins><ins class="diff-inline"><img src="https://example.org/inline-image.jpg" alt="更新的内联图片"></ins><del class="diff-inline">和一个</del><del class="diff-inline"><img src="https://example.com/inline-image.jpg" alt="内联图片"></del>。</p>
+<ins class="diff-block"><p>新增的段落，包含一个<a href="https://example.com/new">新链接</a>。</p></ins></body></html>
