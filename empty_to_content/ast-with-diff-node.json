@@ -1,0 +1,514 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 1,
+          "children": [
+            {
+              "type": "text",
+              "value": "办公室生存指南",
+              "position": {
+                "start": {
+                  "line": 1,
+                  "column": 3,
+                  "offset": 2
+                },
+                "end": {
+                  "line": 1,
+                  "column": 10,
+                  "offset": 9
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 10,
+              "offset": 9
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "恭喜你成功入职，接下来的内容将决定你能否在这片钢筋水泥丛林中活过试用期。请认真阅读，这比任何入职培训都管用。",
+              "position": {
+                "start": {
+                  "line": 3,
+                  "column": 1,
+                  "offset": 11
+                },
+                "end": {
+                  "line": 3,
+                  "column": 55,
+                  "offset": 65
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 3,
+              "column": 1,
+              "offset": 11
+            },
+            "end": {
+              "line": 3,
+              "column": 55,
+              "offset": 65
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 2,
+          "children": [
+            {
+              "type": "text",
+              "value": "茶水间政治学",
+              "position": {
+                "start": {
+                  "line": 5,
+                  "column": 4,
+                  "offset": 70
+                },
+                "end": {
+                  "line": 5,
+                  "column": 10,
+                  "offset": 76
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 5,
+              "column": 1,
+              "offset": 67
+            },
+            "end": {
+              "line": 5,
+              "column": 10,
+              "offset": 76
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "茶水间是办公室的情报中心，正确的使用方式如下：",
+              "position": {
+                "start": {
+                  "line": 7,
+                  "column": 1,
+                  "offset": 78
+                },
+                "end": {
+                  "line": 7,
+                  "column": 24,
+                  "offset": 101
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 7,
+              "column": 1,
+              "offset": 78
+            },
+            "end": {
+              "line": 7,
+              "column": 24,
+              "offset": 101
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "code",
+          "lang": "text",
+          "meta": null,
+          "value": "新人须知\n────────\n1. 最后一杯咖啡是你的？恭喜，你获得了洗咖啡壶的荣誉\n2. 冰箱里没写名字的酸奶，薛定谔的归属权\n3. 微波炉加热鱼——除非你想成为全楼公敌",
+          "position": {
+            "start": {
+              "line": 9,
+              "column": 1,
+              "offset": 103
+            },
+            "end": {
+              "line": 15,
+              "column": 4,
+              "offset": 200
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 2,
+          "children": [
+            {
+              "type": "text",
+              "value": "会议室求生法则",
+              "position": {
+                "start": {
+                  "line": 17,
+                  "column": 4,
+                  "offset": 205
+                },
+                "end": {
+                  "line": 17,
+                  "column": 11,
+                  "offset": 212
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 17,
+              "column": 1,
+              "offset": 202
+            },
+            "end": {
+              "line": 17,
+              "column": 11,
+              "offset": 212
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "list",
+          "ordered": false,
+          "start": null,
+          "spread": false,
+          "children": [
+            {
+              "type": "listItem",
+              "spread": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "预定了会议室却没人来：这叫\"薛定谔的会议\"，很正常",
+                      "position": {
+                        "start": {
+                          "line": 19,
+                          "column": 3,
+                          "offset": 216
+                        },
+                        "end": {
+                          "line": 19,
+                          "column": 28,
+                          "offset": 241
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 19,
+                      "column": 3,
+                      "offset": 216
+                    },
+                    "end": {
+                      "line": 19,
+                      "column": 28,
+                      "offset": 241
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 19,
+                  "column": 1,
+                  "offset": 214
+                },
+                "end": {
+                  "line": 19,
+                  "column": 28,
+                  "offset": 241
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "listItem",
+              "spread": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "会议超时有人敲门：假装没听到是本能，起身让出是美德",
+                      "position": {
+                        "start": {
+                          "line": 20,
+                          "column": 3,
+                          "offset": 244
+                        },
+                        "end": {
+                          "line": 20,
+                          "column": 28,
+                          "offset": 269
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 20,
+                      "column": 3,
+                      "offset": 244
+                    },
+                    "end": {
+                      "line": 20,
+                      "column": 28,
+                      "offset": 269
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 20,
+                  "column": 1,
+                  "offset": 242
+                },
+                "end": {
+                  "line": 20,
+                  "column": 28,
+                  "offset": 269
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "listItem",
+              "spread": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "领导说\"简单聊两句\"：自动翻译为\"接下来的一小时请坐稳\"",
+                      "position": {
+                        "start": {
+                          "line": 21,
+                          "column": 3,
+                          "offset": 272
+                        },
+                        "end": {
+                          "line": 21,
+                          "column": 31,
+                          "offset": 300
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 21,
+                      "column": 3,
+                      "offset": 272
+                    },
+                    "end": {
+                      "line": 21,
+                      "column": 31,
+                      "offset": 300
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 21,
+                  "column": 1,
+                  "offset": 270
+                },
+                "end": {
+                  "line": 21,
+                  "column": 31,
+                  "offset": 300
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 19,
+              "column": 1,
+              "offset": 214
+            },
+            "end": {
+              "line": 21,
+              "column": 31,
+              "offset": 300
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 2,
+          "children": [
+            {
+              "type": "text",
+              "value": "终极忠告",
+              "position": {
+                "start": {
+                  "line": 23,
+                  "column": 4,
+                  "offset": 305
+                },
+                "end": {
+                  "line": 23,
+                  "column": 8,
+                  "offset": 309
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 23,
+              "column": 1,
+              "offset": 302
+            },
+            "end": {
+              "line": 23,
+              "column": 8,
+              "offset": 309
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "记住，在办公室里最重要的技能不是 Excel 也不是 PPT，而是在工位上假装很忙的同时精准判断领导走过来的脚步声。祝你好运。",
+              "position": {
+                "start": {
+                  "line": 25,
+                  "column": 1,
+                  "offset": 311
+                },
+                "end": {
+                  "line": 25,
+                  "column": 64,
+                  "offset": 374
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 25,
+              "column": 1,
+              "offset": 311
+            },
+            "end": {
+              "line": 25,
+              "column": 64,
+              "offset": 374
+            }
+          },
+          "data": {}
+        }
+      ]
+    }
+  ],
+  "position": {
+    "start": {
+      "line": 1,
+      "column": 1,
+      "offset": 0
+    },
+    "end": {
+      "line": 26,
+      "column": 1,
+      "offset": 375
+    }
+  },
+  "data": {}
+}

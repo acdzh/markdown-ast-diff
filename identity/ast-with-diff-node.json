@@ -1,0 +1,1466 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "heading",
+      "depth": 1,
+      "children": [
+        {
+          "type": "text",
+          "value": "仓鼠饲养指南",
+          "position": {
+            "start": {
+              "line": 1,
+              "column": 3,
+              "offset": 2
+            },
+            "end": {
+              "line": 1,
+              "column": 9,
+              "offset": 8
+            }
+          },
+          "data": {},
+          "children": []
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 9,
+          "offset": 8
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "养仓鼠是一件既治愈又需要耐心的事情，以下是新手必读的基本要点。\n很多人觉得仓鼠是\"随便养养\"的小动物，其实它们对生活环境的要求比想象中高得多。\n做好功课再迎接小毛球回家，是对它也是对自己负责。",
+          "position": {
+            "start": {
+              "line": 3,
+              "column": 1,
+              "offset": 10
+            },
+            "end": {
+              "line": 5,
+              "column": 25,
+              "offset": 106
+            }
+          },
+          "data": {},
+          "children": []
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 3,
+          "column": 1,
+          "offset": 10
+        },
+        "end": {
+          "line": 5,
+          "column": 25,
+          "offset": 106
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "入门准备",
+          "position": {
+            "start": {
+              "line": 7,
+              "column": 4,
+              "offset": 111
+            },
+            "end": {
+              "line": 7,
+              "column": 8,
+              "offset": 115
+            }
+          },
+          "data": {},
+          "children": []
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 7,
+          "column": 1,
+          "offset": 108
+        },
+        "end": {
+          "line": 7,
+          "column": 8,
+          "offset": 115
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "在把仓鼠带回家之前，需要准备好以下基本装备：",
+          "position": {
+            "start": {
+              "line": 9,
+              "column": 1,
+              "offset": 117
+            },
+            "end": {
+              "line": 9,
+              "column": 23,
+              "offset": 139
+            }
+          },
+          "data": {},
+          "children": []
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 9,
+          "column": 1,
+          "offset": 117
+        },
+        "end": {
+          "line": 9,
+          "column": 23,
+          "offset": 139
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "选择合适的笼子（至少 60cm × 40cm）",
+                  "position": {
+                    "start": {
+                      "line": 11,
+                      "column": 3,
+                      "offset": 143
+                    },
+                    "end": {
+                      "line": 11,
+                      "column": 26,
+                      "offset": 166
+                    }
+                  },
+                  "data": {},
+                  "children": []
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 11,
+                  "column": 3,
+                  "offset": 143
+                },
+                "end": {
+                  "line": 11,
+                  "column": 26,
+                  "offset": 166
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 11,
+              "column": 1,
+              "offset": 141
+            },
+            "end": {
+              "line": 11,
+              "column": 26,
+              "offset": 166
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "准备木屑或纸棉垫料",
+                  "position": {
+                    "start": {
+                      "line": 12,
+                      "column": 3,
+                      "offset": 169
+                    },
+                    "end": {
+                      "line": 12,
+                      "column": 12,
+                      "offset": 178
+                    }
+                  },
+                  "data": {},
+                  "children": []
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 12,
+                  "column": 3,
+                  "offset": 169
+                },
+                "end": {
+                  "line": 12,
+                  "column": 12,
+                  "offset": 178
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 12,
+              "column": 1,
+              "offset": 167
+            },
+            "end": {
+              "line": 12,
+              "column": 12,
+              "offset": 178
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "购买静音跑轮（直径不小于 21cm）",
+                  "position": {
+                    "start": {
+                      "line": 13,
+                      "column": 3,
+                      "offset": 181
+                    },
+                    "end": {
+                      "line": 13,
+                      "column": 21,
+                      "offset": 199
+                    }
+                  },
+                  "data": {},
+                  "children": []
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 13,
+                  "column": 3,
+                  "offset": 181
+                },
+                "end": {
+                  "line": 13,
+                  "column": 21,
+                  "offset": 199
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 13,
+              "column": 1,
+              "offset": 179
+            },
+            "end": {
+              "line": 13,
+              "column": 21,
+              "offset": 199
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "备好陶瓷食盆和滚珠水壶",
+                  "position": {
+                    "start": {
+                      "line": 14,
+                      "column": 3,
+                      "offset": 202
+                    },
+                    "end": {
+                      "line": 14,
+                      "column": 14,
+                      "offset": 213
+                    }
+                  },
+                  "data": {},
+                  "children": []
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 14,
+                  "column": 3,
+                  "offset": 202
+                },
+                "end": {
+                  "line": 14,
+                  "column": 14,
+                  "offset": 213
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 14,
+              "column": 1,
+              "offset": 200
+            },
+            "end": {
+              "line": 14,
+              "column": 14,
+              "offset": 213
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "一个陶瓷小窝或木质躲避屋",
+                  "position": {
+                    "start": {
+                      "line": 15,
+                      "column": 3,
+                      "offset": 216
+                    },
+                    "end": {
+                      "line": 15,
+                      "column": 15,
+                      "offset": 228
+                    }
+                  },
+                  "data": {},
+                  "children": []
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 15,
+                  "column": 3,
+                  "offset": 216
+                },
+                "end": {
+                  "line": 15,
+                  "column": 15,
+                  "offset": 228
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 15,
+              "column": 1,
+              "offset": 214
+            },
+            "end": {
+              "line": 15,
+              "column": 15,
+              "offset": 228
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "浴沙盆和专用浴沙（仓鼠不能用水洗澡）",
+                  "position": {
+                    "start": {
+                      "line": 16,
+                      "column": 3,
+                      "offset": 231
+                    },
+                    "end": {
+                      "line": 16,
+                      "column": 21,
+                      "offset": 249
+                    }
+                  },
+                  "data": {},
+                  "children": []
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 16,
+                  "column": 3,
+                  "offset": 231
+                },
+                "end": {
+                  "line": 16,
+                  "column": 21,
+                  "offset": 249
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 16,
+              "column": 1,
+              "offset": 229
+            },
+            "end": {
+              "line": 16,
+              "column": 21,
+              "offset": 249
+            }
+          },
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 11,
+          "column": 1,
+          "offset": 141
+        },
+        "end": {
+          "line": 16,
+          "column": 21,
+          "offset": 249
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "笼子是最重要的投资，不要贪图便宜买那种铁丝间距过大的笼子，仓鼠的越狱能力超乎想象。\n推荐亚克力整理箱改造的DIY笼，通风口用不锈钢网覆盖，既安全又方便清洁。\n跑轮的直径很关键，太小的跑轮会让仓鼠弓着背跑步，长期下来容易导致脊椎问题。",
+          "position": {
+            "start": {
+              "line": 18,
+              "column": 1,
+              "offset": 251
+            },
+            "end": {
+              "line": 20,
+              "column": 38,
+              "offset": 367
+            }
+          },
+          "data": {},
+          "children": []
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 18,
+          "column": 1,
+          "offset": 251
+        },
+        "end": {
+          "line": 20,
+          "column": 38,
+          "offset": 367
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "喂食须知",
+          "position": {
+            "start": {
+              "line": 22,
+              "column": 4,
+              "offset": 372
+            },
+            "end": {
+              "line": 22,
+              "column": 8,
+              "offset": 376
+            }
+          },
+          "data": {},
+          "children": []
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 22,
+          "column": 1,
+          "offset": 369
+        },
+        "end": {
+          "line": 22,
+          "column": 8,
+          "offset": 376
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "仓鼠是杂食动物，但不能乱喂。\n主粮选择专业仓鼠粮，零食可以给少量瓜子、面包虫和新鲜蔬菜。\n绝对禁止喂食的东西包括：巧克力、洋葱、大蒜、柑橘类水果和任何含盐含糖的人类零食。\n仓鼠有囤粮的习惯，它们会把食物塞满颊囊带回窝里藏起来，所以清理笼子时要注意检查窝里有没有变质的食物。",
+          "position": {
+            "start": {
+              "line": 24,
+              "column": 1,
+              "offset": 378
+            },
+            "end": {
+              "line": 27,
+              "column": 51,
+              "offset": 514
+            }
+          },
+          "data": {},
+          "children": []
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 24,
+          "column": 1,
+          "offset": 378
+        },
+        "end": {
+          "line": 27,
+          "column": 51,
+          "offset": 514
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "text",
+      "meta": null,
+      "value": "每日喂食时间表\n──────────────\n早上 8:00   主粮 5g\n中午 12:00  新鲜蔬菜一小片\n晚上 8:00   主粮 5g + 零食少许\n睡前 11:00  检查水壶是否有水",
+      "position": {
+        "start": {
+          "line": 29,
+          "column": 1,
+          "offset": 516
+        },
+        "end": {
+          "line": 36,
+          "column": 4,
+          "offset": 626
+        }
+      },
+      "data": {},
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "注意：仓鼠是夜行动物，晚间会更活跃地进食，不必担心白天吃得少。\n实际上大多数仓鼠白天就是一坨不动的毛球，到了晚上才会化身运动健将疯狂跑轮。\n如果你的卧室隔音不好，建议把笼子放在客厅，否则半夜被跑轮声吵醒是常有的事。",
+          "position": {
+            "start": {
+              "line": 38,
+              "column": 1,
+              "offset": 628
+            },
+            "end": {
+              "line": 40,
+              "column": 38,
+              "offset": 735
+            }
+          },
+          "data": {},
+          "children": []
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 38,
+          "column": 1,
+          "offset": 628
+        },
+        "end": {
+          "line": 40,
+          "column": 38,
+          "offset": 735
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "日常护理",
+          "position": {
+            "start": {
+              "line": 42,
+              "column": 4,
+              "offset": 740
+            },
+            "end": {
+              "line": 42,
+              "column": 8,
+              "offset": 744
+            }
+          },
+          "data": {},
+          "children": []
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 42,
+          "column": 1,
+          "offset": 737
+        },
+        "end": {
+          "line": 42,
+          "column": 8,
+          "offset": 744
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "垫料更换",
+                  "position": {
+                    "start": {
+                      "line": 44,
+                      "column": 3,
+                      "offset": 748
+                    },
+                    "end": {
+                      "line": 44,
+                      "column": 9,
+                      "offset": 754
+                    }
+                  },
+                  "data": {},
+                  "children": []
+                },
+                {
+                  "type": "text",
+                  "value": " — 每周至少清理一次笼子",
+                  "position": {
+                    "start": {
+                      "line": 44,
+                      "column": 9,
+                      "offset": 754
+                    },
+                    "end": {
+                      "line": 44,
+                      "column": 22,
+                      "offset": 767
+                    }
+                  },
+                  "data": {},
+                  "children": []
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 44,
+                  "column": 3,
+                  "offset": 748
+                },
+                "end": {
+                  "line": 44,
+                  "column": 22,
+                  "offset": 767
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 44,
+              "column": 1,
+              "offset": 746
+            },
+            "end": {
+              "line": 44,
+              "column": 22,
+              "offset": 767
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "健康观察",
+                  "position": {
+                    "start": {
+                      "line": 45,
+                      "column": 3,
+                      "offset": 770
+                    },
+                    "end": {
+                      "line": 45,
+                      "column": 9,
+                      "offset": 776
+                    }
+                  },
+                  "data": {},
+                  "children": []
+                },
+                {
+                  "type": "text",
+                  "value": " — 留意毛发是否蓬松、眼睛是否明亮",
+                  "position": {
+                    "start": {
+                      "line": 45,
+                      "column": 9,
+                      "offset": 776
+                    },
+                    "end": {
+                      "line": 45,
+                      "column": 27,
+                      "offset": 794
+                    }
+                  },
+                  "data": {},
+                  "children": []
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 45,
+                  "column": 3,
+                  "offset": 770
+                },
+                "end": {
+                  "line": 45,
+                  "column": 27,
+                  "offset": 794
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 45,
+              "column": 1,
+              "offset": 768
+            },
+            "end": {
+              "line": 45,
+              "column": 27,
+              "offset": 794
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "温度控制",
+                  "position": {
+                    "start": {
+                      "line": 46,
+                      "column": 3,
+                      "offset": 797
+                    },
+                    "end": {
+                      "line": 46,
+                      "column": 9,
+                      "offset": 803
+                    }
+                  },
+                  "data": {},
+                  "children": []
+                },
+                {
+                  "type": "text",
+                  "value": " — 室温保持在 20-26°C，避免阳光直射",
+                  "position": {
+                    "start": {
+                      "line": 46,
+                      "column": 9,
+                      "offset": 803
+                    },
+                    "end": {
+                      "line": 46,
+                      "column": 32,
+                      "offset": 826
+                    }
+                  },
+                  "data": {},
+                  "children": []
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 46,
+                  "column": 3,
+                  "offset": 797
+                },
+                "end": {
+                  "line": 46,
+                  "column": 32,
+                  "offset": 826
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 46,
+              "column": 1,
+              "offset": 795
+            },
+            "end": {
+              "line": 46,
+              "column": 32,
+              "offset": 826
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "互动时间",
+                  "position": {
+                    "start": {
+                      "line": 47,
+                      "column": 3,
+                      "offset": 829
+                    },
+                    "end": {
+                      "line": 47,
+                      "column": 9,
+                      "offset": 835
+                    }
+                  },
+                  "data": {},
+                  "children": []
+                },
+                {
+                  "type": "text",
+                  "value": " — 每天轻柔地与仓鼠互动 15 分钟",
+                  "position": {
+                    "start": {
+                      "line": 47,
+                      "column": 9,
+                      "offset": 835
+                    },
+                    "end": {
+                      "line": 47,
+                      "column": 28,
+                      "offset": 854
+                    }
+                  },
+                  "data": {},
+                  "children": []
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 47,
+                  "column": 3,
+                  "offset": 829
+                },
+                "end": {
+                  "line": 47,
+                  "column": 28,
+                  "offset": 854
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 47,
+              "column": 1,
+              "offset": 827
+            },
+            "end": {
+              "line": 47,
+              "column": 28,
+              "offset": 854
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "指甲修剪",
+                  "position": {
+                    "start": {
+                      "line": 48,
+                      "column": 3,
+                      "offset": 857
+                    },
+                    "end": {
+                      "line": 48,
+                      "column": 9,
+                      "offset": 863
+                    }
+                  },
+                  "data": {},
+                  "children": []
+                },
+                {
+                  "type": "text",
+                  "value": " — 指甲过长时需要用专用小剪刀修剪",
+                  "position": {
+                    "start": {
+                      "line": 48,
+                      "column": 9,
+                      "offset": 863
+                    },
+                    "end": {
+                      "line": 48,
+                      "column": 27,
+                      "offset": 881
+                    }
+                  },
+                  "data": {},
+                  "children": []
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 48,
+                  "column": 3,
+                  "offset": 857
+                },
+                "end": {
+                  "line": 48,
+                  "column": 27,
+                  "offset": 881
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 48,
+              "column": 1,
+              "offset": 855
+            },
+            "end": {
+              "line": 48,
+              "column": 27,
+              "offset": 881
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "牙齿磨损",
+                  "position": {
+                    "start": {
+                      "line": 49,
+                      "column": 3,
+                      "offset": 884
+                    },
+                    "end": {
+                      "line": 49,
+                      "column": 9,
+                      "offset": 890
+                    }
+                  },
+                  "data": {},
+                  "children": []
+                },
+                {
+                  "type": "text",
+                  "value": " — 提供磨牙棒或苹果木枝条",
+                  "position": {
+                    "start": {
+                      "line": 49,
+                      "column": 9,
+                      "offset": 890
+                    },
+                    "end": {
+                      "line": 49,
+                      "column": 23,
+                      "offset": 904
+                    }
+                  },
+                  "data": {},
+                  "children": []
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 49,
+                  "column": 3,
+                  "offset": 884
+                },
+                "end": {
+                  "line": 49,
+                  "column": 23,
+                  "offset": 904
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 49,
+              "column": 1,
+              "offset": 882
+            },
+            "end": {
+              "line": 49,
+              "column": 23,
+              "offset": 904
+            }
+          },
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 44,
+          "column": 1,
+          "offset": 746
+        },
+        "end": {
+          "line": 49,
+          "column": 23,
+          "offset": 904
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "清理笼子的时候不要把所有垫料都换掉，留一部分旧垫料可以保留仓鼠的气味标记，避免它因为环境突变而焦虑。\n每次清理完可以给仓鼠一小块零食作为补偿，让它把\"清理笼子\"和\"有好吃的\"建立正向联想。",
+          "position": {
+            "start": {
+              "line": 51,
+              "column": 1,
+              "offset": 906
+            },
+            "end": {
+              "line": 52,
+              "column": 44,
+              "offset": 1000
+            }
+          },
+          "data": {},
+          "children": []
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 51,
+          "column": 1,
+          "offset": 906
+        },
+        "end": {
+          "line": 52,
+          "column": 44,
+          "offset": 1000
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "常见误区",
+          "position": {
+            "start": {
+              "line": 54,
+              "column": 4,
+              "offset": 1005
+            },
+            "end": {
+              "line": 54,
+              "column": 8,
+              "offset": 1009
+            }
+          },
+          "data": {},
+          "children": []
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 54,
+          "column": 1,
+          "offset": 1002
+        },
+        "end": {
+          "line": 54,
+          "column": 8,
+          "offset": 1009
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "很多新手容易犯的错误包括：把两只仓鼠养在同一个笼子里。\n除了特定品种（如罗博罗夫斯基侏儒仓鼠），大多数仓鼠都是独居动物，合笼会导致严重的领地争斗甚至咬伤致死。\n叙利亚仓鼠（金丝熊）尤其如此，它们的独居本能强到连亲兄弟姐妹成年后都会互相攻击。",
+          "position": {
+            "start": {
+              "line": 56,
+              "column": 1,
+              "offset": 1011
+            },
+            "end": {
+              "line": 58,
+              "column": 41,
+              "offset": 1131
+            }
+          },
+          "data": {},
+          "children": []
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 56,
+          "column": 1,
+          "offset": 1011
+        },
+        "end": {
+          "line": 58,
+          "column": 41,
+          "offset": 1131
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "另一个常见误区是\"仓鼠不需要看兽医\"。\n仓鼠确实不像猫狗那样需要定期疫苗接种，但它们也会生病——湿尾症、皮肤真菌感染、肿瘤等都不少见。\n找一个有异宠诊疗经验的兽医并记下联系方式，是每个仓鼠主人应该做的第一件事。\n很多普通宠物医院对仓鼠束手无策，提前做好调研能在关键时刻救命。",
+          "position": {
+            "start": {
+              "line": 60,
+              "column": 1,
+              "offset": 1133
+            },
+            "end": {
+              "line": 63,
+              "column": 32,
+              "offset": 1270
+            }
+          },
+          "data": {},
+          "children": []
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 60,
+          "column": 1,
+          "offset": 1133
+        },
+        "end": {
+          "line": 63,
+          "column": 32,
+          "offset": 1270
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "还有人认为仓鼠可以用水洗澡，这是大错特错。\n仓鼠被水打湿后体温会急剧下降，极易导致感冒甚至肺炎。\n它们天生就会用浴沙清洁毛发，只需要在笼子里放一个浴沙盆，它们会自己在里面打滚\"洗澡\"。\n看仓鼠在浴沙里扑腾翻滚的样子，是养仓鼠最解压的时刻之一。",
+          "position": {
+            "start": {
+              "line": 65,
+              "column": 1,
+              "offset": 1272
+            },
+            "end": {
+              "line": 68,
+              "column": 29,
+              "offset": 1393
+            }
+          },
+          "data": {},
+          "children": []
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 65,
+          "column": 1,
+          "offset": 1272
+        },
+        "end": {
+          "line": 68,
+          "column": 29,
+          "offset": 1393
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "和仓鼠建立信任",
+          "position": {
+            "start": {
+              "line": 70,
+              "column": 4,
+              "offset": 1398
+            },
+            "end": {
+              "line": 70,
+              "column": 11,
+              "offset": 1405
+            }
+          },
+          "data": {},
+          "children": []
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 70,
+          "column": 1,
+          "offset": 1395
+        },
+        "end": {
+          "line": 70,
+          "column": 11,
+          "offset": 1405
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "刚到家的仓鼠会非常紧张，前三天尽量不要去碰它，让它自己探索新环境。\n第四天开始可以把手放在笼子里不动，让仓鼠来闻你的气味。\n一周左右大多数仓鼠就会愿意从你手上吃东西了，这时候可以尝试轻轻把它捧起来。\n千万不要从上方抓取仓鼠，对它们来说\"头顶有东西靠近\"意味着天敌来了，会触发强烈的恐惧反应。\n用双手从侧面和底部托住它，让它站在你的掌心里，这是最安全也最不吓人的方式。",
+          "position": {
+            "start": {
+              "line": 72,
+              "column": 1,
+              "offset": 1407
+            },
+            "end": {
+              "line": 76,
+              "column": 38,
+              "offset": 1590
+            }
+          },
+          "data": {},
+          "children": []
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 72,
+          "column": 1,
+          "offset": 1407
+        },
+        "end": {
+          "line": 76,
+          "column": 38,
+          "offset": 1590
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "最后，养仓鼠最大的遗憾是它们的寿命太短了，通常只有两到三年。\n在这短暂的时间里，给它一个安全、舒适、有爱的家，就是你能做到的最好的事情。\n好好珍惜和小毛球在一起的每一天吧。",
+          "position": {
+            "start": {
+              "line": 78,
+              "column": 1,
+              "offset": 1592
+            },
+            "end": {
+              "line": 80,
+              "column": 18,
+              "offset": 1678
+            }
+          },
+          "data": {},
+          "children": []
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 78,
+          "column": 1,
+          "offset": 1592
+        },
+        "end": {
+          "line": 80,
+          "column": 18,
+          "offset": 1678
+        }
+      },
+      "data": {}
+    }
+  ],
+  "position": {
+    "start": {
+      "line": 1,
+      "column": 1,
+      "offset": 0
+    },
+    "end": {
+      "line": 81,
+      "column": 1,
+      "offset": 1679
+    }
+  },
+  "data": {}
+}
