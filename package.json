@@ -24,10 +24,10 @@
     "dist"
   ],
   "scripts": {
-    "test": "tsx test/node/index.ts",
-    "dev": "vite ./test/browser",
+    "test": "npx tsx test/node/index.ts",
+    "dev": "npx vite ./test/browser",
     "build": "tsup",
-    "build:preview": "vite build ./test/browser --outDir output",
+    "build:preview": "npx vite build ./test/browser --outDir output",
     "lint": "eslint --ext .ts,.tsx src/ test/",
     "lint:fix": "eslint --ext .ts,.tsx src/ test/ --fix"
   },
