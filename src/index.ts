@@ -5,4 +5,5 @@ export {
 
 export { transformAstWithDiffDataToAstWithDiffNode, transformAstWithDiffNodeToAstWithDiffData } from './utils/transform';
 
-export { DiffType, DiffNodeType, Options } from './types/base';
+export { DiffType, DiffNodeType } from './types/base';
+export type { Options } from './types/base';
