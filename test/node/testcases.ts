@@ -34,6 +34,30 @@ const defaultOldMarkdown_whitespace = readMarkdownFile('./whitespace/old.md');
 const defaultNewMarkdown_whitespace = readMarkdownFile('./whitespace/new.md');
 const defaultOldMarkdown_mixed_content = readMarkdownFile('./mixed_content/old.md');
 const defaultNewMarkdown_mixed_content = readMarkdownFile('./mixed_content/new.md');
+const defaultOldMarkdown_paragraph_word_edit = readMarkdownFile('./paragraph_word_edit/old.md');
+const defaultNewMarkdown_paragraph_word_edit = readMarkdownFile('./paragraph_word_edit/new.md');
+const defaultOldMarkdown_table_cell_edit = readMarkdownFile('./table_cell_edit/old.md');
+const defaultNewMarkdown_table_cell_edit = readMarkdownFile('./table_cell_edit/new.md');
+const defaultOldMarkdown_table_row_add_del = readMarkdownFile('./table_row_add_del/old.md');
+const defaultNewMarkdown_table_row_add_del = readMarkdownFile('./table_row_add_del/new.md');
+const defaultOldMarkdown_code_line_edit = readMarkdownFile('./code_line_edit/old.md');
+const defaultNewMarkdown_code_line_edit = readMarkdownFile('./code_line_edit/new.md');
+const defaultOldMarkdown_heading_rename = readMarkdownFile('./heading_rename/old.md');
+const defaultNewMarkdown_heading_rename = readMarkdownFile('./heading_rename/new.md');
+const defaultOldMarkdown_move_section = readMarkdownFile('./move_section/old.md');
+const defaultNewMarkdown_move_section = readMarkdownFile('./move_section/new.md');
+const defaultOldMarkdown_similar_paragraphs = readMarkdownFile('./similar_paragraphs/old.md');
+const defaultNewMarkdown_similar_paragraphs = readMarkdownFile('./similar_paragraphs/new.md');
+const defaultOldMarkdown_large_doc = readMarkdownFile('./large_doc/old.md');
+const defaultNewMarkdown_large_doc = readMarkdownFile('./large_doc/new.md');
+const defaultOldMarkdown_cjk_inline = readMarkdownFile('./cjk_inline/old.md');
+const defaultNewMarkdown_cjk_inline = readMarkdownFile('./cjk_inline/new.md');
+const defaultOldMarkdown_identity = readMarkdownFile('./identity/old.md');
+const defaultNewMarkdown_identity = readMarkdownFile('./identity/new.md');
+const defaultOldMarkdown_empty_to_content = readMarkdownFile('./empty_to_content/old.md');
+const defaultNewMarkdown_empty_to_content = readMarkdownFile('./empty_to_content/new.md');
+const defaultOldMarkdown_content_to_empty = readMarkdownFile('./content_to_empty/old.md');
+const defaultNewMarkdown_content_to_empty = readMarkdownFile('./content_to_empty/new.md');
 
 // export const testcases = [
 //   {
@@ -108,5 +132,65 @@ export const testcases = [
     name: 'mixed_content',
     oldMarkdown: defaultOldMarkdown_mixed_content,
     newMarkdown: defaultNewMarkdown_mixed_content,
+  },
+  {
+    name: 'paragraph_word_edit',
+    oldMarkdown: defaultOldMarkdown_paragraph_word_edit,
+    newMarkdown: defaultNewMarkdown_paragraph_word_edit,
+  },
+  {
+    name: 'table_cell_edit',
+    oldMarkdown: defaultOldMarkdown_table_cell_edit,
+    newMarkdown: defaultNewMarkdown_table_cell_edit,
+  },
+  {
+    name: 'table_row_add_del',
+    oldMarkdown: defaultOldMarkdown_table_row_add_del,
+    newMarkdown: defaultNewMarkdown_table_row_add_del,
+  },
+  {
+    name: 'code_line_edit',
+    oldMarkdown: defaultOldMarkdown_code_line_edit,
+    newMarkdown: defaultNewMarkdown_code_line_edit,
+  },
+  {
+    name: 'heading_rename',
+    oldMarkdown: defaultOldMarkdown_heading_rename,
+    newMarkdown: defaultNewMarkdown_heading_rename,
+  },
+  {
+    name: 'move_section',
+    oldMarkdown: defaultOldMarkdown_move_section,
+    newMarkdown: defaultNewMarkdown_move_section,
+  },
+  {
+    name: 'similar_paragraphs',
+    oldMarkdown: defaultOldMarkdown_similar_paragraphs,
+    newMarkdown: defaultNewMarkdown_similar_paragraphs,
+  },
+  {
+    name: 'large_doc',
+    oldMarkdown: defaultOldMarkdown_large_doc,
+    newMarkdown: defaultNewMarkdown_large_doc,
+  },
+  {
+    name: 'cjk_inline',
+    oldMarkdown: defaultOldMarkdown_cjk_inline,
+    newMarkdown: defaultNewMarkdown_cjk_inline,
+  },
+  {
+    name: 'identity',
+    oldMarkdown: defaultOldMarkdown_identity,
+    newMarkdown: defaultNewMarkdown_identity,
+  },
+  {
+    name: 'empty_to_content',
+    oldMarkdown: defaultOldMarkdown_empty_to_content,
+    newMarkdown: defaultNewMarkdown_empty_to_content,
+  },
+  {
+    name: 'content_to_empty',
+    oldMarkdown: defaultOldMarkdown_content_to_empty,
+    newMarkdown: defaultNewMarkdown_content_to_empty,
   }
 ];

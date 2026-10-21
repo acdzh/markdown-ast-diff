@@ -121,11 +121,19 @@ console.log(result.toString());
 # 安装依赖
 pnpm install
 
-# 运行测试
+# 运行测试（输出 AST JSON / diff HTML 到 test/node/output/）
 pnpm test
 
 # 启动浏览器测试环境
 pnpm dev
+
+# 运行评测（输出质量评分到 test/evaluate/output/）
+pnpm run evaluate
+
+# 存 baseline 并对比
+pnpm run evaluate -- --save before
+pnpm run evaluate -- --save after
+pnpm run evaluate -- --compare before after
 
 # 构建
 pnpm build
@@ -133,6 +141,36 @@ pnpm build
 # 构建预览版本
 pnpm build:preview
 ```
+
+## 评测系统
+
+`pnpm run evaluate` 会对所有测试用例跑 diff，输出每个用例的质量评分：
+
+```
+Case                   | Corr | Match% |  Frag | Granularity | PerfMs | Score
+-----------------------+------+--------+-------+-------------+--------+------
+cjk_inline             |   ✓  |   1.00 |  0.00 |        1.00 |    0.9 | 1.000
+code_line_edit         |   ✓  |   0.60 |  0.75 |        0.00 |    0.4 | 0.363
+table_cell_edit        |   ✓  |   1.00 |  0.00 |        0.00 |   0.73 | 0.650
+```
+
+各列含义：
+
+| 列 | 含义 | 好 | 差 |
+|---|---|---|---|
+| Corr | 去掉 del 节点后能否还原新文档 | ✓ | ✗（有 bug） |
+| Match% | 被正确匹配为"修改"的叶节点比例 | > 0.8 | < 0.5 |
+| Frag | 相邻节点 diff 状态切换频率，越低越好 | < 0.2 | > 0.5 |
+| Granularity | 文本相似的配对是否做了 inline diff | 1.0 | 0.0（没做细粒度 diff） |
+| PerfMs | diff 计算耗时 | < 50ms | > 500ms |
+| Score | 综合分 | > 0.9 | < 0.7 |
+
+快速判断：
+- **Granularity = 0** → 该类型的内部 diff 尚未实现（如表格、代码块）
+- **Frag 高 + Match% 低** → 匹配不准，结果碎且乱
+- **Score > 0.9** → 很好；**< 0.7** → 有明显缺陷
+
+A/B 对比用 `--compare`，看 Δ Score 和趋势箭头（↑↑ 大幅提升 / → 持平 / ↓ 退化）。
 
 ## 在线预览
 

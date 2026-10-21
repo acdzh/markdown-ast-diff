@@ -24,6 +24,30 @@ import defaultOldMarkdown_whitespace from '../testcases/whitespace/old.md?raw';
 import defaultNewMarkdown_whitespace from '../testcases/whitespace/new.md?raw';
 import defaultOldMarkdown_mixed_content from '../testcases/mixed_content/old.md?raw';
 import defaultNewMarkdown_mixed_content from '../testcases/mixed_content/new.md?raw';
+import defaultOldMarkdown_paragraph_word_edit from '../testcases/paragraph_word_edit/old.md?raw';
+import defaultNewMarkdown_paragraph_word_edit from '../testcases/paragraph_word_edit/new.md?raw';
+import defaultOldMarkdown_table_cell_edit from '../testcases/table_cell_edit/old.md?raw';
+import defaultNewMarkdown_table_cell_edit from '../testcases/table_cell_edit/new.md?raw';
+import defaultOldMarkdown_table_row_add_del from '../testcases/table_row_add_del/old.md?raw';
+import defaultNewMarkdown_table_row_add_del from '../testcases/table_row_add_del/new.md?raw';
+import defaultOldMarkdown_code_line_edit from '../testcases/code_line_edit/old.md?raw';
+import defaultNewMarkdown_code_line_edit from '../testcases/code_line_edit/new.md?raw';
+import defaultOldMarkdown_heading_rename from '../testcases/heading_rename/old.md?raw';
+import defaultNewMarkdown_heading_rename from '../testcases/heading_rename/new.md?raw';
+import defaultOldMarkdown_move_section from '../testcases/move_section/old.md?raw';
+import defaultNewMarkdown_move_section from '../testcases/move_section/new.md?raw';
+import defaultOldMarkdown_similar_paragraphs from '../testcases/similar_paragraphs/old.md?raw';
+import defaultNewMarkdown_similar_paragraphs from '../testcases/similar_paragraphs/new.md?raw';
+import defaultOldMarkdown_large_doc from '../testcases/large_doc/old.md?raw';
+import defaultNewMarkdown_large_doc from '../testcases/large_doc/new.md?raw';
+import defaultOldMarkdown_cjk_inline from '../testcases/cjk_inline/old.md?raw';
+import defaultNewMarkdown_cjk_inline from '../testcases/cjk_inline/new.md?raw';
+import defaultOldMarkdown_identity from '../testcases/identity/old.md?raw';
+import defaultNewMarkdown_identity from '../testcases/identity/new.md?raw';
+import defaultOldMarkdown_empty_to_content from '../testcases/empty_to_content/old.md?raw';
+import defaultNewMarkdown_empty_to_content from '../testcases/empty_to_content/new.md?raw';
+import defaultOldMarkdown_content_to_empty from '../testcases/content_to_empty/old.md?raw';
+import defaultNewMarkdown_content_to_empty from '../testcases/content_to_empty/new.md?raw';
 
 
 import { Testcase } from './types';
@@ -93,5 +117,65 @@ export const testcases: Testcase[] = [
     name: 'mixed_content',
     oldMarkdown: defaultOldMarkdown_mixed_content,
     newMarkdown: defaultNewMarkdown_mixed_content,
+  },
+  {
+    name: 'paragraph_word_edit',
+    oldMarkdown: defaultOldMarkdown_paragraph_word_edit,
+    newMarkdown: defaultNewMarkdown_paragraph_word_edit,
+  },
+  {
+    name: 'table_cell_edit',
+    oldMarkdown: defaultOldMarkdown_table_cell_edit,
+    newMarkdown: defaultNewMarkdown_table_cell_edit,
+  },
+  {
+    name: 'table_row_add_del',
+    oldMarkdown: defaultOldMarkdown_table_row_add_del,
+    newMarkdown: defaultNewMarkdown_table_row_add_del,
+  },
+  {
+    name: 'code_line_edit',
+    oldMarkdown: defaultOldMarkdown_code_line_edit,
+    newMarkdown: defaultNewMarkdown_code_line_edit,
+  },
+  {
+    name: 'heading_rename',
+    oldMarkdown: defaultOldMarkdown_heading_rename,
+    newMarkdown: defaultNewMarkdown_heading_rename,
+  },
+  {
+    name: 'move_section',
+    oldMarkdown: defaultOldMarkdown_move_section,
+    newMarkdown: defaultNewMarkdown_move_section,
+  },
+  {
+    name: 'similar_paragraphs',
+    oldMarkdown: defaultOldMarkdown_similar_paragraphs,
+    newMarkdown: defaultNewMarkdown_similar_paragraphs,
+  },
+  {
+    name: 'large_doc',
+    oldMarkdown: defaultOldMarkdown_large_doc,
+    newMarkdown: defaultNewMarkdown_large_doc,
+  },
+  {
+    name: 'cjk_inline',
+    oldMarkdown: defaultOldMarkdown_cjk_inline,
+    newMarkdown: defaultNewMarkdown_cjk_inline,
+  },
+  {
+    name: 'identity',
+    oldMarkdown: defaultOldMarkdown_identity,
+    newMarkdown: defaultNewMarkdown_identity,
+  },
+  {
+    name: 'empty_to_content',
+    oldMarkdown: defaultOldMarkdown_empty_to_content,
+    newMarkdown: defaultNewMarkdown_empty_to_content,
+  },
+  {
+    name: 'content_to_empty',
+    oldMarkdown: defaultOldMarkdown_content_to_empty,
+    newMarkdown: defaultNewMarkdown_content_to_empty,
   }
 ];
