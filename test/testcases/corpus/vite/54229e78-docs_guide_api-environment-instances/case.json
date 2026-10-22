@@ -1,0 +1,12 @@
+{
+  "description": "2026-04-06 docs: add `environment.fetchModule` documentation (#22035)",
+  "capability": "corpus",
+  "source": {
+    "repo": "vite",
+    "commit": "54229e78631ebf10d1db767b51ea85f3cf06718a",
+    "file": "docs/guide/api-environment-instances.md",
+    "changedLines": 78,
+    "changedRatio": 0.134,
+    "structureKinds": 3
+  }
+}

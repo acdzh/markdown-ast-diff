@@ -1,0 +1,12 @@
+{
+  "description": "2026-10-06 Clarify image loading during View Transitions (#8671)",
+  "capability": "corpus",
+  "source": {
+    "repo": "react",
+    "commit": "046f17d04295ba047bb5739026b4ac3110f17028",
+    "file": "src/content/reference/react-dom/components/img.md",
+    "changedLines": 82,
+    "changedRatio": 0.159,
+    "structureKinds": 4
+  }
+}

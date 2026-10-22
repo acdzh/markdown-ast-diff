@@ -1,0 +1,12 @@
+{
+  "description": "2026-07-09 Update React repo owner (#8524)",
+  "capability": "corpus",
+  "source": {
+    "repo": "react",
+    "commit": "c3c956bef083142ea94dd04068b389195db98dad",
+    "file": "src/content/blog/2022/03/29/react-v18.md",
+    "changedLines": 114,
+    "changedRatio": 0.165,
+    "structureKinds": 5
+  }
+}

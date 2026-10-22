@@ -34,6 +34,14 @@ interface Options {
   maxBytes: number;
   minChangedLines: number;
   maxChangedRatio: number;
+  /** 变更行占比下限：默认只保留改动较大的修改（默认 0.08），不要零碎小修 */
+  minChangedRatio: number;
+  /** 文档至少这么多行，短文档直接跳过（默认 40） */
+  minLines: number;
+  /** 要求新版本至少包含的结构标记数（表格/代码/列表/标题/引用），0 表示不限制 */
+  requireStructures: number;
+  /** 额外接受的扩展名（逗号分隔，默认只收 .md；可加 .mdx） */
+  extensions: string[];
   since?: string;
   pathFilter?: string;
 }
@@ -54,8 +62,12 @@ function parseArgs(argv: string[]): Options {
     name: (get('--name') ?? path.basename(resolved)).replace(/[^\w.-]+/g, '-'),
     limit: Number(get('--limit') ?? 50),
     maxBytes: Number(get('--max-bytes') ?? 200_000),
-    minChangedLines: Number(get('--min-changed-lines') ?? 1),
-    maxChangedRatio: Number(get('--max-changed-ratio') ?? 0.5),
+    minChangedLines: Number(get('--min-changed-lines') ?? 8),
+    maxChangedRatio: Number(get('--max-changed-ratio') ?? 0.7),
+    minChangedRatio: Number(get('--min-changed-ratio') ?? 0.08),
+    minLines: Number(get('--min-lines') ?? 40),
+    requireStructures: Number(get('--require-structures') ?? 0),
+    extensions: (get('--ext') ?? '.md').split(',').map(e => e.trim().toLowerCase()).filter(Boolean),
     since: get('--since'),
     pathFilter: get('--path'),
   };
@@ -105,7 +117,7 @@ function listCandidates(opts: Options): Candidate[] {
     }
     const [sha, date, subject] = lines[0].split('\x1f');
     for (const file of lines.slice(1)) {
-      if (!file.toLowerCase().endsWith('.md') || seenFiles.has(file)) {
+      if (!opts.extensions.some(ext => file.toLowerCase().endsWith(ext)) || seenFiles.has(file)) {
         continue;
       }
       seenFiles.add(file);
@@ -137,6 +149,32 @@ function changedLineStats(oldText: string, newText: string): { changed: number; 
 
 function slug(file: string): string {
   return file.replace(/\.md$/i, '').replace(/[^\w\u4e00-\u9fff-]+/g, '_').slice(-60);
+}
+
+const STRUCTURE_PATTERNS: Array<RegExp> = [
+  /^\s*#{1,6}\s/m,        // 标题
+  /^\s*[-*+]\s/m,         // 无序列表
+  /^\s*\d+[.)]\s/m,       // 有序列表
+  /^\s*\|.*\|/m,          // 表格
+  /^\s*```|^\s*~~~|^\s* {4}/m, // 代码围栏或缩进代码
+  /^\s*>/m,               // 引用
+  /^\s*[-*_]{3,}\s*$/m,   // 分隔线
+];
+
+/**
+ * 新版本里的结构标记数量（不同种类各计一次 + 出现密度）。
+ * 用“种类数”表达结构复杂度：同时含表格/代码/列表/标题的文档比纯散文复杂。
+ */
+function structureScore(text: string): { kinds: number; density: number } {
+  let kinds = 0;
+  for (const p of STRUCTURE_PATTERNS) {
+    if (p.test(text)) {
+      kinds++;
+    }
+  }
+  const lines = text.split('\n').filter(l => l.trim()).length;
+  const marked = STRUCTURE_PATTERNS.reduce((sum, p) => sum + (text.match(new RegExp(p.source, p.flags.replace('m', 'gm')))?.length ?? 0), 0);
+  return { kinds, density: lines === 0 ? 0 : marked / lines };
 }
 
 function main(): void {
@@ -188,18 +226,41 @@ function main(): void {
       skip('near rewrite');
       continue;
     }
+    // 只要改动足够大的修改：变化行占比过低（改一两个字）对评测没有区分度
+    if (total > 0 && changed / (2 * total) < opts.minChangedRatio) {
+      skip('change too small');
+      continue;
+    }
+    const newLines = newText.split('\n').filter(l => l.trim()).length;
+    if (newLines < opts.minLines) {
+      skip('doc too short');
+      continue;
+    }
+    if (opts.requireStructures > 0 && structureScore(newText).kinds < opts.requireStructures) {
+      skip('not structurally complex');
+      continue;
+    }
 
     const caseId = `${c.sha.slice(0, 8)}-${slug(c.file)}`;
     const dir = path.join(outRoot, caseId);
     fs.mkdirSync(dir, { recursive: true });
     fs.writeFileSync(path.join(dir, 'old.md'), oldText);
     fs.writeFileSync(path.join(dir, 'new.md'), newText);
+    const { kinds, density } = structureScore(newText);
     fs.writeFileSync(path.join(dir, 'case.json'), `${JSON.stringify({
       description: `${c.date} ${c.subject}`.slice(0, 200),
       capability: 'corpus',
-      source: { repo: opts.name, commit: c.sha, file: c.file, changedLines: changed },
+      source: {
+        repo: opts.name,
+        commit: c.sha,
+        file: c.file,
+        changedLines: changed,
+        changedRatio: total === 0 ? 0 : Math.round((changed / (2 * total)) * 1000) / 1000,
+        structureKinds: kinds,
+      },
       ...(annotations[caseId] ?? {}),
     }, null, 2)}\n`);
+    void density;
     written++;
   }
 

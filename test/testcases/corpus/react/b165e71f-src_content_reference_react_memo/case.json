@@ -1,0 +1,12 @@
+{
+  "description": "2025-07-21 [compiler] Rewrite React Compiler Docs (#7868)",
+  "capability": "corpus",
+  "source": {
+    "repo": "react",
+    "commit": "b165e71f4f9aac517a76d83a64ede13d4636768e",
+    "file": "src/content/reference/react/memo.md",
+    "changedLines": 91,
+    "changedRatio": 0.101,
+    "structureKinds": 5
+  }
+}
