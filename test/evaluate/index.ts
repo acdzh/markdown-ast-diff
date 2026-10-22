@@ -63,6 +63,7 @@ interface Options {
   stress: boolean;
   verbose: boolean;
   check: boolean;
+  allowKnownFailure?: string[];
 }
 
 function parseArgs(argv: string[]): Options {
@@ -81,6 +82,8 @@ function parseArgs(argv: string[]): Options {
       opts.verbose = true;
     } else if (a === '--check') {
       opts.check = true;
+    } else if (a === '--allow-known-failure' && argv[i + 1]) {
+      (opts.allowKnownFailure ??= []).push(argv[++i]);
     }
   }
   return opts;
@@ -385,7 +388,16 @@ function main(): void {
   console.log(`\nReport saved to ${path.relative(process.cwd(), out)}`);
 
   if (opts.check) {
-    const blocking = reports.filter(r => r.status === 'fail' || r.status === 'xpass' || (!r.metrics.correct && !r.knownIssue));
+    const allowed = new Set(opts.allowKnownFailure ?? []);
+    const blocking = reports.filter(
+      r => (r.status === 'fail' || r.status === 'xpass' || (!r.metrics.correct && !r.knownIssue))
+        && !allowed.has(r.id),
+    );
+    const unrecognized = [...allowed].filter(id => !reports.some(r => r.id === id));
+    if (unrecognized.length > 0) {
+      console.error(`\n--allow-known-failure id not found: ${unrecognized.join(', ')}`);
+      process.exit(1);
+    }
     if (blocking.length > 0) {
       console.error(`\n${blocking.length} blocking case(s): ${blocking.map(r => r.id).join(', ')}`);
       process.exit(1);

@@ -8,6 +8,10 @@
  * 输出到 test/testcases/corpus/<name>/<short-sha>-<file-slug>/{old.md,new.md,case.json}。
  * <name> 默认取仓库目录名。同一 <name> 目录会被整体覆盖，便于重复采集。
  *
+ * 人工标注（knownIssue）保存在 test/testcases/corpus/<name>.annotations.json：
+ *   { "<short-sha>-<file-slug>": { "knownIssue": "...", "expect": {...} } }
+ * 重新采集时会自动合并进 case.json，不会被覆盖。
+ *
  * 过滤规则（目的是得到“真实、可读、有代表性”的小修改）：
  * - 只取修改（M），不取新增/删除/重命名（那些只能整块 ins/del，没有评测价值）
  * - 跳过 merge commit
@@ -143,6 +147,11 @@ function main(): void {
   }
 
   const outRoot = path.resolve(__dirname, 'testcases', 'corpus', opts.name);
+  // 先读出人工标注，再清空输出目录
+  const annotationsPath = path.join(path.dirname(outRoot), `${opts.name}.annotations.json`);
+  const annotations: Record<string, { knownIssue?: string; expect?: unknown }> = fs.existsSync(annotationsPath)
+    ? JSON.parse(fs.readFileSync(annotationsPath, 'utf-8'))
+    : {};
   fs.rmSync(outRoot, { recursive: true, force: true });
 
   const candidates = listCandidates(opts);
@@ -180,7 +189,8 @@ function main(): void {
       continue;
     }
 
-    const dir = path.join(outRoot, `${c.sha.slice(0, 8)}-${slug(c.file)}`);
+    const caseId = `${c.sha.slice(0, 8)}-${slug(c.file)}`;
+    const dir = path.join(outRoot, caseId);
     fs.mkdirSync(dir, { recursive: true });
     fs.writeFileSync(path.join(dir, 'old.md'), oldText);
     fs.writeFileSync(path.join(dir, 'new.md'), newText);
@@ -188,6 +198,7 @@ function main(): void {
       description: `${c.date} ${c.subject}`.slice(0, 200),
       capability: 'corpus',
       source: { repo: opts.name, commit: c.sha, file: c.file, changedLines: changed },
+      ...(annotations[caseId] ?? {}),
     }, null, 2)}\n`);
     written++;
   }
