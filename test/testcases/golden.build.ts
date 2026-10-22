@@ -109,6 +109,189 @@ const CASES: GoldenCase[] = [
     expect: { identical: true },
   },
   {
+    name: 'frontmatter-field-edit',
+    capability: 'edge.frontmatter',
+    description: 'frontmatter 中改一个字段值，正文必须完整保留',
+    old: md`
+      ---
+      title: 旧标题
+      ---
+
+      # 正文
+
+      正文内容不受影响。
+    `,
+    new: md`
+      ---
+      title: 新标题
+      ---
+
+      # 正文
+
+      正文内容不受影响。
+    `,
+    expect: { kept: ['正文', '正文内容不受影响'] },
+  },
+  {
+    name: 'frontmatter-field-add',
+    capability: 'edge.frontmatter',
+    description: 'frontmatter 中新增一个字段，正文必须完整保留',
+    old: md`
+      ---
+      title: 文档
+      ---
+
+      正文段落。
+    `,
+    new: md`
+      ---
+      title: 文档
+      draft: true
+      ---
+
+      正文段落。
+    `,
+    expect: { kept: ['文档', '正文段落'] },
+    knownIssue: '解析器不支持 YAML frontmatter：新增字段会连带重标相邻的伪标题块；该用例只保证正文不丢，接入 frontmatter 解析后应收紧断言',
+  },
+  {
+    name: 'list-marker-tab-vs-space',
+    capability: 'list.syntax',
+    description: '列表标记后用制表符或两个空格缩进，渲染一致',
+    old: '-\t第一项',
+    new: '-  第一项',
+    expect: { identical: true },
+  },
+  {
+    name: 'ordered-paren-vs-dot',
+    capability: 'list.syntax',
+    description: '有序列表标记 1) 写成 1.，渲染一致',
+    old: md`
+      1) 第一步
+      2) 第二步
+    `,
+    new: md`
+      1. 第一步
+      2. 第二步
+    `,
+    expect: { identical: true },
+  },
+  {
+    name: 'task-marker-case',
+    capability: 'list.syntax',
+    description: '任务勾选 [x] 与 [X] 等价',
+    old: md`
+      - [x] 完成项
+    `,
+    new: md`
+      - [X] 完成项
+    `,
+    expect: { identical: true },
+  },
+  {
+    name: 'task-needs-space',
+    capability: 'list.task',
+    description: '- [x] 后少空格就不是任务列表：勾选状态语义改变，必须可见',
+    old: md`
+      - [x]完成项
+    `,
+    new: md`
+      - [x] 完成项
+    `,
+    expect: { del: ['[x]完成项'], ins: ['完成项'], maxChangedTokens: 4 },
+    knownIssue: '旧侧普通列表文字“[x]完成项”只标出了“[x]”部分，整个文本项没有完整进 del（oldCorrect=false）',
+  },
+  {
+    name: 'setext-underline-length',
+    capability: 'heading.syntax',
+    description: 'Setext 下划线长度不同，仍是同一标题',
+    old: md`
+      标题
+      -
+
+      正文。
+    `,
+    new: md`
+      标题
+      ---
+
+      正文。
+    `,
+    expect: { identical: true },
+  },
+  {
+    name: 'thematic-break-style',
+    capability: 'block.syntax',
+    description: '分隔线 *** 与 ___ 等价',
+    old: md`
+      上文。
+
+      ***
+
+      下文。
+    `,
+    new: md`
+      上文。
+
+      ___
+
+      下文。
+    `,
+    expect: { identical: true },
+  },
+  {
+    name: 'heading-closing-sequence',
+    capability: 'heading.syntax',
+    description: 'ATX 标题末尾的闭合 # 序列可省略',
+    old: md`
+      # 标题 #
+
+      正文。
+    `,
+    new: md`
+      # 标题
+
+      正文。
+    `,
+    expect: { identical: true },
+  },
+  {
+    name: 'autolink-angle-brackets',
+    capability: 'inline.syntax',
+    description: '裸链接写成自动链接 <url>，渲染结果相同',
+    old: md`
+      访问 https://example.com 继续。
+    `,
+    new: md`
+      访问 <https://example.com> 继续。
+    `,
+    expect: { identical: true },
+  },
+  {
+    name: 'hard-break-escape-vs-spaces',
+    capability: 'inline.syntax',
+    description: '行尾反斜杠硬换行与行尾两空格硬换行等价',
+    old: '第一行\\\n第二行',
+    new: '第一行  \n第二行',
+    expect: { identical: true },
+  },
+  {
+    name: 'fence-tilde-length',
+    capability: 'code.syntax',
+    description: '~~~ 围栏长度不同仍是同一个代码块',
+    old: '~~~\ncode\n~~~',
+    new: '~~~~\ncode\n~~~~',
+    expect: { identical: true },
+  },
+  {
+    name: 'code-trailing-blank-line',
+    capability: 'code.whitespace',
+    description: '代码块末尾多出一个空行：属于代码内容，变化必须可见',
+    old: '```\nline\n```',
+    new: '```\nline\n\n```',
+    expect: { ins: ['line'], maxHunks: 1 },
+  },
+  {
     name: 'crlf-vs-lf',
     capability: 'edge.whitespace',
     description: 'CRLF 与 LF 换行风格不同，内容一致',
@@ -335,6 +518,43 @@ const CASES: GoldenCase[] = [
     expect: { del: ['橘猫'], ins: ['橘猫'], kept: ['看看这张图'] },
   },
   {
+    name: 'inline-html-tag-wrap',
+    capability: 'inline.html',
+    description: '给段落中的一个数字套上 <b> 标签：数字本身应保留，标签为新增',
+    old: md`
+      价格 100 元，含税。
+    `,
+    new: md`
+      价格 <b>100</b> 元，含税。
+    `,
+    expect: { ins: ['<b>', '</b>'], kept: ['100', '价格', '元，含税'] },
+    knownIssue: '给文字套上行内 HTML 标签时，标签后的文字被整段标为 ins 且没有 del，“100 元，含税”等旧内容丢失（oldCorrect=false）',
+  },
+  {
+    name: 'inline-html-attr-edit',
+    capability: 'inline.html',
+    description: '只改行内 a 标签的 href 属性',
+    old: md`
+      点击 <a href="https://a.com/x">链接</a> 继续阅读。
+    `,
+    new: md`
+      点击 <a href="https://b.com/y">链接</a> 继续阅读。
+    `,
+    expect: { del: ['https://a.com/x'], ins: ['https://b.com/y'], kept: ['链接', '继续阅读'] },
+  },
+  {
+    name: 'inline-br-style',
+    capability: 'inline.html',
+    description: '<br> 写成 <br/>：标签文本不同应标出，周围文字保持不变',
+    old: md`
+      第一行<br>第二行
+    `,
+    new: md`
+      第一行<br/>第二行
+    `,
+    expect: { del: ['<br>'], ins: ['<br/>'], kept: ['第一行', '第二行'], maxChangedTokens: 2 },
+  },
+  {
     name: 'hard-break-add',
     capability: 'inline.break',
     description: '在段落中加入硬换行（行尾两个空格）',
@@ -433,6 +653,22 @@ const CASES: GoldenCase[] = [
       正文内容。
     `,
     expect: { identical: true },
+  },
+  {
+    name: 'paragraph-to-heading',
+    capability: 'heading.level',
+    description: '一个普通段落升级为二级标题，文字不变：变化必须可见',
+    old: md`
+      安装说明
+
+      先运行 npm install。
+    `,
+    new: md`
+      ## 安装说明
+
+      先运行 npm install。
+    `,
+    expect: { kept: ['先运行npminstall'], del: ['安装说明'], ins: ['安装说明'] },
   },
   {
     name: 'section-insert',
@@ -1212,6 +1448,36 @@ const CASES: GoldenCase[] = [
     knownIssue: 'html 节点为叶子，内容有改动时整块替换，不做行级 diff',
   },
   {
+    name: 'html-comment-add',
+    capability: 'block.html',
+    description: '段落前新增一条 HTML 注释，正文不变',
+    old: md`
+      可见段落。
+    `,
+    new: md`
+      <!-- 备注：这段需要复核 -->
+
+      可见段落。
+    `,
+    expect: { ins: ['<!--备注：这段需要复核-->'], kept: ['可见段落'], maxHunks: 1 },
+  },
+  {
+    name: 'html-comment-edit',
+    capability: 'block.html',
+    description: '只改 HTML 注释内容',
+    old: md`
+      <!-- old note -->
+
+      可见段落。
+    `,
+    new: md`
+      <!-- new note -->
+
+      可见段落。
+    `,
+    expect: { del: ['oldnote'], ins: ['newnote'], kept: ['可见段落'], maxHunks: 1 },
+  },
+  {
     name: 'nested-quote-list-edit',
     capability: 'block.nested',
     description: '引用块里的列表中改一项',
@@ -1272,6 +1538,40 @@ const CASES: GoldenCase[] = [
     `,
     expect: { kept: ['这是一个参考链接'], maxChangedTokens: 2 },
     knownIssue: 'definition 的 url/title 变化被静默丢弃：输出为新定义且标为 diffUnchanged（oldCorrect=false）',
+  },
+  {
+    name: 'collapsed-ref-url-change',
+    capability: 'reference.definition',
+    description: '折叠式引用 [文字][] 的定义 url 变化：变化必须可见',
+    old: md`
+      这是一个[示例链接][]。
+
+      [示例链接]: https://example.com/old
+    `,
+    new: md`
+      这是一个[示例链接][]。
+
+      [示例链接]: https://example.com/new
+    `,
+    expect: { kept: ['示例链接'], maxChangedTokens: 2 },
+    knownIssue: '折叠式引用 [文字][] 的 definition url 变化被静默丢弃：节点标为 diffUnchanged（oldCorrect=false），与 full 式引用（已有 definition-url-change 覆盖）同根',
+  },
+  {
+    name: 'shortcut-ref-url-change',
+    capability: 'reference.definition',
+    description: '简写式引用 [文字] 的定义 url 变化：变化必须可见',
+    old: md`
+      见 [示例链接] 了解更多。
+
+      [示例链接]: https://example.com/old
+    `,
+    new: md`
+      见 [示例链接] 了解更多。
+
+      [示例链接]: https://example.com/new
+    `,
+    expect: { kept: ['示例链接'], maxChangedTokens: 2 },
+    knownIssue: '简写式引用 [文字] 的 definition url 变化被静默丢弃（oldCorrect=false）',
   },
   {
     name: 'footnote-add',

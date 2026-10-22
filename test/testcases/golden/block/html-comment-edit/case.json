@@ -1,0 +1,16 @@
+{
+  "description": "只改 HTML 注释内容",
+  "capability": "block.html",
+  "expect": {
+    "del": [
+      "oldnote"
+    ],
+    "ins": [
+      "newnote"
+    ],
+    "kept": [
+      "可见段落"
+    ],
+    "maxHunks": 1
+  }
+}

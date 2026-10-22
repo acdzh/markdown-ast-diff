@@ -1,0 +1,7 @@
+{
+  "description": "分隔线 *** 与 ___ 等价",
+  "capability": "block.syntax",
+  "expect": {
+    "identical": true
+  }
+}

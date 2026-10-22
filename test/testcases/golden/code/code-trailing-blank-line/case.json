@@ -1,0 +1,10 @@
+{
+  "description": "代码块末尾多出一个空行：属于代码内容，变化必须可见",
+  "capability": "code.whitespace",
+  "expect": {
+    "ins": [
+      "line"
+    ],
+    "maxHunks": 1
+  }
+}

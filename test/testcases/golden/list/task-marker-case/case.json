@@ -1,0 +1,7 @@
+{
+  "description": "任务勾选 [x] 与 [X] 等价",
+  "capability": "list.syntax",
+  "expect": {
+    "identical": true
+  }
+}

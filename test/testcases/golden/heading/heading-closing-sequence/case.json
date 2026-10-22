@@ -1,0 +1,7 @@
+{
+  "description": "ATX 标题末尾的闭合 # 序列可省略",
+  "capability": "heading.syntax",
+  "expect": {
+    "identical": true
+  }
+}

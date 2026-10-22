@@ -1,0 +1,15 @@
+{
+  "description": "一个普通段落升级为二级标题，文字不变：变化必须可见",
+  "capability": "heading.level",
+  "expect": {
+    "kept": [
+      "先运行npminstall"
+    ],
+    "del": [
+      "安装说明"
+    ],
+    "ins": [
+      "安装说明"
+    ]
+  }
+}

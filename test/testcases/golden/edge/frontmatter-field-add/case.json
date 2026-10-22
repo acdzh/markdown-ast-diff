@@ -1,0 +1,11 @@
+{
+  "description": "frontmatter 中新增一个字段，正文必须完整保留",
+  "capability": "edge.frontmatter",
+  "expect": {
+    "kept": [
+      "文档",
+      "正文段落"
+    ]
+  },
+  "knownIssue": "解析器不支持 YAML frontmatter：新增字段会连带重标相邻的伪标题块；该用例只保证正文不丢，接入 frontmatter 解析后应收紧断言"
+}

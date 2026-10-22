@@ -1,0 +1,16 @@
+{
+  "description": "只改行内 a 标签的 href 属性",
+  "capability": "inline.html",
+  "expect": {
+    "del": [
+      "https://a.com/x"
+    ],
+    "ins": [
+      "https://b.com/y"
+    ],
+    "kept": [
+      "链接",
+      "继续阅读"
+    ]
+  }
+}

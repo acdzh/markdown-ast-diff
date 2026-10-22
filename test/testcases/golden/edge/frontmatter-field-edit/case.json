@@ -1,0 +1,10 @@
+{
+  "description": "frontmatter 中改一个字段值，正文必须完整保留",
+  "capability": "edge.frontmatter",
+  "expect": {
+    "kept": [
+      "正文",
+      "正文内容不受影响"
+    ]
+  }
+}

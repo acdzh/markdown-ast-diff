@@ -1,0 +1,7 @@
+{
+  "description": "~~~ 围栏长度不同仍是同一个代码块",
+  "capability": "code.syntax",
+  "expect": {
+    "identical": true
+  }
+}
