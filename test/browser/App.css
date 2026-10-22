@@ -41,8 +41,8 @@
 
 /* ---- Main content ---- */
 .main {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   flex: 1;
   min-height: 0;
 }
@@ -52,7 +52,22 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: 0;
-  border-bottom: 1px solid #e5e5e5;
+  flex-shrink: 0;
+}
+
+/* ---- Resize handle ---- */
+.resize-handle {
+  height: 5px;
+  background: #e5e5e5;
+  cursor: row-resize;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 10;
+}
+
+.resize-handle:hover,
+.resize-handle:active {
+  background: #c0c0c0;
 }
 
 .editor-pane {
@@ -109,6 +124,7 @@
   flex-direction: column;
   min-height: 0;
   overflow: hidden;
+  flex-shrink: 1;
 }
 
 .result-tabs {
