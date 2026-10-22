@@ -2,6 +2,15 @@ import js from '@eslint/js';
 import tseslint from 'typescript-eslint';
 
 export default [
+  {
+    // 构建产物与预览产物，不参与 lint
+    ignores: [
+      'dist/**',
+      'output/**',
+      'test/browser/output/**',
+      'test/node/output/**',
+    ],
+  },
   js.configs.recommended,
   ...tseslint.configs.recommended,
   {

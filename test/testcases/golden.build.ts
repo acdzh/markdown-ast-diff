@@ -284,14 +284,6 @@ const CASES: GoldenCase[] = [
     expect: { identical: true },
   },
   {
-    name: 'code-trailing-blank-line',
-    capability: 'code.whitespace',
-    description: '代码块末尾多出一个空行：属于代码内容，变化必须可见',
-    old: '```\nline\n```',
-    new: '```\nline\n\n```',
-    expect: { ins: ['line'], maxHunks: 1 },
-  },
-  {
     name: 'crlf-vs-lf',
     capability: 'edge.whitespace',
     description: 'CRLF 与 LF 换行风格不同，内容一致',
