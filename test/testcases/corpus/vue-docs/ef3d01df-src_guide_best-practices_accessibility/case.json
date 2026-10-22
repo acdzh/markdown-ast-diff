@@ -1,0 +1,10 @@
+{
+  "description": "2026-06-02 docs: show useId with aria-labelledby (#3393)",
+  "capability": "corpus",
+  "source": {
+    "repo": "vue-docs",
+    "commit": "ef3d01df6c56f3849fa205fb354f1ba9b75937ee",
+    "file": "src/guide/best-practices/accessibility.md",
+    "changedLines": 28
+  }
+}

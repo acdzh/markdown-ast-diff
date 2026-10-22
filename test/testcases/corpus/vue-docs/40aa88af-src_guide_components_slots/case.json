@@ -1,0 +1,10 @@
+{
+  "description": "2026-09-15 docs: note that child scoped styles do not apply to slot content (#3459)",
+  "capability": "corpus",
+  "source": {
+    "repo": "vue-docs",
+    "commit": "40aa88af0094f7bab4aaf786e55c748a6a251d88",
+    "file": "src/guide/components/slots.md",
+    "changedLines": 4
+  }
+}

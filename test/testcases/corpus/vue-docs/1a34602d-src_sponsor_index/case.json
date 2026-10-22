@@ -1,0 +1,10 @@
+{
+  "description": "2026-07-07 fix(docs): broken vuejs/vue link in sponsor index.md (#3413)",
+  "capability": "corpus",
+  "source": {
+    "repo": "vue-docs",
+    "commit": "1a34602d7a2e427b977959833f2e689f0a158a9f",
+    "file": "src/sponsor/index.md",
+    "changedLines": 2
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "description": "2026-06-02 Fix usage of \"bare bones\" idiom on routing docs page (#3390)",
+  "capability": "corpus",
+  "source": {
+    "repo": "vue-docs",
+    "commit": "af725599bb1cc7bdd174b5a4f16055a18348026b",
+    "file": "src/guide/scaling-up/routing.md",
+    "changedLines": 2
+  }
+}

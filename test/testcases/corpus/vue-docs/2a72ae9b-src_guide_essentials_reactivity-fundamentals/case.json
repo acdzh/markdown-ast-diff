@@ -1,0 +1,10 @@
+{
+  "description": "2026-06-24 fix: replace _.debounce with debounce in stateful methods example",
+  "capability": "corpus",
+  "source": {
+    "repo": "vue-docs",
+    "commit": "2a72ae9b88ac94a1ddd12a0e29fbcf9bfe67b1c4",
+    "file": "src/guide/essentials/reactivity-fundamentals.md",
+    "changedLines": 2
+  }
+}

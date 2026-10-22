@@ -1,0 +1,10 @@
+{
+  "description": "2026-07-09 docs: update and consolidate Vue frameworks mentions (#3428)",
+  "capability": "corpus",
+  "source": {
+    "repo": "vue-docs",
+    "commit": "e4641141026871271e5083c99ad4cd3f4a8e9a68",
+    "file": "src/guide/extras/ways-of-using-vue.md",
+    "changedLines": 4
+  }
+}

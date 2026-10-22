@@ -1,0 +1,10 @@
+{
+  "description": "2026-05-16 docs: update style guide to a vue 3 baseline (#3391)",
+  "capability": "corpus",
+  "source": {
+    "repo": "vue-docs",
+    "commit": "e5a057e27aed9c22ee62acb5ef889e8c41866771",
+    "file": "src/style-guide/index.md",
+    "changedLines": 4
+  }
+}

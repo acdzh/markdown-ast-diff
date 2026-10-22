@@ -1,0 +1,10 @@
+{
+  "description": "2026-09-15 docs: fix broken JSX reference link (#3458)",
+  "capability": "corpus",
+  "source": {
+    "repo": "vue-docs",
+    "commit": "b0da2e8d94da46520292e9625427d2a9b7b64810",
+    "file": "src/guide/extras/render-function.md",
+    "changedLines": 2
+  }
+}

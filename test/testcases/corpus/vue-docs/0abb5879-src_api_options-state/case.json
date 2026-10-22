@@ -1,0 +1,10 @@
+{
+  "description": "2026-07-03 docs: resolve outstanding TODO stubs in guide and API reference (#3408)",
+  "capability": "corpus",
+  "source": {
+    "repo": "vue-docs",
+    "commit": "0abb5879fe39dabb0c682665a7df9d7ed37a6c3c",
+    "file": "src/api/options-state.md",
+    "changedLines": 3
+  }
+}

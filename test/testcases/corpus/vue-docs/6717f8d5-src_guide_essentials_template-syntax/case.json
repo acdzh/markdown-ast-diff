@@ -1,0 +1,10 @@
+{
+  "description": "2026-07-03 docs: add descriptive alt text to guide diagrams (#3407)",
+  "capability": "corpus",
+  "source": {
+    "repo": "vue-docs",
+    "commit": "6717f8d56bb6511555841aa9d175b16f0ff14798",
+    "file": "src/guide/essentials/template-syntax.md",
+    "changedLines": 2
+  }
+}

@@ -3,6 +3,3 @@ dist
 node_modules
 reference
 docs
-
-# 采集来的真实语料可能来自私有仓库，默认不入库；确认可公开后 git add -f
-test/testcases/corpus/

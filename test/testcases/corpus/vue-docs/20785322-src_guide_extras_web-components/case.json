@@ -1,0 +1,10 @@
+{
+  "description": "2026-06-02 docs: fix custom element helper wording (#3381)",
+  "capability": "corpus",
+  "source": {
+    "repo": "vue-docs",
+    "commit": "207853229d1f1bc5ec182a7dd0c12127ae2e2ed2",
+    "file": "src/guide/extras/web-components.md",
+    "changedLines": 2
+  }
+}
