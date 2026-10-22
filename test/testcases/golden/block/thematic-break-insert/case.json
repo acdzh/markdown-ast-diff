@@ -1,0 +1,14 @@
+{
+  "description": "两段之间插入分隔线",
+  "capability": "block.insert",
+  "expect": {
+    "ins": [
+      "---"
+    ],
+    "kept": [
+      "上半部分",
+      "下半部分"
+    ],
+    "maxChangedTokens": 1
+  }
+}

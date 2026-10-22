@@ -1,0 +1,12 @@
+{
+  "description": "mermaid 代码块按约定整块替换，但新旧内容都必须完整出现",
+  "capability": "code.mermaid",
+  "expect": {
+    "del": [
+      "A-->B"
+    ],
+    "ins": [
+      "A-->C"
+    ]
+  }
+}

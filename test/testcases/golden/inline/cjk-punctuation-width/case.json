@@ -1,0 +1,12 @@
+{
+  "description": "只把半角标点改成全角",
+  "capability": "inline.word",
+  "expect": {
+    "kept": [
+      "你好",
+      "世界",
+      "今天天气不错"
+    ],
+    "maxChangedTokens": 6
+  }
+}

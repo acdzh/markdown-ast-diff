@@ -1,0 +1,19 @@
+{
+  "description": "表格末尾新增一列",
+  "capability": "table.column",
+  "expect": {
+    "ins": [
+      "部门",
+      "研发",
+      "设计"
+    ],
+    "kept": [
+      "张三",
+      "李四"
+    ],
+    "notDel": [
+      "张三",
+      "李四"
+    ]
+  }
+}

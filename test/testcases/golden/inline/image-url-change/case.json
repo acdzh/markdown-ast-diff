@@ -1,0 +1,15 @@
+{
+  "description": "只改图片地址，alt 不变：变化必须可见",
+  "capability": "inline.image",
+  "expect": {
+    "del": [
+      "橘猫"
+    ],
+    "ins": [
+      "橘猫"
+    ],
+    "kept": [
+      "看看这张图"
+    ]
+  }
+}

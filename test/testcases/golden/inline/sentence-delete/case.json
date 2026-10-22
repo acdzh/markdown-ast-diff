@@ -1,0 +1,17 @@
+{
+  "description": "删除段落中间的一句话",
+  "capability": "inline.sentence",
+  "expect": {
+    "del": [
+      "Shewakesuponlyfordinner"
+    ],
+    "kept": [
+      "Ourcatsleepsallday",
+      "Atnightsherunsaroundthehouse"
+    ],
+    "notIns": [
+      "cat"
+    ],
+    "maxHunks": 1
+  }
+}

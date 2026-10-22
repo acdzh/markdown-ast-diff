@@ -1,0 +1,11 @@
+{
+  "description": "两个章节交换位置，内容不变：变更量不应超过一个章节",
+  "capability": "heading.move",
+  "expect": {
+    "kept": [
+      "旅行攻略"
+    ],
+    "maxHunks": 2,
+    "minEfficiency": 0.8
+  }
+}

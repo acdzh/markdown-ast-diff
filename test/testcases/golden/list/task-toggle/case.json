@@ -1,0 +1,12 @@
+{
+  "description": "任务列表勾选状态变化，文字不变：变化必须可见",
+  "capability": "list.task",
+  "expect": {
+    "kept": [
+      "写周报",
+      "提交代码"
+    ],
+    "maxChangedTokens": 2
+  },
+  "knownIssue": "列表项 checked 变化被静默丢弃：输出为新勾选状态且无任何 diff 标记（oldCorrect=false）"
+}

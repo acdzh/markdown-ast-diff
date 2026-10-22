@@ -127,8 +127,17 @@ pnpm test
 # 启动浏览器测试环境
 pnpm dev
 
-# 运行评测（输出质量评分到 test/evaluate/output/）
+# 运行评测（golden / scenario / corpus 用例：双向还原检查 + 质量评分）
 pnpm run evaluate
+
+# 压力用例（2k/8k 行文档、30k 字符段落、300 个重复段落）
+pnpm run evaluate:stress
+
+# 查看单个用例的 diff 流和参考 diff
+pnpm run evaluate:inspect -- golden/table/cell-edit --reference
+
+# 从真实 git 仓库采集 Markdown 修改作为语料
+npx tsx test/collect-from-git.ts --repo /path/to/repo --limit 50
 
 # 存 baseline 并对比
 pnpm run evaluate -- --save before
@@ -144,33 +153,28 @@ pnpm build:preview
 
 ## 评测系统
 
-`pnpm run evaluate` 会对所有测试用例跑 diff，输出每个用例的质量评分：
+评测分三层：
 
-```
-Case                   | Corr | Match% |  Frag | Granularity | PerfMs | Score
------------------------+------+--------+-------+-------------+--------+------
-cjk_inline             |   ✓  |   1.00 |  0.00 |        1.00 |    0.9 | 1.000
-code_line_edit         |   ✓  |   0.60 |  0.75 |        0.00 |    0.4 | 0.363
-table_cell_edit        |   ✓  |   1.00 |  0.00 |        0.00 |   0.73 | 0.650
-```
+- **golden**：一个用例只测一个能力点的最小用例（71 个），带显式断言，是主要门禁；
+- **scenario**：22 个贴近真实文档的综合修改，看大改动下的整体表现；
+- **corpus / stress**：git 采集的真实修改，以及程序化生成的压力用例。
 
-各列含义：
+指标基于“继承容器 diff 状态”的 token 流：
 
-| 列 | 含义 | 好 | 差 |
-|---|---|---|---|
-| Corr | 去掉 del 节点后能否还原新文档 | ✓ | ✗（有 bug） |
-| Match% | 被正确匹配为"修改"的叶节点比例 | > 0.8 | < 0.5 |
-| Frag | 相邻节点 diff 状态切换频率，越低越好 | < 0.2 | > 0.5 |
-| Granularity | 文本相似的配对是否做了 inline diff | 1.0 | 0.0（没做细粒度 diff） |
-| PerfMs | diff 计算耗时 | < 50ms | > 500ms |
-| Score | 综合分 | > 0.9 | < 0.7 |
+| 列 | 含义 |
+|---|---|
+| Corr | 双向还原：✓ 新/旧内容都完整且顺序一致；✓~ 内容完整但删除位置不同；✗o 旧内容丢失；✗n 新内容有问题 |
+| Eff | 精简度 = 参考 diff 变更量 / 算法标注变更量；整块替换、错配会拉低 |
+| Coh | 聚合度 = 参考 diff 片段数 / 算法片段数；结果越碎越低 |
+| Chg% | 被标注为变更的 token 占比 |
+| Hunk(ref) | 算法变更片段数，括号内为参考值 |
+| PerfMs | diff 耗时中位数，P95 在汇总行 |
+| Score | correct × (0.6×Eff + 0.4×Coh) |
 
-快速判断：
-- **Granularity = 0** → 该类型的内部 diff 尚未实现（如表格、代码块）
-- **Frag 高 + Match% 低** → 匹配不准，结果碎且乱
-- **Score > 0.9** → 很好；**< 0.7** → 有明显缺陷
-
-A/B 对比用 `--compare`，看 Δ Score 和趋势箭头（↑↑ 大幅提升 / → 持平 / ↓ 退化）。
+用例状态：**PASS** 断言全过；**FAIL** 有断言失败；**XFAIL** 命中已记录的 knownIssue；
+**XPASS** 已知问题不再复现（应删掉 knownIssue）。CI 用 `pnpm run evaluate -- --check` 做门禁，
+出现 FAIL / XPASS / 未记录的正确性失败时退出码为 1。指标原理、断言写法和已知问题清单见
+docs/evaluate-spec.md。
 
 ## 在线预览
 

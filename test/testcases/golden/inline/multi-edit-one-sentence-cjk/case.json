@@ -1,0 +1,19 @@
+{
+  "description": "同一句中文里两处独立修改，后面还有一句不变的话",
+  "capability": "inline.word",
+  "expect": {
+    "del": [
+      "两",
+      "清水"
+    ],
+    "ins": [
+      "三",
+      "羊奶"
+    ],
+    "kept": [
+      "大胖橘第一个冲过来"
+    ],
+    "maxChangedTokens": 6
+  },
+  "knownIssue": "同一句内多处修改且后面还有不变的句子时，整段被标为 diffUnchanged，修改被静默丢弃（oldCorrect=false）；最小复现：“放了两罐猫粮和清水。后面还有一句很长的话。”"
+}

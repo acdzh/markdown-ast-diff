@@ -1,0 +1,12 @@
+{
+  "description": "只改代码块语言标识：变化必须可见",
+  "capability": "code.lang",
+  "expect": {
+    "del": [
+      "lang:ts"
+    ],
+    "ins": [
+      "lang:js"
+    ]
+  }
+}

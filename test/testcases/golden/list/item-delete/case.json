@@ -1,0 +1,17 @@
+{
+  "description": "删除列表中间一项",
+  "capability": "list.item",
+  "expect": {
+    "del": [
+      "准备木屑垫料"
+    ],
+    "kept": [
+      "选择合适的笼子",
+      "购买静音跑轮"
+    ],
+    "notIns": [
+      "笼子"
+    ],
+    "maxHunks": 1
+  }
+}

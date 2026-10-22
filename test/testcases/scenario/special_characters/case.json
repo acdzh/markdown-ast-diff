@@ -1,0 +1,4 @@
+{
+  "capability": "inline",
+  "description": "各类特殊字符、Unicode、HTML 实体、emoji 的增删改，并新增多语种章节和零宽字符"
+}

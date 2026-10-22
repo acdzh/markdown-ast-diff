@@ -1,0 +1,16 @@
+{
+  "description": "在二级列表中插入一项",
+  "capability": "list.nested",
+  "expect": {
+    "ins": [
+      "新增子功能"
+    ],
+    "kept": [
+      "主要功能",
+      "子功能1",
+      "子功能2",
+      "次要功能"
+    ],
+    "maxHunks": 1
+  }
+}

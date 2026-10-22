@@ -1,0 +1,17 @@
+{
+  "description": "把一个词改为加粗，文字不变",
+  "capability": "inline.format",
+  "expect": {
+    "del": [
+      "重点"
+    ],
+    "ins": [
+      "重点"
+    ],
+    "kept": [
+      "这是一段包含",
+      "的说明文字"
+    ],
+    "maxChangedTokens": 4
+  }
+}

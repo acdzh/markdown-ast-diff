@@ -1,0 +1,18 @@
+{
+  "description": "修改单元格里的中文文字",
+  "capability": "table.cell",
+  "expect": {
+    "del": [
+      "两"
+    ],
+    "ins": [
+      "三"
+    ],
+    "kept": [
+      "罐气罐",
+      "卡式炉"
+    ],
+    "maxChangedTokens": 2,
+    "maxHunks": 1
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "description": "引用块里的列表中改一项",
+  "capability": "block.nested",
+  "expect": {
+    "ins": [
+      "（已更新）"
+    ],
+    "kept": [
+      "引用中的列表",
+      "第一项",
+      "第三项"
+    ],
+    "maxChangedTokens": 5,
+    "maxHunks": 1
+  }
+}

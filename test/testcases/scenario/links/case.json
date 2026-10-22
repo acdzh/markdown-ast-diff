@@ -1,0 +1,5 @@
+{
+  "capability": "inline",
+  "description": "链接文字/url/title、引用式链接与定义、图片 alt/url 同时修改，并新增链接和段落",
+  "knownIssue": "链接/图片引用定义的 url/title 变化被静默丢弃（见 golden/reference/definition-url-change）"
+}

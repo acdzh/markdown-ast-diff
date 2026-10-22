@@ -1,0 +1,13 @@
+{
+  "description": "只改图片 alt",
+  "capability": "inline.image",
+  "expect": {
+    "del": [
+      "旧"
+    ],
+    "ins": [
+      "新"
+    ],
+    "maxChangedTokens": 12
+  }
+}

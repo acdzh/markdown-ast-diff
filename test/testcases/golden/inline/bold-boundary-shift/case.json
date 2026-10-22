@@ -1,0 +1,11 @@
+{
+  "description": "加粗范围扩大一个词",
+  "capability": "inline.format",
+  "expect": {
+    "kept": [
+      "Thisfeatureis",
+      "users"
+    ],
+    "maxChangedTokens": 6
+  }
+}

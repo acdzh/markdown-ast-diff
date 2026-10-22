@@ -1,0 +1,4 @@
+{
+  "capability": "table",
+  "description": "表格里改 3 个单元格的数字，其余不变"
+}

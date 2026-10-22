@@ -1,0 +1,7 @@
+{
+  "description": "代码围栏从 ``` 改为 ~~~，语义相同",
+  "capability": "code.syntax",
+  "expect": {
+    "identical": true
+  }
+}

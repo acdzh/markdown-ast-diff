@@ -1,0 +1,19 @@
+{
+  "description": "在两个章节之间插入一个新章节",
+  "capability": "heading.section",
+  "expect": {
+    "ins": [
+      "大理",
+      "租一辆小电驴"
+    ],
+    "kept": [
+      "先吃一顿火锅",
+      "鼓浪屿的小巷子"
+    ],
+    "notDel": [
+      "成都",
+      "厦门"
+    ],
+    "maxHunks": 1
+  }
+}

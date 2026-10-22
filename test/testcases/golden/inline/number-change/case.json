@@ -1,0 +1,17 @@
+{
+  "description": "只改段落里的数字",
+  "capability": "inline.word",
+  "expect": {
+    "del": [
+      "1700"
+    ],
+    "ins": [
+      "1800"
+    ],
+    "kept": [
+      "4000亿颗恒星"
+    ],
+    "maxChangedTokens": 2,
+    "maxHunks": 1
+  }
+}

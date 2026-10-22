@@ -1,0 +1,7 @@
+{
+  "description": "仅文件末尾换行数不同，渲染结果一致，不应有变更",
+  "capability": "edge.whitespace",
+  "expect": {
+    "identical": true
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "description": "修改表格中一个单元格的数字",
+  "capability": "table.cell",
+  "expect": {
+    "del": [
+      "912"
+    ],
+    "ins": [
+      "958"
+    ],
+    "kept": [
+      "生椰拿铁",
+      "多肉葡萄"
+    ],
+    "maxChangedTokens": 2,
+    "maxHunks": 1
+  }
+}

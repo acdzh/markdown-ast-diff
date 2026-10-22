@@ -1,0 +1,19 @@
+{
+  "description": "表格中间插入一行",
+  "capability": "table.row",
+  "expect": {
+    "ins": [
+      "天幕1"
+    ],
+    "kept": [
+      "帐篷",
+      "睡袋"
+    ],
+    "notDel": [
+      "帐篷",
+      "睡袋"
+    ],
+    "maxChangedTokens": 3,
+    "maxHunks": 1
+  }
+}

@@ -19,6 +19,9 @@ function ensureDirExists(dirPath: string) {
 
 console.log('测试开始...');
 
+// 输出目录随用例结构生成，先清空，避免已删除/改名的用例残留在预览产物里
+fs.rmSync(path.join(__dirname, 'output'), { recursive: true, force: true });
+
 testcases.forEach(({ name, oldMarkdown, newMarkdown }) => {
   console.log(`比较文件: ${name}`);
 

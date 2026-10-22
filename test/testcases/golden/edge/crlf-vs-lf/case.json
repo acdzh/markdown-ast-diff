@@ -1,0 +1,7 @@
+{
+  "description": "CRLF 与 LF 换行风格不同，内容一致",
+  "capability": "edge.whitespace",
+  "expect": {
+    "identical": true
+  }
+}

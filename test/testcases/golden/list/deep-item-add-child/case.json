@@ -1,0 +1,20 @@
+{
+  "description": "给三级列表项新增一个子项，原有的三级列表项文字不应丢失",
+  "capability": "list.nested",
+  "expect": {
+    "ins": [
+      "新增四级"
+    ],
+    "kept": [
+      "一级",
+      "二级",
+      "三级"
+    ],
+    "notDel": [
+      "一级"
+    ],
+    "maxChangedTokens": 4,
+    "maxHunks": 1
+  },
+  "knownIssue": "给最深层列表项新增子列表时，原列表项文字被标为 ins 且没有对应的 del，旧内容丢失（oldCorrect=false）；最小复现：“- a / - b / - c”下给 c 加子项 d"
+}

@@ -26,6 +26,11 @@
   "scripts": {
     "test": "tsx test/node/index.ts",
     "evaluate": "tsx test/evaluate/index.ts",
+    "evaluate:stress": "tsx test/evaluate/index.ts --stress",
+    "evaluate:inspect": "tsx test/evaluate/inspect.ts",
+    "golden:gen": "tsx test/testcases/golden.build.ts",
+    "scenario:gen": "tsx test/testcases/scenario.build.ts",
+    "collect:git": "tsx test/collect-from-git.ts",
     "dev": "vite ./test/browser",
     "build": "tsup",
     "build:preview": "vite build ./test/browser --outDir output",

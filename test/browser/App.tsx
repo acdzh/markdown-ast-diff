@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, ChangeEvent } from 'react';
-import { testcases } from './testcases';
+import { testcases, groupTestcases } from './testcases';
 import { Testcase } from './types';
 import * as diffLib from 'diff';
 import './App.css';
@@ -29,7 +29,9 @@ function CopyButton({ getText }: { getText: () => string }) {
 }
 
 function App(): JSX.Element {
-  const [selectedTestcase, setSelectedTestcase] = useState<string>('formatting');
+  const [selectedTestcase, setSelectedTestcase] = useState<string>(
+    testcases.find(tc => tc.name === 'scenario/formatting')?.name ?? testcases[0]?.name ?? '',
+  );
   const [oldMarkdown, setOldMarkdown] = useState<string>('');
   const [newMarkdown, setNewMarkdown] = useState<string>('');
   const [diffResult, setDiffResult] = useState<diffLib.Change[]>([]);
@@ -121,17 +123,21 @@ function App(): JSX.Element {
     <div className="app">
       <div className="toolbar">
         <span className="toolbar-title">Markdown AST Diff</span>
-        <div className="testcase-pills">
-          {testcases.map((tc: Testcase) => (
-            <button
-              key={tc.name}
-              className={`pill ${selectedTestcase === tc.name ? 'active' : ''}`}
-              onClick={() => setSelectedTestcase(tc.name)}
-            >
-              {tc.name}
-            </button>
+        <select
+          className="testcase-select"
+          value={selectedTestcase}
+          onChange={(e) => setSelectedTestcase(e.target.value)}
+        >
+          {groupTestcases(testcases).map(({ group, cases }) => (
+            <optgroup key={group} label={group}>
+              {cases.map((tc: Testcase) => (
+                <option key={tc.name} value={tc.name}>
+                  {tc.name.slice(group.length + 1) || tc.name}
+                </option>
+              ))}
+            </optgroup>
           ))}
-        </div>
+        </select>
       </div>
 
       <div className="main">

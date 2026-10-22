@@ -1,0 +1,17 @@
+{
+  "description": "只改链接 title，文字和 url 不变：变化必须可见",
+  "capability": "inline.link",
+  "expect": {
+    "del": [
+      "示例网站"
+    ],
+    "ins": [
+      "示例网站"
+    ],
+    "kept": [
+      "访问",
+      "了解更多"
+    ],
+    "maxChangedTokens": 8
+  }
+}

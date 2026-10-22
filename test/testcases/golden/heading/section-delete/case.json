@@ -1,0 +1,18 @@
+{
+  "description": "删除中间整个章节",
+  "capability": "heading.section",
+  "expect": {
+    "del": [
+      "大理",
+      "沿着洱海环湖骑行"
+    ],
+    "kept": [
+      "先吃一顿火锅",
+      "逛逛鼓浪屿"
+    ],
+    "notIns": [
+      "大理"
+    ],
+    "maxHunks": 1
+  }
+}
