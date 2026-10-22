@@ -1,5 +1,5 @@
 import { assert } from '../lib/assert';
-import type { Text } from 'mdast';
+import type { Text, Table } from 'mdast';
 import type { Node, Parent } from 'unist';
 import { XMap } from '../lib/XMap';
 import { XNode } from '../lib/XNode';
@@ -237,23 +237,61 @@ export function nodeMerge(_nOld: Node, xOldMap: XMap, _nNew: Node, xNewMap: XMap
      * Then continue on to the next nodes.
      */
 
-    if (isOpaque(nNew)) {
+    if (nNew.type === NodeType.Text && nOld.type === NodeType.Text) {
+      if ((nOld as Text).value === (nNew as Text).value) {
+        nn = nodeCloneTree(nNew, idBox);
+        nn._parent = n;
+        n.children.push(nn);
+      } else {
+        nodeLcs(nOld as Text, nNew as Text, n, idBox);
+      }
+    } else if (isOpaque(nNew)) {
       assert(isOpaque(nOld));
       nn = nodeCloneTree(nNew, idBox);
       nn._parent = n;
       n.children.push(nn);
+    } else if (nNew.type === NodeType.Table && nOld.type === NodeType.Table) {
+      const oldAlign = JSON.stringify((nOld as Table).align);
+      const newAlign = JSON.stringify((nNew as Table).align);
+      if (oldAlign !== newAlign) {
+        nn = nodeCloneTree(nOld, idBox);
+        nn._parent = n;
+        nn.data!.diff = DiffType.Del;
+        n.children.push(nn);
+        nn = nodeCloneTree(nNew, idBox);
+        nn._parent = n;
+        nn.data!.diff = DiffType.Ins;
+        n.children.push(nn);
+      } else {
+        nn = nodeMerge(nOld, xOldMap, nNew, xNewMap, idBox);
+        nn._parent = n;
+        n.children.push(nn);
+      }
     } else if (nNew.type === NodeType.Code && nOld.type === NodeType.Code) {
-      nn = nodeCloneTree(nNew, idBox);
-      nn._parent = n;
+      const oldLang = (nOld as any).lang as string | undefined;
+      const newLang = (nNew as any).lang as string | undefined;
       const oldValue = (nOld as any).value as string;
       const newValue = (nNew as any).value as string;
-      if (oldValue !== newValue && (nNew as any).lang !== 'mermaid') {
-        if (!nn.data) {
-          nn.data = {};
+      if (oldLang !== newLang) {
+        nn = nodeCloneTree(nOld, idBox);
+        nn._parent = n;
+        nn.data!.diff = DiffType.Del;
+        n.children.push(nn);
+        nn = nodeCloneTree(nNew, idBox);
+        nn._parent = n;
+        nn.data!.diff = DiffType.Ins;
+        n.children.push(nn);
+      } else {
+        nn = nodeCloneTree(nNew, idBox);
+        nn._parent = n;
+        if (oldValue !== newValue && newLang !== 'mermaid') {
+          if (!nn.data) {
+            nn.data = {};
+          }
+          nn.data.diffOldContent = oldValue;
         }
-        nn.data.diffOldContent = oldValue;
+        n.children.push(nn);
       }
-      n.children.push(nn);
     } else if (isInlineOnlyChildren(nOld) && isInlineOnlyChildren(nNew)) {
       const oldInline = collectChildren(nOld);
       const newInline = collectChildren(nNew);

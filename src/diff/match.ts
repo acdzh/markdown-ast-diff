@@ -193,12 +193,14 @@ export function matchDown(
   while (nNew && nOld) {
     assert(nOld._xNode);
     assert(nNew._xNode);
-    matchDown(
-      nOld._xNode,
-      xOldMap,
-      nNew._xNode,
-      xNewMap
-    );
+    if (matchEq(nOld, nNew)) {
+      matchDown(
+        nOld._xNode,
+        xOldMap,
+        nNew._xNode,
+        xNewMap
+      );
+    }
     nOld = nOld._next;
     nNew = nNew._next;
   }

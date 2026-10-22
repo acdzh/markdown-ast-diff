@@ -6,7 +6,7 @@ import { XNode } from '../lib/XNode';
 import { NodeType } from '../types/base';
 import { CONSTANTS } from './constants';
 import { computeCharFreqUpperBound } from './lcs';
-import { matchDown, matchUp } from './match';
+import { matchDown, matchUp, matchEq } from './match';
 
 function extractNodeText(node: Node): string {
   if (node.type === NodeType.Text) {
@@ -94,6 +94,9 @@ export function similarityMatchPass(xOldMap: XMap, xNewMap: XMap): void {
         continue;
       }
       if (xOld.node.type !== xNew.node!.type) {
+        continue;
+      }
+      if (!matchEq(xOld.node, xNew.node!)) {
         continue;
       }
 
