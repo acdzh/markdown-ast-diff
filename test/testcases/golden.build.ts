@@ -418,6 +418,23 @@ const CASES: GoldenCase[] = [
     expect: { identical: true },
   },
   {
+    name: 'setext-h2-vs-atx-h2',
+    capability: 'heading.syntax',
+    description: 'Setext 二级标题（-----）改写为 ATX 二级标题（##），语义相同',
+    old: md`
+      安装
+      ----
+
+      正文内容。
+    `,
+    new: md`
+      ## 安装
+
+      正文内容。
+    `,
+    expect: { identical: true },
+  },
+  {
     name: 'section-insert',
     capability: 'heading.section',
     description: '在两个章节之间插入一个新章节',
@@ -1273,6 +1290,40 @@ const CASES: GoldenCase[] = [
       [^2]: 这是新增的脚注。
     `,
     expect: { ins: ['和一个新脚注', '这是新增的脚注'], kept: ['这是脚注内容'] },
+  },
+  {
+    name: 'reference-id-rename',
+    capability: 'reference.refid',
+    description: '只改引用式链接的标识（和对应定义的标识），正文文字不变',
+    old: md`
+      这是一个[参考链接][ref]。
+
+      [ref]: https://example.com/ref
+    `,
+    new: md`
+      这是一个[参考链接][ref2]。
+
+      [ref2]: https://example.com/ref
+    `,
+    expect: { kept: ['参考链接'], maxChangedTokens: 6 },
+    knownIssue: '引用标识变化只标出了 linkReference，definition 节点匹配后不比较 identifier，旧定义内容丢失（oldCorrect=false）',
+  },
+  {
+    name: 'footnote-id-rename',
+    capability: 'reference.footnote',
+    description: '只改脚注标识，正文文字和脚注内容不变',
+    old: md`
+      正文引用了脚注[^note]。
+
+      [^note]: 脚注说明。
+    `,
+    new: md`
+      正文引用了脚注[^note2]。
+
+      [^note2]: 脚注说明。
+    `,
+    expect: { kept: ['正文引用了脚注', '脚注说明'], maxChangedTokens: 6 },
+    knownIssue: '脚注重编号时引用处标出了，但 footnoteDefinition 按 identifier 匹配不上，旧脚注定义内容丢失（oldCorrect=false）',
   },
   {
     name: 'footnote-content-edit',
