@@ -4,7 +4,8 @@
 Markdown 修改，用来验证 diff 算法在真实文档上的表现（结构、规模、写法都不是人造用例能覆盖的）。
 
 采集时按"改动足够大、结构足够复杂"过滤，避免收录只改一两个字、对评测没有区分度的零碎修改
-（具体阈值见采集命令）。每个用例目录包含：
+（具体阈值见采集命令）。当前入库语料都要求变更行占比 ≥ 8% 且至少几十行规模，
+旧的一批 1–6 行小修已在审计后删除。每个用例目录包含：
 
 - `old.md` / `new.md`：该次提交前后的文件原文（不做任何修改）
 - `case.json`：来源信息（仓库、commit、文件、变更行占比、结构种类数）与人工标注（如 `knownIssue`）
@@ -13,7 +14,7 @@ Markdown 修改，用来验证 diff 算法在真实文档上的表现（结构�
 
 | 子目录 | 仓库 | 许可证 | 内容 |
 | --- | --- | --- | --- |
-| `vue-docs/` | [vuejs/docs](https://github.com/vuejs/docs) | MIT | 30 例，2025 年以来的文档修改（含 1 例跨文件移动 XFAIL） |
+| `vue-docs/` | [vuejs/docs](https://github.com/vuejs/docs) | MIT | 5 例，均为成段/成节的大改（含 1 例跨文件移动 XFAIL）；只改一两行的小修已剔除 |
 | `react/` | [reactjs/react.dev](https://github.com/reactjs/react.dev) | CC-BY-4.0（文档） | 5 例，大改/重写章节（190–450 行） |
 | `vite/` | [vitejs/vite](https://github.com/vitejs/vite) `docs/` | MIT | 1 例，290 行文档的整节新增 |
 

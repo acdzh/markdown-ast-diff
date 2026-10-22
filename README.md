@@ -157,7 +157,7 @@ pnpm build:preview
 
 - **golden**：一个用例只测一个能力点的最小用例（94 个），带显式断言，是主要门禁；
 - **scenario**：22 个贴近真实文档的综合修改，看大改动下的整体表现；
-- **corpus / stress**：从真实仓库采集的修改（当前含 Vue 30 例、react.dev 5 例、Vite 1 例，已随仓库入库，clone 即可跑），以及程序化生成的压力用例。
+- **corpus / stress**：从真实仓库采集的修改（当前含 Vue 5 例、react.dev 5 例、Vite 1 例（均为大改/结构性修改），已随仓库入库，clone 即可跑），以及程序化生成的压力用例。
 
 指标基于“继承容器 diff 状态”的 token 流：
 
