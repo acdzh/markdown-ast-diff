@@ -1,0 +1,7 @@
+{
+  "description": "裸链接写成自动链接 <url>，渲染结果相同",
+  "capability": "inline.syntax",
+  "expect": {
+    "identical": true
+  }
+}

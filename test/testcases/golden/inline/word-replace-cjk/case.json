@@ -1,0 +1,18 @@
+{
+  "description": "中文段落中替换两个字，应只标出这两个字",
+  "capability": "inline.word",
+  "expect": {
+    "del": [
+      "妙冒险"
+    ],
+    "ins": [
+      "幻旅程"
+    ],
+    "kept": [
+      "讲述了一个关于成长与勇气的故事",
+      "光怪陆离"
+    ],
+    "maxChangedTokens": 8,
+    "maxHunks": 1
+  }
+}

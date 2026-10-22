@@ -1,0 +1,5 @@
+{
+  "be32491e-src_guide_essentials_component-basics": {
+    "knownIssue": "真实 PR 的跨文件移动：Essentials 结尾两段被移到 Lifecycle 页面。单文件 diff 无法还原被移走的段落（oldCorrect=false）；去掉被移动的尾部后本文件其余修改全部正确（53 changed tokens，correct=true）。跨文件/多文件 diff 支持后移除"
+  }
+}

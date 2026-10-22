@@ -24,39 +24,25 @@
   white-space: nowrap;
 }
 
-.testcase-pills {
-  display: flex;
-  gap: 4px;
-  flex-wrap: wrap;
-}
-
-.pill {
-  padding: 3px 10px;
+.testcase-select {
+  min-width: 280px;
+  padding: 4px 8px;
   border-radius: 4px;
   border: 1px solid #ddd;
   font-size: 12px;
   background: #fff;
-  color: #555;
+  color: #333;
   cursor: pointer;
-  transition: all 0.15s;
-  line-height: 1.4;
 }
 
-.pill:hover {
-  background: #f0f0f0;
-  border-color: #ccc;
-}
-
-.pill.active {
-  background: #1a1a1a;
-  color: #fff;
-  border-color: #1a1a1a;
+.testcase-select:hover {
+  border-color: #bbb;
 }
 
 /* ---- Main content ---- */
 .main {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   flex: 1;
   min-height: 0;
 }
@@ -66,7 +52,22 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: 0;
-  border-bottom: 1px solid #e5e5e5;
+  flex-shrink: 0;
+}
+
+/* ---- Resize handle ---- */
+.resize-handle {
+  height: 5px;
+  background: #e5e5e5;
+  cursor: row-resize;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 10;
+}
+
+.resize-handle:hover,
+.resize-handle:active {
+  background: #c0c0c0;
 }
 
 .editor-pane {
@@ -123,6 +124,7 @@
   flex-direction: column;
   min-height: 0;
   overflow: hidden;
+  flex-shrink: 1;
 }
 
 .result-tabs {

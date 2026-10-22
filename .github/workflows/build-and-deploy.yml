@@ -38,6 +38,9 @@ jobs:
     - name: Run tests
       run: npm test
 
+    - name: Evaluate benchmarks
+      run: npm run evaluate -- --check
+
     - name: Build library
       run: npm run build
 

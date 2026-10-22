@@ -1,0 +1,7 @@
+{
+  "description": "有序列表编号写法从 1. 2. 3. 改为 1. 1. 1.，渲染一致",
+  "capability": "list.syntax",
+  "expect": {
+    "identical": true
+  }
+}

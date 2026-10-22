@@ -1,0 +1,18 @@
+{
+  "description": "两段之间插入新段落",
+  "capability": "block.insert",
+  "expect": {
+    "ins": [
+      "第二段：领头的是一只橘白相间的大胖橘"
+    ],
+    "kept": [
+      "第一段",
+      "第三段"
+    ],
+    "notDel": [
+      "第一段",
+      "第三段"
+    ],
+    "maxHunks": 1
+  }
+}

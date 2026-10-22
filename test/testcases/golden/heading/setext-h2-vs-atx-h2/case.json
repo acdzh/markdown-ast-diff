@@ -1,0 +1,7 @@
+{
+  "description": "Setext 二级标题（-----）改写为 ATX 二级标题（##），语义相同",
+  "capability": "heading.syntax",
+  "expect": {
+    "identical": true
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "capability": "table",
+  "description": "三张表同时改：加列、插行、改单元格、整行数字更新"
+}

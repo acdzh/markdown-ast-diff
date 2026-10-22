@@ -1,0 +1,17 @@
+{
+  "description": "在重复出现的样板段落之间插入一段，变更应只有插入的那一段",
+  "capability": "block.ambiguous",
+  "expect": {
+    "ins": [
+      "补充说明：第二节有更新"
+    ],
+    "kept": [
+      "第一节正文",
+      "第二节正文"
+    ],
+    "notDel": [
+      "注意"
+    ],
+    "maxHunks": 1
+  }
+}

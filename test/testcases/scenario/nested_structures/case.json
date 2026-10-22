@@ -1,0 +1,5 @@
+{
+  "capability": "list",
+  "description": "十层嵌套列表、混合列表、任务列表、六层嵌套引用、嵌套表格、嵌套 HTML 各处小改并新增子项",
+  "knownIssue": "给最深层列表项新增子列表时原列表项文字丢失（见 golden/list/deep-item-add-child）；任务列表 checked 变化被静默丢弃（见 golden/list/task-toggle）；嵌套表格/列表中的 HTML 也有丢失，尚未最小化"
+}

@@ -1,0 +1,16 @@
+{
+  "description": "给段落中的一个数字套上 <b> 标签：数字本身应保留，标签为新增",
+  "capability": "inline.html",
+  "expect": {
+    "ins": [
+      "<b>",
+      "</b>"
+    ],
+    "kept": [
+      "100",
+      "价格",
+      "元，含税"
+    ]
+  },
+  "knownIssue": "给文字套上行内 HTML 标签时，标签后的文字被整段标为 ins 且没有 del，“100 元，含税”等旧内容丢失（oldCorrect=false）"
+}

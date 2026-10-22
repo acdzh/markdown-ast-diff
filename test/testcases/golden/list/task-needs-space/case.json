@@ -1,0 +1,14 @@
+{
+  "description": "- [x] 后少空格就不是任务列表：勾选状态语义改变，必须可见",
+  "capability": "list.task",
+  "expect": {
+    "del": [
+      "[x]完成项"
+    ],
+    "ins": [
+      "完成项"
+    ],
+    "maxChangedTokens": 4
+  },
+  "knownIssue": "旧侧普通列表文字“[x]完成项”只标出了“[x]”部分，整个文本项没有完整进 del（oldCorrect=false）"
+}

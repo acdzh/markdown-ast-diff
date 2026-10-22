@@ -1,0 +1,11 @@
+{
+  "description": "交换两个列表项的顺序",
+  "capability": "list.move",
+  "expect": {
+    "kept": [
+      "第三项：开火烹饪"
+    ],
+    "maxHunks": 2,
+    "minEfficiency": 0.5
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "description": "英文段落中替换一个单词，应只标出该词",
+  "capability": "inline.word",
+  "expect": {
+    "del": [
+      "brown"
+    ],
+    "ins": [
+      "red"
+    ],
+    "kept": [
+      "jumpsoverthelazydog",
+      "Nothingelsechanges"
+    ],
+    "maxChangedTokens": 2,
+    "maxHunks": 1
+  }
+}

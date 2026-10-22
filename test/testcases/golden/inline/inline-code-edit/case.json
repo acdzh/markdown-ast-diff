@@ -1,0 +1,15 @@
+{
+  "description": "修改行内代码的内容",
+  "capability": "inline.code",
+  "expect": {
+    "ins": [
+      "options"
+    ],
+    "kept": [
+      "调用",
+      "获取用户信息"
+    ],
+    "maxChangedTokens": 6
+  },
+  "knownIssue": "inlineCode 作为原子节点整体替换，不做内部 diff"
+}

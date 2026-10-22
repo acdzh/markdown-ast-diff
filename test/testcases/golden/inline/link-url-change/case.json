@@ -1,0 +1,17 @@
+{
+  "description": "只改链接 url，文字不变：变化必须可见",
+  "capability": "inline.link",
+  "expect": {
+    "del": [
+      "官方文档"
+    ],
+    "ins": [
+      "官方文档"
+    ],
+    "kept": [
+      "详见",
+      "中的说明"
+    ],
+    "maxChangedTokens": 8
+  }
+}

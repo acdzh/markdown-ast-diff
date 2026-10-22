@@ -1,0 +1,11 @@
+{
+  "description": "HTML 块中修改一行",
+  "capability": "block.html",
+  "expect": {
+    "kept": [
+      "<divclass=\"note\">"
+    ],
+    "maxChangedTokens": 2
+  },
+  "knownIssue": "html 节点为叶子，内容有改动时整块替换，不做行级 diff"
+}

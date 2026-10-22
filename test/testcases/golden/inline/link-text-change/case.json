@@ -1,0 +1,18 @@
+{
+  "description": "只改链接文字，url 不变",
+  "capability": "inline.link",
+  "expect": {
+    "del": [
+      "官方"
+    ],
+    "ins": [
+      "开发者"
+    ],
+    "kept": [
+      "详见",
+      "中的说明"
+    ],
+    "maxChangedTokens": 8
+  },
+  "knownIssue": "link 子树作为行内占位符整体比较，文字局部修改时整个链接替换"
+}

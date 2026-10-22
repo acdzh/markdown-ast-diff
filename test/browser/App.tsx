@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback, ChangeEvent } from 'react';
-import { testcases } from './testcases';
+import React, { useState, useEffect, useCallback, useRef, ChangeEvent } from 'react';
+import { testcases, groupTestcases } from './testcases';
 import { Testcase } from './types';
 import * as diffLib from 'diff';
 import './App.css';
@@ -29,7 +29,9 @@ function CopyButton({ getText }: { getText: () => string }) {
 }
 
 function App(): JSX.Element {
-  const [selectedTestcase, setSelectedTestcase] = useState<string>('formatting');
+  const [selectedTestcase, setSelectedTestcase] = useState<string>(
+    testcases.find(tc => tc.name === 'scenario/formatting')?.name ?? testcases[0]?.name ?? '',
+  );
   const [oldMarkdown, setOldMarkdown] = useState<string>('');
   const [newMarkdown, setNewMarkdown] = useState<string>('');
   const [diffResult, setDiffResult] = useState<diffLib.Change[]>([]);
@@ -37,6 +39,40 @@ function App(): JSX.Element {
   const [diffHtmlContent, setDiffHtmlContent] = useState<string>('');
   const [diffAst, setDiffAst] = useState<any>(null);
   const [activeTab, setActiveTab] = useState<ResultTab>('html-preview');
+  const [editorHeight, setEditorHeight] = useState<number>(50);
+  const draggingRef = useRef(false);
+  const mainRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!draggingRef.current || !mainRef.current) {
+        return;
+      }
+      const rect = mainRef.current.getBoundingClientRect();
+      const pct = ((e.clientY - rect.top) / rect.height) * 100;
+      setEditorHeight(Math.min(Math.max(pct, 15), 85));
+    };
+    const handleMouseUp = () => {
+      if (draggingRef.current) {
+        draggingRef.current = false;
+        document.body.style.cursor = '';
+        document.body.style.userSelect = '';
+      }
+    };
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mouseup', handleMouseUp);
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mouseup', handleMouseUp);
+    };
+  }, []);
+
+  const handleResizeStart = useCallback((e: React.MouseEvent) => {
+    e.preventDefault();
+    draggingRef.current = true;
+    document.body.style.cursor = 'row-resize';
+    document.body.style.userSelect = 'none';
+  }, []);
 
   const updateDiff = useCallback((oldText: string, newText: string): void => {
     const diff = diffLib.diffWords(oldText, newText);
@@ -121,21 +157,25 @@ function App(): JSX.Element {
     <div className="app">
       <div className="toolbar">
         <span className="toolbar-title">Markdown AST Diff</span>
-        <div className="testcase-pills">
-          {testcases.map((tc: Testcase) => (
-            <button
-              key={tc.name}
-              className={`pill ${selectedTestcase === tc.name ? 'active' : ''}`}
-              onClick={() => setSelectedTestcase(tc.name)}
-            >
-              {tc.name}
-            </button>
+        <select
+          className="testcase-select"
+          value={selectedTestcase}
+          onChange={(e) => setSelectedTestcase(e.target.value)}
+        >
+          {groupTestcases(testcases).map(({ group, cases }) => (
+            <optgroup key={group} label={group}>
+              {cases.map((tc: Testcase) => (
+                <option key={tc.name} value={tc.name}>
+                  {tc.name.slice(group.length + 1) || tc.name}
+                </option>
+              ))}
+            </optgroup>
           ))}
-        </div>
+        </select>
       </div>
 
-      <div className="main">
-        <div className="editor-row">
+      <div className="main" ref={mainRef}>
+        <div className="editor-row" style={{ height: `${editorHeight}%` }}>
           <div className="editor-pane">
             <div className="pane-header">
               <span className="pane-label">Old</span>
@@ -162,7 +202,9 @@ function App(): JSX.Element {
           </div>
         </div>
 
-        <div className="result-row">
+        <div className="resize-handle" onMouseDown={handleResizeStart} />
+
+        <div className="result-row" style={{ height: `calc(${100 - editorHeight}% - 5px)` }}>
           <div className="result-tabs">
             {([
               ['html-preview', 'HTML Preview'],

@@ -1,0 +1,7 @@
+{
+  "description": "行尾反斜杠硬换行与行尾两空格硬换行等价",
+  "capability": "inline.syntax",
+  "expect": {
+    "identical": true
+  }
+}

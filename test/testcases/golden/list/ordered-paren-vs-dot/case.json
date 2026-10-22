@@ -1,0 +1,7 @@
+{
+  "description": "有序列表标记 1) 写成 1.，渲染一致",
+  "capability": "list.syntax",
+  "expect": {
+    "identical": true
+  }
+}

@@ -1,303 +1,408 @@
 import fs from 'fs';
 import path from 'path';
 import { performance } from 'perf_hooks';
+import type { Node } from 'unist';
 import { markdownToAst } from '../utils/transform';
+import { loadCases, filterCases, type LoadedCase } from '../utils/cases';
 import { diffMarkdownAst } from '../../src/diff';
-import {
-  measureCorrectness,
-  measureMatchRate,
-  measureFragmentation,
-  measureGranularity,
-  computeScore,
-  type CaseMetrics,
-} from './metrics';
+import { measure, type CaseMetrics } from './metrics';
+import { checkExpect, caseStatus, type AssertionResult, type CaseStatus } from './expect';
+import { stressCases } from './stress';
 
-interface CaseResult {
-  name: string;
+/**
+ * 评测入口。
+ *
+ *   npm run evaluate                         # golden + scenario + corpus
+ *   npm run evaluate -- --stress             # 额外跑压力用例
+ *   npm run evaluate -- --case golden/table  # 按 id / 前缀 / 子串过滤，可多次
+ *   npm run evaluate -- --verbose            # 打印失败断言与诊断
+ *   npm run evaluate -- --save before        # 存档到 test/evaluate/output/before.json
+ *   npm run evaluate -- --compare before after
+ *   npm run evaluate -- --check              # 有 FAIL / XPASS / 正确性失败时退出码 1（CI 用）
+ */
+
+interface CaseReport {
+  id: string;
+  layer: string;
+  capability: string;
+  description?: string;
+  status: CaseStatus;
+  knownIssue?: string;
   metrics: CaseMetrics;
+  failedAssertions: AssertionResult[];
+  diagnostics: string[];
+}
+
+interface LayerSummary {
+  cases: number;
+  correctRate: number;
+  pass: number;
+  fail: number;
+  xfail: number;
+  xpass: number;
+  avgEfficiency: number;
+  avgCohesion: number;
+  avgScore: number;
+  p95PerfMs: number;
 }
 
 interface Report {
   timestamp: string;
   tag: string;
-  summary: {
-    totalCases: number;
-    correctnessRate: number;
-    avgMatchRate: number;
-    avgFragmentation: number;
-    avgGranularity: number;
-    avgPerfMs: number;
-    avgScore: number;
-  };
-  cases: Array<{ name: string } & CaseMetrics>;
+  layers: Record<string, LayerSummary>;
+  capabilities: Record<string, { cases: number; pass: number; avgScore: number }>;
+  cases: CaseReport[];
 }
 
-const TESTCASES_DIR = path.join(__dirname, '..', 'testcases');
 const OUTPUT_DIR = path.join(__dirname, 'output');
 
-function ensureDir(dir: string): void {
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
-  }
+interface Options {
+  cases?: string[];
+  save?: string;
+  compare?: [string, string];
+  stress: boolean;
+  verbose: boolean;
+  check: boolean;
+  allowKnownFailure?: string[];
 }
 
-function discoverCases(filter?: string[]): Array<{ name: string; oldMd: string; newMd: string }> {
-  const dirs = fs.readdirSync(TESTCASES_DIR).filter((d) => {
-    const full = path.join(TESTCASES_DIR, d);
-    if (!fs.statSync(full).isDirectory()) {
-      return false;
+function parseArgs(argv: string[]): Options {
+  const opts: Options = { stress: false, verbose: false, check: false };
+  for (let i = 0; i < argv.length; i++) {
+    const a = argv[i];
+    if (a === '--case' && argv[i + 1]) {
+      (opts.cases ??= []).push(argv[++i]);
+    } else if (a === '--save' && argv[i + 1]) {
+      opts.save = argv[++i];
+    } else if (a === '--compare' && argv[i + 1] && argv[i + 2]) {
+      opts.compare = [argv[++i], argv[++i]];
+    } else if (a === '--stress') {
+      opts.stress = true;
+    } else if (a === '--verbose' || a === '-v') {
+      opts.verbose = true;
+    } else if (a === '--check') {
+      opts.check = true;
+    } else if (a === '--allow-known-failure' && argv[i + 1]) {
+      (opts.allowKnownFailure ??= []).push(argv[++i]);
     }
-    const hasOld = fs.existsSync(path.join(full, 'old.md'));
-    const hasNew = fs.existsSync(path.join(full, 'new.md'));
-    return hasOld && hasNew;
-  });
-
-  const cases = dirs
-    .filter((d) => !filter || filter.includes(d))
-    .map((d) => ({
-      name: d,
-      oldMd: fs.readFileSync(path.join(TESTCASES_DIR, d, 'old.md'), 'utf-8'),
-      newMd: fs.readFileSync(path.join(TESTCASES_DIR, d, 'new.md'), 'utf-8'),
-    }));
-
-  return cases;
+  }
+  return opts;
 }
 
-function runCase(name: string, oldMd: string, newMd: string): CaseMetrics {
+function runDiff(oldMd: string, newMd: string): { diffAst: Node; perfMs: number } {
   const times: number[] = [];
-  let diffAst: any;
-
+  let diffAst: Node | undefined;
   for (let i = 0; i < 3; i++) {
     const oldAst = markdownToAst(oldMd);
     const newAst = markdownToAst(newMd);
     const start = performance.now();
-    diffAst = diffMarkdownAst(oldAst, newAst);
-    const end = performance.now();
-    times.push(end - start);
+    diffAst = diffMarkdownAst(oldAst, newAst) as Node;
+    times.push(performance.now() - start);
   }
-
   times.sort((a, b) => a - b);
-  const perfMs = Math.round(times[1] * 100) / 100;
-
-  const correctness = measureCorrectness(diffAst, oldMd, newMd);
-  const matchRate = measureMatchRate(diffAst);
-  const fragmentation = measureFragmentation(diffAst);
-  const granularityHitRate = measureGranularity(diffAst);
-
-  const partial = { correctness, matchRate, fragmentation, granularityHitRate, perfMs };
-  const score = Math.round(computeScore(partial) * 1000) / 1000;
-
-  return {
-    ...partial,
-    matchRate: Math.round(matchRate * 1000) / 1000,
-    fragmentation: Math.round(fragmentation * 1000) / 1000,
-    granularityHitRate: Math.round(granularityHitRate * 1000) / 1000,
-    score,
-  };
+  return { diffAst: diffAst!, perfMs: Math.round(times[1] * 100) / 100 };
 }
 
-function printTable(results: CaseResult[]): void {
-  const nameWidth = Math.max(20, ...results.map((r) => r.name.length)) + 2;
-
-  const header = [
-    'Case'.padEnd(nameWidth),
-    'Corr',
-    'Match%',
-    ' Frag',
-    'Granularity',
-    'PerfMs',
-    'Score',
-  ].join(' | ');
-
-  const separator = header.replace(/[^|]/g, '-').replace(/\|/g, '+');
-
-  console.log(separator);
-  console.log(header);
-  console.log(separator);
-
-  for (const r of results) {
-    const m = r.metrics;
-    const row = [
-      r.name.padEnd(nameWidth),
-      m.correctness === 1 ? '  ✓ ' : '  ✗ ',
-      m.matchRate.toFixed(2).padStart(6),
-      m.fragmentation.toFixed(2).padStart(5),
-      m.granularityHitRate.toFixed(2).padStart(11),
-      String(m.perfMs).padStart(6),
-      m.score.toFixed(3).padStart(5),
-    ].join(' | ');
-    console.log(row);
+function evaluateCase(c: LoadedCase): CaseReport {
+  let diffAst: Node;
+  let perfMs: number;
+  try {
+    ({ diffAst, perfMs } = runDiff(c.oldMarkdown, c.newMarkdown));
+  } catch (err) {
+    const message = err instanceof Error ? err.message : String(err);
+    const empty = { total: 0, eq: 0, ins: 0, del: 0, hunks: 0 };
+    return {
+      id: c.id,
+      layer: c.layer,
+      capability: c.spec.capability ?? c.layer,
+      description: c.spec.description,
+      status: c.spec.knownIssue ? 'xfail' : 'fail',
+      knownIssue: c.spec.knownIssue,
+      metrics: {
+        newCorrect: false, oldCorrect: false, oldOrdered: false, correct: false,
+        efficiency: 0, cohesion: 0, changeRatio: 0,
+        algo: empty, reference: empty, perfMs: 0, score: 0,
+      },
+      failedAssertions: [{ name: 'no-throw', ok: false, detail: message }],
+      diagnostics: [`diff threw: ${message}`],
+    };
   }
 
-  console.log(separator);
-
-  const total = results.length;
-  const correctCount = results.filter((r) => r.metrics.correctness === 1).length;
-  const avg = (fn: (r: CaseResult) => number) =>
-    Math.round((results.reduce((s, r) => s + fn(r), 0) / total) * 1000) / 1000;
-
-  const summaryRow = [
-    `AVERAGE (${total})`.padEnd(nameWidth),
-    `${Math.round((correctCount / total) * 100)}%`.padStart(4),
-    avg((r) => r.metrics.matchRate).toFixed(2).padStart(6),
-    avg((r) => r.metrics.fragmentation).toFixed(2).padStart(5),
-    avg((r) => r.metrics.granularityHitRate).toFixed(2).padStart(11),
-    avg((r) => r.metrics.perfMs).toFixed(0).padStart(6),
-    avg((r) => r.metrics.score).toFixed(3).padStart(5),
-  ].join(' | ');
-
-  console.log(summaryRow);
-  console.log(separator);
-}
-
-function buildReport(results: CaseResult[], tag: string): Report {
-  const total = results.length;
-  const correctCount = results.filter((r) => r.metrics.correctness === 1).length;
-  const avg = (fn: (r: CaseResult) => number) =>
-    Math.round((results.reduce((s, r) => s + fn(r), 0) / total) * 1000) / 1000;
+  const { metrics, diffTokens, diagnostics } = measure({
+    diffAst,
+    oldAst: markdownToAst(c.oldMarkdown),
+    newAst: markdownToAst(c.newMarkdown),
+    perfMs,
+  });
+  const assertions = checkExpect(c.spec, diffTokens, metrics);
 
   return {
-    timestamp: new Date().toISOString(),
-    tag,
-    summary: {
-      totalCases: total,
-      correctnessRate: Math.round((correctCount / total) * 1000) / 1000,
-      avgMatchRate: avg((r) => r.metrics.matchRate),
-      avgFragmentation: avg((r) => r.metrics.fragmentation),
-      avgGranularity: avg((r) => r.metrics.granularityHitRate),
-      avgPerfMs: avg((r) => r.metrics.perfMs),
-      avgScore: avg((r) => r.metrics.score),
-    },
-    cases: results.map((r) => ({ name: r.name, ...r.metrics })),
+    id: c.id,
+    layer: c.layer,
+    capability: c.spec.capability ?? c.layer,
+    description: c.spec.description,
+    status: caseStatus(c.spec, assertions),
+    knownIssue: c.spec.knownIssue,
+    metrics,
+    failedAssertions: assertions.filter(a => !a.ok),
+    diagnostics,
   };
+}
+
+function round(n: number, digits = 3): number {
+  const f = 10 ** digits;
+  return Math.round(n * f) / f;
+}
+
+function avg(values: number[]): number {
+  return values.length === 0 ? 0 : values.reduce((s, v) => s + v, 0) / values.length;
+}
+
+function p95(values: number[]): number {
+  if (values.length === 0) {
+    return 0;
+  }
+  const sorted = [...values].sort((a, b) => a - b);
+  return sorted[Math.min(sorted.length - 1, Math.ceil(sorted.length * 0.95) - 1)];
+}
+
+function summarize(cases: CaseReport[]): LayerSummary {
+  return {
+    cases: cases.length,
+    correctRate: round(cases.filter(c => c.metrics.correct).length / Math.max(1, cases.length)),
+    pass: cases.filter(c => c.status === 'pass').length,
+    fail: cases.filter(c => c.status === 'fail').length,
+    xfail: cases.filter(c => c.status === 'xfail').length,
+    xpass: cases.filter(c => c.status === 'xpass').length,
+    avgEfficiency: round(avg(cases.map(c => c.metrics.efficiency))),
+    avgCohesion: round(avg(cases.map(c => c.metrics.cohesion))),
+    avgScore: round(avg(cases.map(c => c.metrics.score))),
+    p95PerfMs: round(p95(cases.map(c => c.metrics.perfMs)), 2),
+  };
+}
+
+function buildReport(cases: CaseReport[], tag: string): Report {
+  const layers: Report['layers'] = {};
+  for (const layer of [...new Set(cases.map(c => c.layer))]) {
+    layers[layer] = summarize(cases.filter(c => c.layer === layer));
+  }
+  const capabilities: Report['capabilities'] = {};
+  for (const c of cases.filter(x => x.layer === 'golden')) {
+    const group = c.capability.split('.')[0];
+    const entry = (capabilities[group] ??= { cases: 0, pass: 0, avgScore: 0 });
+    entry.cases++;
+    if (c.status === 'pass' || c.status === 'xpass') {
+      entry.pass++;
+    }
+    entry.avgScore += c.metrics.score;
+  }
+  for (const entry of Object.values(capabilities)) {
+    entry.avgScore = round(entry.avgScore / entry.cases);
+  }
+  return { timestamp: new Date().toISOString(), tag, layers, capabilities, cases };
+}
+
+const STATUS_LABEL: Record<CaseStatus, string> = {
+  pass: 'PASS ',
+  fail: 'FAIL ',
+  xfail: 'XFAIL',
+  xpass: 'XPASS',
+};
+
+function pad(s: string, w: number): string {
+  // 中文字符按双宽计算，保证表格对齐
+  let width = 0;
+  for (const ch of s) {
+    width += /[\u1100-\uffff]/.test(ch) ? 2 : 1;
+  }
+  return s + ' '.repeat(Math.max(0, w - width));
+}
+
+function printCases(cases: CaseReport[], verbose: boolean): void {
+  if (cases.length === 0) {
+    return;
+  }
+  const idWidth = Math.max(24, ...cases.map(c => c.id.length)) + 2;
+  const header = `${pad('Case', idWidth)} Status Corr  Eff   Coh   Chg%  Hunk(ref) PerfMs  Score`;
+  console.log(header);
+  console.log('-'.repeat(header.length));
+  for (const c of cases) {
+    const m = c.metrics;
+    const corr = !m.correct
+      ? (m.newCorrect ? ' ✗o ' : m.oldCorrect ? ' ✗n ' : ' ✗  ')
+      : (m.oldOrdered ? ' ✓  ' : ' ✓~ ');
+    const hunks = `${m.algo.hunks}(${m.reference.hunks})`.padStart(9);
+    console.log(
+      `${pad(c.id, idWidth)} ${STATUS_LABEL[c.status]}  ${corr} ${m.efficiency.toFixed(2)}  ${m.cohesion.toFixed(2)}  ` +
+      `${(m.changeRatio * 100).toFixed(0).padStart(3)}%  ${hunks} ${String(m.perfMs).padStart(6)}  ${m.score.toFixed(3)}`,
+    );
+    const showDetails = verbose || c.status === 'fail' || c.status === 'xpass';
+    if (showDetails) {
+      if (c.status === 'xpass') {
+        console.log(`    ↳ 已知问题已不再复现，请移除 knownIssue：${c.knownIssue}`);
+      }
+      for (const a of c.failedAssertions) {
+        console.log(`    ✗ ${a.name}${a.detail ? `  (${a.detail})` : ''}`);
+      }
+      if (verbose) {
+        if (c.status === 'xfail') {
+          console.log(`    ↳ known issue: ${c.knownIssue}`);
+        }
+        for (const d of c.diagnostics) {
+          console.log(`    · ${d.slice(0, 300)}`);
+        }
+      }
+    }
+  }
+}
+
+function printSummary(report: Report): void {
+  console.log('\n== Layers ==');
+  console.log('Layer      Cases  Correct  Pass  Fail  XFail  XPass  AvgEff  AvgCoh  AvgScore  P95ms');
+  for (const [layer, s] of Object.entries(report.layers)) {
+    console.log(
+      `${layer.padEnd(10)} ${String(s.cases).padStart(5)}  ${(s.correctRate * 100).toFixed(0).padStart(6)}%  ` +
+      `${String(s.pass).padStart(4)}  ${String(s.fail).padStart(4)}  ${String(s.xfail).padStart(5)}  ${String(s.xpass).padStart(5)}  ` +
+      `${s.avgEfficiency.toFixed(3).padStart(6)}  ${s.avgCohesion.toFixed(3).padStart(6)}  ${s.avgScore.toFixed(3).padStart(8)}  ${String(s.p95PerfMs).padStart(5)}`,
+    );
+  }
+  const caps = Object.entries(report.capabilities);
+  if (caps.length > 0) {
+    console.log('\n== Golden capabilities ==');
+    console.log('Capability   Pass/Cases  AvgScore');
+    for (const [cap, s] of caps.sort((a, b) => a[0].localeCompare(b[0]))) {
+      console.log(`${cap.padEnd(12)} ${`${s.pass}/${s.cases}`.padStart(10)}  ${s.avgScore.toFixed(3).padStart(8)}`);
+    }
+  }
+}
+
+function trendArrow(delta: number): string {
+  if (delta > 0.1) {
+    return '↑↑';
+  }
+  if (delta > 0.02) {
+    return '↑';
+  }
+  if (delta < -0.1) {
+    return '↓↓';
+  }
+  if (delta < -0.02) {
+    return '↓';
+  }
+  return '→';
 }
 
 function printComparison(before: Report, after: Report): void {
-  const nameWidth = Math.max(20, ...after.cases.map((c) => c.name.length)) + 2;
+  const beforeMap = new Map(before.cases.map(c => [c.id, c]));
+  const afterMap = new Map(after.cases.map(c => [c.id, c]));
+  const ids = [...new Set([...beforeMap.keys(), ...afterMap.keys()])];
 
-  const header = ['Case'.padEnd(nameWidth), 'before → after  ', 'Δ Score   ', 'Trend'].join(' | ');
-  const separator = header.replace(/[^|]/g, '-').replace(/\|/g, '+');
+  const rows = ids.map((id) => {
+    const b = beforeMap.get(id);
+    const a = afterMap.get(id);
+    const bs = b?.metrics.score ?? 0;
+    const as = a?.metrics.score ?? 0;
+    return {
+      id,
+      b,
+      a,
+      delta: as - bs,
+      statusChange: `${b ? b.status : '-'}→${a ? a.status : '-'}`,
+    };
+  }).sort((x, y) => x.delta - y.delta);
 
-  console.log(separator);
-  console.log(header);
-  console.log(separator);
-
-  const beforeMap = new Map(before.cases.map((c) => [c.name, c]));
-
-  const rows = after.cases.map((ac) => {
-    const bc = beforeMap.get(ac.name);
-    const bScore = bc?.score ?? 0;
-    const delta = ac.score - bScore;
-    let trend = '→';
-    if (delta > 0.1) {
-      trend = '↑↑';
-    } else if (delta > 0.02) {
-      trend = '↑';
-    } else if (delta < -0.1) {
-      trend = '↓↓';
-    } else if (delta < -0.02) {
-      trend = '↓';
+  const idWidth = Math.max(24, ...ids.map(id => id.length)) + 2;
+  console.log(`${pad('Case', idWidth)} before → after   Δ        Status`);
+  for (const r of rows) {
+    const changed = r.b?.status !== r.a?.status;
+    if (Math.abs(r.delta) < 0.0005 && !changed) {
+      continue;
     }
-    return { name: ac.name, bScore, aScore: ac.score, delta, trend };
-  });
-
-  rows.sort((a, b) => b.delta - a.delta);
-
-  for (const row of rows) {
-    console.log([
-      row.name.padEnd(nameWidth),
-      `${row.bScore.toFixed(2)} → ${row.aScore.toFixed(2)}`.padStart(18),
-      (row.delta >= 0 ? '+' : '') + row.delta.toFixed(3).padStart(8),
-      `  ${row.trend}`,
-    ].join(' | '));
+    console.log(
+      `${pad(r.id, idWidth)} ${(r.b?.metrics.score ?? 0).toFixed(3)} → ${(r.a?.metrics.score ?? 0).toFixed(3)}  ` +
+      `${(r.delta >= 0 ? '+' : '') + r.delta.toFixed(3)} ${trendArrow(r.delta).padEnd(2)}  ${changed ? r.statusChange : ''}`,
+    );
   }
+  const unchanged = rows.filter(r => Math.abs(r.delta) < 0.0005 && r.b?.status === r.a?.status).length;
+  console.log(`(${unchanged} cases unchanged)`);
 
-  console.log(separator);
-
-  const avgBefore = before.summary.avgScore;
-  const avgAfter = after.summary.avgScore;
-  const avgDelta = avgAfter - avgBefore;
-  console.log([
-    'AVERAGE'.padEnd(nameWidth),
-    `${avgBefore.toFixed(2)} → ${avgAfter.toFixed(2)}`.padStart(18),
-    (avgDelta >= 0 ? '+' : '') + avgDelta.toFixed(3).padStart(8),
-    `  ${avgDelta > 0.02 ? '↑' : avgDelta < -0.02 ? '↓' : '→'}`,
-  ].join(' | '));
-  console.log(separator);
-}
-
-function parseArgs(): { cases?: string[]; save?: string; compare?: [string, string] } {
-  const args = process.argv.slice(2);
-  const result: { cases?: string[]; save?: string; compare?: [string, string] } = {};
-
-  for (let i = 0; i < args.length; i++) {
-    if (args[i] === '--case' && args[i + 1]) {
-      if (!result.cases) {
-        result.cases = [];
-      }
-      result.cases.push(args[++i]);
-    } else if (args[i] === '--save' && args[i + 1]) {
-      result.save = args[++i];
-    } else if (args[i] === '--compare' && args[i + 1] && args[i + 2]) {
-      result.compare = [args[++i], args[++i]];
-    }
+  console.log('\nLayer      AvgScore before → after   Pass before → after');
+  for (const layer of [...new Set([...Object.keys(before.layers), ...Object.keys(after.layers)])]) {
+    const b = before.layers[layer];
+    const a = after.layers[layer];
+    console.log(
+      `${layer.padEnd(10)} ${(b?.avgScore ?? 0).toFixed(3)} → ${(a?.avgScore ?? 0).toFixed(3)}            ` +
+      `${b?.pass ?? 0}/${b?.cases ?? 0} → ${a?.pass ?? 0}/${a?.cases ?? 0}`,
+    );
   }
-
-  return result;
 }
 
 function main(): void {
-  const opts = parseArgs();
+  const opts = parseArgs(process.argv.slice(2));
 
   if (opts.compare) {
-    ensureDir(OUTPUT_DIR);
-    const [beforeTag, afterTag] = opts.compare;
-    const beforePath = path.join(OUTPUT_DIR, `${beforeTag}.json`);
-    const afterPath = path.join(OUTPUT_DIR, `${afterTag}.json`);
-
-    if (!fs.existsSync(beforePath)) {
-      console.error(`Report not found: ${beforePath}`);
-      process.exit(1);
-    }
-    if (!fs.existsSync(afterPath)) {
-      console.error(`Report not found: ${afterPath}`);
-      process.exit(1);
-    }
-
-    const before: Report = JSON.parse(fs.readFileSync(beforePath, 'utf-8'));
-    const after: Report = JSON.parse(fs.readFileSync(afterPath, 'utf-8'));
-    printComparison(before, after);
+    const [bt, at] = opts.compare;
+    const read = (tag: string): Report => {
+      const p = path.join(OUTPUT_DIR, `${tag}.json`);
+      if (!fs.existsSync(p)) {
+        console.error(`Report not found: ${p}`);
+        process.exit(1);
+      }
+      const report = JSON.parse(fs.readFileSync(p, 'utf-8')) as Report;
+      if (!report.layers || !Array.isArray(report.cases) || report.cases.some(c => !c.id)) {
+        console.error(`Report ${p} was produced by an older evaluator format; re-run with --save ${tag}.`);
+        process.exit(1);
+      }
+      return report;
+    };
+    printComparison(read(bt), read(at));
     return;
   }
 
-  const cases = discoverCases(opts.cases);
+  let cases = loadCases();
+  if (opts.stress) {
+    cases = cases.concat(stressCases());
+  }
+  cases = filterCases(cases, opts.cases);
   if (cases.length === 0) {
     console.error('No test cases found.');
     process.exit(1);
   }
 
-  console.log(`Running ${cases.length} test cases...\n`);
-
-  const results: CaseResult[] = [];
-  for (const c of cases) {
-    process.stdout.write(`  ${c.name}...`);
-    const metrics = runCase(c.name, c.oldMd, c.newMd);
-    results.push({ name: c.name, metrics });
-    console.log(` done (${metrics.perfMs}ms, score=${metrics.score})`);
+  const reports = cases.map(evaluateCase);
+  const layerOrder = ['golden', 'scenario', 'corpus', 'stress'];
+  const layers = [...new Set(reports.map(r => r.layer))].sort(
+    (a, b) => (layerOrder.indexOf(a) + 100) % 100 - (layerOrder.indexOf(b) + 100) % 100,
+  );
+  for (const layer of layers) {
+    console.log(`\n== ${layer} ==`);
+    printCases(reports.filter(r => r.layer === layer), opts.verbose);
   }
 
-  console.log('');
-  printTable(results);
+  const report = buildReport(reports, opts.save ?? 'latest');
+  printSummary(report);
 
-  const tag = opts.save ?? 'latest';
-  const report = buildReport(results, tag);
+  fs.mkdirSync(OUTPUT_DIR, { recursive: true });
+  const out = path.join(OUTPUT_DIR, `${report.tag}.json`);
+  fs.writeFileSync(out, JSON.stringify(report, null, 2));
+  console.log(`\nReport saved to ${path.relative(process.cwd(), out)}`);
 
-  ensureDir(OUTPUT_DIR);
-  fs.writeFileSync(
-    path.join(OUTPUT_DIR, `${tag}.json`),
-    JSON.stringify(report, null, 2),
-  );
-  console.log(`\nReport saved to test/evaluate/output/${tag}.json`);
+  if (opts.check) {
+    const allowed = new Set(opts.allowKnownFailure ?? []);
+    const blocking = reports.filter(
+      r => (r.status === 'fail' || r.status === 'xpass' || (!r.metrics.correct && !r.knownIssue))
+        && !allowed.has(r.id),
+    );
+    const unrecognized = [...allowed].filter(id => !reports.some(r => r.id === id));
+    if (unrecognized.length > 0) {
+      console.error(`\n--allow-known-failure id not found: ${unrecognized.join(', ')}`);
+      process.exit(1);
+    }
+    if (blocking.length > 0) {
+      console.error(`\n${blocking.length} blocking case(s): ${blocking.map(r => r.id).join(', ')}`);
+      process.exit(1);
+    }
+  }
 }
 
 main();

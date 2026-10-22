@@ -1,0 +1,18 @@
+{
+  "description": "标题文字改动，正文不变",
+  "capability": "heading.text",
+  "expect": {
+    "del": [
+      "烹饪步骤"
+    ],
+    "ins": [
+      "下厨指南"
+    ],
+    "kept": [
+      "家庭菜谱",
+      "锅里不放油"
+    ],
+    "maxChangedTokens": 8,
+    "maxHunks": 1
+  }
+}

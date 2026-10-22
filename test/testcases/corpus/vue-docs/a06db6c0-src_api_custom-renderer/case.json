@@ -1,0 +1,12 @@
+{
+  "description": "2025-01-21 Update RendererOptions  according to the latest source code (#3143)",
+  "capability": "corpus",
+  "source": {
+    "repo": "vue-docs",
+    "commit": "a06db6c023a33d8073c6fa1f6e5d4827e4c5e58e",
+    "file": "src/api/custom-renderer.md",
+    "changedLines": 22,
+    "changedRatio": 0.128,
+    "structureKinds": 3
+  }
+}

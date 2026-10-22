@@ -1,0 +1,13 @@
+{
+  "description": "段落前新增一条 HTML 注释，正文不变",
+  "capability": "block.html",
+  "expect": {
+    "ins": [
+      "<!--备注：这段需要复核-->"
+    ],
+    "kept": [
+      "可见段落"
+    ],
+    "maxHunks": 1
+  }
+}

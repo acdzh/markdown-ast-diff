@@ -1,0 +1,17 @@
+{
+  "description": "多个完全相同的列表项，删掉其中一个：变更量应为一项",
+  "capability": "list.ambiguous",
+  "expect": {
+    "del": [
+      "待定"
+    ],
+    "kept": [
+      "已确认"
+    ],
+    "notIns": [
+      "待定"
+    ],
+    "maxChangedTokens": 2,
+    "maxHunks": 1
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "description": "标题级别从 ## 变为 ###，文字不变：变化必须可见",
+  "capability": "heading.level",
+  "expect": {
+    "del": [
+      "安装"
+    ],
+    "ins": [
+      "安装"
+    ],
+    "kept": [
+      "文档",
+      "运行npminstall即可"
+    ],
+    "maxChangedTokens": 4
+  },
+  "knownIssue": "标题级别变化被静默丢弃：输出为新 depth 的 heading 且无任何 diff 标记（oldCorrect=false）"
+}

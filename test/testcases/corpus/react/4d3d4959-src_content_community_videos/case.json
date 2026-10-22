@@ -1,0 +1,12 @@
+{
+  "description": "2025-09-09 Add React Conf 2024 to /videos (#7977)",
+  "capability": "corpus",
+  "source": {
+    "repo": "react",
+    "commit": "4d3d4959190d8377444c77957af895df624a63ec",
+    "file": "src/content/community/videos.md",
+    "changedLines": 83,
+    "changedRatio": 0.215,
+    "structureKinds": 3
+  }
+}

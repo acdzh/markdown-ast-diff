@@ -1,0 +1,19 @@
+{
+  "description": "多个章节的子标题同名，只改第二个章节下的正文，不应错配到第一个章节",
+  "capability": "heading.section",
+  "expect": {
+    "del": [
+      "包管理器"
+    ],
+    "ins": [
+      "Homebrew"
+    ],
+    "kept": [
+      "下载A的安装包并双击运行"
+    ],
+    "notDel": [
+      "下载"
+    ],
+    "maxHunks": 1
+  }
+}

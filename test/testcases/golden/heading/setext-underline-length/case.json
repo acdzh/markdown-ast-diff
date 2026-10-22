@@ -1,0 +1,7 @@
+{
+  "description": "Setext 下划线长度不同，仍是同一标题",
+  "capability": "heading.syntax",
+  "expect": {
+    "identical": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "description": "把第一段移到最后，内容不变",
+  "capability": "block.move",
+  "expect": {
+    "kept": [
+      "Betaparagraph",
+      "Gammaparagraph"
+    ],
+    "maxHunks": 2,
+    "minEfficiency": 0.9
+  }
+}

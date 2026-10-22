@@ -1,0 +1,17 @@
+{
+  "description": "引用块内改一个词",
+  "capability": "block.quote",
+  "expect": {
+    "del": [
+      "从容"
+    ],
+    "ins": [
+      "浪漫"
+    ],
+    "kept": [
+      "雨总会停的"
+    ],
+    "maxChangedTokens": 4,
+    "maxHunks": 1
+  }
+}

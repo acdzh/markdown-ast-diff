@@ -1,0 +1,17 @@
+{
+  "description": "两段结构几乎相同的段落，只改第二段的一个词，不应错配到第一段",
+  "capability": "block.ambiguous",
+  "expect": {
+    "ins": [
+      "五"
+    ],
+    "kept": [
+      "周三读书会每位参与者都有十分钟"
+    ],
+    "notDel": [
+      "十分钟"
+    ],
+    "maxChangedTokens": 1,
+    "maxHunks": 1
+  }
+}

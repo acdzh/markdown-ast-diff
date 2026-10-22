@@ -1,0 +1,19 @@
+{
+  "description": "删除表格中间一行",
+  "capability": "table.row",
+  "expect": {
+    "del": [
+      "保温箱"
+    ],
+    "kept": [
+      "帐篷",
+      "睡袋"
+    ],
+    "notIns": [
+      "帐篷",
+      "睡袋"
+    ],
+    "maxChangedTokens": 4,
+    "maxHunks": 1
+  }
+}

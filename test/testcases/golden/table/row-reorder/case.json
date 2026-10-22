@@ -1,0 +1,10 @@
+{
+  "description": "交换两行顺序",
+  "capability": "table.row",
+  "expect": {
+    "kept": [
+      "C王五"
+    ],
+    "maxHunks": 2
+  }
+}

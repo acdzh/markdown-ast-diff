@@ -1,0 +1,7 @@
+{
+  "description": "两个完全相同的文档，不应产生任何变更",
+  "capability": "edge.identity",
+  "expect": {
+    "identical": true
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "description": "列表标记后用制表符或两个空格缩进，渲染一致",
+  "capability": "list.syntax",
+  "expect": {
+    "identical": true
+  }
+}

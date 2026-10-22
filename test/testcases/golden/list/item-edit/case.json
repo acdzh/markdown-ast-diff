@@ -1,0 +1,18 @@
+{
+  "description": "修改列表项中的一个词",
+  "capability": "list.item",
+  "expect": {
+    "del": [
+      "21"
+    ],
+    "ins": [
+      "25"
+    ],
+    "kept": [
+      "跑轮直径不小于",
+      "笼子至少"
+    ],
+    "maxChangedTokens": 2,
+    "maxHunks": 1
+  }
+}

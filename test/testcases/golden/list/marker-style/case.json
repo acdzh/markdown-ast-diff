@@ -1,0 +1,7 @@
+{
+  "description": "列表标记从 - 改为 *，语义相同",
+  "capability": "list.syntax",
+  "expect": {
+    "identical": true
+  }
+}

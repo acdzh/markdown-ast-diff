@@ -1,0 +1,17 @@
+{
+  "description": "<br> 写成 <br/>：标签文本不同应标出，周围文字保持不变",
+  "capability": "inline.html",
+  "expect": {
+    "del": [
+      "<br>"
+    ],
+    "ins": [
+      "<br/>"
+    ],
+    "kept": [
+      "第一行",
+      "第二行"
+    ],
+    "maxChangedTokens": 2
+  }
+}

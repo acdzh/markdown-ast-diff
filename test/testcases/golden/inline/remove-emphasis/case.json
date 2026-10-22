@@ -1,0 +1,17 @@
+{
+  "description": "去掉斜体，文字不变",
+  "capability": "inline.format",
+  "expect": {
+    "del": [
+      "readthemanual"
+    ],
+    "ins": [
+      "readthemanual"
+    ],
+    "kept": [
+      "Please",
+      "beforeyoustart"
+    ],
+    "maxChangedTokens": 6
+  }
+}

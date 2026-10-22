@@ -1,0 +1,10 @@
+{
+  "description": "只改列对齐方式：变化必须可见",
+  "capability": "table.align",
+  "expect": {
+    "kept": [
+      "收入"
+    ]
+  },
+  "knownIssue": "表格 align 变化被静默丢弃：输出为新对齐方式的 table 且无任何 diff 标记（oldCorrect=false）"
+}

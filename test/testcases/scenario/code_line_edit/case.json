@@ -1,0 +1,4 @@
+{
+  "capability": "code",
+  "description": "长代码块里的局部修改：重命名变量 result→output、改一个阈值、插两行注释和一个字段"
+}

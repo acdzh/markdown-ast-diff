@@ -1,0 +1,12 @@
+{
+  "description": "2025-09-11 docs: add flushSync Troubleshooting section (#7978)",
+  "capability": "corpus",
+  "source": {
+    "repo": "react",
+    "commit": "0bfd418252167fc7cce16452ae319e1071498ccc",
+    "file": "src/content/reference/react-dom/flushSync.md",
+    "changedLines": 72,
+    "changedRatio": 0.175,
+    "structureKinds": 4
+  }
+}

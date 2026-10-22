@@ -1,0 +1,7 @@
+{
+  "description": "只改单元格两侧的空格和分隔线长度，语义相同",
+  "capability": "table.syntax",
+  "expect": {
+    "identical": true
+  }
+}

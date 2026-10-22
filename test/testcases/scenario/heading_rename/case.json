@@ -1,0 +1,5 @@
+{
+  "capability": "heading",
+  "description": "约 80 行的菜谱，改一个二级标题（烹饪步骤→下厨指南），并在一个长句里把“热水”改成“开水”（两处）",
+  "knownIssue": "“热水→开水”的修改丢失：同一句多处修改、后面还跟着不变的句子时，整段被标为 unchanged，修改丢失（见 golden/inline/multi-edit-one-sentence-cjk）"
+}

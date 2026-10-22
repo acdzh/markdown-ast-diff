@@ -1,0 +1,21 @@
+{
+  "description": "整段几乎完全重写，前后段落不变，不应影响其他段落",
+  "capability": "inline.rewrite",
+  "expect": {
+    "kept": [
+      "第一段保持不变",
+      "最后一段同样保持不变"
+    ],
+    "del": [
+      "神来之笔"
+    ],
+    "ins": [
+      "垂直结构"
+    ],
+    "notDel": [
+      "第一段",
+      "最后一段"
+    ]
+  },
+  "knownIssue": "整段重写时旧段落内容被静默丢弃：输出只有新段落且标为 diffUnchanged，看不到任何删除（oldCorrect=false）"
+}

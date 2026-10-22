@@ -1,0 +1,11 @@
+{
+  "description": "在段落中加入硬换行（行尾两个空格）",
+  "capability": "inline.break",
+  "expect": {
+    "kept": [
+      "第一行文字",
+      "第二行文字"
+    ],
+    "maxChangedTokens": 1
+  }
+}

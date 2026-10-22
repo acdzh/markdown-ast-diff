@@ -1,0 +1,10 @@
+{
+  "description": "2026-06-11 docs: add mergeProps behavior note to props guide (#3403)",
+  "capability": "corpus",
+  "source": {
+    "repo": "vue-docs",
+    "commit": "2f06e79da93335a30152c68182bc1c5e36b74778",
+    "file": "src/guide/components/props.md",
+    "changedLines": 24
+  }
+}
