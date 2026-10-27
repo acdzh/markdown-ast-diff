@@ -1,0 +1,410 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "table",
+      "align": [
+        null,
+        "right",
+        "right"
+      ],
+      "children": [
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "饮品",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 1,
+                  "column": 1,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 1,
+                  "column": 6,
+                  "offset": 5
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "杯数",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 1,
+                  "column": 6,
+                  "offset": 5
+                },
+                "end": {
+                  "line": 1,
+                  "column": 11,
+                  "offset": 10
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "单价",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 1,
+                  "column": 11,
+                  "offset": 10
+                },
+                "end": {
+                  "line": 1,
+                  "column": 17,
+                  "offset": 16
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 17,
+              "offset": 16
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          }
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "杨枝甘露",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 3,
+                  "column": 1,
+                  "offset": 39
+                },
+                "end": {
+                  "line": 3,
+                  "column": 8,
+                  "offset": 46
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "823",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 3,
+                  "column": 8,
+                  "offset": 46
+                },
+                "end": {
+                  "line": 3,
+                  "column": 14,
+                  "offset": 52
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "18",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 3,
+                  "column": 14,
+                  "offset": 52
+                },
+                "end": {
+                  "line": 3,
+                  "column": 20,
+                  "offset": 58
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 3,
+              "column": 1,
+              "offset": 39
+            },
+            "end": {
+              "line": 3,
+              "column": 20,
+              "offset": 58
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          }
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "生椰拿铁",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 4,
+                  "column": 1,
+                  "offset": 59
+                },
+                "end": {
+                  "line": 4,
+                  "column": 8,
+                  "offset": 66
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "inlineDel",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "912",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "inlineIns",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "958",
+                      "data": {}
+                    }
+                  ]
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 4,
+                  "column": 8,
+                  "offset": 66
+                },
+                "end": {
+                  "line": 4,
+                  "column": 14,
+                  "offset": 72
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "15",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 4,
+                  "column": 14,
+                  "offset": 72
+                },
+                "end": {
+                  "line": 4,
+                  "column": 20,
+                  "offset": 78
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 4,
+              "column": 1,
+              "offset": 59
+            },
+            "end": {
+              "line": 4,
+              "column": 20,
+              "offset": 78
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "多肉葡萄",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 5,
+                  "column": 1,
+                  "offset": 79
+                },
+                "end": {
+                  "line": 5,
+                  "column": 8,
+                  "offset": 86
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "534",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 5,
+                  "column": 8,
+                  "offset": 86
+                },
+                "end": {
+                  "line": 5,
+                  "column": 14,
+                  "offset": 92
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "19",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 5,
+                  "column": 14,
+                  "offset": 92
+                },
+                "end": {
+                  "line": 5,
+                  "column": 20,
+                  "offset": 98
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 5,
+              "column": 1,
+              "offset": 79
+            },
+            "end": {
+              "line": 5,
+              "column": 20,
+              "offset": 98
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "end": {
+          "line": 5,
+          "column": 20,
+          "offset": 98
+        }
+      },
+      "data": {}
+    }
+  ],
+  "position": {
+    "start": {
+      "line": 1,
+      "column": 1,
+      "offset": 0
+    },
+    "end": {
+      "line": 6,
+      "column": 1,
+      "offset": 99
+    }
+  },
+  "data": {}
+}

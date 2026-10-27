@@ -1,0 +1,91 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "第一项：准备食材",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "第二项：切菜备料",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "第一项：准备食材",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {
+            "diff": "ins"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "第三项：开火烹饪",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {}
+    }
+  ],
+  "data": {}
+}

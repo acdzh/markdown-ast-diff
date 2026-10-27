@@ -1,0 +1,201 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+/* table */
+table { border-collapse: collapse; width: auto; margin: 1em 0; }
+th, td { border: 1px solid #d0d7de; padding: 6px 13px; }
+th { background: #f6f8fa; font-weight: 600; }
+tr:nth-child(2n) { background: #f6f8fa; }
+
+/* code */
+code { padding: 0.2em 0.4em; font-size: 85%; background: #f6f8fa; border-radius: 6px; font-family: 'SF Mono', 'Fira Code', Menlo, monospace; }
+pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background: #f6f8fa; border-radius: 6px; margin: 1em 0; }
+pre code { padding: 0; background: none; border-radius: 0; font-size: inherit; }
+
+/* blockquote */
+blockquote { padding: 0 1em; color: #656d76; border-left: 0.25em solid #d0d7de; margin: 1em 0; }
+
+/* hr */
+hr { height: 0.25em; padding: 0; margin: 24px 0; background-color: #d0d7de; border: 0; }
+
+/* headings */
+h1, h2, h3, h4, h5, h6 { margin-top: 24px; margin-bottom: 16px; font-weight: 600; line-height: 1.25; }
+h1 { font-size: 2em; padding-bottom: 0.3em; border-bottom: 1px solid #d0d7de; }
+h2 { font-size: 1.5em; padding-bottom: 0.3em; border-bottom: 1px solid #d0d7de; }
+h3 { font-size: 1.25em; }
+
+/* list */
+ul, ol { padding-left: 2em; margin: 0.5em 0; }
+li + li { margin-top: 0.25em; }
+
+/* image */
+img { max-width: 100%; }
+
+/* code diff */
+.code-diff { border-radius: 6px; overflow: hidden; margin: 1em 0; font-size: 13px; border: 1px solid #d0d7de; }
+.code-diff pre { margin: 0; padding: 0; border-radius: 0; border: none; background: #fff; }
+.code-diff .shiki { background: #fff !important; }
+.code-diff .diff-line { display: flex; line-height: 1.45; }
+.code-diff .diff-line-gutter { width: 40px; min-width: 40px; text-align: right; padding: 0 8px 0 0; color: #8b949e; font-size: 12px; user-select: none; flex-shrink: 0; }
+.code-diff .diff-line-sign { width: 20px; min-width: 20px; text-align: center; user-select: none; flex-shrink: 0; }
+.code-diff .diff-line-content { flex: 1; padding-right: 12px; white-space: pre; overflow-x: auto; }
+.code-diff .diff-line.del { background: #ffebe9; }
+.code-diff .diff-line.del .diff-line-gutter { background: #ffd7d5; color: #82071e; }
+.code-diff .diff-line.del .diff-line-sign { color: #82071e; }
+.code-diff .diff-line.ins { background: #e6ffec; }
+.code-diff .diff-line.ins .diff-line-gutter { background: #ccffd8; color: #116329; }
+.code-diff .diff-line.ins .diff-line-sign { color: #116329; }
+.code-diff .diff-line.ctx { background: #fff; }
+.code-diff .diff-line.ctx .diff-line-gutter { color: #8b949e; }
+.code-diff .diff-header { padding: 8px 12px; background: #f6f8fa; border-bottom: 1px solid #d0d7de; font-size: 12px; color: #656d76; font-family: 'SF Mono', 'Fira Code', Menlo, monospace; }
+
+ins { background-color: #e6ffec; text-decoration: none; border-radius: 2px; padding: 0 2px; }
+del { background-color: #ffebe9; text-decoration: line-through; border-radius: 2px; padding: 0 2px; }
+ins.diff-block, del.diff-block { display: block; padding-left: 10px; border-left: 3px solid; }
+ins.diff-block { border-left-color: #2cbe4e; }
+del.diff-block { border-left-color: #cb2431; }
+ins > hr, ins > pre { background-color: #e6ffec; }
+del > hr, del > pre { background-color: #ffebe9; }
+ins > table, del > table { border-collapse: collapse; }
+ins > table th, ins > table td { background-color: #e6ffec; }
+del > table th, del > table td { background-color: #ffebe9; }
+li[data-diff="ins"] { background-color: #e6ffec; border-radius: 2px; }
+li[data-diff="del"] { background-color: #ffebe9; border-radius: 2px; text-decoration: line-through; }
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:16px;font-size:14px;line-height:1.6;color:#1a1a1a;}</style></head><body><Pitfall>
+<p>Using <code>flushSync</code> is uncommon and can hurt the performance of your app.</p>
+</Pitfall>
+<Intro>
+<p><code>flushSync</code> lets you force React to flush any updates inside the provided callback synchronously. This ensures that the DOM is updated immediately.</p>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#6F42C1">flushSync</span><span style="color:#24292E">(callback)</span></span></code></pre>
+</code></pre>
+</Intro>
+<InlineToc />
+<hr>
+<h2>Reference {/<em>reference</em>/}</h2>
+<h3><code>flushSync(callback)</code> {/<em>flushsync</em>/}</h3>
+<p>Call <code>flushSync</code> to force React to flush any pending work and update the DOM synchronously.</p>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">import</span><span style="color:#24292E"> { flushSync } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> 'react-dom'</span><span style="color:#24292E">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6F42C1">flushSync</span><span style="color:#24292E">(() </span><span style="color:#D73A49">=></span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#6F42C1">  setSomething</span><span style="color:#24292E">(</span><span style="color:#005CC5">123</span><span style="color:#24292E">);</span></span>
+<span class="line"><span style="color:#24292E">});</span></span></code></pre>
+</code></pre>
+<p>Most of the time, <code>flushSync</code> can be avoided. Use <code>flushSync</code> as last resort.</p>
+<p><a href="#usage">See more examples below.</a></p>
+<h4>Parameters {/<em>parameters</em>/}</h4>
+<ul>
+<li><code>callback</code>: A function. React will immediately call this callback and flush any updates it contains synchronously. It may also flush any pending updates, or Effects, or updates inside of Effects. If an update suspends as a result of this <code>flushSync</code> call, the fallbacks may be re-shown.</li>
+</ul>
+<h4>Returns {/<em>returns</em>/}</h4>
+<p><code>flushSync</code> returns <code>undefined</code>.</p>
+<h4>Caveats {/<em>caveats</em>/}</h4>
+<ul>
+<li><code>flushSync</code> can significantly hurt performance. Use sparingly.</li>
+<li><code>flushSync</code> may force pending Suspense boundaries to show their <code>fallback</code> state.</li>
+<li><code>flushSync</code> may run pending Effects and synchronously apply any updates they contain before returning.</li>
+<li><code>flushSync</code> may flush updates outside the callback when necessary to flush the updates inside the callback. For example, if there are pending updates from a click, React may flush those before flushing the updates inside the callback.</li>
+</ul>
+<hr>
+<h2>Usage {/<em>usage</em>/}</h2>
+<h3>Flushing updates for third-party integrations {/<em>flushing-updates-for-third-party-integrations</em>/}</h3>
+<p>When integrating with third-party code such as browser APIs or UI libraries, it may be necessary to force React to flush updates. Use <code>flushSync</code> to force React to flush any <CodeStep step={1}>state updates</CodeStep> inside the callback synchronously:</p>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#6F42C1">flushSync</span><span style="color:#24292E">(() </span><span style="color:#D73A49">=></span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#6F42C1">  setSomething</span><span style="color:#24292E">(</span><span style="color:#005CC5">123</span><span style="color:#24292E">);</span></span>
+<span class="line"><span style="color:#24292E">});</span></span>
+<span class="line"><span style="color:#6A737D">// By this line, the DOM is updated.</span></span></code></pre>
+</code></pre>
+<p>This ensures that, by the time the next line of code runs, React has already updated the DOM.</p>
+<p><strong>Using <code>flushSync</code> is uncommon, and using it often can significantly hurt the performance of your app.</strong> If your app only uses React APIs, and does not integrate with third-party libraries, <code>flushSync</code> should be unnecessary.</p>
+<p>However, it can be helpful for integrating with third-party code like browser APIs.</p>
+<p>Some browser APIs expect results inside of callbacks to be written to the DOM synchronously, by the end of the callback, so the browser can do something with the rendered DOM. In most cases, React handles this for you automatically. But in some cases it may be necessary to force a synchronous update.</p>
+<p>For example, the browser <code>onbeforeprint</code> API allows you to change the page immediately before the print dialog opens. This is useful for applying custom print styles that allow the document to display better for printing. In the example below, you use <code>flushSync</code> inside of the <code>onbeforeprint</code> callback to immediately "flush" the React state to the DOM. Then, by the time the print dialog opens, <code>isPrinting</code> displays "yes":</p>
+<Sandpack>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">import</span><span style="color:#24292E"> { useState, useEffect } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> 'react'</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#D73A49">import</span><span style="color:#24292E"> { flushSync } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> 'react-dom'</span><span style="color:#24292E">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> PrintApp</span><span style="color:#24292E">() {</span></span>
+<span class="line"><span style="color:#D73A49">  const</span><span style="color:#24292E"> [</span><span style="color:#005CC5">isPrinting</span><span style="color:#24292E">, </span><span style="color:#005CC5">setIsPrinting</span><span style="color:#24292E">] </span><span style="color:#D73A49">=</span><span style="color:#6F42C1"> useState</span><span style="color:#24292E">(</span><span style="color:#005CC5">false</span><span style="color:#24292E">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6F42C1">  useEffect</span><span style="color:#24292E">(() </span><span style="color:#D73A49">=></span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#D73A49">    function</span><span style="color:#6F42C1"> handleBeforePrint</span><span style="color:#24292E">() {</span></span>
+<span class="line"><span style="color:#6F42C1">      flushSync</span><span style="color:#24292E">(() </span><span style="color:#D73A49">=></span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#6F42C1">        setIsPrinting</span><span style="color:#24292E">(</span><span style="color:#005CC5">true</span><span style="color:#24292E">);</span></span>
+<span class="line"><span style="color:#24292E">      })</span></span>
+<span class="line"><span style="color:#24292E">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">    function</span><span style="color:#6F42C1"> handleAfterPrint</span><span style="color:#24292E">() {</span></span>
+<span class="line"><span style="color:#6F42C1">      setIsPrinting</span><span style="color:#24292E">(</span><span style="color:#005CC5">false</span><span style="color:#24292E">);</span></span>
+<span class="line"><span style="color:#24292E">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292E">    window.</span><span style="color:#6F42C1">addEventListener</span><span style="color:#24292E">(</span><span style="color:#032F62">'beforeprint'</span><span style="color:#24292E">, handleBeforePrint);</span></span>
+<span class="line"><span style="color:#24292E">    window.</span><span style="color:#6F42C1">addEventListener</span><span style="color:#24292E">(</span><span style="color:#032F62">'afterprint'</span><span style="color:#24292E">, handleAfterPrint);</span></span>
+<span class="line"><span style="color:#D73A49">    return</span><span style="color:#24292E"> () </span><span style="color:#D73A49">=></span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#24292E">      window.</span><span style="color:#6F42C1">removeEventListener</span><span style="color:#24292E">(</span><span style="color:#032F62">'beforeprint'</span><span style="color:#24292E">, handleBeforePrint);</span></span>
+<span class="line"><span style="color:#24292E">      window.</span><span style="color:#6F42C1">removeEventListener</span><span style="color:#24292E">(</span><span style="color:#032F62">'afterprint'</span><span style="color:#24292E">, handleAfterPrint);</span></span>
+<span class="line"><span style="color:#24292E">    }</span></span>
+<span class="line"><span style="color:#24292E">  }, []);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">  return</span><span style="color:#24292E"> (</span></span>
+<span class="line"><span style="color:#24292E">    &#x3C;></span></span>
+<span class="line"><span style="color:#24292E">      &#x3C;</span><span style="color:#22863A">h1</span><span style="color:#24292E">>isPrinting: {isPrinting </span><span style="color:#D73A49">?</span><span style="color:#032F62"> 'yes'</span><span style="color:#D73A49"> :</span><span style="color:#032F62"> 'no'</span><span style="color:#24292E">}&#x3C;/</span><span style="color:#22863A">h1</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">      &#x3C;</span><span style="color:#22863A">button</span><span style="color:#6F42C1"> onClick</span><span style="color:#D73A49">=</span><span style="color:#24292E">{() </span><span style="color:#D73A49">=></span><span style="color:#24292E"> window.</span><span style="color:#6F42C1">print</span><span style="color:#24292E">()}></span></span>
+<span class="line"><span style="color:#24292E">        Print</span></span>
+<span class="line"><span style="color:#24292E">      &#x3C;/</span><span style="color:#22863A">button</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">    &#x3C;/></span></span>
+<span class="line"><span style="color:#24292E">  );</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre>
+</Sandpack>
+<p>Without <code>flushSync</code>, the print dialog will display <code>isPrinting</code> as "no". This is because React batches the updates asynchronously and the print dialog is displayed before the state is updated.</p>
+<Pitfall>
+<p><code>flushSync</code> can significantly hurt performance, and may unexpectedly force pending Suspense boundaries to show their fallback state.</p>
+<p>Most of the time, <code>flushSync</code> can be avoided, so use <code>flushSync</code> as a last resort.</p>
+</Pitfall>
+<hr>
+<h2>Troubleshooting {/<em>troubleshooting</em>/}</h2>
+<h3>I'm getting an error: "flushSync was called from inside a lifecycle method" {/<em>im-getting-an-error-flushsync-was-called-from-inside-a-lifecycle-method</em>/}</h3>
+<p>React cannot <code>flushSync</code> in the middle of a render. If you do, it will noop and warn:</p>
+<ConsoleBlock level="error">
+<p>Warning: flushSync was called from inside a lifecycle method. React cannot flush when React is already rendering. Consider moving this call to a scheduler task or micro task.</p>
+</ConsoleBlock>
+<p>This includes calling <code>flushSync</code> inside:</p>
+<ul>
+<li>rendering a component.</li>
+<li><code>useLayoutEffect</code> or <code>useEffect</code> hooks.</li>
+<li>Class component lifecycle methods.</li>
+</ul>
+<p>For example, calling <code>flushSync</code> in an Effect will noop and warn:</p>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">import</span><span style="color:#24292E"> { useEffect } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> 'react'</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#D73A49">import</span><span style="color:#24292E"> { flushSync } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> 'react-dom'</span><span style="color:#24292E">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">function</span><span style="color:#6F42C1"> MyComponent</span><span style="color:#24292E">() {</span></span>
+<span class="line"><span style="color:#6F42C1">  useEffect</span><span style="color:#24292E">(() </span><span style="color:#D73A49">=></span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#6A737D">    // 🚩 Wrong: calling flushSync inside an effect</span></span>
+<span class="line"><span style="color:#6F42C1">    flushSync</span><span style="color:#24292E">(() </span><span style="color:#D73A49">=></span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#6F42C1">      setSomething</span><span style="color:#24292E">(newValue);</span></span>
+<span class="line"><span style="color:#24292E">    });</span></span>
+<span class="line"><span style="color:#24292E">  }, []);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">  return</span><span style="color:#24292E"> &#x3C;</span><span style="color:#22863A">div</span><span style="color:#24292E">>{</span><span style="color:#6A737D">/* ... */</span><span style="color:#24292E">}&#x3C;/</span><span style="color:#22863A">div</span><span style="color:#24292E">>;</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre>
+<p>To fix this, you usually want to move the <code>flushSync</code> call to an event:</p>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">function</span><span style="color:#6F42C1"> handleClick</span><span style="color:#24292E">() {</span></span>
+<span class="line"><span style="color:#6A737D">  // ✅ Correct: flushSync in event handlers is safe</span></span>
+<span class="line"><span style="color:#6F42C1">  flushSync</span><span style="color:#24292E">(() </span><span style="color:#D73A49">=></span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#6F42C1">    setSomething</span><span style="color:#24292E">(newValue);</span></span>
+<span class="line"><span style="color:#24292E">  });</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre>
+<p>If it's difficult to move to an event, you can defer <code>flushSync</code> in a microtask:</p>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#6F42C1">useEffect</span><span style="color:#24292E">(() </span><span style="color:#D73A49">=></span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#6A737D">  // ✅ Correct: defer flushSync to a microtask</span></span>
+<span class="line"><span style="color:#6F42C1">  queueMicrotask</span><span style="color:#24292E">(() </span><span style="color:#D73A49">=></span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#6F42C1">    flushSync</span><span style="color:#24292E">(() </span><span style="color:#D73A49">=></span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#6F42C1">      setSomething</span><span style="color:#24292E">(newValue);</span></span>
+<span class="line"><span style="color:#24292E">    });</span></span>
+<span class="line"><span style="color:#24292E">  });</span></span>
+<span class="line"><span style="color:#24292E">}, []);</span></span></code></pre>
+</code></pre>
+<p>This will allow the current render to finish and schedule another syncronous render to flush the updates.</p>
+<Pitfall>
+<p><code>flushSync</code> can significantly hurt performance, but this particular pattern is even worse for performance. Exhaust all other options before calling <code>flushSync</code> in a microtask as an escape hatch.</p>
+</Pitfall></body></html>

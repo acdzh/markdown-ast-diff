@@ -1,0 +1,179 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+/* table */
+table { border-collapse: collapse; width: auto; margin: 1em 0; }
+th, td { border: 1px solid #d0d7de; padding: 6px 13px; }
+th { background: #f6f8fa; font-weight: 600; }
+tr:nth-child(2n) { background: #f6f8fa; }
+
+/* code */
+code { padding: 0.2em 0.4em; font-size: 85%; background: #f6f8fa; border-radius: 6px; font-family: 'SF Mono', 'Fira Code', Menlo, monospace; }
+pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background: #f6f8fa; border-radius: 6px; margin: 1em 0; }
+pre code { padding: 0; background: none; border-radius: 0; font-size: inherit; }
+
+/* blockquote */
+blockquote { padding: 0 1em; color: #656d76; border-left: 0.25em solid #d0d7de; margin: 1em 0; }
+
+/* hr */
+hr { height: 0.25em; padding: 0; margin: 24px 0; background-color: #d0d7de; border: 0; }
+
+/* headings */
+h1, h2, h3, h4, h5, h6 { margin-top: 24px; margin-bottom: 16px; font-weight: 600; line-height: 1.25; }
+h1 { font-size: 2em; padding-bottom: 0.3em; border-bottom: 1px solid #d0d7de; }
+h2 { font-size: 1.5em; padding-bottom: 0.3em; border-bottom: 1px solid #d0d7de; }
+h3 { font-size: 1.25em; }
+
+/* list */
+ul, ol { padding-left: 2em; margin: 0.5em 0; }
+li + li { margin-top: 0.25em; }
+
+/* image */
+img { max-width: 100%; }
+
+/* code diff */
+.code-diff { border-radius: 6px; overflow: hidden; margin: 1em 0; font-size: 13px; border: 1px solid #d0d7de; }
+.code-diff pre { margin: 0; padding: 0; border-radius: 0; border: none; background: #fff; }
+.code-diff .shiki { background: #fff !important; }
+.code-diff .diff-line { display: flex; line-height: 1.45; }
+.code-diff .diff-line-gutter { width: 40px; min-width: 40px; text-align: right; padding: 0 8px 0 0; color: #8b949e; font-size: 12px; user-select: none; flex-shrink: 0; }
+.code-diff .diff-line-sign { width: 20px; min-width: 20px; text-align: center; user-select: none; flex-shrink: 0; }
+.code-diff .diff-line-content { flex: 1; padding-right: 12px; white-space: pre; overflow-x: auto; }
+.code-diff .diff-line.del { background: #ffebe9; }
+.code-diff .diff-line.del .diff-line-gutter { background: #ffd7d5; color: #82071e; }
+.code-diff .diff-line.del .diff-line-sign { color: #82071e; }
+.code-diff .diff-line.ins { background: #e6ffec; }
+.code-diff .diff-line.ins .diff-line-gutter { background: #ccffd8; color: #116329; }
+.code-diff .diff-line.ins .diff-line-sign { color: #116329; }
+.code-diff .diff-line.ctx { background: #fff; }
+.code-diff .diff-line.ctx .diff-line-gutter { color: #8b949e; }
+.code-diff .diff-header { padding: 8px 12px; background: #f6f8fa; border-bottom: 1px solid #d0d7de; font-size: 12px; color: #656d76; font-family: 'SF Mono', 'Fira Code', Menlo, monospace; }
+
+ins { background-color: #e6ffec; text-decoration: none; border-radius: 2px; padding: 0 2px; }
+del { background-color: #ffebe9; text-decoration: line-through; border-radius: 2px; padding: 0 2px; }
+ins.diff-block, del.diff-block { display: block; padding-left: 10px; border-left: 3px solid; }
+ins.diff-block { border-left-color: #2cbe4e; }
+del.diff-block { border-left-color: #cb2431; }
+ins > hr, ins > pre { background-color: #e6ffec; }
+del > hr, del > pre { background-color: #ffebe9; }
+ins > table, del > table { border-collapse: collapse; }
+ins > table th, ins > table td { background-color: #e6ffec; }
+del > table th, del > table td { background-color: #ffebe9; }
+li[data-diff="ins"] { background-color: #e6ffec; border-radius: 2px; }
+li[data-diff="del"] { background-color: #ffebe9; border-radius: 2px; text-decoration: line-through; }
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:16px;font-size:14px;line-height:1.6;color:#1a1a1a;}</style></head><body><Intro>
+<p>Videos dedicated to the discussion of React and the React ecosystem.</p>
+</Intro>
+<h2>React Conf 2024 {/<em>react-conf-2024</em>/}</h2>
+<p>At React Conf 2024, Meta CTO <a href="https://www.threads.net/@boztank">Andrew "Boz" Bosworth</a> shared a welcome message to kick off the conference:</p>
+<YouTubeIframe src="https://www.youtube.com/embed/T8TZQ6k4SLE?t=975s" title="Boz and Seth Intro" />
+<h3>React 19 Keynote {/<em>react-19-keynote</em>/}</h3>
+<p>In the Day 1 keynote, we shared vision for React starting with React 19 and the React Compiler. Watch the full keynote from <a href="https://twitter.com/en_JS">Joe Savona</a>, <a href="https://twitter.com/potetotes">Lauren Tan</a>, <a href="https://twitter.com/acdlite">Andrew Clark</a>, <a href="https://twitter.com/joshcstory">Josh Story</a>, <a href="https://twitter.com/_gsathya">Sathya Gunasekaran</a>, and <a href="https://twitter.com/zmofei">Mofei Zhang</a>:</p>
+<YouTubeIframe src="https://www.youtube.com/embed/lyEKhv8-3n0" title="YouTube video player" />
+<h3>React Unpacked: A Roadmap to React 19 {/<em>react-unpacked-a-roadmap-to-react-19</em>/}</h3>
+<p>React 19 introduced new features including Actions, <code>use()</code>, <code>useOptimistic</code> and more. For a deep dive on using new features in React 19, see <a href="https://twitter.com/samselikoff">Sam Selikoff's</a> talk:</p>
+<YouTubeIframe src="https://www.youtube.com/embed/R0B2HsSM78s" title="React Unpacked: A Roadmap to React 19" />
+<h3>What's New in React 19 {/<em>whats-new-in-react-19</em>/}</h3>
+<p><a href="https://twitter.com/lydiahallie">Lydia Hallie</a> gave a visual deep dive of React 19's new features:</p>
+<YouTubeIframe src="https://www.youtube.com/embed/AJOGzVygGcY" title="What's New in React 19" />
+<h3>React 19 Deep Dive: Coordinating HTML {/<em>react-19-deep-dive-coordinating-html</em>/}</h3>
+<p><a href="https://twitter.com/joshcstory">Josh Story</a> provided a deep dive on the document and resource streaming APIs in React 19:</p>
+<YouTubeIframe src="https://www.youtube.com/embed/IBBN-s77YSI" title="React 19 Deep Dive: Coordinating HTML" />
+<h3>React for Two Computers {/<em>react-for-two-computers</em>/}</h3>
+<p><a href="https://bsky.app/profile/danabra.mov">Dan Abramov</a> imagined an alternate history where React started server-first:</p>
+<YouTubeIframe src="https://www.youtube.com/embed/ozI4V_29fj4" title="React for Two Computers" />
+<h3>Forget About Memo {/<em>forget-about-memo</em>/}</h3>
+<p><a href="https://twitter.com/potetotes">Lauren Tan</a> gave a talk on using the React Compiler in practice:</p>
+<YouTubeIframe src="https://www.youtube.com/embed/lvhPq5chokM" title="Forget About Memo" />
+<h3>React Compiler Deep Dive {/<em>react-compiler-deep-dive</em>/}</h3>
+<p><a href="https://twitter.com/_gsathya">Sathya Gunasekaran</a> and <a href="https://twitter.com/zmofei">Mofei Zhang</a> provided a deep dive on how the React Compiler works:</p>
+<YouTubeIframe src="https://www.youtube.com/embed/uA_PVyZP7AI" title="React Compiler Deep Dive" />
+<h3>And more... {/<em>and-more-2024</em>/}</h3>
+<p><strong>We also heard talks from the community on Server Components:</strong></p>
+<ul>
+<li><a href="https://www.youtube.com/embed/0ckOUBiuxVY&#x26;t=25280s">Enhancing Forms with React Server Components</a> by <a href="https://twitter.com/aurorascharff">Aurora Walberg Scharff</a></li>
+<li><a href="https://www.youtube.com/embed/pOo7x8OiAec">And Now You Understand React Server Components</a> by <a href="https://twitter.com/kentcdodds">Kent C. Dodds</a></li>
+<li><a href="https://www.youtube.com/embed/6sMANTHWtLM">Real-time Server Components</a> by <a href="https://twitter.com/threepointone">Sunil Pai</a></li>
+</ul>
+<p><strong>Talks from React frameworks using new features:</strong></p>
+<ul>
+<li><a href="https://www.youtube.com/embed/ZcwA0xt8FlQ">Vanilla React</a> by <a href="https://twitter.com/ryanflorence">Ryan Florence</a></li>
+<li><a href="https://www.youtube.com/embed/rs9X5MjvC4s">React Rhythm &#x26; Blues</a> by <a href="https://twitter.com/leeerob">Lee Robinson</a></li>
+<li><a href="https://www.youtube.com/embed/sjyY4MTECUU">RedwoodJS, now with React Server Components</a> by <a href="https://twitter.com/selfteachme">Amy Dutton</a></li>
+<li><a href="https://www.youtube.com/embed/djhEgxQf3Kw">Introducing Universal React Server Components in Expo Router</a> by <a href="https://twitter.com/Baconbrix">Evan Bacon</a></li>
+</ul>
+<p><strong>And Q&#x26;As with the React and React Native teams:</strong></p>
+<ul>
+<li><a href="https://www.youtube.com/embed/T8TZQ6k4SLE&#x26;t=27518s">React Q&#x26;A</a> hosted by <a href="https://twitter.com/chantastic">Michael Chan</a></li>
+<li><a href="https://www.youtube.com/embed/0ckOUBiuxVY&#x26;t=27935s">React Native Q&#x26;A</a> hosted by <a href="https://twitter.com/jamonholmgren">Jamon Holmgren</a></li>
+</ul>
+<p>You can watch all of the talks at React Conf 2024 at <a href="https://conf2024.react.dev/talks">conf2024.react.dev</a>.</p>
+<h2>React Conf 2021 {/<em>react-conf-2021</em>/}</h2>
+<h3>React 18 Keynote {/<em>react-18-keynote</em>/}</h3>
+<p>In the keynote, we shared our vision for the future of React starting with React 18.</p>
+<p>Watch the full keynote from <a href="https://twitter.com/acdlite">Andrew Clark</a>, <a href="https://twitter.com/_jstejada">Juan Tejada</a>, <a href="https://twitter.com/potetotes">Lauren Tan</a>, and <a href="https://twitter.com/rickhanlonii">Rick Hanlon</a> here:</p>
+<YouTubeIframe src="https://www.youtube.com/embed/FZ0cG47msEk" title="React 18 Keynote" />
+<h3>React 18 for Application Developers {/<em>react-18-for-application-developers</em>/}</h3>
+<p>For a demo of upgrading to React 18, see <a href="https://twitter.com/shrutikapoor08">Shruti Kapoor</a>’s talk here:</p>
+<YouTubeIframe src="https://www.youtube.com/embed/ytudH8je5ko" title="React 18 for Application Developers" />
+<h3>Streaming Server Rendering with Suspense {/<em>streaming-server-rendering-with-suspense</em>/}</h3>
+<p>React 18 also includes improvements to server-side rendering performance using Suspense.</p>
+<p>Streaming server rendering lets you generate HTML from React components on the server, and stream that HTML to your users. In React 18, you can use <code>Suspense</code> to break down your app into smaller independent units which can be streamed independently of each other without blocking the rest of the app. This means users will see your content sooner and be able to start interacting with it much faster.</p>
+<p>For a deep dive, see <a href="https://twitter.com/shaundai">Shaundai Person</a>’s talk here:</p>
+<YouTubeIframe src="https://www.youtube.com/embed/pj5N-Khihgc" title="Streaming Server Rendering with Suspense" />
+<h3>The first React working group {/<em>the-first-react-working-group</em>/}</h3>
+<p>For React 18, we created our first Working Group to collaborate with a panel of experts, developers, library maintainers, and educators. Together we worked to create our gradual adoption strategy and refine new APIs such as <code>useId</code>, <code>useSyncExternalStore</code>, and <code>useInsertionEffect</code>.</p>
+<p>For an overview of this work, see <a href="https://twitter.com/aakansha1216">Aakansha' Doshi</a>'s talk:</p>
+<YouTubeIframe src="https://www.youtube.com/embed/qn7gRClrC9U" title="The first React working group" />
+<h3>React Developer Tooling {/<em>react-developer-tooling</em>/}</h3>
+<p>To support the new features in this release, we also announced the newly formed React DevTools team and a new Timeline Profiler to help developers debug their React apps.</p>
+<p>For more information and a demo of new DevTools features, see <a href="https://twitter.com/brian_d_vaughn">Brian Vaughn</a>’s talk:</p>
+<YouTubeIframe src="https://www.youtube.com/embed/oxDfrke8rZg" title="React Developer Tooling" />
+<h3>React without memo {/<em>react-without-memo</em>/}</h3>
+<p>Looking further into the future, <a href="https://twitter.com/Huxpro">Xuan Huang (黄玄)</a> shared an update from our React Labs research into an auto-memoizing compiler. Check out this talk for more information and a demo of the compiler prototype:</p>
+<YouTubeIframe src="https://www.youtube.com/embed/lGEMwh32soc" title="React without memo" />
+<h3>React docs keynote {/<em>react-docs-keynote</em>/}</h3>
+<p><a href="https://twitter.com/rachelnabors">Rachel Nabors</a> kicked off a section of talks about learning and designing with React with a keynote about our investment in React's new docs (<a href="/blog/2023/03/16/introducing-react-dev">now shipped as react.dev</a>):</p>
+<YouTubeIframe src="https://www.youtube.com/embed/mneDaMYOKP8" title="React docs keynote" />
+<h3>And more... {/<em>and-more</em>/}</h3>
+<p><strong>We also heard talks on learning and designing with React:</strong></p>
+<ul>
+<li>Debbie O'Brien: <a href="https://youtu.be/-7odLW_hG7s">Things I learnt from the new React docs</a>.</li>
+<li>Sarah Rainsberger: <a href="https://youtu.be/5X-WEQflCL0">Learning in the Browser</a>.</li>
+<li>Linton Ye: <a href="https://youtu.be/7cPWmID5XAk">The ROI of Designing with React</a>.</li>
+<li>Delba de Oliveira: <a href="https://youtu.be/zL8cz2W0z34">Interactive playgrounds with React</a>.</li>
+</ul>
+<p><strong>Talks from the Relay, React Native, and PyTorch teams:</strong></p>
+<ul>
+<li>Robert Balicki: <a href="https://youtu.be/lhVGdErZuN4">Re-introducing Relay</a>.</li>
+<li>Eric Rozell and Steven Moyes: <a href="https://youtu.be/9L4FFrvwJwY">React Native Desktop</a>.</li>
+<li>Roman Rädle: <a href="https://youtu.be/NLj73vrc2I8">On-device Machine Learning for React Native</a></li>
+</ul>
+<p><strong>And talks from the community on accessibility, tooling, and Server Components:</strong></p>
+<ul>
+<li>Daishi Kato: <a href="https://youtu.be/oPfSC5bQPR8">React 18 for External Store Libraries</a>.</li>
+<li>Diego Haz: <a href="https://youtu.be/dcm8fjBfro8">Building Accessible Components in React 18</a>.</li>
+<li>Tafu Nakazaki: <a href="https://youtu.be/S4a0QlsH0pU">Accessible Japanese Form Components with React</a>.</li>
+<li>Lyle Troxell: <a href="https://youtu.be/b3l4WxipFsE">UI tools for artists</a>.</li>
+<li>Helen Lin: <a href="https://youtu.be/HS6vIYkSNks">Hydrogen + React 18</a>.</li>
+</ul>
+<h2>Older videos {/<em>older-videos</em>/}</h2>
+<h3>React Conf 2019 {/<em>react-conf-2019</em>/}</h3>
+<p>A playlist of videos from React Conf 2019.
+<YouTubeIframe title="React Conf 2019" src="https://www.youtube-nocookie.com/embed/playlist?list=PLPxbbTqCLbGHPxZpw4xj_Wwg8-fdNxJRh" /></p>
+<h3>React Conf 2018 {/<em>react-conf-2018</em>/}</h3>
+<p>A playlist of videos from React Conf 2018.
+<YouTubeIframe title="React Conf 2018" src="https://www.youtube-nocookie.com/embed/playlist?list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ" /></p>
+<h3>React.js Conf 2017 {/<em>reactjs-conf-2017</em>/}</h3>
+<p>A playlist of videos from React.js Conf 2017.
+<YouTubeIframe title="React.js Conf 2017" src="https://www.youtube-nocookie.com/embed/playlist?list=PLb0IAmt7-GS3fZ46IGFirdqKTIxlws7e0" /></p>
+<h3>React.js Conf 2016 {/<em>reactjs-conf-2016</em>/}</h3>
+<p>A playlist of videos from React.js Conf 2016.
+<YouTubeIframe title="React.js Conf 2016" src="https://www.youtube-nocookie.com/embed/playlist?list=PLb0IAmt7-GS0M8Q95RIc2lOM6nc77q1IY" /></p>
+<h3>React.js Conf 2015 {/<em>reactjs-conf-2015</em>/}</h3>
+<p>A playlist of videos from React.js Conf 2015.
+<YouTubeIframe title="React.js Conf 2015" src="https://www.youtube-nocookie.com/embed/playlist?list=PLb0IAmt7-GS1cbw4qonlQztYV1TAW0sCr" /></p>
+<h3>Rethinking Best Practices {/<em>rethinking-best-practices</em>/}</h3>
+<p>Pete Hunt's talk at JSConf EU 2013 covers three topics: throwing out the notion of templates and building views with JavaScript, “re-rendering” your entire application when your data changes, and a lightweight implementation of the DOM and events - (2013 - 0h30m).
+<YouTubeIframe title="Pete Hunt: React: Rethinking Best Practices - JSConf EU 2013" src="https://www.youtube-nocookie.com/embed/x7cQ3mrcKaY" /></p>
+<h3>Introduction to React {/<em>introduction-to-react</em>/}</h3>
+<p>Tom Occhino and Jordan Walke introduce React at Facebook Seattle - (2013 - 1h20m).
+<YouTubeIframe title="Tom Occhino and Jordan Walke introduce React at Facebook Seattle" src="https://www.youtube-nocookie.com/embed/XxVg_s8xAms" /></p></body></html>

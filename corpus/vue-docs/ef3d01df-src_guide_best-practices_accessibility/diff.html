@@ -1,0 +1,580 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+/* table */
+table { border-collapse: collapse; width: auto; margin: 1em 0; }
+th, td { border: 1px solid #d0d7de; padding: 6px 13px; }
+th { background: #f6f8fa; font-weight: 600; }
+tr:nth-child(2n) { background: #f6f8fa; }
+
+/* code */
+code { padding: 0.2em 0.4em; font-size: 85%; background: #f6f8fa; border-radius: 6px; font-family: 'SF Mono', 'Fira Code', Menlo, monospace; }
+pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background: #f6f8fa; border-radius: 6px; margin: 1em 0; }
+pre code { padding: 0; background: none; border-radius: 0; font-size: inherit; }
+
+/* blockquote */
+blockquote { padding: 0 1em; color: #656d76; border-left: 0.25em solid #d0d7de; margin: 1em 0; }
+
+/* hr */
+hr { height: 0.25em; padding: 0; margin: 24px 0; background-color: #d0d7de; border: 0; }
+
+/* headings */
+h1, h2, h3, h4, h5, h6 { margin-top: 24px; margin-bottom: 16px; font-weight: 600; line-height: 1.25; }
+h1 { font-size: 2em; padding-bottom: 0.3em; border-bottom: 1px solid #d0d7de; }
+h2 { font-size: 1.5em; padding-bottom: 0.3em; border-bottom: 1px solid #d0d7de; }
+h3 { font-size: 1.25em; }
+
+/* list */
+ul, ol { padding-left: 2em; margin: 0.5em 0; }
+li + li { margin-top: 0.25em; }
+
+/* image */
+img { max-width: 100%; }
+
+/* code diff */
+.code-diff { border-radius: 6px; overflow: hidden; margin: 1em 0; font-size: 13px; border: 1px solid #d0d7de; }
+.code-diff pre { margin: 0; padding: 0; border-radius: 0; border: none; background: #fff; }
+.code-diff .shiki { background: #fff !important; }
+.code-diff .diff-line { display: flex; line-height: 1.45; }
+.code-diff .diff-line-gutter { width: 40px; min-width: 40px; text-align: right; padding: 0 8px 0 0; color: #8b949e; font-size: 12px; user-select: none; flex-shrink: 0; }
+.code-diff .diff-line-sign { width: 20px; min-width: 20px; text-align: center; user-select: none; flex-shrink: 0; }
+.code-diff .diff-line-content { flex: 1; padding-right: 12px; white-space: pre; overflow-x: auto; }
+.code-diff .diff-line.del { background: #ffebe9; }
+.code-diff .diff-line.del .diff-line-gutter { background: #ffd7d5; color: #82071e; }
+.code-diff .diff-line.del .diff-line-sign { color: #82071e; }
+.code-diff .diff-line.ins { background: #e6ffec; }
+.code-diff .diff-line.ins .diff-line-gutter { background: #ccffd8; color: #116329; }
+.code-diff .diff-line.ins .diff-line-sign { color: #116329; }
+.code-diff .diff-line.ctx { background: #fff; }
+.code-diff .diff-line.ctx .diff-line-gutter { color: #8b949e; }
+.code-diff .diff-header { padding: 8px 12px; background: #f6f8fa; border-bottom: 1px solid #d0d7de; font-size: 12px; color: #656d76; font-family: 'SF Mono', 'Fira Code', Menlo, monospace; }
+
+ins { background-color: #e6ffec; text-decoration: none; border-radius: 2px; padding: 0 2px; }
+del { background-color: #ffebe9; text-decoration: line-through; border-radius: 2px; padding: 0 2px; }
+ins.diff-block, del.diff-block { display: block; padding-left: 10px; border-left: 3px solid; }
+ins.diff-block { border-left-color: #2cbe4e; }
+del.diff-block { border-left-color: #cb2431; }
+ins > hr, ins > pre { background-color: #e6ffec; }
+del > hr, del > pre { background-color: #ffebe9; }
+ins > table, del > table { border-collapse: collapse; }
+ins > table th, ins > table td { background-color: #e6ffec; }
+del > table th, del > table td { background-color: #ffebe9; }
+li[data-diff="ins"] { background-color: #e6ffec; border-radius: 2px; }
+li[data-diff="del"] { background-color: #ffebe9; border-radius: 2px; text-decoration: line-through; }
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:16px;font-size:14px;line-height:1.6;color:#1a1a1a;}</style></head><body><h1>Accessibility {#accessibility}</h1>
+<p>Web accessibility (also known as a11y) refers to the practice of creating websites that can be used by anyone — be that a person with a disability, a slow connection, outdated or broken hardware or simply someone in an unfavorable environment. For example, adding subtitles to a video would help both your deaf and hard-of-hearing users and your users who are in a loud environment and can't hear their phone. Similarly, making sure your text isn't too low contrast will help both your low-vision users and your users who are trying to use their phone in bright sunlight.</p>
+<p>Ready to start but aren’t sure where?</p>
+<p>Checkout the <a href="https://www.w3.org/WAI/planning-and-managing/">Planning and managing web accessibility guide</a> provided by <a href="https://www.w3.org/">World Wide Web Consortium (W3C)</a></p>
+<h2>Skip link {#skip-link}</h2>
+<p>You should add a link at the top of each page that goes directly to the main content area so users can skip content that is repeated on multiple Web pages.</p>
+<p>Typically this is done on the top of <code>App.vue</code> as it will be the first focusable element on all your pages:</p>
+<pre><code class="language-vue-html"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">span</span><span style="color:#6F42C1"> ref</span><span style="color:#24292E">=</span><span style="color:#032F62">"backToTop"</span><span style="color:#6F42C1"> tabindex</span><span style="color:#24292E">=</span><span style="color:#032F62">"-1"</span><span style="color:#24292E"> /></span></span>
+<span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">ul</span><span style="color:#6F42C1"> class</span><span style="color:#24292E">=</span><span style="color:#032F62">"skip-links"</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">li</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">    &#x3C;</span><span style="color:#22863A">a</span><span style="color:#6F42C1"> href</span><span style="color:#24292E">=</span><span style="color:#032F62">"#main"</span><span style="color:#6F42C1"> ref</span><span style="color:#24292E">=</span><span style="color:#032F62">"skipLink"</span><span style="color:#6F42C1"> class</span><span style="color:#24292E">=</span><span style="color:#032F62">"skip-link"</span><span style="color:#24292E">>Skip to main content&#x3C;/</span><span style="color:#22863A">a</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;/</span><span style="color:#22863A">li</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">&#x3C;/</span><span style="color:#22863A">ul</span><span style="color:#24292E">></span></span></code></pre>
+</code></pre>
+<p>To hide the link unless it is focused, you can add the following style:</p>
+<pre><code class="language-css"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#6F42C1">.skip-links</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#005CC5">  list-style</span><span style="color:#24292E">: </span><span style="color:#005CC5">none</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#24292E">}</span></span>
+<span class="line"><span style="color:#6F42C1">.skip-link</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#005CC5">  white-space</span><span style="color:#24292E">: </span><span style="color:#005CC5">nowrap</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#005CC5">  margin</span><span style="color:#24292E">: </span><span style="color:#005CC5">1</span><span style="color:#D73A49">em</span><span style="color:#005CC5"> auto</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#005CC5">  top</span><span style="color:#24292E">: </span><span style="color:#005CC5">0</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#005CC5">  position</span><span style="color:#24292E">: </span><span style="color:#005CC5">fixed</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#005CC5">  left</span><span style="color:#24292E">: </span><span style="color:#005CC5">50</span><span style="color:#D73A49">%</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#005CC5">  margin-left</span><span style="color:#24292E">: </span><span style="color:#005CC5">-72</span><span style="color:#D73A49">px</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#005CC5">  opacity</span><span style="color:#24292E">: </span><span style="color:#005CC5">0</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#24292E">}</span></span>
+<span class="line"><span style="color:#6F42C1">.skip-link:focus</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#005CC5">  opacity</span><span style="color:#24292E">: </span><span style="color:#005CC5">1</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#005CC5">  background-color</span><span style="color:#24292E">: </span><span style="color:#005CC5">white</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#005CC5">  padding</span><span style="color:#24292E">: </span><span style="color:#005CC5">0.5</span><span style="color:#D73A49">em</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#005CC5">  border</span><span style="color:#24292E">: </span><span style="color:#005CC5">1</span><span style="color:#D73A49">px</span><span style="color:#005CC5"> solid</span><span style="color:#005CC5"> black</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre>
+<p>Once a user changes route, bring focus back to the very beginning of the page, right before the skip link. This can be achieved by calling focus on the <code>backToTop</code> template ref (assuming usage of <code>vue-router</code>):</p>
+<div class="options-api">
+<pre><code class="language-vue"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">script</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#24292E">  watch: {</span></span>
+<span class="line"><span style="color:#6F42C1">    $route</span><span style="color:#24292E">() {</span></span>
+<span class="line"><span style="color:#005CC5">      this</span><span style="color:#24292E">.$refs.backToTop.</span><span style="color:#6F42C1">focus</span><span style="color:#24292E">()</span></span>
+<span class="line"><span style="color:#24292E">    }</span></span>
+<span class="line"><span style="color:#24292E">  }</span></span>
+<span class="line"><span style="color:#24292E">}</span></span>
+<span class="line"><span style="color:#24292E">&#x3C;/</span><span style="color:#22863A">script</span><span style="color:#24292E">></span></span></code></pre>
+</code></pre>
+</div>
+<div class="composition-api">
+<pre><code class="language-vue"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">script</span><span style="color:#6F42C1"> setup</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#D73A49">import</span><span style="color:#24292E"> { ref, watch } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> 'vue'</span></span>
+<span class="line"><span style="color:#D73A49">import</span><span style="color:#24292E"> { useRoute } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> 'vue-router'</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">const</span><span style="color:#005CC5"> route</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> useRoute</span><span style="color:#24292E">()</span></span>
+<span class="line"><span style="color:#D73A49">const</span><span style="color:#005CC5"> backToTop</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> ref</span><span style="color:#24292E">()</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6F42C1">watch</span><span style="color:#24292E">(</span></span>
+<span class="line"><span style="color:#24292E">  () </span><span style="color:#D73A49">=></span><span style="color:#24292E"> route.path,</span></span>
+<span class="line"><span style="color:#24292E">  () </span><span style="color:#D73A49">=></span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#24292E">    backToTop.value.</span><span style="color:#6F42C1">focus</span><span style="color:#24292E">()</span></span>
+<span class="line"><span style="color:#24292E">  }</span></span>
+<span class="line"><span style="color:#24292E">)</span></span>
+<span class="line"><span style="color:#24292E">&#x3C;/</span><span style="color:#22863A">script</span><span style="color:#24292E">></span></span></code></pre>
+</code></pre>
+</div>
+<p><a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G1.html">Read documentation on skip link to main content</a></p>
+<h2>Content Structure {#content-structure}</h2>
+<p>One of the most important pieces of accessibility is making sure that design can support accessible implementation. Design should consider not only color contrast, font selection, text sizing, and language, but also how the content is structured in the application.</p>
+<h3>Headings {#headings}</h3>
+<p>Users can navigate an application through headings. Having descriptive headings for every section of your application makes it easier for users to predict the content of each section. When it comes to headings, there are a couple of recommended accessibility practices:</p>
+<ul>
+<li>Nest headings in their ranking order: <code>&#x3C;h1></code> - <code>&#x3C;h6></code></li>
+<li>Don’t skip headings within a section</li>
+<li>Use actual heading tags instead of styling text to give the visual appearance of headings</li>
+</ul>
+<p><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-descriptive.html">Read more about headings</a></p>
+<pre><code class="language-vue-html"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">main</span><span style="color:#6F42C1"> role</span><span style="color:#24292E">=</span><span style="color:#032F62">"main"</span><span style="color:#6F42C1"> aria-labelledby</span><span style="color:#24292E">=</span><span style="color:#032F62">"main-title"</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">h1</span><span style="color:#6F42C1"> id</span><span style="color:#24292E">=</span><span style="color:#032F62">"main-title"</span><span style="color:#24292E">>Main title&#x3C;/</span><span style="color:#22863A">h1</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">section</span><span style="color:#6F42C1"> aria-labelledby</span><span style="color:#24292E">=</span><span style="color:#032F62">"section-title-1"</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">    &#x3C;</span><span style="color:#22863A">h2</span><span style="color:#6F42C1"> id</span><span style="color:#24292E">=</span><span style="color:#032F62">"section-title-1"</span><span style="color:#24292E">> Section Title &#x3C;/</span><span style="color:#22863A">h2</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">    &#x3C;</span><span style="color:#22863A">h3</span><span style="color:#24292E">>Section Subtitle&#x3C;/</span><span style="color:#22863A">h3</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#6A737D">    &#x3C;!-- Content --></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;/</span><span style="color:#22863A">section</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">section</span><span style="color:#6F42C1"> aria-labelledby</span><span style="color:#24292E">=</span><span style="color:#032F62">"section-title-2"</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">    &#x3C;</span><span style="color:#22863A">h2</span><span style="color:#6F42C1"> id</span><span style="color:#24292E">=</span><span style="color:#032F62">"section-title-2"</span><span style="color:#24292E">> Section Title &#x3C;/</span><span style="color:#22863A">h2</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">    &#x3C;</span><span style="color:#22863A">h3</span><span style="color:#24292E">>Section Subtitle&#x3C;/</span><span style="color:#22863A">h3</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#6A737D">    &#x3C;!-- Content --></span></span>
+<span class="line"><span style="color:#24292E">    &#x3C;</span><span style="color:#22863A">h3</span><span style="color:#24292E">>Section Subtitle&#x3C;/</span><span style="color:#22863A">h3</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#6A737D">    &#x3C;!-- Content --></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;/</span><span style="color:#22863A">section</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">&#x3C;/</span><span style="color:#22863A">main</span><span style="color:#24292E">></span></span></code></pre>
+</code></pre>
+<h3>Landmarks {#landmarks}</h3>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/landmark_role">Landmarks</a> provide programmatic access to sections within an application. Users who rely on assistive technology can navigate to each section of the application and skip over content. You can use <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles">ARIA roles</a> to help you achieve this.</p>
+<table>
+<thead>
+<tr>
+<th>HTML</th>
+<th>ARIA Role</th>
+<th>Landmark Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>header</td>
+<td>role="banner"</td>
+<td>Prime heading: title of the page</td>
+</tr>
+<tr>
+<td>nav</td>
+<td>role="navigation"</td>
+<td>Collection of links suitable for use when navigating the document or related documents</td>
+</tr>
+<tr>
+<td>main</td>
+<td>role="main"</td>
+<td>The main or central content of the document.</td>
+</tr>
+<tr>
+<td>footer</td>
+<td>role="contentinfo"</td>
+<td>Information about the parent document: footnotes/copyrights/links to privacy statement</td>
+</tr>
+<tr>
+<td>aside</td>
+<td>role="complementary"</td>
+<td>Supports the main content, yet is separated and meaningful on its own content</td>
+</tr>
+<tr>
+<td>search</td>
+<td>role="search"</td>
+<td>This section contains the search functionality for the application</td>
+</tr>
+<tr>
+<td>form</td>
+<td>role="form"</td>
+<td>Collection of form-associated elements</td>
+</tr>
+<tr>
+<td>section</td>
+<td>role="region"</td>
+<td>Content that is relevant and that users will likely want to navigate to. Label must be provided for this element</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://www.w3.org/TR/wai-aria-1.2/#landmark_roles">Read more about landmarks</a></p>
+<h2>Semantic Forms {#semantic-forms}</h2>
+<p>When creating a form, you can use the following elements: <code>&#x3C;form></code>, <code>&#x3C;label></code>, <code>&#x3C;input></code>, <code>&#x3C;textarea></code>, and <code>&#x3C;button></code></p>
+<p>Labels are typically placed on top or to the left of the form fields:</p>
+<pre><code class="language-vue-html"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">form</span><span style="color:#6F42C1"> action</span><span style="color:#24292E">=</span><span style="color:#032F62">"/dataCollectionLocation"</span><span style="color:#6F42C1"> method</span><span style="color:#24292E">=</span><span style="color:#032F62">"post"</span><span style="color:#6F42C1"> autocomplete</span><span style="color:#24292E">=</span><span style="color:#032F62">"on"</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">div</span><span style="color:#6F42C1"> v-for</span><span style="color:#24292E">=</span><span style="color:#032F62">"</span><span style="color:#24292E">item </span><span style="color:#D73A49">in</span><span style="color:#24292E"> formItems</span><span style="color:#032F62">"</span><span style="color:#24292E"> :</span><span style="color:#6F42C1">key</span><span style="color:#24292E">=</span><span style="color:#032F62">"</span><span style="color:#24292E">item.id</span><span style="color:#032F62">"</span><span style="color:#6F42C1"> class</span><span style="color:#24292E">=</span><span style="color:#032F62">"form-item"</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">    &#x3C;</span><span style="color:#22863A">label</span><span style="color:#24292E"> :</span><span style="color:#6F42C1">for</span><span style="color:#24292E">=</span><span style="color:#032F62">"</span><span style="color:#24292E">item.id</span><span style="color:#032F62">"</span><span style="color:#24292E">>{{ item.label }}: &#x3C;/</span><span style="color:#22863A">label</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">    &#x3C;</span><span style="color:#22863A">input</span></span>
+<span class="line"><span style="color:#24292E">      :</span><span style="color:#6F42C1">type</span><span style="color:#24292E">=</span><span style="color:#032F62">"</span><span style="color:#24292E">item.type</span><span style="color:#032F62">"</span></span>
+<span class="line"><span style="color:#24292E">      :</span><span style="color:#6F42C1">id</span><span style="color:#24292E">=</span><span style="color:#032F62">"</span><span style="color:#24292E">item.id</span><span style="color:#032F62">"</span></span>
+<span class="line"><span style="color:#24292E">      :</span><span style="color:#6F42C1">name</span><span style="color:#24292E">=</span><span style="color:#032F62">"</span><span style="color:#24292E">item.id</span><span style="color:#032F62">"</span></span>
+<span class="line"><span style="color:#6F42C1">      v-model</span><span style="color:#24292E">=</span><span style="color:#032F62">"</span><span style="color:#24292E">item.value</span><span style="color:#032F62">"</span></span>
+<span class="line"><span style="color:#24292E">    /></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;/</span><span style="color:#22863A">div</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">button</span><span style="color:#6F42C1"> type</span><span style="color:#24292E">=</span><span style="color:#032F62">"submit"</span><span style="color:#24292E">>Submit&#x3C;/</span><span style="color:#22863A">button</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">&#x3C;/</span><span style="color:#22863A">form</span><span style="color:#24292E">></span></span></code></pre>
+</code></pre>
+<p>Notice how you can include <code>autocomplete='on'</code> on the form element and it will apply to all inputs in your form. You can also set different <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete">values for autocomplete attribute</a> for each input.</p>
+<h3>Labels {#labels}</h3>
+<p>Provide labels to describe the purpose of all form control; linking <code>for</code> and <code>id</code>:</p>
+<pre><code class="language-vue-html"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">label</span><span style="color:#6F42C1"> for</span><span style="color:#24292E">=</span><span style="color:#032F62">"name"</span><span style="color:#24292E">>Name: &#x3C;/</span><span style="color:#22863A">label</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">input</span><span style="color:#6F42C1"> type</span><span style="color:#24292E">=</span><span style="color:#032F62">"text"</span><span style="color:#6F42C1"> name</span><span style="color:#24292E">=</span><span style="color:#032F62">"name"</span><span style="color:#6F42C1"> id</span><span style="color:#24292E">=</span><span style="color:#032F62">"name"</span><span style="color:#6F42C1"> v-model</span><span style="color:#24292E">=</span><span style="color:#032F62">"</span><span style="color:#24292E">name</span><span style="color:#032F62">"</span><span style="color:#24292E"> /></span></span></code></pre>
+</code></pre>
+<p>If you inspect this element in your Chrome DevTools and open the Accessibility tab inside the Elements tab, you will see how the input gets its name from the label:</p>
+<p><img src="./images/AccessibleLabelChromeDevTools.png" alt="Chrome Developer Tools showing input accessible name from label"></p>
+<p>:::warning Warning:
+Though you might have seen labels wrapping the input fields like this:</p>
+<pre><code class="language-vue-html"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">label</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  Name:</span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">input</span><span style="color:#6F42C1"> type</span><span style="color:#24292E">=</span><span style="color:#032F62">"text"</span><span style="color:#6F42C1"> name</span><span style="color:#24292E">=</span><span style="color:#032F62">"name"</span><span style="color:#6F42C1"> id</span><span style="color:#24292E">=</span><span style="color:#032F62">"name"</span><span style="color:#6F42C1"> v-model</span><span style="color:#24292E">=</span><span style="color:#032F62">"</span><span style="color:#24292E">name</span><span style="color:#032F62">"</span><span style="color:#24292E"> /></span></span>
+<span class="line"><span style="color:#24292E">&#x3C;/</span><span style="color:#22863A">label</span><span style="color:#24292E">></span></span></code></pre>
+</code></pre>
+<p>Explicitly setting the labels with a matching id is better supported by assistive technology.
+:::</p>
+<h4><code>aria-label</code> {#aria-label}</h4>
+<p>You can also give the input an accessible name with <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label"><code>aria-label</code></a>.</p>
+<pre><code class="language-vue-html"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">label</span><span style="color:#6F42C1"> for</span><span style="color:#24292E">=</span><span style="color:#032F62">"name"</span><span style="color:#24292E">>Name: &#x3C;/</span><span style="color:#22863A">label</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">input</span></span>
+<span class="line"><span style="color:#6F42C1">  type</span><span style="color:#24292E">=</span><span style="color:#032F62">"text"</span></span>
+<span class="line"><span style="color:#6F42C1">  name</span><span style="color:#24292E">=</span><span style="color:#032F62">"name"</span></span>
+<span class="line"><span style="color:#6F42C1">  id</span><span style="color:#24292E">=</span><span style="color:#032F62">"name"</span></span>
+<span class="line"><span style="color:#6F42C1">  v-model</span><span style="color:#24292E">=</span><span style="color:#032F62">"</span><span style="color:#24292E">name</span><span style="color:#032F62">"</span></span>
+<span class="line"><span style="color:#24292E">  :</span><span style="color:#6F42C1">aria-label</span><span style="color:#24292E">=</span><span style="color:#032F62">"</span><span style="color:#24292E">nameLabel</span><span style="color:#032F62">"</span></span>
+<span class="line"><span style="color:#24292E">/></span></span></code></pre>
+</code></pre>
+<p>Feel free to inspect this element in Chrome DevTools to see how the accessible name has changed:</p>
+<p><img src="./images/AccessibleARIAlabelDevTools.png" alt="Chrome Developer Tools showing input accessible name from aria-label"></p>
+<h4><code>aria-labelledby</code> {#aria-labelledby}</h4>
+<p>Using <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby"><code>aria-labelledby</code></a> is similar to <code>aria-label</code> except it is used if the label text is visible on screen. It is paired to other elements by their <code>id</code> and you can link multiple <code>id</code>s:</p>
+<pre><code class="language-vue-html"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">form</span></span>
+<span class="line"><span style="color:#6F42C1">  class</span><span style="color:#24292E">=</span><span style="color:#032F62">"demo"</span></span>
+<span class="line"><span style="color:#6F42C1">  action</span><span style="color:#24292E">=</span><span style="color:#032F62">"/dataCollectionLocation"</span></span>
+<span class="line"><span style="color:#6F42C1">  method</span><span style="color:#24292E">=</span><span style="color:#032F62">"post"</span></span>
+<span class="line"><span style="color:#6F42C1">  autocomplete</span><span style="color:#24292E">=</span><span style="color:#032F62">"on"</span></span>
+<span class="line"><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">h1</span><span style="color:#6F42C1"> id</span><span style="color:#24292E">=</span><span style="color:#032F62">"billing"</span><span style="color:#24292E">>Billing&#x3C;/</span><span style="color:#22863A">h1</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">div</span><span style="color:#6F42C1"> class</span><span style="color:#24292E">=</span><span style="color:#032F62">"form-item"</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">    &#x3C;</span><span style="color:#22863A">label</span><span style="color:#6F42C1"> for</span><span style="color:#24292E">=</span><span style="color:#032F62">"name"</span><span style="color:#24292E">>Name: &#x3C;/</span><span style="color:#22863A">label</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">    &#x3C;</span><span style="color:#22863A">input</span></span>
+<span class="line"><span style="color:#6F42C1">      type</span><span style="color:#24292E">=</span><span style="color:#032F62">"text"</span></span>
+<span class="line"><span style="color:#6F42C1">      name</span><span style="color:#24292E">=</span><span style="color:#032F62">"name"</span></span>
+<span class="line"><span style="color:#6F42C1">      id</span><span style="color:#24292E">=</span><span style="color:#032F62">"name"</span></span>
+<span class="line"><span style="color:#6F42C1">      v-model</span><span style="color:#24292E">=</span><span style="color:#032F62">"</span><span style="color:#24292E">name</span><span style="color:#032F62">"</span></span>
+<span class="line"><span style="color:#6F42C1">      aria-labelledby</span><span style="color:#24292E">=</span><span style="color:#032F62">"billing name"</span></span>
+<span class="line"><span style="color:#24292E">    /></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;/</span><span style="color:#22863A">div</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">button</span><span style="color:#6F42C1"> type</span><span style="color:#24292E">=</span><span style="color:#032F62">"submit"</span><span style="color:#24292E">>Submit&#x3C;/</span><span style="color:#22863A">button</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">&#x3C;/</span><span style="color:#22863A">form</span><span style="color:#24292E">></span></span></code></pre>
+</code></pre>
+<p><img src="./images/AccessibleARIAlabelledbyDevTools.png" alt="Chrome Developer Tools showing input accessible name from aria-labelledby"></p>
+<ins class="diff-block"><p>When this pattern is used inside a reusable component, generate the IDs with
+<a href="/api/composition-api-helpers.html#useid"><code>useId()</code></a> instead of hard-coding
+them. This keeps each component instance's <code>id</code> values unique while still
+linking the visible text to the form control:</p></ins>
+<ins class="diff-block"><pre><code class="language-vue"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">script</span><span style="color:#6F42C1"> setup</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#D73A49">import</span><span style="color:#24292E"> { useId } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> 'vue'</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">const</span><span style="color:#005CC5"> sectionId</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> useId</span><span style="color:#24292E">()</span></span>
+<span class="line"><span style="color:#D73A49">const</span><span style="color:#005CC5"> nameId</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> useId</span><span style="color:#24292E">()</span></span>
+<span class="line"><span style="color:#24292E">&#x3C;/</span><span style="color:#22863A">script</span><span style="color:#24292E">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">template</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">section</span><span style="color:#6F42C1"> class</span><span style="color:#24292E">=</span><span style="color:#032F62">"form-section"</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">    &#x3C;</span><span style="color:#22863A">h2</span><span style="color:#6F42C1"> :id</span><span style="color:#24292E">=</span><span style="color:#032F62">"sectionId"</span><span style="color:#24292E">>Billing&#x3C;/</span><span style="color:#22863A">h2</span><span style="color:#24292E">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292E">    &#x3C;</span><span style="color:#22863A">label</span><span style="color:#6F42C1"> :id</span><span style="color:#24292E">=</span><span style="color:#032F62">"nameId"</span><span style="color:#6F42C1"> :for</span><span style="color:#24292E">=</span><span style="color:#032F62">"`${nameId}-input`"</span><span style="color:#24292E">>Name: &#x3C;/</span><span style="color:#22863A">label</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">    &#x3C;</span><span style="color:#22863A">input</span></span>
+<span class="line"><span style="color:#6F42C1">      :id</span><span style="color:#24292E">=</span><span style="color:#032F62">"`${nameId}-input`"</span></span>
+<span class="line"><span style="color:#6F42C1">      type</span><span style="color:#24292E">=</span><span style="color:#032F62">"text"</span></span>
+<span class="line"><span style="color:#6F42C1">      name</span><span style="color:#24292E">=</span><span style="color:#032F62">"name"</span></span>
+<span class="line"><span style="color:#6F42C1">      :aria-labelledby</span><span style="color:#24292E">=</span><span style="color:#032F62">"`${sectionId} ${nameId}`"</span></span>
+<span class="line"><span style="color:#24292E">    /></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;/</span><span style="color:#22863A">section</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">&#x3C;/</span><span style="color:#22863A">template</span><span style="color:#24292E">></span></span></code></pre>
+</code></pre></ins>
+<h4><code>aria-describedby</code> {#aria-describedby}</h4>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby">aria-describedby</a> is used the same way as <code>aria-labelledby</code> except provides a description with additional information that the user might need. This can be used to describe the criteria for any input:</p>
+<pre><code class="language-vue-html"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">form</span></span>
+<span class="line"><span style="color:#6F42C1">  class</span><span style="color:#24292E">=</span><span style="color:#032F62">"demo"</span></span>
+<span class="line"><span style="color:#6F42C1">  action</span><span style="color:#24292E">=</span><span style="color:#032F62">"/dataCollectionLocation"</span></span>
+<span class="line"><span style="color:#6F42C1">  method</span><span style="color:#24292E">=</span><span style="color:#032F62">"post"</span></span>
+<span class="line"><span style="color:#6F42C1">  autocomplete</span><span style="color:#24292E">=</span><span style="color:#032F62">"on"</span></span>
+<span class="line"><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">h1</span><span style="color:#6F42C1"> id</span><span style="color:#24292E">=</span><span style="color:#032F62">"billing"</span><span style="color:#24292E">>Billing&#x3C;/</span><span style="color:#22863A">h1</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">div</span><span style="color:#6F42C1"> class</span><span style="color:#24292E">=</span><span style="color:#032F62">"form-item"</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">    &#x3C;</span><span style="color:#22863A">label</span><span style="color:#6F42C1"> for</span><span style="color:#24292E">=</span><span style="color:#032F62">"name"</span><span style="color:#24292E">>Full Name: &#x3C;/</span><span style="color:#22863A">label</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">    &#x3C;</span><span style="color:#22863A">input</span></span>
+<span class="line"><span style="color:#6F42C1">      type</span><span style="color:#24292E">=</span><span style="color:#032F62">"text"</span></span>
+<span class="line"><span style="color:#6F42C1">      name</span><span style="color:#24292E">=</span><span style="color:#032F62">"name"</span></span>
+<span class="line"><span style="color:#6F42C1">      id</span><span style="color:#24292E">=</span><span style="color:#032F62">"name"</span></span>
+<span class="line"><span style="color:#6F42C1">      v-model</span><span style="color:#24292E">=</span><span style="color:#032F62">"</span><span style="color:#24292E">name</span><span style="color:#032F62">"</span></span>
+<span class="line"><span style="color:#6F42C1">      aria-labelledby</span><span style="color:#24292E">=</span><span style="color:#032F62">"billing name"</span></span>
+<span class="line"><span style="color:#6F42C1">      aria-describedby</span><span style="color:#24292E">=</span><span style="color:#032F62">"nameDescription"</span></span>
+<span class="line"><span style="color:#24292E">    /></span></span>
+<span class="line"><span style="color:#24292E">    &#x3C;</span><span style="color:#22863A">p</span><span style="color:#6F42C1"> id</span><span style="color:#24292E">=</span><span style="color:#032F62">"nameDescription"</span><span style="color:#24292E">>Please provide first and last name.&#x3C;/</span><span style="color:#22863A">p</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;/</span><span style="color:#22863A">div</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">button</span><span style="color:#6F42C1"> type</span><span style="color:#24292E">=</span><span style="color:#032F62">"submit"</span><span style="color:#24292E">>Submit&#x3C;/</span><span style="color:#22863A">button</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">&#x3C;/</span><span style="color:#22863A">form</span><span style="color:#24292E">></span></span></code></pre>
+</code></pre>
+<p>You can see the description by inspecting Chrome DevTools:</p>
+<p><img src="./images/AccessibleARIAdescribedby.png" alt="Chrome Developer Tools showing input accessible name from aria-labelledby and description with aria-describedby"></p>
+<h3>Placeholder {#placeholder}</h3>
+<p>Avoid using placeholders as they can confuse many users.</p>
+<p>One of the issues with placeholders is that they don't meet the <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html">color contrast criteria</a> by default; fixing the color contrast makes the placeholder look like pre-populated data in the input fields. Looking at the following example, you can see that the Last Name placeholder which meets the color contrast criteria looks like pre-populated data:</p>
+<p><img src="./images/AccessiblePlaceholder.png" alt="Accessible placeholder"></p>
+<pre><code class="language-vue-html"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">form</span></span>
+<span class="line"><span style="color:#6F42C1">  class</span><span style="color:#24292E">=</span><span style="color:#032F62">"demo"</span></span>
+<span class="line"><span style="color:#6F42C1">  action</span><span style="color:#24292E">=</span><span style="color:#032F62">"/dataCollectionLocation"</span></span>
+<span class="line"><span style="color:#6F42C1">  method</span><span style="color:#24292E">=</span><span style="color:#032F62">"post"</span></span>
+<span class="line"><span style="color:#6F42C1">  autocomplete</span><span style="color:#24292E">=</span><span style="color:#032F62">"on"</span></span>
+<span class="line"><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">div</span><span style="color:#6F42C1"> v-for</span><span style="color:#24292E">=</span><span style="color:#032F62">"</span><span style="color:#24292E">item </span><span style="color:#D73A49">in</span><span style="color:#24292E"> formItems</span><span style="color:#032F62">"</span><span style="color:#24292E"> :</span><span style="color:#6F42C1">key</span><span style="color:#24292E">=</span><span style="color:#032F62">"</span><span style="color:#24292E">item.id</span><span style="color:#032F62">"</span><span style="color:#6F42C1"> class</span><span style="color:#24292E">=</span><span style="color:#032F62">"form-item"</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">    &#x3C;</span><span style="color:#22863A">label</span><span style="color:#24292E"> :</span><span style="color:#6F42C1">for</span><span style="color:#24292E">=</span><span style="color:#032F62">"</span><span style="color:#24292E">item.id</span><span style="color:#032F62">"</span><span style="color:#24292E">>{{ item.label }}: &#x3C;/</span><span style="color:#22863A">label</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">    &#x3C;</span><span style="color:#22863A">input</span></span>
+<span class="line"><span style="color:#6F42C1">      type</span><span style="color:#24292E">=</span><span style="color:#032F62">"text"</span></span>
+<span class="line"><span style="color:#24292E">      :</span><span style="color:#6F42C1">id</span><span style="color:#24292E">=</span><span style="color:#032F62">"</span><span style="color:#24292E">item.id</span><span style="color:#032F62">"</span></span>
+<span class="line"><span style="color:#24292E">      :</span><span style="color:#6F42C1">name</span><span style="color:#24292E">=</span><span style="color:#032F62">"</span><span style="color:#24292E">item.id</span><span style="color:#032F62">"</span></span>
+<span class="line"><span style="color:#6F42C1">      v-model</span><span style="color:#24292E">=</span><span style="color:#032F62">"</span><span style="color:#24292E">item.value</span><span style="color:#032F62">"</span></span>
+<span class="line"><span style="color:#24292E">      :</span><span style="color:#6F42C1">placeholder</span><span style="color:#24292E">=</span><span style="color:#032F62">"</span><span style="color:#24292E">item.placeholder</span><span style="color:#032F62">"</span></span>
+<span class="line"><span style="color:#24292E">    /></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;/</span><span style="color:#22863A">div</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">button</span><span style="color:#6F42C1"> type</span><span style="color:#24292E">=</span><span style="color:#032F62">"submit"</span><span style="color:#24292E">>Submit&#x3C;/</span><span style="color:#22863A">button</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">&#x3C;/</span><span style="color:#22863A">form</span><span style="color:#24292E">></span></span></code></pre>
+</code></pre>
+<pre><code class="language-css"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#6A737D">/* https://www.w3schools.com/howto/howto_css_placeholder.asp */</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6F42C1">#lastName::placeholder</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#6A737D">  /* Chrome, Firefox, Opera, Safari 10.1+ */</span></span>
+<span class="line"><span style="color:#005CC5">  color</span><span style="color:#24292E">: </span><span style="color:#005CC5">black</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#005CC5">  opacity</span><span style="color:#24292E">: </span><span style="color:#005CC5">1</span><span style="color:#24292E">; </span><span style="color:#6A737D">/* Firefox */</span></span>
+<span class="line"><span style="color:#24292E">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6F42C1">#lastName:-ms-input-placeholder</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#6A737D">  /* Internet Explorer 10-11 */</span></span>
+<span class="line"><span style="color:#005CC5">  color</span><span style="color:#24292E">: </span><span style="color:#005CC5">black</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#24292E">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6F42C1">#lastName::-ms-input-placeholder</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#6A737D">  /* Microsoft Edge */</span></span>
+<span class="line"><span style="color:#005CC5">  color</span><span style="color:#24292E">: </span><span style="color:#005CC5">black</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre>
+<p>It is best to provide all the information the user needs to fill out forms outside any inputs.</p>
+<h3>Instructions {#instructions}</h3>
+<p>When adding instructions for your input fields, make sure to link it correctly to the input.
+You can provide additional instructions and bind multiple ids inside an <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby"><code>aria-labelledby</code></a>. This allows for more flexible design.</p>
+<pre><code class="language-vue-html"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">fieldset</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">legend</span><span style="color:#24292E">>Using aria-labelledby&#x3C;/</span><span style="color:#22863A">legend</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">label</span><span style="color:#6F42C1"> id</span><span style="color:#24292E">=</span><span style="color:#032F62">"date-label"</span><span style="color:#6F42C1"> for</span><span style="color:#24292E">=</span><span style="color:#032F62">"date"</span><span style="color:#24292E">>Current Date: &#x3C;/</span><span style="color:#22863A">label</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">input</span></span>
+<span class="line"><span style="color:#6F42C1">    type</span><span style="color:#24292E">=</span><span style="color:#032F62">"date"</span></span>
+<span class="line"><span style="color:#6F42C1">    name</span><span style="color:#24292E">=</span><span style="color:#032F62">"date"</span></span>
+<span class="line"><span style="color:#6F42C1">    id</span><span style="color:#24292E">=</span><span style="color:#032F62">"date"</span></span>
+<span class="line"><span style="color:#6F42C1">    aria-labelledby</span><span style="color:#24292E">=</span><span style="color:#032F62">"date-label date-instructions"</span></span>
+<span class="line"><span style="color:#24292E">  /></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">p</span><span style="color:#6F42C1"> id</span><span style="color:#24292E">=</span><span style="color:#032F62">"date-instructions"</span><span style="color:#24292E">>MM/DD/YYYY&#x3C;/</span><span style="color:#22863A">p</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">&#x3C;/</span><span style="color:#22863A">fieldset</span><span style="color:#24292E">></span></span></code></pre>
+</code></pre>
+<p>Alternatively, you can attach the instructions to the input with <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby"><code>aria-describedby</code></a>:</p>
+<pre><code class="language-vue-html"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">fieldset</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">legend</span><span style="color:#24292E">>Using aria-describedby&#x3C;/</span><span style="color:#22863A">legend</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">label</span><span style="color:#6F42C1"> id</span><span style="color:#24292E">=</span><span style="color:#032F62">"dob"</span><span style="color:#6F42C1"> for</span><span style="color:#24292E">=</span><span style="color:#032F62">"dob"</span><span style="color:#24292E">>Date of Birth: &#x3C;/</span><span style="color:#22863A">label</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">input</span><span style="color:#6F42C1"> type</span><span style="color:#24292E">=</span><span style="color:#032F62">"date"</span><span style="color:#6F42C1"> name</span><span style="color:#24292E">=</span><span style="color:#032F62">"dob"</span><span style="color:#6F42C1"> id</span><span style="color:#24292E">=</span><span style="color:#032F62">"dob"</span><span style="color:#6F42C1"> aria-describedby</span><span style="color:#24292E">=</span><span style="color:#032F62">"dob-instructions"</span><span style="color:#24292E"> /></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">p</span><span style="color:#6F42C1"> id</span><span style="color:#24292E">=</span><span style="color:#032F62">"dob-instructions"</span><span style="color:#24292E">>MM/DD/YYYY&#x3C;/</span><span style="color:#22863A">p</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">&#x3C;/</span><span style="color:#22863A">fieldset</span><span style="color:#24292E">></span></span></code></pre>
+</code></pre>
+<h3>Hiding Content {#hiding-content}</h3>
+<p>Usually it is not recommended to visually hide labels, even if the input has an accessible name. However, if the functionality of the input can be understood with surrounding content, then we can hide the visual label.</p>
+<p>Let's look at this search field:</p>
+<pre><code class="language-vue-html"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">form</span><span style="color:#6F42C1"> role</span><span style="color:#24292E">=</span><span style="color:#032F62">"search"</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">label</span><span style="color:#6F42C1"> for</span><span style="color:#24292E">=</span><span style="color:#032F62">"search"</span><span style="color:#6F42C1"> class</span><span style="color:#24292E">=</span><span style="color:#032F62">"hidden-visually"</span><span style="color:#24292E">>Search: &#x3C;/</span><span style="color:#22863A">label</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">input</span><span style="color:#6F42C1"> type</span><span style="color:#24292E">=</span><span style="color:#032F62">"text"</span><span style="color:#6F42C1"> name</span><span style="color:#24292E">=</span><span style="color:#032F62">"search"</span><span style="color:#6F42C1"> id</span><span style="color:#24292E">=</span><span style="color:#032F62">"search"</span><span style="color:#6F42C1"> v-model</span><span style="color:#24292E">=</span><span style="color:#032F62">"</span><span style="color:#24292E">search</span><span style="color:#032F62">"</span><span style="color:#24292E"> /></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">button</span><span style="color:#6F42C1"> type</span><span style="color:#24292E">=</span><span style="color:#032F62">"submit"</span><span style="color:#24292E">>Search&#x3C;/</span><span style="color:#22863A">button</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">&#x3C;/</span><span style="color:#22863A">form</span><span style="color:#24292E">></span></span></code></pre>
+</code></pre>
+<p>We can do this because the search button will help visual users identify the purpose of the input field.</p>
+<p>We can use CSS to visually hide elements but keep them available for assistive technology:</p>
+<pre><code class="language-css"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#6F42C1">.hidden-visually</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#005CC5">  position</span><span style="color:#24292E">: </span><span style="color:#005CC5">absolute</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#005CC5">  overflow</span><span style="color:#24292E">: </span><span style="color:#005CC5">hidden</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#005CC5">  white-space</span><span style="color:#24292E">: </span><span style="color:#005CC5">nowrap</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#005CC5">  margin</span><span style="color:#24292E">: </span><span style="color:#005CC5">0</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#005CC5">  padding</span><span style="color:#24292E">: </span><span style="color:#005CC5">0</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#005CC5">  height</span><span style="color:#24292E">: </span><span style="color:#005CC5">1</span><span style="color:#D73A49">px</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#005CC5">  width</span><span style="color:#24292E">: </span><span style="color:#005CC5">1</span><span style="color:#D73A49">px</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#005CC5">  clip</span><span style="color:#24292E">: </span><span style="color:#005CC5">rect</span><span style="color:#24292E">(</span><span style="color:#005CC5">0</span><span style="color:#005CC5"> 0</span><span style="color:#005CC5"> 0</span><span style="color:#005CC5"> 0</span><span style="color:#24292E">);</span></span>
+<span class="line"><span style="color:#005CC5">  clip-path</span><span style="color:#24292E">: </span><span style="color:#005CC5">inset</span><span style="color:#24292E">(</span><span style="color:#005CC5">100</span><span style="color:#D73A49">%</span><span style="color:#24292E">);</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre>
+<h4><code>aria-hidden="true"</code> {#aria-hidden-true}</h4>
+<p>Adding <code>aria-hidden="true"</code> will hide the element from assistive technology but leave it visually available for other users. Do not use it on focusable elements, purely on decorative, duplicated or offscreen content.</p>
+<pre><code class="language-vue-html"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">p</span><span style="color:#24292E">>This is not hidden from screen readers.&#x3C;/</span><span style="color:#22863A">p</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">p</span><span style="color:#6F42C1"> aria-hidden</span><span style="color:#24292E">=</span><span style="color:#032F62">"true"</span><span style="color:#24292E">>This is hidden from screen readers.&#x3C;/</span><span style="color:#22863A">p</span><span style="color:#24292E">></span></span></code></pre>
+</code></pre>
+<h3>Buttons {#buttons}</h3>
+<p>When using buttons inside a form, you must set the type to prevent submitting the form.
+You can also use an input to create buttons:</p>
+<pre><code class="language-vue-html"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">form</span><span style="color:#6F42C1"> action</span><span style="color:#24292E">=</span><span style="color:#032F62">"/dataCollectionLocation"</span><span style="color:#6F42C1"> method</span><span style="color:#24292E">=</span><span style="color:#032F62">"post"</span><span style="color:#6F42C1"> autocomplete</span><span style="color:#24292E">=</span><span style="color:#032F62">"on"</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#6A737D">  &#x3C;!-- Buttons --></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">button</span><span style="color:#6F42C1"> type</span><span style="color:#24292E">=</span><span style="color:#032F62">"button"</span><span style="color:#24292E">>Cancel&#x3C;/</span><span style="color:#22863A">button</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">button</span><span style="color:#6F42C1"> type</span><span style="color:#24292E">=</span><span style="color:#032F62">"submit"</span><span style="color:#24292E">>Submit&#x3C;/</span><span style="color:#22863A">button</span><span style="color:#24292E">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">  &#x3C;!-- Input buttons --></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">input</span><span style="color:#6F42C1"> type</span><span style="color:#24292E">=</span><span style="color:#032F62">"button"</span><span style="color:#6F42C1"> value</span><span style="color:#24292E">=</span><span style="color:#032F62">"Cancel"</span><span style="color:#24292E"> /></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">input</span><span style="color:#6F42C1"> type</span><span style="color:#24292E">=</span><span style="color:#032F62">"submit"</span><span style="color:#6F42C1"> value</span><span style="color:#24292E">=</span><span style="color:#032F62">"Submit"</span><span style="color:#24292E"> /></span></span>
+<span class="line"><span style="color:#24292E">&#x3C;/</span><span style="color:#22863A">form</span><span style="color:#24292E">></span></span></code></pre>
+</code></pre>
+<h3>Functional Images {#functional-images}</h3>
+<p>You can use this technique to create functional images.</p>
+<ul>
+<li>
+<p>Input fields</p>
+<ul>
+<li>These images will act as a submit type button on forms</li>
+</ul>
+<pre><code class="language-vue-html"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">form</span><span style="color:#6F42C1"> role</span><span style="color:#24292E">=</span><span style="color:#032F62">"search"</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">label</span><span style="color:#6F42C1"> for</span><span style="color:#24292E">=</span><span style="color:#032F62">"search"</span><span style="color:#6F42C1"> class</span><span style="color:#24292E">=</span><span style="color:#032F62">"hidden-visually"</span><span style="color:#24292E">>Search: &#x3C;/</span><span style="color:#22863A">label</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">input</span><span style="color:#6F42C1"> type</span><span style="color:#24292E">=</span><span style="color:#032F62">"text"</span><span style="color:#6F42C1"> name</span><span style="color:#24292E">=</span><span style="color:#032F62">"search"</span><span style="color:#6F42C1"> id</span><span style="color:#24292E">=</span><span style="color:#032F62">"search"</span><span style="color:#6F42C1"> v-model</span><span style="color:#24292E">=</span><span style="color:#032F62">"</span><span style="color:#24292E">search</span><span style="color:#032F62">"</span><span style="color:#24292E"> /></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">input</span></span>
+<span class="line"><span style="color:#6F42C1">    type</span><span style="color:#24292E">=</span><span style="color:#032F62">"image"</span></span>
+<span class="line"><span style="color:#6F42C1">    class</span><span style="color:#24292E">=</span><span style="color:#032F62">"btnImg"</span></span>
+<span class="line"><span style="color:#6F42C1">    src</span><span style="color:#24292E">=</span><span style="color:#032F62">"https://img.icons8.com/search"</span></span>
+<span class="line"><span style="color:#6F42C1">    alt</span><span style="color:#24292E">=</span><span style="color:#032F62">"Search"</span></span>
+<span class="line"><span style="color:#24292E">  /></span></span>
+<span class="line"><span style="color:#24292E">&#x3C;/</span><span style="color:#22863A">form</span><span style="color:#24292E">></span></span></code></pre>
+</code></pre>
+</li>
+<li>
+<p>Icons</p>
+</li>
+</ul>
+<pre><code class="language-vue-html"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">form</span><span style="color:#6F42C1"> role</span><span style="color:#24292E">=</span><span style="color:#032F62">"search"</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">label</span><span style="color:#6F42C1"> for</span><span style="color:#24292E">=</span><span style="color:#032F62">"searchIcon"</span><span style="color:#6F42C1"> class</span><span style="color:#24292E">=</span><span style="color:#032F62">"hidden-visually"</span><span style="color:#24292E">>Search: &#x3C;/</span><span style="color:#22863A">label</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">input</span><span style="color:#6F42C1"> type</span><span style="color:#24292E">=</span><span style="color:#032F62">"text"</span><span style="color:#6F42C1"> name</span><span style="color:#24292E">=</span><span style="color:#032F62">"searchIcon"</span><span style="color:#6F42C1"> id</span><span style="color:#24292E">=</span><span style="color:#032F62">"searchIcon"</span><span style="color:#6F42C1"> v-model</span><span style="color:#24292E">=</span><span style="color:#032F62">"</span><span style="color:#24292E">searchIcon</span><span style="color:#032F62">"</span><span style="color:#24292E"> /></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">button</span><span style="color:#6F42C1"> type</span><span style="color:#24292E">=</span><span style="color:#032F62">"submit"</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">    &#x3C;</span><span style="color:#22863A">i</span><span style="color:#6F42C1"> class</span><span style="color:#24292E">=</span><span style="color:#032F62">"fas fa-search"</span><span style="color:#6F42C1"> aria-hidden</span><span style="color:#24292E">=</span><span style="color:#032F62">"true"</span><span style="color:#24292E">>&#x3C;/</span><span style="color:#22863A">i</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">    &#x3C;</span><span style="color:#22863A">span</span><span style="color:#6F42C1"> class</span><span style="color:#24292E">=</span><span style="color:#032F62">"hidden-visually"</span><span style="color:#24292E">>Search&#x3C;/</span><span style="color:#22863A">span</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;/</span><span style="color:#22863A">button</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">&#x3C;/</span><span style="color:#22863A">form</span><span style="color:#24292E">></span></span></code></pre>
+</code></pre>
+<h2>Standards {#standards}</h2>
+<p>The World Wide Web Consortium (W3C) Web Accessibility Initiative (WAI) develops web accessibility standards for the different components:</p>
+<ul>
+<li><a href="https://www.w3.org/WAI/standards-guidelines/uaag/">User Agent Accessibility Guidelines (UAAG)</a>
+<ul>
+<li>web browsers and media players, including some aspects of assistive technologies</li>
+</ul>
+</li>
+<li><a href="https://www.w3.org/WAI/standards-guidelines/atag/">Authoring Tool Accessibility Guidelines (ATAG)</a>
+<ul>
+<li>authoring tools</li>
+</ul>
+</li>
+<li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/">Web Content Accessibility Guidelines (WCAG)</a>
+<ul>
+<li>web content - used by developers, authoring tools, and accessibility evaluation tools</li>
+</ul>
+</li>
+</ul>
+<h3>Web Content Accessibility Guidelines (WCAG) {#web-content-accessibility-guidelines-wcag}</h3>
+<p><a href="https://www.w3.org/TR/WCAG21/">WCAG 2.1</a> extends on <a href="https://www.w3.org/TR/WCAG20/">WCAG 2.0</a> and allows implementation of new technologies by addressing changes to the web. The W3C encourages use of the most current version of WCAG when developing or updating Web accessibility policies.</p>
+<h4>WCAG 2.1 Four Main Guiding Principles (abbreviated as POUR): {#wcag-2-1-four-main-guiding-principles-abbreviated-as-pour}</h4>
+<ul>
+<li><a href="https://www.w3.org/TR/WCAG21/#perceivable">Perceivable</a>
+<ul>
+<li>Users must be able to perceive the information being presented</li>
+</ul>
+</li>
+<li><a href="https://www.w3.org/TR/WCAG21/#operable">Operable</a>
+<ul>
+<li>Interface forms, controls, and navigation are operable</li>
+</ul>
+</li>
+<li><a href="https://www.w3.org/TR/WCAG21/#understandable">Understandable</a>
+<ul>
+<li>Information and the operation of user interface must be understandable to all users</li>
+</ul>
+</li>
+<li><a href="https://www.w3.org/TR/WCAG21/#robust">Robust</a>
+<ul>
+<li>Users must be able to access the content as technologies advance</li>
+</ul>
+</li>
+</ul>
+<h4>Web Accessibility Initiative – Accessible Rich Internet Applications (WAI-ARIA) {#web-accessibility-initiative-–-accessible-rich-internet-applications-wai-aria}</h4>
+<p>W3C's WAI-ARIA provides guidance on how to build dynamic content and advanced user interface controls.</p>
+<ul>
+<li><a href="https://www.w3.org/TR/wai-aria-1.2/">Accessible Rich Internet Applications (WAI-ARIA) 1.2</a></li>
+<li><a href="https://www.w3.org/TR/wai-aria-practices-1.2/">WAI-ARIA Authoring Practices 1.2</a></li>
+</ul>
+<h2>Resources {#resources}</h2>
+<h3>Documentation {#documentation}</h3>
+<ul>
+<li><a href="https://www.w3.org/TR/WCAG20/">WCAG 2.0</a></li>
+<li><a href="https://www.w3.org/TR/WCAG21/">WCAG 2.1</a></li>
+<li><a href="https://www.w3.org/TR/wai-aria-1.2/">Accessible Rich Internet Applications (WAI-ARIA) 1.2</a></li>
+<li><a href="https://www.w3.org/TR/wai-aria-practices-1.2/">WAI-ARIA Authoring Practices 1.2</a></li>
+</ul>
+<h3>Assistive Technologies {#assistive-technologies}</h3>
+<ul>
+<li>Screen Readers
+<ul>
+<li><a href="https://www.nvaccess.org/download/">NVDA</a></li>
+<li><a href="https://www.apple.com/accessibility/mac/vision/">VoiceOver</a></li>
+<li><a href="https://www.freedomscientific.com/products/software/jaws/?utm_term=jaws%20screen%20reader&#x26;utm_source=adwords&#x26;utm_campaign=All+Products&#x26;utm_medium=ppc&#x26;hsa_tgt=kwd-394361346638&#x26;hsa_cam=200218713&#x26;hsa_ad=296201131673&#x26;hsa_kw=jaws%20screen%20reader&#x26;hsa_grp=52663682111&#x26;hsa_net=adwords&#x26;hsa_mt=e&#x26;hsa_src=g&#x26;hsa_acc=1684996396&#x26;hsa_ver=3&#x26;gclid=Cj0KCQjwnv71BRCOARIsAIkxW9HXKQ6kKNQD0q8a_1TXSJXnIuUyb65KJeTWmtS6BH96-5he9dsNq6oaAh6UEALw_wcB">JAWS</a></li>
+<li><a href="https://chrome.google.com/webstore/detail/chromevox-classic-extensi/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en">ChromeVox</a></li>
+</ul>
+</li>
+<li>Zooming Tools
+<ul>
+<li><a href="https://www.freedomscientific.com/products/software/magic/">MAGic</a></li>
+<li><a href="https://www.freedomscientific.com/products/software/zoomtext/">ZoomText</a></li>
+<li><a href="https://support.microsoft.com/en-us/help/11542/windows-use-magnifier-to-make-things-easier-to-see">Magnifier</a></li>
+</ul>
+</li>
+</ul>
+<h3>Testing {#testing}</h3>
+<ul>
+<li>Automated Tools
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk">Lighthouse</a></li>
+<li><a href="https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh">WAVE</a></li>
+<li><a href="https://chrome.google.com/webstore/detail/arc-toolkit/chdkkkccnlfncngelccgbgfmjebmkmce?hl=en-US">ARC Toolkit</a></li>
+</ul>
+</li>
+<li>Color Tools
+<ul>
+<li><a href="https://webaim.org/resources/contrastchecker/">WebAim Color Contrast</a></li>
+<li><a href="https://webaim.org/resources/linkcontrastchecker">WebAim Link Color Contrast</a></li>
+</ul>
+</li>
+<li>Other Helpful Tools
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi?hl=en%E2%80%A6">HeadingMap</a></li>
+<li><a href="https://colororacle.org">Color Oracle</a></li>
+<li><a href="https://chrome.google.com/webstore/detail/nerdefocus/lpfiljldhgjecfepfljnbjnbjfhennpd?hl=en-US%E2%80%A6">NerdeFocus</a></li>
+<li><a href="https://chrome.google.com/webstore/detail/visual-aria/lhbmajchkkmakajkjenkchhnhbadmhmk?hl=en-US">Visual Aria</a></li>
+<li><a href="https://chrome.google.com/webstore/detail/silktide-website-accessib/okcpiimdfkpkjcbihbmhppldhiebhhaf?hl=en-US">Silktide Website Accessibility Simulator</a></li>
+</ul>
+</li>
+</ul>
+<h3>Users {#users}</h3>
+<p>The World Health Organization estimates that 15% of the world's population has some form of disability, 2-4% of them severely so. That is an estimated 1 billion people worldwide; making people with disabilities the largest minority group in the world.</p>
+<p>There are a huge range of disabilities, which can be divided roughly into four categories:</p>
+<ul>
+<li><em><a href="https://webaim.org/articles/visual/">Visual</a></em> - These users can benefit from the use of screen readers, screen magnification, controlling screen contrast, or braille display.</li>
+<li><em><a href="https://webaim.org/articles/auditory/">Auditory</a></em> - These users can benefit from captioning, transcripts or sign language video.</li>
+<li><em><a href="https://webaim.org/articles/motor/">Motor</a></em> - These users can benefit from a range of <a href="https://webaim.org/articles/motor/assistive">assistive technologies for motor impairments</a>: voice recognition software, eye tracking, single-switch access, head wand, sip and puff switch, oversized trackball mouse, adaptive keyboard or other assistive technologies.</li>
+<li><em><a href="https://webaim.org/articles/cognitive/">Cognitive</a></em> - These users can benefit from supplemental media, structural organization of content, clear and simple writing.</li>
+</ul>
+<p>Check out the following links from WebAim to understand from users:</p>
+<ul>
+<li><a href="https://www.w3.org/WAI/perspective-videos/">Web Accessibility Perspectives: Explore the Impact and Benefits for Everyone</a></li>
+<li><a href="https://www.w3.org/WAI/people-use-web/user-stories/">Stories of Web Users</a></li>
+</ul></body></html>

@@ -1,0 +1,100 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "heading",
+      "depth": 1,
+      "children": [
+        {
+          "type": "text",
+          "value": "产品 A",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "安装",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "下载 A 的安装包并双击运行。",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 1,
+      "children": [
+        {
+          "type": "text",
+          "value": "产品 B",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "安装",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "使用",
+          "data": {}
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": "包管理器",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": " Homebrew ",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "安装 B。",
+          "data": {}
+        }
+      ],
+      "data": {}
+    }
+  ]
+}

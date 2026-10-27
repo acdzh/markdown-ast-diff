@@ -1,0 +1,31 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "heading",
+      "depth": 1,
+      "children": [
+        {
+          "type": "text",
+          "value": "标题",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "正文。",
+          "data": {}
+        }
+      ],
+      "data": {}
+    }
+  ],
+  "data": {
+    "diffUnchanged": true
+  }
+}

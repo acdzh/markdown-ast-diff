@@ -1,0 +1,3494 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "heading",
+      "depth": 1,
+      "children": [
+        {
+          "type": "text",
+          "value": "Accessibility {#accessibility}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Web accessibility (also known as a11y) refers to the practice of creating websites that can be used by anyone — be that a person with a disability, a slow connection, outdated or broken hardware or simply someone in an unfavorable environment. For example, adding subtitles to a video would help both your deaf and hard-of-hearing users and your users who are in a loud environment and can't hear their phone. Similarly, making sure your text isn't too low contrast will help both your low-vision users and your users who are trying to use their phone in bright sunlight.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Ready to start but aren’t sure where?",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Checkout the ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://www.w3.org/WAI/planning-and-managing/",
+          "children": [
+            {
+              "type": "text",
+              "value": "Planning and managing web accessibility guide",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " provided by ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://www.w3.org/",
+          "children": [
+            {
+              "type": "text",
+              "value": "World Wide Web Consortium (W3C)",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Skip link {#skip-link}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "You should add a link at the top of each page that goes directly to the main content area so users can skip content that is repeated on multiple Web pages.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Typically this is done on the top of ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "App.vue",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " as it will be the first focusable element on all your pages:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<span ref=\"backToTop\" tabindex=\"-1\" />\n<ul class=\"skip-links\">\n  <li>\n    <a href=\"#main\" ref=\"skipLink\" class=\"skip-link\">Skip to main content</a>\n  </li>\n</ul>",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "To hide the link unless it is focused, you can add the following style:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "css",
+      "meta": null,
+      "value": ".skip-links {\n  list-style: none;\n}\n.skip-link {\n  white-space: nowrap;\n  margin: 1em auto;\n  top: 0;\n  position: fixed;\n  left: 50%;\n  margin-left: -72px;\n  opacity: 0;\n}\n.skip-link:focus {\n  opacity: 1;\n  background-color: white;\n  padding: 0.5em;\n  border: 1px solid black;\n}",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Once a user changes route, bring focus back to the very beginning of the page, right before the skip link. This can be achieved by calling focus on the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "backToTop",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " template ref (assuming usage of ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "vue-router",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "):",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"options-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "vue",
+      "meta": null,
+      "value": "<script>\nexport default {\n  watch: {\n    $route() {\n      this.$refs.backToTop.focus()\n    }\n  }\n}\n</script>",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"composition-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "vue",
+      "meta": null,
+      "value": "<script setup>\nimport { ref, watch } from 'vue'\nimport { useRoute } from 'vue-router'\n\nconst route = useRoute()\nconst backToTop = ref()\n\nwatch(\n  () => route.path,\n  () => {\n    backToTop.value.focus()\n  }\n)\n</script>",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G1.html",
+          "children": [
+            {
+              "type": "text",
+              "value": "Read documentation on skip link to main content",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Content Structure {#content-structure}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "One of the most important pieces of accessibility is making sure that design can support accessible implementation. Design should consider not only color contrast, font selection, text sizing, and language, but also how the content is structured in the application.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Headings {#headings}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Users can navigate an application through headings. Having descriptive headings for every section of your application makes it easier for users to predict the content of each section. When it comes to headings, there are a couple of recommended accessibility practices:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Nest headings in their ranking order: ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "<h1>",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " - ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "<h6>",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Don’t skip headings within a section",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Use actual heading tags instead of styling text to give the visual appearance of headings",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-descriptive.html",
+          "children": [
+            {
+              "type": "text",
+              "value": "Read more about headings",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<main role=\"main\" aria-labelledby=\"main-title\">\n  <h1 id=\"main-title\">Main title</h1>\n  <section aria-labelledby=\"section-title-1\">\n    <h2 id=\"section-title-1\"> Section Title </h2>\n    <h3>Section Subtitle</h3>\n    <!-- Content -->\n  </section>\n  <section aria-labelledby=\"section-title-2\">\n    <h2 id=\"section-title-2\"> Section Title </h2>\n    <h3>Section Subtitle</h3>\n    <!-- Content -->\n    <h3>Section Subtitle</h3>\n    <!-- Content -->\n  </section>\n</main>",
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Landmarks {#landmarks}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/landmark_role",
+          "children": [
+            {
+              "type": "text",
+              "value": "Landmarks",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " provide programmatic access to sections within an application. Users who rely on assistive technology can navigate to each section of the application and skip over content. You can use ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles",
+          "children": [
+            {
+              "type": "text",
+              "value": "ARIA roles",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " to help you achieve this.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "table",
+      "align": [
+        null,
+        null,
+        null
+      ],
+      "children": [
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "HTML",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "ARIA Role",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Landmark Purpose",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {
+            "diffUnchanged": true
+          }
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "header",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "role=\"banner\"",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Prime heading: title of the page",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {
+            "diffUnchanged": true
+          }
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "nav",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "role=\"navigation\"",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Collection of links suitable for use when navigating the document or related documents",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {
+            "diffUnchanged": true
+          }
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "main",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "role=\"main\"",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "The main or central content of the document.",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {
+            "diffUnchanged": true
+          }
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "footer",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "role=\"contentinfo\"",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Information about the parent document: footnotes/copyrights/links to privacy statement",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {
+            "diffUnchanged": true
+          }
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "aside",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "role=\"complementary\"",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Supports the main content, yet is separated and meaningful on its own content",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {
+            "diffUnchanged": true
+          }
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "search",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "role=\"search\"",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "This section contains the search functionality for the application",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {
+            "diffUnchanged": true
+          }
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "form",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "role=\"form\"",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Collection of form-associated elements",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {
+            "diffUnchanged": true
+          }
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "section",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "role=\"region\"",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Content that is relevant and that users will likely want to navigate to. Label must be provided for this element",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {
+            "diffUnchanged": true
+          }
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://www.w3.org/TR/wai-aria-1.2/#landmark_roles",
+          "children": [
+            {
+              "type": "text",
+              "value": "Read more about landmarks",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Semantic Forms {#semantic-forms}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "When creating a form, you can use the following elements: ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<form>",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<label>",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<input>",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<textarea>",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", and ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<button>",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Labels are typically placed on top or to the left of the form fields:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<form action=\"/dataCollectionLocation\" method=\"post\" autocomplete=\"on\">\n  <div v-for=\"item in formItems\" :key=\"item.id\" class=\"form-item\">\n    <label :for=\"item.id\">{{ item.label }}: </label>\n    <input\n      :type=\"item.type\"\n      :id=\"item.id\"\n      :name=\"item.id\"\n      v-model=\"item.value\"\n    />\n  </div>\n  <button type=\"submit\">Submit</button>\n</form>",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Notice how you can include ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "autocomplete='on'",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " on the form element and it will apply to all inputs in your form. You can also set different ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete",
+          "children": [
+            {
+              "type": "text",
+              "value": "values for autocomplete attribute",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " for each input.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Labels {#labels}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Provide labels to describe the purpose of all form control; linking ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "for",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " and ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "id",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ":",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<label for=\"name\">Name: </label>\n<input type=\"text\" name=\"name\" id=\"name\" v-model=\"name\" />",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "If you inspect this element in your Chrome DevTools and open the Accessibility tab inside the Elements tab, you will see how the input gets its name from the label:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "image",
+          "title": null,
+          "url": "./images/AccessibleLabelChromeDevTools.png",
+          "alt": "Chrome Developer Tools showing input accessible name from label",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": ":::warning Warning:\nThough you might have seen labels wrapping the input fields like this:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<label>\n  Name:\n  <input type=\"text\" name=\"name\" id=\"name\" v-model=\"name\" />\n</label>",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Explicitly setting the labels with a matching id is better supported by assistive technology.\n:::",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 4,
+      "children": [
+        {
+          "type": "inlineCode",
+          "value": "aria-label",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " {#aria-label}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "You can also give the input an accessible name with ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "aria-label",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ".",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<label for=\"name\">Name: </label>\n<input\n  type=\"text\"\n  name=\"name\"\n  id=\"name\"\n  v-model=\"name\"\n  :aria-label=\"nameLabel\"\n/>",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Feel free to inspect this element in Chrome DevTools to see how the accessible name has changed:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "image",
+          "title": null,
+          "url": "./images/AccessibleARIAlabelDevTools.png",
+          "alt": "Chrome Developer Tools showing input accessible name from aria-label",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 4,
+      "children": [
+        {
+          "type": "inlineCode",
+          "value": "aria-labelledby",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " {#aria-labelledby}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Using ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "aria-labelledby",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " is similar to ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "aria-label",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " except it is used if the label text is visible on screen. It is paired to other elements by their ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "id",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " and you can link multiple ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "id",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "s:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<form\n  class=\"demo\"\n  action=\"/dataCollectionLocation\"\n  method=\"post\"\n  autocomplete=\"on\"\n>\n  <h1 id=\"billing\">Billing</h1>\n  <div class=\"form-item\">\n    <label for=\"name\">Name: </label>\n    <input\n      type=\"text\"\n      name=\"name\"\n      id=\"name\"\n      v-model=\"name\"\n      aria-labelledby=\"billing name\"\n    />\n  </div>\n  <button type=\"submit\">Submit</button>\n</form>",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "image",
+          "title": null,
+          "url": "./images/AccessibleARIAlabelledbyDevTools.png",
+          "alt": "Chrome Developer Tools showing input accessible name from aria-labelledby",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "When this pattern is used inside a reusable component, generate the IDs with\n",
+              "data": {}
+            },
+            {
+              "type": "link",
+              "title": null,
+              "url": "/api/composition-api-helpers.html#useid",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "useId()",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "text",
+              "value": " instead of hard-coding\nthem. This keeps each component instance's ",
+              "data": {}
+            },
+            {
+              "type": "inlineCode",
+              "value": "id",
+              "data": {}
+            },
+            {
+              "type": "text",
+              "value": " values unique while still\nlinking the visible text to the form control:",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "code",
+          "lang": "vue",
+          "meta": null,
+          "value": "<script setup>\nimport { useId } from 'vue'\n\nconst sectionId = useId()\nconst nameId = useId()\n</script>\n\n<template>\n  <section class=\"form-section\">\n    <h2 :id=\"sectionId\">Billing</h2>\n\n    <label :id=\"nameId\" :for=\"`${nameId}-input`\">Name: </label>\n    <input\n      :id=\"`${nameId}-input`\"\n      type=\"text\"\n      name=\"name\"\n      :aria-labelledby=\"`${sectionId} ${nameId}`\"\n    />\n  </section>\n</template>",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "depth": 4,
+      "children": [
+        {
+          "type": "inlineCode",
+          "value": "aria-describedby",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " {#aria-describedby}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby",
+          "children": [
+            {
+              "type": "text",
+              "value": "aria-describedby",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " is used the same way as ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "aria-labelledby",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " except provides a description with additional information that the user might need. This can be used to describe the criteria for any input:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<form\n  class=\"demo\"\n  action=\"/dataCollectionLocation\"\n  method=\"post\"\n  autocomplete=\"on\"\n>\n  <h1 id=\"billing\">Billing</h1>\n  <div class=\"form-item\">\n    <label for=\"name\">Full Name: </label>\n    <input\n      type=\"text\"\n      name=\"name\"\n      id=\"name\"\n      v-model=\"name\"\n      aria-labelledby=\"billing name\"\n      aria-describedby=\"nameDescription\"\n    />\n    <p id=\"nameDescription\">Please provide first and last name.</p>\n  </div>\n  <button type=\"submit\">Submit</button>\n</form>",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "You can see the description by inspecting Chrome DevTools:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "image",
+          "title": null,
+          "url": "./images/AccessibleARIAdescribedby.png",
+          "alt": "Chrome Developer Tools showing input accessible name from aria-labelledby and description with aria-describedby",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Placeholder {#placeholder}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Avoid using placeholders as they can confuse many users.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "One of the issues with placeholders is that they don't meet the ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html",
+          "children": [
+            {
+              "type": "text",
+              "value": "color contrast criteria",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " by default; fixing the color contrast makes the placeholder look like pre-populated data in the input fields. Looking at the following example, you can see that the Last Name placeholder which meets the color contrast criteria looks like pre-populated data:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "image",
+          "title": null,
+          "url": "./images/AccessiblePlaceholder.png",
+          "alt": "Accessible placeholder",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<form\n  class=\"demo\"\n  action=\"/dataCollectionLocation\"\n  method=\"post\"\n  autocomplete=\"on\"\n>\n  <div v-for=\"item in formItems\" :key=\"item.id\" class=\"form-item\">\n    <label :for=\"item.id\">{{ item.label }}: </label>\n    <input\n      type=\"text\"\n      :id=\"item.id\"\n      :name=\"item.id\"\n      v-model=\"item.value\"\n      :placeholder=\"item.placeholder\"\n    />\n  </div>\n  <button type=\"submit\">Submit</button>\n</form>",
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "css",
+      "meta": null,
+      "value": "/* https://www.w3schools.com/howto/howto_css_placeholder.asp */\n\n#lastName::placeholder {\n  /* Chrome, Firefox, Opera, Safari 10.1+ */\n  color: black;\n  opacity: 1; /* Firefox */\n}\n\n#lastName:-ms-input-placeholder {\n  /* Internet Explorer 10-11 */\n  color: black;\n}\n\n#lastName::-ms-input-placeholder {\n  /* Microsoft Edge */\n  color: black;\n}",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "It is best to provide all the information the user needs to fill out forms outside any inputs.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Instructions {#instructions}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "When adding instructions for your input fields, make sure to link it correctly to the input.\nYou can provide additional instructions and bind multiple ids inside an ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "aria-labelledby",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ". This allows for more flexible design.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<fieldset>\n  <legend>Using aria-labelledby</legend>\n  <label id=\"date-label\" for=\"date\">Current Date: </label>\n  <input\n    type=\"date\"\n    name=\"date\"\n    id=\"date\"\n    aria-labelledby=\"date-label date-instructions\"\n  />\n  <p id=\"date-instructions\">MM/DD/YYYY</p>\n</fieldset>",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Alternatively, you can attach the instructions to the input with ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "aria-describedby",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ":",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<fieldset>\n  <legend>Using aria-describedby</legend>\n  <label id=\"dob\" for=\"dob\">Date of Birth: </label>\n  <input type=\"date\" name=\"dob\" id=\"dob\" aria-describedby=\"dob-instructions\" />\n  <p id=\"dob-instructions\">MM/DD/YYYY</p>\n</fieldset>",
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Hiding Content {#hiding-content}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Usually it is not recommended to visually hide labels, even if the input has an accessible name. However, if the functionality of the input can be understood with surrounding content, then we can hide the visual label.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Let's look at this search field:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<form role=\"search\">\n  <label for=\"search\" class=\"hidden-visually\">Search: </label>\n  <input type=\"text\" name=\"search\" id=\"search\" v-model=\"search\" />\n  <button type=\"submit\">Search</button>\n</form>",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "We can do this because the search button will help visual users identify the purpose of the input field.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "We can use CSS to visually hide elements but keep them available for assistive technology:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "css",
+      "meta": null,
+      "value": ".hidden-visually {\n  position: absolute;\n  overflow: hidden;\n  white-space: nowrap;\n  margin: 0;\n  padding: 0;\n  height: 1px;\n  width: 1px;\n  clip: rect(0 0 0 0);\n  clip-path: inset(100%);\n}",
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 4,
+      "children": [
+        {
+          "type": "inlineCode",
+          "value": "aria-hidden=\"true\"",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " {#aria-hidden-true}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Adding ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "aria-hidden=\"true\"",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " will hide the element from assistive technology but leave it visually available for other users. Do not use it on focusable elements, purely on decorative, duplicated or offscreen content.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<p>This is not hidden from screen readers.</p>\n<p aria-hidden=\"true\">This is hidden from screen readers.</p>",
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Buttons {#buttons}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "When using buttons inside a form, you must set the type to prevent submitting the form.\nYou can also use an input to create buttons:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<form action=\"/dataCollectionLocation\" method=\"post\" autocomplete=\"on\">\n  <!-- Buttons -->\n  <button type=\"button\">Cancel</button>\n  <button type=\"submit\">Submit</button>\n\n  <!-- Input buttons -->\n  <input type=\"button\" value=\"Cancel\" />\n  <input type=\"submit\" value=\"Submit\" />\n</form>",
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Functional Images {#functional-images}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "You can use this technique to create functional images.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": true,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": true,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Input fields",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "start": null,
+              "spread": false,
+              "children": [
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "These images will act as a submit type button on forms",
+                          "data": {}
+                        }
+                      ]
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {
+                "diffUnchanged": true
+              }
+            },
+            {
+              "type": "code",
+              "lang": "vue-html",
+              "meta": null,
+              "value": "<form role=\"search\">\n  <label for=\"search\" class=\"hidden-visually\">Search: </label>\n  <input type=\"text\" name=\"search\" id=\"search\" v-model=\"search\" />\n  <input\n    type=\"image\"\n    class=\"btnImg\"\n    src=\"https://img.icons8.com/search\"\n    alt=\"Search\"\n  />\n</form>",
+              "data": {}
+            }
+          ],
+          "data": {
+            "diffUnchanged": true
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Icons",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<form role=\"search\">\n  <label for=\"searchIcon\" class=\"hidden-visually\">Search: </label>\n  <input type=\"text\" name=\"searchIcon\" id=\"searchIcon\" v-model=\"searchIcon\" />\n  <button type=\"submit\">\n    <i class=\"fas fa-search\" aria-hidden=\"true\"></i>\n    <span class=\"hidden-visually\">Search</span>\n  </button>\n</form>",
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Standards {#standards}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "The World Wide Web Consortium (W3C) Web Accessibility Initiative (WAI) develops web accessibility standards for the different components:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://www.w3.org/WAI/standards-guidelines/uaag/",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "User Agent Accessibility Guidelines (UAAG)",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "start": null,
+              "spread": false,
+              "children": [
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "web browsers and media players, including some aspects of assistive technologies",
+                          "data": {}
+                        }
+                      ]
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {
+                "diffUnchanged": true
+              }
+            }
+          ],
+          "data": {
+            "diffUnchanged": true
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://www.w3.org/WAI/standards-guidelines/atag/",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Authoring Tool Accessibility Guidelines (ATAG)",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "start": null,
+              "spread": false,
+              "children": [
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "authoring tools",
+                          "data": {}
+                        }
+                      ]
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {
+                "diffUnchanged": true
+              }
+            }
+          ],
+          "data": {
+            "diffUnchanged": true
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://www.w3.org/WAI/standards-guidelines/wcag/",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Web Content Accessibility Guidelines (WCAG)",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "start": null,
+              "spread": false,
+              "children": [
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "web content - used by developers, authoring tools, and accessibility evaluation tools",
+                          "data": {}
+                        }
+                      ]
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {
+                "diffUnchanged": true
+              }
+            }
+          ],
+          "data": {
+            "diffUnchanged": true
+          }
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Web Content Accessibility Guidelines (WCAG) {#web-content-accessibility-guidelines-wcag}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://www.w3.org/TR/WCAG21/",
+          "children": [
+            {
+              "type": "text",
+              "value": "WCAG 2.1",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " extends on ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://www.w3.org/TR/WCAG20/",
+          "children": [
+            {
+              "type": "text",
+              "value": "WCAG 2.0",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " and allows implementation of new technologies by addressing changes to the web. The W3C encourages use of the most current version of WCAG when developing or updating Web accessibility policies.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 4,
+      "children": [
+        {
+          "type": "text",
+          "value": "WCAG 2.1 Four Main Guiding Principles (abbreviated as POUR): {#wcag-2-1-four-main-guiding-principles-abbreviated-as-pour}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://www.w3.org/TR/WCAG21/#perceivable",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Perceivable",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "start": null,
+              "spread": false,
+              "children": [
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Users must be able to perceive the information being presented",
+                          "data": {}
+                        }
+                      ]
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {
+                "diffUnchanged": true
+              }
+            }
+          ],
+          "data": {
+            "diffUnchanged": true
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://www.w3.org/TR/WCAG21/#operable",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Operable",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "start": null,
+              "spread": false,
+              "children": [
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Interface forms, controls, and navigation are operable",
+                          "data": {}
+                        }
+                      ]
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {
+                "diffUnchanged": true
+              }
+            }
+          ],
+          "data": {
+            "diffUnchanged": true
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://www.w3.org/TR/WCAG21/#understandable",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Understandable",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "start": null,
+              "spread": false,
+              "children": [
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Information and the operation of user interface must be understandable to all users",
+                          "data": {}
+                        }
+                      ]
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {
+                "diffUnchanged": true
+              }
+            }
+          ],
+          "data": {
+            "diffUnchanged": true
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://www.w3.org/TR/WCAG21/#robust",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Robust",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "start": null,
+              "spread": false,
+              "children": [
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Users must be able to access the content as technologies advance",
+                          "data": {}
+                        }
+                      ]
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {
+                "diffUnchanged": true
+              }
+            }
+          ],
+          "data": {
+            "diffUnchanged": true
+          }
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 4,
+      "children": [
+        {
+          "type": "text",
+          "value": "Web Accessibility Initiative – Accessible Rich Internet Applications (WAI-ARIA) {#web-accessibility-initiative-–-accessible-rich-internet-applications-wai-aria}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "W3C's WAI-ARIA provides guidance on how to build dynamic content and advanced user interface controls.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://www.w3.org/TR/wai-aria-1.2/",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Accessible Rich Internet Applications (WAI-ARIA) 1.2",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://www.w3.org/TR/wai-aria-practices-1.2/",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "WAI-ARIA Authoring Practices 1.2",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Resources {#resources}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Documentation {#documentation}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://www.w3.org/TR/WCAG20/",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "WCAG 2.0",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://www.w3.org/TR/WCAG21/",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "WCAG 2.1",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://www.w3.org/TR/wai-aria-1.2/",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Accessible Rich Internet Applications (WAI-ARIA) 1.2",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://www.w3.org/TR/wai-aria-practices-1.2/",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "WAI-ARIA Authoring Practices 1.2",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Assistive Technologies {#assistive-technologies}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Screen Readers",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "start": null,
+              "spread": false,
+              "children": [
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "link",
+                          "title": null,
+                          "url": "https://www.nvaccess.org/download/",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "NVDA",
+                              "data": {}
+                            }
+                          ],
+                          "data": {}
+                        }
+                      ]
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "link",
+                          "title": null,
+                          "url": "https://www.apple.com/accessibility/mac/vision/",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "VoiceOver",
+                              "data": {}
+                            }
+                          ],
+                          "data": {}
+                        }
+                      ]
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "link",
+                          "title": null,
+                          "url": "https://www.freedomscientific.com/products/software/jaws/?utm_term=jaws%20screen%20reader&utm_source=adwords&utm_campaign=All+Products&utm_medium=ppc&hsa_tgt=kwd-394361346638&hsa_cam=200218713&hsa_ad=296201131673&hsa_kw=jaws%20screen%20reader&hsa_grp=52663682111&hsa_net=adwords&hsa_mt=e&hsa_src=g&hsa_acc=1684996396&hsa_ver=3&gclid=Cj0KCQjwnv71BRCOARIsAIkxW9HXKQ6kKNQD0q8a_1TXSJXnIuUyb65KJeTWmtS6BH96-5he9dsNq6oaAh6UEALw_wcB",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "JAWS",
+                              "data": {}
+                            }
+                          ],
+                          "data": {}
+                        }
+                      ]
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "link",
+                          "title": null,
+                          "url": "https://chrome.google.com/webstore/detail/chromevox-classic-extensi/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "ChromeVox",
+                              "data": {}
+                            }
+                          ],
+                          "data": {}
+                        }
+                      ]
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {
+                "diffUnchanged": true
+              }
+            }
+          ],
+          "data": {
+            "diffUnchanged": true
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Zooming Tools",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "start": null,
+              "spread": false,
+              "children": [
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "link",
+                          "title": null,
+                          "url": "https://www.freedomscientific.com/products/software/magic/",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "MAGic",
+                              "data": {}
+                            }
+                          ],
+                          "data": {}
+                        }
+                      ]
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "link",
+                          "title": null,
+                          "url": "https://www.freedomscientific.com/products/software/zoomtext/",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "ZoomText",
+                              "data": {}
+                            }
+                          ],
+                          "data": {}
+                        }
+                      ]
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "link",
+                          "title": null,
+                          "url": "https://support.microsoft.com/en-us/help/11542/windows-use-magnifier-to-make-things-easier-to-see",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Magnifier",
+                              "data": {}
+                            }
+                          ],
+                          "data": {}
+                        }
+                      ]
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {
+                "diffUnchanged": true
+              }
+            }
+          ],
+          "data": {
+            "diffUnchanged": true
+          }
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Testing {#testing}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Automated Tools",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "start": null,
+              "spread": false,
+              "children": [
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "link",
+                          "title": null,
+                          "url": "https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Lighthouse",
+                              "data": {}
+                            }
+                          ],
+                          "data": {}
+                        }
+                      ]
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "link",
+                          "title": null,
+                          "url": "https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "WAVE",
+                              "data": {}
+                            }
+                          ],
+                          "data": {}
+                        }
+                      ]
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "link",
+                          "title": null,
+                          "url": "https://chrome.google.com/webstore/detail/arc-toolkit/chdkkkccnlfncngelccgbgfmjebmkmce?hl=en-US",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "ARC Toolkit",
+                              "data": {}
+                            }
+                          ],
+                          "data": {}
+                        }
+                      ]
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {
+                "diffUnchanged": true
+              }
+            }
+          ],
+          "data": {
+            "diffUnchanged": true
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Color Tools",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "start": null,
+              "spread": false,
+              "children": [
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "link",
+                          "title": null,
+                          "url": "https://webaim.org/resources/contrastchecker/",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "WebAim Color Contrast",
+                              "data": {}
+                            }
+                          ],
+                          "data": {}
+                        }
+                      ]
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "link",
+                          "title": null,
+                          "url": "https://webaim.org/resources/linkcontrastchecker",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "WebAim Link Color Contrast",
+                              "data": {}
+                            }
+                          ],
+                          "data": {}
+                        }
+                      ]
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {
+                "diffUnchanged": true
+              }
+            }
+          ],
+          "data": {
+            "diffUnchanged": true
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Other Helpful Tools",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "start": null,
+              "spread": false,
+              "children": [
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "link",
+                          "title": null,
+                          "url": "https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi?hl=en…",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "HeadingMap",
+                              "data": {}
+                            }
+                          ],
+                          "data": {}
+                        }
+                      ]
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "link",
+                          "title": null,
+                          "url": "https://colororacle.org",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Color Oracle",
+                              "data": {}
+                            }
+                          ],
+                          "data": {}
+                        }
+                      ]
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "link",
+                          "title": null,
+                          "url": "https://chrome.google.com/webstore/detail/nerdefocus/lpfiljldhgjecfepfljnbjnbjfhennpd?hl=en-US…",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "NerdeFocus",
+                              "data": {}
+                            }
+                          ],
+                          "data": {}
+                        }
+                      ]
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "link",
+                          "title": null,
+                          "url": "https://chrome.google.com/webstore/detail/visual-aria/lhbmajchkkmakajkjenkchhnhbadmhmk?hl=en-US",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Visual Aria",
+                              "data": {}
+                            }
+                          ],
+                          "data": {}
+                        }
+                      ]
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "link",
+                          "title": null,
+                          "url": "https://chrome.google.com/webstore/detail/silktide-website-accessib/okcpiimdfkpkjcbihbmhppldhiebhhaf?hl=en-US",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Silktide Website Accessibility Simulator",
+                              "data": {}
+                            }
+                          ],
+                          "data": {}
+                        }
+                      ]
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {
+                "diffUnchanged": true
+              }
+            }
+          ],
+          "data": {
+            "diffUnchanged": true
+          }
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Users {#users}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "The World Health Organization estimates that 15% of the world's population has some form of disability, 2-4% of them severely so. That is an estimated 1 billion people worldwide; making people with disabilities the largest minority group in the world.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "There are a huge range of disabilities, which can be divided roughly into four categories:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "emphasis",
+                  "children": [
+                    {
+                      "type": "link",
+                      "title": null,
+                      "url": "https://webaim.org/articles/visual/",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Visual",
+                          "data": {}
+                        }
+                      ],
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " - These users can benefit from the use of screen readers, screen magnification, controlling screen contrast, or braille display.",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "emphasis",
+                  "children": [
+                    {
+                      "type": "link",
+                      "title": null,
+                      "url": "https://webaim.org/articles/auditory/",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Auditory",
+                          "data": {}
+                        }
+                      ],
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " - These users can benefit from captioning, transcripts or sign language video.",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "emphasis",
+                  "children": [
+                    {
+                      "type": "link",
+                      "title": null,
+                      "url": "https://webaim.org/articles/motor/",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Motor",
+                          "data": {}
+                        }
+                      ],
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " - These users can benefit from a range of ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://webaim.org/articles/motor/assistive",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "assistive technologies for motor impairments",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ": voice recognition software, eye tracking, single-switch access, head wand, sip and puff switch, oversized trackball mouse, adaptive keyboard or other assistive technologies.",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "emphasis",
+                  "children": [
+                    {
+                      "type": "link",
+                      "title": null,
+                      "url": "https://webaim.org/articles/cognitive/",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Cognitive",
+                          "data": {}
+                        }
+                      ],
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " - These users can benefit from supplemental media, structural organization of content, clear and simple writing.",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Check out the following links from WebAim to understand from users:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://www.w3.org/WAI/perspective-videos/",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Web Accessibility Perspectives: Explore the Impact and Benefits for Everyone",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://www.w3.org/WAI/people-use-web/user-stories/",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Stories of Web Users",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    }
+  ]
+}

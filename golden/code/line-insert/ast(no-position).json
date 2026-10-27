@@ -1,0 +1,15 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "code",
+      "lang": "python",
+      "meta": null,
+      "value": "def calculate_sum(a, b):\n    if not isinstance(a, int):\n        raise TypeError(\"a must be int\")\n    return a + b",
+      "data": {
+        "diffOldContent": "def calculate_sum(a, b):\n    return a + b"
+      }
+    }
+  ],
+  "data": {}
+}

@@ -1,0 +1,37 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "第一项",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    }
+  ],
+  "data": {
+    "diffUnchanged": true
+  }
+}

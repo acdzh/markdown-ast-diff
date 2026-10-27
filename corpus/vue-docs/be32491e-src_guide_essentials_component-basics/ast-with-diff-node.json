@@ -1,0 +1,7250 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "heading",
+      "depth": 1,
+      "children": [
+        {
+          "type": "text",
+          "value": "Components Basics {#components-basics}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 41,
+          "offset": 40
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<ScrimbaLink href=\"https://scrimba.com/links/vue-component-basics\" title=\"Free Vue.js Components Basics Lesson\" type=\"scrimba\">\n  Watch an interactive video lesson on Scrimba\n</ScrimbaLink>",
+      "position": {
+        "start": {
+          "line": 3,
+          "column": 1,
+          "offset": 42
+        },
+        "end": {
+          "line": 5,
+          "column": 15,
+          "offset": 231
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Components allow us to split the UI into independent and reusable pieces, and think about each piece in isolation. It's common for an app to be organized into a tree of nested components:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 7,
+          "column": 1,
+          "offset": 233
+        },
+        "end": {
+          "line": 7,
+          "column": 188,
+          "offset": 420
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "image",
+          "title": null,
+          "url": "./images/components.png",
+          "alt": "Diagram showing a component tree structure with a root component branching into multiple child and nested sub-child components",
+          "position": {
+            "start": {
+              "line": 9,
+              "column": 1,
+              "offset": 422
+            },
+            "end": {
+              "line": 9,
+              "column": 155,
+              "offset": 576
+            }
+          },
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 9,
+          "column": 1,
+          "offset": 422
+        },
+        "end": {
+          "line": 9,
+          "column": 155,
+          "offset": 576
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<!-- https://www.figma.com/file/qa7WHDQRWuEZNRs7iZRZSI/components -->",
+      "position": {
+        "start": {
+          "line": 11,
+          "column": 1,
+          "offset": 578
+        },
+        "end": {
+          "line": 11,
+          "column": 70,
+          "offset": 647
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "This is very similar to how we nest native HTML elements, but Vue implements its own component model that allows us to encapsulate custom content and logic in each component. Vue also plays nicely with native Web Components. If you are curious about the relationship between Vue Components and native Web Components, ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/guide/extras/web-components",
+          "children": [
+            {
+              "type": "text",
+              "value": "read more here",
+              "position": {
+                "start": {
+                  "line": 13,
+                  "column": 319,
+                  "offset": 967
+                },
+                "end": {
+                  "line": 13,
+                  "column": 333,
+                  "offset": 981
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 13,
+              "column": 318,
+              "offset": 966
+            },
+            "end": {
+              "line": 13,
+              "column": 364,
+              "offset": 1012
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ".",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 13,
+          "column": 1,
+          "offset": 649
+        },
+        "end": {
+          "line": 13,
+          "column": 365,
+          "offset": 1013
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Defining a Component {#defining-a-component}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 15,
+          "column": 1,
+          "offset": 1015
+        },
+        "end": {
+          "line": 15,
+          "column": 48,
+          "offset": 1062
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "When using a build step, we typically define each Vue component in a dedicated file using the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": ".vue",
+          "position": {
+            "start": {
+              "line": 17,
+              "column": 95,
+              "offset": 1158
+            },
+            "end": {
+              "line": 17,
+              "column": 101,
+              "offset": 1164
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " extension - known as a ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/guide/scaling-up/sfc",
+          "children": [
+            {
+              "type": "text",
+              "value": "Single-File Component",
+              "position": {
+                "start": {
+                  "line": 17,
+                  "column": 126,
+                  "offset": 1189
+                },
+                "end": {
+                  "line": 17,
+                  "column": 147,
+                  "offset": 1210
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 17,
+              "column": 125,
+              "offset": 1188
+            },
+            "end": {
+              "line": 17,
+              "column": 171,
+              "offset": 1234
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " (SFC for short):",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 17,
+          "column": 1,
+          "offset": 1064
+        },
+        "end": {
+          "line": 17,
+          "column": 188,
+          "offset": 1251
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"options-api\">",
+      "position": {
+        "start": {
+          "line": 19,
+          "column": 1,
+          "offset": 1253
+        },
+        "end": {
+          "line": 19,
+          "column": 26,
+          "offset": 1278
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "vue",
+      "meta": null,
+      "value": "<script>\nexport default {\n  data() {\n    return {\n      count: 0\n    }\n  }\n}\n</script>\n\n<template>\n  <button @click=\"count++\">You clicked me {{ count }} times.</button>\n</template>",
+      "position": {
+        "start": {
+          "line": 21,
+          "column": 1,
+          "offset": 1280
+        },
+        "end": {
+          "line": 35,
+          "column": 4,
+          "offset": 1471
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"composition-api\">",
+      "position": {
+        "start": {
+          "line": 37,
+          "column": 1,
+          "offset": 1473
+        },
+        "end": {
+          "line": 38,
+          "column": 30,
+          "offset": 1509
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "vue",
+      "meta": null,
+      "value": "<script setup>\nimport { ref } from 'vue'\n\nconst count = ref(0)\n</script>\n\n<template>\n  <button @click=\"count++\">You clicked me {{ count }} times.</button>\n</template>",
+      "position": {
+        "start": {
+          "line": 40,
+          "column": 1,
+          "offset": 1511
+        },
+        "end": {
+          "line": 50,
+          "column": 4,
+          "offset": 1688
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "position": {
+        "start": {
+          "line": 52,
+          "column": 1,
+          "offset": 1690
+        },
+        "end": {
+          "line": 52,
+          "column": 7,
+          "offset": 1696
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "When not using a build step, a Vue component can be defined as a plain JavaScript object containing Vue-specific options:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 54,
+          "column": 1,
+          "offset": 1698
+        },
+        "end": {
+          "line": 54,
+          "column": 122,
+          "offset": 1819
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"options-api\">",
+      "position": {
+        "start": {
+          "line": 56,
+          "column": 1,
+          "offset": 1821
+        },
+        "end": {
+          "line": 56,
+          "column": 26,
+          "offset": 1846
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "export default {\n  data() {\n    return {\n      count: 0\n    }\n  },\n  template: `\n    <button @click=\"count++\">\n      You clicked me {{ count }} times.\n    </button>`\n}",
+      "position": {
+        "start": {
+          "line": 58,
+          "column": 1,
+          "offset": 1848
+        },
+        "end": {
+          "line": 70,
+          "column": 4,
+          "offset": 2025
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"composition-api\">",
+      "position": {
+        "start": {
+          "line": 72,
+          "column": 1,
+          "offset": 2027
+        },
+        "end": {
+          "line": 73,
+          "column": 30,
+          "offset": 2063
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "import { ref } from 'vue'\n\nexport default {\n  setup() {\n    const count = ref(0)\n    return { count }\n  },\n  template: `\n    <button @click=\"count++\">\n      You clicked me {{ count }} times.\n    </button>`\n  // Can also target an in-DOM template:\n  // template: '#my-template-element'\n}",
+      "position": {
+        "start": {
+          "line": 75,
+          "column": 1,
+          "offset": 2065
+        },
+        "end": {
+          "line": 90,
+          "column": 4,
+          "offset": 2361
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "position": {
+        "start": {
+          "line": 92,
+          "column": 1,
+          "offset": 2363
+        },
+        "end": {
+          "line": 92,
+          "column": 7,
+          "offset": 2369
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "The template is inlined as a JavaScript string here, which Vue will compile on the fly. You can also use an ID selector pointing to an element (usually native ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<template>",
+          "position": {
+            "start": {
+              "line": 94,
+              "column": 160,
+              "offset": 2530
+            },
+            "end": {
+              "line": 94,
+              "column": 172,
+              "offset": 2542
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " elements) - Vue will use its content as the template source.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 94,
+          "column": 1,
+          "offset": 2371
+        },
+        "end": {
+          "line": 94,
+          "column": 233,
+          "offset": 2603
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "The example above defines a single component and exports it as the default export of a ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": ".js",
+          "position": {
+            "start": {
+              "line": 96,
+              "column": 88,
+              "offset": 2692
+            },
+            "end": {
+              "line": 96,
+              "column": 93,
+              "offset": 2697
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " file, but you can use named exports to export multiple components from the same file.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 96,
+          "column": 1,
+          "offset": 2605
+        },
+        "end": {
+          "line": 96,
+          "column": 179,
+          "offset": 2783
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Using a Component {#using-a-component}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 98,
+          "column": 1,
+          "offset": 2785
+        },
+        "end": {
+          "line": 98,
+          "column": 42,
+          "offset": 2826
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": ":::tip\nWe will be using SFC syntax for the rest of this guide - the concepts around components are the same regardless of whether you are using a build step or not. The ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/examples/",
+          "children": [
+            {
+              "type": "text",
+              "value": "Examples",
+              "position": {
+                "start": {
+                  "line": 101,
+                  "column": 164,
+                  "offset": 2998
+                },
+                "end": {
+                  "line": 101,
+                  "column": 172,
+                  "offset": 3006
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 101,
+              "column": 163,
+              "offset": 2997
+            },
+            "end": {
+              "line": 101,
+              "column": 185,
+              "offset": 3019
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " section shows component usage in both scenarios.\n:::",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 100,
+          "column": 1,
+          "offset": 2828
+        },
+        "end": {
+          "line": 102,
+          "column": 4,
+          "offset": 3072
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "To use a child component, we need to import it in the parent component. Assuming we placed our counter component inside a file called ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "ButtonCounter.vue",
+          "position": {
+            "start": {
+              "line": 104,
+              "column": 135,
+              "offset": 3208
+            },
+            "end": {
+              "line": 104,
+              "column": 154,
+              "offset": 3227
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", the component will be exposed as the file's default export:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 104,
+          "column": 1,
+          "offset": 3074
+        },
+        "end": {
+          "line": 104,
+          "column": 215,
+          "offset": 3288
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"options-api\">",
+      "position": {
+        "start": {
+          "line": 106,
+          "column": 1,
+          "offset": 3290
+        },
+        "end": {
+          "line": 106,
+          "column": 26,
+          "offset": 3315
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "vue",
+      "meta": null,
+      "value": "<script>\nimport ButtonCounter from './ButtonCounter.vue'\n\nexport default {\n  components: {\n    ButtonCounter\n  }\n}\n</script>\n\n<template>\n  <h1>Here is a child component!</h1>\n  <ButtonCounter />\n</template>",
+      "position": {
+        "start": {
+          "line": 108,
+          "column": 1,
+          "offset": 3317
+        },
+        "end": {
+          "line": 123,
+          "column": 4,
+          "offset": 3534
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "To expose the imported component to our template, we need to ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/guide/components/registration",
+          "children": [
+            {
+              "type": "text",
+              "value": "register",
+              "position": {
+                "start": {
+                  "line": 125,
+                  "column": 63,
+                  "offset": 3598
+                },
+                "end": {
+                  "line": 125,
+                  "column": 71,
+                  "offset": 3606
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 125,
+              "column": 62,
+              "offset": 3597
+            },
+            "end": {
+              "line": 125,
+              "column": 104,
+              "offset": 3639
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " it with the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "components",
+          "position": {
+            "start": {
+              "line": 125,
+              "column": 117,
+              "offset": 3652
+            },
+            "end": {
+              "line": 125,
+              "column": 129,
+              "offset": 3664
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " option. The component will then be available as a tag using the key it is registered under.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 125,
+          "column": 1,
+          "offset": 3536
+        },
+        "end": {
+          "line": 125,
+          "column": 221,
+          "offset": 3756
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "position": {
+        "start": {
+          "line": 127,
+          "column": 1,
+          "offset": 3758
+        },
+        "end": {
+          "line": 127,
+          "column": 7,
+          "offset": 3764
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"composition-api\">",
+      "position": {
+        "start": {
+          "line": 129,
+          "column": 1,
+          "offset": 3766
+        },
+        "end": {
+          "line": 129,
+          "column": 30,
+          "offset": 3795
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "vue",
+      "meta": null,
+      "value": "<script setup>\nimport ButtonCounter from './ButtonCounter.vue'\n</script>\n\n<template>\n  <h1>Here is a child component!</h1>\n  <ButtonCounter />\n</template>",
+      "position": {
+        "start": {
+          "line": 131,
+          "column": 1,
+          "offset": 3797
+        },
+        "end": {
+          "line": 140,
+          "column": 4,
+          "offset": 3962
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "With ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<script setup>",
+          "position": {
+            "start": {
+              "line": 142,
+              "column": 6,
+              "offset": 3969
+            },
+            "end": {
+              "line": 142,
+              "column": 22,
+              "offset": 3985
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", imported components are automatically made available to the template.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 142,
+          "column": 1,
+          "offset": 3964
+        },
+        "end": {
+          "line": 142,
+          "column": 93,
+          "offset": 4056
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "position": {
+        "start": {
+          "line": 144,
+          "column": 1,
+          "offset": 4058
+        },
+        "end": {
+          "line": 144,
+          "column": 7,
+          "offset": 4064
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "It's also possible to globally register a component, making it available to all components in a given app without having to import it. The pros and cons of global vs. local registration is discussed in the dedicated ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/guide/components/registration",
+          "children": [
+            {
+              "type": "text",
+              "value": "Component Registration",
+              "position": {
+                "start": {
+                  "line": 146,
+                  "column": 218,
+                  "offset": 4283
+                },
+                "end": {
+                  "line": 146,
+                  "column": 240,
+                  "offset": 4305
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 146,
+              "column": 217,
+              "offset": 4282
+            },
+            "end": {
+              "line": 146,
+              "column": 273,
+              "offset": 4338
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " section.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 146,
+          "column": 1,
+          "offset": 4066
+        },
+        "end": {
+          "line": 146,
+          "column": 282,
+          "offset": 4347
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Components can be reused as many times as you want:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 148,
+          "column": 1,
+          "offset": 4349
+        },
+        "end": {
+          "line": 148,
+          "column": 52,
+          "offset": 4400
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<h1>Here are many child components!</h1>\n<ButtonCounter />\n<ButtonCounter />\n<ButtonCounter />",
+      "position": {
+        "start": {
+          "line": 150,
+          "column": 1,
+          "offset": 4402
+        },
+        "end": {
+          "line": 155,
+          "column": 4,
+          "offset": 4512
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"options-api\">",
+      "position": {
+        "start": {
+          "line": 157,
+          "column": 1,
+          "offset": 4514
+        },
+        "end": {
+          "line": 157,
+          "column": 26,
+          "offset": 4539
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://play.vuejs.org/#eNqVUE1LxDAQ/StjLqusNHotcfHj4l8QcontLBtsJiGdiFL6301SdrEqyEJyeG9m3ps3k3gIoXlPKFqhxi7awDtN1gUfGR4Ts6cnn4gxwj56B5tGrtgyutEEoAk/6lCPe5MGhqmwnc9KhMRjuxCwFi3UrCk/JU/uGTC6MBjGglgdbnfPGBFM/s7QJ3QHO/TfxC+UzD21d72zPItU8uQrrsWvnKsT/ZW2N2wur45BI3KKdETlFlmphZsF58j/RgdQr3UJuO8G273daVFFtlstahngxSeoNezBIUzTYgPzDGwdjk1VkYvMj4jzF0nwsyQ=",
+          "children": [
+            {
+              "type": "text",
+              "value": "Try it in the Playground",
+              "position": {
+                "start": {
+                  "line": 159,
+                  "column": 2,
+                  "offset": 4542
+                },
+                "end": {
+                  "line": 159,
+                  "column": 26,
+                  "offset": 4566
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 159,
+              "column": 1,
+              "offset": 4541
+            },
+            "end": {
+              "line": 159,
+              "column": 373,
+              "offset": 4913
+            }
+          },
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 159,
+          "column": 1,
+          "offset": 4541
+        },
+        "end": {
+          "line": 159,
+          "column": 373,
+          "offset": 4913
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"composition-api\">",
+      "position": {
+        "start": {
+          "line": 161,
+          "column": 1,
+          "offset": 4915
+        },
+        "end": {
+          "line": 162,
+          "column": 30,
+          "offset": 4951
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://play.vuejs.org/#eNqVj91KAzEQhV/lmJsqlY3eSlr8ufEVhNys6ZQGNz8kE0GWfXez2SJUsdCLuZiZM9+ZM4qnGLvPQuJBqGySjYxMXOJWe+tiSIznwhz8SyieKWGfgsOqkyfTGbDSXsmFUG9rw+Ti0DPNHavD/faVEqGv5Xr/BXOwww4mVBNPnvOVklXTtKeO8qKhkj++4lb8+fL/mCMS7TEdAy6BtDfBZ65fVgA2s+L67uZMUEC9N0s8msGaj40W7Xa91qKtgbdQ0Ha0gyOM45E+TWDrKHeNIhfMr0DTN4U0me8=",
+          "children": [
+            {
+              "type": "text",
+              "value": "Try it in the Playground",
+              "position": {
+                "start": {
+                  "line": 164,
+                  "column": 2,
+                  "offset": 4954
+                },
+                "end": {
+                  "line": 164,
+                  "column": 26,
+                  "offset": 4978
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 164,
+              "column": 1,
+              "offset": 4953
+            },
+            "end": {
+              "line": 164,
+              "column": 345,
+              "offset": 5297
+            }
+          },
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 164,
+          "column": 1,
+          "offset": 4953
+        },
+        "end": {
+          "line": 164,
+          "column": 345,
+          "offset": 5297
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "position": {
+        "start": {
+          "line": 166,
+          "column": 1,
+          "offset": 5299
+        },
+        "end": {
+          "line": 166,
+          "column": 7,
+          "offset": 5305
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Notice that when clicking on the buttons, each one maintains its own, separate ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "count",
+          "position": {
+            "start": {
+              "line": 168,
+              "column": 80,
+              "offset": 5386
+            },
+            "end": {
+              "line": 168,
+              "column": 87,
+              "offset": 5393
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ". That's because each time you use a component, a new ",
+          "data": {}
+        },
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "instance",
+              "position": {
+                "start": {
+                  "line": 168,
+                  "column": 143,
+                  "offset": 5449
+                },
+                "end": {
+                  "line": 168,
+                  "column": 151,
+                  "offset": 5457
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 168,
+              "column": 141,
+              "offset": 5447
+            },
+            "end": {
+              "line": 168,
+              "column": 153,
+              "offset": 5459
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " of it is created.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 168,
+          "column": 1,
+          "offset": 5307
+        },
+        "end": {
+          "line": 168,
+          "column": 171,
+          "offset": 5477
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "In SFCs, it's recommended to use ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "PascalCase",
+          "position": {
+            "start": {
+              "line": 170,
+              "column": 34,
+              "offset": 5512
+            },
+            "end": {
+              "line": 170,
+              "column": 46,
+              "offset": 5524
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " tag names for child components to differentiate from native HTML elements. Although native HTML tag names are case-insensitive, Vue SFC is a compiled format so we are able to use case-sensitive tag names in it. We are also able to use ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "/>",
+          "position": {
+            "start": {
+              "line": 170,
+              "column": 282,
+              "offset": 5760
+            },
+            "end": {
+              "line": 170,
+              "column": 286,
+              "offset": 5764
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " to close a tag.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 170,
+          "column": 1,
+          "offset": 5479
+        },
+        "end": {
+          "line": 170,
+          "column": 302,
+          "offset": 5780
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "If you are authoring your templates directly in a DOM (e.g. as the content of a native ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<template>",
+          "position": {
+            "start": {
+              "line": 172,
+              "column": 88,
+              "offset": 5869
+            },
+            "end": {
+              "line": 172,
+              "column": 100,
+              "offset": 5881
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " element), the template will be subject to the browser's native HTML parsing behavior. In such cases, you will need to use ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "kebab-case",
+          "position": {
+            "start": {
+              "line": 172,
+              "column": 223,
+              "offset": 6004
+            },
+            "end": {
+              "line": 172,
+              "column": 235,
+              "offset": 6016
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " and explicit closing tags for components:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 172,
+          "column": 1,
+          "offset": 5782
+        },
+        "end": {
+          "line": 172,
+          "column": 277,
+          "offset": 6058
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<!-- if this template is written in the DOM -->\n<button-counter></button-counter>\n<button-counter></button-counter>\n<button-counter></button-counter>",
+      "position": {
+        "start": {
+          "line": 174,
+          "column": 1,
+          "offset": 6060
+        },
+        "end": {
+          "line": 179,
+          "column": 4,
+          "offset": 6225
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "See ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "#in-dom-template-parsing-caveats",
+          "children": [
+            {
+              "type": "text",
+              "value": "in-DOM template parsing caveats",
+              "position": {
+                "start": {
+                  "line": 181,
+                  "column": 6,
+                  "offset": 6232
+                },
+                "end": {
+                  "line": 181,
+                  "column": 37,
+                  "offset": 6263
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 181,
+              "column": 5,
+              "offset": 6231
+            },
+            "end": {
+              "line": 181,
+              "column": 72,
+              "offset": 6298
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " for more details.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 181,
+          "column": 1,
+          "offset": 6227
+        },
+        "end": {
+          "line": 181,
+          "column": 90,
+          "offset": 6316
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Passing Props {#passing-props}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 183,
+          "column": 1,
+          "offset": 6318
+        },
+        "end": {
+          "line": 183,
+          "column": 34,
+          "offset": 6351
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "If we are building a blog, we will likely need a component representing a blog post. We want all the blog posts to share the same visual layout, but with different content. Such a component won't be useful unless you can pass data to it, such as the title and content of the specific post we want to display. That's where props come in.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 185,
+          "column": 1,
+          "offset": 6353
+        },
+        "end": {
+          "line": 185,
+          "column": 337,
+          "offset": 6689
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Props are custom attributes you can register on a component. To pass a title to our blog post component, we must declare it in the list of props this component accepts, using the ",
+          "position": {
+            "start": {
+              "line": 187,
+              "column": 1,
+              "offset": 6691
+            },
+            "end": {
+              "line": 187,
+              "column": 180,
+              "offset": 6870
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "<span class=\"options-api\">",
+          "position": {
+            "start": {
+              "line": 187,
+              "column": 180,
+              "offset": 6870
+            },
+            "end": {
+              "line": 187,
+              "column": 206,
+              "offset": 6896
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/api/options-state#props",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "props",
+              "position": {
+                "start": {
+                  "line": 187,
+                  "column": 207,
+                  "offset": 6897
+                },
+                "end": {
+                  "line": 187,
+                  "column": 214,
+                  "offset": 6904
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 187,
+              "column": 206,
+              "offset": 6896
+            },
+            "end": {
+              "line": 187,
+              "column": 241,
+              "offset": 6931
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " option",
+          "position": {
+            "start": {
+              "line": 187,
+              "column": 241,
+              "offset": 6931
+            },
+            "end": {
+              "line": 187,
+              "column": 248,
+              "offset": 6938
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "</span>",
+          "position": {
+            "start": {
+              "line": 187,
+              "column": 248,
+              "offset": 6938
+            },
+            "end": {
+              "line": 187,
+              "column": 255,
+              "offset": 6945
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "html",
+          "value": "<span class=\"composition-api\">",
+          "position": {
+            "start": {
+              "line": 187,
+              "column": 255,
+              "offset": 6945
+            },
+            "end": {
+              "line": 187,
+              "column": 285,
+              "offset": 6975
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/api/sfc-script-setup#defineprops-defineemits",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "defineProps",
+              "position": {
+                "start": {
+                  "line": 187,
+                  "column": 286,
+                  "offset": 6976
+                },
+                "end": {
+                  "line": 187,
+                  "column": 299,
+                  "offset": 6989
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 187,
+              "column": 285,
+              "offset": 6975
+            },
+            "end": {
+              "line": 187,
+              "column": 347,
+              "offset": 7037
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " macro",
+          "position": {
+            "start": {
+              "line": 187,
+              "column": 347,
+              "offset": 7037
+            },
+            "end": {
+              "line": 187,
+              "column": 353,
+              "offset": 7043
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "</span>",
+          "position": {
+            "start": {
+              "line": 187,
+              "column": 353,
+              "offset": 7043
+            },
+            "end": {
+              "line": 187,
+              "column": 360,
+              "offset": 7050
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "text",
+          "value": ":",
+          "position": {
+            "start": {
+              "line": 187,
+              "column": 360,
+              "offset": 7050
+            },
+            "end": {
+              "line": 187,
+              "column": 361,
+              "offset": 7051
+            }
+          },
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 187,
+          "column": 1,
+          "offset": 6691
+        },
+        "end": {
+          "line": 187,
+          "column": 361,
+          "offset": 7051
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"options-api\">",
+      "position": {
+        "start": {
+          "line": 189,
+          "column": 1,
+          "offset": 7053
+        },
+        "end": {
+          "line": 189,
+          "column": 26,
+          "offset": 7078
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "vue",
+      "meta": "[BlogPost.vue]",
+      "value": "<script>\nexport default {\n  props: ['title']\n}\n</script>\n\n<template>\n  <h4>{{ title }}</h4>\n</template>",
+      "position": {
+        "start": {
+          "line": 191,
+          "column": 1,
+          "offset": 7080
+        },
+        "end": {
+          "line": 201,
+          "column": 4,
+          "offset": 7209
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "When a value is passed to a prop attribute, it becomes a property on that component instance. The value of that property is accessible within the template and on the component's ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "this",
+          "position": {
+            "start": {
+              "line": 203,
+              "column": 179,
+              "offset": 7389
+            },
+            "end": {
+              "line": 203,
+              "column": 185,
+              "offset": 7395
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " context, just like any other component property.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 203,
+          "column": 1,
+          "offset": 7211
+        },
+        "end": {
+          "line": 203,
+          "column": 234,
+          "offset": 7444
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"composition-api\">",
+      "position": {
+        "start": {
+          "line": 205,
+          "column": 1,
+          "offset": 7446
+        },
+        "end": {
+          "line": 206,
+          "column": 30,
+          "offset": 7482
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "vue",
+      "meta": "[BlogPost.vue]",
+      "value": "<script setup>\ndefineProps(['title'])\n</script>\n\n<template>\n  <h4>{{ title }}</h4>\n</template>",
+      "position": {
+        "start": {
+          "line": 208,
+          "column": 1,
+          "offset": 7484
+        },
+        "end": {
+          "line": 216,
+          "column": 4,
+          "offset": 7604
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "inlineCode",
+          "value": "defineProps",
+          "position": {
+            "start": {
+              "line": 218,
+              "column": 1,
+              "offset": 7606
+            },
+            "end": {
+              "line": 218,
+              "column": 14,
+              "offset": 7619
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " is a compile-time macro that is only available inside ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<script setup>",
+          "position": {
+            "start": {
+              "line": 218,
+              "column": 69,
+              "offset": 7674
+            },
+            "end": {
+              "line": 218,
+              "column": 85,
+              "offset": 7690
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " and does not need to be explicitly imported. Declared props are automatically exposed to the template. ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "defineProps",
+          "position": {
+            "start": {
+              "line": 218,
+              "column": 1,
+              "offset": 7606
+            },
+            "end": {
+              "line": 218,
+              "column": 14,
+              "offset": 7619
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " also returns an object that contains all the props passed to the component, so that we can access them in JavaScript if needed:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 218,
+          "column": 1,
+          "offset": 7606
+        },
+        "end": {
+          "line": 218,
+          "column": 330,
+          "offset": 7935
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "const props = defineProps(['title'])\nconsole.log(props.title)",
+      "position": {
+        "start": {
+          "line": 220,
+          "column": 1,
+          "offset": 7937
+        },
+        "end": {
+          "line": 223,
+          "column": 4,
+          "offset": 8008
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "See also: ",
+          "position": {
+            "start": {
+              "line": 225,
+              "column": 1,
+              "offset": 8010
+            },
+            "end": {
+              "line": 225,
+              "column": 11,
+              "offset": 8020
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/guide/typescript/composition-api#typing-component-props",
+          "children": [
+            {
+              "type": "text",
+              "value": "Typing Component Props",
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 225,
+              "column": 11,
+              "offset": 8020
+            },
+            "end": {
+              "line": 225,
+              "column": 93,
+              "offset": 8102
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " ",
+          "position": {
+            "start": {
+              "line": 225,
+              "column": 93,
+              "offset": 8102
+            },
+            "end": {
+              "line": 225,
+              "column": 94,
+              "offset": 8103
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "<sup class=\"vt-badge ts\" />",
+          "position": {
+            "start": {
+              "line": 225,
+              "column": 94,
+              "offset": 8103
+            },
+            "end": {
+              "line": 225,
+              "column": 121,
+              "offset": 8130
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 225,
+          "column": 1,
+          "offset": 8010
+        },
+        "end": {
+          "line": 225,
+          "column": 121,
+          "offset": 8130
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "If you are not using ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<script setup>",
+          "position": {
+            "start": {
+              "line": 227,
+              "column": 22,
+              "offset": 8153
+            },
+            "end": {
+              "line": 227,
+              "column": 38,
+              "offset": 8169
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", props should be declared using the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "props",
+          "position": {
+            "start": {
+              "line": 227,
+              "column": 75,
+              "offset": 8206
+            },
+            "end": {
+              "line": 227,
+              "column": 82,
+              "offset": 8213
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " option, and the props object will be passed to ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "setup()",
+          "position": {
+            "start": {
+              "line": 227,
+              "column": 130,
+              "offset": 8261
+            },
+            "end": {
+              "line": 227,
+              "column": 139,
+              "offset": 8270
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " as the first argument:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 227,
+          "column": 1,
+          "offset": 8132
+        },
+        "end": {
+          "line": 227,
+          "column": 162,
+          "offset": 8293
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "export default {\n  props: ['title'],\n  setup(props) {\n    console.log(props.title)\n  }\n}",
+      "position": {
+        "start": {
+          "line": 229,
+          "column": 1,
+          "offset": 8295
+        },
+        "end": {
+          "line": 236,
+          "column": 4,
+          "offset": 8393
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "position": {
+        "start": {
+          "line": 238,
+          "column": 1,
+          "offset": 8395
+        },
+        "end": {
+          "line": 238,
+          "column": 7,
+          "offset": 8401
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "A component can have as many props as you like and, by default, any value can be passed to any prop.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 240,
+          "column": 1,
+          "offset": 8403
+        },
+        "end": {
+          "line": 240,
+          "column": 101,
+          "offset": 8503
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Once a prop is registered, you can pass data to it as a custom attribute, like this:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 242,
+          "column": 1,
+          "offset": 8505
+        },
+        "end": {
+          "line": 242,
+          "column": 85,
+          "offset": 8589
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<BlogPost title=\"My journey with Vue\" />\n<BlogPost title=\"Blogging with Vue\" />\n<BlogPost title=\"Why Vue is so fun\" />",
+      "position": {
+        "start": {
+          "line": 244,
+          "column": 1,
+          "offset": 8591
+        },
+        "end": {
+          "line": 248,
+          "column": 4,
+          "offset": 8725
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "In a typical app, however, you'll likely have an array of posts in your parent component:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 250,
+          "column": 1,
+          "offset": 8727
+        },
+        "end": {
+          "line": 250,
+          "column": 90,
+          "offset": 8816
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"options-api\">",
+      "position": {
+        "start": {
+          "line": 252,
+          "column": 1,
+          "offset": 8818
+        },
+        "end": {
+          "line": 252,
+          "column": 26,
+          "offset": 8843
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "export default {\n  // ...\n  data() {\n    return {\n      posts: [\n        { id: 1, title: 'My journey with Vue' },\n        { id: 2, title: 'Blogging with Vue' },\n        { id: 3, title: 'Why Vue is so fun' }\n      ]\n    }\n  }\n}",
+      "position": {
+        "start": {
+          "line": 254,
+          "column": 1,
+          "offset": 8845
+        },
+        "end": {
+          "line": 267,
+          "column": 4,
+          "offset": 9081
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"composition-api\">",
+      "position": {
+        "start": {
+          "line": 269,
+          "column": 1,
+          "offset": 9083
+        },
+        "end": {
+          "line": 270,
+          "column": 30,
+          "offset": 9119
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "const posts = ref([\n  { id: 1, title: 'My journey with Vue' },\n  { id: 2, title: 'Blogging with Vue' },\n  { id: 3, title: 'Why Vue is so fun' }\n])",
+      "position": {
+        "start": {
+          "line": 272,
+          "column": 1,
+          "offset": 9121
+        },
+        "end": {
+          "line": 278,
+          "column": 4,
+          "offset": 9277
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "position": {
+        "start": {
+          "line": 280,
+          "column": 1,
+          "offset": 9279
+        },
+        "end": {
+          "line": 280,
+          "column": 7,
+          "offset": 9285
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Then want to render a component for each one, using ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "v-for",
+          "position": {
+            "start": {
+              "line": 282,
+              "column": 53,
+              "offset": 9339
+            },
+            "end": {
+              "line": 282,
+              "column": 60,
+              "offset": 9346
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ":",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 282,
+          "column": 1,
+          "offset": 9287
+        },
+        "end": {
+          "line": 282,
+          "column": 61,
+          "offset": 9347
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<BlogPost\n  v-for=\"post in posts\"\n  :key=\"post.id\"\n  :title=\"post.title\"\n />",
+      "position": {
+        "start": {
+          "line": 284,
+          "column": 1,
+          "offset": 9349
+        },
+        "end": {
+          "line": 290,
+          "column": 4,
+          "offset": 9441
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"options-api\">",
+      "position": {
+        "start": {
+          "line": 292,
+          "column": 1,
+          "offset": 9443
+        },
+        "end": {
+          "line": 292,
+          "column": 26,
+          "offset": 9468
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://play.vuejs.org/#eNp9UU1rhDAU/CtDLrawVfpxklRo74We2kPtQdaoaTUJ8bmtiP+9ia6uC2VBgjOZeXnz3sCejAkPnWAx4+3eSkNJqmRjtCU817p81S2hsLpBEEYL4Q1BqoBUid9Jmosi62rC4Nm9dn4lFLXxTGAt5dG482eeUXZ1vdxbQZ1VCwKM0zr3x4KBATKPcbsDSapFjOClx5d2JtHjR1KFN9fTsfbWcXdy+CZKqcqL+vuT/r3qvQqyRatRdMrpF/nn/DNhd7iPR+v8HCDRmDoj4RHxbfyUDjeFto8p8yEh1Rw2ZV4JxN+iP96FMvest8RTTws/gdmQ8HUr7ikere+yHduu62y//y3NWG38xIOpeODyXcoE8OohGYZ5VhhHHjl83sD4B3XgyGI=",
+          "children": [
+            {
+              "type": "text",
+              "value": "Try it in the Playground",
+              "position": {
+                "start": {
+                  "line": 294,
+                  "column": 2,
+                  "offset": 9471
+                },
+                "end": {
+                  "line": 294,
+                  "column": 26,
+                  "offset": 9495
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 294,
+              "column": 1,
+              "offset": 9470
+            },
+            "end": {
+              "line": 294,
+              "column": 445,
+              "offset": 9914
+            }
+          },
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 294,
+          "column": 1,
+          "offset": 9470
+        },
+        "end": {
+          "line": 294,
+          "column": 445,
+          "offset": 9914
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"composition-api\">",
+      "position": {
+        "start": {
+          "line": 296,
+          "column": 1,
+          "offset": 9916
+        },
+        "end": {
+          "line": 297,
+          "column": 30,
+          "offset": 9952
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://play.vuejs.org/#eNp9kU9PhDAUxL/KpBfWBCH+OZEuid5N9qSHrQezFKhC27RlDSF8d1tYQBP1+N78OpN5HciD1sm54yQj1J6M0A6Wu07nTIpWK+MwwPASI0qjWkQejVbpsVHVQVl30ZJ0WQRHjwFMnpT0gPZLi32w2h2DMEAUGW5iOOEaniF66vGuOiN5j0/hajx7B4zxxt5ubIiphKz+IO828qXugw5hYRXKTnqSydcrJmk61/VF/eB4q5s3x8Pk6FJjauDO16Uye0ZCBwg5d2EkkED2wfuLlogibMOTbMpf9tMwP8jpeiMfRdM1l8Tk+/F++Y6Cl0Lyg1Ha7o7R5Bn9WwSg9X0+DPMxMI409fPP1PELlVmwdQ==",
+          "children": [
+            {
+              "type": "text",
+              "value": "Try it in the Playground",
+              "position": {
+                "start": {
+                  "line": 299,
+                  "column": 2,
+                  "offset": 9955
+                },
+                "end": {
+                  "line": 299,
+                  "column": 26,
+                  "offset": 9979
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 299,
+              "column": 1,
+              "offset": 9954
+            },
+            "end": {
+              "line": 299,
+              "column": 417,
+              "offset": 10370
+            }
+          },
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 299,
+          "column": 1,
+          "offset": 9954
+        },
+        "end": {
+          "line": 299,
+          "column": 417,
+          "offset": 10370
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "position": {
+        "start": {
+          "line": 301,
+          "column": 1,
+          "offset": 10372
+        },
+        "end": {
+          "line": 301,
+          "column": 7,
+          "offset": 10378
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Notice how ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/api/built-in-directives#v-bind",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "v-bind",
+              "position": {
+                "start": {
+                  "line": 303,
+                  "column": 13,
+                  "offset": 10392
+                },
+                "end": {
+                  "line": 303,
+                  "column": 21,
+                  "offset": 10400
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "text",
+              "value": " syntax",
+              "position": {
+                "start": {
+                  "line": 303,
+                  "column": 21,
+                  "offset": 10400
+                },
+                "end": {
+                  "line": 303,
+                  "column": 28,
+                  "offset": 10407
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 303,
+              "column": 12,
+              "offset": 10391
+            },
+            "end": {
+              "line": 303,
+              "column": 62,
+              "offset": 10441
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " (",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": ":title=\"post.title\"",
+          "position": {
+            "start": {
+              "line": 303,
+              "column": 64,
+              "offset": 10443
+            },
+            "end": {
+              "line": 303,
+              "column": 85,
+              "offset": 10464
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ") is used to pass dynamic prop values. This is especially useful when you don't know the exact content you're going to render ahead of time.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 303,
+          "column": 1,
+          "offset": 10380
+        },
+        "end": {
+          "line": 303,
+          "column": 225,
+          "offset": 10604
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "That's all you need to know about props for now, but once you've finished reading this page and feel comfortable with its content, we recommend coming back later to read the full guide on ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/guide/components/props",
+          "children": [
+            {
+              "type": "text",
+              "value": "Props",
+              "position": {
+                "start": {
+                  "line": 305,
+                  "column": 190,
+                  "offset": 10795
+                },
+                "end": {
+                  "line": 305,
+                  "column": 195,
+                  "offset": 10800
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 305,
+              "column": 189,
+              "offset": 10794
+            },
+            "end": {
+              "line": 305,
+              "column": 221,
+              "offset": 10826
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ".",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 305,
+          "column": 1,
+          "offset": 10606
+        },
+        "end": {
+          "line": 305,
+          "column": 222,
+          "offset": 10827
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Listening to Events {#listening-to-events}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 307,
+          "column": 1,
+          "offset": 10829
+        },
+        "end": {
+          "line": 307,
+          "column": 46,
+          "offset": 10874
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "As we develop our ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<BlogPost>",
+          "position": {
+            "start": {
+              "line": 309,
+              "column": 19,
+              "offset": 10894
+            },
+            "end": {
+              "line": 309,
+              "column": 31,
+              "offset": 10906
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " component, some features may require communicating back up to the parent. For example, we may decide to include an accessibility feature to enlarge the text of blog posts, while leaving the rest of the page at its default size.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 309,
+          "column": 1,
+          "offset": 10876
+        },
+        "end": {
+          "line": 309,
+          "column": 259,
+          "offset": 11134
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "In the parent, we can support this feature by adding a ",
+          "position": {
+            "start": {
+              "line": 311,
+              "column": 1,
+              "offset": 11136
+            },
+            "end": {
+              "line": 311,
+              "column": 56,
+              "offset": 11191
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "postFontSize",
+          "position": {
+            "start": {
+              "line": 311,
+              "column": 56,
+              "offset": 11191
+            },
+            "end": {
+              "line": 311,
+              "column": 70,
+              "offset": 11205
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "text",
+          "value": " ",
+          "position": {
+            "start": {
+              "line": 311,
+              "column": 70,
+              "offset": 11205
+            },
+            "end": {
+              "line": 311,
+              "column": 71,
+              "offset": 11206
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "<span class=\"options-api\">",
+          "position": {
+            "start": {
+              "line": 311,
+              "column": 71,
+              "offset": 11206
+            },
+            "end": {
+              "line": 311,
+              "column": 97,
+              "offset": 11232
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "text",
+          "value": "data property",
+          "position": {
+            "start": {
+              "line": 311,
+              "column": 97,
+              "offset": 11232
+            },
+            "end": {
+              "line": 311,
+              "column": 110,
+              "offset": 11245
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "</span>",
+          "position": {
+            "start": {
+              "line": 311,
+              "column": 110,
+              "offset": 11245
+            },
+            "end": {
+              "line": 311,
+              "column": 117,
+              "offset": 11252
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "html",
+          "value": "<span class=\"composition-api\">",
+          "position": {
+            "start": {
+              "line": 311,
+              "column": 117,
+              "offset": 11252
+            },
+            "end": {
+              "line": 311,
+              "column": 147,
+              "offset": 11282
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "text",
+          "value": "ref",
+          "position": {
+            "start": {
+              "line": 311,
+              "column": 147,
+              "offset": 11282
+            },
+            "end": {
+              "line": 311,
+              "column": 150,
+              "offset": 11285
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "</span>",
+          "position": {
+            "start": {
+              "line": 311,
+              "column": 150,
+              "offset": 11285
+            },
+            "end": {
+              "line": 311,
+              "column": 157,
+              "offset": 11292
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "text",
+          "value": ":",
+          "position": {
+            "start": {
+              "line": 311,
+              "column": 157,
+              "offset": 11292
+            },
+            "end": {
+              "line": 311,
+              "column": 158,
+              "offset": 11293
+            }
+          },
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 311,
+          "column": 1,
+          "offset": 11136
+        },
+        "end": {
+          "line": 311,
+          "column": 158,
+          "offset": 11293
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"options-api\">",
+      "position": {
+        "start": {
+          "line": 313,
+          "column": 1,
+          "offset": 11295
+        },
+        "end": {
+          "line": 313,
+          "column": 26,
+          "offset": 11320
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js{6}",
+      "meta": null,
+      "value": "data() {\n  return {\n    posts: [\n      /* ... */\n    ],\n    postFontSize: 1\n  }\n}",
+      "position": {
+        "start": {
+          "line": 315,
+          "column": 1,
+          "offset": 11322
+        },
+        "end": {
+          "line": 324,
+          "column": 4,
+          "offset": 11416
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"composition-api\">",
+      "position": {
+        "start": {
+          "line": 326,
+          "column": 1,
+          "offset": 11418
+        },
+        "end": {
+          "line": 327,
+          "column": 30,
+          "offset": 11454
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js{5}",
+      "meta": null,
+      "value": "const posts = ref([\n  /* ... */\n])\n\nconst postFontSize = ref(1)",
+      "position": {
+        "start": {
+          "line": 329,
+          "column": 1,
+          "offset": 11456
+        },
+        "end": {
+          "line": 335,
+          "column": 4,
+          "offset": 11532
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "position": {
+        "start": {
+          "line": 337,
+          "column": 1,
+          "offset": 11534
+        },
+        "end": {
+          "line": 337,
+          "column": 7,
+          "offset": 11540
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Which can be used in the template to control the font size of all blog posts:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 339,
+          "column": 1,
+          "offset": 11542
+        },
+        "end": {
+          "line": 339,
+          "column": 78,
+          "offset": 11619
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html{1,7}",
+      "meta": null,
+      "value": "<div :style=\"{ fontSize: postFontSize + 'em' }\">\n  <BlogPost\n    v-for=\"post in posts\"\n    :key=\"post.id\"\n    :title=\"post.title\"\n   />\n</div>",
+      "position": {
+        "start": {
+          "line": 341,
+          "column": 1,
+          "offset": 11621
+        },
+        "end": {
+          "line": 349,
+          "column": 4,
+          "offset": 11784
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Now let's add a button to the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<BlogPost>",
+          "position": {
+            "start": {
+              "line": 351,
+              "column": 31,
+              "offset": 11816
+            },
+            "end": {
+              "line": 351,
+              "column": 43,
+              "offset": 11828
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " component's template:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 351,
+          "column": 1,
+          "offset": 11786
+        },
+        "end": {
+          "line": 351,
+          "column": 65,
+          "offset": 11850
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue{5}",
+      "meta": "[BlogPost.vue]",
+      "value": "<!-- omitting <script> -->\n<template>\n  <div class=\"blog-post\">\n    <h4>{{ title }}</h4>\n    <button>Enlarge text</button>\n  </div>\n</template>",
+      "position": {
+        "start": {
+          "line": 353,
+          "column": 1,
+          "offset": 11852
+        },
+        "end": {
+          "line": 361,
+          "column": 4,
+          "offset": 12024
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "The button doesn't do anything yet - we want clicking the button to communicate to the parent that it should enlarge the text of all posts. To solve this problem, components provide a custom events system. The parent can choose to listen to any event on the child component instance with ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "v-on",
+          "position": {
+            "start": {
+              "line": 363,
+              "column": 289,
+              "offset": 12314
+            },
+            "end": {
+              "line": 363,
+              "column": 295,
+              "offset": 12320
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " or ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "@",
+          "position": {
+            "start": {
+              "line": 363,
+              "column": 299,
+              "offset": 12324
+            },
+            "end": {
+              "line": 363,
+              "column": 302,
+              "offset": 12327
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", just as we would with a native DOM event:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 363,
+          "column": 1,
+          "offset": 12026
+        },
+        "end": {
+          "line": 363,
+          "column": 345,
+          "offset": 12370
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html{3}",
+      "meta": null,
+      "value": "<BlogPost\n  ...\n  @enlarge-text=\"postFontSize += 0.1\"\n />",
+      "position": {
+        "start": {
+          "line": 365,
+          "column": 1,
+          "offset": 12372
+        },
+        "end": {
+          "line": 370,
+          "column": 4,
+          "offset": 12448
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Then the child component can emit an event on itself by calling the built-in ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/api/component-instance#emit",
+          "children": [
+            {
+              "type": "strong",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "$emit",
+                  "position": {
+                    "start": {
+                      "line": 372,
+                      "column": 81,
+                      "offset": 12530
+                    },
+                    "end": {
+                      "line": 372,
+                      "column": 88,
+                      "offset": 12537
+                    }
+                  },
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 372,
+                  "column": 79,
+                  "offset": 12528
+                },
+                "end": {
+                  "line": 372,
+                  "column": 90,
+                  "offset": 12539
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "text",
+              "value": " method",
+              "position": {
+                "start": {
+                  "line": 372,
+                  "column": 90,
+                  "offset": 12539
+                },
+                "end": {
+                  "line": 372,
+                  "column": 97,
+                  "offset": 12546
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 372,
+              "column": 78,
+              "offset": 12527
+            },
+            "end": {
+              "line": 372,
+              "column": 128,
+              "offset": 12577
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", passing the name of the event:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 372,
+          "column": 1,
+          "offset": 12450
+        },
+        "end": {
+          "line": 372,
+          "column": 160,
+          "offset": 12609
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue{5}",
+      "meta": "[BlogPost.vue]",
+      "value": "<!-- omitting <script> -->\n<template>\n  <div class=\"blog-post\">\n    <h4>{{ title }}</h4>\n    <button @click=\"$emit('enlarge-text')\">Enlarge text</button>\n  </div>\n</template>",
+      "position": {
+        "start": {
+          "line": 374,
+          "column": 1,
+          "offset": 12611
+        },
+        "end": {
+          "line": 382,
+          "column": 4,
+          "offset": 12814
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Thanks to the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "@enlarge-text=\"postFontSize += 0.1\"",
+          "position": {
+            "start": {
+              "line": 384,
+              "column": 15,
+              "offset": 12830
+            },
+            "end": {
+              "line": 384,
+              "column": 52,
+              "offset": 12867
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " listener, the parent will receive the event and update the value of ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "postFontSize",
+          "position": {
+            "start": {
+              "line": 384,
+              "column": 121,
+              "offset": 12936
+            },
+            "end": {
+              "line": 384,
+              "column": 135,
+              "offset": 12950
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ".",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 384,
+          "column": 1,
+          "offset": 12816
+        },
+        "end": {
+          "line": 384,
+          "column": 136,
+          "offset": 12951
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"options-api\">",
+      "position": {
+        "start": {
+          "line": 386,
+          "column": 1,
+          "offset": 12953
+        },
+        "end": {
+          "line": 386,
+          "column": 26,
+          "offset": 12978
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://play.vuejs.org/#eNqNUsFOg0AQ/ZUJMaGNbbHqidCmmujNxMRED9IDhYWuhV0CQy0S/t1ZYIEmaiRkw8y8N/vmMZVxl6aLY8EM23ByP+Mprl3Bk1RmCPexjJ5ljhBmMgFzYemEIpiuAHAFOzXQgIVeESNUKutL4gsmMLfbBPStVFTP1Bl46E2mup4xLDKhI4CUsMR+1zFABTywYTkD5BgzG8ynEj4kkVgJnxz38Eqaut5jxvXAUCIiLqI/8TcD/m1fKhTwHHIJYSEIr+HbnqikPkqBL/yLSMs23eDooNexel8pQJaksYeMIgAn4EewcyxjtnKNCsK+zbgpXILJEnW30bCIN7ZTPcd5KDNqoWjARWufa+iyfWBlV13wYJRvJtWVJhiKGyZiL4vYHNkJO8wgaQVXi6UGr51+Ndq5LBqMvhyrH9eYGePtOVu3n3YozWSqFsBsVJmt3SzhzVaYY2nm9l82+7GX5zTGjlTM1SyNmy5SeX+7rqr2r0NdOxbFXWVXIEoBGz/m/oHIF0rB5Pz6KTV6aBOgEo7Vsn51ov4GgAAf2A==",
+          "children": [
+            {
+              "type": "text",
+              "value": "Try it in the Playground",
+              "position": {
+                "start": {
+                  "line": 388,
+                  "column": 2,
+                  "offset": 12981
+                },
+                "end": {
+                  "line": 388,
+                  "column": 26,
+                  "offset": 13005
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 388,
+              "column": 1,
+              "offset": 12980
+            },
+            "end": {
+              "line": 388,
+              "column": 601,
+              "offset": 13580
+            }
+          },
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 388,
+          "column": 1,
+          "offset": 12980
+        },
+        "end": {
+          "line": 388,
+          "column": 601,
+          "offset": 13580
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"composition-api\">",
+      "position": {
+        "start": {
+          "line": 390,
+          "column": 1,
+          "offset": 13582
+        },
+        "end": {
+          "line": 391,
+          "column": 30,
+          "offset": 13618
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://play.vuejs.org/#eNp1Uk1PwkAQ/SuTxqQYgYp6ahaiJngzITHRA/UAZQor7W7TnaK16X93th8UEuHEvPdm5s3bls5Tmo4POTq+I0yYyZTAIOXpLFAySXVGUEKGEVQQZToBl6XukXqO9XahDbXc2OsAO5FlAIEKtWJByqCBqR01WFqiBLnxYTIEkhSjD+5rAV86zxQW8C1pB+88Aaphr73rtXbNVqrtBeV9r/zYFZYHacBoiHLFykB9Xgfq1NmLVvQmf7E1OGFaeE0anAMXhEkarwhtRWIjD+AbKmKcBk4JUdvtn8+6ARcTu87hLuCf6NJpSoDDKNIZj7BtIFUTUuB0tL/HomXHcnOC18d1TF305COqeJVtcUT4Q62mtzSF2/GkE8/E8b1qh8Ljw/if8I7nOkPn9En/+Ug2GEmFi0ynZrB0azOujbfB54kki5+aqumL8bING28Yr4xh+2vePrI39CnuHmZl2TwwVJXwuG6ZdU6kFTyGsQz33HyFvH5wvvyaB80bACwgvKbrYgLVH979DQc=",
+          "children": [
+            {
+              "type": "text",
+              "value": "Try it in the Playground",
+              "position": {
+                "start": {
+                  "line": 393,
+                  "column": 2,
+                  "offset": 13621
+                },
+                "end": {
+                  "line": 393,
+                  "column": 26,
+                  "offset": 13645
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 393,
+              "column": 1,
+              "offset": 13620
+            },
+            "end": {
+              "line": 393,
+              "column": 577,
+              "offset": 14196
+            }
+          },
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 393,
+          "column": 1,
+          "offset": 13620
+        },
+        "end": {
+          "line": 393,
+          "column": 577,
+          "offset": 14196
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "position": {
+        "start": {
+          "line": 395,
+          "column": 1,
+          "offset": 14198
+        },
+        "end": {
+          "line": 395,
+          "column": 7,
+          "offset": 14204
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "We can optionally declare emitted events using the ",
+          "position": {
+            "start": {
+              "line": 397,
+              "column": 1,
+              "offset": 14206
+            },
+            "end": {
+              "line": 397,
+              "column": 52,
+              "offset": 14257
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "<span class=\"options-api\">",
+          "position": {
+            "start": {
+              "line": 397,
+              "column": 52,
+              "offset": 14257
+            },
+            "end": {
+              "line": 397,
+              "column": 78,
+              "offset": 14283
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/api/options-state#emits",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "emits",
+              "position": {
+                "start": {
+                  "line": 397,
+                  "column": 79,
+                  "offset": 14284
+                },
+                "end": {
+                  "line": 397,
+                  "column": 86,
+                  "offset": 14291
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 397,
+              "column": 78,
+              "offset": 14283
+            },
+            "end": {
+              "line": 397,
+              "column": 113,
+              "offset": 14318
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " option",
+          "position": {
+            "start": {
+              "line": 397,
+              "column": 113,
+              "offset": 14318
+            },
+            "end": {
+              "line": 397,
+              "column": 120,
+              "offset": 14325
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "</span>",
+          "position": {
+            "start": {
+              "line": 397,
+              "column": 120,
+              "offset": 14325
+            },
+            "end": {
+              "line": 397,
+              "column": 127,
+              "offset": 14332
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "html",
+          "value": "<span class=\"composition-api\">",
+          "position": {
+            "start": {
+              "line": 397,
+              "column": 127,
+              "offset": 14332
+            },
+            "end": {
+              "line": 397,
+              "column": 157,
+              "offset": 14362
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/api/sfc-script-setup#defineprops-defineemits",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "defineEmits",
+              "position": {
+                "start": {
+                  "line": 397,
+                  "column": 158,
+                  "offset": 14363
+                },
+                "end": {
+                  "line": 397,
+                  "column": 171,
+                  "offset": 14376
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 397,
+              "column": 157,
+              "offset": 14362
+            },
+            "end": {
+              "line": 397,
+              "column": 219,
+              "offset": 14424
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " macro",
+          "position": {
+            "start": {
+              "line": 397,
+              "column": 219,
+              "offset": 14424
+            },
+            "end": {
+              "line": 397,
+              "column": 225,
+              "offset": 14430
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "</span>",
+          "position": {
+            "start": {
+              "line": 397,
+              "column": 225,
+              "offset": 14430
+            },
+            "end": {
+              "line": 397,
+              "column": 232,
+              "offset": 14437
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "text",
+          "value": ":",
+          "position": {
+            "start": {
+              "line": 397,
+              "column": 232,
+              "offset": 14437
+            },
+            "end": {
+              "line": 397,
+              "column": 233,
+              "offset": 14438
+            }
+          },
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 397,
+          "column": 1,
+          "offset": 14206
+        },
+        "end": {
+          "line": 397,
+          "column": 233,
+          "offset": 14438
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"options-api\">",
+      "position": {
+        "start": {
+          "line": 399,
+          "column": 1,
+          "offset": 14440
+        },
+        "end": {
+          "line": 399,
+          "column": 26,
+          "offset": 14465
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "vue{4}",
+      "meta": "[BlogPost.vue]",
+      "value": "<script>\nexport default {\n  props: ['title'],\n  emits: ['enlarge-text']\n}\n</script>",
+      "position": {
+        "start": {
+          "line": 401,
+          "column": 1,
+          "offset": 14467
+        },
+        "end": {
+          "line": 408,
+          "column": 4,
+          "offset": 14579
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"composition-api\">",
+      "position": {
+        "start": {
+          "line": 410,
+          "column": 1,
+          "offset": 14581
+        },
+        "end": {
+          "line": 411,
+          "column": 30,
+          "offset": 14617
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "vue{3}",
+      "meta": "[BlogPost.vue]",
+      "value": "<script setup>\ndefineProps(['title'])\ndefineEmits(['enlarge-text'])\n</script>",
+      "position": {
+        "start": {
+          "line": 413,
+          "column": 1,
+          "offset": 14619
+        },
+        "end": {
+          "line": 418,
+          "column": 4,
+          "offset": 14725
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "position": {
+        "start": {
+          "line": 420,
+          "column": 1,
+          "offset": 14727
+        },
+        "end": {
+          "line": 420,
+          "column": 7,
+          "offset": 14733
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "This documents all the events that a component emits and optionally ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/guide/components/events#events-validation",
+          "children": [
+            {
+              "type": "text",
+              "value": "validates them",
+              "position": {
+                "start": {
+                  "line": 422,
+                  "column": 70,
+                  "offset": 14804
+                },
+                "end": {
+                  "line": 422,
+                  "column": 84,
+                  "offset": 14818
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 422,
+              "column": 69,
+              "offset": 14803
+            },
+            "end": {
+              "line": 422,
+              "column": 129,
+              "offset": 14863
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ". It also allows Vue to avoid implicitly applying them as native listeners to the child component's root element.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 422,
+          "column": 1,
+          "offset": 14735
+        },
+        "end": {
+          "line": 422,
+          "column": 242,
+          "offset": 14976
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"composition-api\">",
+      "position": {
+        "start": {
+          "line": 424,
+          "column": 1,
+          "offset": 14978
+        },
+        "end": {
+          "line": 424,
+          "column": 30,
+          "offset": 15007
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Similar to ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "defineProps",
+          "position": {
+            "start": {
+              "line": 426,
+              "column": 12,
+              "offset": 15020
+            },
+            "end": {
+              "line": 426,
+              "column": 25,
+              "offset": 15033
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "defineEmits",
+          "position": {
+            "start": {
+              "line": 426,
+              "column": 27,
+              "offset": 15035
+            },
+            "end": {
+              "line": 426,
+              "column": 40,
+              "offset": 15048
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " is only usable in ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<script setup>",
+          "position": {
+            "start": {
+              "line": 426,
+              "column": 59,
+              "offset": 15067
+            },
+            "end": {
+              "line": 426,
+              "column": 75,
+              "offset": 15083
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " and doesn't need to be imported. It returns an ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "emit",
+          "position": {
+            "start": {
+              "line": 426,
+              "column": 123,
+              "offset": 15131
+            },
+            "end": {
+              "line": 426,
+              "column": 129,
+              "offset": 15137
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " function that is equivalent to the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "$emit",
+          "position": {
+            "start": {
+              "line": 426,
+              "column": 165,
+              "offset": 15173
+            },
+            "end": {
+              "line": 426,
+              "column": 172,
+              "offset": 15180
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " method. It can be used to emit events in the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<script setup>",
+          "position": {
+            "start": {
+              "line": 426,
+              "column": 59,
+              "offset": 15067
+            },
+            "end": {
+              "line": 426,
+              "column": 75,
+              "offset": 15083
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " section of a component, where ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "$emit",
+          "position": {
+            "start": {
+              "line": 426,
+              "column": 165,
+              "offset": 15173
+            },
+            "end": {
+              "line": 426,
+              "column": 172,
+              "offset": 15180
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " isn't directly accessible:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 426,
+          "column": 1,
+          "offset": 15009
+        },
+        "end": {
+          "line": 426,
+          "column": 299,
+          "offset": 15307
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue",
+      "meta": null,
+      "value": "<script setup>\nconst emit = defineEmits(['enlarge-text'])\n\nemit('enlarge-text')\n</script>",
+      "position": {
+        "start": {
+          "line": 428,
+          "column": 1,
+          "offset": 15309
+        },
+        "end": {
+          "line": 434,
+          "column": 4,
+          "offset": 15409
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "See also: ",
+          "position": {
+            "start": {
+              "line": 436,
+              "column": 1,
+              "offset": 15411
+            },
+            "end": {
+              "line": 436,
+              "column": 11,
+              "offset": 15421
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/guide/typescript/composition-api#typing-component-emits",
+          "children": [
+            {
+              "type": "text",
+              "value": "Typing Component Emits",
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 436,
+              "column": 11,
+              "offset": 15421
+            },
+            "end": {
+              "line": 436,
+              "column": 93,
+              "offset": 15503
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " ",
+          "position": {
+            "start": {
+              "line": 436,
+              "column": 93,
+              "offset": 15503
+            },
+            "end": {
+              "line": 436,
+              "column": 94,
+              "offset": 15504
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "<sup class=\"vt-badge ts\" />",
+          "position": {
+            "start": {
+              "line": 436,
+              "column": 94,
+              "offset": 15504
+            },
+            "end": {
+              "line": 436,
+              "column": 121,
+              "offset": 15531
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 436,
+          "column": 1,
+          "offset": 15411
+        },
+        "end": {
+          "line": 436,
+          "column": 121,
+          "offset": 15531
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "If you are not using ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<script setup>",
+          "position": {
+            "start": {
+              "line": 438,
+              "column": 22,
+              "offset": 15554
+            },
+            "end": {
+              "line": 438,
+              "column": 38,
+              "offset": 15570
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", you can declare emitted events using the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "emits",
+          "position": {
+            "start": {
+              "line": 438,
+              "column": 81,
+              "offset": 15613
+            },
+            "end": {
+              "line": 438,
+              "column": 88,
+              "offset": 15620
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " option. You can access the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "emit",
+          "position": {
+            "start": {
+              "line": 438,
+              "column": 116,
+              "offset": 15648
+            },
+            "end": {
+              "line": 438,
+              "column": 122,
+              "offset": 15654
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " function as a property of the setup context (passed to ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "setup()",
+          "position": {
+            "start": {
+              "line": 438,
+              "column": 178,
+              "offset": 15710
+            },
+            "end": {
+              "line": 438,
+              "column": 187,
+              "offset": 15719
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " as the second argument):",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 438,
+          "column": 1,
+          "offset": 15533
+        },
+        "end": {
+          "line": 438,
+          "column": 212,
+          "offset": 15744
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "export default {\n  emits: ['enlarge-text'],\n  setup(props, ctx) {\n    ctx.emit('enlarge-text')\n  }\n}",
+      "position": {
+        "start": {
+          "line": 440,
+          "column": 1,
+          "offset": 15746
+        },
+        "end": {
+          "line": 447,
+          "column": 4,
+          "offset": 15856
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "position": {
+        "start": {
+          "line": 449,
+          "column": 1,
+          "offset": 15858
+        },
+        "end": {
+          "line": 449,
+          "column": 7,
+          "offset": 15864
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "That's all you need to know about custom component events for now, but once you've finished reading this page and feel comfortable with its content, we recommend coming back later to read the full guide on ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/guide/components/events",
+          "children": [
+            {
+              "type": "text",
+              "value": "Custom Events",
+              "position": {
+                "start": {
+                  "line": 451,
+                  "column": 208,
+                  "offset": 16073
+                },
+                "end": {
+                  "line": 451,
+                  "column": 221,
+                  "offset": 16086
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 451,
+              "column": 207,
+              "offset": 16072
+            },
+            "end": {
+              "line": 451,
+              "column": 248,
+              "offset": 16113
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ".",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 451,
+          "column": 1,
+          "offset": 15866
+        },
+        "end": {
+          "line": 451,
+          "column": 249,
+          "offset": 16114
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Content Distribution with Slots {#content-distribution-with-slots}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 453,
+          "column": 1,
+          "offset": 16116
+        },
+        "end": {
+          "line": 453,
+          "column": 70,
+          "offset": 16185
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Just like with HTML elements, it's often useful to be able to pass content to a component, like this:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 455,
+          "column": 1,
+          "offset": 16187
+        },
+        "end": {
+          "line": 455,
+          "column": 102,
+          "offset": 16288
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<AlertBox>\n  Something bad happened.\n</AlertBox>",
+      "position": {
+        "start": {
+          "line": 457,
+          "column": 1,
+          "offset": 16290
+        },
+        "end": {
+          "line": 461,
+          "column": 4,
+          "offset": 16354
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Which might render something like:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 463,
+          "column": 1,
+          "offset": 16356
+        },
+        "end": {
+          "line": 463,
+          "column": 35,
+          "offset": 16390
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": ":::danger This is an Error for Demo Purposes\nSomething bad happened.\n:::",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 465,
+          "column": 1,
+          "offset": 16392
+        },
+        "end": {
+          "line": 467,
+          "column": 4,
+          "offset": 16464
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "This can be achieved using Vue's custom ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<slot>",
+          "position": {
+            "start": {
+              "line": 469,
+              "column": 41,
+              "offset": 16506
+            },
+            "end": {
+              "line": 469,
+              "column": 49,
+              "offset": 16514
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " element:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 469,
+          "column": 1,
+          "offset": 16466
+        },
+        "end": {
+          "line": 469,
+          "column": 58,
+          "offset": 16523
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue{4}",
+      "meta": "[AlertBox.vue]",
+      "value": "<template>\n  <div class=\"alert-box\">\n    <strong>This is an Error for Demo Purposes</strong>\n    <slot />\n  </div>\n</template>\n\n<style scoped>\n.alert-box {\n  /* ... */\n}\n</style>",
+      "position": {
+        "start": {
+          "line": 471,
+          "column": 1,
+          "offset": 16525
+        },
+        "end": {
+          "line": 484,
+          "column": 4,
+          "offset": 16732
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "As you'll see above, we use the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<slot>",
+          "position": {
+            "start": {
+              "line": 486,
+              "column": 33,
+              "offset": 16766
+            },
+            "end": {
+              "line": 486,
+              "column": 41,
+              "offset": 16774
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " as a placeholder where we want the content to go – and that's it. We're done!",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 486,
+          "column": 1,
+          "offset": 16734
+        },
+        "end": {
+          "line": 486,
+          "column": 119,
+          "offset": 16852
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"options-api\">",
+      "position": {
+        "start": {
+          "line": 488,
+          "column": 1,
+          "offset": 16854
+        },
+        "end": {
+          "line": 488,
+          "column": 26,
+          "offset": 16879
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://play.vuejs.org/#eNpVUcFOwzAM/RUTDruwFhCaUCmThsQXcO0lbbKtIo0jx52Kpv07TreWouTynl+en52z2oWQnXqrClXGhtrA28q3XUBi2DlL/IED7Ak7WGX5RKQHq8oDVN4Oo9TYve4dwzmxDcp7bz3HAs5/LpfKyy3zuY0Atl1wmm1CXE5SQeLNX9hZPrb+ALU2cNQhWG9NNkrnLKIt89lGPahlyDTVogVAadoTNE7H+F4pnZTrGodKjUUpRyb0h+0nEdKdRL3CW7GmfNY5ZLiiMhfP/ynG0SL/OAuxwWCNMNncbVqSQyrgfrPZvCVcIxkrxFMYIKJrDZA1i8qatGl72ehLGEY6aGNkNwU8P96YWjffB8Lem/Xkvn9NR6qy+fRd14FSgopvmtQmzTT9Toq9VZdfIpa5jQ==",
+          "children": [
+            {
+              "type": "text",
+              "value": "Try it in the Playground",
+              "position": {
+                "start": {
+                  "line": 490,
+                  "column": 2,
+                  "offset": 16882
+                },
+                "end": {
+                  "line": 490,
+                  "column": 26,
+                  "offset": 16906
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 490,
+              "column": 1,
+              "offset": 16881
+            },
+            "end": {
+              "line": 490,
+              "column": 461,
+              "offset": 17341
+            }
+          },
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 490,
+          "column": 1,
+          "offset": 16881
+        },
+        "end": {
+          "line": 490,
+          "column": 461,
+          "offset": 17341
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"composition-api\">",
+      "position": {
+        "start": {
+          "line": 492,
+          "column": 1,
+          "offset": 17343
+        },
+        "end": {
+          "line": 493,
+          "column": 30,
+          "offset": 17379
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://play.vuejs.org/#eNpVUEtOwzAQvcpgFt3QBBCqUAiRisQJ2GbjxG4a4Xis8aQKqnp37PyUyqv3mZn3fBVH55JLr0Umcl9T6xi85t4VpW07h8RwNJr4Cwc4EXawS9KFiGO70ubpNBcmAmDdOSNZR8T5Yg0IoOQf7DSfW9tAJRWcpXPaapWM1nVt8ObpukY8ie29GHNzAiBX7QVqI73/LIWMzn2FQylGMcieCW1TfBMhPYSoE5zFitLVZ5BhQnkadt6nGKt5/jMafI1Oq8Ak6zW4xrEaDVIGj4fD4SPiCknpQLy4ATyaVgFptVH2JFXb+wze3DDSTioV/iaD1+eZqWT92xD2Vu2X7af3+IJ6G7/UToVigpJnTzwTO42eWDnELsTtH/wUqH4=",
+          "children": [
+            {
+              "type": "text",
+              "value": "Try it in the Playground",
+              "position": {
+                "start": {
+                  "line": 495,
+                  "column": 2,
+                  "offset": 17382
+                },
+                "end": {
+                  "line": 495,
+                  "column": 26,
+                  "offset": 17406
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 495,
+              "column": 1,
+              "offset": 17381
+            },
+            "end": {
+              "line": 495,
+              "column": 433,
+              "offset": 17813
+            }
+          },
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 495,
+          "column": 1,
+          "offset": 17381
+        },
+        "end": {
+          "line": 495,
+          "column": 433,
+          "offset": 17813
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "position": {
+        "start": {
+          "line": 497,
+          "column": 1,
+          "offset": 17815
+        },
+        "end": {
+          "line": 497,
+          "column": 7,
+          "offset": 17821
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "That's all you need to know about slots for now, but once you've finished reading this page and feel comfortable with its content, we recommend coming back later to read the full guide on ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/guide/components/slots",
+          "children": [
+            {
+              "type": "text",
+              "value": "Slots",
+              "position": {
+                "start": {
+                  "line": 499,
+                  "column": 190,
+                  "offset": 18012
+                },
+                "end": {
+                  "line": 499,
+                  "column": 195,
+                  "offset": 18017
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 499,
+              "column": 189,
+              "offset": 18011
+            },
+            "end": {
+              "line": 499,
+              "column": 221,
+              "offset": 18043
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ".",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 499,
+          "column": 1,
+          "offset": 17823
+        },
+        "end": {
+          "line": 499,
+          "column": 222,
+          "offset": 18044
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Dynamic Components {#dynamic-components}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 501,
+          "column": 1,
+          "offset": 18046
+        },
+        "end": {
+          "line": 501,
+          "column": 44,
+          "offset": 18089
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Sometimes, it's useful to dynamically switch between components, like in a tabbed interface:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 503,
+          "column": 1,
+          "offset": 18091
+        },
+        "end": {
+          "line": 503,
+          "column": 93,
+          "offset": 18183
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"options-api\">",
+      "position": {
+        "start": {
+          "line": 505,
+          "column": 1,
+          "offset": 18185
+        },
+        "end": {
+          "line": 505,
+          "column": 26,
+          "offset": 18210
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://play.vuejs.org/#eNqNVE2PmzAQ/Ssj9kArLSHbrXpwk1X31mMPvS17cIxJrICNbJMmivLfO/7AEG2jRiDkefP85sNmztlr3y8OA89ItjJMi96+VFJ0vdIWfqqOQ6NVB/midIYj5sn9Sxlrkt9b14RXzXbiMElEO5IAKsmPnljzhg6thbNDmcLdkktrSADAJ/IYlj5MXEc9Z1w8VFNLP30ed2luBy1HC4UHrVH2N90QyJ1kHnUALN1gtLeIQu6juEUMkb8H5sXHqiS+qzK1Cw3Lu76llqMFsKrFAVhLjVlXWc07VWUeR89msFbhhhAWDkWjNJIwPgjp06iy5CV7fgrOOTgKv+XoKIIgpnoGyiymSmZ1wnq9dqJweZ8p/GCtYHtUmBMdLXFitgDnc9ju68b0yxDO1WzRTEcFRLiUJsEqSw3wwi+rMpFDj0psEq5W5ax1aBp7at1y4foWzq5R0hYN7UR7ImCoNIXhWjTfnW+jdM01gaf+CEa1ooYHzvnMVWhaiwEP90t/9HBP61rILQJL3POMHw93VG+FLKzqUYx3c2yjsOaOwNeRO2B8zKHlzBKQWJNH1YHrplV/iiMBOliFILYNK5mOKdSTMviGCTyNojFdTKBoeWNT3s8f/Vpsd7cIV61gjHkXnotR6OqVkJbrQKdsv9VqkDWBh2bpnn8VXaDcHPexE4wFzsojO9eDUOSVPF+65wN/EW7sHRsi5XaFqaexn+EH9Xcpe8zG2eWG3O0/NVzUaeJMk+jGhUXlNPXulw5j8w7t2bi8X32cuf/Vv/wF/SL98A==",
+          "children": [
+            {
+              "type": "text",
+              "value": "Open example in the Playground",
+              "position": {
+                "start": {
+                  "line": 507,
+                  "column": 2,
+                  "offset": 18213
+                },
+                "end": {
+                  "line": 507,
+                  "column": 32,
+                  "offset": 18243
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 507,
+              "column": 1,
+              "offset": 18212
+            },
+            "end": {
+              "line": 507,
+              "column": 847,
+              "offset": 19058
+            }
+          },
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 507,
+          "column": 1,
+          "offset": 18212
+        },
+        "end": {
+          "line": 507,
+          "column": 847,
+          "offset": 19058
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"composition-api\">",
+      "position": {
+        "start": {
+          "line": 509,
+          "column": 1,
+          "offset": 19060
+        },
+        "end": {
+          "line": 510,
+          "column": 30,
+          "offset": 19096
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://play.vuejs.org/#eNqNVMGOmzAQ/ZURe2BXCiHbrXpwk1X31mMPvS1V5RiTWAEb2SZNhPLvHdvggLZRE6TIM/P8/N5gpk/e2nZ57HhCkrVhWrQWDLdd+1pI0bRKW/iuGg6VVg2ky9wFDp7G8g9lrIl1H80Bb5rtxfFKMcRzUA+aV3AZQKEEhWRKGgus05pL+5NuYeNwj6mTkT4VckRYujVY63GT17twC6/Fr4YjC3kp5DoPNtEgBpY3bU0txwhgXYojsJoasymSkjeqSHweK9vOWoUbXIC/Y1YpjaDH3wt39hMI6TUUSYSQAz8jArPT5Mj+nmIhC6zpAu1TZlEhmXndbBwpXH5NGL6xWrADMsyaMj1lkAzQ92E7mvYe8nCcM24xZApbL5ECiHCSnP73KyseGnvh6V/XedwS2pVjv3C1ziddxNDYc+2WS9fC8E4qJW1W0UbUZwKGSpMZrkX11dW2SpdcE3huT2BULUp44JxPSpmmpegMgU/tyadbWpZC7jCxwj0v+OfTDdU7ITOrWiTjzTS3Vei8IfB5xHZ4PmqoObMEJHryWXXkuqrVn+xEgHZWYRKbh06uLyv4iQq+oIDnkXSQiwKymlc26n75WNdit78FmLWCMeZL+GKMwlKrhLRcBzhlh51WnSwJPFQr9/zLdIZ007w/O6bR4MQe2bseBJMzer5yzwf8MtzbOzYMkNsOY0+HfoZv1d+lZJGMg8fNqdsfbbio4b77uRVv7I0Li8xxZN1PHWbeHdyTWXc/+zgw/8t/+QsROe9h",
+          "children": [
+            {
+              "type": "text",
+              "value": "Open example in the Playground",
+              "position": {
+                "start": {
+                  "line": 512,
+                  "column": 2,
+                  "offset": 19099
+                },
+                "end": {
+                  "line": 512,
+                  "column": 32,
+                  "offset": 19129
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 512,
+              "column": 1,
+              "offset": 19098
+            },
+            "end": {
+              "line": 512,
+              "column": 827,
+              "offset": 19924
+            }
+          },
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 512,
+          "column": 1,
+          "offset": 19098
+        },
+        "end": {
+          "line": 512,
+          "column": 827,
+          "offset": 19924
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "position": {
+        "start": {
+          "line": 514,
+          "column": 1,
+          "offset": 19926
+        },
+        "end": {
+          "line": 514,
+          "column": 7,
+          "offset": 19932
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "The above is made possible by Vue's ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<component>",
+          "position": {
+            "start": {
+              "line": 516,
+              "column": 37,
+              "offset": 19970
+            },
+            "end": {
+              "line": 516,
+              "column": 50,
+              "offset": 19983
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " element with the special ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "is",
+          "position": {
+            "start": {
+              "line": 516,
+              "column": 76,
+              "offset": 20009
+            },
+            "end": {
+              "line": 516,
+              "column": 80,
+              "offset": 20013
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " attribute:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 516,
+          "column": 1,
+          "offset": 19934
+        },
+        "end": {
+          "line": 516,
+          "column": 91,
+          "offset": 20024
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"options-api\">",
+      "position": {
+        "start": {
+          "line": 518,
+          "column": 1,
+          "offset": 20026
+        },
+        "end": {
+          "line": 518,
+          "column": 26,
+          "offset": 20051
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<!-- Component changes when currentTab changes -->\n<component :is=\"currentTab\"></component>",
+      "position": {
+        "start": {
+          "line": 520,
+          "column": 1,
+          "offset": 20053
+        },
+        "end": {
+          "line": 523,
+          "column": 4,
+          "offset": 20160
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"composition-api\">",
+      "position": {
+        "start": {
+          "line": 525,
+          "column": 1,
+          "offset": 20162
+        },
+        "end": {
+          "line": 526,
+          "column": 30,
+          "offset": 20198
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<!-- Component changes when currentTab changes -->\n<component :is=\"tabs[currentTab]\"></component>",
+      "position": {
+        "start": {
+          "line": 528,
+          "column": 1,
+          "offset": 20200
+        },
+        "end": {
+          "line": 531,
+          "column": 4,
+          "offset": 20313
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "position": {
+        "start": {
+          "line": 533,
+          "column": 1,
+          "offset": 20315
+        },
+        "end": {
+          "line": 533,
+          "column": 7,
+          "offset": 20321
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "In the example above, the value passed to ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": ":is",
+          "position": {
+            "start": {
+              "line": 535,
+              "column": 43,
+              "offset": 20365
+            },
+            "end": {
+              "line": 535,
+              "column": 48,
+              "offset": 20370
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " can contain either:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 535,
+          "column": 1,
+          "offset": 20323
+        },
+        "end": {
+          "line": 535,
+          "column": 68,
+          "offset": 20390
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "the name string of a registered component, OR",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 537,
+                  "column": 3,
+                  "offset": 20394
+                },
+                "end": {
+                  "line": 537,
+                  "column": 48,
+                  "offset": 20439
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 537,
+              "column": 1,
+              "offset": 20392
+            },
+            "end": {
+              "line": 537,
+              "column": 48,
+              "offset": 20439
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "the actual imported component object",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 538,
+                  "column": 3,
+                  "offset": 20442
+                },
+                "end": {
+                  "line": 538,
+                  "column": 39,
+                  "offset": 20478
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 538,
+              "column": 1,
+              "offset": 20440
+            },
+            "end": {
+              "line": 538,
+              "column": 39,
+              "offset": 20478
+            }
+          },
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 537,
+          "column": 1,
+          "offset": 20392
+        },
+        "end": {
+          "line": 538,
+          "column": 39,
+          "offset": 20478
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "You can also use the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "is",
+          "position": {
+            "start": {
+              "line": 540,
+              "column": 22,
+              "offset": 20501
+            },
+            "end": {
+              "line": 540,
+              "column": 26,
+              "offset": 20505
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " attribute to create regular HTML elements.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 540,
+          "column": 1,
+          "offset": 20480
+        },
+        "end": {
+          "line": 540,
+          "column": 69,
+          "offset": 20548
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "When switching between multiple components with ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<component :is=\"...\">",
+          "position": {
+            "start": {
+              "line": 542,
+              "column": 49,
+              "offset": 20598
+            },
+            "end": {
+              "line": 542,
+              "column": 72,
+              "offset": 20621
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", a component will be unmounted when it is switched away from. We can force the inactive components to stay \"alive\" with the built-in ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/guide/built-ins/keep-alive",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "<KeepAlive>",
+              "position": {
+                "start": {
+                  "line": 542,
+                  "column": 207,
+                  "offset": 20756
+                },
+                "end": {
+                  "line": 542,
+                  "column": 220,
+                  "offset": 20769
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "text",
+              "value": " component",
+              "position": {
+                "start": {
+                  "line": 542,
+                  "column": 220,
+                  "offset": 20769
+                },
+                "end": {
+                  "line": 542,
+                  "column": 230,
+                  "offset": 20779
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 542,
+              "column": 206,
+              "offset": 20755
+            },
+            "end": {
+              "line": 542,
+              "column": 260,
+              "offset": 20809
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ".",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 542,
+          "column": 1,
+          "offset": 20550
+        },
+        "end": {
+          "line": 542,
+          "column": 261,
+          "offset": 20810
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "in-DOM Template Parsing Caveats {#in-dom-template-parsing-caveats}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 544,
+          "column": 1,
+          "offset": 20812
+        },
+        "end": {
+          "line": 544,
+          "column": 70,
+          "offset": 20881
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "If you are writing your Vue templates directly in the DOM, Vue will have to retrieve the template string from the DOM. This leads to some caveats due to browsers' native HTML parsing behavior.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 546,
+          "column": 1,
+          "offset": 20883
+        },
+        "end": {
+          "line": 546,
+          "column": 193,
+          "offset": 21075
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": ":::tip\nIt should be noted that the limitations discussed below only apply if you are writing your templates directly in the DOM. They do NOT apply if you are using string templates from the following sources:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 548,
+          "column": 1,
+          "offset": 21077
+        },
+        "end": {
+          "line": 549,
+          "column": 202,
+          "offset": 21285
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Single-File Components",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 551,
+                  "column": 3,
+                  "offset": 21289
+                },
+                "end": {
+                  "line": 551,
+                  "column": 25,
+                  "offset": 21311
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 551,
+              "column": 1,
+              "offset": 21287
+            },
+            "end": {
+              "line": 551,
+              "column": 25,
+              "offset": 21311
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Inlined template strings (e.g. ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "template: '...'",
+                  "position": {
+                    "start": {
+                      "line": 552,
+                      "column": 34,
+                      "offset": 21345
+                    },
+                    "end": {
+                      "line": 552,
+                      "column": 51,
+                      "offset": 21362
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ")",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 552,
+                  "column": 3,
+                  "offset": 21314
+                },
+                "end": {
+                  "line": 552,
+                  "column": 52,
+                  "offset": 21363
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 552,
+              "column": 1,
+              "offset": 21312
+            },
+            "end": {
+              "line": 552,
+              "column": 52,
+              "offset": 21363
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "<script type=\"text/x-template\">",
+                  "position": {
+                    "start": {
+                      "line": 553,
+                      "column": 3,
+                      "offset": 21366
+                    },
+                    "end": {
+                      "line": 553,
+                      "column": 36,
+                      "offset": 21399
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": "\n:::",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 553,
+                  "column": 3,
+                  "offset": 21366
+                },
+                "end": {
+                  "line": 554,
+                  "column": 6,
+                  "offset": 21405
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 553,
+              "column": 1,
+              "offset": 21364
+            },
+            "end": {
+              "line": 554,
+              "column": 6,
+              "offset": 21405
+            }
+          },
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 551,
+          "column": 1,
+          "offset": 21287
+        },
+        "end": {
+          "line": 554,
+          "column": 6,
+          "offset": 21405
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Case Insensitivity {#case-insensitivity}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 556,
+          "column": 1,
+          "offset": 21407
+        },
+        "end": {
+          "line": 556,
+          "column": 45,
+          "offset": 21451
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "HTML tags and attribute names are case-insensitive, so browsers will interpret any uppercase characters as lowercase. That means when you’re using in-DOM templates, PascalCase component names and camelCased prop names or ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "v-on",
+          "position": {
+            "start": {
+              "line": 558,
+              "column": 222,
+              "offset": 21674
+            },
+            "end": {
+              "line": 558,
+              "column": 228,
+              "offset": 21680
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " event names all need to use their kebab-cased (hyphen-delimited) equivalents:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 558,
+          "column": 1,
+          "offset": 21453
+        },
+        "end": {
+          "line": 558,
+          "column": 306,
+          "offset": 21758
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "// camelCase in JavaScript\nconst BlogPost = {\n  props: ['postTitle'],\n  emits: ['updatePost'],\n  template: `\n    <h3>{{ postTitle }}</h3>\n  `\n}",
+      "position": {
+        "start": {
+          "line": 560,
+          "column": 1,
+          "offset": 21760
+        },
+        "end": {
+          "line": 569,
+          "column": 4,
+          "offset": 21913
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<!-- kebab-case in HTML -->\n<blog-post post-title=\"hello!\" @update-post=\"onUpdatePost\"></blog-post>",
+      "position": {
+        "start": {
+          "line": 571,
+          "column": 1,
+          "offset": 21915
+        },
+        "end": {
+          "line": 574,
+          "column": 4,
+          "offset": 22030
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Self Closing Tags {#self-closing-tags}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 576,
+          "column": 1,
+          "offset": 22032
+        },
+        "end": {
+          "line": 576,
+          "column": 43,
+          "offset": 22074
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "We have been using self-closing tags for components in previous code samples:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 578,
+          "column": 1,
+          "offset": 22076
+        },
+        "end": {
+          "line": 578,
+          "column": 78,
+          "offset": 22153
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<MyComponent />",
+      "position": {
+        "start": {
+          "line": 580,
+          "column": 1,
+          "offset": 22155
+        },
+        "end": {
+          "line": 582,
+          "column": 4,
+          "offset": 22186
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "This is because Vue's template parser respects ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "/>",
+          "position": {
+            "start": {
+              "line": 584,
+              "column": 48,
+              "offset": 22235
+            },
+            "end": {
+              "line": 584,
+              "column": 52,
+              "offset": 22239
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " as an indication to end any tag, regardless of its type.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 584,
+          "column": 1,
+          "offset": 22188
+        },
+        "end": {
+          "line": 584,
+          "column": 109,
+          "offset": 22296
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "In in-DOM templates, however, we must always include explicit closing tags:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 586,
+          "column": 1,
+          "offset": 22298
+        },
+        "end": {
+          "line": 586,
+          "column": 76,
+          "offset": 22373
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<my-component></my-component>",
+      "position": {
+        "start": {
+          "line": 588,
+          "column": 1,
+          "offset": 22375
+        },
+        "end": {
+          "line": 590,
+          "column": 4,
+          "offset": 22420
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "This is because the HTML spec only allows ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://html.spec.whatwg.org/multipage/syntax.html#void-elements",
+          "children": [
+            {
+              "type": "text",
+              "value": "a few specific elements",
+              "position": {
+                "start": {
+                  "line": 592,
+                  "column": 44,
+                  "offset": 22465
+                },
+                "end": {
+                  "line": 592,
+                  "column": 67,
+                  "offset": 22488
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 592,
+              "column": 43,
+              "offset": 22464
+            },
+            "end": {
+              "line": 592,
+              "column": 134,
+              "offset": 22555
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " to omit closing tags, the most common being ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<input>",
+          "position": {
+            "start": {
+              "line": 592,
+              "column": 179,
+              "offset": 22600
+            },
+            "end": {
+              "line": 592,
+              "column": 188,
+              "offset": 22609
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " and ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<img>",
+          "position": {
+            "start": {
+              "line": 592,
+              "column": 193,
+              "offset": 22614
+            },
+            "end": {
+              "line": 592,
+              "column": 200,
+              "offset": 22621
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ". For all other elements, if you omit the closing tag, the native HTML parser will think you never terminated the opening tag. For example, the following snippet:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 592,
+          "column": 1,
+          "offset": 22422
+        },
+        "end": {
+          "line": 592,
+          "column": 362,
+          "offset": 22783
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<my-component /> <!-- we intend to close the tag here... -->\n<span>hello</span>",
+      "position": {
+        "start": {
+          "line": 594,
+          "column": 1,
+          "offset": 22785
+        },
+        "end": {
+          "line": 597,
+          "column": 4,
+          "offset": 22880
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "will be parsed as:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 599,
+          "column": 1,
+          "offset": 22882
+        },
+        "end": {
+          "line": 599,
+          "column": 19,
+          "offset": 22900
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<my-component>\n  <span>hello</span>\n</my-component> <!-- but the browser will close it here. -->",
+      "position": {
+        "start": {
+          "line": 601,
+          "column": 1,
+          "offset": 22902
+        },
+        "end": {
+          "line": 605,
+          "column": 4,
+          "offset": 23014
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Element Placement Restrictions {#element-placement-restrictions}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 607,
+          "column": 1,
+          "offset": 23016
+        },
+        "end": {
+          "line": 607,
+          "column": 69,
+          "offset": 23084
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Some HTML elements, such as ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<ul>",
+          "position": {
+            "start": {
+              "line": 609,
+              "column": 29,
+              "offset": 23114
+            },
+            "end": {
+              "line": 609,
+              "column": 35,
+              "offset": 23120
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<ol>",
+          "position": {
+            "start": {
+              "line": 609,
+              "column": 37,
+              "offset": 23122
+            },
+            "end": {
+              "line": 609,
+              "column": 43,
+              "offset": 23128
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<table>",
+          "position": {
+            "start": {
+              "line": 609,
+              "column": 45,
+              "offset": 23130
+            },
+            "end": {
+              "line": 609,
+              "column": 54,
+              "offset": 23139
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " and ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<select>",
+          "position": {
+            "start": {
+              "line": 609,
+              "column": 59,
+              "offset": 23144
+            },
+            "end": {
+              "line": 609,
+              "column": 69,
+              "offset": 23154
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " have restrictions on what elements can appear inside them, and some elements such as ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<li>",
+          "position": {
+            "start": {
+              "line": 609,
+              "column": 155,
+              "offset": 23240
+            },
+            "end": {
+              "line": 609,
+              "column": 161,
+              "offset": 23246
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<tr>",
+          "position": {
+            "start": {
+              "line": 609,
+              "column": 163,
+              "offset": 23248
+            },
+            "end": {
+              "line": 609,
+              "column": 169,
+              "offset": 23254
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", and ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<option>",
+          "position": {
+            "start": {
+              "line": 609,
+              "column": 175,
+              "offset": 23260
+            },
+            "end": {
+              "line": 609,
+              "column": 185,
+              "offset": 23270
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " can only appear inside certain other elements.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 609,
+          "column": 1,
+          "offset": 23086
+        },
+        "end": {
+          "line": 609,
+          "column": 232,
+          "offset": 23317
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "This will lead to issues when using components with elements that have such restrictions. For example:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 611,
+          "column": 1,
+          "offset": 23319
+        },
+        "end": {
+          "line": 611,
+          "column": 103,
+          "offset": 23421
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<table>\n  <blog-post-row></blog-post-row>\n</table>",
+      "position": {
+        "start": {
+          "line": 613,
+          "column": 1,
+          "offset": 23423
+        },
+        "end": {
+          "line": 617,
+          "column": 4,
+          "offset": 23489
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "The custom component ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<blog-post-row>",
+          "position": {
+            "start": {
+              "line": 619,
+              "column": 22,
+              "offset": 23512
+            },
+            "end": {
+              "line": 619,
+              "column": 39,
+              "offset": 23529
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " will be hoisted out as invalid content, causing errors in the eventual rendered output. We can use the special ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/api/built-in-special-attributes#is",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "is",
+              "position": {
+                "start": {
+                  "line": 619,
+                  "column": 152,
+                  "offset": 23642
+                },
+                "end": {
+                  "line": 619,
+                  "column": 156,
+                  "offset": 23646
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "text",
+              "value": " attribute",
+              "position": {
+                "start": {
+                  "line": 619,
+                  "column": 156,
+                  "offset": 23646
+                },
+                "end": {
+                  "line": 619,
+                  "column": 166,
+                  "offset": 23656
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 619,
+              "column": 151,
+              "offset": 23641
+            },
+            "end": {
+              "line": 619,
+              "column": 204,
+              "offset": 23694
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " as a workaround:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 619,
+          "column": 1,
+          "offset": 23491
+        },
+        "end": {
+          "line": 619,
+          "column": 221,
+          "offset": 23711
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<table>\n  <tr is=\"vue:blog-post-row\"></tr>\n</table>",
+      "position": {
+        "start": {
+          "line": 621,
+          "column": 1,
+          "offset": 23713
+        },
+        "end": {
+          "line": 625,
+          "column": 4,
+          "offset": 23780
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": ":::tip\nWhen used on native HTML elements, the value of ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "is",
+          "position": {
+            "start": {
+              "line": 628,
+              "column": 49,
+              "offset": 23837
+            },
+            "end": {
+              "line": 628,
+              "column": 53,
+              "offset": 23841
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " must be prefixed with ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "vue:",
+          "position": {
+            "start": {
+              "line": 628,
+              "column": 76,
+              "offset": 23864
+            },
+            "end": {
+              "line": 628,
+              "column": 82,
+              "offset": 23870
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " in order to be interpreted as a Vue component. This is required to avoid confusion with native ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://html.spec.whatwg.org/multipage/custom-elements.html#custom-elements-customized-builtin-example",
+          "children": [
+            {
+              "type": "text",
+              "value": "customized built-in elements",
+              "position": {
+                "start": {
+                  "line": 628,
+                  "column": 179,
+                  "offset": 23967
+                },
+                "end": {
+                  "line": 628,
+                  "column": 207,
+                  "offset": 23995
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 628,
+              "column": 178,
+              "offset": 23966
+            },
+            "end": {
+              "line": 628,
+              "column": 312,
+              "offset": 24100
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ".\n:::",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 627,
+          "column": 1,
+          "offset": 23782
+        },
+        "end": {
+          "line": 629,
+          "column": 4,
+          "offset": 24105
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "del",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "That's all you need to know about in-DOM template parsing caveats for now - and actually, the end of Vue's ",
+              "position": {
+                "start": {
+                  "line": 631,
+                  "column": 1,
+                  "offset": 24107
+                },
+                "end": {
+                  "line": 631,
+                  "column": 108,
+                  "offset": 24214
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "emphasis",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Essentials",
+                  "position": {
+                    "start": {
+                      "line": 631,
+                      "column": 109,
+                      "offset": 24215
+                    },
+                    "end": {
+                      "line": 631,
+                      "column": 119,
+                      "offset": 24225
+                    }
+                  },
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 631,
+                  "column": 108,
+                  "offset": 24214
+                },
+                "end": {
+                  "line": 631,
+                  "column": 120,
+                  "offset": 24226
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "text",
+              "value": ". Congratulations! There's still more to learn, but first, we recommend taking a break to play with Vue yourself - build something fun, or check out some of the ",
+              "position": {
+                "start": {
+                  "line": 631,
+                  "column": 120,
+                  "offset": 24226
+                },
+                "end": {
+                  "line": 631,
+                  "column": 281,
+                  "offset": 24387
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "link",
+              "title": null,
+              "url": "/examples/",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Examples",
+                  "position": {
+                    "start": {
+                      "line": 631,
+                      "column": 282,
+                      "offset": 24388
+                    },
+                    "end": {
+                      "line": 631,
+                      "column": 290,
+                      "offset": 24396
+                    }
+                  },
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 631,
+                  "column": 281,
+                  "offset": 24387
+                },
+                "end": {
+                  "line": 631,
+                  "column": 303,
+                  "offset": 24409
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "text",
+              "value": " if you haven't already.",
+              "position": {
+                "start": {
+                  "line": 631,
+                  "column": 303,
+                  "offset": 24409
+                },
+                "end": {
+                  "line": 631,
+                  "column": 327,
+                  "offset": 24433
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 631,
+              "column": 1,
+              "offset": 24107
+            },
+            "end": {
+              "line": 631,
+              "column": 327,
+              "offset": 24433
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": "Once you feel comfortable with the knowledge you've just digested, move on with the guide to learn more about components in depth.",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": "That's all you need to know about in-DOM template parsing caveats for now.",
+              "data": {}
+            }
+          ]
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 631,
+          "column": 1,
+          "offset": 24107
+        },
+        "end": {
+          "line": 631,
+          "column": 75,
+          "offset": 24181
+        }
+      },
+      "data": {}
+    }
+  ]
+}

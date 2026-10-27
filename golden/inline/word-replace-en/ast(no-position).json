@@ -1,0 +1,65 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "heading",
+      "depth": 1,
+      "children": [
+        {
+          "type": "text",
+          "value": "Notes",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "The quick ",
+          "data": {}
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": "brown",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": "red",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": " fox jumps over the lazy dog near the river bank.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Nothing else changes in this paragraph at all.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    }
+  ],
+  "data": {}
+}

@@ -1,0 +1,1261 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "yaml",
+      "value": "title: flushSync",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<Pitfall>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Using ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "flushSync",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " is uncommon and can hurt the performance of your app.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</Pitfall>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "html",
+      "value": "<Intro>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "inlineCode",
+          "value": "flushSync",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " lets you force React to flush any updates inside the provided callback synchronously. This ensures that the DOM is updated immediately.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "flushSync(callback)",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</Intro>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "html",
+      "value": "<InlineToc />",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "thematicBreak",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Reference {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "reference",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "inlineCode",
+          "value": "flushSync(callback)",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "flushsync",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Call ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "flushSync",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " to force React to flush any pending work and update the DOM synchronously.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "import { flushSync } from 'react-dom';\n\nflushSync(() => {\n  setSomething(123);\n});",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Most of the time, ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "flushSync",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " can be avoided. Use ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "flushSync",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " as last resort.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "#usage",
+          "children": [
+            {
+              "type": "text",
+              "value": "See more examples below.",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 4,
+      "children": [
+        {
+          "type": "text",
+          "value": "Parameters {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "parameters",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "callback",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ": A function. React will immediately call this callback and flush any updates it contains synchronously. It may also flush any pending updates, or Effects, or updates inside of Effects. If an update suspends as a result of this ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "flushSync",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " call, the fallbacks may be re-shown.",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 4,
+      "children": [
+        {
+          "type": "text",
+          "value": "Returns {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "returns",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "inlineCode",
+          "value": "flushSync",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " returns ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "undefined",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ".",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 4,
+      "children": [
+        {
+          "type": "text",
+          "value": "Caveats {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "caveats",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "flushSync",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " can significantly hurt performance. Use sparingly.",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "flushSync",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " may force pending Suspense boundaries to show their ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "fallback",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " state.",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "flushSync",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " may run pending Effects and synchronously apply any updates they contain before returning.",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "flushSync",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " may flush updates outside the callback when necessary to flush the updates inside the callback. For example, if there are pending updates from a click, React may flush those before flushing the updates inside the callback.",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "thematicBreak",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Usage {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "usage",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Flushing updates for third-party integrations {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "flushing-updates-for-third-party-integrations",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "When integrating with third-party code such as browser APIs or UI libraries, it may be necessary to force React to flush updates. Use ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "flushSync",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "text",
+          "value": " to force React to flush any ",
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "<CodeStep step={1}>",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "text",
+          "value": "state updates",
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "</CodeStep>",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "text",
+          "value": " inside the callback synchronously:",
+          "data": {}
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": "[[1, 2, \"setSomething(123)\"]]",
+      "value": "flushSync(() => {\n  setSomething(123);\n});\n// By this line, the DOM is updated.",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "This ensures that, by the time the next line of code runs, React has already updated the DOM.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "Using ",
+              "data": {}
+            },
+            {
+              "type": "inlineCode",
+              "value": "flushSync",
+              "data": {}
+            },
+            {
+              "type": "text",
+              "value": " is uncommon, and using it often can significantly hurt the performance of your app.",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " If your app only uses React APIs, and does not integrate with third-party libraries, ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "flushSync",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " should be unnecessary.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "However, it can be helpful for integrating with third-party code like browser APIs.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Some browser APIs expect results inside of callbacks to be written to the DOM synchronously, by the end of the callback, so the browser can do something with the rendered DOM. In most cases, React handles this for you automatically. But in some cases it may be necessary to force a synchronous update.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "For example, the browser ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "onbeforeprint",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " API allows you to change the page immediately before the print dialog opens. This is useful for applying custom print styles that allow the document to display better for printing. In the example below, you use ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "flushSync",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " inside of the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "onbeforeprint",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " callback to immediately \"flush\" the React state to the DOM. Then, by the time the print dialog opens, ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "isPrinting",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " displays \"yes\":",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<Sandpack>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": "src/App.js active",
+      "value": "import { useState, useEffect } from 'react';\nimport { flushSync } from 'react-dom';\n\nexport default function PrintApp() {\n  const [isPrinting, setIsPrinting] = useState(false);\n\n  useEffect(() => {\n    function handleBeforePrint() {\n      flushSync(() => {\n        setIsPrinting(true);\n      })\n    }\n\n    function handleAfterPrint() {\n      setIsPrinting(false);\n    }\n\n    window.addEventListener('beforeprint', handleBeforePrint);\n    window.addEventListener('afterprint', handleAfterPrint);\n    return () => {\n      window.removeEventListener('beforeprint', handleBeforePrint);\n      window.removeEventListener('afterprint', handleAfterPrint);\n    }\n  }, []);\n\n  return (\n    <>\n      <h1>isPrinting: {isPrinting ? 'yes' : 'no'}</h1>\n      <button onClick={() => window.print()}>\n        Print\n      </button>\n    </>\n  );\n}",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</Sandpack>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Without ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "flushSync",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", the print dialog will display ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "isPrinting",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " as \"no\". This is because React batches the updates asynchronously and the print dialog is displayed before the state is updated.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<Pitfall>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "inlineCode",
+          "value": "flushSync",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " can significantly hurt performance, and may unexpectedly force pending Suspense boundaries to show their fallback state.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Most of the time, ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "flushSync",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " can be avoided, so use ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "flushSync",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " as a last resort.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</Pitfall>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "thematicBreak",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 2,
+          "children": [
+            {
+              "type": "text",
+              "value": "Troubleshooting {/"
+            },
+            {
+              "type": "emphasis",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "troubleshooting"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "/}"
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 3,
+          "children": [
+            {
+              "type": "text",
+              "value": "I'm getting an error: \"flushSync was called from inside a lifecycle method\" {/"
+            },
+            {
+              "type": "emphasis",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "im-getting-an-error-flushsync-was-called-from-inside-a-lifecycle-method"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "/}"
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "React cannot "
+            },
+            {
+              "type": "inlineCode",
+              "value": "flushSync"
+            },
+            {
+              "type": "text",
+              "value": " in the middle of a render. If you do, it will noop and warn:"
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "<ConsoleBlock level=\"error\">",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "Warning: flushSync was called from inside a lifecycle method. React cannot flush when React is already rendering. Consider moving this call to a scheduler task or micro task."
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "</ConsoleBlock>",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "This includes calling "
+            },
+            {
+              "type": "inlineCode",
+              "value": "flushSync"
+            },
+            {
+              "type": "text",
+              "value": " inside:"
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "list",
+          "ordered": false,
+          "start": null,
+          "spread": false,
+          "children": [
+            {
+              "type": "listItem",
+              "spread": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "rendering a component."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "spread": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "inlineCode",
+                      "value": "useLayoutEffect"
+                    },
+                    {
+                      "type": "text",
+                      "value": " or "
+                    },
+                    {
+                      "type": "inlineCode",
+                      "value": "useEffect"
+                    },
+                    {
+                      "type": "text",
+                      "value": " hooks."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "spread": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Class component lifecycle methods."
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "For example, calling "
+            },
+            {
+              "type": "inlineCode",
+              "value": "flushSync"
+            },
+            {
+              "type": "text",
+              "value": " in an Effect will noop and warn:"
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "code",
+          "lang": "js",
+          "meta": null,
+          "value": "import { useEffect } from 'react';\nimport { flushSync } from 'react-dom';\n\nfunction MyComponent() {\n  useEffect(() => {\n    // 🚩 Wrong: calling flushSync inside an effect\n    flushSync(() => {\n      setSomething(newValue);\n    });\n  }, []);\n\n  return <div>{/* ... */}</div>;\n}",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "To fix this, you usually want to move the "
+            },
+            {
+              "type": "inlineCode",
+              "value": "flushSync"
+            },
+            {
+              "type": "text",
+              "value": " call to an event:"
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "code",
+          "lang": "js",
+          "meta": null,
+          "value": "function handleClick() {\n  // ✅ Correct: flushSync in event handlers is safe\n  flushSync(() => {\n    setSomething(newValue);\n  });\n}",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "If it's difficult to move to an event, you can defer "
+            },
+            {
+              "type": "inlineCode",
+              "value": "flushSync"
+            },
+            {
+              "type": "text",
+              "value": " in a microtask:"
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "code",
+          "lang": "js",
+          "meta": "{3,7}",
+          "value": "useEffect(() => {\n  // ✅ Correct: defer flushSync to a microtask\n  queueMicrotask(() => {\n    flushSync(() => {\n      setSomething(newValue);\n    });\n  });\n}, []);",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "This will allow the current render to finish and schedule another syncronous render to flush the updates."
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "<Pitfall>",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "flushSync"
+            },
+            {
+              "type": "text",
+              "value": " can significantly hurt performance, but this particular pattern is even worse for performance. Exhaust all other options before calling "
+            },
+            {
+              "type": "inlineCode",
+              "value": "flushSync"
+            },
+            {
+              "type": "text",
+              "value": " in a microtask as an escape hatch."
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "</Pitfall>",
+          "data": {}
+        }
+      ]
+    }
+  ]
+}

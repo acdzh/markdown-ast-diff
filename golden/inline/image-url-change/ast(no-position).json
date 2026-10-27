@@ -1,0 +1,41 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "看看这张图：",
+          "data": {}
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "image",
+              "title": null,
+              "url": "https://example.com/cat-v1.png",
+              "alt": "橘猫",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "image",
+              "title": null,
+              "url": "https://example.com/cat-v2.png",
+              "alt": "橘猫",
+              "data": {}
+            }
+          ]
+        }
+      ],
+      "data": {}
+    }
+  ],
+  "data": {}
+}

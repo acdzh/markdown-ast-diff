@@ -1,0 +1,144 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "del",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "Alpha paragraph talks about the beginning of the story.",
+              "position": {
+                "start": {
+                  "line": 1,
+                  "column": 1,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 1,
+                  "column": 56,
+                  "offset": 55
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 56,
+              "offset": 55
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Beta paragraph describes the middle part in detail.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 52,
+          "offset": 51
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Gamma paragraph wraps everything up nicely.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 3,
+          "column": 1,
+          "offset": 53
+        },
+        "end": {
+          "line": 3,
+          "column": 44,
+          "offset": 96
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "Alpha paragraph talks about the beginning of the story.",
+              "position": {
+                "start": {
+                  "line": 5,
+                  "column": 1,
+                  "offset": 98
+                },
+                "end": {
+                  "line": 5,
+                  "column": 56,
+                  "offset": 153
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 5,
+              "column": 1,
+              "offset": 98
+            },
+            "end": {
+              "line": 5,
+              "column": 56,
+              "offset": 153
+            }
+          },
+          "data": {}
+        }
+      ]
+    }
+  ],
+  "position": {
+    "start": {
+      "line": 1,
+      "column": 1,
+      "offset": 0
+    },
+    "end": {
+      "line": 6,
+      "column": 1,
+      "offset": 154
+    }
+  },
+  "data": {}
+}

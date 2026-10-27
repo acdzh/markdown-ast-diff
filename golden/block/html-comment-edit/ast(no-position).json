@@ -1,0 +1,37 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "del",
+      "children": [
+        {
+          "type": "html",
+          "value": "<!-- old note -->",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "<!-- new note -->",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "可见段落。",
+          "data": {}
+        }
+      ],
+      "data": {}
+    }
+  ],
+  "data": {}
+}

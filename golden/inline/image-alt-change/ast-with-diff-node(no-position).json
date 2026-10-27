@@ -1,0 +1,36 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "image",
+              "title": null,
+              "url": "https://example.com/cat.png",
+              "alt": "旧的说明文字",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "image",
+              "title": null,
+              "url": "https://example.com/cat.png",
+              "alt": "新的说明文字",
+              "data": {}
+            }
+          ]
+        }
+      ],
+      "data": {}
+    }
+  ],
+  "data": {}
+}

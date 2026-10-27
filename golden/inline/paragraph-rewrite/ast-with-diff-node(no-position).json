@@ -1,0 +1,54 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "第一段保持不变，用来提供上下文。",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": "油屋这个场景的设定简直是神来之笔，既是服务众神的澡堂，又是微缩的社会模型。",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": "建筑的垂直结构直接映射了内部的权力秩序，每穿过一层楼就等于穿越一个阶层。",
+              "data": {}
+            }
+          ]
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "最后一段同样保持不变。",
+          "data": {}
+        }
+      ],
+      "data": {}
+    }
+  ],
+  "data": {}
+}

@@ -1,0 +1,37 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "上文。",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "thematicBreak",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "下文。",
+          "data": {}
+        }
+      ],
+      "data": {}
+    }
+  ],
+  "data": {
+    "diffUnchanged": true
+  }
+}

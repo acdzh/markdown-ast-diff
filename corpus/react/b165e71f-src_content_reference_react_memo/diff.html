@@ -1,0 +1,376 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+/* table */
+table { border-collapse: collapse; width: auto; margin: 1em 0; }
+th, td { border: 1px solid #d0d7de; padding: 6px 13px; }
+th { background: #f6f8fa; font-weight: 600; }
+tr:nth-child(2n) { background: #f6f8fa; }
+
+/* code */
+code { padding: 0.2em 0.4em; font-size: 85%; background: #f6f8fa; border-radius: 6px; font-family: 'SF Mono', 'Fira Code', Menlo, monospace; }
+pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background: #f6f8fa; border-radius: 6px; margin: 1em 0; }
+pre code { padding: 0; background: none; border-radius: 0; font-size: inherit; }
+
+/* blockquote */
+blockquote { padding: 0 1em; color: #656d76; border-left: 0.25em solid #d0d7de; margin: 1em 0; }
+
+/* hr */
+hr { height: 0.25em; padding: 0; margin: 24px 0; background-color: #d0d7de; border: 0; }
+
+/* headings */
+h1, h2, h3, h4, h5, h6 { margin-top: 24px; margin-bottom: 16px; font-weight: 600; line-height: 1.25; }
+h1 { font-size: 2em; padding-bottom: 0.3em; border-bottom: 1px solid #d0d7de; }
+h2 { font-size: 1.5em; padding-bottom: 0.3em; border-bottom: 1px solid #d0d7de; }
+h3 { font-size: 1.25em; }
+
+/* list */
+ul, ol { padding-left: 2em; margin: 0.5em 0; }
+li + li { margin-top: 0.25em; }
+
+/* image */
+img { max-width: 100%; }
+
+/* code diff */
+.code-diff { border-radius: 6px; overflow: hidden; margin: 1em 0; font-size: 13px; border: 1px solid #d0d7de; }
+.code-diff pre { margin: 0; padding: 0; border-radius: 0; border: none; background: #fff; }
+.code-diff .shiki { background: #fff !important; }
+.code-diff .diff-line { display: flex; line-height: 1.45; }
+.code-diff .diff-line-gutter { width: 40px; min-width: 40px; text-align: right; padding: 0 8px 0 0; color: #8b949e; font-size: 12px; user-select: none; flex-shrink: 0; }
+.code-diff .diff-line-sign { width: 20px; min-width: 20px; text-align: center; user-select: none; flex-shrink: 0; }
+.code-diff .diff-line-content { flex: 1; padding-right: 12px; white-space: pre; overflow-x: auto; }
+.code-diff .diff-line.del { background: #ffebe9; }
+.code-diff .diff-line.del .diff-line-gutter { background: #ffd7d5; color: #82071e; }
+.code-diff .diff-line.del .diff-line-sign { color: #82071e; }
+.code-diff .diff-line.ins { background: #e6ffec; }
+.code-diff .diff-line.ins .diff-line-gutter { background: #ccffd8; color: #116329; }
+.code-diff .diff-line.ins .diff-line-sign { color: #116329; }
+.code-diff .diff-line.ctx { background: #fff; }
+.code-diff .diff-line.ctx .diff-line-gutter { color: #8b949e; }
+.code-diff .diff-header { padding: 8px 12px; background: #f6f8fa; border-bottom: 1px solid #d0d7de; font-size: 12px; color: #656d76; font-family: 'SF Mono', 'Fira Code', Menlo, monospace; }
+
+ins { background-color: #e6ffec; text-decoration: none; border-radius: 2px; padding: 0 2px; }
+del { background-color: #ffebe9; text-decoration: line-through; border-radius: 2px; padding: 0 2px; }
+ins.diff-block, del.diff-block { display: block; padding-left: 10px; border-left: 3px solid; }
+ins.diff-block { border-left-color: #2cbe4e; }
+del.diff-block { border-left-color: #cb2431; }
+ins > hr, ins > pre { background-color: #e6ffec; }
+del > hr, del > pre { background-color: #ffebe9; }
+ins > table, del > table { border-collapse: collapse; }
+ins > table th, ins > table td { background-color: #e6ffec; }
+del > table th, del > table td { background-color: #ffebe9; }
+li[data-diff="ins"] { background-color: #e6ffec; border-radius: 2px; }
+li[data-diff="del"] { background-color: #ffebe9; border-radius: 2px; text-decoration: line-through; }
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:16px;font-size:14px;line-height:1.6;color:#1a1a1a;}</style></head><body><Intro>
+<p><code>memo</code> lets you skip re-rendering a component when its props are unchanged.</p>
+<pre><code><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span>const MemoizedComponent = memo(SomeComponent, arePropsEqual?)</span></span></code></pre>
+</code></pre>
+</Intro>
+<ins class="diff-block"><Note></ins>
+<ins class="diff-block"><p><a href="/learn/react-compiler">React Compiler</a> automatically applies the equivalent of <code>memo</code> to all components, reducing the need for manual memoization. You can use the compiler to handle component memoization automatically.</p></ins>
+<ins class="diff-block"></Note></ins>
+<InlineToc />
+<hr>
+<h2>Reference {/<em>reference</em>/}</h2>
+<h3><code>memo(Component, arePropsEqual?)</code> {/<em>memo</em>/}</h3>
+<p>Wrap a component in <code>memo</code> to get a <em>memoized</em> version of that component. This memoized version of your component will usually not be re-rendered when its parent component is re-rendered as long as its props have not changed. But React may still re-render it: memoization is a performance optimization, not a guarantee.</p>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">import</span><span style="color:#24292E"> { memo } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> 'react'</span><span style="color:#24292E">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">const</span><span style="color:#005CC5"> SomeComponent</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> memo</span><span style="color:#24292E">(</span><span style="color:#D73A49">function</span><span style="color:#6F42C1"> SomeComponent</span><span style="color:#24292E">(</span><span style="color:#E36209">props</span><span style="color:#24292E">) {</span></span>
+<span class="line"><span style="color:#6A737D">  // ...</span></span>
+<span class="line"><span style="color:#24292E">});</span></span></code></pre>
+</code></pre>
+<p><a href="#usage">See more examples below.</a></p>
+<h4>Parameters {/<em>parameters</em>/}</h4>
+<ul>
+<li>
+<p><code>Component</code>: The component that you want to memoize. The <code>memo</code> does not modify this component, but returns a new, memoized component instead. Any valid React component, including functions and <a href="/reference/react/forwardRef"><code>forwardRef</code></a> components, is accepted.</p>
+</li>
+<li>
+<p><strong>optional</strong> <code>arePropsEqual</code>: A function that accepts two arguments: the component's previous props, and its new props. It should return <code>true</code> if the old and new props are equal: that is, if the component will render the same output and behave in the same way with the new props as with the old. Otherwise it should return <code>false</code>. Usually, you will not specify this function. By default, React will compare each prop with <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code>.</a></p>
+</li>
+</ul>
+<h4>Returns {/<em>returns</em>/}</h4>
+<p><code>memo</code> returns a new React component. It behaves the same as the component provided to <code>memo</code> except that React will not always re-render it when its parent is being re-rendered unless its props have changed.</p>
+<hr>
+<h2>Usage {/<em>usage</em>/}</h2>
+<h3>Skipping re-rendering when props are unchanged {/<em>skipping-re-rendering-when-props-are-unchanged</em>/}</h3>
+<p>React normally re-renders a component whenever its parent re-renders. With <code>memo</code>, you can create a component that React will not re-render when its parent re-renders so long as its new props are the same as the old props. Such a component is said to be <em>memoized</em>.</p>
+<p>To memoize a component, wrap it in <code>memo</code> and use the value that it returns in place of your original component:</p>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">const</span><span style="color:#005CC5"> Greeting</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> memo</span><span style="color:#24292E">(</span><span style="color:#D73A49">function</span><span style="color:#6F42C1"> Greeting</span><span style="color:#24292E">({ </span><span style="color:#E36209">name</span><span style="color:#24292E"> }) {</span></span>
+<span class="line"><span style="color:#D73A49">  return</span><span style="color:#24292E"> &#x3C;</span><span style="color:#22863A">h1</span><span style="color:#24292E">>Hello, {name}!&#x3C;/</span><span style="color:#22863A">h1</span><span style="color:#24292E">>;</span></span>
+<span class="line"><span style="color:#24292E">});</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> Greeting;</span></span></code></pre>
+</code></pre>
+<p>A React component should always have <a href="/learn/keeping-components-pure">pure rendering logic.</a> This means that it must return the same output if its props, state, and context haven't changed. By using <code>memo</code>, you are telling React that your component complies with this requirement, so React doesn't need to re-render as long as its props haven't changed. Even with <code>memo</code>, your component will re-render if its own state changes or if a context that it's using changes.</p>
+<p>In this example, notice that the <code>Greeting</code> component re-renders whenever <code>name</code> is changed (because that's one of its props), but not when <code>address</code> is changed (because it's not passed to <code>Greeting</code> as a prop):</p>
+<Sandpack>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">import</span><span style="color:#24292E"> { memo, useState } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> 'react'</span><span style="color:#24292E">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> MyApp</span><span style="color:#24292E">() {</span></span>
+<span class="line"><span style="color:#D73A49">  const</span><span style="color:#24292E"> [</span><span style="color:#005CC5">name</span><span style="color:#24292E">, </span><span style="color:#005CC5">setName</span><span style="color:#24292E">] </span><span style="color:#D73A49">=</span><span style="color:#6F42C1"> useState</span><span style="color:#24292E">(</span><span style="color:#032F62">''</span><span style="color:#24292E">);</span></span>
+<span class="line"><span style="color:#D73A49">  const</span><span style="color:#24292E"> [</span><span style="color:#005CC5">address</span><span style="color:#24292E">, </span><span style="color:#005CC5">setAddress</span><span style="color:#24292E">] </span><span style="color:#D73A49">=</span><span style="color:#6F42C1"> useState</span><span style="color:#24292E">(</span><span style="color:#032F62">''</span><span style="color:#24292E">);</span></span>
+<span class="line"><span style="color:#D73A49">  return</span><span style="color:#24292E"> (</span></span>
+<span class="line"><span style="color:#24292E">    &#x3C;></span></span>
+<span class="line"><span style="color:#24292E">      &#x3C;</span><span style="color:#22863A">label</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">        Name{</span><span style="color:#032F62">': '</span><span style="color:#24292E">}</span></span>
+<span class="line"><span style="color:#24292E">        &#x3C;</span><span style="color:#22863A">input</span><span style="color:#6F42C1"> value</span><span style="color:#D73A49">=</span><span style="color:#24292E">{name} </span><span style="color:#6F42C1">onChange</span><span style="color:#D73A49">=</span><span style="color:#24292E">{</span><span style="color:#E36209">e</span><span style="color:#D73A49"> =></span><span style="color:#6F42C1"> setName</span><span style="color:#24292E">(e.target.value)} /></span></span>
+<span class="line"><span style="color:#24292E">      &#x3C;/</span><span style="color:#22863A">label</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">      &#x3C;</span><span style="color:#22863A">label</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">        Address{</span><span style="color:#032F62">': '</span><span style="color:#24292E">}</span></span>
+<span class="line"><span style="color:#24292E">        &#x3C;</span><span style="color:#22863A">input</span><span style="color:#6F42C1"> value</span><span style="color:#D73A49">=</span><span style="color:#24292E">{address} </span><span style="color:#6F42C1">onChange</span><span style="color:#D73A49">=</span><span style="color:#24292E">{</span><span style="color:#E36209">e</span><span style="color:#D73A49"> =></span><span style="color:#6F42C1"> setAddress</span><span style="color:#24292E">(e.target.value)} /></span></span>
+<span class="line"><span style="color:#24292E">      &#x3C;/</span><span style="color:#22863A">label</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">      &#x3C;</span><span style="color:#005CC5">Greeting</span><span style="color:#6F42C1"> name</span><span style="color:#D73A49">=</span><span style="color:#24292E">{name} /></span></span>
+<span class="line"><span style="color:#24292E">    &#x3C;/></span></span>
+<span class="line"><span style="color:#24292E">  );</span></span>
+<span class="line"><span style="color:#24292E">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">const</span><span style="color:#005CC5"> Greeting</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> memo</span><span style="color:#24292E">(</span><span style="color:#D73A49">function</span><span style="color:#6F42C1"> Greeting</span><span style="color:#24292E">({ </span><span style="color:#E36209">name</span><span style="color:#24292E"> }) {</span></span>
+<span class="line"><span style="color:#24292E">  console.</span><span style="color:#6F42C1">log</span><span style="color:#24292E">(</span><span style="color:#032F62">"Greeting was rendered at"</span><span style="color:#24292E">, </span><span style="color:#D73A49">new</span><span style="color:#6F42C1"> Date</span><span style="color:#24292E">().</span><span style="color:#6F42C1">toLocaleTimeString</span><span style="color:#24292E">());</span></span>
+<span class="line"><span style="color:#D73A49">  return</span><span style="color:#24292E"> &#x3C;</span><span style="color:#22863A">h3</span><span style="color:#24292E">>Hello{name </span><span style="color:#D73A49">&#x26;&#x26;</span><span style="color:#032F62"> ', '</span><span style="color:#24292E">}{name}!&#x3C;/</span><span style="color:#22863A">h3</span><span style="color:#24292E">>;</span></span>
+<span class="line"><span style="color:#24292E">});</span></span></code></pre>
+</code></pre>
+<pre><code class="language-css"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#22863A">label</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#005CC5">  display</span><span style="color:#24292E">: </span><span style="color:#005CC5">block</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#005CC5">  margin-bottom</span><span style="color:#24292E">: </span><span style="color:#005CC5">16</span><span style="color:#D73A49">px</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre>
+</Sandpack>
+<Note>
+<p><strong>You should only rely on <code>memo</code> as a performance optimization.</strong> If your code doesn't work without it, find the underlying problem and fix it first. Then you may add <code>memo</code> to improve performance.</p>
+</Note>
+<DeepDive>
+<h4>Should you add memo everywhere? {/<em>should-you-add-memo-everywhere</em>/}</h4>
+<p>If your app is like this site, and most interactions are coarse (like replacing a page or an entire section), memoization is usually unnecessary. On the other hand, if your app is more like a drawing editor, and most interactions are granular (like moving shapes), then you might find memoization very helpful.</p>
+<p>Optimizing with <code>memo</code>  is only valuable when your component re-renders often with the same exact props, and its re-rendering logic is expensive. If there is no perceptible lag when your component re-renders, <code>memo</code> is unnecessary. Keep in mind that <code>memo</code> is completely useless if the props passed to your component are <em>always different,</em> such as if you pass an object or a plain function defined during rendering. This is why you will often need <a href="/reference/react/useMemo#skipping-re-rendering-of-components"><code>useMemo</code></a> and <a href="/reference/react/useCallback#skipping-re-rendering-of-components"><code>useCallback</code></a> together with <code>memo</code>.</p>
+<p>There is no benefit to wrapping a component in <code>memo</code> in other cases. There is no significant harm to doing that either, so some teams choose to not think about individual cases, and memoize as much as possible. The downside of this approach is that code becomes less readable. Also, not all memoization is effective: a single value that's "always new" is enough to break memoization for an entire component.</p>
+<p><strong>In practice, you can make a lot of memoization unnecessary by following a few principles:</strong></p>
+<ol>
+<li>When a component visually wraps other components, let it <a href="/learn/passing-props-to-a-component#passing-jsx-as-children">accept JSX as children.</a> This way, when the wrapper component updates its own state, React knows that its children don't need to re-render.</li>
+<li>Prefer local state and don't <a href="/learn/sharing-state-between-components">lift state up</a> any further than necessary. For example, don't keep transient state like forms and whether an item is hovered at the top of your tree or in a global state library.</li>
+<li>Keep your <a href="/learn/keeping-components-pure">rendering logic pure.</a> If re-rendering a component causes a problem or produces some noticeable visual artifact, it's a bug in your component! Fix the bug instead of adding memoization.</li>
+<li>Avoid <a href="/learn/you-might-not-need-an-effect">unnecessary Effects that update state.</a> Most performance problems in React apps are caused by chains of updates originating from Effects that cause your components to render over and over.</li>
+<li>Try to <a href="/learn/removing-effect-dependencies">remove unnecessary dependencies from your Effects.</a> For example, instead of memoization, it's often simpler to move some object or a function inside an Effect or outside the component.</li>
+</ol>
+<p>If a specific interaction still feels laggy, <a href="https://legacy.reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html">use the React Developer Tools profiler</a> to see which components would benefit the most from memoization, and add memoization where needed. These principles make your components easier to debug and understand, so it's good to follow them in any case. In the long term, we're researching <a href="https://www.youtube.com/watch?v=lGEMwh32soc">doing granular memoization automatically</a> to solve this once and for all.</p>
+</DeepDive>
+<hr>
+<h3>Updating a memoized component using state {/<em>updating-a-memoized-component-using-state</em>/}</h3>
+<p>Even when a component is memoized, it will still re-render when its own state changes. Memoization only has to do with props that are passed to the component from its parent.</p>
+<Sandpack>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">import</span><span style="color:#24292E"> { memo, useState } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> 'react'</span><span style="color:#24292E">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> MyApp</span><span style="color:#24292E">() {</span></span>
+<span class="line"><span style="color:#D73A49">  const</span><span style="color:#24292E"> [</span><span style="color:#005CC5">name</span><span style="color:#24292E">, </span><span style="color:#005CC5">setName</span><span style="color:#24292E">] </span><span style="color:#D73A49">=</span><span style="color:#6F42C1"> useState</span><span style="color:#24292E">(</span><span style="color:#032F62">''</span><span style="color:#24292E">);</span></span>
+<span class="line"><span style="color:#D73A49">  const</span><span style="color:#24292E"> [</span><span style="color:#005CC5">address</span><span style="color:#24292E">, </span><span style="color:#005CC5">setAddress</span><span style="color:#24292E">] </span><span style="color:#D73A49">=</span><span style="color:#6F42C1"> useState</span><span style="color:#24292E">(</span><span style="color:#032F62">''</span><span style="color:#24292E">);</span></span>
+<span class="line"><span style="color:#D73A49">  return</span><span style="color:#24292E"> (</span></span>
+<span class="line"><span style="color:#24292E">    &#x3C;></span></span>
+<span class="line"><span style="color:#24292E">      &#x3C;</span><span style="color:#22863A">label</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">        Name{</span><span style="color:#032F62">': '</span><span style="color:#24292E">}</span></span>
+<span class="line"><span style="color:#24292E">        &#x3C;</span><span style="color:#22863A">input</span><span style="color:#6F42C1"> value</span><span style="color:#D73A49">=</span><span style="color:#24292E">{name} </span><span style="color:#6F42C1">onChange</span><span style="color:#D73A49">=</span><span style="color:#24292E">{</span><span style="color:#E36209">e</span><span style="color:#D73A49"> =></span><span style="color:#6F42C1"> setName</span><span style="color:#24292E">(e.target.value)} /></span></span>
+<span class="line"><span style="color:#24292E">      &#x3C;/</span><span style="color:#22863A">label</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">      &#x3C;</span><span style="color:#22863A">label</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">        Address{</span><span style="color:#032F62">': '</span><span style="color:#24292E">}</span></span>
+<span class="line"><span style="color:#24292E">        &#x3C;</span><span style="color:#22863A">input</span><span style="color:#6F42C1"> value</span><span style="color:#D73A49">=</span><span style="color:#24292E">{address} </span><span style="color:#6F42C1">onChange</span><span style="color:#D73A49">=</span><span style="color:#24292E">{</span><span style="color:#E36209">e</span><span style="color:#D73A49"> =></span><span style="color:#6F42C1"> setAddress</span><span style="color:#24292E">(e.target.value)} /></span></span>
+<span class="line"><span style="color:#24292E">      &#x3C;/</span><span style="color:#22863A">label</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">      &#x3C;</span><span style="color:#005CC5">Greeting</span><span style="color:#6F42C1"> name</span><span style="color:#D73A49">=</span><span style="color:#24292E">{name} /></span></span>
+<span class="line"><span style="color:#24292E">    &#x3C;/></span></span>
+<span class="line"><span style="color:#24292E">  );</span></span>
+<span class="line"><span style="color:#24292E">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">const</span><span style="color:#005CC5"> Greeting</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> memo</span><span style="color:#24292E">(</span><span style="color:#D73A49">function</span><span style="color:#6F42C1"> Greeting</span><span style="color:#24292E">({ </span><span style="color:#E36209">name</span><span style="color:#24292E"> }) {</span></span>
+<span class="line"><span style="color:#24292E">  console.</span><span style="color:#6F42C1">log</span><span style="color:#24292E">(</span><span style="color:#032F62">'Greeting was rendered at'</span><span style="color:#24292E">, </span><span style="color:#D73A49">new</span><span style="color:#6F42C1"> Date</span><span style="color:#24292E">().</span><span style="color:#6F42C1">toLocaleTimeString</span><span style="color:#24292E">());</span></span>
+<span class="line"><span style="color:#D73A49">  const</span><span style="color:#24292E"> [</span><span style="color:#005CC5">greeting</span><span style="color:#24292E">, </span><span style="color:#005CC5">setGreeting</span><span style="color:#24292E">] </span><span style="color:#D73A49">=</span><span style="color:#6F42C1"> useState</span><span style="color:#24292E">(</span><span style="color:#032F62">'Hello'</span><span style="color:#24292E">);</span></span>
+<span class="line"><span style="color:#D73A49">  return</span><span style="color:#24292E"> (</span></span>
+<span class="line"><span style="color:#24292E">    &#x3C;></span></span>
+<span class="line"><span style="color:#24292E">      &#x3C;</span><span style="color:#22863A">h3</span><span style="color:#24292E">>{greeting}{name </span><span style="color:#D73A49">&#x26;&#x26;</span><span style="color:#032F62"> ', '</span><span style="color:#24292E">}{name}!&#x3C;/</span><span style="color:#22863A">h3</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">      &#x3C;</span><span style="color:#005CC5">GreetingSelector</span><span style="color:#6F42C1"> value</span><span style="color:#D73A49">=</span><span style="color:#24292E">{greeting} </span><span style="color:#6F42C1">onChange</span><span style="color:#D73A49">=</span><span style="color:#24292E">{setGreeting} /></span></span>
+<span class="line"><span style="color:#24292E">    &#x3C;/></span></span>
+<span class="line"><span style="color:#24292E">  );</span></span>
+<span class="line"><span style="color:#24292E">});</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">function</span><span style="color:#6F42C1"> GreetingSelector</span><span style="color:#24292E">({ </span><span style="color:#E36209">value</span><span style="color:#24292E">, </span><span style="color:#E36209">onChange</span><span style="color:#24292E"> }) {</span></span>
+<span class="line"><span style="color:#D73A49">  return</span><span style="color:#24292E"> (</span></span>
+<span class="line"><span style="color:#24292E">    &#x3C;></span></span>
+<span class="line"><span style="color:#24292E">      &#x3C;</span><span style="color:#22863A">label</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">        &#x3C;</span><span style="color:#22863A">input</span></span>
+<span class="line"><span style="color:#6F42C1">          type</span><span style="color:#D73A49">=</span><span style="color:#032F62">"radio"</span></span>
+<span class="line"><span style="color:#6F42C1">          checked</span><span style="color:#D73A49">=</span><span style="color:#24292E">{value </span><span style="color:#D73A49">===</span><span style="color:#032F62"> 'Hello'</span><span style="color:#24292E">}</span></span>
+<span class="line"><span style="color:#6F42C1">          onChange</span><span style="color:#D73A49">=</span><span style="color:#24292E">{</span><span style="color:#E36209">e</span><span style="color:#D73A49"> =></span><span style="color:#6F42C1"> onChange</span><span style="color:#24292E">(</span><span style="color:#032F62">'Hello'</span><span style="color:#24292E">)}</span></span>
+<span class="line"><span style="color:#24292E">        /></span></span>
+<span class="line"><span style="color:#24292E">        Regular greeting</span></span>
+<span class="line"><span style="color:#24292E">      &#x3C;/</span><span style="color:#22863A">label</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">      &#x3C;</span><span style="color:#22863A">label</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">        &#x3C;</span><span style="color:#22863A">input</span></span>
+<span class="line"><span style="color:#6F42C1">          type</span><span style="color:#D73A49">=</span><span style="color:#032F62">"radio"</span></span>
+<span class="line"><span style="color:#6F42C1">          checked</span><span style="color:#D73A49">=</span><span style="color:#24292E">{value </span><span style="color:#D73A49">===</span><span style="color:#032F62"> 'Hello and welcome'</span><span style="color:#24292E">}</span></span>
+<span class="line"><span style="color:#6F42C1">          onChange</span><span style="color:#D73A49">=</span><span style="color:#24292E">{</span><span style="color:#E36209">e</span><span style="color:#D73A49"> =></span><span style="color:#6F42C1"> onChange</span><span style="color:#24292E">(</span><span style="color:#032F62">'Hello and welcome'</span><span style="color:#24292E">)}</span></span>
+<span class="line"><span style="color:#24292E">        /></span></span>
+<span class="line"><span style="color:#24292E">        Enthusiastic greeting</span></span>
+<span class="line"><span style="color:#24292E">      &#x3C;/</span><span style="color:#22863A">label</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">    &#x3C;/></span></span>
+<span class="line"><span style="color:#24292E">  );</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre>
+<pre><code class="language-css"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#22863A">label</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#005CC5">  display</span><span style="color:#24292E">: </span><span style="color:#005CC5">block</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#005CC5">  margin-bottom</span><span style="color:#24292E">: </span><span style="color:#005CC5">16</span><span style="color:#D73A49">px</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre>
+</Sandpack>
+<p>If you set a state variable to its current value, React will skip re-rendering your component even without <code>memo</code>. You may still see your component function being called an extra time, but the result will be discarded.</p>
+<hr>
+<h3>Updating a memoized component using a context {/<em>updating-a-memoized-component-using-a-context</em>/}</h3>
+<p>Even when a component is memoized, it will still re-render when a context that it's using changes. Memoization only has to do with props that are passed to the component from its parent.</p>
+<Sandpack>
+<pre><code class="language-js"><div class="code-diff"><div class="diff-header">js</div><div class="diff-line ctx"><span class="diff-line-gutter">1</span><span class="diff-line-gutter">1</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span style="color:#D73A49">import<span style="color:#24292E"> { createContext, memo, useContext, useState } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> 'react'</span><span style="color:#24292E">;</span></span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">2</span><span class="diff-line-gutter">2</span><span class="diff-line-sign"> </span><span class="diff-line-content"> </span></div><div class="diff-line ctx"><span class="diff-line-gutter">3</span><span class="diff-line-gutter">3</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span style="color:#D73A49">const<span style="color:#005CC5"> ThemeContext</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> createContext</span><span style="color:#24292E">(</span><span style="color:#005CC5">null</span><span style="color:#24292E">);</span></span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">4</span><span class="diff-line-gutter">4</span><span class="diff-line-sign"> </span><span class="diff-line-content"> </span></div><div class="diff-line ctx"><span class="diff-line-gutter">5</span><span class="diff-line-gutter">5</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span style="color:#D73A49">export<span style="color:#D73A49"> default</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> MyApp</span><span style="color:#24292E">() {</span></span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">6</span><span class="diff-line-gutter">6</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span style="color:#D73A49">  const<span style="color:#24292E"> [</span><span style="color:#005CC5">theme</span><span style="color:#24292E">, </span><span style="color:#005CC5">setTheme</span><span style="color:#24292E">] </span><span style="color:#D73A49">=</span><span style="color:#6F42C1"> useState</span><span style="color:#24292E">(</span><span style="color:#032F62">'dark'</span><span style="color:#24292E">);</span></span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">7</span><span class="diff-line-gutter">7</span><span class="diff-line-sign"> </span><span class="diff-line-content"> </span></div><div class="diff-line ctx"><span class="diff-line-gutter">8</span><span class="diff-line-gutter">8</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span style="color:#D73A49">  function<span style="color:#6F42C1"> handleClick</span><span style="color:#24292E">() {</span></span></span></div><div class="diff-line del"><span class="diff-line-gutter">9</span><span class="diff-line-gutter"></span><span class="diff-line-sign">-</span><span class="diff-line-content"><span style="color:#6F42C1">    setTheme<span style="color:#24292E">(theme </span><span style="color:#D73A49">===</span><span style="color:#032F62"> 'dark'</span><span style="color:#D73A49"> ?</span><span style="color:#032F62"> 'light'</span><span style="color:#D73A49"> :</span><span style="color:#032F62"> 'dark'</span><span style="color:#24292E">); </span></span></span></div><div class="diff-line ins"><span class="diff-line-gutter"></span><span class="diff-line-gutter">9</span><span class="diff-line-sign">+</span><span class="diff-line-content"><span style="color:#6F42C1">    setTheme<span style="color:#24292E">(theme </span><span style="color:#D73A49">===</span><span style="color:#032F62"> 'dark'</span><span style="color:#D73A49"> ?</span><span style="color:#032F62"> 'light'</span><span style="color:#D73A49"> :</span><span style="color:#032F62"> 'dark'</span><span style="color:#24292E">);</span></span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">10</span><span class="diff-line-gutter">10</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span style="color:#24292E">  }</span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">11</span><span class="diff-line-gutter">11</span><span class="diff-line-sign"> </span><span class="diff-line-content"> </span></div><div class="diff-line ctx"><span class="diff-line-gutter">12</span><span class="diff-line-gutter">12</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span style="color:#D73A49">  return<span style="color:#24292E"> (</span></span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">13</span><span class="diff-line-gutter">13</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span style="color:#24292E">    &#x3C;<span style="color:#005CC5">ThemeContext</span><span style="color:#6F42C1"> value</span><span style="color:#D73A49">=</span><span style="color:#24292E">{theme}></span></span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">14</span><span class="diff-line-gutter">14</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span style="color:#24292E">      &#x3C;<span style="color:#22863A">button</span><span style="color:#6F42C1"> onClick</span><span style="color:#D73A49">=</span><span style="color:#24292E">{handleClick}></span></span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">15</span><span class="diff-line-gutter">15</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span style="color:#24292E">        Switch theme</span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">16</span><span class="diff-line-gutter">16</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span style="color:#D73A49">      &#x3C;/<span style="color:#24292E">button</span><span style="color:#D73A49">></span></span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">17</span><span class="diff-line-gutter">17</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span style="color:#24292E">      &#x3C;<span style="color:#005CC5">Greeting</span><span style="color:#6F42C1"> name</span><span style="color:#D73A49">=</span><span style="color:#032F62">"Taylor"</span><span style="color:#24292E"> /></span></span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">18</span><span class="diff-line-gutter">18</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span style="color:#D73A49">    &#x3C;/<span style="color:#24292E">ThemeContext</span><span style="color:#D73A49">></span></span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">19</span><span class="diff-line-gutter">19</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span style="color:#24292E">  );</span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">20</span><span class="diff-line-gutter">20</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span style="color:#24292E">}</span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">21</span><span class="diff-line-gutter">21</span><span class="diff-line-sign"> </span><span class="diff-line-content"> </span></div><div class="diff-line ctx"><span class="diff-line-gutter">22</span><span class="diff-line-gutter">22</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span style="color:#D73A49">const<span style="color:#005CC5"> Greeting</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> memo</span><span style="color:#24292E">(</span><span style="color:#D73A49">function</span><span style="color:#6F42C1"> Greeting</span><span style="color:#24292E">({ </span><span style="color:#E36209">name</span><span style="color:#24292E"> }) {</span></span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">23</span><span class="diff-line-gutter">23</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span style="color:#24292E">  console.<span style="color:#6F42C1">log</span><span style="color:#24292E">(</span><span style="color:#032F62">"Greeting was rendered at"</span><span style="color:#24292E">, </span><span style="color:#D73A49">new</span><span style="color:#6F42C1"> Date</span><span style="color:#24292E">().</span><span style="color:#6F42C1">toLocaleTimeString</span><span style="color:#24292E">());</span></span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">24</span><span class="diff-line-gutter">24</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span style="color:#D73A49">  const<span style="color:#005CC5"> theme</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> useContext</span><span style="color:#24292E">(ThemeContext);</span></span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">25</span><span class="diff-line-gutter">25</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span style="color:#D73A49">  return<span style="color:#24292E"> (</span></span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">26</span><span class="diff-line-gutter">26</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span style="color:#24292E">    &#x3C;<span style="color:#22863A">h3</span><span style="color:#6F42C1"> className</span><span style="color:#D73A49">=</span><span style="color:#24292E">{theme}>Hello, {name}!&#x3C;/</span><span style="color:#22863A">h3</span><span style="color:#24292E">></span></span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">27</span><span class="diff-line-gutter">27</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span style="color:#24292E">  );</span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">28</span><span class="diff-line-gutter">28</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span style="color:#24292E">});</span></span></div></div>
+</code></pre>
+<pre><code class="language-css"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#22863A">label</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#005CC5">  display</span><span style="color:#24292E">: </span><span style="color:#005CC5">block</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#005CC5">  margin-bottom</span><span style="color:#24292E">: </span><span style="color:#005CC5">16</span><span style="color:#D73A49">px</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#24292E">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6F42C1">.light</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#005CC5">  color</span><span style="color:#24292E">: </span><span style="color:#005CC5">black</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#005CC5">  background-color</span><span style="color:#24292E">: </span><span style="color:#005CC5">white</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#24292E">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6F42C1">.dark</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#005CC5">  color</span><span style="color:#24292E">: </span><span style="color:#005CC5">white</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#005CC5">  background-color</span><span style="color:#24292E">: </span><span style="color:#005CC5">black</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre>
+</Sandpack>
+<p>To make your component re-render only when a <em>part</em> of some context changes, split your component in two. Read what you need from the context in the outer component, and pass it down to a memoized child as a prop.</p>
+<hr>
+<h3>Minimizing props changes {/<em>minimizing-props-changes</em>/}</h3>
+<p>When you use <code>memo</code>, your component re-renders whenever any prop is not <em>shallowly equal</em> to what it was previously. This means that React compares every prop in your component with its previous value using the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is"><code>Object.is</code></a> comparison. Note that <code>Object.is(3, 3)</code> is <code>true</code>, but <code>Object.is({}, {})</code> is <code>false</code>.</p>
+<p>To get the most out of <code>memo</code>, minimize the times that the props change. For example, if the prop is an object, prevent the parent component from re-creating that object every time by using <a href="/reference/react/useMemo"><code>useMemo</code>:</a></p>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">function</span><span style="color:#6F42C1"> Page</span><span style="color:#24292E">() {</span></span>
+<span class="line"><span style="color:#D73A49">  const</span><span style="color:#24292E"> [</span><span style="color:#005CC5">name</span><span style="color:#24292E">, </span><span style="color:#005CC5">setName</span><span style="color:#24292E">] </span><span style="color:#D73A49">=</span><span style="color:#6F42C1"> useState</span><span style="color:#24292E">(</span><span style="color:#032F62">'Taylor'</span><span style="color:#24292E">);</span></span>
+<span class="line"><span style="color:#D73A49">  const</span><span style="color:#24292E"> [</span><span style="color:#005CC5">age</span><span style="color:#24292E">, </span><span style="color:#005CC5">setAge</span><span style="color:#24292E">] </span><span style="color:#D73A49">=</span><span style="color:#6F42C1"> useState</span><span style="color:#24292E">(</span><span style="color:#005CC5">42</span><span style="color:#24292E">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">  const</span><span style="color:#005CC5"> person</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> useMemo</span><span style="color:#24292E">(</span></span>
+<span class="line"><span style="color:#24292E">    () </span><span style="color:#D73A49">=></span><span style="color:#24292E"> ({ name, age }),</span></span>
+<span class="line"><span style="color:#24292E">    [name, age]</span></span>
+<span class="line"><span style="color:#24292E">  );</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">  return</span><span style="color:#24292E"> &#x3C;</span><span style="color:#005CC5">Profile</span><span style="color:#6F42C1"> person</span><span style="color:#D73A49">=</span><span style="color:#24292E">{person} />;</span></span>
+<span class="line"><span style="color:#24292E">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">const</span><span style="color:#005CC5"> Profile</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> memo</span><span style="color:#24292E">(</span><span style="color:#D73A49">function</span><span style="color:#6F42C1"> Profile</span><span style="color:#24292E">({ </span><span style="color:#E36209">person</span><span style="color:#24292E"> }) {</span></span>
+<span class="line"><span style="color:#6A737D">  // ...</span></span>
+<span class="line"><span style="color:#24292E">});</span></span></code></pre>
+</code></pre>
+<p>A better way to minimize props changes is to make sure the component accepts the minimum necessary information in its props. For example, it could accept individual values instead of a whole object:</p>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">function</span><span style="color:#6F42C1"> Page</span><span style="color:#24292E">() {</span></span>
+<span class="line"><span style="color:#D73A49">  const</span><span style="color:#24292E"> [</span><span style="color:#005CC5">name</span><span style="color:#24292E">, </span><span style="color:#005CC5">setName</span><span style="color:#24292E">] </span><span style="color:#D73A49">=</span><span style="color:#6F42C1"> useState</span><span style="color:#24292E">(</span><span style="color:#032F62">'Taylor'</span><span style="color:#24292E">);</span></span>
+<span class="line"><span style="color:#D73A49">  const</span><span style="color:#24292E"> [</span><span style="color:#005CC5">age</span><span style="color:#24292E">, </span><span style="color:#005CC5">setAge</span><span style="color:#24292E">] </span><span style="color:#D73A49">=</span><span style="color:#6F42C1"> useState</span><span style="color:#24292E">(</span><span style="color:#005CC5">42</span><span style="color:#24292E">);</span></span>
+<span class="line"><span style="color:#D73A49">  return</span><span style="color:#24292E"> &#x3C;</span><span style="color:#005CC5">Profile</span><span style="color:#6F42C1"> name</span><span style="color:#D73A49">=</span><span style="color:#24292E">{name} </span><span style="color:#6F42C1">age</span><span style="color:#D73A49">=</span><span style="color:#24292E">{age} />;</span></span>
+<span class="line"><span style="color:#24292E">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">const</span><span style="color:#005CC5"> Profile</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> memo</span><span style="color:#24292E">(</span><span style="color:#D73A49">function</span><span style="color:#6F42C1"> Profile</span><span style="color:#24292E">({ </span><span style="color:#E36209">name</span><span style="color:#24292E">, </span><span style="color:#E36209">age</span><span style="color:#24292E"> }) {</span></span>
+<span class="line"><span style="color:#6A737D">  // ...</span></span>
+<span class="line"><span style="color:#24292E">});</span></span></code></pre>
+</code></pre>
+<p>Even individual values can sometimes be projected to ones that change less frequently. For example, here a component accepts a boolean indicating the presence of a value rather than the value itself:</p>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">function</span><span style="color:#6F42C1"> GroupsLanding</span><span style="color:#24292E">({ </span><span style="color:#E36209">person</span><span style="color:#24292E"> }) {</span></span>
+<span class="line"><span style="color:#D73A49">  const</span><span style="color:#005CC5"> hasGroups</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> person.groups </span><span style="color:#D73A49">!==</span><span style="color:#005CC5"> null</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#D73A49">  return</span><span style="color:#24292E"> &#x3C;</span><span style="color:#005CC5">CallToAction</span><span style="color:#6F42C1"> hasGroups</span><span style="color:#D73A49">=</span><span style="color:#24292E">{hasGroups} />;</span></span>
+<span class="line"><span style="color:#24292E">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">const</span><span style="color:#005CC5"> CallToAction</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> memo</span><span style="color:#24292E">(</span><span style="color:#D73A49">function</span><span style="color:#6F42C1"> CallToAction</span><span style="color:#24292E">({ </span><span style="color:#E36209">hasGroups</span><span style="color:#24292E"> }) {</span></span>
+<span class="line"><span style="color:#6A737D">  // ...</span></span>
+<span class="line"><span style="color:#24292E">});</span></span></code></pre>
+</code></pre>
+<p>When you need to pass a function to memoized component, either declare it outside your component so that it never changes, or <a href="/reference/react/useCallback#skipping-re-rendering-of-components"><code>useCallback</code></a> to cache its definition between re-renders.</p>
+<hr>
+<h3>Specifying a custom comparison function {/<em>specifying-a-custom-comparison-function</em>/}</h3>
+<p>In rare cases it may be infeasible to minimize the props changes of a memoized component. In that case, you can provide a custom comparison function, which React will use to compare the old and new props instead of using shallow equality. This function is passed as a second argument to <code>memo</code>. It should return <code>true</code> only if the new props would result in the same output as the old props; otherwise it should return <code>false</code>.</p>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">const</span><span style="color:#005CC5"> Chart</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> memo</span><span style="color:#24292E">(</span><span style="color:#D73A49">function</span><span style="color:#6F42C1"> Chart</span><span style="color:#24292E">({ </span><span style="color:#E36209">dataPoints</span><span style="color:#24292E"> }) {</span></span>
+<span class="line"><span style="color:#6A737D">  // ...</span></span>
+<span class="line"><span style="color:#24292E">}, arePropsEqual);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">function</span><span style="color:#6F42C1"> arePropsEqual</span><span style="color:#24292E">(</span><span style="color:#E36209">oldProps</span><span style="color:#24292E">, </span><span style="color:#E36209">newProps</span><span style="color:#24292E">) {</span></span>
+<span class="line"><span style="color:#D73A49">  return</span><span style="color:#24292E"> (</span></span>
+<span class="line"><span style="color:#24292E">    oldProps.dataPoints.</span><span style="color:#005CC5">length</span><span style="color:#D73A49"> ===</span><span style="color:#24292E"> newProps.dataPoints.</span><span style="color:#005CC5">length</span><span style="color:#D73A49"> &#x26;&#x26;</span></span>
+<span class="line"><span style="color:#24292E">    oldProps.dataPoints.</span><span style="color:#6F42C1">every</span><span style="color:#24292E">((</span><span style="color:#E36209">oldPoint</span><span style="color:#24292E">, </span><span style="color:#E36209">index</span><span style="color:#24292E">) </span><span style="color:#D73A49">=></span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#D73A49">      const</span><span style="color:#005CC5"> newPoint</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> newProps.dataPoints[index];</span></span>
+<span class="line"><span style="color:#D73A49">      return</span><span style="color:#24292E"> oldPoint.x </span><span style="color:#D73A49">===</span><span style="color:#24292E"> newPoint.x </span><span style="color:#D73A49">&#x26;&#x26;</span><span style="color:#24292E"> oldPoint.y </span><span style="color:#D73A49">===</span><span style="color:#24292E"> newPoint.y;</span></span>
+<span class="line"><span style="color:#24292E">    })</span></span>
+<span class="line"><span style="color:#24292E">  );</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre>
+<p>If you do this, use the Performance panel in your browser developer tools to make sure that your comparison function is actually faster than re-rendering the component. You might be surprised.</p>
+<p>When you do performance measurements, make sure that React is running in the production mode.</p>
+<Pitfall>
+<p>If you provide a custom <code>arePropsEqual</code> implementation, <strong>you must compare every prop, including functions.</strong> Functions often <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures">close over</a> the props and state of parent components. If you return <code>true</code> when <code>oldProps.onClick !== newProps.onClick</code>, your component will keep "seeing" the props and state from a previous render inside its <code>onClick</code> handler, leading to very confusing bugs.</p>
+<p>Avoid doing deep equality checks inside <code>arePropsEqual</code> unless you are 100% sure that the data structure you're working with has a known limited depth. <strong>Deep equality checks can become incredibly slow</strong> and can freeze your app for many seconds if someone changes the data structure later.</p>
+</Pitfall>
+<hr>
+<ins class="diff-block"><h3>Do I still need React.memo if I use React Compiler? {/<em>react-compiler-memo</em>/}</h3></ins>
+<ins class="diff-block"><p>When you enable <a href="/learn/react-compiler">React Compiler</a>, you typically don't need <code>React.memo</code> anymore. The compiler automatically optimizes component re-rendering for you.</p></ins>
+<ins class="diff-block"><p>Here's how it works:</p></ins>
+<ins class="diff-block"><p><strong>Without React Compiler</strong>, you need <code>React.memo</code> to prevent unnecessary re-renders:</p></ins>
+<ins class="diff-block"><pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#6A737D">// Parent re-renders every second</span></span>
+<span class="line"><span style="color:#D73A49">function</span><span style="color:#6F42C1"> Parent</span><span style="color:#24292E">() {</span></span>
+<span class="line"><span style="color:#D73A49">  const</span><span style="color:#24292E"> [</span><span style="color:#005CC5">seconds</span><span style="color:#24292E">, </span><span style="color:#005CC5">setSeconds</span><span style="color:#24292E">] </span><span style="color:#D73A49">=</span><span style="color:#6F42C1"> useState</span><span style="color:#24292E">(</span><span style="color:#005CC5">0</span><span style="color:#24292E">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6F42C1">  useEffect</span><span style="color:#24292E">(() </span><span style="color:#D73A49">=></span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#D73A49">    const</span><span style="color:#005CC5"> interval</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> setInterval</span><span style="color:#24292E">(() </span><span style="color:#D73A49">=></span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#6F42C1">      setSeconds</span><span style="color:#24292E">(</span><span style="color:#E36209">s</span><span style="color:#D73A49"> =></span><span style="color:#24292E"> s </span><span style="color:#D73A49">+</span><span style="color:#005CC5"> 1</span><span style="color:#24292E">);</span></span>
+<span class="line"><span style="color:#24292E">    }, </span><span style="color:#005CC5">1000</span><span style="color:#24292E">);</span></span>
+<span class="line"><span style="color:#D73A49">    return</span><span style="color:#24292E"> () </span><span style="color:#D73A49">=></span><span style="color:#6F42C1"> clearInterval</span><span style="color:#24292E">(interval);</span></span>
+<span class="line"><span style="color:#24292E">  }, []);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">  return</span><span style="color:#24292E"> (</span></span>
+<span class="line"><span style="color:#24292E">    &#x3C;></span></span>
+<span class="line"><span style="color:#24292E">      &#x3C;</span><span style="color:#22863A">h1</span><span style="color:#24292E">>Seconds: {seconds}&#x3C;/</span><span style="color:#22863A">h1</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">      &#x3C;</span><span style="color:#005CC5">ExpensiveChild</span><span style="color:#6F42C1"> name</span><span style="color:#D73A49">=</span><span style="color:#032F62">"John"</span><span style="color:#24292E"> /></span></span>
+<span class="line"><span style="color:#24292E">    &#x3C;/></span></span>
+<span class="line"><span style="color:#24292E">  );</span></span>
+<span class="line"><span style="color:#24292E">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// Without memo, this re-renders every second even though props don't change</span></span>
+<span class="line"><span style="color:#D73A49">const</span><span style="color:#005CC5"> ExpensiveChild</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> memo</span><span style="color:#24292E">(</span><span style="color:#D73A49">function</span><span style="color:#6F42C1"> ExpensiveChild</span><span style="color:#24292E">({ </span><span style="color:#E36209">name</span><span style="color:#24292E"> }) {</span></span>
+<span class="line"><span style="color:#24292E">  console.</span><span style="color:#6F42C1">log</span><span style="color:#24292E">(</span><span style="color:#032F62">'ExpensiveChild rendered'</span><span style="color:#24292E">);</span></span>
+<span class="line"><span style="color:#D73A49">  return</span><span style="color:#24292E"> &#x3C;</span><span style="color:#22863A">div</span><span style="color:#24292E">>Hello, {name}!&#x3C;/</span><span style="color:#22863A">div</span><span style="color:#24292E">>;</span></span>
+<span class="line"><span style="color:#24292E">});</span></span></code></pre>
+</code></pre></ins>
+<ins class="diff-block"><p><strong>With React Compiler enabled</strong>, the same optimization happens automatically:</p></ins>
+<ins class="diff-block"><pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#6A737D">// No memo needed - compiler prevents re-renders automatically</span></span>
+<span class="line"><span style="color:#D73A49">function</span><span style="color:#6F42C1"> ExpensiveChild</span><span style="color:#24292E">({ </span><span style="color:#E36209">name</span><span style="color:#24292E"> }) {</span></span>
+<span class="line"><span style="color:#24292E">  console.</span><span style="color:#6F42C1">log</span><span style="color:#24292E">(</span><span style="color:#032F62">'ExpensiveChild rendered'</span><span style="color:#24292E">);</span></span>
+<span class="line"><span style="color:#D73A49">  return</span><span style="color:#24292E"> &#x3C;</span><span style="color:#22863A">div</span><span style="color:#24292E">>Hello, {name}!&#x3C;/</span><span style="color:#22863A">div</span><span style="color:#24292E">>;</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre></ins>
+<ins class="diff-block"><p>Here's the key part of what the React Compiler generates:</p></ins>
+<ins class="diff-block"><pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">function</span><span style="color:#6F42C1"> Parent</span><span style="color:#24292E">() {</span></span>
+<span class="line"><span style="color:#D73A49">  const</span><span style="color:#005CC5"> $</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> _c</span><span style="color:#24292E">(</span><span style="color:#005CC5">7</span><span style="color:#24292E">);</span></span>
+<span class="line"><span style="color:#D73A49">  const</span><span style="color:#24292E"> [</span><span style="color:#005CC5">seconds</span><span style="color:#24292E">, </span><span style="color:#005CC5">setSeconds</span><span style="color:#24292E">] </span><span style="color:#D73A49">=</span><span style="color:#6F42C1"> useState</span><span style="color:#24292E">(</span><span style="color:#005CC5">0</span><span style="color:#24292E">);</span></span>
+<span class="line"><span style="color:#6A737D">  // ... other code ...</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">  let</span><span style="color:#24292E"> t3;</span></span>
+<span class="line"><span style="color:#D73A49">  if</span><span style="color:#24292E"> ($[</span><span style="color:#005CC5">4</span><span style="color:#24292E">] </span><span style="color:#D73A49">===</span><span style="color:#24292E"> Symbol.</span><span style="color:#6F42C1">for</span><span style="color:#24292E">(</span><span style="color:#032F62">"react.memo_cache_sentinel"</span><span style="color:#24292E">)) {</span></span>
+<span class="line"><span style="color:#24292E">    t3 </span><span style="color:#D73A49">=</span><span style="color:#24292E"> &#x3C;</span><span style="color:#005CC5">ExpensiveChild</span><span style="color:#6F42C1"> name</span><span style="color:#D73A49">=</span><span style="color:#032F62">"John"</span><span style="color:#24292E"> />;</span></span>
+<span class="line"><span style="color:#24292E">    $[</span><span style="color:#005CC5">4</span><span style="color:#24292E">] </span><span style="color:#D73A49">=</span><span style="color:#24292E"> t3;</span></span>
+<span class="line"><span style="color:#24292E">  } </span><span style="color:#D73A49">else</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#24292E">    t3 </span><span style="color:#D73A49">=</span><span style="color:#24292E"> $[</span><span style="color:#005CC5">4</span><span style="color:#24292E">];</span></span>
+<span class="line"><span style="color:#24292E">  }</span></span>
+<span class="line"><span style="color:#6A737D">  // ... return statement ...</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre></ins>
+<ins class="diff-block"><p>Notice the highlighted lines: The compiler wraps <code>&#x3C;ExpensiveChild name="John" /></code> in a cache check. Since the <code>name</code> prop is always <code>"John"</code>, this JSX is created once and reused on every parent re-render. This is exactly what <code>React.memo</code> does - it prevents the child from re-rendering when its props haven't changed.</p></ins>
+<ins class="diff-block"><p>The React Compiler automatically:</p></ins>
+<ins class="diff-block"><ol>
+<li>Tracks that the <code>name</code> prop passed to <code>ExpensiveChild</code> hasn't changed</li>
+<li>Reuses the previously created JSX for <code>&#x3C;ExpensiveChild name="John" /></code></li>
+<li>Skips re-rendering <code>ExpensiveChild</code> entirely</li>
+</ol></ins>
+<ins class="diff-block"><p>This means <strong>you can safely remove <code>React.memo</code> from your components when using React Compiler</strong>. The compiler provides the same optimization automatically, making your code cleaner and easier to maintain.</p></ins>
+<ins class="diff-block"><Note></ins>
+<ins class="diff-block"><p>The compiler's optimization is actually more comprehensive than <code>React.memo</code>. It also memoizes intermediate values and expensive computations within your components, similar to combining <code>React.memo</code> with <code>useMemo</code> throughout your component tree.</p></ins>
+<ins class="diff-block"></Note></ins>
+<ins class="diff-block"><hr></ins>
+<h2>Troubleshooting {/<em>troubleshooting</em>/}</h2>
+<h3>My component re-renders when a prop is an object, array, or function {/<em>my-component-rerenders-when-a-prop-is-an-object-or-array</em>/}</h3>
+<p>React compares old and new props by shallow equality: that is, it considers whether each new prop is reference-equal to the old prop. If you create a new object or array each time the parent is re-rendered, even if the individual elements are each the same, React will still consider it to be changed. Similarly, if you create a new function when rendering the parent component, React will consider it to have changed even if the function has the same definition. To avoid this, <a href="#minimizing-props-changes">simplify props or memoize props in the parent component</a>.</p></body></html>

@@ -1,0 +1,39 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "code",
+      "lang": "bash",
+      "meta": null,
+      "value": "npm install",
+      "position": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 4,
+          "offset": 23
+        }
+      },
+      "data": {}
+    }
+  ],
+  "position": {
+    "start": {
+      "line": 1,
+      "column": 1,
+      "offset": 0
+    },
+    "end": {
+      "line": 4,
+      "column": 1,
+      "offset": 24
+    }
+  },
+  "data": {
+    "diffUnchanged": true
+  }
+}

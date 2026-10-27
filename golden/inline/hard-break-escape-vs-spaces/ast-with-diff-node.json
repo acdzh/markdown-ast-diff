@@ -1,0 +1,64 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "第一行",
+          "data": {}
+        },
+        {
+          "type": "break",
+          "position": {
+            "start": {
+              "line": 1,
+              "column": 4,
+              "offset": 3
+            },
+            "end": {
+              "line": 2,
+              "column": 1,
+              "offset": 5
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "第二行",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "end": {
+          "line": 2,
+          "column": 4,
+          "offset": 9
+        }
+      },
+      "data": {}
+    }
+  ],
+  "position": {
+    "start": {
+      "line": 1,
+      "column": 1,
+      "offset": 0
+    },
+    "end": {
+      "line": 2,
+      "column": 4,
+      "offset": 9
+    }
+  },
+  "data": {
+    "diffUnchanged": true
+  }
+}

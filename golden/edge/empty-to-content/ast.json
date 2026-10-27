@@ -1,0 +1,179 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 1,
+          "children": [
+            {
+              "type": "text",
+              "value": "办公室生存指南",
+              "position": {
+                "start": {
+                  "line": 1,
+                  "column": 3,
+                  "offset": 2
+                },
+                "end": {
+                  "line": 1,
+                  "column": 10,
+                  "offset": 9
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 10,
+              "offset": 9
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "茶水间是办公室的情报中心。",
+              "position": {
+                "start": {
+                  "line": 3,
+                  "column": 1,
+                  "offset": 11
+                },
+                "end": {
+                  "line": 3,
+                  "column": 14,
+                  "offset": 24
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 3,
+              "column": 1,
+              "offset": 11
+            },
+            "end": {
+              "line": 3,
+              "column": 14,
+              "offset": 24
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "list",
+          "ordered": false,
+          "start": null,
+          "spread": false,
+          "children": [
+            {
+              "type": "listItem",
+              "spread": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "最后一杯咖啡意味着要洗咖啡壶",
+                      "position": {
+                        "start": {
+                          "line": 5,
+                          "column": 3,
+                          "offset": 28
+                        },
+                        "end": {
+                          "line": 5,
+                          "column": 17,
+                          "offset": 42
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 5,
+                      "column": 3,
+                      "offset": 28
+                    },
+                    "end": {
+                      "line": 5,
+                      "column": 17,
+                      "offset": 42
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 5,
+                  "column": 1,
+                  "offset": 26
+                },
+                "end": {
+                  "line": 5,
+                  "column": 17,
+                  "offset": 42
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 5,
+              "column": 1,
+              "offset": 26
+            },
+            "end": {
+              "line": 5,
+              "column": 17,
+              "offset": 42
+            }
+          },
+          "data": {}
+        }
+      ]
+    }
+  ],
+  "position": {
+    "start": {
+      "line": 1,
+      "column": 1,
+      "offset": 0
+    },
+    "end": {
+      "line": 6,
+      "column": 1,
+      "offset": 43
+    }
+  },
+  "data": {}
+}

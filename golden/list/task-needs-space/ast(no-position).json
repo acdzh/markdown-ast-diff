@@ -1,0 +1,55 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "[x]完成项",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": true,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "完成项",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {
+            "diff": "ins"
+          }
+        }
+      ],
+      "data": {}
+    }
+  ],
+  "data": {}
+}

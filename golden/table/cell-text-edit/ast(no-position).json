@@ -1,0 +1,163 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "table",
+      "align": [
+        null,
+        null,
+        null
+      ],
+      "children": [
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "装备",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "负责人",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "备注",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {
+            "diffUnchanged": true
+          }
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "卡式炉",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "阿伟",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "带",
+                  "data": {}
+                },
+                {
+                  "type": "inlineDel",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "两",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "inlineIns",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "三",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "罐气罐",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "帐篷",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "老张",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "记得还",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {
+            "diffUnchanged": true
+          }
+        }
+      ],
+      "data": {}
+    }
+  ],
+  "data": {}
+}

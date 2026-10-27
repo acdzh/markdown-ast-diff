@@ -1,0 +1,135 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+/* table */
+table { border-collapse: collapse; width: auto; margin: 1em 0; }
+th, td { border: 1px solid #d0d7de; padding: 6px 13px; }
+th { background: #f6f8fa; font-weight: 600; }
+tr:nth-child(2n) { background: #f6f8fa; }
+
+/* code */
+code { padding: 0.2em 0.4em; font-size: 85%; background: #f6f8fa; border-radius: 6px; font-family: 'SF Mono', 'Fira Code', Menlo, monospace; }
+pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background: #f6f8fa; border-radius: 6px; margin: 1em 0; }
+pre code { padding: 0; background: none; border-radius: 0; font-size: inherit; }
+
+/* blockquote */
+blockquote { padding: 0 1em; color: #656d76; border-left: 0.25em solid #d0d7de; margin: 1em 0; }
+
+/* hr */
+hr { height: 0.25em; padding: 0; margin: 24px 0; background-color: #d0d7de; border: 0; }
+
+/* headings */
+h1, h2, h3, h4, h5, h6 { margin-top: 24px; margin-bottom: 16px; font-weight: 600; line-height: 1.25; }
+h1 { font-size: 2em; padding-bottom: 0.3em; border-bottom: 1px solid #d0d7de; }
+h2 { font-size: 1.5em; padding-bottom: 0.3em; border-bottom: 1px solid #d0d7de; }
+h3 { font-size: 1.25em; }
+
+/* list */
+ul, ol { padding-left: 2em; margin: 0.5em 0; }
+li + li { margin-top: 0.25em; }
+
+/* image */
+img { max-width: 100%; }
+
+/* code diff */
+.code-diff { border-radius: 6px; overflow: hidden; margin: 1em 0; font-size: 13px; border: 1px solid #d0d7de; }
+.code-diff pre { margin: 0; padding: 0; border-radius: 0; border: none; background: #fff; }
+.code-diff .shiki { background: #fff !important; }
+.code-diff .diff-line { display: flex; line-height: 1.45; }
+.code-diff .diff-line-gutter { width: 40px; min-width: 40px; text-align: right; padding: 0 8px 0 0; color: #8b949e; font-size: 12px; user-select: none; flex-shrink: 0; }
+.code-diff .diff-line-sign { width: 20px; min-width: 20px; text-align: center; user-select: none; flex-shrink: 0; }
+.code-diff .diff-line-content { flex: 1; padding-right: 12px; white-space: pre; overflow-x: auto; }
+.code-diff .diff-line.del { background: #ffebe9; }
+.code-diff .diff-line.del .diff-line-gutter { background: #ffd7d5; color: #82071e; }
+.code-diff .diff-line.del .diff-line-sign { color: #82071e; }
+.code-diff .diff-line.ins { background: #e6ffec; }
+.code-diff .diff-line.ins .diff-line-gutter { background: #ccffd8; color: #116329; }
+.code-diff .diff-line.ins .diff-line-sign { color: #116329; }
+.code-diff .diff-line.ctx { background: #fff; }
+.code-diff .diff-line.ctx .diff-line-gutter { color: #8b949e; }
+.code-diff .diff-header { padding: 8px 12px; background: #f6f8fa; border-bottom: 1px solid #d0d7de; font-size: 12px; color: #656d76; font-family: 'SF Mono', 'Fira Code', Menlo, monospace; }
+
+ins { background-color: #e6ffec; text-decoration: none; border-radius: 2px; padding: 0 2px; }
+del { background-color: #ffebe9; text-decoration: line-through; border-radius: 2px; padding: 0 2px; }
+ins.diff-block, del.diff-block { display: block; padding-left: 10px; border-left: 3px solid; }
+ins.diff-block { border-left-color: #2cbe4e; }
+del.diff-block { border-left-color: #cb2431; }
+ins > hr, ins > pre { background-color: #e6ffec; }
+del > hr, del > pre { background-color: #ffebe9; }
+ins > table, del > table { border-collapse: collapse; }
+ins > table th, ins > table td { background-color: #e6ffec; }
+del > table th, del > table td { background-color: #ffebe9; }
+li[data-diff="ins"] { background-color: #e6ffec; border-radius: 2px; }
+li[data-diff="del"] { background-color: #ffebe9; border-radius: 2px; text-decoration: line-through; }
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:16px;font-size:14px;line-height:1.6;color:#1a1a1a;}</style></head><body><h1>Custom Renderer API {#custom-renderer-api}</h1>
+<h2>createRenderer() {#createrenderer}</h2>
+<p>Creates a custom renderer. By providing platform-specific node creation and manipulation APIs, you can leverage Vue's core runtime to target non-DOM environments.</p>
+<ul>
+<li>
+<p><strong>Type</strong></p>
+<pre><code class="language-ts"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">function</span><span style="color:#6F42C1"> createRenderer</span><span style="color:#24292E">&#x3C;</span><span style="color:#6F42C1">HostNode</span><span style="color:#24292E">, </span><span style="color:#6F42C1">HostElement</span><span style="color:#24292E">>(</span></span>
+<span class="line"><span style="color:#E36209">  options</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> RendererOptions</span><span style="color:#24292E">&#x3C;</span><span style="color:#6F42C1">HostNode</span><span style="color:#24292E">, </span><span style="color:#6F42C1">HostElement</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">)</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> Renderer</span><span style="color:#24292E">&#x3C;</span><span style="color:#6F42C1">HostElement</span><span style="color:#24292E">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">interface</span><span style="color:#6F42C1"> Renderer</span><span style="color:#24292E">&#x3C;</span><span style="color:#6F42C1">HostElement</span><span style="color:#24292E">> {</span></span>
+<span class="line"><span style="color:#E36209">  render</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> RootRenderFunction</span><span style="color:#24292E">&#x3C;</span><span style="color:#6F42C1">HostElement</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#E36209">  createApp</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> CreateAppFunction</span><span style="color:#24292E">&#x3C;</span><span style="color:#6F42C1">HostElement</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">interface</span><span style="color:#6F42C1"> RendererOptions</span><span style="color:#24292E">&#x3C;</span><span style="color:#6F42C1">HostNode</span><span style="color:#24292E">, </span><span style="color:#6F42C1">HostElement</span><span style="color:#24292E">> {</span></span>
+<span class="line"><span style="color:#6F42C1">  patchProp</span><span style="color:#24292E">(</span></span>
+<span class="line"><span style="color:#E36209">    el</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> HostElement</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#E36209">    key</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#E36209">    prevValue</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> any</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#E36209">    nextValue</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> any</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#E36209">    namespace</span><span style="color:#D73A49">?:</span><span style="color:#6F42C1"> ElementNamespace</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#E36209">    parentComponent</span><span style="color:#D73A49">?:</span><span style="color:#6F42C1"> ComponentInternalInstance</span><span style="color:#D73A49"> |</span><span style="color:#005CC5"> null</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#24292E">  )</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> void</span></span>
+<span class="line"><span style="color:#6F42C1">  insert</span><span style="color:#24292E">(</span><span style="color:#E36209">el</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> HostNode</span><span style="color:#24292E">, </span><span style="color:#E36209">parent</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> HostElement</span><span style="color:#24292E">, </span><span style="color:#E36209">anchor</span><span style="color:#D73A49">?:</span><span style="color:#6F42C1"> HostNode</span><span style="color:#D73A49"> |</span><span style="color:#005CC5"> null</span><span style="color:#24292E">)</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> void</span></span>
+<span class="line"><span style="color:#6F42C1">  remove</span><span style="color:#24292E">(</span><span style="color:#E36209">el</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> HostNode</span><span style="color:#24292E">)</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> void</span></span>
+<span class="line"><span style="color:#6F42C1">  createElement</span><span style="color:#24292E">(</span></span>
+<span class="line"><span style="color:#E36209">    type</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#E36209">    namespace</span><span style="color:#D73A49">?:</span><span style="color:#6F42C1"> ElementNamespace</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#E36209">    isCustomizedBuiltIn</span><span style="color:#D73A49">?:</span><span style="color:#005CC5"> string</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#E36209">    vnodeProps</span><span style="color:#D73A49">?:</span><span style="color:#24292E"> (</span><span style="color:#6F42C1">VNodeProps</span><span style="color:#D73A49"> &#x26;</span><span style="color:#24292E"> { [</span><span style="color:#E36209">key</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span><span style="color:#24292E">]</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> any</span><span style="color:#24292E"> }) </span><span style="color:#D73A49">|</span><span style="color:#005CC5"> null</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#24292E">  )</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> HostElement</span></span>
+<span class="line"><span style="color:#6F42C1">  createText</span><span style="color:#24292E">(</span><span style="color:#E36209">text</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span><span style="color:#24292E">)</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> HostNode</span></span>
+<span class="line"><span style="color:#6F42C1">  createComment</span><span style="color:#24292E">(</span><span style="color:#E36209">text</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span><span style="color:#24292E">)</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> HostNode</span></span>
+<span class="line"><span style="color:#6F42C1">  setText</span><span style="color:#24292E">(</span><span style="color:#E36209">node</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> HostNode</span><span style="color:#24292E">, </span><span style="color:#E36209">text</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span><span style="color:#24292E">)</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> void</span></span>
+<span class="line"><span style="color:#6F42C1">  setElementText</span><span style="color:#24292E">(</span><span style="color:#E36209">node</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> HostElement</span><span style="color:#24292E">, </span><span style="color:#E36209">text</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span><span style="color:#24292E">)</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> void</span></span>
+<span class="line"><span style="color:#6F42C1">  parentNode</span><span style="color:#24292E">(</span><span style="color:#E36209">node</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> HostNode</span><span style="color:#24292E">)</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> HostElement</span><span style="color:#D73A49"> |</span><span style="color:#005CC5"> null</span></span>
+<span class="line"><span style="color:#6F42C1">  nextSibling</span><span style="color:#24292E">(</span><span style="color:#E36209">node</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> HostNode</span><span style="color:#24292E">)</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> HostNode</span><span style="color:#D73A49"> |</span><span style="color:#005CC5"> null</span></span>
+<span class="line"><span style="color:#6F42C1">  querySelector</span><span style="color:#D73A49">?</span><span style="color:#24292E">(</span><span style="color:#E36209">selector</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span><span style="color:#24292E">)</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> HostElement</span><span style="color:#D73A49"> |</span><span style="color:#005CC5"> null</span></span>
+<span class="line"><span style="color:#6F42C1">  setScopeId</span><span style="color:#D73A49">?</span><span style="color:#24292E">(</span><span style="color:#E36209">el</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> HostElement</span><span style="color:#24292E">, </span><span style="color:#E36209">id</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span><span style="color:#24292E">)</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> void</span></span>
+<span class="line"><span style="color:#6F42C1">  cloneNode</span><span style="color:#D73A49">?</span><span style="color:#24292E">(</span><span style="color:#E36209">node</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> HostNode</span><span style="color:#24292E">)</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> HostNode</span></span>
+<span class="line"><span style="color:#6F42C1">  insertStaticContent</span><span style="color:#D73A49">?</span><span style="color:#24292E">(</span></span>
+<span class="line"><span style="color:#E36209">    content</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#E36209">    parent</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> HostElement</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#E36209">    anchor</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> HostNode</span><span style="color:#D73A49"> |</span><span style="color:#005CC5"> null</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#E36209">    namespace</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> ElementNamespace</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#E36209">    start</span><span style="color:#D73A49">?:</span><span style="color:#6F42C1"> HostNode</span><span style="color:#D73A49"> |</span><span style="color:#005CC5"> null</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#E36209">    end</span><span style="color:#D73A49">?:</span><span style="color:#6F42C1"> HostNode</span><span style="color:#D73A49"> |</span><span style="color:#005CC5"> null</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#24292E">  )</span><span style="color:#D73A49">:</span><span style="color:#24292E"> [</span><span style="color:#6F42C1">HostNode</span><span style="color:#24292E">, </span><span style="color:#6F42C1">HostNode</span><span style="color:#24292E">]</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre>
+</li>
+<li>
+<p><strong>Example</strong></p>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">import</span><span style="color:#24292E"> { createRenderer } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> '@vue/runtime-core'</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">const</span><span style="color:#24292E"> { </span><span style="color:#005CC5">render</span><span style="color:#24292E">, </span><span style="color:#005CC5">createApp</span><span style="color:#24292E"> } </span><span style="color:#D73A49">=</span><span style="color:#6F42C1"> createRenderer</span><span style="color:#24292E">({</span></span>
+<span class="line"><span style="color:#24292E">  patchProp,</span></span>
+<span class="line"><span style="color:#24292E">  insert,</span></span>
+<span class="line"><span style="color:#24292E">  remove,</span></span>
+<span class="line"><span style="color:#24292E">  createElement</span></span>
+<span class="line"><span style="color:#6A737D">  // ...</span></span>
+<span class="line"><span style="color:#24292E">})</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// `render` is the low-level API</span></span>
+<span class="line"><span style="color:#6A737D">// `createApp` returns an app instance</span></span>
+<span class="line"><span style="color:#D73A49">export</span><span style="color:#24292E"> { render, createApp }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// re-export Vue core APIs</span></span>
+<span class="line"><span style="color:#D73A49">export</span><span style="color:#005CC5"> *</span><span style="color:#D73A49"> from</span><span style="color:#032F62"> '@vue/runtime-core'</span></span></code></pre>
+</code></pre>
+<p>Vue's own <code>@vue/runtime-dom</code> is <a href="https://github.com/vuejs/core/blob/main/packages/runtime-dom/src/index.ts">implemented using the same API</a>. For a simpler implementation, check out <a href="https://github.com/vuejs/core/blob/main/packages/runtime-test/src/index.ts"><code>@vue/runtime-test</code></a> which is a private package for Vue's own unit testing.</p>
+</li>
+</ul></body></html>

@@ -1,0 +1,28 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "第一行",
+          "data": {}
+        },
+        {
+          "type": "break",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "第二行",
+          "data": {}
+        }
+      ],
+      "data": {}
+    }
+  ],
+  "data": {
+    "diffUnchanged": true
+  }
+}

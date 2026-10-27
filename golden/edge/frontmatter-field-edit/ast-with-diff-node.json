@@ -1,0 +1,109 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "del",
+      "children": [
+        {
+          "type": "yaml",
+          "value": "title: 旧标题",
+          "position": {
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 3,
+              "column": 4,
+              "offset": 18
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "yaml",
+          "value": "title: 新标题",
+          "position": {
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 3,
+              "column": 4,
+              "offset": 18
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "depth": 1,
+      "children": [
+        {
+          "type": "text",
+          "value": "正文",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 5,
+          "column": 1,
+          "offset": 20
+        },
+        "end": {
+          "line": 5,
+          "column": 5,
+          "offset": 24
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "正文内容不受影响。",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 7,
+          "column": 1,
+          "offset": 26
+        },
+        "end": {
+          "line": 7,
+          "column": 10,
+          "offset": 35
+        }
+      },
+      "data": {}
+    }
+  ],
+  "position": {
+    "start": {
+      "line": 1,
+      "column": 1,
+      "offset": 0
+    },
+    "end": {
+      "line": 8,
+      "column": 1,
+      "offset": 36
+    }
+  },
+  "data": {}
+}

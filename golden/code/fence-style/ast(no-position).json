@@ -1,0 +1,15 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "code",
+      "lang": "bash",
+      "meta": null,
+      "value": "npm install",
+      "data": {}
+    }
+  ],
+  "data": {
+    "diffUnchanged": true
+  }
+}

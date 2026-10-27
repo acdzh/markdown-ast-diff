@@ -1,0 +1,3069 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "yaml",
+      "value": "name: \"trae-e2e-testing-analyze\"\ndescription: \"拉取执行 session 的 trace，按判定文档判定每个 case 是否符合预期，并提取效率指标\"",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "从执行阶段收集的 session ID 中拉取 trace，做两件事，结果一起返回给 LOOP：",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 1,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "strong",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "判定",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": "：按 ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://bytedance.larkoffice.com/wiki/OH17wmVYGiBXKXkPtn0ca28cnQe",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "如何判定 E2E 验收是否执行符合预期",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " 逐个判定 case，结果为 ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "PASS",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " / ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "FAIL",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " / ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "INVALID_TASK",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " / ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "ENV_BLOCKED",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": "。",
+                  "data": {}
+                },
+                {
+                  "type": "strong",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "成功率以判定结果为准",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": "：成功率 = PASS / (PASS + FAIL)，INVALID_TASK 和 ENV_BLOCKED 不计入分母。execute 自报的 ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "status",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " 只作参考，不能顶替判定结果",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "strong",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "效率指标",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": "：用评测仓库的 ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "scripts/analyze.py",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " 计算",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "指标口径以脚本为准，禁止临时手写提取逻辑，评测运行中也不要改脚本",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "，否则各组之间的数字不能对比。发现脚本有 bug 或缺口时，写进问题清单，由本地开发时修复（修复时跑 ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "tests/test_analyze.py",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "）。",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "拉取和分析 trace 的基础用法参考：",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://bytedance.larkoffice.com/wiki/N22fwXmeAi5FNRkJb90cFMa6nRh",
+          "children": [
+            {
+              "type": "text",
+              "value": "https://bytedance.larkoffice.com/wiki/N22fwXmeAi5FNRkJb90cFMa6nRh",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "输入",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "由 LOOP 注入：execute 阶段的完整输出（results 列表，每项含 group_label、suite、case_index、case_name、run_index、session_",
+          "data": {}
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": "id、status、completed",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": "id、branch、status、completed",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "_steps、failed_step、skipped_steps、reason）。",
+          "data": {}
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "branch",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": " 只透传给 report 生成分支链接，不参与 trace 分析。",
+              "data": {}
+            }
+          ]
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "执行流程",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "步骤 1",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "：准备工作区",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "创建分支 ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "eval/analyze/<YYYYMMDD>/<HHmmss>/$CHAT_SESSION_ID",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "（",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "$CHAT_SESSION_ID",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " 取自环境变量）并切换过去。",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "把 LOOP 注入的 execute 输出原样写入 ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "artifacts/analyze/execute_results.json",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "。",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "步骤 2",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "：拉取 trace、提取指标、导出判定输入",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "bash",
+      "meta": null,
+      "value": "python3 scripts/analyze.py \\\n  --input artifacts/analyze/execute_results.json \\\n  --output artifacts/analyze/metrics.json \\\n  --judge-dir artifacts/analyze/judge \\\n  --trace-dir traces \\\n  --refresh",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "trace 同步延迟",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "（重要，不要手动反复试拉）：",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": true,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "刚结束的 session，trace 最终会同步到 boe 和 cn 两个站点，但有延迟，通常半小时以上；短时间内可能完全查不到，也可能只查到元数据、messages 为空。",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "脚本默认会自动重试：每 5 分钟一轮，每轮",
+                  "data": {}
+                },
+                {
+                  "type": "strong",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "显式用 ",
+                      "data": {}
+                    },
+                    {
+                      "type": "inlineCode",
+                      "value": "--site",
+                      "data": {}
+                    },
+                    {
+                      "type": "text",
+                      "value": " 依次查 boe、cn、sg 三个站点",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": "（trae-pa 不带 ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "--site",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " 时只自动探测 cn/sg，会漏掉 boe），任一站点先拿到 messages 就算成功，总等待上限 2 小时。stderr 会持续打印等待进度，保持会话不要中断。",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "strong",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "时区固定为 ",
+                      "data": {}
+                    },
+                    {
+                      "type": "inlineCode",
+                      "value": "TZ=Asia/Shanghai",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": "：trae-pa 的查询窗口按机器本地日期取分区（pDate）。在 UTC 容器里本地日期比北京晚一天，会把刚落库的新分区排除掉，导致刚结束的 session 查不到。脚本调用 trae-pa 时已显式注入这个环境变量，不需要额外处理；如果手动执行 trae-pa 排查，也要带上 ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "TZ=Asia/Shanghai trae-pa pull ...",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": "。",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "到上限仍拉不到时该 case 记 ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "analyze_error",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": "，其他 case 继续，不影响整体。",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "正常情况不要加 ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "--site",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": "：三个站点都会查。只有已知 trace 只在某个站点时才用 ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "--site",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " 限定。",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "等待参数可用 ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "--pull-interval <秒>",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": "、",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "--pull-timeout <分钟>",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " 调整，但正式评测保持默认。",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "每个 case 会在 ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "artifacts/analyze/judge/",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " 下生成两个文件：",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "start": null,
+              "spread": false,
+              "children": [
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "inlineCode",
+                          "value": "<group>__<suite>__case_<N>__run_<R>.transcript.md",
+                          "data": {}
+                        },
+                        {
+                          "type": "text",
+                          "value": "：判定用的精简轨迹，包括用户消息（含 Skill 和执行约束）、执行区间内每轮的模型回复、工具命令和截断后的工具结果、区间外的命令（用于判断环境问题），以及脚本观测到的操作方式",
+                          "data": {}
+                        }
+                      ]
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "listItem",
+                  "spread": false,
+                  "checked": null,
+                  "children": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "同名的 ",
+                          "data": {}
+                        },
+                        {
+                          "type": "inlineCode",
+                          "value": ".verdict.json",
+                          "data": {}
+                        },
+                        {
+                          "type": "text",
+                          "value": "：待填写的判定模板。重跑时已有的判定不会被覆盖",
+                          "data": {}
+                        }
+                      ]
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {
+                "diffUnchanged": true
+              }
+            }
+          ],
+          "data": {
+            "diffUnchanged": true
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "依赖 ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "trae-pa",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": "（即 ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "@byted/trae-prompt-analyzer-cache",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": "），脚本内部逐个执行 ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "trae-pa pull --session <id> --output traces --refresh",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": "（带重试和站点回退）",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "trace 原始数据落在 ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "traces/",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": "（已在 ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": ".gitignore",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": "，单个 session 可达 GB 级，",
+                  "data": {}
+                },
+                {
+                  "type": "strong",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "不要提交",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": "）",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "单个 session 拉取（等待 2 小时后仍失败）或解析失败不会中断，该 case 会带 ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "analyze_error",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " 字段；脚本退出码为 1 表示至少有一个失败",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "有 ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "analyze_error",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " 时区分原因：等待超时多为 trace 长期未落库（保留错误交给 report 说明）；认证/网络问题先修 ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "trae-pa auth",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " 或网络，再重跑脚本。",
+                  "data": {}
+                },
+                {
+                  "type": "inlineDel",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "手动试拉排查时同样加 ",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "inlineDel",
+                  "children": [
+                    {
+                      "type": "inlineCode",
+                      "value": "TZ=Asia/Shanghai",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "inlineDel",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "，避免在 UTC 环境被日期窗口误导",
+                      "data": {}
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "步骤 3",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "：逐个判定",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "先完整读一遍判定文档：",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://bytedance.larkoffice.com/wiki/OH17wmVYGiBXKXkPtn0ca28cnQe",
+          "children": [
+            {
+              "type": "text",
+              "value": "https://bytedance.larkoffice.com/wiki/OH17wmVYGiBXKXkPtn0ca28cnQe",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "然后对每个 case，读它的 ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "transcript.md",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "，按文档的判定流程（Step 1 提取验收意图和执行约束 → Step 2 检查环境 → Step 3 按 C0→C8 顺序逐条检查，命中即停）给出判定，写回同名的 ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "verdict.json",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "：",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "json",
+      "meta": null,
+      "value": "{\n  \"case_key\": \"cu__agent_window__case_1__run_1\",\n  \"session_id\": \"6a8694bc5f9e19624242ac32\",\n  \"judge_doc\": \"https://bytedance.larkoffice.com/wiki/OH17wmVYGiBXKXkPtn0ca28cnQe\",\n  \"verdict\": \"FAIL\",\n  \"rules_hit\": [\"C5\"],\n  \"failed_points\": [{\"point\": \"步骤 7：确认 AI 能读取附件\", \"rules\": [\"C5\"], \"evidence\": \"call 42 读取 test.txt 源文件推断内容，未通过 UI 观察回复\"}],\n  \"reason\": \"附件验收点改走读文件推断，不符合 Desktop Use 组只能用 UI 操作的约束（C5）\"\n}",
+      "data": {
+        "diffOldContent": "{\n  \"case_key\": \"cu__agent_window__case_1__run_1\",\n  \"session_id\": \"6a8694bc5f9e19624242ac32\",\n  \"judge_doc\": \"https://bytedance.larkoffice.com/wiki/OH17wmVYGiBXKXkPtn0ca28cnQe\",\n  \"verdict\": \"FAIL\",\n  \"rules_hit\": [\"C5\"],\n  \"failed_points\": [{\"point\": \"步骤 7：确认 AI 能读取附件\", \"rules\": [\"C5\"], \"evidence\": \"call 42 读取 test.txt 源文件推断内容，未通过 UI 观察回复\"}],\n  \"reason\": \"附件验收点改走读文件推断，不符合 CU 组只能用 UI 操作的约束（C5）\"\n}"
+      }
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "verdict",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": "：只能是 ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "PASS",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " / ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "FAIL",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " / ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "INVALID_TASK",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " / ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "ENV_BLOCKED",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "rules_hit",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": "：命中的规则编号（C0~C8）。",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "INVALID_TASK",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " 必须含 C0，",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "ENV_BLOCKED",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " 必须含 C1，",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "PASS",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " 留空",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "failed_points",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": "：仅 ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "FAIL",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " 时必填，列出每个未通过的验收点、命中的规则和 trace 证据（写 call 编号）",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "reason",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": "：一句话说明理由",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "判定要点：",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "验收点来自 transcript 里的 case 步骤和验收标准，执行约束来自用户消息里的 ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "prompt_injection",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " 和 Skill",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "不采信 transcript 头部的「execute 自报结果」（C2），只看轨迹证据",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "transcript 头部的「观测到的操作方式」是脚本统计出来的，可以作为 C5 的线索，但最终以轨迹内容为准",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "工具结果在 transcript 里有截断。截断影响判断时，到 ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "traces/trae-session-<id>/",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " 目录下查看完整内容。每个 call 标题里写着 ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "message M / call K",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": "：工具参数用 ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "trae-pa show --message M --call K --view tools --full",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": "；完整的工具结果在下一条 call 的 prompt 末尾，用 ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "trae-pa show --message M --call K+1 --view prompt --full | tail -n 200",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": "（prompt 很大，不要整份输出）",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "正式评测的单个 case 一般在几万 token 以内。如果 transcript 太大（比如缺少起止标记，退化为整个 session），先用 ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "grep -n \"^### call\\|^## 用户消息\"",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " 看结构，再按需分段读，不要整份读进上下文",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "case 很多时可以并行判定，但每个判定者都必须先读判定文档",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "全部判完后合并结果：",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "bash",
+      "meta": null,
+      "value": "python3 scripts/analyze.py --merge-verdicts artifacts/analyze/judge --metrics artifacts/analyze/metrics.json",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "脚本会校验每个 verdict.json（取值是否合法、必填字段是否齐全），把判定合并进 ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "metrics.json",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " 并重算成功率。退出码非 0 时，按 stderr 提示修正对应的 verdict.json 后重跑，直到所有已分析的 case 都有合法判定。",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "步骤 4",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "：检查结果",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "逐项检查 ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "metrics.json",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "：",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "每个 case 的 ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "window.warnings",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": "：缺少起止标记时脚本会退化为统计整个 session，指标会混入环境准备，需在输出里标注",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "每个 case 的 ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "metrics.tool_results.unknown",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": "：占比明显偏高（如超过 10%）说明结果块对齐失败，需要排查",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "每个 group 的 ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "totals.judge.unjudged_count",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " 应为 0（",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "analyze_error",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " 的 case 没有 trace，不需要判定）",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "判定与自报不一致的 case（例如自报 passed、判定 FAIL），在问题清单里逐条列出",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "error_attributions.unknown",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " 中的高频错误：如果是明确的新类别，写进问题清单，后续补到脚本的关键字表里",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "步骤 5",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "：提交存档",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "bash",
+      "meta": null,
+      "value": "git add -f artifacts/analyze/\ngit commit -m \"eval(analyze): <评测集> <分组列表>\"\ngit push origin HEAD",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "只提交 ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "artifacts/analyze/",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "（含 judge 目录下的 transcript 和 verdict），不要用 ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "git add -f .",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "，避免把 ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "traces/",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " 提交进去。",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "步骤 6",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "：输出",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "直接返回 ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "metrics.json",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " 的完整内容给 LOOP，并附上步骤 4 发现的问题清单",
+          "data": {}
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": "和本 session 的存档分支完整名（",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "branch",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": "，即步骤 1 创建并已 push 的 ",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "eval/analyze/...",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": "），供 report 阶段生成中间分支链接",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "。不做对比分析，不生成报告。",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "输出结构",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "json",
+      "meta": null,
+      "value": "{\n  \"schema_version\": 1,\n  \"judge_doc\": \"https://bytedance.larkoffice.com/wiki/OH17wmVYGiBXKXkPtn0ca28cnQe\",\n  \"groups\": {\n    \"<group_label>\": {\n      \"totals\": {\n        \"case_count\": 6, \"analyzed_count\": 6,\n        \"judge\": {\"judge_doc\": \"https://bytedance.larkoffice.com/wiki/OH17wmVYGiBXKXkPtn0ca28cnQe\",\n                  \"judged_count\": 6, \"unjudged_count\": 0,\n                  \"verdict_counts\": {\"PASS\": 4, \"FAIL\": 1, \"INVALID_TASK\": 0, \"ENV_BLOCKED\": 1},\n                  \"success_rate\": 80.0, \"rules_hit_counts\": {\"C5\": 1, \"C1\": 1}},\n        \"self_reported\": {\"status_counts\": {\"passed\": 5, \"failed\": 1}, \"passed_rate\": 83.33},\n        \"llm_calls\": 0, \"tool_calls\": 0, \"tool_rounds\": 0, \"llm_errors\": 0,\n        \"tokens\": {\"input\": 0, \"output\": 0, \"total\": 0, \"cache_read\": 0, \"cache_creation\": 0, \"reasoning\": 0, \"cache_hit_rate\": 0},\n        \"time_s\": {\"wall_clock\": 0, \"marker_wall_clock\": 0, \"llm\": 0, \"tool\": 0,\n                   \"tool_by_category\": {\"Desktop Use\": 0, \"Browser Use\": 0, \"Shell\": 0, \"多类混合\": 0}},\n        \"slowest_tool_rounds\": [{\"case_index\": 1, \"run_index\": 1, \"session_id\": \"\", \"round\": 12, \"log_id\": \"\",\n                                 \"category\": \"Browser Use\", \"tool_time_s\": 63.0, \"ops\": [\"tde ui wait\"],\n                                 \"commands\": [\"tde ui wait --text Done --run run-1\"]}],\n        \"llm_latency_s\": {\"count\": 0, \"total\": 0, \"avg\": 0, \"P25\": 0, \"P50\": 0, \"P75\": 0, \"P90\": 0, \"P95\": 0, \"P99\": 0, \"max\": 0},\n        \"first_token_latency_s\": {\"...\": \"同上\"},\n        \"tool_category_counts\": {}, \"tool_name_counts\": {}, \"desktop_use_op_counts\": {}, \"tde_op_counts\": {},\n        \"models\": {}, \"finish_reasons\": {},\n        \"tool_results\": {\"total\": 0, \"success\": 0, \"failed\": 0, \"background\": 0, \"unknown\": 0, \"success_rate\": 0,\n                         \"by_category\": {\"Desktop Use\": {\"total\": 0, \"success\": 0, \"failed\": 0, \"unknown\": 0, \"failure_rate\": 0}}},\n        \"error_attributions\": {\"sdk\": {}, \"ai_usage\": {}, \"environment\": {}, \"unknown\": {}},\n        \"top_errors\": [{\"key\": \"ELEMENT_NOT_FOUND\", \"attribution\": \"ai_usage\", \"label\": \"element_not_found\", \"count\": 0, \"tools\": {}, \"sample\": \"\"}],\n        \"per_case\": {\"<suite>#<case_index>\": {\"case_name\": \"\", \"runs\": 1, \"self_reported_passed\": 1, \"verdicts\": {\"PASS\": 1},\n                     \"median\": {\"wall_clock_s\": 0, \"llm_s\": 0, \"tool_s\": 0, \"llm_calls\": 0, \"tool_calls\": 0, \"tokens_total\": 0},\n                     \"wall_clock_range_s\": [0, 0]}}\n      },\n      \"cases\": [\n        {\n          \"group_label\": \"\", \"suite\": \"\", \"case_index\": 1, \"case_name\": \"\", \"run_index\": 1,\n          \"session_id\": \"\", \"status\": \"passed\", \"completed_steps\": 0, \"total_steps\": 0,\n          \"failed_step\": null, \"skipped_steps\": [], \"reason\": null,\n          \"trace_url\": \"https://trae-prompt-dashboard.gf.bytedance.net/conversation/<session_id>\",\n          \"window\": {\"start_marker_found\": true, \"end_marker_found\": true, \"first_call\": 0, \"last_call\": 0,\n                     \"session_call_count\": 0, \"marker_ts_start\": 0, \"marker_ts_end\": 0, \"warnings\": []},\n          \"judge\": {\"verdict\": \"PASS\", \"rules_hit\": [], \"failed_points\": [], \"reason\": \"\",\n                    \"judge_doc\": \"https://bytedance.larkoffice.com/wiki/OH17wmVYGiBXKXkPtn0ca28cnQe\"},\n          \"metrics\": {\"...\": \"与 totals 同名字段含义相同，另有 ui_mode_observed\"},\n          \"latency_samples_s\": {\"llm\": [], \"first_token\": []},\n          \"rounds\": [{\"round\": 1, \"log_id\": \"\", \"model\": \"\", \"ops\": [\"Desktop Use.click\", \"tde ui snapshot\"],\n                      \"category\": \"多类混合\", \"tool_count\": 2, \"failed_tools\": 0,\n                      \"llm_latency_s\": 0, \"tool_time_s\": 0, \"duration_s\": 0}],\n          \"analyze_error\": \"仅失败时出现\"\n        }\n      ]\n    }\n  }\n}",
+      "data": {
+        "diffOldContent": "{\n  \"schema_version\": 1,\n  \"judge_doc\": \"https://bytedance.larkoffice.com/wiki/OH17wmVYGiBXKXkPtn0ca28cnQe\",\n  \"groups\": {\n    \"<group_label>\": {\n      \"totals\": {\n        \"case_count\": 6, \"analyzed_count\": 6,\n        \"judge\": {\"judge_doc\": \"https://bytedance.larkoffice.com/wiki/OH17wmVYGiBXKXkPtn0ca28cnQe\",\n                  \"judged_count\": 6, \"unjudged_count\": 0,\n                  \"verdict_counts\": {\"PASS\": 4, \"FAIL\": 1, \"INVALID_TASK\": 0, \"ENV_BLOCKED\": 1},\n                  \"success_rate\": 80.0, \"rules_hit_counts\": {\"C5\": 1, \"C1\": 1}},\n        \"self_reported\": {\"status_counts\": {\"passed\": 5, \"failed\": 1}, \"passed_rate\": 83.33},\n        \"llm_calls\": 0, \"tool_calls\": 0, \"tool_rounds\": 0, \"llm_errors\": 0,\n        \"tokens\": {\"input\": 0, \"output\": 0, \"total\": 0, \"cache_read\": 0, \"cache_creation\": 0, \"reasoning\": 0, \"cache_hit_rate\": 0},\n        \"time_s\": {\"wall_clock\": 0, \"marker_wall_clock\": 0, \"llm\": 0, \"tool\": 0,\n                   \"tool_by_category\": {\"CU\": 0, \"tde ui\": 0, \"Shell\": 0, \"多类混合\": 0}},\n        \"slowest_tool_rounds\": [{\"case_index\": 1, \"run_index\": 1, \"session_id\": \"\", \"round\": 12, \"log_id\": \"\",\n                                 \"category\": \"tde ui\", \"tool_time_s\": 63.0, \"ops\": [\"tde ui wait\"],\n                                 \"commands\": [\"tde ui wait --text Done --run run-1\"]}],\n        \"llm_latency_s\": {\"count\": 0, \"total\": 0, \"avg\": 0, \"P25\": 0, \"P50\": 0, \"P75\": 0, \"P90\": 0, \"P95\": 0, \"P99\": 0, \"max\": 0},\n        \"first_token_latency_s\": {\"...\": \"同上\"},\n        \"tool_category_counts\": {}, \"tool_name_counts\": {}, \"cu_op_counts\": {}, \"tde_op_counts\": {},\n        \"models\": {}, \"finish_reasons\": {},\n        \"tool_results\": {\"total\": 0, \"success\": 0, \"failed\": 0, \"background\": 0, \"unknown\": 0, \"success_rate\": 0,\n                         \"by_category\": {\"CU\": {\"total\": 0, \"success\": 0, \"failed\": 0, \"unknown\": 0, \"failure_rate\": 0}}},\n        \"error_attributions\": {\"sdk\": {}, \"ai_usage\": {}, \"environment\": {}, \"unknown\": {}},\n        \"top_errors\": [{\"key\": \"ELEMENT_NOT_FOUND\", \"attribution\": \"ai_usage\", \"label\": \"element_not_found\", \"count\": 0, \"tools\": {}, \"sample\": \"\"}],\n        \"per_case\": {\"<suite>#<case_index>\": {\"case_name\": \"\", \"runs\": 1, \"self_reported_passed\": 1, \"verdicts\": {\"PASS\": 1},\n                     \"median\": {\"wall_clock_s\": 0, \"llm_s\": 0, \"tool_s\": 0, \"llm_calls\": 0, \"tool_calls\": 0, \"tokens_total\": 0},\n                     \"wall_clock_range_s\": [0, 0]}}\n      },\n      \"cases\": [\n        {\n          \"group_label\": \"\", \"suite\": \"\", \"case_index\": 1, \"case_name\": \"\", \"run_index\": 1,\n          \"session_id\": \"\", \"status\": \"passed\", \"completed_steps\": 0, \"total_steps\": 0,\n          \"failed_step\": null, \"skipped_steps\": [], \"reason\": null,\n          \"trace_url\": \"https://trae-prompt-dashboard.gf.bytedance.net/conversation/<session_id>\",\n          \"window\": {\"start_marker_found\": true, \"end_marker_found\": true, \"first_call\": 0, \"last_call\": 0,\n                     \"session_call_count\": 0, \"marker_ts_start\": 0, \"marker_ts_end\": 0, \"warnings\": []},\n          \"judge\": {\"verdict\": \"PASS\", \"rules_hit\": [], \"failed_points\": [], \"reason\": \"\",\n                    \"judge_doc\": \"https://bytedance.larkoffice.com/wiki/OH17wmVYGiBXKXkPtn0ca28cnQe\"},\n          \"metrics\": {\"...\": \"与 totals 同名字段含义相同，另有 ui_mode_observed\"},\n          \"latency_samples_s\": {\"llm\": [], \"first_token\": []},\n          \"rounds\": [{\"round\": 1, \"log_id\": \"\", \"model\": \"\", \"ops\": [\"CU.click\", \"tde ui snapshot\"],\n                      \"category\": \"多类混合\", \"tool_count\": 2, \"failed_tools\": 0,\n                      \"llm_latency_s\": 0, \"tool_time_s\": 0, \"duration_s\": 0}],\n          \"analyze_error\": \"仅失败时出现\"\n        }\n      ]\n    }\n  }\n}"
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "指标口径",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "成功率",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "：只来自判定结果，见上文。",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "self_reported",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " 是 execute 自报的产品验收结论（产品有没有 bug），和「agent 有没有按要求完成验收」不是一回事，不能混用。",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "执行区间",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "：只统计起止标记之间的 LLM call。区间从打起始标记那次 call 的下一条开始，到打结束标记的 call 为止（含）。标记之外的 call（环境准备、安装 Trae、存档）不计入。",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "时间",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "（单位为秒）：",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "table",
+      "align": [
+        null,
+        null
+      ],
+      "children": [
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "字段",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "含义",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {
+            "diffUnchanged": true
+          }
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "wall_clock",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "区间首个 call 的 logId 时间 → 末个 call 的 logId 时间 + latency（logId 精度为秒）",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {
+            "diffUnchanged": true
+          }
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "marker_wall_clock",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "结束标记 timestamp − 起始标记 timestamp（agent 的 ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "date +%s",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " 打印值），用于交叉核对",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {
+            "diffUnchanged": true
+          }
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "llm",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "区间内 LLM latency 之和",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {
+            "diffUnchanged": true
+          }
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "tool",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "每轮工具耗时之和，单轮工具耗时 = 下一个 call 开始时间 − (本 call 开始时间 + latency)",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {
+            "diffUnchanged": true
+          }
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "tool_by_category",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "按轮次的工具类别汇总 ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "tool",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": "。一轮内各工具的耗时拆不开（可能并行），所以整轮记到它唯一的类别，含多个类别时记「多类混合」",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {
+            "diffUnchanged": true
+          }
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "inlineCode",
+          "value": "slowest_tool_rounds",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "：工具耗时最长的 10 轮，附原始命令摘要（",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "commands",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "），组级取全组前 10。",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "不统计「等待耗时」或「纯操作耗时」。",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " 等待不只出现在 ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "sleep",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "text",
+          "value": " / ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "tde ui wait",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "text",
+          "value": "，还会出现在操作命令自带的等待参数里（比如点击后等某段文本出现）、Shell 轮询循环里，",
+          "data": {}
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": "CU",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": "Desktop Use",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": " 则是靠反复截图等。只按命令名识别必然漏判，而且",
+          "data": {}
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": " CU 和 tde ",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": "两种操作方式",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "漏判的程度不同，算出来的组间对比会有系统性偏差。耗时去向请看 ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "tool_by_category",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "text",
+          "value": " 和 ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "slowest_tool_rounds",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "text",
+          "value": " 里的具体命令。",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "工具分类",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "（",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "tool_category_counts",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "）：",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "table",
+      "align": [
+        null,
+        null
+      ],
+      "children": [
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "分类",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "判定",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {
+            "diffUnchanged": true
+          }
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "del",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "CU",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ]
+            },
+            {
+              "type": "ins",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Desktop Use",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "mcp_mcp_config_ext_computer-use_*",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " 直调，或 Exec 代码里调用 computer-use MCP",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "del",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "tde ui",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ]
+            },
+            {
+              "type": "ins",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Browser Use",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Shell 命令中含 ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "tde ui <sub>",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " / ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "tde cdp <sub>",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": "（含 ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "npm exec ... -- tde",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": "、",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "\"$TDE\"",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " 等写法）",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "tde 管理",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Shell 命令中只有 tde 的非",
+                  "data": {}
+                },
+                {
+                  "type": "inlineDel",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " UI ",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "inlineIns",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "交互",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "子命令（",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "+run",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": "、",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "cleanup",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": "、",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "status",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": "、",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "--help",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " 等）",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Shell / Exec / view_image / apply_patch / 其他",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "按工具名",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {
+            "diffUnchanged": true
+          }
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "cu_op_counts",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "desktop_use_op_counts",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": " 是 ",
+          "data": {}
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": "CU",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": "Desktop Use",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": " 子操作（get_app_state、click、type_text…），",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "tde_op_counts",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "text",
+          "value": " 是 tde 子命令（ui snapshot、ui click…）。",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "工具结果",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "：结果在下一个 call 的 prompt 尾部，按 ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "tool:",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " 块与 toolcalls 顺序一一对应；块数对不上时记 ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "unknown",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "，不猜。",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "table",
+      "align": [
+        null,
+        null,
+        null
+      ],
+      "children": [
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "工具",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "成功",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "失败",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {
+            "diffUnchanged": true
+          }
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Shell",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "shell_exit_code=0",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "exit code 非 0 / status 为 failed、timeout（",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "running_in_background",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " 记 background）",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {
+            "diffUnchanged": true
+          }
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "del",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "CU MCP",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ]
+            },
+            {
+              "type": "ins",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Desktop Use MCP",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ]
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "The MCP server responded with:",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "command error:",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " 开头",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Exec",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "Script completed",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " 且无 ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "isError: true",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "Script failed",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " / ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "TypeError",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " 等，或结果含 ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "command error:",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {
+            "diffUnchanged": true
+          }
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "view_image",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "Image loaded",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "其他",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {
+            "diffUnchanged": true
+          }
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "错误归因",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "：先用错误摘要（tde 错误码、输出末尾几行）按 sdk → ai_usage → environment 顺序匹配关键字，摘要匹配不上时再匹配完整输出。关键字表在脚本顶部的 ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "SDK_KEYWORDS",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " / ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "AI_USAGE_KEYWORDS",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " / ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "ENV_KEYWORDS",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "。",
+          "data": {}
+        }
+      ],
+      "data": {}
+    }
+  ]
+}

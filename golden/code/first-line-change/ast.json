@@ -1,0 +1,39 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "code",
+      "lang": "ts",
+      "meta": null,
+      "value": "import { a, b } from './a';\nconst x = a(1);\nconst y = a(2);\nconst z = a(3);\nexport { x, y, z };",
+      "position": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "end": {
+          "line": 7,
+          "column": 4,
+          "offset": 105
+        }
+      },
+      "data": {
+        "diffOldContent": "import { a } from './a';\nconst x = a(1);\nconst y = a(2);\nconst z = a(3);\nexport { x, y, z };"
+      }
+    }
+  ],
+  "position": {
+    "start": {
+      "line": 1,
+      "column": 1,
+      "offset": 0
+    },
+    "end": {
+      "line": 8,
+      "column": 1,
+      "offset": 106
+    }
+  },
+  "data": {}
+}

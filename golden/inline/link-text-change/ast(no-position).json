@@ -1,0 +1,58 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "详见",
+          "data": {}
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "link",
+              "title": null,
+              "url": "https://example.com/docs",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "官方文档",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "link",
+              "title": null,
+              "url": "https://example.com/docs",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "开发者文档",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "中的说明。",
+          "data": {}
+        }
+      ],
+      "data": {}
+    }
+  ],
+  "data": {}
+}

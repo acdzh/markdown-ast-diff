@@ -1,0 +1,121 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+/* table */
+table { border-collapse: collapse; width: auto; margin: 1em 0; }
+th, td { border: 1px solid #d0d7de; padding: 6px 13px; }
+th { background: #f6f8fa; font-weight: 600; }
+tr:nth-child(2n) { background: #f6f8fa; }
+
+/* code */
+code { padding: 0.2em 0.4em; font-size: 85%; background: #f6f8fa; border-radius: 6px; font-family: 'SF Mono', 'Fira Code', Menlo, monospace; }
+pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background: #f6f8fa; border-radius: 6px; margin: 1em 0; }
+pre code { padding: 0; background: none; border-radius: 0; font-size: inherit; }
+
+/* blockquote */
+blockquote { padding: 0 1em; color: #656d76; border-left: 0.25em solid #d0d7de; margin: 1em 0; }
+
+/* hr */
+hr { height: 0.25em; padding: 0; margin: 24px 0; background-color: #d0d7de; border: 0; }
+
+/* headings */
+h1, h2, h3, h4, h5, h6 { margin-top: 24px; margin-bottom: 16px; font-weight: 600; line-height: 1.25; }
+h1 { font-size: 2em; padding-bottom: 0.3em; border-bottom: 1px solid #d0d7de; }
+h2 { font-size: 1.5em; padding-bottom: 0.3em; border-bottom: 1px solid #d0d7de; }
+h3 { font-size: 1.25em; }
+
+/* list */
+ul, ol { padding-left: 2em; margin: 0.5em 0; }
+li + li { margin-top: 0.25em; }
+
+/* image */
+img { max-width: 100%; }
+
+/* code diff */
+.code-diff { border-radius: 6px; overflow: hidden; margin: 1em 0; font-size: 13px; border: 1px solid #d0d7de; }
+.code-diff pre { margin: 0; padding: 0; border-radius: 0; border: none; background: #fff; }
+.code-diff .shiki { background: #fff !important; }
+.code-diff .diff-line { display: flex; line-height: 1.45; }
+.code-diff .diff-line-gutter { width: 40px; min-width: 40px; text-align: right; padding: 0 8px 0 0; color: #8b949e; font-size: 12px; user-select: none; flex-shrink: 0; }
+.code-diff .diff-line-sign { width: 20px; min-width: 20px; text-align: center; user-select: none; flex-shrink: 0; }
+.code-diff .diff-line-content { flex: 1; padding-right: 12px; white-space: pre; overflow-x: auto; }
+.code-diff .diff-line.del { background: #ffebe9; }
+.code-diff .diff-line.del .diff-line-gutter { background: #ffd7d5; color: #82071e; }
+.code-diff .diff-line.del .diff-line-sign { color: #82071e; }
+.code-diff .diff-line.ins { background: #e6ffec; }
+.code-diff .diff-line.ins .diff-line-gutter { background: #ccffd8; color: #116329; }
+.code-diff .diff-line.ins .diff-line-sign { color: #116329; }
+.code-diff .diff-line.ctx { background: #fff; }
+.code-diff .diff-line.ctx .diff-line-gutter { color: #8b949e; }
+.code-diff .diff-header { padding: 8px 12px; background: #f6f8fa; border-bottom: 1px solid #d0d7de; font-size: 12px; color: #656d76; font-family: 'SF Mono', 'Fira Code', Menlo, monospace; }
+
+ins { background-color: #e6ffec; text-decoration: none; border-radius: 2px; padding: 0 2px; }
+del { background-color: #ffebe9; text-decoration: line-through; border-radius: 2px; padding: 0 2px; }
+ins.diff-block, del.diff-block { display: block; padding-left: 10px; border-left: 3px solid; }
+ins.diff-block { border-left-color: #2cbe4e; }
+del.diff-block { border-left-color: #cb2431; }
+ins > hr, ins > pre { background-color: #e6ffec; }
+del > hr, del > pre { background-color: #ffebe9; }
+ins > table, del > table { border-collapse: collapse; }
+ins > table th, ins > table td { background-color: #e6ffec; }
+del > table th, del > table td { background-color: #ffebe9; }
+li[data-diff="ins"] { background-color: #e6ffec; border-radius: 2px; }
+li[data-diff="del"] { background-color: #ffebe9; border-radius: 2px; text-decoration: line-through; }
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:16px;font-size:14px;line-height:1.6;color:#1a1a1a;}</style></head><body><h1>社区活动介绍</h1>
+<p>本文档汇总了社区两项核心文化活动的详细信息，包括活动流程、参与方式、场地安排和历届回顾。
+两项活动均由社区文化委员会主办，旨在为居民提供高质量的精神文化生活。
+活动自二零二一年启动以来，已累计举办超过两百场，覆盖居民逾三千人次。</p>
+<h2>周三读书会</h2>
+<p>参与者可以通过每周三晚间的读书分享活动完成对经典文学作品的<del class="diff-inline">深度</del><ins class="diff-inline">精细</ins>解读。
+活动期间组织者会提前选定本周的阅读书目，并在现场提供茶点和讨论提纲，确保每位参与者都能在轻松的氛围中充分表达自己的阅读感受和思考。
+分享结束后会进入自由交流环节，由主持人引导大家就书中的核心议题展开讨论。</p>
+<h3>选书与准备</h3>
+<p>读书会的选书范围涵盖中外经典文学、当代小说、社科随笔和诗歌等多个门类。
+每月初由组织者在微信群里发布当月的四本候选书目，群成员投票决定阅读顺序。
+为了照顾不同阅读速度的参与者，每本书的讨论周期为一周，首次参加的新成员可以只读前三章即可参与讨论。
+组织者还会整理每期讨论的精华笔记，以电子文档的形式分享到群里供大家回顾。
+选书时特别注意避开争议性过强的政治类读物，以维护讨论的理性和友善氛围。</p>
+<h3>活动流程与场地</h3>
+<p>活动地点设在小区东门的社区图书室，容纳人数上限为二十人。
+每次活动从晚上七点半开始，九点半结束，中间安排十分钟茶歇。
+茶歇期间提供咖啡、花茶和自制小点心，费用由参与者AA分摊，每人每次大约十五元。
+遇到雨天或极端天气，活动会转为线上腾讯会议的形式进行，提前在群里通知。
+图书室配有投影仪和白板，分享者可以提前准备幻灯片辅助讲解。
+座位按圆桌形式排列，鼓励面对面交流而非单向演讲。</p>
+<h3>参与方式</h3>
+<p>新成员入群需由现有成员邀请，或通过社区物业前台登记报名。
+首次参加的成员可以旁听一次，了解活动流程后再决定是否长期参与。
+长期参与者默认每月缴纳五十元活动基金，用于购买公共书籍和茶歇物资。
+缺席三次以上未请假的成员会被移出微信群，但随时可以重新申请加入。</p>
+<h3>历届回顾</h3>
+<p>历届读书会产出了不少精彩的讨论成果。
+去年夏天围绕《百年孤独》展开的那次讨论，参与者们就"孤独是诅咒还是命运"争论了整整两个小时，最后也没吵出结果。
+今年三月读《人间失格》的时候，有位成员分享了自己的亲身经历，整个图书室安静得能听到空调滴水的声音。
+最受欢迎的一期是去年十二月的年终特别场，大家带着各自年度最爱的书来做五分钟闪电分享，气氛热烈到九点半了还不愿意散场。
+这些意料之外的深度对话，正是读书会最珍贵的部分。</p>
+<h2>周六观影会</h2>
+<p>参与者可以通过每周六下午的观影鉴赏活动完成对优秀电影作品的深度解读。
+活动期间组织者会提前选定本周的放映片目，并在现场提供茶点和讨论提纲，确保每位参与者都能在轻松的氛围中充分表达自己的观影感受和思考。
+放映结束后会进入自由交流环节，由主持人引导大家就片中的核心议题展开讨论。</p>
+<h3>选片与准备</h3>
+<p>观影会的选片范围涵盖中外经典电影、当代佳作、纪录片和动画等多个门类。
+每月初由组织者在微信群里发布当月的四部候选影片，群成员投票决定放映顺序。
+为了照顾不同观影偏好的参与者，每部电影的讨论周期为一周，首次参加的新成员可以只看前三十分钟即可参与讨论。
+组织者还会整理每期讨论的精华笔记，以电子文档的形式分享到群里供大家回顾。
+选片时特别注意避开争议性过强的敏感题材，以维护讨论的理性和友善氛围。</p>
+<h3>活动流程与场地</h3>
+<p>活动地点设在小区西门的社区活动室，容纳人数上限为二十人。
+每次活动从下午两点半开始，五点半结束，中间安排十分钟茶歇。
+茶歇期间提供咖啡、花茶和自制小点心，费用由参与者AA分摊，每人每次大约十五元。
+遇到雨天或极端天气，活动会转为线上腾讯会议的形式进行，提前在群里通知。
+活动室配有投影仪和音响，放映者可以提前准备幻灯片辅助讲解。
+座位按圆桌形式排列，鼓励面对面交流而非单向演讲。</p>
+<h3>参与方式</h3>
+<p>新成员入群需由现有成员邀请，或通过社区物业前台登记报名。
+首次参加的成员可以旁听一次，了解活动流程后再决定是否长期参与。
+长期参与者默认每月缴纳五十元活动基金，用于购买公共影碟和茶歇物资。
+缺席三次以上未请假的成员会被移出微信群，但随时可以重新申请加入。</p>
+<h3>历届回顾</h3>
+<p>历届观影会产出了不少精彩的讨论成果。
+去年夏天围绕《肖申克的救赎》展开的那次讨论，参与者们就"希望是束缚还是自由"争论了整整两个小时，最后也没吵出结果。
+今年三月看《入殓师》的时候，有位成员分享了自己的亲身经历，整个活动室安静得能听到空调滴水的声音。
+最受欢迎的一期是去年十二月的年终特别场，大家带着各自年度最爱的电影来做五分钟闪电分享，气氛热烈到五点半了还不愿意散场。
+这些意料之外的深度对话，正是观影会最珍贵的部分。</p></body></html>

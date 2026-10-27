@@ -1,0 +1,331 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "table",
+      "align": [
+        null,
+        null,
+        null
+      ],
+      "children": [
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "装备",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 1,
+                  "column": 1,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 1,
+                  "column": 6,
+                  "offset": 5
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "负责人",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 1,
+                  "column": 6,
+                  "offset": 5
+                },
+                "end": {
+                  "line": 1,
+                  "column": 12,
+                  "offset": 11
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "备注",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 1,
+                  "column": 12,
+                  "offset": 11
+                },
+                "end": {
+                  "line": 1,
+                  "column": 18,
+                  "offset": 17
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 18,
+              "offset": 17
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          }
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "卡式炉",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 3,
+                  "column": 1,
+                  "offset": 38
+                },
+                "end": {
+                  "line": 3,
+                  "column": 7,
+                  "offset": 44
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "阿伟",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 3,
+                  "column": 7,
+                  "offset": 44
+                },
+                "end": {
+                  "line": 3,
+                  "column": 12,
+                  "offset": 49
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "带",
+                  "data": {}
+                },
+                {
+                  "type": "inlineDel",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "两",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "inlineIns",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "三",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "罐气罐",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 3,
+                  "column": 12,
+                  "offset": 49
+                },
+                "end": {
+                  "line": 3,
+                  "column": 21,
+                  "offset": 58
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 3,
+              "column": 1,
+              "offset": 38
+            },
+            "end": {
+              "line": 3,
+              "column": 21,
+              "offset": 58
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "帐篷",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 4,
+                  "column": 1,
+                  "offset": 59
+                },
+                "end": {
+                  "line": 4,
+                  "column": 6,
+                  "offset": 64
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "老张",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 4,
+                  "column": 6,
+                  "offset": 64
+                },
+                "end": {
+                  "line": 4,
+                  "column": 11,
+                  "offset": 69
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "记得还",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 4,
+                  "column": 11,
+                  "offset": 69
+                },
+                "end": {
+                  "line": 4,
+                  "column": 18,
+                  "offset": 76
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 4,
+              "column": 1,
+              "offset": 59
+            },
+            "end": {
+              "line": 4,
+              "column": 18,
+              "offset": 76
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 18,
+          "offset": 76
+        }
+      },
+      "data": {}
+    }
+  ],
+  "position": {
+    "start": {
+      "line": 1,
+      "column": 1,
+      "offset": 0
+    },
+    "end": {
+      "line": 5,
+      "column": 1,
+      "offset": 77
+    }
+  },
+  "data": {}
+}

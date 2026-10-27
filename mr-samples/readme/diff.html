@@ -1,0 +1,99 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+/* table */
+table { border-collapse: collapse; width: auto; margin: 1em 0; }
+th, td { border: 1px solid #d0d7de; padding: 6px 13px; }
+th { background: #f6f8fa; font-weight: 600; }
+tr:nth-child(2n) { background: #f6f8fa; }
+
+/* code */
+code { padding: 0.2em 0.4em; font-size: 85%; background: #f6f8fa; border-radius: 6px; font-family: 'SF Mono', 'Fira Code', Menlo, monospace; }
+pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background: #f6f8fa; border-radius: 6px; margin: 1em 0; }
+pre code { padding: 0; background: none; border-radius: 0; font-size: inherit; }
+
+/* blockquote */
+blockquote { padding: 0 1em; color: #656d76; border-left: 0.25em solid #d0d7de; margin: 1em 0; }
+
+/* hr */
+hr { height: 0.25em; padding: 0; margin: 24px 0; background-color: #d0d7de; border: 0; }
+
+/* headings */
+h1, h2, h3, h4, h5, h6 { margin-top: 24px; margin-bottom: 16px; font-weight: 600; line-height: 1.25; }
+h1 { font-size: 2em; padding-bottom: 0.3em; border-bottom: 1px solid #d0d7de; }
+h2 { font-size: 1.5em; padding-bottom: 0.3em; border-bottom: 1px solid #d0d7de; }
+h3 { font-size: 1.25em; }
+
+/* list */
+ul, ol { padding-left: 2em; margin: 0.5em 0; }
+li + li { margin-top: 0.25em; }
+
+/* image */
+img { max-width: 100%; }
+
+/* code diff */
+.code-diff { border-radius: 6px; overflow: hidden; margin: 1em 0; font-size: 13px; border: 1px solid #d0d7de; }
+.code-diff pre { margin: 0; padding: 0; border-radius: 0; border: none; background: #fff; }
+.code-diff .shiki { background: #fff !important; }
+.code-diff .diff-line { display: flex; line-height: 1.45; }
+.code-diff .diff-line-gutter { width: 40px; min-width: 40px; text-align: right; padding: 0 8px 0 0; color: #8b949e; font-size: 12px; user-select: none; flex-shrink: 0; }
+.code-diff .diff-line-sign { width: 20px; min-width: 20px; text-align: center; user-select: none; flex-shrink: 0; }
+.code-diff .diff-line-content { flex: 1; padding-right: 12px; white-space: pre; overflow-x: auto; }
+.code-diff .diff-line.del { background: #ffebe9; }
+.code-diff .diff-line.del .diff-line-gutter { background: #ffd7d5; color: #82071e; }
+.code-diff .diff-line.del .diff-line-sign { color: #82071e; }
+.code-diff .diff-line.ins { background: #e6ffec; }
+.code-diff .diff-line.ins .diff-line-gutter { background: #ccffd8; color: #116329; }
+.code-diff .diff-line.ins .diff-line-sign { color: #116329; }
+.code-diff .diff-line.ctx { background: #fff; }
+.code-diff .diff-line.ctx .diff-line-gutter { color: #8b949e; }
+.code-diff .diff-header { padding: 8px 12px; background: #f6f8fa; border-bottom: 1px solid #d0d7de; font-size: 12px; color: #656d76; font-family: 'SF Mono', 'Fira Code', Menlo, monospace; }
+
+ins { background-color: #e6ffec; text-decoration: none; border-radius: 2px; padding: 0 2px; }
+del { background-color: #ffebe9; text-decoration: line-through; border-radius: 2px; padding: 0 2px; }
+ins.diff-block, del.diff-block { display: block; padding-left: 10px; border-left: 3px solid; }
+ins.diff-block { border-left-color: #2cbe4e; }
+del.diff-block { border-left-color: #cb2431; }
+ins > hr, ins > pre { background-color: #e6ffec; }
+del > hr, del > pre { background-color: #ffebe9; }
+ins > table, del > table { border-collapse: collapse; }
+ins > table th, ins > table td { background-color: #e6ffec; }
+del > table th, del > table td { background-color: #ffebe9; }
+li[data-diff="ins"] { background-color: #e6ffec; border-radius: 2px; }
+li[data-diff="del"] { background-color: #ffebe9; border-radius: 2px; text-decoration: line-through; }
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:16px;font-size:14px;line-height:1.6;color:#1a1a1a;}</style></head><body><h1>Trae Desktop E2E 评测</h1>
+<p>评测 agent 在不同条件下（<del class="diff-inline">CU / CDP、tde</del><ins class="diff-inline">不同操作方式、tde</ins> 版本、Trae 版本、模型等）操作 Trae 客户端完成验收任务的<strong>效率和成功率</strong>。</p>
+<ins class="diff-block"><p>分组由用户按自然语言提出，不限于任何固定集合。下面两种是最常见的操作方式及其常见叫法，作为背景知识用于识别用户简称（用户也可以定义自己的操作方式，说清楚含义即可）：</p></ins>
+<ins class="diff-block"><ul>
+<li><strong>Desktop Use</strong>：截图 + 坐标点击操作 UI。常见叫法：CU、CUA、computer use、computer-use 等</li>
+<li><strong>Browser Use</strong>：tde ui / tde cdp 等交互命令操作。常见叫法：BU、CDP、tde ui、tde cdp、tde interaction 等</li>
+</ul></ins>
+<ins class="diff-block"><p>analyze 输出的工具分类指标统一用 Desktop Use / Browser Use 这两个名字；其他操作方式按实际工具归类。</p></ins>
+<p>成功率按 <a href="https://bytedance.larkoffice.com/wiki/OH17wmVYGiBXKXkPtn0ca28cnQe">如何判定 E2E 验收是否执行符合预期</a> 判定：PASS / FAIL / INVALID_TASK / ENV_BLOCKED，成功率 = PASS / (PASS + FAIL)。</p>
+<p>不是功能测试，而是工具效率评测：同一组 case，比较不同操作方式完成任务所需的耗时、调用次数、Token 和工具可靠性。</p>
+<h2>目录</h2>
+<pre><code><div class="code-diff"><div class="diff-line ctx"><span class="diff-line-gutter">1</span><span class="diff-line-gutter">1</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span>cases/                     评测集，每个文件一个 suite（case 内容目前是占位）</span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">2</span><span class="diff-line-gutter">2</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span>  agent_window.json</span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">3</span><span class="diff-line-gutter">3</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span>  smoke.json</span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">4</span><span class="diff-line-gutter">4</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span>assets/                    case 执行用到的附件（步骤里用 {assets_dir} 引用）</span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">5</span><span class="diff-line-gutter">5</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span>loop/trae-e2e-testing/     LOOP 编排定义：intake → execute → analyze → report</span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">6</span><span class="diff-line-gutter">6</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span>skills/</span></span></div><div class="diff-line ins"><span class="diff-line-gutter"></span><span class="diff-line-gutter">7</span><span class="diff-line-sign">+</span><span class="diff-line-content"><span>  trae-e2e-testing-intake/    解析评测需求，套用默认值与操作方式模板，产出评测计划</span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">7</span><span class="diff-line-gutter">8</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span>  trae-e2e-testing-execute/   执行单个 case，输出结构化结果</span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">8</span><span class="diff-line-gutter">9</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span>  trae-e2e-testing-analyze/   调用 scripts/analyze.py 提取指标</span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">9</span><span class="diff-line-gutter">10</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span>  trae-e2e-testing-report/    把指标整理成飞书对比报告</span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">10</span><span class="diff-line-gutter">11</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span>scripts/analyze.py         trace → 指标 + 判定输入导出 / 判定结果合并（唯一的指标口径来源）</span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">11</span><span class="diff-line-gutter">12</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span>tests/test_analyze.py      analyze.py 的回归测试</span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">12</span><span class="diff-line-gutter">13</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span>artifacts/                 各阶段存档产物（在 eval/* 分支上提交，main 上没有）</span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">13</span><span class="diff-line-gutter">14</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span>traces/                    trae-pa 拉取的原始 trace（gitignore，不提交）</span></span></div></div>
+</code></pre>
+<h2>case 格式</h2>
+<pre><code class="language-json"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#24292E">{</span></span>
+<span class="line"><span style="color:#005CC5">  "case_name"</span><span style="color:#24292E">: </span><span style="color:#032F62">"plugin_lifecycle"</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#005CC5">  "case_index"</span><span style="color:#24292E">: </span><span style="color:#005CC5">1</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#005CC5">  "description"</span><span style="color:#24292E">: </span><span style="color:#032F62">"插件全生命周期 + 产物预览分享"</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#005CC5">  "steps"</span><span style="color:#24292E">: [</span><span style="color:#032F62">"打开 Agent Window 窗口"</span><span style="color:#24292E">, </span><span style="color:#032F62">"进入插件市场"</span><span style="color:#24292E">, </span><span style="color:#032F62">"..."</span><span style="color:#24292E">],</span></span>
+<span class="line"><span style="color:#005CC5">  "acceptance"</span><span style="color:#24292E">: </span><span style="color:#032F62">"插件已卸载，卸载前产物预览正常加载且分享成功"</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre>
+<ul>
+<li>每个 case 独立执行（一个 session、一个 Trae 实例），不依赖其他 case</li>
+<li>步骤写目标（做什么），不写具体操作（怎么做）</li>
+<li>步骤里要有可观察的验收点</li>
+</ul>
+<h2>指标分析</h2>
+<pre><code class="language-bash"><div class="code-diff"><div class="diff-header">bash</div><div class="diff-line ctx"><span class="diff-line-gutter">1</span><span class="diff-line-gutter">1</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span style="color:#6A737D"># 分析 execute 阶段的结果，同时导出判定输入</span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">2</span><span class="diff-line-gutter">2</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span style="color:#6A737D"># trace 刚结束时有同步延迟，脚本会自动重试等待（默认每 5 分钟一轮、上限 2 小时），</span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">3</span><span class="diff-line-gutter">3</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span style="color:#6A737D"># 每轮显式把 boe、cn、sg 三个站点都查一遍，哪个先同步好用哪个（trae-pa 默认探测不含 boe）</span></span></div><div class="diff-line del"><span class="diff-line-gutter">4</span><span class="diff-line-gutter"></span><span class="diff-line-sign">-</span><span class="diff-line-content"><span style="color:#6A737D"># 脚本会固定 TZ=Asia/Shanghai：trae-pa 查询窗口按机器本地日期取分区，UTC 容器会漏掉新分区</span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">5</span><span class="diff-line-gutter">4</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span style="color:#6F42C1">python3<span style="color:#032F62"> scripts/analyze.py</span><span style="color:#005CC5"> --input</span><span style="color:#032F62"> execute_results.json</span><span style="color:#005CC5"> --output</span><span style="color:#032F62"> metrics.json</span><span style="color:#005CC5"> \</span></span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">6</span><span class="diff-line-gutter">5</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span style="color:#6F42C1">    --judge-dir<span style="color:#032F62"> artifacts/analyze/judge</span><span style="color:#005CC5"> --refresh</span></span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">7</span><span class="diff-line-gutter">6</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span style="color:#6A737D"># 只有确定 trace 只在某个站点时才需要 --site</span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">8</span><span class="diff-line-gutter">7</span><span class="diff-line-sign"> </span><span class="diff-line-content"> </span></div><div class="diff-line ctx"><span class="diff-line-gutter">9</span><span class="diff-line-gutter">8</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span style="color:#6A737D"># 填好 artifacts/analyze/judge/*.verdict.json 后，合并判定结果</span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">10</span><span class="diff-line-gutter">9</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span style="color:#6F42C1">python3<span style="color:#032F62"> scripts/analyze.py</span><span style="color:#005CC5"> --merge-verdicts</span><span style="color:#032F62"> artifacts/analyze/judge</span><span style="color:#005CC5"> --metrics</span><span style="color:#032F62"> metrics.json</span></span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">11</span><span class="diff-line-gutter">10</span><span class="diff-line-sign"> </span><span class="diff-line-content"> </span></div><div class="diff-line ctx"><span class="diff-line-gutter">12</span><span class="diff-line-gutter">11</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span style="color:#6A737D"># 调试单个 session</span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">13</span><span class="diff-line-gutter">12</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span style="color:#6F42C1">python3<span style="color:#032F62"> scripts/analyze.py</span><span style="color:#005CC5"> --session</span><span style="color:#D73A49"> &#x3C;</span><span style="color:#032F62">session_i</span><span style="color:#24292E">d</span><span style="color:#D73A49">></span><span style="color:#005CC5"> --output</span><span style="color:#032F62"> /tmp/metrics.json</span></span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">14</span><span class="diff-line-gutter">13</span><span class="diff-line-sign"> </span><span class="diff-line-content"> </span></div><div class="diff-line ctx"><span class="diff-line-gutter">15</span><span class="diff-line-gutter">14</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span style="color:#6A737D"># 测试（本地开发改了 analyze.py 时跑，评测运行时不跑）</span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">16</span><span class="diff-line-gutter">15</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span style="color:#6F42C1">python3<span style="color:#005CC5"> -m</span><span style="color:#032F62"> unittest</span><span style="color:#032F62"> discover</span><span style="color:#005CC5"> -s</span><span style="color:#032F62"> tests</span></span></span></div></div>
+</code></pre>
+<p>依赖：Python 3.9+（只用标准库），<code>trae-pa</code>（<code>@byted/trae-prompt-analyzer-cache</code>）。</p>
+<p>只统计 <code>===E2E_CASE_EXEC_START===</code> 和 <code>===E2E_CASE_EXEC_END===</code> 两个标记之间的 LLM call。输出字段和指标口径见 <code>skills/trae-e2e-testing-analyze/SKILL.md</code>。</p>
+<p>要修改指标口径（工具分类、错误归因关键字、成功判定），只改 <code>scripts/analyze.py</code>，同时补测试，不要在 skill 里临时写提取逻辑，否则不同批次的数据无法对比。</p>
+<h2>存档</h2>
+<p>execute / analyze / report 每个阶段的 session 各自建分支 <code>eval/&#x3C;阶段>/&#x3C;YYYYMMDD>/&#x3C;HHmmss>/&#x3C;session_id></code>，只提交 <code>artifacts/&#x3C;阶段>/</code> 下的轻量产物（<del class="diff-inline">截图、录屏</del><ins class="diff-inline">录屏、截图</ins>、日志、结果 JSON、metrics JSON）。这些分支仅用于回溯，阶段之间通过 LOOP 传递数据。</p>
+<ins class="diff-block"><p>execute 阶段每个 case 执行前后都需要录屏（录屏在起始/结束标记之外，不计入执行时间），录屏文件随该 session 的 <code>eval/execute/...</code> 分支一起提交；各 session 的分支名和 analyze、report 阶段的分支一起汇总，列在最终报告开头，分支链接格式：</p></ins>
+<ins class="diff-block"><pre><code><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span>https://code.byted.org/ide/trae-e2e-testing/tree/&#x3C;分支名></span></span></code></pre>
+</code></pre></ins></body></html>

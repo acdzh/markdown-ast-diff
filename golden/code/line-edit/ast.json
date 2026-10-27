@@ -1,0 +1,39 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "code",
+      "lang": "javascript",
+      "meta": null,
+      "value": "function calc(items) {\n  const result = [];\n  for (const item of items) {\n    result.push(item * 3);\n  }\n  return result;\n}",
+      "position": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "end": {
+          "line": 9,
+          "column": 4,
+          "offset": 141
+        }
+      },
+      "data": {
+        "diffOldContent": "function calc(items) {\n  const result = [];\n  for (const item of items) {\n    result.push(item * 2);\n  }\n  return result;\n}"
+      }
+    }
+  ],
+  "position": {
+    "start": {
+      "line": 1,
+      "column": 1,
+      "offset": 0
+    },
+    "end": {
+      "line": 10,
+      "column": 1,
+      "offset": 142
+    }
+  },
+  "data": {}
+}

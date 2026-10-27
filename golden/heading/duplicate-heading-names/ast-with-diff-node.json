@@ -1,0 +1,172 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "heading",
+      "depth": 1,
+      "children": [
+        {
+          "type": "text",
+          "value": "产品 A",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 7,
+          "offset": 6
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "安装",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 3,
+          "column": 1,
+          "offset": 8
+        },
+        "end": {
+          "line": 3,
+          "column": 6,
+          "offset": 13
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "下载 A 的安装包并双击运行。",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 5,
+          "column": 1,
+          "offset": 15
+        },
+        "end": {
+          "line": 5,
+          "column": 16,
+          "offset": 30
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 1,
+      "children": [
+        {
+          "type": "text",
+          "value": "产品 B",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 7,
+          "column": 1,
+          "offset": 32
+        },
+        "end": {
+          "line": 7,
+          "column": 7,
+          "offset": 38
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "安装",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 9,
+          "column": 1,
+          "offset": 40
+        },
+        "end": {
+          "line": 9,
+          "column": 6,
+          "offset": 45
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "使用",
+          "data": {}
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": "包管理器",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": " Homebrew ",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "安装 B。",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 11,
+          "column": 1,
+          "offset": 47
+        },
+        "end": {
+          "line": 11,
+          "column": 18,
+          "offset": 64
+        }
+      },
+      "data": {}
+    }
+  ]
+}

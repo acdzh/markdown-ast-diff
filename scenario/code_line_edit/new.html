@@ -1,0 +1,123 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+/* table */
+table { border-collapse: collapse; width: auto; margin: 1em 0; }
+th, td { border: 1px solid #d0d7de; padding: 6px 13px; }
+th { background: #f6f8fa; font-weight: 600; }
+tr:nth-child(2n) { background: #f6f8fa; }
+
+/* code */
+code { padding: 0.2em 0.4em; font-size: 85%; background: #f6f8fa; border-radius: 6px; font-family: 'SF Mono', 'Fira Code', Menlo, monospace; }
+pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background: #f6f8fa; border-radius: 6px; margin: 1em 0; }
+pre code { padding: 0; background: none; border-radius: 0; font-size: inherit; }
+
+/* blockquote */
+blockquote { padding: 0 1em; color: #656d76; border-left: 0.25em solid #d0d7de; margin: 1em 0; }
+
+/* hr */
+hr { height: 0.25em; padding: 0; margin: 24px 0; background-color: #d0d7de; border: 0; }
+
+/* headings */
+h1, h2, h3, h4, h5, h6 { margin-top: 24px; margin-bottom: 16px; font-weight: 600; line-height: 1.25; }
+h1 { font-size: 2em; padding-bottom: 0.3em; border-bottom: 1px solid #d0d7de; }
+h2 { font-size: 1.5em; padding-bottom: 0.3em; border-bottom: 1px solid #d0d7de; }
+h3 { font-size: 1.25em; }
+
+/* list */
+ul, ol { padding-left: 2em; margin: 0.5em 0; }
+li + li { margin-top: 0.25em; }
+
+/* image */
+img { max-width: 100%; }
+
+/* code diff */
+.code-diff { border-radius: 6px; overflow: hidden; margin: 1em 0; font-size: 13px; border: 1px solid #d0d7de; }
+.code-diff pre { margin: 0; padding: 0; border-radius: 0; border: none; background: #fff; }
+.code-diff .shiki { background: #fff !important; }
+.code-diff .diff-line { display: flex; line-height: 1.45; }
+.code-diff .diff-line-gutter { width: 40px; min-width: 40px; text-align: right; padding: 0 8px 0 0; color: #8b949e; font-size: 12px; user-select: none; flex-shrink: 0; }
+.code-diff .diff-line-sign { width: 20px; min-width: 20px; text-align: center; user-select: none; flex-shrink: 0; }
+.code-diff .diff-line-content { flex: 1; padding-right: 12px; white-space: pre; overflow-x: auto; }
+.code-diff .diff-line.del { background: #ffebe9; }
+.code-diff .diff-line.del .diff-line-gutter { background: #ffd7d5; color: #82071e; }
+.code-diff .diff-line.del .diff-line-sign { color: #82071e; }
+.code-diff .diff-line.ins { background: #e6ffec; }
+.code-diff .diff-line.ins .diff-line-gutter { background: #ccffd8; color: #116329; }
+.code-diff .diff-line.ins .diff-line-sign { color: #116329; }
+.code-diff .diff-line.ctx { background: #fff; }
+.code-diff .diff-line.ctx .diff-line-gutter { color: #8b949e; }
+.code-diff .diff-header { padding: 8px 12px; background: #f6f8fa; border-bottom: 1px solid #d0d7de; font-size: 12px; color: #656d76; font-family: 'SF Mono', 'Fira Code', Menlo, monospace; }
+
+ins { background-color: #e6ffec; text-decoration: none; border-radius: 2px; padding: 0 2px; }
+del { background-color: #ffebe9; text-decoration: line-through; border-radius: 2px; padding: 0 2px; }
+ins.diff-block, del.diff-block { display: block; padding-left: 10px; border-left: 3px solid; }
+ins.diff-block { border-left-color: #2cbe4e; }
+del.diff-block { border-left-color: #cb2431; }
+ins > hr, ins > pre { background-color: #e6ffec; }
+del > hr, del > pre { background-color: #ffebe9; }
+ins > table, del > table { border-collapse: collapse; }
+ins > table th, ins > table td { background-color: #e6ffec; }
+del > table th, del > table td { background-color: #ffebe9; }
+li[data-diff="ins"] { background-color: #e6ffec; border-radius: 2px; }
+li[data-diff="del"] { background-color: #ffebe9; border-radius: 2px; text-decoration: line-through; }
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:16px;font-size:14px;line-height:1.6;color:#1a1a1a;}</style></head><body><h1>火锅食材指南</h1>
+<p>火锅这门学问，三分在选材，七分在火候。很多人以为涮火锅就是把东西往锅里一扔等熟了捞出来，这种想法大错特错。每种食材的最佳涮煮时间精确到秒级，过了就老，早了就生，差之毫厘口感谬以千里。</p>
+<p>以下是计算各类食材最佳涮煮时间的核心函数。它接收一组食材对象数组，每个对象包含名称、类型、切片厚度等属性，返回带有推荐涮煮时长和吃法提示的结果数组：</p>
+<pre><code class="language-javascript"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#6A737D">/**</span></span>
+<span class="line"><span style="color:#6A737D"> * 根据食材类别和物理属性，计算最佳涮煮时间</span></span>
+<span class="line"><span style="color:#6A737D"> * </span><span style="color:#D73A49">@param</span><span style="color:#6F42C1"> {Array}</span><span style="color:#24292E"> ingredients</span><span style="color:#6A737D"> - 食材列表</span></span>
+<span class="line"><span style="color:#6A737D"> * </span><span style="color:#D73A49">@returns</span><span style="color:#6F42C1"> {Array}</span><span style="color:#6A737D"> 涮煮方案列表</span></span>
+<span class="line"><span style="color:#6A737D"> */</span></span>
+<span class="line"><span style="color:#D73A49">function</span><span style="color:#6F42C1"> getHotpotCookingTime</span><span style="color:#24292E">(</span><span style="color:#E36209">ingredients</span><span style="color:#24292E">) {</span></span>
+<span class="line"><span style="color:#D73A49">  if</span><span style="color:#24292E"> (</span><span style="color:#D73A49">!</span><span style="color:#24292E">Array.</span><span style="color:#6F42C1">isArray</span><span style="color:#24292E">(ingredients)) {</span></span>
+<span class="line"><span style="color:#D73A49">    throw</span><span style="color:#D73A49"> new</span><span style="color:#6F42C1"> TypeError</span><span style="color:#24292E">(</span><span style="color:#032F62">'请传入食材数组，别把菜单直接扔进来'</span><span style="color:#24292E">);</span></span>
+<span class="line"><span style="color:#24292E">  }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">  const</span><span style="color:#005CC5"> output</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> [];</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">  for</span><span style="color:#24292E"> (</span><span style="color:#D73A49">const</span><span style="color:#005CC5"> item</span><span style="color:#D73A49"> of</span><span style="color:#24292E"> ingredients) {</span></span>
+<span class="line"><span style="color:#6A737D">    // 跳过信息不完整的食材</span></span>
+<span class="line"><span style="color:#D73A49">    if</span><span style="color:#24292E"> (</span><span style="color:#D73A49">!</span><span style="color:#24292E">item.name </span><span style="color:#D73A49">||</span><span style="color:#D73A49"> !</span><span style="color:#24292E">item.type) {</span></span>
+<span class="line"><span style="color:#D73A49">      continue</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#24292E">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">    if</span><span style="color:#24292E"> (item.frozen </span><span style="color:#D73A49">&#x26;&#x26;</span><span style="color:#D73A49"> !</span><span style="color:#24292E">item.thawed) {</span></span>
+<span class="line"><span style="color:#24292E">      output.</span><span style="color:#6F42C1">push</span><span style="color:#24292E">({</span></span>
+<span class="line"><span style="color:#24292E">        food: item.name,</span></span>
+<span class="line"><span style="color:#24292E">        time: </span><span style="color:#D73A49">-</span><span style="color:#005CC5">1</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#24292E">        tip: </span><span style="color:#032F62">'请先解冻，冻货直接下锅会溅油'</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#24292E">      });</span></span>
+<span class="line"><span style="color:#D73A49">      continue</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#24292E">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">    let</span><span style="color:#24292E"> seconds </span><span style="color:#D73A49">=</span><span style="color:#005CC5"> 60</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#D73A49">    if</span><span style="color:#24292E"> (item.type </span><span style="color:#D73A49">===</span><span style="color:#032F62"> '肉片'</span><span style="color:#24292E">) {</span></span>
+<span class="line"><span style="color:#24292E">      seconds </span><span style="color:#D73A49">=</span><span style="color:#24292E"> item.sliceThick </span><span style="color:#D73A49">></span><span style="color:#005CC5"> 5</span><span style="color:#D73A49"> ?</span><span style="color:#005CC5"> 90</span><span style="color:#D73A49"> :</span><span style="color:#005CC5"> 30</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#24292E">    } </span><span style="color:#D73A49">else</span><span style="color:#D73A49"> if</span><span style="color:#24292E"> (item.type </span><span style="color:#D73A49">===</span><span style="color:#032F62"> '虾滑'</span><span style="color:#24292E">) {</span></span>
+<span class="line"><span style="color:#24292E">      seconds </span><span style="color:#D73A49">=</span><span style="color:#005CC5"> 120</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#24292E">    } </span><span style="color:#D73A49">else</span><span style="color:#D73A49"> if</span><span style="color:#24292E"> (item.type </span><span style="color:#D73A49">===</span><span style="color:#032F62"> '青菜'</span><span style="color:#24292E">) {</span></span>
+<span class="line"><span style="color:#24292E">      seconds </span><span style="color:#D73A49">=</span><span style="color:#005CC5"> 20</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#24292E">    } </span><span style="color:#D73A49">else</span><span style="color:#D73A49"> if</span><span style="color:#24292E"> (item.type </span><span style="color:#D73A49">===</span><span style="color:#032F62"> '毛肚'</span><span style="color:#24292E">) {</span></span>
+<span class="line"><span style="color:#24292E">      seconds </span><span style="color:#D73A49">=</span><span style="color:#005CC5"> 15</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#24292E">    } </span><span style="color:#D73A49">else</span><span style="color:#D73A49"> if</span><span style="color:#24292E"> (item.type </span><span style="color:#D73A49">===</span><span style="color:#032F62"> '豆腐'</span><span style="color:#24292E">) {</span></span>
+<span class="line"><span style="color:#24292E">      seconds </span><span style="color:#D73A49">=</span><span style="color:#24292E"> item.firm </span><span style="color:#D73A49">?</span><span style="color:#005CC5"> 300</span><span style="color:#D73A49"> :</span><span style="color:#005CC5"> 180</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#24292E">    } </span><span style="color:#D73A49">else</span><span style="color:#D73A49"> if</span><span style="color:#24292E"> (item.type </span><span style="color:#D73A49">===</span><span style="color:#032F62"> '菌菇'</span><span style="color:#24292E">) {</span></span>
+<span class="line"><span style="color:#24292E">      seconds </span><span style="color:#D73A49">=</span><span style="color:#005CC5"> 240</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#24292E">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">    const</span><span style="color:#005CC5"> tip</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> seconds </span><span style="color:#D73A49">>=</span><span style="color:#005CC5"> 60</span><span style="color:#D73A49"> ?</span><span style="color:#032F62"> '慢煮入味'</span><span style="color:#D73A49"> :</span><span style="color:#032F62"> '七上八下'</span><span style="color:#24292E">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292E">    output.</span><span style="color:#6F42C1">push</span><span style="color:#24292E">({</span></span>
+<span class="line"><span style="color:#24292E">      food: item.name,</span></span>
+<span class="line"><span style="color:#24292E">      time: seconds,</span></span>
+<span class="line"><span style="color:#24292E">      tip: tip,</span></span>
+<span class="line"><span style="color:#24292E">      dipping: item.spicy </span><span style="color:#D73A49">?</span><span style="color:#032F62"> '干碟海椒面'</span><span style="color:#D73A49"> :</span><span style="color:#032F62"> '油碟蒜泥香菜'</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#6A737D">      // 记录本次计算的时间戳</span></span>
+<span class="line"><span style="color:#24292E">      calculatedAt: Date.</span><span style="color:#6F42C1">now</span><span style="color:#24292E">(),</span></span>
+<span class="line"><span style="color:#24292E">    });</span></span>
+<span class="line"><span style="color:#24292E">  }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">  return</span><span style="color:#24292E"> output;</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre>
+<p>该函数根据食材类别和切片厚度，自动计算推荐涮煮秒数并生成吃法提示。对于冷冻但未解冻的食材会给出警告，对于豆腐和菌菇等需要长时间炖煮的食材也有专门的时间设定。</p>
+<p>实际使用时建议配合计时器调用，把返回结果渲染成倒计时卡片，这样涮火锅的时候就不用靠经验猜了——科学涮锅，精准到秒。</p></body></html>

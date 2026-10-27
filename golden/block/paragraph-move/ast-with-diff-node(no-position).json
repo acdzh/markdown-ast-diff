@@ -1,0 +1,60 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "del",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "Alpha paragraph talks about the beginning of the story.",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Beta paragraph describes the middle part in detail.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Gamma paragraph wraps everything up nicely.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "Alpha paragraph talks about the beginning of the story.",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ]
+    }
+  ],
+  "data": {}
+}

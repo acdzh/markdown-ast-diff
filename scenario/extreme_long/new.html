@@ -1,0 +1,442 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+/* table */
+table { border-collapse: collapse; width: auto; margin: 1em 0; }
+th, td { border: 1px solid #d0d7de; padding: 6px 13px; }
+th { background: #f6f8fa; font-weight: 600; }
+tr:nth-child(2n) { background: #f6f8fa; }
+
+/* code */
+code { padding: 0.2em 0.4em; font-size: 85%; background: #f6f8fa; border-radius: 6px; font-family: 'SF Mono', 'Fira Code', Menlo, monospace; }
+pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background: #f6f8fa; border-radius: 6px; margin: 1em 0; }
+pre code { padding: 0; background: none; border-radius: 0; font-size: inherit; }
+
+/* blockquote */
+blockquote { padding: 0 1em; color: #656d76; border-left: 0.25em solid #d0d7de; margin: 1em 0; }
+
+/* hr */
+hr { height: 0.25em; padding: 0; margin: 24px 0; background-color: #d0d7de; border: 0; }
+
+/* headings */
+h1, h2, h3, h4, h5, h6 { margin-top: 24px; margin-bottom: 16px; font-weight: 600; line-height: 1.25; }
+h1 { font-size: 2em; padding-bottom: 0.3em; border-bottom: 1px solid #d0d7de; }
+h2 { font-size: 1.5em; padding-bottom: 0.3em; border-bottom: 1px solid #d0d7de; }
+h3 { font-size: 1.25em; }
+
+/* list */
+ul, ol { padding-left: 2em; margin: 0.5em 0; }
+li + li { margin-top: 0.25em; }
+
+/* image */
+img { max-width: 100%; }
+
+/* code diff */
+.code-diff { border-radius: 6px; overflow: hidden; margin: 1em 0; font-size: 13px; border: 1px solid #d0d7de; }
+.code-diff pre { margin: 0; padding: 0; border-radius: 0; border: none; background: #fff; }
+.code-diff .shiki { background: #fff !important; }
+.code-diff .diff-line { display: flex; line-height: 1.45; }
+.code-diff .diff-line-gutter { width: 40px; min-width: 40px; text-align: right; padding: 0 8px 0 0; color: #8b949e; font-size: 12px; user-select: none; flex-shrink: 0; }
+.code-diff .diff-line-sign { width: 20px; min-width: 20px; text-align: center; user-select: none; flex-shrink: 0; }
+.code-diff .diff-line-content { flex: 1; padding-right: 12px; white-space: pre; overflow-x: auto; }
+.code-diff .diff-line.del { background: #ffebe9; }
+.code-diff .diff-line.del .diff-line-gutter { background: #ffd7d5; color: #82071e; }
+.code-diff .diff-line.del .diff-line-sign { color: #82071e; }
+.code-diff .diff-line.ins { background: #e6ffec; }
+.code-diff .diff-line.ins .diff-line-gutter { background: #ccffd8; color: #116329; }
+.code-diff .diff-line.ins .diff-line-sign { color: #116329; }
+.code-diff .diff-line.ctx { background: #fff; }
+.code-diff .diff-line.ctx .diff-line-gutter { color: #8b949e; }
+.code-diff .diff-header { padding: 8px 12px; background: #f6f8fa; border-bottom: 1px solid #d0d7de; font-size: 12px; color: #656d76; font-family: 'SF Mono', 'Fira Code', Menlo, monospace; }
+
+ins { background-color: #e6ffec; text-decoration: none; border-radius: 2px; padding: 0 2px; }
+del { background-color: #ffebe9; text-decoration: line-through; border-radius: 2px; padding: 0 2px; }
+ins.diff-block, del.diff-block { display: block; padding-left: 10px; border-left: 3px solid; }
+ins.diff-block { border-left-color: #2cbe4e; }
+del.diff-block { border-left-color: #cb2431; }
+ins > hr, ins > pre { background-color: #e6ffec; }
+del > hr, del > pre { background-color: #ffebe9; }
+ins > table, del > table { border-collapse: collapse; }
+ins > table th, ins > table td { background-color: #e6ffec; }
+del > table th, del > table td { background-color: #ffebe9; }
+li[data-diff="ins"] { background-color: #e6ffec; border-radius: 2px; }
+li[data-diff="del"] { background-color: #ffebe9; border-radius: 2px; text-decoration: line-through; }
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:16px;font-size:14px;line-height:1.6;color:#1a1a1a;}</style></head><body><h1>极端长文本测试（更新版）</h1>
+<h2>1. 长段落</h2>
+<p>这是一个非常长的段落，用于测试工具处理大量文本的能力。Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl <strong>aliquam nisl, eget ultricies nisl</strong> nisl eget nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl.</p>
+<p>这是另一个长段落，包含中文内容。这是一个非常长的段落，用于测试工具处理大量文本的能力。这是一个非常长的段落，用于测试工具处理大量文本的能力。这段文本已经被修改，包含了一些新的内容。这是一个非常长的段落，用于测试工具处理大量文本的能力。这是一个非常长的段落，用于测试工具处理大量文本的能力。这是一个非常长的段落，用于测试工具处理大量文本的能力。这是一个非常长的段落，用于测试工具处理大量文本的能力。这是一个非常长的段落，用于测试工具处理大量文本的能力。这是一个非常长的段落，用于测试工具处理大量文本的能力。这是一个非常长的段落，用于测试工具处理大量文本的能力。</p>
+<p>这是一个全新添加的长段落，包含大量文本内容。这是一个全新添加的长段落，包含大量文本内容。这是一个全新添加的长段落，包含大量文本内容。这是一个全新添加的长段落，包含大量文本内容。这是一个全新添加的长段落，包含大量文本内容。这是一个全新添加的长段落，包含大量文本内容。这是一个全新添加的长段落，包含大量文本内容。这是一个全新添加的长段落，包含大量文本内容。这是一个全新添加的长段落，包含大量文本内容。这是一个全新添加的长段落，包含大量文本内容。</p>
+<h2>2. 长列表</h2>
+<p>以下是一个非常长的列表（已更新）：</p>
+<ul>
+<li>列表项 1：这是一个非常长的列表项，包含大量文本内容。这是一个非常长的列表项，包含大量文本内容。这是一个非常长的列表项，包含大量文本内容。</li>
+<li>列表项 2：这是一个已修改的非常长的列表项，包含大量文本内容和一些新增内容。这是一个已修改的非常长的列表项，包含大量文本内容和一些新增内容。这是一个已修改的非常长的列表项，包含大量文本内容和一些新增内容。</li>
+<li>新增列表项：这是一个全新的列表项，包含大量文本内容。这是一个全新的列表项，包含大量文本内容。这是一个全新的列表项，包含大量文本内容。这是一个全新的列表项，包含大量文本内容。</li>
+<li>列表项 3：这是一个非常长的列表项，包含大量文本内容。这是一个非常长的列表项，包含大量文本内容。这是一个非常长的列表项，包含大量文本内容。</li>
+<li>列表项 4：这是一个非常长的列表项，包含大量文本内容。这是一个非常长的列表项，包含大量文本内容。这是一个非常长的列表项，包含大量文本内容。</li>
+<li>列表项 5：这是一个非常长的列表项，包含大量文本内容。这是一个非常长的列表项，包含大量文本内容。这是一个非常长的列表项，包含大量文本内容。</li>
+<li>列表项 6：这是一个非常长的列表项，包含大量文本内容。这是一个非常长的列表项，包含大量文本内容。这是一个非常长的列表项，包含大量文本内容。</li>
+<li>新增列表项：这是另一个全新的列表项，包含大量文本内容。这是另一个全新的列表项，包含大量文本内容。这是另一个全新的列表项，包含大量文本内容。</li>
+<li>列表项 8：这是一个非常长的列表项，包含大量文本内容。这是一个非常长的列表项，包含大量文本内容。这是一个非常长的列表项，包含大量文本内容。</li>
+<li>列表项 9：这是一个非常长的列表项，包含大量文本内容。这是一个非常长的列表项，包含大量文本内容。这是一个非常长的列表项，包含大量文本内容。</li>
+<li>列表项 10：这是一个已修改的非常长的列表项，包含大量文本内容和一些修改。这是一个已修改的非常长的列表项，包含大量文本内容和一些修改。这是一个已修改的非常长的列表项，包含大量文本内容和一些修改。</li>
+<li>新增列表项 11：这是一个全新的列表项，包含大量文本内容。这是一个全新的列表项，包含大量文本内容。这是一个全新的列表项，包含大量文本内容。</li>
+</ul>
+<h2>3. 长代码块</h2>
+<p>以下是一个非常长的代码块（已更新）：</p>
+<pre><code class="language-typescript"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#6A737D">// 这是一个非常长的代码块（已更新为 TypeScript）</span></span>
+<span class="line"><span style="color:#D73A49">interface</span><span style="color:#6F42C1"> DataItem</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#E36209">  id</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#E36209">  name</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#E36209">  value</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> number</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#E36209">  category</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#E36209">  tags</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span><span style="color:#24292E">[];</span></span>
+<span class="line"><span style="color:#E36209">  createdAt</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#E36209">  version</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> number</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#E36209">  status</span><span style="color:#D73A49">:</span><span style="color:#032F62"> 'active'</span><span style="color:#D73A49"> |</span><span style="color:#032F62"> 'inactive'</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#24292E">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">interface</span><span style="color:#6F42C1"> ProcessedItem</span><span style="color:#D73A49"> extends</span><span style="color:#6F42C1"> Omit</span><span style="color:#24292E">&#x3C;</span><span style="color:#6F42C1">DataItem</span><span style="color:#24292E">, </span><span style="color:#032F62">'value'</span><span style="color:#D73A49"> |</span><span style="color:#032F62"> 'tags'</span><span style="color:#24292E">> {</span></span>
+<span class="line"><span style="color:#E36209">  value</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> number</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#E36209">  tags</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span><span style="color:#24292E">[];</span></span>
+<span class="line"><span style="color:#E36209">  metadata</span><span style="color:#D73A49">:</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#E36209">    createdAt</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#E36209">    updatedAt</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#E36209">    version</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> number</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#E36209">    status</span><span style="color:#D73A49">:</span><span style="color:#032F62"> 'processed'</span><span style="color:#D73A49"> |</span><span style="color:#032F62"> 'skipped'</span><span style="color:#D73A49"> |</span><span style="color:#032F62"> 'failed'</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#E36209">    processingTime</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> number</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#E36209">    processingSteps</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span><span style="color:#24292E">[];</span></span>
+<span class="line"><span style="color:#E36209">    errorMessage</span><span style="color:#D73A49">?:</span><span style="color:#005CC5"> string</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#24292E">  };</span></span>
+<span class="line"><span style="color:#24292E">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">interface</span><span style="color:#6F42C1"> ProcessingSummary</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#E36209">  totalItems</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> number</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#E36209">  categories</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> Record</span><span style="color:#24292E">&#x3C;</span><span style="color:#005CC5">string</span><span style="color:#24292E">, </span><span style="color:#005CC5">number</span><span style="color:#24292E">>;</span></span>
+<span class="line"><span style="color:#E36209">  averageValue</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> number</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#E36209">  processingTime</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> number</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#E36209">  successRate</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> number</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#E36209">  errors</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span><span style="color:#24292E">[];</span></span>
+<span class="line"><span style="color:#24292E">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">interface</span><span style="color:#6F42C1"> ProcessingResult</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#E36209">  results</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> ProcessedItem</span><span style="color:#24292E">[];</span></span>
+<span class="line"><span style="color:#E36209">  summary</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> ProcessingSummary</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#24292E">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// 添加了错误处理和日志记录</span></span>
+<span class="line"><span style="color:#D73A49">function</span><span style="color:#6F42C1"> processLargeData</span><span style="color:#24292E">(</span><span style="color:#E36209">data</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> DataItem</span><span style="color:#24292E">[])</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> ProcessingResult</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#24292E">  console.</span><span style="color:#6F42C1">log</span><span style="color:#24292E">(</span><span style="color:#032F62">`开始处理 ${</span><span style="color:#24292E">data</span><span style="color:#032F62">.</span><span style="color:#005CC5">length</span><span style="color:#032F62">} 条数据...`</span><span style="color:#24292E">);</span></span>
+<span class="line"><span style="color:#D73A49">  const</span><span style="color:#005CC5"> startTime</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> Date.</span><span style="color:#6F42C1">now</span><span style="color:#24292E">();</span></span>
+<span class="line"><span style="color:#24292E">  </span></span>
+<span class="line"><span style="color:#6A737D">  // 初始化结果数组</span></span>
+<span class="line"><span style="color:#D73A49">  const</span><span style="color:#005CC5"> results</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> ProcessedItem</span><span style="color:#24292E">[] </span><span style="color:#D73A49">=</span><span style="color:#24292E"> [];</span></span>
+<span class="line"><span style="color:#D73A49">  const</span><span style="color:#005CC5"> errors</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span><span style="color:#24292E">[] </span><span style="color:#D73A49">=</span><span style="color:#24292E"> [];</span></span>
+<span class="line"><span style="color:#24292E">  </span></span>
+<span class="line"><span style="color:#6A737D">  // 处理每一项数据</span></span>
+<span class="line"><span style="color:#D73A49">  for</span><span style="color:#24292E"> (</span><span style="color:#D73A49">let</span><span style="color:#24292E"> i </span><span style="color:#D73A49">=</span><span style="color:#005CC5"> 0</span><span style="color:#24292E">; i </span><span style="color:#D73A49">&#x3C;</span><span style="color:#24292E"> data.</span><span style="color:#005CC5">length</span><span style="color:#24292E">; i</span><span style="color:#D73A49">++</span><span style="color:#24292E">) {</span></span>
+<span class="line"><span style="color:#D73A49">    try</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#6A737D">      // 复杂的数据处理逻辑</span></span>
+<span class="line"><span style="color:#D73A49">      const</span><span style="color:#005CC5"> item</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> data[i];</span></span>
+<span class="line"><span style="color:#24292E">      </span></span>
+<span class="line"><span style="color:#6A737D">      // 数据验证</span></span>
+<span class="line"><span style="color:#D73A49">      if</span><span style="color:#24292E"> (</span><span style="color:#D73A49">!</span><span style="color:#24292E">item.id </span><span style="color:#D73A49">||</span><span style="color:#D73A49"> !</span><span style="color:#24292E">item.name) {</span></span>
+<span class="line"><span style="color:#D73A49">        throw</span><span style="color:#D73A49"> new</span><span style="color:#6F42C1"> Error</span><span style="color:#24292E">(</span><span style="color:#032F62">`数据项 ${</span><span style="color:#24292E">i</span><span style="color:#032F62">} 缺少必要字段`</span><span style="color:#24292E">);</span></span>
+<span class="line"><span style="color:#24292E">      }</span></span>
+<span class="line"><span style="color:#24292E">      </span></span>
+<span class="line"><span style="color:#D73A49">      const</span><span style="color:#005CC5"> processedItem</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> ProcessedItem</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#24292E">        id: item.id,</span></span>
+<span class="line"><span style="color:#24292E">        name: item.name,</span></span>
+<span class="line"><span style="color:#24292E">        value: item.value </span><span style="color:#D73A49">*</span><span style="color:#005CC5"> 2.5</span><span style="color:#24292E">, </span><span style="color:#6A737D">// 更新了计算逻辑</span></span>
+<span class="line"><span style="color:#24292E">        category: item.category,</span></span>
+<span class="line"><span style="color:#24292E">        tags: item.tags.</span><span style="color:#6F42C1">filter</span><span style="color:#24292E">(</span><span style="color:#E36209">tag</span><span style="color:#D73A49"> =></span><span style="color:#24292E"> tag.</span><span style="color:#005CC5">length</span><span style="color:#D73A49"> ></span><span style="color:#005CC5"> 3</span><span style="color:#24292E">),</span></span>
+<span class="line"><span style="color:#24292E">        createdAt: item.createdAt,</span></span>
+<span class="line"><span style="color:#24292E">        version: item.version,</span></span>
+<span class="line"><span style="color:#24292E">        status: item.status,</span></span>
+<span class="line"><span style="color:#24292E">        metadata: {</span></span>
+<span class="line"><span style="color:#24292E">          createdAt: item.createdAt,</span></span>
+<span class="line"><span style="color:#24292E">          updatedAt: </span><span style="color:#D73A49">new</span><span style="color:#6F42C1"> Date</span><span style="color:#24292E">().</span><span style="color:#6F42C1">toISOString</span><span style="color:#24292E">(),</span></span>
+<span class="line"><span style="color:#24292E">          version: item.version </span><span style="color:#D73A49">+</span><span style="color:#005CC5"> 1</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#24292E">          status: item.status </span><span style="color:#D73A49">===</span><span style="color:#032F62"> 'active'</span><span style="color:#D73A49"> ?</span><span style="color:#032F62"> 'processed'</span><span style="color:#D73A49"> :</span><span style="color:#032F62"> 'skipped'</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#24292E">          processingTime: Date.</span><span style="color:#6F42C1">now</span><span style="color:#24292E">() </span><span style="color:#D73A49">-</span><span style="color:#D73A49"> new</span><span style="color:#6F42C1"> Date</span><span style="color:#24292E">(item.createdAt).</span><span style="color:#6F42C1">getTime</span><span style="color:#24292E">(),</span></span>
+<span class="line"><span style="color:#24292E">          processingSteps: [</span></span>
+<span class="line"><span style="color:#032F62">            'validation'</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#032F62">            'transformation'</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#032F62">            'enrichment'</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#032F62">            'categorization'</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#032F62">            'finalization'</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#032F62">            'quality_check'</span><span style="color:#6A737D"> // 新增步骤</span></span>
+<span class="line"><span style="color:#24292E">          ]</span></span>
+<span class="line"><span style="color:#24292E">        }</span></span>
+<span class="line"><span style="color:#24292E">      };</span></span>
+<span class="line"><span style="color:#24292E">      </span></span>
+<span class="line"><span style="color:#6A737D">      // 添加到结果数组</span></span>
+<span class="line"><span style="color:#24292E">      results.</span><span style="color:#6F42C1">push</span><span style="color:#24292E">(processedItem);</span></span>
+<span class="line"><span style="color:#24292E">    } </span><span style="color:#D73A49">catch</span><span style="color:#24292E"> (error) {</span></span>
+<span class="line"><span style="color:#6A737D">      // 错误处理</span></span>
+<span class="line"><span style="color:#24292E">      console.</span><span style="color:#6F42C1">error</span><span style="color:#24292E">(</span><span style="color:#032F62">`处理数据项 ${</span><span style="color:#24292E">i</span><span style="color:#032F62">} 时出错:`</span><span style="color:#24292E">, error);</span></span>
+<span class="line"><span style="color:#24292E">      errors.</span><span style="color:#6F42C1">push</span><span style="color:#24292E">(</span><span style="color:#032F62">`项目 ${</span><span style="color:#24292E">i</span><span style="color:#032F62">}: ${</span><span style="color:#24292E">error</span><span style="color:#032F62">.</span><span style="color:#24292E">message</span><span style="color:#032F62">}`</span><span style="color:#24292E">);</span></span>
+<span class="line"><span style="color:#24292E">    }</span></span>
+<span class="line"><span style="color:#24292E">    </span></span>
+<span class="line"><span style="color:#6A737D">    // 记录处理进度</span></span>
+<span class="line"><span style="color:#D73A49">    if</span><span style="color:#24292E"> (i </span><span style="color:#D73A49">%</span><span style="color:#005CC5"> 100</span><span style="color:#D73A49"> ===</span><span style="color:#005CC5"> 0</span><span style="color:#24292E">) {</span></span>
+<span class="line"><span style="color:#24292E">      console.</span><span style="color:#6F42C1">log</span><span style="color:#24292E">(</span><span style="color:#032F62">`已处理 ${</span><span style="color:#24292E">i</span><span style="color:#032F62">} 项，共 ${</span><span style="color:#24292E">data</span><span style="color:#032F62">.</span><span style="color:#005CC5">length</span><span style="color:#032F62">} 项，完成度: ${</span><span style="color:#032F62">((</span><span style="color:#24292E">i</span><span style="color:#D73A49"> /</span><span style="color:#24292E"> data</span><span style="color:#032F62">.</span><span style="color:#005CC5">length</span><span style="color:#032F62">) </span><span style="color:#D73A49">*</span><span style="color:#005CC5"> 100</span><span style="color:#032F62">).</span><span style="color:#6F42C1">toFixed</span><span style="color:#032F62">(</span><span style="color:#005CC5">2</span><span style="color:#032F62">)</span><span style="color:#032F62">}%`</span><span style="color:#24292E">);</span></span>
+<span class="line"><span style="color:#24292E">    }</span></span>
+<span class="line"><span style="color:#24292E">  }</span></span>
+<span class="line"><span style="color:#24292E">  </span></span>
+<span class="line"><span style="color:#6A737D">  // 汇总统计信息</span></span>
+<span class="line"><span style="color:#D73A49">  const</span><span style="color:#005CC5"> summary</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> ProcessingSummary</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#24292E">    totalItems: results.</span><span style="color:#005CC5">length</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#24292E">    categories: {},</span></span>
+<span class="line"><span style="color:#24292E">    averageValue: results.</span><span style="color:#6F42C1">reduce</span><span style="color:#24292E">((</span><span style="color:#E36209">sum</span><span style="color:#24292E">, </span><span style="color:#E36209">item</span><span style="color:#24292E">) </span><span style="color:#D73A49">=></span><span style="color:#24292E"> sum </span><span style="color:#D73A49">+</span><span style="color:#24292E"> item.value, </span><span style="color:#005CC5">0</span><span style="color:#24292E">) </span><span style="color:#D73A49">/</span><span style="color:#24292E"> results.</span><span style="color:#005CC5">length</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#24292E">    processingTime: results.</span><span style="color:#6F42C1">reduce</span><span style="color:#24292E">((</span><span style="color:#E36209">sum</span><span style="color:#24292E">, </span><span style="color:#E36209">item</span><span style="color:#24292E">) </span><span style="color:#D73A49">=></span><span style="color:#24292E"> sum </span><span style="color:#D73A49">+</span><span style="color:#24292E"> item.metadata.processingTime, </span><span style="color:#005CC5">0</span><span style="color:#24292E">) </span><span style="color:#D73A49">/</span><span style="color:#24292E"> results.</span><span style="color:#005CC5">length</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#24292E">    successRate: (results.</span><span style="color:#005CC5">length</span><span style="color:#D73A49"> /</span><span style="color:#24292E"> data.</span><span style="color:#005CC5">length</span><span style="color:#24292E">) </span><span style="color:#D73A49">*</span><span style="color:#005CC5"> 100</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#24292E">    errors</span></span>
+<span class="line"><span style="color:#24292E">  };</span></span>
+<span class="line"><span style="color:#24292E">  </span></span>
+<span class="line"><span style="color:#6A737D">  // 计算每个类别的数量</span></span>
+<span class="line"><span style="color:#24292E">  results.</span><span style="color:#6F42C1">forEach</span><span style="color:#24292E">(</span><span style="color:#E36209">item</span><span style="color:#D73A49"> =></span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#D73A49">    if</span><span style="color:#24292E"> (</span><span style="color:#D73A49">!</span><span style="color:#24292E">summary.categories[item.category]) {</span></span>
+<span class="line"><span style="color:#24292E">      summary.categories[item.category] </span><span style="color:#D73A49">=</span><span style="color:#005CC5"> 0</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#24292E">    }</span></span>
+<span class="line"><span style="color:#24292E">    summary.categories[item.category]</span><span style="color:#D73A49">++</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#24292E">  });</span></span>
+<span class="line"><span style="color:#24292E">  </span></span>
+<span class="line"><span style="color:#D73A49">  const</span><span style="color:#005CC5"> endTime</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> Date.</span><span style="color:#6F42C1">now</span><span style="color:#24292E">();</span></span>
+<span class="line"><span style="color:#24292E">  console.</span><span style="color:#6F42C1">log</span><span style="color:#24292E">(</span><span style="color:#032F62">`数据处理完成，耗时: ${</span><span style="color:#032F62">(</span><span style="color:#24292E">endTime</span><span style="color:#D73A49"> -</span><span style="color:#24292E"> startTime</span><span style="color:#032F62">) </span><span style="color:#D73A49">/</span><span style="color:#005CC5"> 1000</span><span style="color:#032F62">} 秒`</span><span style="color:#24292E">);</span></span>
+<span class="line"><span style="color:#24292E">  </span></span>
+<span class="line"><span style="color:#D73A49">  return</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#24292E">    results,</span></span>
+<span class="line"><span style="color:#24292E">    summary</span></span>
+<span class="line"><span style="color:#24292E">  };</span></span>
+<span class="line"><span style="color:#24292E">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// 使用示例</span></span>
+<span class="line"><span style="color:#D73A49">const</span><span style="color:#005CC5"> sampleData</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> DataItem</span><span style="color:#24292E">[] </span><span style="color:#D73A49">=</span><span style="color:#24292E"> Array.</span><span style="color:#6F42C1">from</span><span style="color:#24292E">({ length: </span><span style="color:#005CC5">1000</span><span style="color:#24292E"> }, (</span><span style="color:#E36209">_</span><span style="color:#24292E">, </span><span style="color:#E36209">index</span><span style="color:#24292E">) </span><span style="color:#D73A49">=></span><span style="color:#24292E"> ({</span></span>
+<span class="line"><span style="color:#24292E">  id: </span><span style="color:#032F62">`item-${</span><span style="color:#24292E">index</span><span style="color:#032F62">}`</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#24292E">  name: </span><span style="color:#032F62">`Item ${</span><span style="color:#24292E">index</span><span style="color:#032F62">}`</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#24292E">  value: Math.</span><span style="color:#6F42C1">random</span><span style="color:#24292E">() </span><span style="color:#D73A49">*</span><span style="color:#005CC5"> 100</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#24292E">  category: [</span><span style="color:#032F62">'A'</span><span style="color:#24292E">, </span><span style="color:#032F62">'B'</span><span style="color:#24292E">, </span><span style="color:#032F62">'C'</span><span style="color:#24292E">, </span><span style="color:#032F62">'D'</span><span style="color:#24292E">, </span><span style="color:#032F62">'E'</span><span style="color:#24292E">][Math.</span><span style="color:#6F42C1">floor</span><span style="color:#24292E">(Math.</span><span style="color:#6F42C1">random</span><span style="color:#24292E">() </span><span style="color:#D73A49">*</span><span style="color:#005CC5"> 5</span><span style="color:#24292E">)], </span><span style="color:#6A737D">// 添加了新类别 E</span></span>
+<span class="line"><span style="color:#24292E">  tags: [</span></span>
+<span class="line"><span style="color:#032F62">    'tag1'</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#032F62">    'tag2'</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#032F62">    'longTag'</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#032F62">    'anotherTag'</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#032F62">    'specialTag'</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#032F62">    'newTag'</span><span style="color:#6A737D"> // 新增标签</span></span>
+<span class="line"><span style="color:#24292E">  ].</span><span style="color:#6F42C1">slice</span><span style="color:#24292E">(</span><span style="color:#005CC5">0</span><span style="color:#24292E">, Math.</span><span style="color:#6F42C1">floor</span><span style="color:#24292E">(Math.</span><span style="color:#6F42C1">random</span><span style="color:#24292E">() </span><span style="color:#D73A49">*</span><span style="color:#005CC5"> 6</span><span style="color:#24292E">) </span><span style="color:#D73A49">+</span><span style="color:#005CC5"> 1</span><span style="color:#24292E">),</span></span>
+<span class="line"><span style="color:#24292E">  createdAt: </span><span style="color:#D73A49">new</span><span style="color:#6F42C1"> Date</span><span style="color:#24292E">(Date.</span><span style="color:#6F42C1">now</span><span style="color:#24292E">() </span><span style="color:#D73A49">-</span><span style="color:#24292E"> Math.</span><span style="color:#6F42C1">random</span><span style="color:#24292E">() </span><span style="color:#D73A49">*</span><span style="color:#005CC5"> 10000000</span><span style="color:#24292E">).</span><span style="color:#6F42C1">toISOString</span><span style="color:#24292E">(),</span></span>
+<span class="line"><span style="color:#24292E">  version: Math.</span><span style="color:#6F42C1">floor</span><span style="color:#24292E">(Math.</span><span style="color:#6F42C1">random</span><span style="color:#24292E">() </span><span style="color:#D73A49">*</span><span style="color:#005CC5"> 5</span><span style="color:#24292E">),</span></span>
+<span class="line"><span style="color:#24292E">  status: Math.</span><span style="color:#6F42C1">random</span><span style="color:#24292E">() </span><span style="color:#D73A49">></span><span style="color:#005CC5"> 0.3</span><span style="color:#D73A49"> ?</span><span style="color:#032F62"> 'active'</span><span style="color:#D73A49"> :</span><span style="color:#032F62"> 'inactive'</span></span>
+<span class="line"><span style="color:#24292E">}));</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">const</span><span style="color:#005CC5"> result</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> processLargeData</span><span style="color:#24292E">(sampleData);</span></span>
+<span class="line"><span style="color:#24292E">console.</span><span style="color:#6F42C1">log</span><span style="color:#24292E">(</span><span style="color:#032F62">`成功处理 ${</span><span style="color:#24292E">result</span><span style="color:#032F62">.</span><span style="color:#24292E">results</span><span style="color:#032F62">.</span><span style="color:#005CC5">length</span><span style="color:#032F62">} 项数据，成功率: ${</span><span style="color:#24292E">result</span><span style="color:#032F62">.</span><span style="color:#24292E">summary</span><span style="color:#032F62">.</span><span style="color:#24292E">successRate</span><span style="color:#032F62">.</span><span style="color:#6F42C1">toFixed</span><span style="color:#032F62">(</span><span style="color:#005CC5">2</span><span style="color:#032F62">)</span><span style="color:#032F62">}%`</span><span style="color:#24292E">);</span></span>
+<span class="line"><span style="color:#24292E">console.</span><span style="color:#6F42C1">log</span><span style="color:#24292E">(</span><span style="color:#032F62">`平均值: ${</span><span style="color:#24292E">result</span><span style="color:#032F62">.</span><span style="color:#24292E">summary</span><span style="color:#032F62">.</span><span style="color:#24292E">averageValue</span><span style="color:#032F62">.</span><span style="color:#6F42C1">toFixed</span><span style="color:#032F62">(</span><span style="color:#005CC5">2</span><span style="color:#032F62">)</span><span style="color:#032F62">}`</span><span style="color:#24292E">);</span></span>
+<span class="line"><span style="color:#24292E">console.</span><span style="color:#6F42C1">log</span><span style="color:#24292E">(</span><span style="color:#032F62">'类别分布:'</span><span style="color:#24292E">, result.summary.categories);</span></span>
+<span class="line"><span style="color:#24292E">console.</span><span style="color:#6F42C1">log</span><span style="color:#24292E">(</span><span style="color:#032F62">`处理过程中发生 ${</span><span style="color:#24292E">result</span><span style="color:#032F62">.</span><span style="color:#24292E">summary</span><span style="color:#032F62">.</span><span style="color:#24292E">errors</span><span style="color:#032F62">.</span><span style="color:#005CC5">length</span><span style="color:#032F62">} 个错误`</span><span style="color:#24292E">);</span></span></code></pre>
+</code></pre>
+<h2>4. 长表格</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>姓名</th>
+<th>年龄</th>
+<th>职业</th>
+<th>地址</th>
+<th>电话</th>
+<th>邮箱</th>
+<th>注册日期</th>
+<th>最后登录</th>
+<th>状态</th>
+<th>积分</th>
+<th>等级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>001</td>
+<td>张三</td>
+<td>29</td>
+<td>高级软件工程师</td>
+<td>北京市海淀区中关村南大街5号</td>
+<td>13800138000</td>
+<td><a href="mailto:zhangsan@example.com">zhangsan@example.com</a></td>
+<td>2020-01-01</td>
+<td>2023-05-15</td>
+<td>活跃</td>
+<td>2500</td>
+<td>黄金</td>
+</tr>
+<tr>
+<td>002</td>
+<td>李四</td>
+<td>32</td>
+<td>产品经理</td>
+<td>上海市浦东新区张江高科技园区</td>
+<td>13900139000</td>
+<td><a href="mailto:lisi@example.com">lisi@example.com</a></td>
+<td>2020-02-15</td>
+<td>2023-05-14</td>
+<td>活跃</td>
+<td>1800</td>
+<td>白银</td>
+</tr>
+<tr>
+<td>003</td>
+<td>王五</td>
+<td>45</td>
+<td>技术总监</td>
+<td>广州市天河区珠江新城</td>
+<td>13700137000</td>
+<td><a href="mailto:wangwu@example.com">wangwu@example.com</a></td>
+<td>2020-03-20</td>
+<td>2023-05-10</td>
+<td>活跃</td>
+<td>3200</td>
+<td>钻石</td>
+</tr>
+<tr>
+<td>004</td>
+<td>赵六</td>
+<td>36</td>
+<td>高级UI设计师</td>
+<td>深圳市南山区科技园</td>
+<td>13600136000</td>
+<td><a href="mailto:zhaoliu@example.com">zhaoliu@example.com</a></td>
+<td>2020-04-10</td>
+<td>2023-05-12</td>
+<td>活跃</td>
+<td>2100</td>
+<td>黄金</td>
+</tr>
+<tr>
+<td>005</td>
+<td>钱七</td>
+<td>29</td>
+<td>前端开发专家</td>
+<td>杭州市西湖区文三路</td>
+<td>13500135000</td>
+<td><a href="mailto:qianqi@example.com">qianqi@example.com</a></td>
+<td>2020-05-05</td>
+<td>2023-05-13</td>
+<td>活跃</td>
+<td>1950</td>
+<td>白银</td>
+</tr>
+<tr>
+<td>006</td>
+<td>孙八</td>
+<td>31</td>
+<td>后端开发专家</td>
+<td>成都市高新区天府大道</td>
+<td>13400134000</td>
+<td><a href="mailto:sunba@example.com">sunba@example.com</a></td>
+<td>2020-06-18</td>
+<td>2023-05-11</td>
+<td>活跃</td>
+<td>2300</td>
+<td>黄金</td>
+</tr>
+<tr>
+<td>007</td>
+<td>周九</td>
+<td>27</td>
+<td>测试工程师</td>
+<td>武汉市洪山区光谷大道</td>
+<td>13300133000</td>
+<td><a href="mailto:zhoujiu@example.com">zhoujiu@example.com</a></td>
+<td>2020-07-22</td>
+<td>2023-05-09</td>
+<td>活跃</td>
+<td>1600</td>
+<td>白银</td>
+</tr>
+<tr>
+<td>008</td>
+<td>吴十</td>
+<td>33</td>
+<td>运维工程师</td>
+<td>南京市建邺区奥体大街</td>
+<td>13200132000</td>
+<td><a href="mailto:wushi@example.com">wushi@example.com</a></td>
+<td>2020-08-30</td>
+<td>2023-05-08</td>
+<td>休眠</td>
+<td>1400</td>
+<td>青铜</td>
+</tr>
+<tr>
+<td>009</td>
+<td>郑十一</td>
+<td>30</td>
+<td>高级数据分析师</td>
+<td>西安市雁塔区高新路</td>
+<td>13100131000</td>
+<td><a href="mailto:zhengshiyi@example.com">zhengshiyi@example.com</a></td>
+<td>2020-09-15</td>
+<td>2023-05-07</td>
+<td>活跃</td>
+<td>2700</td>
+<td>黄金</td>
+</tr>
+<tr>
+<td>010</td>
+<td>王十二</td>
+<td>34</td>
+<td>项目经理</td>
+<td>重庆市渝中区解放碑</td>
+<td>13000130000</td>
+<td><a href="mailto:wangshier@example.com">wangshier@example.com</a></td>
+<td>2020-10-10</td>
+<td>2023-05-06</td>
+<td>活跃</td>
+<td>2200</td>
+<td>黄金</td>
+</tr>
+<tr>
+<td>011</td>
+<td>刘十三</td>
+<td>26</td>
+<td>初级开发工程师</td>
+<td>天津市和平区南京路</td>
+<td>13900139001</td>
+<td><a href="mailto:liushisan@example.com">liushisan@example.com</a></td>
+<td>2021-01-15</td>
+<td>2023-05-16</td>
+<td>活跃</td>
+<td>800</td>
+<td>青铜</td>
+</tr>
+<tr>
+<td>012</td>
+<td>陈十四</td>
+<td>38</td>
+<td>架构师</td>
+<td>苏州市工业园区星湖街</td>
+<td>13800138001</td>
+<td><a href="mailto:chenshisi@example.com">chenshisi@example.com</a></td>
+<td>2021-02-20</td>
+<td>2023-05-17</td>
+<td>活跃</td>
+<td>3500</td>
+<td>钻石</td>
+</tr>
+</tbody>
+</table>
+<h2>5. 长引用</h2>
+<blockquote>
+<p>这是一个非常长的引用，包含大量文本内容。这是一个非常长的引用，包含大量文本内容。这是一个非常长的引用，包含大量文本内容。这是一个非常长的引用，包含大量文本内容。这是一个非常长的引用，包含大量文本内容。这是一个非常长的引用，包含大量文本内容。</p>
+<p>这是引用中的第二段，同样非常长，但已经被修改。这是引用中的第二段，同样非常长，但已经被修改。这是引用中的第二段，同样非常长，但已经被修改。这是引用中的第二段，同样非常长，但已经被修改。这是引用中的第二段，同样非常长，但已经被修改。</p>
+<p>这是引用中新增的第三段，内容也很长。这是引用中新增的第三段，内容也很长。这是引用中新增的第三段，内容也很长。这是引用中新增的第三段，内容也很长。这是引用中新增的第三段，内容也很长。</p>
+<blockquote>
+<p>这是嵌套引用，内容也很长。这是嵌套引用，内容也很长。这是嵌套引用，内容也很长。这是嵌套引用，内容也很长。这是嵌套引用，内容也很长。这是嵌套引用，内容也很长。这是嵌套引用，内容也很长。</p>
+<p>嵌套引用的第二段已被修改。嵌套引用的第二段已被修改。嵌套引用的第二段已被修改。嵌套引用的第二段已被修改。嵌套引用的第二段已被修改。嵌套引用的第二段已被修改。嵌套引用的第二段已被修改。</p>
+<blockquote>
+<p>这是新增的三级嵌套引用，内容也很长。这是新增的三级嵌套引用，内容也很长。这是新增的三级嵌套引用，内容也很长。这是新增的三级嵌套引用，内容也很长。这是新增的三级嵌套引用，内容也很长。</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2>6. 总结</h2>
+<p>这个文档包含了各种极端长的内容元素，用于测试 Markdown 差异比较工具处理大量文本的能力。文档已经过更新，包含了大量的修改、添加和删除内容，以测试差异比较功能的效果。</p>
+<h2>7. 新增章节</h2>
+<p>这是一个全新的章节，包含大量文本内容。这是一个全新的章节，包含大量文本内容。这是一个全新的章节，包含大量文本内容。这是一个全新的章节，包含大量文本内容。这是一个全新的章节，包含大量文本内容。这是一个全新的章节，包含大量文本内容。这是一个全新的章节，包含大量文本内容。这是一个全新的章节，包含大量文本内容。这是一个全新的章节，包含大量文本内容。这是一个全新的章节，包含大量文本内容。</p></body></html>

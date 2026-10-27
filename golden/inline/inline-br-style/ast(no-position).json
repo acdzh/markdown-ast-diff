@@ -1,0 +1,42 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "第一行",
+          "data": {}
+        },
+        {
+          "type": "del",
+          "children": [
+            {
+              "type": "html",
+              "value": "<br>",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "ins",
+          "children": [
+            {
+              "type": "html",
+              "value": "<br/>",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "第二行",
+          "data": {}
+        }
+      ],
+      "data": {}
+    }
+  ],
+  "data": {}
+}

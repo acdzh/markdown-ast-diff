@@ -1,0 +1,27 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "<!-- 备注：这段需要复核 -->",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "可见段落。",
+          "data": {}
+        }
+      ],
+      "data": {}
+    }
+  ],
+  "data": {}
+}

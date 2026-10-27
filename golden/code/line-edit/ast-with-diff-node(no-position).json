@@ -1,0 +1,15 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "code",
+      "lang": "javascript",
+      "meta": null,
+      "value": "function calc(items) {\n  const result = [];\n  for (const item of items) {\n    result.push(item * 3);\n  }\n  return result;\n}",
+      "data": {
+        "diffOldContent": "function calc(items) {\n  const result = [];\n  for (const item of items) {\n    result.push(item * 2);\n  }\n  return result;\n}"
+      }
+    }
+  ],
+  "data": {}
+}

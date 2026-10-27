@@ -1,0 +1,2130 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "yaml",
+      "value": "title: \"<img>\"",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<Intro>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "The ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img",
+          "children": [
+            {
+              "type": "text",
+              "value": "built-in browser ",
+              "data": {}
+            },
+            {
+              "type": "inlineCode",
+              "value": "<img>",
+              "data": {}
+            },
+            {
+              "type": "text",
+              "value": " component",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " lets you embed an image.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "<img src=\"photo.jpg\" alt=\"A person walking through a park\" />",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</Intro>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "html",
+      "value": "<InlineToc />",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "thematicBreak",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Reference {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "reference",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "inlineCode",
+          "value": "<img>",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "img",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "To display an image, render the ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img",
+          "children": [
+            {
+              "type": "text",
+              "value": "built-in browser ",
+              "data": {}
+            },
+            {
+              "type": "inlineCode",
+              "value": "<img>",
+              "data": {}
+            },
+            {
+              "type": "text",
+              "value": " component",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ".",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "<img src=\"photo.jpg\" alt=\"A person walking through a park\" />",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "#usage",
+          "children": [
+            {
+              "type": "text",
+              "value": "See more examples below.",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 4,
+      "children": [
+        {
+          "type": "text",
+          "value": "Props {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "props",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "inlineCode",
+          "value": "<img>",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " supports all ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/reference/react-dom/components/common#common-props",
+          "children": [
+            {
+              "type": "text",
+              "value": "common element props.",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "alt",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ": a string. Specifies alternative text for the image. Use an empty string for a purely decorative image.",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "crossOrigin",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ": a string. Specifies the ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/crossorigin",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "CORS policy",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " to use when fetching the image. The possible values are ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "anonymous",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " and ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "use-credentials",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ".",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "decoding",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ": a string. Suggests whether the browser should wait to decode the image before presenting other content. The possible values are ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "async",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ", ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "sync",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ", and ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "auto",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " (the default).",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "fetchPriority",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ": a string. Suggests a relative priority for fetching the image. The possible values are ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "high",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ", ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "low",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ", and ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "auto",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " (the default). During server rendering, ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "fetchPriority=\"low\"",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " also prevents React from ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "#controlling-image-preloading-during-server-rendering",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "automatically preloading the image.",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "height",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ": a number or string. Specifies the rendered height of the image.",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "loading",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ": a string. Specifies whether the browser should defer loading the image until it is near the viewport. The possible values are ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "eager",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " (the default) and ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "lazy",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ". Setting ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "loading=\"lazy\"",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " prevents React from ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "#controlling-image-preloading-during-server-rendering",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "automatically preloading the image.",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "onError",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ": an ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "/reference/react-dom/components/common#event-handler",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "event handler",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " function. Fires when the image fails to load.",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "onLoad",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ": an ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "/reference/react-dom/components/common#event-handler",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "event handler",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " function. Fires when the image finishes loading. Passing ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "onLoad",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " prevents React from ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "#waiting-for-an-image-during-a-view-transition",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "waiting for the image during a client-rendered View Transition update.",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "referrerPolicy",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ": a string. Specifies the ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#referrerpolicy",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "referrer information",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " to send when fetching the image.",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "sizes",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ": a string. Specifies the image sizes for different page layouts. Used with ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "srcSet",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ".",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "src",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ": a string. Specifies the URL of the image.",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "srcSet",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ": a string. Specifies one or more candidate image sources for the browser to choose from.",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "useMap",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ": a string. Associates the image with a ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/map",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "client-side image map",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ".",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "width",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ": a number or string. Specifies the rendered width of the image.",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 4,
+      "children": [
+        {
+          "type": "text",
+          "value": "Caveats {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "caveats",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Do not pass an empty string to ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "src",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ". It may cause the browser to request the current page again. React warns in development and omits the attribute. To render no image, omit the ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "<img>",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " or pass ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "null",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " to ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "src",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ".",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "<img>",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " cannot have children or use ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "dangerouslySetInnerHTML",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ". React throws an error if you pass either.",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "fetchPriority=\"low\"",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " does not stop React from waiting for the image to load ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineDel",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "and decode ",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "during a client-rendered View Transition update. Use ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "loading=\"lazy\"",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " or an ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "onLoad",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " handler to opt out of that behavior.",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "thematicBreak",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Usage {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "usage",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Displaying an image {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "displaying-an-image",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Pass the image URL to ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "src",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " and a text description to ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "alt",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ":",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<Sandpack>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "export default function Profile() {\n  return (\n    <img\n      src=\"https://react.dev/images/docs/scientists/yXOvdOSs.jpg\"\n      alt=\"Hedy Lamarr\"\n      width={100}\n      height={100}\n    />\n  );\n}",
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "css",
+      "meta": null,
+      "value": "img {\n  border-radius: 50%;\n  object-fit: cover;\n}",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</Sandpack>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Specify ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "width",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " and ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "height",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " when you know the image dimensions so the browser can reserve space before the image loads. For a decorative image, pass ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "alt=\"\"",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " so that screen readers ignore it.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "thematicBreak",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Controlling image preloading during server rendering {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "controlling-image-preloading-during-server-rendering",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "During server rendering, React automatically generates a preload hint for an ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<img>",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " by default. This can let the browser start fetching the image before it encounters the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<img>",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " in the rendered HTML.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Add ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "loading=\"lazy\"",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " or ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "fetchPriority=\"low\"",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " to an image that should not receive this hint:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "function ProductPage() {\n  return (\n    <>\n      <img src=\"hero.jpg\" alt=\"Featured product\" />\n      <img src=\"thumbnail.jpg\" alt=\"Related product\" loading=\"lazy\" />\n      <img src=\"secondary.jpg\" alt=\"Another product\" fetchPriority=\"low\" />\n    </>\n  );\n}",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "In this example, React generates a preload hint only for ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "hero.jpg",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ". Depending on the server API or framework, React may render the equivalent of this element:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "html",
+      "meta": null,
+      "value": "<link rel=\"preload\" as=\"image\" href=\"hero.jpg\" />",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "React may instead provide the same hint in a ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "Link",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " response header. The other two images keep their ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "loading",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " and ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "fetchPriority",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " props in the rendered HTML, but React does not generate preload hints for them. The ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "loading=\"lazy\"",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " prop asks the browser to defer loading an image until it approaches the viewport. The ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "fetchPriority=\"low\"",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " prop allows the image to load immediately, but tells the browser to fetch it at a lower priority.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "React also does not automatically preload an image when it is inside a ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<picture>",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " or ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<noscript>",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " element, or when its ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "src",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " or ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "srcSet",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " is a data URL.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "If you render an image through a framework or a component library, consult its documentation for the default behavior. React decides whether to generate an automatic preload from the props of the underlying ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<img>",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ". For example, an image component may add ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "loading=\"lazy\"",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " by default and provide a separate option for explicitly preloading selected images.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "To create an explicit preload hint, call ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/reference/react-dom/preload",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "preload",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ".",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "thematicBreak",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Waiting for an image during a View Transition {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "waiting-for-an-image-during-a-view-transition",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "During a ",
+          "data": {}
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": "client-rendered ",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/reference/react/ViewTransition",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "<ViewTransition>",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " update, React ",
+          "data": {}
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": "may wait for an image",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": "waits up to 500 ms for visible images",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": " to load ",
+          "data": {}
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": "and decode ",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "before starting the animation. This ",
+          "data": {}
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": "applies when a new ",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "<img>",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": " with a non-empty ",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "src",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": " is rendered, or when an existing image's ",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "src",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": " or ",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "srcSet",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": " changes. The image must be inside the ",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "<ViewTransition>",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": " subtree and must not have",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": "includes newly rendered ",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "<img>",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": " elements and existing images whose ",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "src",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": " or ",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "srcSet",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": " changes. Setting",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": " ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "loading=\"lazy\"",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " or ",
+          "data": {}
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": "adding ",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "an ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "onLoad",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " handler",
+          "data": {}
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": ". React does not wait for images during synchronous updates",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": " opts an image out",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": ".",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": "When a Suspense boundary reveals streamed content inside a ",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "<ViewTransition>",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": ", React may also wait for visible images with a non-empty ",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "src",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": " that do not have ",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "loading=\"lazy\"",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": ". React stops waiting after a timeout so that a slow image does not block the update indefinitely.",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": "Compare how the same image appears when a Suspense boundary reveals its content inside and outside a ",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "<ViewTransition>",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": ":",
+              "data": {}
+            }
+          ]
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "del",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "In this example, the Suspense boundary is wrapped in a ",
+              "data": {}
+            },
+            {
+              "type": "inlineCode",
+              "value": "<ViewTransition>",
+              "data": {}
+            },
+            {
+              "type": "text",
+              "value": " and shows a profile skeleton until the portrait has loaded.",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "del",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "For comparison, the second button inserts the same card directly into the DOM. The card appears immediately, and the browser displays the image after it loads:",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "html",
+      "value": "<Sandpack>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "import {\n  ViewTransition,\n  Suspense,\n  use,\n  useState,\n} from 'react';\nimport { fetchImageSrc } from './image.js';\n\nfunction Profile({ cacheKey }) {\n  const src = use(fetchImageSrc(cacheKey));\n  return (\n    <div className=\"card\">\n      <img src={src} alt=\"\" width={80} height={80} />\n      <p>Jack Pope</p>\n    </div>\n  );\n}\n\nfunction ProfilePlaceholder() {\n  return (\n    <div className=\"card\">\n      <div className=\"avatar-placeholder\" />\n      <p className=\"name-placeholder\">&nbsp;</p>\n    </div>\n  );\n}\n\nexport default function App() {\n  const [showWithTransition, setShowWithTransition] =\n    useState(false);\n  const [showWithoutTransition, setShowWithoutTransition] =\n    useState(false);\n  return (\n    <>\n      <button onClick={() => setShowWithTransition(true)}>\n        Show profile with View Transition\n      </button>\n      {showWithTransition && (\n        <ViewTransition>\n          <Suspense fallback={<ProfilePlaceholder />}>\n            <Profile cacheKey=\"with-transition\" />\n          </Suspense>\n        </ViewTransition>\n      )}\n      <hr />\n      <button onClick={() => setShowWithoutTransition(true)}>\n        Show profile without View Transition\n      </button>\n      {showWithoutTransition && (\n        <Suspense fallback={<ProfilePlaceholder />}>\n          <Profile cacheKey=\"without-transition\" />\n        </Suspense>\n      )}\n    </>\n  );\n}",
+      "data": {
+        "diffOldContent": "import { ViewTransition, Suspense, useState, startTransition } from 'react';\nimport { freshImageUrl } from './image.js';\nimport VanillaProfile from './VanillaProfile.js';\n\nfunction Profile({ src }) {\n  return (\n    <div className=\"card\">\n      <img src={src} alt=\"Jack Pope\" width={80} height={80} />\n      <p>Jack Pope</p>\n    </div>\n  );\n}\n\nfunction ProfilePlaceholder() {\n  return (\n    <div className=\"card\">\n      <div className=\"avatar-placeholder\" />\n      <p className=\"name-placeholder\">&nbsp;</p>\n    </div>\n  );\n}\n\nexport default function App() {\n  const [src, setSrc] = useState(null);\n  return (\n    <>\n      <button\n        onClick={() => {\n          startTransition(() => {\n            setSrc(freshImageUrl());\n          });\n        }}>\n        Show profile\n      </button>\n      {src && (\n        <ViewTransition>\n          <Suspense fallback={<ProfilePlaceholder />}>\n            <Profile src={src} />\n          </Suspense>\n        </ViewTransition>\n      )}\n      <hr />\n      <VanillaProfile />\n    </>\n  );\n}"
+      }
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": "src/image.js hidden",
+      "value": "// Normally, the caching logic would be inside a framework.\nconst cache = new Map();\n\nexport function fetchImageSrc(cacheKey) {\n  if (!cache.has(cacheKey)) {\n    cache.set(cacheKey, loadImageSrc());\n  }\n  return cache.get(cacheKey);\n}\n\nasync function loadImageSrc() {\n  // Delay the response so the Suspense fallback is visible.\n  await new Promise(resolve => setTimeout(resolve, 1000));\n  // Add a unique parameter so the image isn't cached.\n  return 'https://react.dev/images/team/jack-pope.jpg?t=' + Date.now();\n}",
+      "data": {
+        "diffOldContent": "import { useRef } from 'react';\nimport { freshImageUrl } from './image.js';\n\nexport default function VanillaProfile() {\n  const ref = useRef(null);\n  function show() {\n    ref.current.innerHTML = `<div class=\"card\">\n      <img src=\"${freshImageUrl()}\" alt=\"Jack Pope\" width=\"80\" height=\"80\" />\n      <p>Jack Pope</p>\n    </div>`;\n  }\n  return (\n    <>\n      <button onClick={show}>Show profile (direct DOM update)</button>\n      <div ref={ref} />\n    </>\n  );\n}"
+      }
+    },
+    {
+      "type": "del",
+      "children": [
+        {
+          "type": "code",
+          "lang": "js",
+          "meta": "src/image.js hidden",
+          "value": "// Add a unique parameter so the image isn't cached,\n// and every run shows the loading state.\nexport function freshImageUrl() {\n  return 'https://react.dev/images/team/jack-pope.jpg?t=' + Date.now();\n}",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "css",
+      "meta": null,
+      "value": "#root {\n  min-height: 390px;\n}\n.card {\n  margin-top: 1em;\n}\n.card img {\n  display: block;\n  border-radius: 50%;\n  background: #dfe3e9;\n}\n.card p {\n  font-weight: bold;\n}\n.avatar-placeholder {\n  width: 80px;\n  height: 80px;\n  border-radius: 50%;\n  background: #dfe3e9;\n}\n.name-placeholder {\n  width: 90px;\n  border-radius: 4px;\n  background: #dfe3e9;\n}\nhr {\n  margin: 16px 0;\n}",
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "json",
+      "meta": "package.json hidden",
+      "value": "{\n  \"dependencies\": {\n    \"react\": \"19.3.0\",\n    \"react-dom\": \"19.3.0\",\n    \"react-scripts\": \"latest\"\n  }\n}",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</Sandpack>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "With ",
+              "data": {}
+            },
+            {
+              "type": "inlineCode",
+              "value": "<ViewTransition>",
+              "data": {}
+            },
+            {
+              "type": "text",
+              "value": ", React keeps the skeleton visible for up to 500 ms while the image loads, so the card can be revealed with its image already in place. Without ",
+              "data": {}
+            },
+            {
+              "type": "inlineCode",
+              "value": "<ViewTransition>",
+              "data": {}
+            },
+            {
+              "type": "text",
+              "value": ", Suspense stops showing the skeleton as soon as the Promise resolves. If the image is still loading, the card appears first and the image pops in afterward.",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+/* table */
+table { border-collapse: collapse; width: auto; margin: 1em 0; }
+th, td { border: 1px solid #d0d7de; padding: 6px 13px; }
+th { background: #f6f8fa; font-weight: 600; }
+tr:nth-child(2n) { background: #f6f8fa; }
+
+/* code */
+code { padding: 0.2em 0.4em; font-size: 85%; background: #f6f8fa; border-radius: 6px; font-family: 'SF Mono', 'Fira Code', Menlo, monospace; }
+pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background: #f6f8fa; border-radius: 6px; margin: 1em 0; }
+pre code { padding: 0; background: none; border-radius: 0; font-size: inherit; }
+
+/* blockquote */
+blockquote { padding: 0 1em; color: #656d76; border-left: 0.25em solid #d0d7de; margin: 1em 0; }
+
+/* hr */
+hr { height: 0.25em; padding: 0; margin: 24px 0; background-color: #d0d7de; border: 0; }
+
+/* headings */
+h1, h2, h3, h4, h5, h6 { margin-top: 24px; margin-bottom: 16px; font-weight: 600; line-height: 1.25; }
+h1 { font-size: 2em; padding-bottom: 0.3em; border-bottom: 1px solid #d0d7de; }
+h2 { font-size: 1.5em; padding-bottom: 0.3em; border-bottom: 1px solid #d0d7de; }
+h3 { font-size: 1.25em; }
+
+/* list */
+ul, ol { padding-left: 2em; margin: 0.5em 0; }
+li + li { margin-top: 0.25em; }
+
+/* image */
+img { max-width: 100%; }
+
+/* code diff */
+.code-diff { border-radius: 6px; overflow: hidden; margin: 1em 0; font-size: 13px; border: 1px solid #d0d7de; }
+.code-diff pre { margin: 0; padding: 0; border-radius: 0; border: none; background: #fff; }
+.code-diff .shiki { background: #fff !important; }
+.code-diff .diff-line { display: flex; line-height: 1.45; }
+.code-diff .diff-line-gutter { width: 40px; min-width: 40px; text-align: right; padding: 0 8px 0 0; color: #8b949e; font-size: 12px; user-select: none; flex-shrink: 0; }
+.code-diff .diff-line-sign { width: 20px; min-width: 20px; text-align: center; user-select: none; flex-shrink: 0; }
+.code-diff .diff-line-content { flex: 1; padding-right: 12px; white-space: pre; overflow-x: auto; }
+.code-diff .diff-line.del { background: #ffebe9; }
+.code-diff .diff-line.del .diff-line-gutter { background: #ffd7d5; color: #82071e; }
+.code-diff .diff-line.del .diff-line-sign { color: #82071e; }
+.code-diff .diff-line.ins { background: #e6ffec; }
+.code-diff .diff-line.ins .diff-line-gutter { background: #ccffd8; color: #116329; }
+.code-diff .diff-line.ins .diff-line-sign { color: #116329; }
+.code-diff .diff-line.ctx { background: #fff; }
+.code-diff .diff-line.ctx .diff-line-gutter { color: #8b949e; }
+.code-diff .diff-header { padding: 8px 12px; background: #f6f8fa; border-bottom: 1px solid #d0d7de; font-size: 12px; color: #656d76; font-family: 'SF Mono', 'Fira Code', Menlo, monospace; }
+
+ins { background-color: #e6ffec; text-decoration: none; border-radius: 2px; padding: 0 2px; }
+del { background-color: #ffebe9; text-decoration: line-through; border-radius: 2px; padding: 0 2px; }
+ins.diff-block, del.diff-block { display: block; padding-left: 10px; border-left: 3px solid; }
+ins.diff-block { border-left-color: #2cbe4e; }
+del.diff-block { border-left-color: #cb2431; }
+ins > hr, ins > pre { background-color: #e6ffec; }
+del > hr, del > pre { background-color: #ffebe9; }
+ins > table, del > table { border-collapse: collapse; }
+ins > table th, ins > table td { background-color: #e6ffec; }
+del > table th, del > table td { background-color: #ffebe9; }
+li[data-diff="ins"] { background-color: #e6ffec; border-radius: 2px; }
+li[data-diff="del"] { background-color: #ffebe9; border-radius: 2px; text-decoration: line-through; }
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:16px;font-size:14px;line-height:1.6;color:#1a1a1a;}</style></head><body><h1>复杂 Markdown 文档示例</h1>
+<h2>1. 文档概述</h2>
+<p>这是一个包含多种 Markdown 元素的复杂文档示例，用于测试差异比较功能。</p>
+<h2>2. 文本格式</h2>
+<p>这段文字包含<strong>粗体</strong>、<em>斜体</em>和<em><strong>粗斜体</strong></em>格式，还有<code>行内代码</code>和<del>删除线</del>文本。</p>
+<h2>3. 列表</h2>
+<h3>3.1 无序列表</h3>
+<ul>
+<li>主要功能
+<ul>
+<li>子功能 1</li>
+<li>子功能 2</li>
+</ul>
+</li>
+<li>次要功能
+<ul>
+<li>子功能 A</li>
+<li>子功能 B</li>
+</ul>
+</li>
+</ul>
+<h3>3.2 有序列表</h3>
+<ol>
+<li>第一步
+<ol>
+<li>子步骤 1</li>
+<li>子步骤 2</li>
+</ol>
+</li>
+<li>第二步</li>
+<li>第三步</li>
+</ol>
+<h3>3.3 任务列表</h3>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" checked disabled> 已完成任务</li>
+<li class="task-list-item"><input type="checkbox" disabled> 未完成任务</li>
+<li class="task-list-item"><input type="checkbox" disabled> 待办事项</li>
+</ul>
+<h2>4. 代码块</h2>
+<pre><code class="language-javascript"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">function</span><span style="color:#6F42C1"> example</span><span style="color:#24292E">() {</span></span>
+<span class="line"><span style="color:#D73A49">  const</span><span style="color:#005CC5"> message</span><span style="color:#D73A49"> =</span><span style="color:#032F62"> 'Hello, World!'</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#24292E">  console.</span><span style="color:#6F42C1">log</span><span style="color:#24292E">(message);</span></span>
+<span class="line"><span style="color:#D73A49">  return</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#24292E">    status: </span><span style="color:#032F62">'success'</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#24292E">    data: message</span></span>
+<span class="line"><span style="color:#24292E">  };</span></span>
+<span class="line"><span style="color:#24292E">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6F42C1">example</span><span style="color:#24292E">();</span></span></code></pre>
+</code></pre>
+<h2>5. 表格</h2>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>状态</th>
+<th>优先级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>功能 A</td>
+<td>已完成</td>
+<td>高</td>
+</tr>
+<tr>
+<td>功能 B</td>
+<td>进行中</td>
+<td>中</td>
+</tr>
+<tr>
+<td>功能 C</td>
+<td>计划中</td>
+<td>低</td>
+</tr>
+</tbody>
+</table>
+<h2>6. 引用</h2>
+<blockquote>
+<p>这是一段引用文本</p>
+<blockquote>
+<p>这是嵌套引用</p>
+</blockquote>
+</blockquote>
+<h2>7. 链接和图片</h2>
+<h3>7.1 链接</h3>
+<p><a href="https://example.com">示例链接</a></p>
+<h3>7.2 图片</h3>
+<p><img src="https://example.com/image.jpg" alt="示例图片"></p>
+<h2>8. 水平线</h2>
+<hr>
+<h2>9. 数学公式</h2>
+<p>行内公式：$E = mc^2$</p>
+<p>块级公式：</p>
+<p>$$
+\frac{d}{dx}\left( \int_{a}^{x} f(u),du\right)=f(x)
+$$</p>
+<h2>10. 脚注</h2>
+<p>这里有一个脚注<sup><a href="#user-content-fn-1" id="user-content-fnref-1" data-footnote-ref aria-describedby="footnote-label">1</a></sup>。</p>
+<h2>11. 定义列表</h2>
+<p>术语 1
+: 定义 1</p>
+<p>术语 2
+: 定义 2</p>
+<h2>12. HTML 内嵌</h2>
+<div style="color:rgb(196, 29, 29); margin: 10px;">
+  <p>这是一个使用 HTML 的示例</p>
+  <ul>
+    <li>项目 1</li>
+    <li>项目 2</li>
+  </ul>
+</div>
+<div>1212</div>
+<h2>13. 总结</h2>
+<p>这个文档展示了多种 Markdown 元素的使用方式，可以用于测试差异比较功能。</p>
+<section data-footnotes class="footnotes"><h2 class="sr-only" id="footnote-label">Footnotes</h2>
+<ol>
+<li id="user-content-fn-1">
+<p>这是脚注内容。 <a href="#user-content-fnref-1" data-footnote-backref="" aria-label="Back to reference 1" class="data-footnote-backref">↩</a></p>
+</li>
+</ol>
+</section></body></html>

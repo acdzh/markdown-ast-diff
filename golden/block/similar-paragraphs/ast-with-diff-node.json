@@ -1,0 +1,127 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "周三读书会",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 9,
+          "offset": 8
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "每位参与者都有十分钟的个人分享时间，之后进入自由讨论环节。",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 3,
+          "column": 1,
+          "offset": 10
+        },
+        "end": {
+          "line": 3,
+          "column": 30,
+          "offset": 39
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "周六观影会",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 5,
+          "column": 1,
+          "offset": 41
+        },
+        "end": {
+          "line": 5,
+          "column": 9,
+          "offset": 49
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "每位参与者都有十",
+          "data": {}
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": "五",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "分钟的个人分享时间，之后进入自由讨论环节。",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 7,
+          "column": 1,
+          "offset": 51
+        },
+        "end": {
+          "line": 7,
+          "column": 31,
+          "offset": 81
+        }
+      },
+      "data": {}
+    }
+  ],
+  "position": {
+    "start": {
+      "line": 1,
+      "column": 1,
+      "offset": 0
+    },
+    "end": {
+      "line": 8,
+      "column": 1,
+      "offset": 82
+    }
+  },
+  "data": {}
+}

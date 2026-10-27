@@ -1,0 +1,96 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "blockquote",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "引用中的列表：",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "list",
+          "ordered": false,
+          "start": null,
+          "spread": false,
+          "children": [
+            {
+              "type": "listItem",
+              "spread": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "第一项",
+                      "data": {}
+                    }
+                  ]
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "listItem",
+              "spread": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "第二项",
+                      "data": {}
+                    },
+                    {
+                      "type": "inlineIns",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "（已更新）",
+                          "data": {}
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "listItem",
+              "spread": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "第三项",
+                      "data": {}
+                    }
+                  ]
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {}
+    }
+  ],
+  "data": {}
+}

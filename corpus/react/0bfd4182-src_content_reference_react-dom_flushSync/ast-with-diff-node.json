@@ -1,0 +1,3205 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "yaml",
+      "value": "title: flushSync",
+      "position": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 4,
+          "offset": 24
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<Pitfall>",
+      "position": {
+        "start": {
+          "line": 5,
+          "column": 1,
+          "offset": 26
+        },
+        "end": {
+          "line": 5,
+          "column": 10,
+          "offset": 35
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Using ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "flushSync",
+          "position": {
+            "start": {
+              "line": 7,
+              "column": 7,
+              "offset": 43
+            },
+            "end": {
+              "line": 7,
+              "column": 18,
+              "offset": 54
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " is uncommon and can hurt the performance of your app.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 7,
+          "column": 1,
+          "offset": 37
+        },
+        "end": {
+          "line": 7,
+          "column": 72,
+          "offset": 108
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</Pitfall>",
+      "position": {
+        "start": {
+          "line": 9,
+          "column": 1,
+          "offset": 110
+        },
+        "end": {
+          "line": 9,
+          "column": 11,
+          "offset": 120
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "html",
+      "value": "<Intro>",
+      "position": {
+        "start": {
+          "line": 11,
+          "column": 1,
+          "offset": 122
+        },
+        "end": {
+          "line": 11,
+          "column": 8,
+          "offset": 129
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "inlineCode",
+          "value": "flushSync",
+          "position": {
+            "start": {
+              "line": 13,
+              "column": 1,
+              "offset": 131
+            },
+            "end": {
+              "line": 13,
+              "column": 12,
+              "offset": 142
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " lets you force React to flush any updates inside the provided callback synchronously. This ensures that the DOM is updated immediately.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 13,
+          "column": 1,
+          "offset": 131
+        },
+        "end": {
+          "line": 13,
+          "column": 148,
+          "offset": 278
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "flushSync(callback)",
+      "position": {
+        "start": {
+          "line": 15,
+          "column": 1,
+          "offset": 280
+        },
+        "end": {
+          "line": 17,
+          "column": 4,
+          "offset": 309
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</Intro>",
+      "position": {
+        "start": {
+          "line": 19,
+          "column": 1,
+          "offset": 311
+        },
+        "end": {
+          "line": 19,
+          "column": 9,
+          "offset": 319
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "html",
+      "value": "<InlineToc />",
+      "position": {
+        "start": {
+          "line": 21,
+          "column": 1,
+          "offset": 321
+        },
+        "end": {
+          "line": 21,
+          "column": 14,
+          "offset": 334
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "thematicBreak",
+      "position": {
+        "start": {
+          "line": 23,
+          "column": 1,
+          "offset": 336
+        },
+        "end": {
+          "line": 23,
+          "column": 4,
+          "offset": 339
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Reference {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "reference",
+              "position": {
+                "start": {
+                  "line": 25,
+                  "column": 17,
+                  "offset": 357
+                },
+                "end": {
+                  "line": 25,
+                  "column": 26,
+                  "offset": 366
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 25,
+              "column": 16,
+              "offset": 356
+            },
+            "end": {
+              "line": 25,
+              "column": 27,
+              "offset": 367
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 25,
+          "column": 1,
+          "offset": 341
+        },
+        "end": {
+          "line": 25,
+          "column": 29,
+          "offset": 369
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "inlineCode",
+          "value": "flushSync(callback)",
+          "position": {
+            "start": {
+              "line": 27,
+              "column": 5,
+              "offset": 375
+            },
+            "end": {
+              "line": 27,
+              "column": 26,
+              "offset": 396
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "flushsync",
+              "position": {
+                "start": {
+                  "line": 27,
+                  "column": 30,
+                  "offset": 400
+                },
+                "end": {
+                  "line": 27,
+                  "column": 39,
+                  "offset": 409
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 27,
+              "column": 29,
+              "offset": 399
+            },
+            "end": {
+              "line": 27,
+              "column": 40,
+              "offset": 410
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 27,
+          "column": 1,
+          "offset": 371
+        },
+        "end": {
+          "line": 27,
+          "column": 42,
+          "offset": 412
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Call ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "flushSync",
+          "position": {
+            "start": {
+              "line": 29,
+              "column": 6,
+              "offset": 419
+            },
+            "end": {
+              "line": 29,
+              "column": 17,
+              "offset": 430
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " to force React to flush any pending work and update the DOM synchronously.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 29,
+          "column": 1,
+          "offset": 414
+        },
+        "end": {
+          "line": 29,
+          "column": 92,
+          "offset": 505
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "import { flushSync } from 'react-dom';\n\nflushSync(() => {\n  setSomething(123);\n});",
+      "position": {
+        "start": {
+          "line": 31,
+          "column": 1,
+          "offset": 507
+        },
+        "end": {
+          "line": 37,
+          "column": 4,
+          "offset": 599
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Most of the time, ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "flushSync",
+          "position": {
+            "start": {
+              "line": 39,
+              "column": 19,
+              "offset": 619
+            },
+            "end": {
+              "line": 39,
+              "column": 30,
+              "offset": 630
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " can be avoided. Use ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "flushSync",
+          "position": {
+            "start": {
+              "line": 39,
+              "column": 19,
+              "offset": 619
+            },
+            "end": {
+              "line": 39,
+              "column": 30,
+              "offset": 630
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " as last resort.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 39,
+          "column": 1,
+          "offset": 601
+        },
+        "end": {
+          "line": 39,
+          "column": 78,
+          "offset": 678
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "#usage",
+          "children": [
+            {
+              "type": "text",
+              "value": "See more examples below.",
+              "position": {
+                "start": {
+                  "line": 41,
+                  "column": 2,
+                  "offset": 681
+                },
+                "end": {
+                  "line": 41,
+                  "column": 26,
+                  "offset": 705
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 41,
+              "column": 1,
+              "offset": 680
+            },
+            "end": {
+              "line": 41,
+              "column": 35,
+              "offset": 714
+            }
+          },
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 41,
+          "column": 1,
+          "offset": 680
+        },
+        "end": {
+          "line": 41,
+          "column": 35,
+          "offset": 714
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 4,
+      "children": [
+        {
+          "type": "text",
+          "value": "Parameters {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "parameters",
+              "position": {
+                "start": {
+                  "line": 43,
+                  "column": 20,
+                  "offset": 735
+                },
+                "end": {
+                  "line": 43,
+                  "column": 30,
+                  "offset": 745
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 43,
+              "column": 19,
+              "offset": 734
+            },
+            "end": {
+              "line": 43,
+              "column": 31,
+              "offset": 746
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 43,
+          "column": 1,
+          "offset": 716
+        },
+        "end": {
+          "line": 43,
+          "column": 33,
+          "offset": 748
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "callback",
+                  "position": {
+                    "start": {
+                      "line": 46,
+                      "column": 3,
+                      "offset": 753
+                    },
+                    "end": {
+                      "line": 46,
+                      "column": 13,
+                      "offset": 763
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ": A function. React will immediately call this callback and flush any updates it contains synchronously. It may also flush any pending updates, or Effects, or updates inside of Effects. If an update suspends as a result of this ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "flushSync",
+                  "position": {
+                    "start": {
+                      "line": 46,
+                      "column": 241,
+                      "offset": 991
+                    },
+                    "end": {
+                      "line": 46,
+                      "column": 252,
+                      "offset": 1002
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " call, the fallbacks may be re-shown.",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 46,
+                  "column": 3,
+                  "offset": 753
+                },
+                "end": {
+                  "line": 46,
+                  "column": 289,
+                  "offset": 1039
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 46,
+              "column": 1,
+              "offset": 751
+            },
+            "end": {
+              "line": 46,
+              "column": 289,
+              "offset": 1039
+            }
+          },
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 46,
+          "column": 1,
+          "offset": 751
+        },
+        "end": {
+          "line": 46,
+          "column": 289,
+          "offset": 1039
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 4,
+      "children": [
+        {
+          "type": "text",
+          "value": "Returns {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "returns",
+              "position": {
+                "start": {
+                  "line": 48,
+                  "column": 17,
+                  "offset": 1057
+                },
+                "end": {
+                  "line": 48,
+                  "column": 24,
+                  "offset": 1064
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 48,
+              "column": 16,
+              "offset": 1056
+            },
+            "end": {
+              "line": 48,
+              "column": 25,
+              "offset": 1065
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 48,
+          "column": 1,
+          "offset": 1041
+        },
+        "end": {
+          "line": 48,
+          "column": 27,
+          "offset": 1067
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "inlineCode",
+          "value": "flushSync",
+          "position": {
+            "start": {
+              "line": 50,
+              "column": 1,
+              "offset": 1069
+            },
+            "end": {
+              "line": 50,
+              "column": 12,
+              "offset": 1080
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " returns ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "undefined",
+          "position": {
+            "start": {
+              "line": 50,
+              "column": 21,
+              "offset": 1089
+            },
+            "end": {
+              "line": 50,
+              "column": 32,
+              "offset": 1100
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ".",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 50,
+          "column": 1,
+          "offset": 1069
+        },
+        "end": {
+          "line": 50,
+          "column": 33,
+          "offset": 1101
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 4,
+      "children": [
+        {
+          "type": "text",
+          "value": "Caveats {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "caveats",
+              "position": {
+                "start": {
+                  "line": 52,
+                  "column": 17,
+                  "offset": 1119
+                },
+                "end": {
+                  "line": 52,
+                  "column": 24,
+                  "offset": 1126
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 52,
+              "column": 16,
+              "offset": 1118
+            },
+            "end": {
+              "line": 52,
+              "column": 25,
+              "offset": 1127
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 52,
+          "column": 1,
+          "offset": 1103
+        },
+        "end": {
+          "line": 52,
+          "column": 27,
+          "offset": 1129
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "flushSync",
+                  "position": {
+                    "start": {
+                      "line": 54,
+                      "column": 3,
+                      "offset": 1133
+                    },
+                    "end": {
+                      "line": 54,
+                      "column": 14,
+                      "offset": 1144
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " can significantly hurt performance. Use sparingly.",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 54,
+                  "column": 3,
+                  "offset": 1133
+                },
+                "end": {
+                  "line": 54,
+                  "column": 65,
+                  "offset": 1195
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 54,
+              "column": 1,
+              "offset": 1131
+            },
+            "end": {
+              "line": 54,
+              "column": 65,
+              "offset": 1195
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "flushSync",
+                  "position": {
+                    "start": {
+                      "line": 55,
+                      "column": 3,
+                      "offset": 1198
+                    },
+                    "end": {
+                      "line": 55,
+                      "column": 14,
+                      "offset": 1209
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " may force pending Suspense boundaries to show their ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "fallback",
+                  "position": {
+                    "start": {
+                      "line": 55,
+                      "column": 67,
+                      "offset": 1262
+                    },
+                    "end": {
+                      "line": 55,
+                      "column": 77,
+                      "offset": 1272
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " state.",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 55,
+                  "column": 3,
+                  "offset": 1198
+                },
+                "end": {
+                  "line": 55,
+                  "column": 84,
+                  "offset": 1279
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 55,
+              "column": 1,
+              "offset": 1196
+            },
+            "end": {
+              "line": 55,
+              "column": 84,
+              "offset": 1279
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "flushSync",
+                  "position": {
+                    "start": {
+                      "line": 56,
+                      "column": 3,
+                      "offset": 1282
+                    },
+                    "end": {
+                      "line": 56,
+                      "column": 14,
+                      "offset": 1293
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " may run pending Effects and synchronously apply any updates they contain before returning.",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 56,
+                  "column": 3,
+                  "offset": 1282
+                },
+                "end": {
+                  "line": 56,
+                  "column": 105,
+                  "offset": 1384
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 56,
+              "column": 1,
+              "offset": 1280
+            },
+            "end": {
+              "line": 56,
+              "column": 105,
+              "offset": 1384
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "flushSync",
+                  "position": {
+                    "start": {
+                      "line": 57,
+                      "column": 3,
+                      "offset": 1387
+                    },
+                    "end": {
+                      "line": 57,
+                      "column": 14,
+                      "offset": 1398
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " may flush updates outside the callback when necessary to flush the updates inside the callback. For example, if there are pending updates from a click, React may flush those before flushing the updates inside the callback.",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 57,
+                  "column": 3,
+                  "offset": 1387
+                },
+                "end": {
+                  "line": 57,
+                  "column": 237,
+                  "offset": 1621
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 57,
+              "column": 1,
+              "offset": 1385
+            },
+            "end": {
+              "line": 57,
+              "column": 237,
+              "offset": 1621
+            }
+          },
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 54,
+          "column": 1,
+          "offset": 1131
+        },
+        "end": {
+          "line": 57,
+          "column": 237,
+          "offset": 1621
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "thematicBreak",
+      "position": {
+        "start": {
+          "line": 59,
+          "column": 1,
+          "offset": 1623
+        },
+        "end": {
+          "line": 59,
+          "column": 4,
+          "offset": 1626
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Usage {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "usage",
+              "position": {
+                "start": {
+                  "line": 61,
+                  "column": 13,
+                  "offset": 1640
+                },
+                "end": {
+                  "line": 61,
+                  "column": 18,
+                  "offset": 1645
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 61,
+              "column": 12,
+              "offset": 1639
+            },
+            "end": {
+              "line": 61,
+              "column": 19,
+              "offset": 1646
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 61,
+          "column": 1,
+          "offset": 1628
+        },
+        "end": {
+          "line": 61,
+          "column": 21,
+          "offset": 1648
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Flushing updates for third-party integrations {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "flushing-updates-for-third-party-integrations",
+              "position": {
+                "start": {
+                  "line": 63,
+                  "column": 54,
+                  "offset": 1703
+                },
+                "end": {
+                  "line": 63,
+                  "column": 99,
+                  "offset": 1748
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 63,
+              "column": 53,
+              "offset": 1702
+            },
+            "end": {
+              "line": 63,
+              "column": 100,
+              "offset": 1749
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 63,
+          "column": 1,
+          "offset": 1650
+        },
+        "end": {
+          "line": 63,
+          "column": 102,
+          "offset": 1751
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "When integrating with third-party code such as browser APIs or UI libraries, it may be necessary to force React to flush updates. Use ",
+          "position": {
+            "start": {
+              "line": 65,
+              "column": 1,
+              "offset": 1753
+            },
+            "end": {
+              "line": 65,
+              "column": 135,
+              "offset": 1887
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "flushSync",
+          "position": {
+            "start": {
+              "line": 65,
+              "column": 135,
+              "offset": 1887
+            },
+            "end": {
+              "line": 65,
+              "column": 146,
+              "offset": 1898
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "text",
+          "value": " to force React to flush any ",
+          "position": {
+            "start": {
+              "line": 65,
+              "column": 146,
+              "offset": 1898
+            },
+            "end": {
+              "line": 65,
+              "column": 175,
+              "offset": 1927
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "<CodeStep step={1}>",
+          "position": {
+            "start": {
+              "line": 65,
+              "column": 175,
+              "offset": 1927
+            },
+            "end": {
+              "line": 65,
+              "column": 194,
+              "offset": 1946
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "text",
+          "value": "state updates",
+          "position": {
+            "start": {
+              "line": 65,
+              "column": 194,
+              "offset": 1946
+            },
+            "end": {
+              "line": 65,
+              "column": 207,
+              "offset": 1959
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "</CodeStep>",
+          "position": {
+            "start": {
+              "line": 65,
+              "column": 207,
+              "offset": 1959
+            },
+            "end": {
+              "line": 65,
+              "column": 218,
+              "offset": 1970
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "text",
+          "value": " inside the callback synchronously:",
+          "position": {
+            "start": {
+              "line": 65,
+              "column": 218,
+              "offset": 1970
+            },
+            "end": {
+              "line": 65,
+              "column": 253,
+              "offset": 2005
+            }
+          },
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 65,
+          "column": 1,
+          "offset": 1753
+        },
+        "end": {
+          "line": 65,
+          "column": 253,
+          "offset": 2005
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": "[[1, 2, \"setSomething(123)\"]]",
+      "value": "flushSync(() => {\n  setSomething(123);\n});\n// By this line, the DOM is updated.",
+      "position": {
+        "start": {
+          "line": 67,
+          "column": 1,
+          "offset": 2007
+        },
+        "end": {
+          "line": 72,
+          "column": 4,
+          "offset": 2126
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "This ensures that, by the time the next line of code runs, React has already updated the DOM.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 74,
+          "column": 1,
+          "offset": 2128
+        },
+        "end": {
+          "line": 74,
+          "column": 94,
+          "offset": 2221
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "Using ",
+              "position": {
+                "start": {
+                  "line": 76,
+                  "column": 3,
+                  "offset": 2225
+                },
+                "end": {
+                  "line": 76,
+                  "column": 9,
+                  "offset": 2231
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "inlineCode",
+              "value": "flushSync",
+              "position": {
+                "start": {
+                  "line": 76,
+                  "column": 9,
+                  "offset": 2231
+                },
+                "end": {
+                  "line": 76,
+                  "column": 20,
+                  "offset": 2242
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "text",
+              "value": " is uncommon, and using it often can significantly hurt the performance of your app.",
+              "position": {
+                "start": {
+                  "line": 76,
+                  "column": 20,
+                  "offset": 2242
+                },
+                "end": {
+                  "line": 76,
+                  "column": 104,
+                  "offset": 2326
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 76,
+              "column": 1,
+              "offset": 2223
+            },
+            "end": {
+              "line": 76,
+              "column": 106,
+              "offset": 2328
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " If your app only uses React APIs, and does not integrate with third-party libraries, ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "flushSync",
+          "position": {
+            "start": {
+              "line": 76,
+              "column": 192,
+              "offset": 2414
+            },
+            "end": {
+              "line": 76,
+              "column": 203,
+              "offset": 2425
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " should be unnecessary.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 76,
+          "column": 1,
+          "offset": 2223
+        },
+        "end": {
+          "line": 76,
+          "column": 226,
+          "offset": 2448
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "However, it can be helpful for integrating with third-party code like browser APIs.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 78,
+          "column": 1,
+          "offset": 2450
+        },
+        "end": {
+          "line": 78,
+          "column": 84,
+          "offset": 2533
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Some browser APIs expect results inside of callbacks to be written to the DOM synchronously, by the end of the callback, so the browser can do something with the rendered DOM. In most cases, React handles this for you automatically. But in some cases it may be necessary to force a synchronous update.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 80,
+          "column": 1,
+          "offset": 2535
+        },
+        "end": {
+          "line": 80,
+          "column": 302,
+          "offset": 2836
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "For example, the browser ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "onbeforeprint",
+          "position": {
+            "start": {
+              "line": 82,
+              "column": 26,
+              "offset": 2863
+            },
+            "end": {
+              "line": 82,
+              "column": 41,
+              "offset": 2878
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " API allows you to change the page immediately before the print dialog opens. This is useful for applying custom print styles that allow the document to display better for printing. In the example below, you use ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "flushSync",
+          "position": {
+            "start": {
+              "line": 82,
+              "column": 253,
+              "offset": 3090
+            },
+            "end": {
+              "line": 82,
+              "column": 264,
+              "offset": 3101
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " inside of the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "onbeforeprint",
+          "position": {
+            "start": {
+              "line": 82,
+              "column": 26,
+              "offset": 2863
+            },
+            "end": {
+              "line": 82,
+              "column": 41,
+              "offset": 2878
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " callback to immediately \"flush\" the React state to the DOM. Then, by the time the print dialog opens, ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "isPrinting",
+          "position": {
+            "start": {
+              "line": 82,
+              "column": 397,
+              "offset": 3234
+            },
+            "end": {
+              "line": 82,
+              "column": 409,
+              "offset": 3246
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " displays \"yes\":",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 82,
+          "column": 1,
+          "offset": 2838
+        },
+        "end": {
+          "line": 82,
+          "column": 425,
+          "offset": 3262
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<Sandpack>",
+      "position": {
+        "start": {
+          "line": 84,
+          "column": 1,
+          "offset": 3264
+        },
+        "end": {
+          "line": 84,
+          "column": 11,
+          "offset": 3274
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": "src/App.js active",
+      "value": "import { useState, useEffect } from 'react';\nimport { flushSync } from 'react-dom';\n\nexport default function PrintApp() {\n  const [isPrinting, setIsPrinting] = useState(false);\n\n  useEffect(() => {\n    function handleBeforePrint() {\n      flushSync(() => {\n        setIsPrinting(true);\n      })\n    }\n\n    function handleAfterPrint() {\n      setIsPrinting(false);\n    }\n\n    window.addEventListener('beforeprint', handleBeforePrint);\n    window.addEventListener('afterprint', handleAfterPrint);\n    return () => {\n      window.removeEventListener('beforeprint', handleBeforePrint);\n      window.removeEventListener('afterprint', handleAfterPrint);\n    }\n  }, []);\n\n  return (\n    <>\n      <h1>isPrinting: {isPrinting ? 'yes' : 'no'}</h1>\n      <button onClick={() => window.print()}>\n        Print\n      </button>\n    </>\n  );\n}",
+      "position": {
+        "start": {
+          "line": 86,
+          "column": 1,
+          "offset": 3276
+        },
+        "end": {
+          "line": 121,
+          "column": 4,
+          "offset": 4132
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</Sandpack>",
+      "position": {
+        "start": {
+          "line": 123,
+          "column": 1,
+          "offset": 4134
+        },
+        "end": {
+          "line": 123,
+          "column": 12,
+          "offset": 4145
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Without ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "flushSync",
+          "position": {
+            "start": {
+              "line": 125,
+              "column": 9,
+              "offset": 4155
+            },
+            "end": {
+              "line": 125,
+              "column": 20,
+              "offset": 4166
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", the print dialog will display ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "isPrinting",
+          "position": {
+            "start": {
+              "line": 125,
+              "column": 52,
+              "offset": 4198
+            },
+            "end": {
+              "line": 125,
+              "column": 64,
+              "offset": 4210
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " as \"no\". This is because React batches the updates asynchronously and the print dialog is displayed before the state is updated.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 125,
+          "column": 1,
+          "offset": 4147
+        },
+        "end": {
+          "line": 125,
+          "column": 193,
+          "offset": 4339
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<Pitfall>",
+      "position": {
+        "start": {
+          "line": 127,
+          "column": 1,
+          "offset": 4341
+        },
+        "end": {
+          "line": 127,
+          "column": 10,
+          "offset": 4350
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "inlineCode",
+          "value": "flushSync",
+          "position": {
+            "start": {
+              "line": 129,
+              "column": 1,
+              "offset": 4352
+            },
+            "end": {
+              "line": 129,
+              "column": 12,
+              "offset": 4363
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " can significantly hurt performance, and may unexpectedly force pending Suspense boundaries to show their fallback state.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 129,
+          "column": 1,
+          "offset": 4352
+        },
+        "end": {
+          "line": 129,
+          "column": 133,
+          "offset": 4484
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Most of the time, ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "flushSync",
+          "position": {
+            "start": {
+              "line": 131,
+              "column": 19,
+              "offset": 4504
+            },
+            "end": {
+              "line": 131,
+              "column": 30,
+              "offset": 4515
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " can be avoided, so use ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "flushSync",
+          "position": {
+            "start": {
+              "line": 131,
+              "column": 19,
+              "offset": 4504
+            },
+            "end": {
+              "line": 131,
+              "column": 30,
+              "offset": 4515
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " as a last resort.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 131,
+          "column": 1,
+          "offset": 4486
+        },
+        "end": {
+          "line": 131,
+          "column": 83,
+          "offset": 4568
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</Pitfall>",
+      "position": {
+        "start": {
+          "line": 133,
+          "column": 1,
+          "offset": 4570
+        },
+        "end": {
+          "line": 133,
+          "column": 11,
+          "offset": 4580
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "thematicBreak",
+          "position": {
+            "start": {
+              "line": 135,
+              "column": 1,
+              "offset": 4582
+            },
+            "end": {
+              "line": 135,
+              "column": 4,
+              "offset": 4585
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 2,
+          "children": [
+            {
+              "type": "text",
+              "value": "Troubleshooting {/",
+              "position": {
+                "start": {
+                  "line": 137,
+                  "column": 4,
+                  "offset": 4590
+                },
+                "end": {
+                  "line": 137,
+                  "column": 22,
+                  "offset": 4608
+                }
+              }
+            },
+            {
+              "type": "emphasis",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "troubleshooting",
+                  "position": {
+                    "start": {
+                      "line": 137,
+                      "column": 23,
+                      "offset": 4609
+                    },
+                    "end": {
+                      "line": 137,
+                      "column": 38,
+                      "offset": 4624
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 137,
+                  "column": 22,
+                  "offset": 4608
+                },
+                "end": {
+                  "line": 137,
+                  "column": 39,
+                  "offset": 4625
+                }
+              }
+            },
+            {
+              "type": "text",
+              "value": "/}",
+              "position": {
+                "start": {
+                  "line": 137,
+                  "column": 39,
+                  "offset": 4625
+                },
+                "end": {
+                  "line": 137,
+                  "column": 41,
+                  "offset": 4627
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 137,
+              "column": 1,
+              "offset": 4587
+            },
+            "end": {
+              "line": 137,
+              "column": 41,
+              "offset": 4627
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 3,
+          "children": [
+            {
+              "type": "text",
+              "value": "I'm getting an error: \"flushSync was called from inside a lifecycle method\" {/",
+              "position": {
+                "start": {
+                  "line": 139,
+                  "column": 5,
+                  "offset": 4633
+                },
+                "end": {
+                  "line": 139,
+                  "column": 83,
+                  "offset": 4711
+                }
+              }
+            },
+            {
+              "type": "emphasis",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "im-getting-an-error-flushsync-was-called-from-inside-a-lifecycle-method",
+                  "position": {
+                    "start": {
+                      "line": 139,
+                      "column": 84,
+                      "offset": 4712
+                    },
+                    "end": {
+                      "line": 139,
+                      "column": 155,
+                      "offset": 4783
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 139,
+                  "column": 83,
+                  "offset": 4711
+                },
+                "end": {
+                  "line": 139,
+                  "column": 156,
+                  "offset": 4784
+                }
+              }
+            },
+            {
+              "type": "text",
+              "value": "/}",
+              "position": {
+                "start": {
+                  "line": 139,
+                  "column": 156,
+                  "offset": 4784
+                },
+                "end": {
+                  "line": 139,
+                  "column": 158,
+                  "offset": 4786
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 139,
+              "column": 1,
+              "offset": 4629
+            },
+            "end": {
+              "line": 139,
+              "column": 158,
+              "offset": 4786
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "React cannot ",
+              "position": {
+                "start": {
+                  "line": 142,
+                  "column": 1,
+                  "offset": 4789
+                },
+                "end": {
+                  "line": 142,
+                  "column": 14,
+                  "offset": 4802
+                }
+              }
+            },
+            {
+              "type": "inlineCode",
+              "value": "flushSync",
+              "position": {
+                "start": {
+                  "line": 142,
+                  "column": 14,
+                  "offset": 4802
+                },
+                "end": {
+                  "line": 142,
+                  "column": 25,
+                  "offset": 4813
+                }
+              }
+            },
+            {
+              "type": "text",
+              "value": " in the middle of a render. If you do, it will noop and warn:",
+              "position": {
+                "start": {
+                  "line": 142,
+                  "column": 25,
+                  "offset": 4813
+                },
+                "end": {
+                  "line": 142,
+                  "column": 86,
+                  "offset": 4874
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 142,
+              "column": 1,
+              "offset": 4789
+            },
+            "end": {
+              "line": 142,
+              "column": 86,
+              "offset": 4874
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "<ConsoleBlock level=\"error\">",
+          "position": {
+            "start": {
+              "line": 144,
+              "column": 1,
+              "offset": 4876
+            },
+            "end": {
+              "line": 144,
+              "column": 29,
+              "offset": 4904
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "Warning: flushSync was called from inside a lifecycle method. React cannot flush when React is already rendering. Consider moving this call to a scheduler task or micro task.",
+              "position": {
+                "start": {
+                  "line": 146,
+                  "column": 1,
+                  "offset": 4906
+                },
+                "end": {
+                  "line": 146,
+                  "column": 175,
+                  "offset": 5080
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 146,
+              "column": 1,
+              "offset": 4906
+            },
+            "end": {
+              "line": 146,
+              "column": 175,
+              "offset": 5080
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "</ConsoleBlock>",
+          "position": {
+            "start": {
+              "line": 148,
+              "column": 1,
+              "offset": 5082
+            },
+            "end": {
+              "line": 148,
+              "column": 16,
+              "offset": 5097
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "This includes calling ",
+              "position": {
+                "start": {
+                  "line": 150,
+                  "column": 1,
+                  "offset": 5099
+                },
+                "end": {
+                  "line": 150,
+                  "column": 23,
+                  "offset": 5121
+                }
+              }
+            },
+            {
+              "type": "inlineCode",
+              "value": "flushSync",
+              "position": {
+                "start": {
+                  "line": 150,
+                  "column": 23,
+                  "offset": 5121
+                },
+                "end": {
+                  "line": 150,
+                  "column": 34,
+                  "offset": 5132
+                }
+              }
+            },
+            {
+              "type": "text",
+              "value": " inside:",
+              "position": {
+                "start": {
+                  "line": 150,
+                  "column": 34,
+                  "offset": 5132
+                },
+                "end": {
+                  "line": 150,
+                  "column": 42,
+                  "offset": 5140
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 150,
+              "column": 1,
+              "offset": 5099
+            },
+            "end": {
+              "line": 150,
+              "column": 42,
+              "offset": 5140
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "list",
+          "ordered": false,
+          "start": null,
+          "spread": false,
+          "children": [
+            {
+              "type": "listItem",
+              "spread": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "rendering a component.",
+                      "position": {
+                        "start": {
+                          "line": 152,
+                          "column": 3,
+                          "offset": 5144
+                        },
+                        "end": {
+                          "line": 152,
+                          "column": 25,
+                          "offset": 5166
+                        }
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 152,
+                      "column": 3,
+                      "offset": 5144
+                    },
+                    "end": {
+                      "line": 152,
+                      "column": 25,
+                      "offset": 5166
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 152,
+                  "column": 1,
+                  "offset": 5142
+                },
+                "end": {
+                  "line": 152,
+                  "column": 25,
+                  "offset": 5166
+                }
+              }
+            },
+            {
+              "type": "listItem",
+              "spread": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "inlineCode",
+                      "value": "useLayoutEffect",
+                      "position": {
+                        "start": {
+                          "line": 153,
+                          "column": 3,
+                          "offset": 5169
+                        },
+                        "end": {
+                          "line": 153,
+                          "column": 20,
+                          "offset": 5186
+                        }
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": " or ",
+                      "position": {
+                        "start": {
+                          "line": 153,
+                          "column": 20,
+                          "offset": 5186
+                        },
+                        "end": {
+                          "line": 153,
+                          "column": 24,
+                          "offset": 5190
+                        }
+                      }
+                    },
+                    {
+                      "type": "inlineCode",
+                      "value": "useEffect",
+                      "position": {
+                        "start": {
+                          "line": 153,
+                          "column": 24,
+                          "offset": 5190
+                        },
+                        "end": {
+                          "line": 153,
+                          "column": 35,
+                          "offset": 5201
+                        }
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": " hooks.",
+                      "position": {
+                        "start": {
+                          "line": 153,
+                          "column": 35,
+                          "offset": 5201
+                        },
+                        "end": {
+                          "line": 153,
+                          "column": 42,
+                          "offset": 5208
+                        }
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 153,
+                      "column": 3,
+                      "offset": 5169
+                    },
+                    "end": {
+                      "line": 153,
+                      "column": 42,
+                      "offset": 5208
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 153,
+                  "column": 1,
+                  "offset": 5167
+                },
+                "end": {
+                  "line": 153,
+                  "column": 42,
+                  "offset": 5208
+                }
+              }
+            },
+            {
+              "type": "listItem",
+              "spread": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Class component lifecycle methods.",
+                      "position": {
+                        "start": {
+                          "line": 154,
+                          "column": 3,
+                          "offset": 5211
+                        },
+                        "end": {
+                          "line": 154,
+                          "column": 37,
+                          "offset": 5245
+                        }
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 154,
+                      "column": 3,
+                      "offset": 5211
+                    },
+                    "end": {
+                      "line": 154,
+                      "column": 37,
+                      "offset": 5245
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 154,
+                  "column": 1,
+                  "offset": 5209
+                },
+                "end": {
+                  "line": 154,
+                  "column": 37,
+                  "offset": 5245
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 152,
+              "column": 1,
+              "offset": 5142
+            },
+            "end": {
+              "line": 154,
+              "column": 37,
+              "offset": 5245
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "For example, calling ",
+              "position": {
+                "start": {
+                  "line": 156,
+                  "column": 1,
+                  "offset": 5247
+                },
+                "end": {
+                  "line": 156,
+                  "column": 22,
+                  "offset": 5268
+                }
+              }
+            },
+            {
+              "type": "inlineCode",
+              "value": "flushSync",
+              "position": {
+                "start": {
+                  "line": 156,
+                  "column": 22,
+                  "offset": 5268
+                },
+                "end": {
+                  "line": 156,
+                  "column": 33,
+                  "offset": 5279
+                }
+              }
+            },
+            {
+              "type": "text",
+              "value": " in an Effect will noop and warn:",
+              "position": {
+                "start": {
+                  "line": 156,
+                  "column": 33,
+                  "offset": 5279
+                },
+                "end": {
+                  "line": 156,
+                  "column": 66,
+                  "offset": 5312
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 156,
+              "column": 1,
+              "offset": 5247
+            },
+            "end": {
+              "line": 156,
+              "column": 66,
+              "offset": 5312
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "code",
+          "lang": "js",
+          "meta": null,
+          "value": "import { useEffect } from 'react';\nimport { flushSync } from 'react-dom';\n\nfunction MyComponent() {\n  useEffect(() => {\n    // 🚩 Wrong: calling flushSync inside an effect\n    flushSync(() => {\n      setSomething(newValue);\n    });\n  }, []);\n\n  return <div>{/* ... */}</div>;\n}",
+          "position": {
+            "start": {
+              "line": 158,
+              "column": 1,
+              "offset": 5314
+            },
+            "end": {
+              "line": 172,
+              "column": 4,
+              "offset": 5601
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "To fix this, you usually want to move the ",
+              "position": {
+                "start": {
+                  "line": 174,
+                  "column": 1,
+                  "offset": 5603
+                },
+                "end": {
+                  "line": 174,
+                  "column": 43,
+                  "offset": 5645
+                }
+              }
+            },
+            {
+              "type": "inlineCode",
+              "value": "flushSync",
+              "position": {
+                "start": {
+                  "line": 174,
+                  "column": 43,
+                  "offset": 5645
+                },
+                "end": {
+                  "line": 174,
+                  "column": 54,
+                  "offset": 5656
+                }
+              }
+            },
+            {
+              "type": "text",
+              "value": " call to an event:",
+              "position": {
+                "start": {
+                  "line": 174,
+                  "column": 54,
+                  "offset": 5656
+                },
+                "end": {
+                  "line": 174,
+                  "column": 72,
+                  "offset": 5674
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 174,
+              "column": 1,
+              "offset": 5603
+            },
+            "end": {
+              "line": 174,
+              "column": 72,
+              "offset": 5674
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "code",
+          "lang": "js",
+          "meta": null,
+          "value": "function handleClick() {\n  // ✅ Correct: flushSync in event handlers is safe\n  flushSync(() => {\n    setSomething(newValue);\n  });\n}",
+          "position": {
+            "start": {
+              "line": 176,
+              "column": 1,
+              "offset": 5676
+            },
+            "end": {
+              "line": 183,
+              "column": 4,
+              "offset": 5818
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "If it's difficult to move to an event, you can defer ",
+              "position": {
+                "start": {
+                  "line": 186,
+                  "column": 1,
+                  "offset": 5821
+                },
+                "end": {
+                  "line": 186,
+                  "column": 54,
+                  "offset": 5874
+                }
+              }
+            },
+            {
+              "type": "inlineCode",
+              "value": "flushSync",
+              "position": {
+                "start": {
+                  "line": 186,
+                  "column": 54,
+                  "offset": 5874
+                },
+                "end": {
+                  "line": 186,
+                  "column": 65,
+                  "offset": 5885
+                }
+              }
+            },
+            {
+              "type": "text",
+              "value": " in a microtask:",
+              "position": {
+                "start": {
+                  "line": 186,
+                  "column": 65,
+                  "offset": 5885
+                },
+                "end": {
+                  "line": 186,
+                  "column": 81,
+                  "offset": 5901
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 186,
+              "column": 1,
+              "offset": 5821
+            },
+            "end": {
+              "line": 186,
+              "column": 81,
+              "offset": 5901
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "code",
+          "lang": "js",
+          "meta": "{3,7}",
+          "value": "useEffect(() => {\n  // ✅ Correct: defer flushSync to a microtask\n  queueMicrotask(() => {\n    flushSync(() => {\n      setSomething(newValue);\n    });\n  });\n}, []);",
+          "position": {
+            "start": {
+              "line": 188,
+              "column": 1,
+              "offset": 5903
+            },
+            "end": {
+              "line": 197,
+              "column": 4,
+              "offset": 6082
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "This will allow the current render to finish and schedule another syncronous render to flush the updates.",
+              "position": {
+                "start": {
+                  "line": 199,
+                  "column": 1,
+                  "offset": 6084
+                },
+                "end": {
+                  "line": 199,
+                  "column": 106,
+                  "offset": 6189
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 199,
+              "column": 1,
+              "offset": 6084
+            },
+            "end": {
+              "line": 199,
+              "column": 106,
+              "offset": 6189
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "<Pitfall>",
+          "position": {
+            "start": {
+              "line": 201,
+              "column": 1,
+              "offset": 6191
+            },
+            "end": {
+              "line": 201,
+              "column": 10,
+              "offset": 6200
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "flushSync",
+              "position": {
+                "start": {
+                  "line": 203,
+                  "column": 1,
+                  "offset": 6202
+                },
+                "end": {
+                  "line": 203,
+                  "column": 12,
+                  "offset": 6213
+                }
+              }
+            },
+            {
+              "type": "text",
+              "value": " can significantly hurt performance, but this particular pattern is even worse for performance. Exhaust all other options before calling ",
+              "position": {
+                "start": {
+                  "line": 203,
+                  "column": 12,
+                  "offset": 6213
+                },
+                "end": {
+                  "line": 203,
+                  "column": 149,
+                  "offset": 6350
+                }
+              }
+            },
+            {
+              "type": "inlineCode",
+              "value": "flushSync",
+              "position": {
+                "start": {
+                  "line": 203,
+                  "column": 149,
+                  "offset": 6350
+                },
+                "end": {
+                  "line": 203,
+                  "column": 160,
+                  "offset": 6361
+                }
+              }
+            },
+            {
+              "type": "text",
+              "value": " in a microtask as an escape hatch.",
+              "position": {
+                "start": {
+                  "line": 203,
+                  "column": 160,
+                  "offset": 6361
+                },
+                "end": {
+                  "line": 203,
+                  "column": 195,
+                  "offset": 6396
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 203,
+              "column": 1,
+              "offset": 6202
+            },
+            "end": {
+              "line": 203,
+              "column": 195,
+              "offset": 6396
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "</Pitfall>",
+          "position": {
+            "start": {
+              "line": 205,
+              "column": 1,
+              "offset": 6398
+            },
+            "end": {
+              "line": 205,
+              "column": 11,
+              "offset": 6408
+            }
+          },
+          "data": {}
+        }
+      ]
+    }
+  ]
+}

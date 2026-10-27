@@ -1,0 +1,15 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "code",
+      "lang": null,
+      "meta": null,
+      "value": "code",
+      "data": {}
+    }
+  ],
+  "data": {
+    "diffUnchanged": true
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "del",
+      "children": [
+        {
+          "type": "code",
+          "lang": "mermaid",
+          "meta": null,
+          "value": "graph TD\n  A --> B",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "code",
+          "lang": "mermaid",
+          "meta": null,
+          "value": "graph TD\n  A --> C",
+          "data": {}
+        }
+      ]
+    }
+  ],
+  "data": {}
+}

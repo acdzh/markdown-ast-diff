@@ -1,0 +1,349 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "heading",
+      "depth": 1,
+      "children": [
+        {
+          "type": "text",
+          "value": "仓鼠饲养指南",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 9,
+          "offset": 8
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "养仓鼠需要耐心，以下是新手必读的要点。",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 3,
+          "column": 1,
+          "offset": 10
+        },
+        "end": {
+          "line": 3,
+          "column": 20,
+          "offset": 29
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "笼子至少 60cm × 40cm",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 5,
+                  "column": 3,
+                  "offset": 33
+                },
+                "end": {
+                  "line": 5,
+                  "column": 19,
+                  "offset": 49
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 5,
+              "column": 1,
+              "offset": 31
+            },
+            "end": {
+              "line": 5,
+              "column": 19,
+              "offset": 49
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "跑轮直径不小于 21cm",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 6,
+                  "column": 3,
+                  "offset": 52
+                },
+                "end": {
+                  "line": 6,
+                  "column": 15,
+                  "offset": 64
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 6,
+              "column": 1,
+              "offset": 50
+            },
+            "end": {
+              "line": 6,
+              "column": 15,
+              "offset": 64
+            }
+          },
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 5,
+          "column": 1,
+          "offset": 31
+        },
+        "end": {
+          "line": 6,
+          "column": 15,
+          "offset": 64
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "code",
+      "lang": "text",
+      "meta": null,
+      "value": "早上 8:00 主粮 5g",
+      "position": {
+        "start": {
+          "line": 8,
+          "column": 1,
+          "offset": 66
+        },
+        "end": {
+          "line": 10,
+          "column": 4,
+          "offset": 91
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "table",
+      "align": [
+        null,
+        null
+      ],
+      "children": [
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "项目",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 12,
+                  "column": 1,
+                  "offset": 93
+                },
+                "end": {
+                  "line": 12,
+                  "column": 6,
+                  "offset": 98
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "频率",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 12,
+                  "column": 6,
+                  "offset": 98
+                },
+                "end": {
+                  "line": 12,
+                  "column": 12,
+                  "offset": 104
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 12,
+              "column": 1,
+              "offset": 93
+            },
+            "end": {
+              "line": 12,
+              "column": 12,
+              "offset": 104
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          }
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "换垫料",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 14,
+                  "column": 1,
+                  "offset": 119
+                },
+                "end": {
+                  "line": 14,
+                  "column": 7,
+                  "offset": 125
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "每周",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 14,
+                  "column": 7,
+                  "offset": 125
+                },
+                "end": {
+                  "line": 14,
+                  "column": 13,
+                  "offset": 131
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 14,
+              "column": 1,
+              "offset": 119
+            },
+            "end": {
+              "line": 14,
+              "column": 13,
+              "offset": 131
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 12,
+          "column": 1,
+          "offset": 93
+        },
+        "end": {
+          "line": 14,
+          "column": 13,
+          "offset": 131
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      }
+    }
+  ],
+  "position": {
+    "start": {
+      "line": 1,
+      "column": 1,
+      "offset": 0
+    },
+    "end": {
+      "line": 15,
+      "column": 1,
+      "offset": 132
+    }
+  },
+  "data": {
+    "diffUnchanged": true
+  }
+}

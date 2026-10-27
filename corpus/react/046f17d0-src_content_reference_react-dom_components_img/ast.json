@@ -1,0 +1,4722 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "yaml",
+      "value": "title: \"<img>\"",
+      "position": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 4,
+          "offset": 22
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<Intro>",
+      "position": {
+        "start": {
+          "line": 5,
+          "column": 1,
+          "offset": 24
+        },
+        "end": {
+          "line": 5,
+          "column": 8,
+          "offset": 31
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "The ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img",
+          "children": [
+            {
+              "type": "text",
+              "value": "built-in browser ",
+              "position": {
+                "start": {
+                  "line": 7,
+                  "column": 6,
+                  "offset": 38
+                },
+                "end": {
+                  "line": 7,
+                  "column": 23,
+                  "offset": 55
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "inlineCode",
+              "value": "<img>",
+              "position": {
+                "start": {
+                  "line": 7,
+                  "column": 23,
+                  "offset": 55
+                },
+                "end": {
+                  "line": 7,
+                  "column": 30,
+                  "offset": 62
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "text",
+              "value": " component",
+              "position": {
+                "start": {
+                  "line": 7,
+                  "column": 30,
+                  "offset": 62
+                },
+                "end": {
+                  "line": 7,
+                  "column": 40,
+                  "offset": 72
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 7,
+              "column": 5,
+              "offset": 37
+            },
+            "end": {
+              "line": 7,
+              "column": 104,
+              "offset": 136
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " lets you embed an image.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 7,
+          "column": 1,
+          "offset": 33
+        },
+        "end": {
+          "line": 7,
+          "column": 129,
+          "offset": 161
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "<img src=\"photo.jpg\" alt=\"A person walking through a park\" />",
+      "position": {
+        "start": {
+          "line": 9,
+          "column": 1,
+          "offset": 163
+        },
+        "end": {
+          "line": 11,
+          "column": 4,
+          "offset": 234
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</Intro>",
+      "position": {
+        "start": {
+          "line": 13,
+          "column": 1,
+          "offset": 236
+        },
+        "end": {
+          "line": 13,
+          "column": 9,
+          "offset": 244
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "html",
+      "value": "<InlineToc />",
+      "position": {
+        "start": {
+          "line": 15,
+          "column": 1,
+          "offset": 246
+        },
+        "end": {
+          "line": 15,
+          "column": 14,
+          "offset": 259
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "thematicBreak",
+      "position": {
+        "start": {
+          "line": 17,
+          "column": 1,
+          "offset": 261
+        },
+        "end": {
+          "line": 17,
+          "column": 4,
+          "offset": 264
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Reference {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "reference",
+              "position": {
+                "start": {
+                  "line": 19,
+                  "column": 17,
+                  "offset": 282
+                },
+                "end": {
+                  "line": 19,
+                  "column": 26,
+                  "offset": 291
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 19,
+              "column": 16,
+              "offset": 281
+            },
+            "end": {
+              "line": 19,
+              "column": 27,
+              "offset": 292
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 19,
+          "column": 1,
+          "offset": 266
+        },
+        "end": {
+          "line": 19,
+          "column": 29,
+          "offset": 294
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "inlineCode",
+          "value": "<img>",
+          "position": {
+            "start": {
+              "line": 21,
+              "column": 5,
+              "offset": 300
+            },
+            "end": {
+              "line": 21,
+              "column": 12,
+              "offset": 307
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "img",
+              "position": {
+                "start": {
+                  "line": 21,
+                  "column": 16,
+                  "offset": 311
+                },
+                "end": {
+                  "line": 21,
+                  "column": 19,
+                  "offset": 314
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 21,
+              "column": 15,
+              "offset": 310
+            },
+            "end": {
+              "line": 21,
+              "column": 20,
+              "offset": 315
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 21,
+          "column": 1,
+          "offset": 296
+        },
+        "end": {
+          "line": 21,
+          "column": 22,
+          "offset": 317
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "To display an image, render the ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img",
+          "children": [
+            {
+              "type": "text",
+              "value": "built-in browser ",
+              "position": {
+                "start": {
+                  "line": 23,
+                  "column": 34,
+                  "offset": 352
+                },
+                "end": {
+                  "line": 23,
+                  "column": 51,
+                  "offset": 369
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "inlineCode",
+              "value": "<img>",
+              "position": {
+                "start": {
+                  "line": 23,
+                  "column": 51,
+                  "offset": 369
+                },
+                "end": {
+                  "line": 23,
+                  "column": 58,
+                  "offset": 376
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "text",
+              "value": " component",
+              "position": {
+                "start": {
+                  "line": 23,
+                  "column": 58,
+                  "offset": 376
+                },
+                "end": {
+                  "line": 23,
+                  "column": 68,
+                  "offset": 386
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 23,
+              "column": 33,
+              "offset": 351
+            },
+            "end": {
+              "line": 23,
+              "column": 132,
+              "offset": 450
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ".",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 23,
+          "column": 1,
+          "offset": 319
+        },
+        "end": {
+          "line": 23,
+          "column": 133,
+          "offset": 451
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "<img src=\"photo.jpg\" alt=\"A person walking through a park\" />",
+      "position": {
+        "start": {
+          "line": 25,
+          "column": 1,
+          "offset": 453
+        },
+        "end": {
+          "line": 27,
+          "column": 4,
+          "offset": 524
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "#usage",
+          "children": [
+            {
+              "type": "text",
+              "value": "See more examples below.",
+              "position": {
+                "start": {
+                  "line": 29,
+                  "column": 2,
+                  "offset": 527
+                },
+                "end": {
+                  "line": 29,
+                  "column": 26,
+                  "offset": 551
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 29,
+              "column": 1,
+              "offset": 526
+            },
+            "end": {
+              "line": 29,
+              "column": 35,
+              "offset": 560
+            }
+          },
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 29,
+          "column": 1,
+          "offset": 526
+        },
+        "end": {
+          "line": 29,
+          "column": 35,
+          "offset": 560
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 4,
+      "children": [
+        {
+          "type": "text",
+          "value": "Props {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "props",
+              "position": {
+                "start": {
+                  "line": 31,
+                  "column": 15,
+                  "offset": 576
+                },
+                "end": {
+                  "line": 31,
+                  "column": 20,
+                  "offset": 581
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 31,
+              "column": 14,
+              "offset": 575
+            },
+            "end": {
+              "line": 31,
+              "column": 21,
+              "offset": 582
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 31,
+          "column": 1,
+          "offset": 562
+        },
+        "end": {
+          "line": 31,
+          "column": 23,
+          "offset": 584
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "inlineCode",
+          "value": "<img>",
+          "position": {
+            "start": {
+              "line": 33,
+              "column": 1,
+              "offset": 586
+            },
+            "end": {
+              "line": 33,
+              "column": 8,
+              "offset": 593
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " supports all ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/reference/react-dom/components/common#common-props",
+          "children": [
+            {
+              "type": "text",
+              "value": "common element props.",
+              "position": {
+                "start": {
+                  "line": 33,
+                  "column": 23,
+                  "offset": 608
+                },
+                "end": {
+                  "line": 33,
+                  "column": 44,
+                  "offset": 629
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 33,
+              "column": 22,
+              "offset": 607
+            },
+            "end": {
+              "line": 33,
+              "column": 98,
+              "offset": 683
+            }
+          },
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 33,
+          "column": 1,
+          "offset": 586
+        },
+        "end": {
+          "line": 33,
+          "column": 98,
+          "offset": 683
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "alt",
+                  "position": {
+                    "start": {
+                      "line": 35,
+                      "column": 3,
+                      "offset": 687
+                    },
+                    "end": {
+                      "line": 35,
+                      "column": 8,
+                      "offset": 692
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ": a string. Specifies alternative text for the image. Use an empty string for a purely decorative image.",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 35,
+                  "column": 3,
+                  "offset": 687
+                },
+                "end": {
+                  "line": 35,
+                  "column": 112,
+                  "offset": 796
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 35,
+              "column": 1,
+              "offset": 685
+            },
+            "end": {
+              "line": 35,
+              "column": 112,
+              "offset": 796
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "crossOrigin",
+                  "position": {
+                    "start": {
+                      "line": 36,
+                      "column": 3,
+                      "offset": 799
+                    },
+                    "end": {
+                      "line": 36,
+                      "column": 16,
+                      "offset": 812
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ": a string. Specifies the ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/crossorigin",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "CORS policy",
+                      "position": {
+                        "start": {
+                          "line": 36,
+                          "column": 43,
+                          "offset": 839
+                        },
+                        "end": {
+                          "line": 36,
+                          "column": 54,
+                          "offset": 850
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 36,
+                      "column": 42,
+                      "offset": 838
+                    },
+                    "end": {
+                      "line": 36,
+                      "column": 129,
+                      "offset": 925
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " to use when fetching the image. The possible values are ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "anonymous",
+                  "position": {
+                    "start": {
+                      "line": 36,
+                      "column": 186,
+                      "offset": 982
+                    },
+                    "end": {
+                      "line": 36,
+                      "column": 197,
+                      "offset": 993
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " and ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "use-credentials",
+                  "position": {
+                    "start": {
+                      "line": 36,
+                      "column": 202,
+                      "offset": 998
+                    },
+                    "end": {
+                      "line": 36,
+                      "column": 219,
+                      "offset": 1015
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ".",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 36,
+                  "column": 3,
+                  "offset": 799
+                },
+                "end": {
+                  "line": 36,
+                  "column": 220,
+                  "offset": 1016
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 36,
+              "column": 1,
+              "offset": 797
+            },
+            "end": {
+              "line": 36,
+              "column": 220,
+              "offset": 1016
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "decoding",
+                  "position": {
+                    "start": {
+                      "line": 37,
+                      "column": 3,
+                      "offset": 1019
+                    },
+                    "end": {
+                      "line": 37,
+                      "column": 13,
+                      "offset": 1029
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ": a string. Suggests whether the browser should wait to decode the image before presenting other content. The possible values are ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "async",
+                  "position": {
+                    "start": {
+                      "line": 37,
+                      "column": 143,
+                      "offset": 1159
+                    },
+                    "end": {
+                      "line": 37,
+                      "column": 150,
+                      "offset": 1166
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ", ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "sync",
+                  "position": {
+                    "start": {
+                      "line": 37,
+                      "column": 152,
+                      "offset": 1168
+                    },
+                    "end": {
+                      "line": 37,
+                      "column": 158,
+                      "offset": 1174
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ", and ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "auto",
+                  "position": {
+                    "start": {
+                      "line": 37,
+                      "column": 164,
+                      "offset": 1180
+                    },
+                    "end": {
+                      "line": 37,
+                      "column": 170,
+                      "offset": 1186
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " (the default).",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 37,
+                  "column": 3,
+                  "offset": 1019
+                },
+                "end": {
+                  "line": 37,
+                  "column": 185,
+                  "offset": 1201
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 37,
+              "column": 1,
+              "offset": 1017
+            },
+            "end": {
+              "line": 37,
+              "column": 185,
+              "offset": 1201
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "fetchPriority",
+                  "position": {
+                    "start": {
+                      "line": 38,
+                      "column": 3,
+                      "offset": 1204
+                    },
+                    "end": {
+                      "line": 38,
+                      "column": 18,
+                      "offset": 1219
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ": a string. Suggests a relative priority for fetching the image. The possible values are ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "high",
+                  "position": {
+                    "start": {
+                      "line": 38,
+                      "column": 107,
+                      "offset": 1308
+                    },
+                    "end": {
+                      "line": 38,
+                      "column": 113,
+                      "offset": 1314
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ", ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "low",
+                  "position": {
+                    "start": {
+                      "line": 38,
+                      "column": 115,
+                      "offset": 1316
+                    },
+                    "end": {
+                      "line": 38,
+                      "column": 120,
+                      "offset": 1321
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ", and ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "auto",
+                  "position": {
+                    "start": {
+                      "line": 38,
+                      "column": 126,
+                      "offset": 1327
+                    },
+                    "end": {
+                      "line": 38,
+                      "column": 132,
+                      "offset": 1333
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " (the default). During server rendering, ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "fetchPriority=\"low\"",
+                  "position": {
+                    "start": {
+                      "line": 38,
+                      "column": 173,
+                      "offset": 1374
+                    },
+                    "end": {
+                      "line": 38,
+                      "column": 194,
+                      "offset": 1395
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " also prevents React from ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "#controlling-image-preloading-during-server-rendering",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "automatically preloading the image.",
+                      "position": {
+                        "start": {
+                          "line": 38,
+                          "column": 221,
+                          "offset": 1422
+                        },
+                        "end": {
+                          "line": 38,
+                          "column": 256,
+                          "offset": 1457
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 38,
+                      "column": 220,
+                      "offset": 1421
+                    },
+                    "end": {
+                      "line": 38,
+                      "column": 312,
+                      "offset": 1513
+                    }
+                  },
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 38,
+                  "column": 3,
+                  "offset": 1204
+                },
+                "end": {
+                  "line": 38,
+                  "column": 312,
+                  "offset": 1513
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 38,
+              "column": 1,
+              "offset": 1202
+            },
+            "end": {
+              "line": 38,
+              "column": 312,
+              "offset": 1513
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "height",
+                  "position": {
+                    "start": {
+                      "line": 39,
+                      "column": 3,
+                      "offset": 1516
+                    },
+                    "end": {
+                      "line": 39,
+                      "column": 11,
+                      "offset": 1524
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ": a number or string. Specifies the rendered height of the image.",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 39,
+                  "column": 3,
+                  "offset": 1516
+                },
+                "end": {
+                  "line": 39,
+                  "column": 76,
+                  "offset": 1589
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 39,
+              "column": 1,
+              "offset": 1514
+            },
+            "end": {
+              "line": 39,
+              "column": 76,
+              "offset": 1589
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "loading",
+                  "position": {
+                    "start": {
+                      "line": 40,
+                      "column": 3,
+                      "offset": 1592
+                    },
+                    "end": {
+                      "line": 40,
+                      "column": 12,
+                      "offset": 1601
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ": a string. Specifies whether the browser should defer loading the image until it is near the viewport. The possible values are ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "eager",
+                  "position": {
+                    "start": {
+                      "line": 40,
+                      "column": 140,
+                      "offset": 1729
+                    },
+                    "end": {
+                      "line": 40,
+                      "column": 147,
+                      "offset": 1736
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " (the default) and ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "lazy",
+                  "position": {
+                    "start": {
+                      "line": 40,
+                      "column": 166,
+                      "offset": 1755
+                    },
+                    "end": {
+                      "line": 40,
+                      "column": 172,
+                      "offset": 1761
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ". Setting ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "loading=\"lazy\"",
+                  "position": {
+                    "start": {
+                      "line": 40,
+                      "column": 182,
+                      "offset": 1771
+                    },
+                    "end": {
+                      "line": 40,
+                      "column": 198,
+                      "offset": 1787
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " prevents React from ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "#controlling-image-preloading-during-server-rendering",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "automatically preloading the image.",
+                      "position": {
+                        "start": {
+                          "line": 40,
+                          "column": 220,
+                          "offset": 1809
+                        },
+                        "end": {
+                          "line": 40,
+                          "column": 255,
+                          "offset": 1844
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 40,
+                      "column": 219,
+                      "offset": 1808
+                    },
+                    "end": {
+                      "line": 40,
+                      "column": 311,
+                      "offset": 1900
+                    }
+                  },
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 40,
+                  "column": 3,
+                  "offset": 1592
+                },
+                "end": {
+                  "line": 40,
+                  "column": 311,
+                  "offset": 1900
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 40,
+              "column": 1,
+              "offset": 1590
+            },
+            "end": {
+              "line": 40,
+              "column": 311,
+              "offset": 1900
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "onError",
+                  "position": {
+                    "start": {
+                      "line": 41,
+                      "column": 3,
+                      "offset": 1903
+                    },
+                    "end": {
+                      "line": 41,
+                      "column": 12,
+                      "offset": 1912
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ": an ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "/reference/react-dom/components/common#event-handler",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "event handler",
+                      "position": {
+                        "start": {
+                          "line": 41,
+                          "column": 18,
+                          "offset": 1918
+                        },
+                        "end": {
+                          "line": 41,
+                          "column": 31,
+                          "offset": 1931
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 41,
+                      "column": 17,
+                      "offset": 1917
+                    },
+                    "end": {
+                      "line": 41,
+                      "column": 86,
+                      "offset": 1986
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " function. Fires when the image fails to load.",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 41,
+                  "column": 3,
+                  "offset": 1903
+                },
+                "end": {
+                  "line": 41,
+                  "column": 132,
+                  "offset": 2032
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 41,
+              "column": 1,
+              "offset": 1901
+            },
+            "end": {
+              "line": 41,
+              "column": 132,
+              "offset": 2032
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "onLoad",
+                  "position": {
+                    "start": {
+                      "line": 42,
+                      "column": 3,
+                      "offset": 2035
+                    },
+                    "end": {
+                      "line": 42,
+                      "column": 11,
+                      "offset": 2043
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ": an ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "/reference/react-dom/components/common#event-handler",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "event handler",
+                      "position": {
+                        "start": {
+                          "line": 42,
+                          "column": 17,
+                          "offset": 2049
+                        },
+                        "end": {
+                          "line": 42,
+                          "column": 30,
+                          "offset": 2062
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 42,
+                      "column": 16,
+                      "offset": 2048
+                    },
+                    "end": {
+                      "line": 42,
+                      "column": 85,
+                      "offset": 2117
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " function. Fires when the image finishes loading. Passing ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "onLoad",
+                  "position": {
+                    "start": {
+                      "line": 42,
+                      "column": 3,
+                      "offset": 2035
+                    },
+                    "end": {
+                      "line": 42,
+                      "column": 11,
+                      "offset": 2043
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " prevents React from ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "#waiting-for-an-image-during-a-view-transition",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "waiting for the image during a client-rendered View Transition update.",
+                      "position": {
+                        "start": {
+                          "line": 42,
+                          "column": 173,
+                          "offset": 2205
+                        },
+                        "end": {
+                          "line": 42,
+                          "column": 243,
+                          "offset": 2275
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 42,
+                      "column": 172,
+                      "offset": 2204
+                    },
+                    "end": {
+                      "line": 42,
+                      "column": 292,
+                      "offset": 2324
+                    }
+                  },
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 42,
+                  "column": 3,
+                  "offset": 2035
+                },
+                "end": {
+                  "line": 42,
+                  "column": 292,
+                  "offset": 2324
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 42,
+              "column": 1,
+              "offset": 2033
+            },
+            "end": {
+              "line": 42,
+              "column": 292,
+              "offset": 2324
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "referrerPolicy",
+                  "position": {
+                    "start": {
+                      "line": 43,
+                      "column": 3,
+                      "offset": 2327
+                    },
+                    "end": {
+                      "line": 43,
+                      "column": 19,
+                      "offset": 2343
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ": a string. Specifies the ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#referrerpolicy",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "referrer information",
+                      "position": {
+                        "start": {
+                          "line": 43,
+                          "column": 46,
+                          "offset": 2370
+                        },
+                        "end": {
+                          "line": 43,
+                          "column": 66,
+                          "offset": 2390
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 43,
+                      "column": 45,
+                      "offset": 2369
+                    },
+                    "end": {
+                      "line": 43,
+                      "column": 145,
+                      "offset": 2469
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " to send when fetching the image.",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 43,
+                  "column": 3,
+                  "offset": 2327
+                },
+                "end": {
+                  "line": 43,
+                  "column": 178,
+                  "offset": 2502
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 43,
+              "column": 1,
+              "offset": 2325
+            },
+            "end": {
+              "line": 43,
+              "column": 178,
+              "offset": 2502
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "sizes",
+                  "position": {
+                    "start": {
+                      "line": 44,
+                      "column": 3,
+                      "offset": 2505
+                    },
+                    "end": {
+                      "line": 44,
+                      "column": 10,
+                      "offset": 2512
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ": a string. Specifies the image sizes for different page layouts. Used with ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "srcSet",
+                  "position": {
+                    "start": {
+                      "line": 44,
+                      "column": 86,
+                      "offset": 2588
+                    },
+                    "end": {
+                      "line": 44,
+                      "column": 94,
+                      "offset": 2596
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ".",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 44,
+                  "column": 3,
+                  "offset": 2505
+                },
+                "end": {
+                  "line": 44,
+                  "column": 95,
+                  "offset": 2597
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 44,
+              "column": 1,
+              "offset": 2503
+            },
+            "end": {
+              "line": 44,
+              "column": 95,
+              "offset": 2597
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "src",
+                  "position": {
+                    "start": {
+                      "line": 45,
+                      "column": 3,
+                      "offset": 2600
+                    },
+                    "end": {
+                      "line": 45,
+                      "column": 8,
+                      "offset": 2605
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ": a string. Specifies the URL of the image.",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 45,
+                  "column": 3,
+                  "offset": 2600
+                },
+                "end": {
+                  "line": 45,
+                  "column": 51,
+                  "offset": 2648
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 45,
+              "column": 1,
+              "offset": 2598
+            },
+            "end": {
+              "line": 45,
+              "column": 51,
+              "offset": 2648
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "srcSet",
+                  "position": {
+                    "start": {
+                      "line": 46,
+                      "column": 3,
+                      "offset": 2651
+                    },
+                    "end": {
+                      "line": 46,
+                      "column": 11,
+                      "offset": 2659
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ": a string. Specifies one or more candidate image sources for the browser to choose from.",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 46,
+                  "column": 3,
+                  "offset": 2651
+                },
+                "end": {
+                  "line": 46,
+                  "column": 100,
+                  "offset": 2748
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 46,
+              "column": 1,
+              "offset": 2649
+            },
+            "end": {
+              "line": 46,
+              "column": 100,
+              "offset": 2748
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "useMap",
+                  "position": {
+                    "start": {
+                      "line": 47,
+                      "column": 3,
+                      "offset": 2751
+                    },
+                    "end": {
+                      "line": 47,
+                      "column": 11,
+                      "offset": 2759
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ": a string. Associates the image with a ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/map",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "client-side image map",
+                      "position": {
+                        "start": {
+                          "line": 47,
+                          "column": 52,
+                          "offset": 2800
+                        },
+                        "end": {
+                          "line": 47,
+                          "column": 73,
+                          "offset": 2821
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 47,
+                      "column": 51,
+                      "offset": 2799
+                    },
+                    "end": {
+                      "line": 47,
+                      "column": 137,
+                      "offset": 2885
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ".",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 47,
+                  "column": 3,
+                  "offset": 2751
+                },
+                "end": {
+                  "line": 47,
+                  "column": 138,
+                  "offset": 2886
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 47,
+              "column": 1,
+              "offset": 2749
+            },
+            "end": {
+              "line": 47,
+              "column": 138,
+              "offset": 2886
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "width",
+                  "position": {
+                    "start": {
+                      "line": 48,
+                      "column": 3,
+                      "offset": 2889
+                    },
+                    "end": {
+                      "line": 48,
+                      "column": 10,
+                      "offset": 2896
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ": a number or string. Specifies the rendered width of the image.",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 48,
+                  "column": 3,
+                  "offset": 2889
+                },
+                "end": {
+                  "line": 48,
+                  "column": 74,
+                  "offset": 2960
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 48,
+              "column": 1,
+              "offset": 2887
+            },
+            "end": {
+              "line": 48,
+              "column": 74,
+              "offset": 2960
+            }
+          },
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 35,
+          "column": 1,
+          "offset": 685
+        },
+        "end": {
+          "line": 48,
+          "column": 74,
+          "offset": 2960
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 4,
+      "children": [
+        {
+          "type": "text",
+          "value": "Caveats {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "caveats",
+              "position": {
+                "start": {
+                  "line": 50,
+                  "column": 17,
+                  "offset": 2978
+                },
+                "end": {
+                  "line": 50,
+                  "column": 24,
+                  "offset": 2985
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 50,
+              "column": 16,
+              "offset": 2977
+            },
+            "end": {
+              "line": 50,
+              "column": 25,
+              "offset": 2986
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 50,
+          "column": 1,
+          "offset": 2962
+        },
+        "end": {
+          "line": 50,
+          "column": 27,
+          "offset": 2988
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Do not pass an empty string to ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "src",
+                  "position": {
+                    "start": {
+                      "line": 52,
+                      "column": 34,
+                      "offset": 3023
+                    },
+                    "end": {
+                      "line": 52,
+                      "column": 39,
+                      "offset": 3028
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ". It may cause the browser to request the current page again. React warns in development and omits the attribute. To render no image, omit the ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "<img>",
+                  "position": {
+                    "start": {
+                      "line": 52,
+                      "column": 182,
+                      "offset": 3171
+                    },
+                    "end": {
+                      "line": 52,
+                      "column": 189,
+                      "offset": 3178
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " or pass ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "null",
+                  "position": {
+                    "start": {
+                      "line": 52,
+                      "column": 198,
+                      "offset": 3187
+                    },
+                    "end": {
+                      "line": 52,
+                      "column": 204,
+                      "offset": 3193
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " to ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "src",
+                  "position": {
+                    "start": {
+                      "line": 52,
+                      "column": 34,
+                      "offset": 3023
+                    },
+                    "end": {
+                      "line": 52,
+                      "column": 39,
+                      "offset": 3028
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ".",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 52,
+                  "column": 3,
+                  "offset": 2992
+                },
+                "end": {
+                  "line": 52,
+                  "column": 214,
+                  "offset": 3203
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 52,
+              "column": 1,
+              "offset": 2990
+            },
+            "end": {
+              "line": 52,
+              "column": 214,
+              "offset": 3203
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "<img>",
+                  "position": {
+                    "start": {
+                      "line": 53,
+                      "column": 3,
+                      "offset": 3206
+                    },
+                    "end": {
+                      "line": 53,
+                      "column": 10,
+                      "offset": 3213
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " cannot have children or use ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "dangerouslySetInnerHTML",
+                  "position": {
+                    "start": {
+                      "line": 53,
+                      "column": 39,
+                      "offset": 3242
+                    },
+                    "end": {
+                      "line": 53,
+                      "column": 64,
+                      "offset": 3267
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ". React throws an error if you pass either.",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 53,
+                  "column": 3,
+                  "offset": 3206
+                },
+                "end": {
+                  "line": 53,
+                  "column": 107,
+                  "offset": 3310
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 53,
+              "column": 1,
+              "offset": 3204
+            },
+            "end": {
+              "line": 53,
+              "column": 107,
+              "offset": 3310
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "fetchPriority=\"low\"",
+                  "position": {
+                    "start": {
+                      "line": 54,
+                      "column": 3,
+                      "offset": 3313
+                    },
+                    "end": {
+                      "line": 54,
+                      "column": 24,
+                      "offset": 3334
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " does not stop React from waiting for the image to load ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineDel",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "and decode ",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "during a client-rendered View Transition update. Use ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "loading=\"lazy\"",
+                  "position": {
+                    "start": {
+                      "line": 54,
+                      "column": 144,
+                      "offset": 3454
+                    },
+                    "end": {
+                      "line": 54,
+                      "column": 160,
+                      "offset": 3470
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " or an ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "onLoad",
+                  "position": {
+                    "start": {
+                      "line": 54,
+                      "column": 167,
+                      "offset": 3477
+                    },
+                    "end": {
+                      "line": 54,
+                      "column": 175,
+                      "offset": 3485
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " handler to opt out of that behavior.",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 54,
+                  "column": 3,
+                  "offset": 3313
+                },
+                "end": {
+                  "line": 54,
+                  "column": 201,
+                  "offset": 3511
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 54,
+              "column": 1,
+              "offset": 3311
+            },
+            "end": {
+              "line": 54,
+              "column": 201,
+              "offset": 3511
+            }
+          },
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 52,
+          "column": 1,
+          "offset": 2990
+        },
+        "end": {
+          "line": 54,
+          "column": 201,
+          "offset": 3511
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "thematicBreak",
+      "position": {
+        "start": {
+          "line": 56,
+          "column": 1,
+          "offset": 3513
+        },
+        "end": {
+          "line": 56,
+          "column": 4,
+          "offset": 3516
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Usage {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "usage",
+              "position": {
+                "start": {
+                  "line": 58,
+                  "column": 13,
+                  "offset": 3541
+                },
+                "end": {
+                  "line": 58,
+                  "column": 18,
+                  "offset": 3546
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 58,
+              "column": 12,
+              "offset": 3540
+            },
+            "end": {
+              "line": 58,
+              "column": 19,
+              "offset": 3547
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 58,
+          "column": 1,
+          "offset": 3518
+        },
+        "end": {
+          "line": 58,
+          "column": 21,
+          "offset": 3538
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Displaying an image {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "displaying-an-image",
+              "position": {
+                "start": {
+                  "line": 60,
+                  "column": 28,
+                  "offset": 3578
+                },
+                "end": {
+                  "line": 60,
+                  "column": 47,
+                  "offset": 3597
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 60,
+              "column": 27,
+              "offset": 3577
+            },
+            "end": {
+              "line": 60,
+              "column": 48,
+              "offset": 3598
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 60,
+          "column": 1,
+          "offset": 3540
+        },
+        "end": {
+          "line": 60,
+          "column": 50,
+          "offset": 3589
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Pass the image URL to ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "src",
+          "position": {
+            "start": {
+              "line": 62,
+              "column": 23,
+              "offset": 3624
+            },
+            "end": {
+              "line": 62,
+              "column": 28,
+              "offset": 3629
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " and a text description to ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "alt",
+          "position": {
+            "start": {
+              "line": 62,
+              "column": 55,
+              "offset": 3656
+            },
+            "end": {
+              "line": 62,
+              "column": 60,
+              "offset": 3661
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ":",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 62,
+          "column": 1,
+          "offset": 3591
+        },
+        "end": {
+          "line": 62,
+          "column": 61,
+          "offset": 3651
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<Sandpack>",
+      "position": {
+        "start": {
+          "line": 64,
+          "column": 1,
+          "offset": 3653
+        },
+        "end": {
+          "line": 64,
+          "column": 11,
+          "offset": 3663
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "export default function Profile() {\n  return (\n    <img\n      src=\"https://react.dev/images/docs/scientists/yXOvdOSs.jpg\"\n      alt=\"Hedy Lamarr\"\n      width={100}\n      height={100}\n    />\n  );\n}",
+      "position": {
+        "start": {
+          "line": 66,
+          "column": 1,
+          "offset": 3665
+        },
+        "end": {
+          "line": 77,
+          "column": 4,
+          "offset": 3871
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "css",
+      "meta": null,
+      "value": "img {\n  border-radius: 50%;\n  object-fit: cover;\n}",
+      "position": {
+        "start": {
+          "line": 79,
+          "column": 1,
+          "offset": 3873
+        },
+        "end": {
+          "line": 84,
+          "column": 4,
+          "offset": 3934
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</Sandpack>",
+      "position": {
+        "start": {
+          "line": 86,
+          "column": 1,
+          "offset": 3936
+        },
+        "end": {
+          "line": 86,
+          "column": 12,
+          "offset": 3947
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Specify ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "width",
+          "position": {
+            "start": {
+              "line": 88,
+              "column": 9,
+              "offset": 3968
+            },
+            "end": {
+              "line": 88,
+              "column": 16,
+              "offset": 3975
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " and ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "height",
+          "position": {
+            "start": {
+              "line": 88,
+              "column": 21,
+              "offset": 3980
+            },
+            "end": {
+              "line": 88,
+              "column": 29,
+              "offset": 3988
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " when you know the image dimensions so the browser can reserve space before the image loads. For a decorative image, pass ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "alt=\"\"",
+          "position": {
+            "start": {
+              "line": 88,
+              "column": 151,
+              "offset": 4110
+            },
+            "end": {
+              "line": 88,
+              "column": 159,
+              "offset": 4118
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " so that screen readers ignore it.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 88,
+          "column": 1,
+          "offset": 3949
+        },
+        "end": {
+          "line": 88,
+          "column": 193,
+          "offset": 4141
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "thematicBreak",
+      "position": {
+        "start": {
+          "line": 90,
+          "column": 1,
+          "offset": 4143
+        },
+        "end": {
+          "line": 90,
+          "column": 4,
+          "offset": 4146
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Controlling image preloading during server rendering {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "controlling-image-preloading-during-server-rendering",
+              "position": {
+                "start": {
+                  "line": 92,
+                  "column": 61,
+                  "offset": 4219
+                },
+                "end": {
+                  "line": 92,
+                  "column": 113,
+                  "offset": 4271
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 92,
+              "column": 60,
+              "offset": 4218
+            },
+            "end": {
+              "line": 92,
+              "column": 114,
+              "offset": 4272
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 92,
+          "column": 1,
+          "offset": 4148
+        },
+        "end": {
+          "line": 92,
+          "column": 116,
+          "offset": 4263
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "During server rendering, React automatically generates a preload hint for an ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<img>",
+          "position": {
+            "start": {
+              "line": 94,
+              "column": 78,
+              "offset": 4353
+            },
+            "end": {
+              "line": 94,
+              "column": 85,
+              "offset": 4360
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " by default. This can let the browser start fetching the image before it encounters the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<img>",
+          "position": {
+            "start": {
+              "line": 94,
+              "column": 78,
+              "offset": 4353
+            },
+            "end": {
+              "line": 94,
+              "column": 85,
+              "offset": 4360
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " in the rendered HTML.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 94,
+          "column": 1,
+          "offset": 4265
+        },
+        "end": {
+          "line": 94,
+          "column": 202,
+          "offset": 4466
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Add ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "loading=\"lazy\"",
+          "position": {
+            "start": {
+              "line": 96,
+              "column": 5,
+              "offset": 4483
+            },
+            "end": {
+              "line": 96,
+              "column": 21,
+              "offset": 4499
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " or ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "fetchPriority=\"low\"",
+          "position": {
+            "start": {
+              "line": 96,
+              "column": 25,
+              "offset": 4503
+            },
+            "end": {
+              "line": 96,
+              "column": 46,
+              "offset": 4524
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " to an image that should not receive this hint:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 96,
+          "column": 1,
+          "offset": 4468
+        },
+        "end": {
+          "line": 96,
+          "column": 93,
+          "offset": 4560
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "function ProductPage() {\n  return (\n    <>\n      <img src=\"hero.jpg\" alt=\"Featured product\" />\n      <img src=\"thumbnail.jpg\" alt=\"Related product\" loading=\"lazy\" />\n      <img src=\"secondary.jpg\" alt=\"Another product\" fetchPriority=\"low\" />\n    </>\n  );\n}",
+      "position": {
+        "start": {
+          "line": 98,
+          "column": 1,
+          "offset": 4562
+        },
+        "end": {
+          "line": 108,
+          "column": 4,
+          "offset": 4828
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "In this example, React generates a preload hint only for ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "hero.jpg",
+          "position": {
+            "start": {
+              "line": 110,
+              "column": 58,
+              "offset": 4898
+            },
+            "end": {
+              "line": 110,
+              "column": 68,
+              "offset": 4908
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ". Depending on the server API or framework, React may render the equivalent of this element:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 110,
+          "column": 1,
+          "offset": 4830
+        },
+        "end": {
+          "line": 110,
+          "column": 160,
+          "offset": 4989
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "html",
+      "meta": null,
+      "value": "<link rel=\"preload\" as=\"image\" href=\"hero.jpg\" />",
+      "position": {
+        "start": {
+          "line": 112,
+          "column": 1,
+          "offset": 4991
+        },
+        "end": {
+          "line": 114,
+          "column": 4,
+          "offset": 5052
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "React may instead provide the same hint in a ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "Link",
+          "position": {
+            "start": {
+              "line": 116,
+              "column": 46,
+              "offset": 5110
+            },
+            "end": {
+              "line": 116,
+              "column": 52,
+              "offset": 5116
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " response header. The other two images keep their ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "loading",
+          "position": {
+            "start": {
+              "line": 116,
+              "column": 102,
+              "offset": 5166
+            },
+            "end": {
+              "line": 116,
+              "column": 111,
+              "offset": 5175
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " and ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "fetchPriority",
+          "position": {
+            "start": {
+              "line": 116,
+              "column": 116,
+              "offset": 5180
+            },
+            "end": {
+              "line": 116,
+              "column": 131,
+              "offset": 5195
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " props in the rendered HTML, but React does not generate preload hints for them. The ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "loading=\"lazy\"",
+          "position": {
+            "start": {
+              "line": 116,
+              "column": 216,
+              "offset": 5280
+            },
+            "end": {
+              "line": 116,
+              "column": 232,
+              "offset": 5296
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " prop asks the browser to defer loading an image until it approaches the viewport. The ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "fetchPriority=\"low\"",
+          "position": {
+            "start": {
+              "line": 116,
+              "column": 319,
+              "offset": 5383
+            },
+            "end": {
+              "line": 116,
+              "column": 340,
+              "offset": 5404
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " prop allows the image to load immediately, but tells the browser to fetch it at a lower priority.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 116,
+          "column": 1,
+          "offset": 5054
+        },
+        "end": {
+          "line": 116,
+          "column": 438,
+          "offset": 5491
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "React also does not automatically preload an image when it is inside a ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<picture>",
+          "position": {
+            "start": {
+              "line": 118,
+              "column": 72,
+              "offset": 5575
+            },
+            "end": {
+              "line": 118,
+              "column": 83,
+              "offset": 5586
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " or ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<noscript>",
+          "position": {
+            "start": {
+              "line": 118,
+              "column": 87,
+              "offset": 5590
+            },
+            "end": {
+              "line": 118,
+              "column": 99,
+              "offset": 5602
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " element, or when its ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "src",
+          "position": {
+            "start": {
+              "line": 118,
+              "column": 121,
+              "offset": 5624
+            },
+            "end": {
+              "line": 118,
+              "column": 126,
+              "offset": 5629
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " or ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "srcSet",
+          "position": {
+            "start": {
+              "line": 118,
+              "column": 130,
+              "offset": 5633
+            },
+            "end": {
+              "line": 118,
+              "column": 138,
+              "offset": 5641
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " is a data URL.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 118,
+          "column": 1,
+          "offset": 5493
+        },
+        "end": {
+          "line": 118,
+          "column": 153,
+          "offset": 5645
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "If you render an image through a framework or a component library, consult its documentation for the default behavior. React decides whether to generate an automatic preload from the props of the underlying ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<img>",
+          "position": {
+            "start": {
+              "line": 120,
+              "column": 208,
+              "offset": 5865
+            },
+            "end": {
+              "line": 120,
+              "column": 215,
+              "offset": 5872
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ". For example, an image component may add ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "loading=\"lazy\"",
+          "position": {
+            "start": {
+              "line": 120,
+              "column": 257,
+              "offset": 5914
+            },
+            "end": {
+              "line": 120,
+              "column": 273,
+              "offset": 5930
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " by default and provide a separate option for explicitly preloading selected images.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 120,
+          "column": 1,
+          "offset": 5647
+        },
+        "end": {
+          "line": 120,
+          "column": 357,
+          "offset": 6003
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "To create an explicit preload hint, call ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/reference/react-dom/preload",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "preload",
+              "position": {
+                "start": {
+                  "line": 122,
+                  "column": 43,
+                  "offset": 6058
+                },
+                "end": {
+                  "line": 122,
+                  "column": 52,
+                  "offset": 6067
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 122,
+              "column": 42,
+              "offset": 6057
+            },
+            "end": {
+              "line": 122,
+              "column": 83,
+              "offset": 6098
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ".",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 122,
+          "column": 1,
+          "offset": 6005
+        },
+        "end": {
+          "line": 122,
+          "column": 84,
+          "offset": 6088
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "thematicBreak",
+      "position": {
+        "start": {
+          "line": 124,
+          "column": 1,
+          "offset": 6090
+        },
+        "end": {
+          "line": 124,
+          "column": 4,
+          "offset": 6093
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Waiting for an image during a View Transition {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "waiting-for-an-image-during-a-view-transition",
+              "position": {
+                "start": {
+                  "line": 126,
+                  "column": 54,
+                  "offset": 6159
+                },
+                "end": {
+                  "line": 126,
+                  "column": 99,
+                  "offset": 6204
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 126,
+              "column": 53,
+              "offset": 6158
+            },
+            "end": {
+              "line": 126,
+              "column": 100,
+              "offset": 6205
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 126,
+          "column": 1,
+          "offset": 6095
+        },
+        "end": {
+          "line": 126,
+          "column": 102,
+          "offset": 6196
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "During a ",
+          "data": {}
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": "client-rendered ",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/reference/react/ViewTransition",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "<ViewTransition>",
+              "position": {
+                "start": {
+                  "line": 128,
+                  "column": 27,
+                  "offset": 6235
+                },
+                "end": {
+                  "line": 128,
+                  "column": 45,
+                  "offset": 6253
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 128,
+              "column": 26,
+              "offset": 6234
+            },
+            "end": {
+              "line": 128,
+              "column": 79,
+              "offset": 6287
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " update, React ",
+          "data": {}
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": "may wait for an image",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": "waits up to 500 ms for visible images",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": " to load ",
+          "data": {}
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": "and decode ",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "before starting the animation. This ",
+          "data": {}
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": "applies when a new ",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "<img>",
+              "position": {
+                "start": {
+                  "line": 128,
+                  "column": 190,
+                  "offset": 6398
+                },
+                "end": {
+                  "line": 128,
+                  "column": 197,
+                  "offset": 6405
+                }
+              },
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": " with a non-empty ",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "src",
+              "position": {
+                "start": {
+                  "line": 128,
+                  "column": 215,
+                  "offset": 6423
+                },
+                "end": {
+                  "line": 128,
+                  "column": 220,
+                  "offset": 6428
+                }
+              },
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": " is rendered, or when an existing image's ",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "src",
+              "position": {
+                "start": {
+                  "line": 128,
+                  "column": 215,
+                  "offset": 6423
+                },
+                "end": {
+                  "line": 128,
+                  "column": 220,
+                  "offset": 6428
+                }
+              },
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": " or ",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "srcSet",
+              "position": {
+                "start": {
+                  "line": 128,
+                  "column": 271,
+                  "offset": 6479
+                },
+                "end": {
+                  "line": 128,
+                  "column": 279,
+                  "offset": 6487
+                }
+              },
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": " changes. The image must be inside the ",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "<ViewTransition>",
+              "position": {
+                "start": {
+                  "line": 128,
+                  "column": 318,
+                  "offset": 6526
+                },
+                "end": {
+                  "line": 128,
+                  "column": 336,
+                  "offset": 6544
+                }
+              },
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": " subtree and must not have",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": "includes newly rendered ",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "<img>",
+              "position": {
+                "start": {
+                  "line": 128,
+                  "column": 190,
+                  "offset": 6398
+                },
+                "end": {
+                  "line": 128,
+                  "column": 197,
+                  "offset": 6405
+                }
+              },
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": " elements and existing images whose ",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "src",
+              "position": {
+                "start": {
+                  "line": 128,
+                  "column": 215,
+                  "offset": 6423
+                },
+                "end": {
+                  "line": 128,
+                  "column": 220,
+                  "offset": 6428
+                }
+              },
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": " or ",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "srcSet",
+              "position": {
+                "start": {
+                  "line": 128,
+                  "column": 271,
+                  "offset": 6479
+                },
+                "end": {
+                  "line": 128,
+                  "column": 279,
+                  "offset": 6487
+                }
+              },
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": " changes. Setting",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": " ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "loading=\"lazy\"",
+          "position": {
+            "start": {
+              "line": 128,
+              "column": 363,
+              "offset": 6571
+            },
+            "end": {
+              "line": 128,
+              "column": 379,
+              "offset": 6587
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " or ",
+          "data": {}
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": "adding ",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "an ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "onLoad",
+          "position": {
+            "start": {
+              "line": 128,
+              "column": 386,
+              "offset": 6594
+            },
+            "end": {
+              "line": 128,
+              "column": 394,
+              "offset": 6602
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " handler",
+          "data": {}
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": ". React does not wait for images during synchronous updates",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": " opts an image out",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": ".",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 128,
+          "column": 1,
+          "offset": 6198
+        },
+        "end": {
+          "line": 128,
+          "column": 327,
+          "offset": 6524
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": "When a Suspense boundary reveals streamed content inside a ",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "<ViewTransition>",
+              "position": {
+                "start": {
+                  "line": 130,
+                  "column": 60,
+                  "offset": 6731
+                },
+                "end": {
+                  "line": 130,
+                  "column": 78,
+                  "offset": 6749
+                }
+              },
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": ", React may also wait for visible images with a non-empty ",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "src",
+              "position": {
+                "start": {
+                  "line": 130,
+                  "column": 136,
+                  "offset": 6807
+                },
+                "end": {
+                  "line": 130,
+                  "column": 141,
+                  "offset": 6812
+                }
+              },
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": " that do not have ",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "loading=\"lazy\"",
+              "position": {
+                "start": {
+                  "line": 130,
+                  "column": 159,
+                  "offset": 6830
+                },
+                "end": {
+                  "line": 130,
+                  "column": 175,
+                  "offset": 6846
+                }
+              },
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": ". React stops waiting after a timeout so that a slow image does not block the update indefinitely.",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": "Compare how the same image appears when a Suspense boundary reveals its content inside and outside a ",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "<ViewTransition>",
+              "position": {
+                "start": {
+                  "line": 130,
+                  "column": 60,
+                  "offset": 6731
+                },
+                "end": {
+                  "line": 130,
+                  "column": 78,
+                  "offset": 6749
+                }
+              },
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": ":",
+              "data": {}
+            }
+          ]
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 130,
+          "column": 1,
+          "offset": 6526
+        },
+        "end": {
+          "line": 130,
+          "column": 121,
+          "offset": 6646
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "del",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "In this example, the Suspense boundary is wrapped in a ",
+              "position": {
+                "start": {
+                  "line": 132,
+                  "column": 1,
+                  "offset": 6946
+                },
+                "end": {
+                  "line": 132,
+                  "column": 56,
+                  "offset": 7001
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "inlineCode",
+              "value": "<ViewTransition>",
+              "position": {
+                "start": {
+                  "line": 132,
+                  "column": 56,
+                  "offset": 7001
+                },
+                "end": {
+                  "line": 132,
+                  "column": 74,
+                  "offset": 7019
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "text",
+              "value": " and shows a profile skeleton until the portrait has loaded.",
+              "position": {
+                "start": {
+                  "line": 132,
+                  "column": 74,
+                  "offset": 7019
+                },
+                "end": {
+                  "line": 132,
+                  "column": 134,
+                  "offset": 7079
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 132,
+              "column": 1,
+              "offset": 6946
+            },
+            "end": {
+              "line": 132,
+              "column": 134,
+              "offset": 7079
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "del",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "For comparison, the second button inserts the same card directly into the DOM. The card appears immediately, and the browser displays the image after it loads:",
+              "position": {
+                "start": {
+                  "line": 134,
+                  "column": 1,
+                  "offset": 7081
+                },
+                "end": {
+                  "line": 134,
+                  "column": 160,
+                  "offset": 7240
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 134,
+              "column": 1,
+              "offset": 7081
+            },
+            "end": {
+              "line": 134,
+              "column": 160,
+              "offset": 7240
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "html",
+      "value": "<Sandpack>",
+      "position": {
+        "start": {
+          "line": 132,
+          "column": 1,
+          "offset": 6648
+        },
+        "end": {
+          "line": 132,
+          "column": 11,
+          "offset": 6658
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "import {\n  ViewTransition,\n  Suspense,\n  use,\n  useState,\n} from 'react';\nimport { fetchImageSrc } from './image.js';\n\nfunction Profile({ cacheKey }) {\n  const src = use(fetchImageSrc(cacheKey));\n  return (\n    <div className=\"card\">\n      <img src={src} alt=\"\" width={80} height={80} />\n      <p>Jack Pope</p>\n    </div>\n  );\n}\n\nfunction ProfilePlaceholder() {\n  return (\n    <div className=\"card\">\n      <div className=\"avatar-placeholder\" />\n      <p className=\"name-placeholder\">&nbsp;</p>\n    </div>\n  );\n}\n\nexport default function App() {\n  const [showWithTransition, setShowWithTransition] =\n    useState(false);\n  const [showWithoutTransition, setShowWithoutTransition] =\n    useState(false);\n  return (\n    <>\n      <button onClick={() => setShowWithTransition(true)}>\n        Show profile with View Transition\n      </button>\n      {showWithTransition && (\n        <ViewTransition>\n          <Suspense fallback={<ProfilePlaceholder />}>\n            <Profile cacheKey=\"with-transition\" />\n          </Suspense>\n        </ViewTransition>\n      )}\n      <hr />\n      <button onClick={() => setShowWithoutTransition(true)}>\n        Show profile without View Transition\n      </button>\n      {showWithoutTransition && (\n        <Suspense fallback={<ProfilePlaceholder />}>\n          <Profile cacheKey=\"without-transition\" />\n        </Suspense>\n      )}\n    </>\n  );\n}",
+      "position": {
+        "start": {
+          "line": 134,
+          "column": 1,
+          "offset": 6660
+        },
+        "end": {
+          "line": 191,
+          "column": 4,
+          "offset": 8043
+        }
+      },
+      "data": {
+        "diffOldContent": "import { ViewTransition, Suspense, useState, startTransition } from 'react';\nimport { freshImageUrl } from './image.js';\nimport VanillaProfile from './VanillaProfile.js';\n\nfunction Profile({ src }) {\n  return (\n    <div className=\"card\">\n      <img src={src} alt=\"Jack Pope\" width={80} height={80} />\n      <p>Jack Pope</p>\n    </div>\n  );\n}\n\nfunction ProfilePlaceholder() {\n  return (\n    <div className=\"card\">\n      <div className=\"avatar-placeholder\" />\n      <p className=\"name-placeholder\">&nbsp;</p>\n    </div>\n  );\n}\n\nexport default function App() {\n  const [src, setSrc] = useState(null);\n  return (\n    <>\n      <button\n        onClick={() => {\n          startTransition(() => {\n            setSrc(freshImageUrl());\n          });\n        }}>\n        Show profile\n      </button>\n      {src && (\n        <ViewTransition>\n          <Suspense fallback={<ProfilePlaceholder />}>\n            <Profile src={src} />\n          </Suspense>\n        </ViewTransition>\n      )}\n      <hr />\n      <VanillaProfile />\n    </>\n  );\n}"
+      }
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": "src/image.js hidden",
+      "value": "// Normally, the caching logic would be inside a framework.\nconst cache = new Map();\n\nexport function fetchImageSrc(cacheKey) {\n  if (!cache.has(cacheKey)) {\n    cache.set(cacheKey, loadImageSrc());\n  }\n  return cache.get(cacheKey);\n}\n\nasync function loadImageSrc() {\n  // Delay the response so the Suspense fallback is visible.\n  await new Promise(resolve => setTimeout(resolve, 1000));\n  // Add a unique parameter so the image isn't cached.\n  return 'https://react.dev/images/team/jack-pope.jpg?t=' + Date.now();\n}",
+      "position": {
+        "start": {
+          "line": 193,
+          "column": 1,
+          "offset": 8045
+        },
+        "end": {
+          "line": 210,
+          "column": 4,
+          "offset": 8591
+        }
+      },
+      "data": {
+        "diffOldContent": "import { useRef } from 'react';\nimport { freshImageUrl } from './image.js';\n\nexport default function VanillaProfile() {\n  const ref = useRef(null);\n  function show() {\n    ref.current.innerHTML = `<div class=\"card\">\n      <img src=\"${freshImageUrl()}\" alt=\"Jack Pope\" width=\"80\" height=\"80\" />\n      <p>Jack Pope</p>\n    </div>`;\n  }\n  return (\n    <>\n      <button onClick={show}>Show profile (direct DOM update)</button>\n      <div ref={ref} />\n    </>\n  );\n}"
+      }
+    },
+    {
+      "type": "del",
+      "children": [
+        {
+          "type": "code",
+          "lang": "js",
+          "meta": "src/image.js hidden",
+          "value": "// Add a unique parameter so the image isn't cached,\n// and every run shows the loading state.\nexport function freshImageUrl() {\n  return 'https://react.dev/images/team/jack-pope.jpg?t=' + Date.now();\n}",
+          "position": {
+            "start": {
+              "line": 208,
+              "column": 1,
+              "offset": 8789
+            },
+            "end": {
+              "line": 214,
+              "column": 4,
+              "offset": 9021
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "lang": "css",
+      "meta": null,
+      "value": "#root {\n  min-height: 390px;\n}\n.card {\n  margin-top: 1em;\n}\n.card img {\n  display: block;\n  border-radius: 50%;\n  background: #dfe3e9;\n}\n.card p {\n  font-weight: bold;\n}\n.avatar-placeholder {\n  width: 80px;\n  height: 80px;\n  border-radius: 50%;\n  background: #dfe3e9;\n}\n.name-placeholder {\n  width: 90px;\n  border-radius: 4px;\n  background: #dfe3e9;\n}\nhr {\n  margin: 16px 0;\n}",
+      "position": {
+        "start": {
+          "line": 212,
+          "column": 1,
+          "offset": 8593
+        },
+        "end": {
+          "line": 241,
+          "column": 4,
+          "offset": 8980
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "json",
+      "meta": "package.json hidden",
+      "value": "{\n  \"dependencies\": {\n    \"react\": \"19.3.0\",\n    \"react-dom\": \"19.3.0\",\n    \"react-scripts\": \"latest\"\n  }\n}",
+      "position": {
+        "start": {
+          "line": 243,
+          "column": 1,
+          "offset": 8982
+        },
+        "end": {
+          "line": 251,
+          "column": 4,
+          "offset": 9121
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</Sandpack>",
+      "position": {
+        "start": {
+          "line": 253,
+          "column": 1,
+          "offset": 9123
+        },
+        "end": {
+          "line": 253,
+          "column": 12,
+          "offset": 9134
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "With ",
+              "position": {
+                "start": {
+                  "line": 255,
+                  "column": 1,
+                  "offset": 9136
+                },
+                "end": {
+                  "line": 255,
+                  "column": 6,
+                  "offset": 9141
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "inlineCode",
+              "value": "<ViewTransition>",
+              "position": {
+                "start": {
+                  "line": 255,
+                  "column": 6,
+                  "offset": 9141
+                },
+                "end": {
+                  "line": 255,
+                  "column": 24,
+                  "offset": 9159
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "text",
+              "value": ", React keeps the skeleton visible for up to 500 ms while the image loads, so the card can be revealed with its image already in place. Without ",
+              "position": {
+                "start": {
+                  "line": 255,
+                  "column": 24,
+                  "offset": 9159
+                },
+                "end": {
+                  "line": 255,
+                  "column": 168,
+                  "offset": 9303
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "inlineCode",
+              "value": "<ViewTransition>",
+              "position": {
+                "start": {
+                  "line": 255,
+                  "column": 168,
+                  "offset": 9303
+                },
+                "end": {
+                  "line": 255,
+                  "column": 186,
+                  "offset": 9321
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "text",
+              "value": ", Suspense stops showing the skeleton as soon as the Promise resolves. If the image is still loading, the card appears first and the image pops in afterward.",
+              "position": {
+                "start": {
+                  "line": 255,
+                  "column": 186,
+                  "offset": 9321
+                },
+                "end": {
+                  "line": 255,
+                  "column": 343,
+                  "offset": 9478
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 255,
+              "column": 1,
+              "offset": 9136
+            },
+            "end": {
+              "line": 255,
+              "column": 343,
+              "offset": 9478
+            }
+          },
+          "data": {}
+        }
+      ]
+    }
+  ]
+}

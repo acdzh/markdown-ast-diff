@@ -1,0 +1,179 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "选择合适的笼子",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 1,
+                  "column": 3,
+                  "offset": 2
+                },
+                "end": {
+                  "line": 1,
+                  "column": 10,
+                  "offset": 9
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 10,
+              "offset": 9
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "准备木屑垫料",
+                  "position": {
+                    "start": {
+                      "line": 2,
+                      "column": 3,
+                      "offset": 12
+                    },
+                    "end": {
+                      "line": 2,
+                      "column": 9,
+                      "offset": 18
+                    }
+                  },
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 2,
+                  "column": 3,
+                  "offset": 12
+                },
+                "end": {
+                  "line": 2,
+                  "column": 9,
+                  "offset": 18
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 2,
+              "column": 1,
+              "offset": 10
+            },
+            "end": {
+              "line": 2,
+              "column": 9,
+              "offset": 18
+            }
+          },
+          "data": {
+            "diff": "del"
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "购买静音跑轮",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 2,
+                  "column": 3,
+                  "offset": 12
+                },
+                "end": {
+                  "line": 2,
+                  "column": 9,
+                  "offset": 18
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 2,
+              "column": 1,
+              "offset": 10
+            },
+            "end": {
+              "line": 2,
+              "column": 9,
+              "offset": 18
+            }
+          },
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "end": {
+          "line": 2,
+          "column": 9,
+          "offset": 18
+        }
+      },
+      "data": {}
+    }
+  ],
+  "position": {
+    "start": {
+      "line": 1,
+      "column": 1,
+      "offset": 0
+    },
+    "end": {
+      "line": 3,
+      "column": 1,
+      "offset": 19
+    }
+  },
+  "data": {}
+}

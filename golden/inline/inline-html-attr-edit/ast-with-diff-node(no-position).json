@@ -1,0 +1,55 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "点击 ",
+          "data": {}
+        },
+        {
+          "type": "del",
+          "children": [
+            {
+              "type": "html",
+              "value": "<a href=\"https://a.com/x\">",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "ins",
+          "children": [
+            {
+              "type": "html",
+              "value": "<a href=\"https://b.com/y\">",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "链接",
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "</a>",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "text",
+          "value": " 继续阅读。",
+          "data": {}
+        }
+      ],
+      "data": {}
+    }
+  ],
+  "data": {}
+}

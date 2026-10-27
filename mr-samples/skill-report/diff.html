@@ -1,0 +1,383 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+/* table */
+table { border-collapse: collapse; width: auto; margin: 1em 0; }
+th, td { border: 1px solid #d0d7de; padding: 6px 13px; }
+th { background: #f6f8fa; font-weight: 600; }
+tr:nth-child(2n) { background: #f6f8fa; }
+
+/* code */
+code { padding: 0.2em 0.4em; font-size: 85%; background: #f6f8fa; border-radius: 6px; font-family: 'SF Mono', 'Fira Code', Menlo, monospace; }
+pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background: #f6f8fa; border-radius: 6px; margin: 1em 0; }
+pre code { padding: 0; background: none; border-radius: 0; font-size: inherit; }
+
+/* blockquote */
+blockquote { padding: 0 1em; color: #656d76; border-left: 0.25em solid #d0d7de; margin: 1em 0; }
+
+/* hr */
+hr { height: 0.25em; padding: 0; margin: 24px 0; background-color: #d0d7de; border: 0; }
+
+/* headings */
+h1, h2, h3, h4, h5, h6 { margin-top: 24px; margin-bottom: 16px; font-weight: 600; line-height: 1.25; }
+h1 { font-size: 2em; padding-bottom: 0.3em; border-bottom: 1px solid #d0d7de; }
+h2 { font-size: 1.5em; padding-bottom: 0.3em; border-bottom: 1px solid #d0d7de; }
+h3 { font-size: 1.25em; }
+
+/* list */
+ul, ol { padding-left: 2em; margin: 0.5em 0; }
+li + li { margin-top: 0.25em; }
+
+/* image */
+img { max-width: 100%; }
+
+/* code diff */
+.code-diff { border-radius: 6px; overflow: hidden; margin: 1em 0; font-size: 13px; border: 1px solid #d0d7de; }
+.code-diff pre { margin: 0; padding: 0; border-radius: 0; border: none; background: #fff; }
+.code-diff .shiki { background: #fff !important; }
+.code-diff .diff-line { display: flex; line-height: 1.45; }
+.code-diff .diff-line-gutter { width: 40px; min-width: 40px; text-align: right; padding: 0 8px 0 0; color: #8b949e; font-size: 12px; user-select: none; flex-shrink: 0; }
+.code-diff .diff-line-sign { width: 20px; min-width: 20px; text-align: center; user-select: none; flex-shrink: 0; }
+.code-diff .diff-line-content { flex: 1; padding-right: 12px; white-space: pre; overflow-x: auto; }
+.code-diff .diff-line.del { background: #ffebe9; }
+.code-diff .diff-line.del .diff-line-gutter { background: #ffd7d5; color: #82071e; }
+.code-diff .diff-line.del .diff-line-sign { color: #82071e; }
+.code-diff .diff-line.ins { background: #e6ffec; }
+.code-diff .diff-line.ins .diff-line-gutter { background: #ccffd8; color: #116329; }
+.code-diff .diff-line.ins .diff-line-sign { color: #116329; }
+.code-diff .diff-line.ctx { background: #fff; }
+.code-diff .diff-line.ctx .diff-line-gutter { color: #8b949e; }
+.code-diff .diff-header { padding: 8px 12px; background: #f6f8fa; border-bottom: 1px solid #d0d7de; font-size: 12px; color: #656d76; font-family: 'SF Mono', 'Fira Code', Menlo, monospace; }
+
+ins { background-color: #e6ffec; text-decoration: none; border-radius: 2px; padding: 0 2px; }
+del { background-color: #ffebe9; text-decoration: line-through; border-radius: 2px; padding: 0 2px; }
+ins.diff-block, del.diff-block { display: block; padding-left: 10px; border-left: 3px solid; }
+ins.diff-block { border-left-color: #2cbe4e; }
+del.diff-block { border-left-color: #cb2431; }
+ins > hr, ins > pre { background-color: #e6ffec; }
+del > hr, del > pre { background-color: #ffebe9; }
+ins > table, del > table { border-collapse: collapse; }
+ins > table th, ins > table td { background-color: #e6ffec; }
+del > table th, del > table td { background-color: #ffebe9; }
+li[data-diff="ins"] { background-color: #e6ffec; border-radius: 2px; }
+li[data-diff="del"] { background-color: #ffebe9; border-radius: 2px; text-decoration: line-through; }
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:16px;font-size:14px;line-height:1.6;color:#1a1a1a;}</style></head><body><p>接收 analyze 阶段输出的原始数据，整理成飞书文档评测报告，返回报告 URL 给 LOOP。</p>
+<h2>准备工作区</h2>
+<p>创建分支 <code>eval/report/&#x3C;YYYYMMDD>/&#x3C;HHmmss>/$CHAT_SESSION_ID</code>（<code>$CHAT_SESSION_ID</code> 取自环境变量）并切换过去。中间产物（metrics 副本、报告 markdown 草稿等）写到仓库下的 <code>artifacts/report/</code>。</p>
+<h2>输入</h2>
+<p>由 LOOP 注入：</p>
+<ul>
+<li>analyze 阶段的完整结构化输出（<code>metrics.json</code>，结构见 <code>skills/trae-e2e-testing-analyze/SKILL.md</code>）以及 analyze 报告的问题清单</li>
+<li>评测计划信息（group 列表、<code>baseline_group</code>、评测集、case 列表、<code>repeat</code>）</li>
+<li data-diff="ins">中间分支清单：execute 每个 session 的存档分支（<code>results[].branch</code>，按 group / suite / case / run 对应）、analyze session 的存档分支（<code>branch</code>）</li>
+</ul>
+<h2>数据规则</h2>
+<ul>
+<li>报告里的每个数字都必须来自 <code>metrics.json</code> 或由其中字段计算得出，禁止估算或补数。百分比变化、占比、合计用脚本计算，不要心算</li>
+<li>字段缺失（如 case 带 <code>analyze_error</code>）时，表格中填写「—」，并在该节下方注明原因</li>
+<li>时间统一保留 1 位小数，单位为秒（超过 120 秒时同时给出分钟）；比例保留 2 位小数</li>
+<li>下文的 <code>T</code> 指 <code>groups.&#x3C;label>.totals</code>，<code>C</code> 指 <code>groups.&#x3C;label>.cases[i]</code></li>
+<li><strong>成功率只用判定结果</strong>（<code>T.judge.success_rate</code>，判定标准：<a href="https://bytedance.larkoffice.com/wiki/OH17wmVYGiBXKXkPtn0ca28cnQe%EF%BC%89%E3%80%82%E6%88%90%E5%8A%9F%E7%8E%87">https://bytedance.larkoffice.com/wiki/OH17wmVYGiBXKXkPtn0ca28cnQe）。成功率</a> = PASS / (PASS + FAIL)，INVALID_TASK 和 ENV_BLOCKED 不计入分母。execute 自报的 <code>status</code> 是「产品验收结论」（产品有没有 bug），只在明细里作为参考列，不能当成功率</li>
+<li>有 case 未判定（<code>T.judge.unjudged_count > 0</code>）时，在总览表下注明，并说明成功率只基于已判定的 case</li>
+</ul>
+<h2>报告结构</h2>
+<ins class="diff-block"><h3>中间产物分支</h3></ins>
+<ins class="diff-block"><p>报告开头放这一节，列出本次评测全部存档分支，便于回溯。分支链接统一指向 Codebase：</p></ins>
+<ins class="diff-block"><pre><code><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span>https://code.byted.org/ide/trae-e2e-testing/tree/&#x3C;分支名></span></span></code></pre>
+</code></pre></ins>
+<ins class="diff-block"><p>链接文本就是分支名，格式示例：<a href="https://code.byted.org/ide/trae-e2e-testing/tree/eval/report/20261021/214839/6ad7e1742ee7895c08f68de2">eval/report/20261021/214839/6ad7e1742ee7895c08f68de2</a></p></ins>
+<ins class="diff-block"><p>按阶段分组：</p></ins>
+<ins class="diff-block"><ul>
+<li><strong>execute</strong>：每个 group × case × run 的 session 一行（分支名 + 链接），同一 case 的各组排在一起；分支名缺失（session 异常退出）时写「未生成」。报告只列分支链接，不展示录屏等中间文件；需要看录屏时自行进入对应分支的 <code>artifacts/execute/</code> 目录查找</li>
+<li><strong>analyze</strong>：analyze session 的分支（一个链接）</li>
+<li><strong>report</strong>：本次 report session 自己的分支（准备工作区创建并 push 的 <code>eval/report/...</code>，链接同样写入报告）</li>
+</ul></ins>
+<h3>测试内容</h3>
+<ul>
+<li>评测集说明</li>
+<li>各组执行条件（label、prompt_injection、trae 版本、tde 版本、环境）</li>
+<li>基准组（<code>baseline_group</code>），重复执行次数（<code>repeat</code>）</li>
+<li>各组 Session ID 列表（带 trace 链接：<code>C.trace_url</code>）</li>
+<li>判定标准：直接放链接 <a href="https://bytedance.larkoffice.com/wiki/OH17wmVYGiBXKXkPtn0ca28cnQe%EF%BC%8C%E5%B9%B6%E5%86%99%E4%B8%80%E5%8F%A5%E3%80%8C%E6%88%90%E5%8A%9F%E7%8E%87">https://bytedance.larkoffice.com/wiki/OH17wmVYGiBXKXkPtn0ca28cnQe，并写一句「成功率</a> = PASS / (PASS + FAIL)，INVALID_TASK 和 ENV_BLOCKED 不计入分母」</li>
+<li>数据质量说明：analyze 报告的问题（缺少标记、unknown 占比高、未判定、判定与自报不一致、analyze_error），没有问题时写「无」</li>
+</ul>
+<h3>执行结果总览</h3>
+<p>对比各组的汇总指标：</p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>来源字段</th>
+<th>组 A</th>
+<th>组 B</th>
+<th>B vs A</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>成功率（判定）</td>
+<td><code>T.judge.success_rate</code></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>PASS / FAIL / INVALID_TASK / ENV_BLOCKED</td>
+<td><code>T.judge.verdict_counts</code></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>产品验收通过数 / 总数（自报，仅参考）</td>
+<td><code>T.self_reported.status_counts.passed</code> / <code>T.case_count</code></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>端到端耗时</td>
+<td><code>T.time_s.wall_clock</code></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>总 LLM 延迟</td>
+<td><code>T.time_s.llm</code></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>总工具耗时</td>
+<td><code>T.time_s.tool</code></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>平均 LLM 延迟</td>
+<td><code>T.llm_latency_s.avg</code></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>总 LLM 调用次数</td>
+<td><code>T.llm_calls</code></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>工具调用轮次</td>
+<td><code>T.tool_rounds</code></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>总工具调用次数</td>
+<td><code>T.tool_calls</code></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>工具成功率</td>
+<td><code>T.tool_results.success_rate</code></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>总 Token</td>
+<td><code>T.tokens.total</code></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>「来源字段」列只用于说明，写入飞书报告时去掉。</p>
+<p>端到端耗时 ≈ LLM 延迟 + 工具耗时。工具耗时里包含等待 Trae 内 AI 生成产物的时间，这部分无法从 trace 中可靠地剥离（等待可能藏在命令的等待参数、轮询或反复截图里），所以<strong>不要</strong>自行估算或扣除「等待时间」。需要解释耗时差异时，引用「耗时去向」一节的具体命令。</p>
+<h3>Case 明细</h3>
+<p>每个 Case 在各组中的对比：</p>
+<p>| Case | 任务 | 组 A Session ID | 组 A 判定 | 组 A 自报结论 | 组 A 完成步骤 | 组 A 工具调用轮次 | 组 A 耗时 | 组 B ... |
+|---|---|---|---|---|---|---|---|</p>
+<ul>
+<li>Session ID 带 trace 链接（<code>C.trace_url</code>）</li>
+<li>判定取 <code>C.judge.verdict</code>；非 PASS 时附命中规则 <code>C.judge.rules_hit</code>（如「FAIL（C5）」）</li>
+<li>自报结论取 <code>C.status</code>（passed / failed / blocked / error），仅作参考</li>
+<li>完成步骤 = <code>C.completed_steps</code> / <code>C.total_steps</code>；有 <code>C.skipped_steps</code> 时注明跳过的步骤</li>
+<li>工具调用轮次 = <code>C.metrics.tool_rounds</code></li>
+<li>耗时 = <code>C.metrics.time_s.wall_clock</code>（括号内为 LLM <code>C.metrics.time_s.llm</code> / 工具 <code>C.metrics.time_s.tool</code>）</li>
+<li>判定非 PASS 的 case，在表下逐条列出 <code>C.judge.reason</code> 和 <code>C.judge.failed_points</code>（验收点、命中规则、证据）</li>
+<li>判定与自报不一致的 case（如自报 passed、判定 FAIL），单独列出，并附上双方理由（<code>C.judge.reason</code>、<code>C.reason</code>）</li>
+</ul>
+<p><strong>重复执行（<code>repeat > 1</code>）时</strong>：每个 case 每组只占一行，数据取 <code>T.per_case["&#x3C;suite>#&#x3C;case_index>"]</code>：判定写成「PASS 次数/运行次数」（取 <code>verdicts</code>），自报写成「通过次数/运行次数」（取 <code>self_reported_passed</code>），耗时写成「中位数（最小~最大）」，LLM / 工具耗时和调用次数写中位数。每次运行的 Session ID 都放进该格，用链接列出。</p>
+<h3>逐 Case 调用 Trace 明细</h3>
+<p>对每个 Case，展示各组的具体工具调用链。格式：</p>
+<pre><code><div class="code-diff"><div class="diff-line ctx"><span class="diff-line-gutter">1</span><span class="diff-line-gutter">1</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span>## Case N：{任务名称}</span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">2</span><span class="diff-line-gutter">2</span><span class="diff-line-sign"> </span><span class="diff-line-content"> </span></div><div class="diff-line ctx"><span class="diff-line-gutter">3</span><span class="diff-line-gutter">3</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span>### 组 A</span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">4</span><span class="diff-line-gutter">4</span><span class="diff-line-sign"> </span><span class="diff-line-content"> </span></div><div class="diff-line ctx"><span class="diff-line-gutter">5</span><span class="diff-line-gutter">5</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span>- Session ID：`xxx`（trace 链接）</span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">6</span><span class="diff-line-gutter">6</span><span class="diff-line-sign"> </span><span class="diff-line-content"> </span></div><div class="diff-line ctx"><span class="diff-line-gutter">7</span><span class="diff-line-gutter">7</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span>| 轮次 | 操作类型 | 工具调用链 | 耗时 |</span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">8</span><span class="diff-line-gutter">8</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span>|---|---|---|---|</span></span></div><div class="diff-line del"><span class="diff-line-gutter">9</span><span class="diff-line-gutter"></span><span class="diff-line-sign">-</span><span class="diff-line-content"><span>| 1 | 观察 | CU.get_app_state → tde ui snapshot | 8.0s |</span></span></div><div class="diff-line del"><span class="diff-line-gutter">10</span><span class="diff-line-gutter"></span><span class="diff-line-sign">-</span><span class="diff-line-content"><span>| 2 | 点击 | CU.click | 4.5s |</span></span></div><div class="diff-line ins"><span class="diff-line-gutter"></span><span class="diff-line-gutter">9</span><span class="diff-line-sign">+</span><span class="diff-line-content"><span>| 1 | 观察 | Desktop Use.get_app_state → tde ui snapshot | 8.0s |</span></span></div><div class="diff-line ins"><span class="diff-line-gutter"></span><span class="diff-line-gutter">10</span><span class="diff-line-sign">+</span><span class="diff-line-content"><span>| 2 | 点击 | Desktop Use.click | 4.5s |</span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">11</span><span class="diff-line-gutter">11</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span>| 3 | 等待 | tde ui wait | 63.0s |</span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">12</span><span class="diff-line-gutter">12</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span>| **合计** | **3 轮，聚合 4 个工具调用** | | **75.5s** |</span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">13</span><span class="diff-line-gutter">13</span><span class="diff-line-sign"> </span><span class="diff-line-content"> </span></div><div class="diff-line ctx"><span class="diff-line-gutter">14</span><span class="diff-line-gutter">14</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span>### 组 B</span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">15</span><span class="diff-line-gutter">15</span><span class="diff-line-sign"> </span><span class="diff-line-content"> </span></div><div class="diff-line ctx"><span class="diff-line-gutter">16</span><span class="diff-line-gutter">16</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span>（同上格式）</span></span></div></div>
+</code></pre>
+<p>数据来自 <code>C.rounds</code>：每轮对应一次带工具调用的 LLM call，工具调用链 = <code>ops</code> 用 <code>→</code> 连接，耗时 = <code>duration_s</code>（LLM 延迟 + 工具耗时）。<code>failed_tools > 0</code> 的轮次在操作类型后标「（失败）」。操作类型根据 ops 归纳（观察、点击、输入、等待、导航、检查、启动等），只作阅读辅助，不参与任何统计。</p>
+<p>轮次超过 60 时只展开前 20 轮、失败轮次及其前后各 1 轮、最后 10 轮，其余合并为一行「…… 省略 N 轮，共 X 秒」。重复执行时只展开 <code>run_index=1</code> 的那次。</p>
+<h3>Trace 分析</h3>
+<ul>
+<li><strong>工具调用分布对比表</strong>：<code>T.tool_category_counts</code><del class="diff-inline">（CU / tde ui</del><ins class="diff-inline">（Desktop Use / Browser Use</ins> / tde 管理 / Shell / Exec / view_image / apply_patch / 其他），各组的计数及占比</li>
+<li><del class="diff-inline"><strong>CU 子操作细分对比表</strong></del><del class="diff-inline">：</del><del class="diff-inline"><code>T.cu_op_counts</code></del><ins class="diff-inline"><strong>Desktop Use 子操作细分对比表</strong></ins><ins class="diff-inline">：</ins><ins class="diff-inline"><code>T.desktop_use_op_counts</code></ins>（get_app_state / click / press_key / type_text / scroll 等）</li>
+<li><strong>tde 子命令细分对比表</strong>：<code>T.tde_op_counts</code>（ui snapshot / ui click / ui wait 等）</li>
+<li><strong>操作方式合规</strong>：各 case 的 <code>C.metrics.ui_mode_observed</code>，与组的操作方式约束对照，列出违规 case</li>
+<li><strong>LLM 延迟分布</strong>：<code>T.llm_latency_s</code> 的 P25 / P50 / P75 / P90 / P95 / P99 / max</li>
+<li><strong>首 token 延迟分布</strong>：<code>T.first_token_latency_s</code>，同上分位</li>
+<li><strong>耗时去向</strong>：
+<ul>
+<li><code>T.time_s.tool_by_category</code>：工具耗时按类别分布（各组的秒数及占比）</li>
+<li><code>T.slowest_tool_rounds</code>：最耗时的 10 轮工具调用表（Case、类别、耗时、命令摘要 <code>commands</code>）。按命令内容说明耗时来自哪里（比如等待产物生成、安装、操作本身慢），但只做定性描述，不汇总成「等待耗时」</li>
+</ul>
+</li>
+<li><strong>Token 消耗模式</strong>：<code>T.tokens</code> 的 input / output / cache_read / reasoning，各组计数，以及 <code>cache_hit_rate</code></li>
+<li><strong>模型</strong>：<code>T.models</code></li>
+</ul>
+<h3>工具执行情况</h3>
+<p><strong>总览表</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th>来源字段</th>
+<th>组 A</th>
+<th>组 B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>工具执行总次数</td>
+<td><code>T.tool_results.total</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>成功次数</td>
+<td><code>T.tool_results.success</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>失败次数</td>
+<td><code>T.tool_results.failed</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>结果未知</td>
+<td><code>T.tool_results.unknown</code> + <code>background</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>成功率</td>
+<td><code>T.tool_results.success_rate</code>（分母不含未知）</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>分工具成功率</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th>组 A (总/失败/失败率)</th>
+<th>组 B (总/失败/失败率)</th>
+</tr>
+</thead>
+</table>
+<p>数据来自 <code>T.tool_results.by_category</code>。</p>
+<p><strong>错误归因分布</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>归因类别</th>
+<th>组 A</th>
+<th>组 B</th>
+<th>典型错误</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SDK 问题</td>
+<td>N (X%)</td>
+<td></td>
+<td>screenshot_context_missing, ELEMENT_NOT_SUPPORTED</td>
+</tr>
+<tr>
+<td>AI 使用方式</td>
+<td>N (X%)</td>
+<td></td>
+<td>unknown option, ELEMENT_NOT_FOUND</td>
+</tr>
+<tr>
+<td>环境问题</td>
+<td>N (X%)</td>
+<td></td>
+<td>timeout, auth_failure</td>
+</tr>
+<tr>
+<td>未归类</td>
+<td>N (X%)</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>数据来自 <code>T.error_attributions</code>，每个类别下是 label → 次数；占比的分母为该组失败总数。</p>
+<p><strong>高频错误明细</strong>（top N）：</p>
+<table>
+<thead>
+<tr>
+<th>错误</th>
+<th>归因</th>
+<th>次数</th>
+<th>影响工具</th>
+<th>错误信息摘要</th>
+</tr>
+</thead>
+</table>
+<p>数据来自 <code>T.top_errors</code>（key / attribution / count / tools / sample），取前 10 条。</p>
+<h3>关键发现与结论</h3>
+<p>用具体数据支撑结论，给出定量对比：</p>
+<ul>
+<li><strong>效率对比</strong>：效率只在判定为 PASS 的 case 之间比较才有意义。如果两组 PASS 的 case 集合不同，额外给出「两组都 PASS 的 case」的耗时对比。哪组更快/更省 token，具体差多少（如"组 B 比组 A 端到端耗时减少 35.2%，其中 LLM 延迟减少 X%、工具耗时减少 Y%"）。只有一次运行时注明「单次样本，存在随机波动」</li>
+<li><strong>质量对比</strong>：判定成功率差异；按 <code>T.judge.rules_hit_counts</code> 归纳 FAIL 的主要原因（例如 C5 执行方式违规、C3 操作没到达目标、C7 结论缺证据）；自报与判定不一致的情况</li>
+<li><strong>工具可靠性</strong>：哪类工具失败率最高，SDK 改进方向</li>
+<li><strong>工具调用模式差异</strong>：各组的操作策略有什么不同（如轮次数、每轮聚合的操作数）</li>
+</ul>
+<h2>组间对比规则</h2>
+<ul>
+<li>基准组取评测计划的 <code>baseline_group</code>，未指定时取 <code>groups</code> 中的第一组</li>
+<li><strong>两组</strong>：最后一列为 <code>&#x3C;实验组> vs &#x3C;基准组></code> 百分比变化</li>
+<li><strong>三组以上</strong>：每个非基准组各加一列 <code>vs 基准组</code></li>
+<li><strong>只有一组</strong>：不做对比，保持所有分析维度</li>
+<li><strong>计算</strong>：<code>(实验值 - 基准值) / 基准值 × 100%</code></li>
+</ul>
+<h2>多评测集处理</h2>
+<p>多评测集时按 suite 分节展示，每个 suite 独立的 Case 明细和调用 Trace 明细。汇总指标跨 suite 合并。</p>
+<h2>提交存档</h2>
+<ins class="diff-block"><p>为保证报告里写入的 report 分支链接在回读时已可点开，分两次提交：</p></ins>
+<ins class="diff-block"><ol>
+<li><strong>创建飞书文档前</strong>：先把已有中间产物（metrics 副本、报告 markdown 草稿）提交并 push，确定本 session 的 <code>eval/report/...</code> 分支链接并写入报告「中间产物分支」一节：</li>
+</ol></ins>
+<pre><code class="language-bash"><div class="code-diff"><div class="diff-header">bash</div><div class="diff-line ctx"><span class="diff-line-gutter">1</span><span class="diff-line-gutter">1</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span style="color:#6F42C1">git<span style="color:#032F62"> add</span><span style="color:#005CC5"> -f</span><span style="color:#032F62"> artifacts/report/</span></span></span></div><div class="diff-line del"><span class="diff-line-gutter">2</span><span class="diff-line-gutter"></span><span class="diff-line-sign">-</span><span class="diff-line-content"><span style="color:#6F42C1">git<span style="color:#032F62"> commit</span><span style="color:#005CC5"> -m</span><span style="color:#032F62"> "eval(report): &#x3C;报告标题>"</span></span></span></div><div class="diff-line ins"><span class="diff-line-gutter"></span><span class="diff-line-gutter">2</span><span class="diff-line-sign">+</span><span class="diff-line-content"><span style="color:#6F42C1">git<span style="color:#032F62"> commit</span><span style="color:#005CC5"> -m</span><span style="color:#032F62"> "eval(report): &#x3C;报告标题>（草稿）"</span></span></span></div><div class="diff-line ctx"><span class="diff-line-gutter">3</span><span class="diff-line-gutter">3</span><span class="diff-line-sign"> </span><span class="diff-line-content"><span style="color:#6F42C1">git<span style="color:#032F62"> push</span><span style="color:#032F62"> origin</span><span style="color:#032F62"> HEAD</span></span></span></div></div>
+</code></pre>
+<ins class="diff-block"><ol start="2">
+<li><strong>飞书文档创建并回读确认后</strong>：把最终草稿再补一次提交（无更新可跳过）：</li>
+</ol></ins>
+<ins class="diff-block"><pre><code class="language-bash"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#6F42C1">git</span><span style="color:#032F62"> add</span><span style="color:#005CC5"> -f</span><span style="color:#032F62"> artifacts/report/</span></span>
+<span class="line"><span style="color:#6F42C1">git</span><span style="color:#032F62"> commit</span><span style="color:#005CC5"> -m</span><span style="color:#032F62"> "eval(report): &#x3C;报告标题>（定稿）"</span><span style="color:#24292E"> &#x26;&#x26; </span><span style="color:#6F42C1">git</span><span style="color:#032F62"> push</span><span style="color:#032F62"> origin</span><span style="color:#032F62"> HEAD</span></span></code></pre>
+</code></pre></ins>
+<p>仅存档，不用于后续流程。</p>
+<h2>输出</h2>
+<p>报告以飞书文档形式创建，作为 <a href="https://bytedance.larkoffice.com/wiki/BoD2waW0riK5gBknXhPcxFVLnCh">https://bytedance.larkoffice.com/wiki/BoD2waW0riK5gBknXhPcxFVLnCh</a> 的子文档。</p>
+<p>创建后回读文档，确认各节内容、表格<del class="diff-inline">和</del><ins class="diff-inline">、</ins>链接都已正确写入，<ins class="diff-inline">特别是开头「中间产物分支」一节里 execute（每个 session）、analyze、report 三类分支链接齐全且可点开（分支名缺失的项按上文写「未生成」），</ins>再返回飞书文档 URL 给 LOOP。</p>
+<p>报告标题格式：<code>[日期] Trae E2E 评测报告 - &#x3C;评测集> (共 N 个 case, M 组对比)</code></p>
+<p>只有一组时：<code>[日期] Trae E2E 评测报告 - &#x3C;评测集> (共 N 个 case)</code></p></body></html>

@@ -1,0 +1,7609 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "heading",
+      "depth": 1,
+      "children": [
+        {
+          "type": "text",
+          "value": "Props {#props}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 17,
+          "offset": 16
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "blockquote",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "This page assumes you've already read the ",
+              "data": {}
+            },
+            {
+              "type": "link",
+              "title": null,
+              "url": "/guide/essentials/component-basics",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Components Basics",
+                  "position": {
+                    "start": {
+                      "line": 3,
+                      "column": 46,
+                      "offset": 63
+                    },
+                    "end": {
+                      "line": 3,
+                      "column": 63,
+                      "offset": 80
+                    }
+                  },
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 3,
+                  "column": 45,
+                  "offset": 62
+                },
+                "end": {
+                  "line": 3,
+                  "column": 100,
+                  "offset": 117
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "text",
+              "value": ". Read that first if you are new to components.",
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 3,
+              "column": 3,
+              "offset": 20
+            },
+            "end": {
+              "line": 3,
+              "column": 147,
+              "offset": 164
+            }
+          },
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 3,
+          "column": 1,
+          "offset": 18
+        },
+        "end": {
+          "line": 3,
+          "column": 147,
+          "offset": 164
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"options-api\">\n  <VueSchoolLink href=\"https://vueschool.io/lessons/vue-3-reusable-components-with-props\" title=\"Free Vue.js Props Lesson\"/>\n</div>",
+      "position": {
+        "start": {
+          "line": 5,
+          "column": 1,
+          "offset": 166
+        },
+        "end": {
+          "line": 7,
+          "column": 7,
+          "offset": 323
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Props Declaration {#props-declaration}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 9,
+          "column": 1,
+          "offset": 325
+        },
+        "end": {
+          "line": 9,
+          "column": 42,
+          "offset": 366
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Vue components require explicit props declaration so that Vue knows what external props passed to the component should be treated as fallthrough attributes (which will be discussed in ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/guide/components/attrs",
+          "children": [
+            {
+              "type": "text",
+              "value": "its dedicated section",
+              "position": {
+                "start": {
+                  "line": 11,
+                  "column": 186,
+                  "offset": 553
+                },
+                "end": {
+                  "line": 11,
+                  "column": 207,
+                  "offset": 574
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 11,
+              "column": 185,
+              "offset": 552
+            },
+            "end": {
+              "line": 11,
+              "column": 233,
+              "offset": 600
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ").",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 11,
+          "column": 1,
+          "offset": 368
+        },
+        "end": {
+          "line": 11,
+          "column": 235,
+          "offset": 602
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"composition-api\">",
+      "position": {
+        "start": {
+          "line": 13,
+          "column": 1,
+          "offset": 604
+        },
+        "end": {
+          "line": 13,
+          "column": 30,
+          "offset": 633
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "In SFCs using ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<script setup>",
+          "position": {
+            "start": {
+              "line": 15,
+              "column": 15,
+              "offset": 649
+            },
+            "end": {
+              "line": 15,
+              "column": 31,
+              "offset": 665
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", props can be declared using the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "defineProps()",
+          "position": {
+            "start": {
+              "line": 15,
+              "column": 65,
+              "offset": 699
+            },
+            "end": {
+              "line": 15,
+              "column": 80,
+              "offset": 714
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " macro:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 15,
+          "column": 1,
+          "offset": 635
+        },
+        "end": {
+          "line": 15,
+          "column": 87,
+          "offset": 721
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue",
+      "meta": null,
+      "value": "<script setup>\nconst props = defineProps(['foo'])\n\nconsole.log(props.foo)\n</script>",
+      "position": {
+        "start": {
+          "line": 17,
+          "column": 1,
+          "offset": 723
+        },
+        "end": {
+          "line": 23,
+          "column": 4,
+          "offset": 817
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "In non-",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<script setup>",
+          "position": {
+            "start": {
+              "line": 25,
+              "column": 8,
+              "offset": 826
+            },
+            "end": {
+              "line": 25,
+              "column": 24,
+              "offset": 842
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " components, props are declared using the ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/api/options-state#props",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "props",
+              "position": {
+                "start": {
+                  "line": 25,
+                  "column": 67,
+                  "offset": 885
+                },
+                "end": {
+                  "line": 25,
+                  "column": 74,
+                  "offset": 892
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 25,
+              "column": 66,
+              "offset": 884
+            },
+            "end": {
+              "line": 25,
+              "column": 101,
+              "offset": 919
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " option:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 25,
+          "column": 1,
+          "offset": 819
+        },
+        "end": {
+          "line": 25,
+          "column": 109,
+          "offset": 927
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "export default {\n  props: ['foo'],\n  setup(props) {\n    // setup() receives props as the first argument.\n    console.log(props.foo)\n  }\n}",
+      "position": {
+        "start": {
+          "line": 27,
+          "column": 1,
+          "offset": 929
+        },
+        "end": {
+          "line": 35,
+          "column": 4,
+          "offset": 1076
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Notice the argument passed to ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "defineProps()",
+          "position": {
+            "start": {
+              "line": 37,
+              "column": 31,
+              "offset": 1108
+            },
+            "end": {
+              "line": 37,
+              "column": 46,
+              "offset": 1123
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " is the same as the value provided to the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "props",
+          "position": {
+            "start": {
+              "line": 37,
+              "column": 88,
+              "offset": 1165
+            },
+            "end": {
+              "line": 37,
+              "column": 95,
+              "offset": 1172
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " options: the same props options API is shared between the two declaration styles.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 37,
+          "column": 1,
+          "offset": 1078
+        },
+        "end": {
+          "line": 37,
+          "column": 177,
+          "offset": 1254
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "position": {
+        "start": {
+          "line": 39,
+          "column": 1,
+          "offset": 1256
+        },
+        "end": {
+          "line": 39,
+          "column": 7,
+          "offset": 1262
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"options-api\">",
+      "position": {
+        "start": {
+          "line": 41,
+          "column": 1,
+          "offset": 1264
+        },
+        "end": {
+          "line": 41,
+          "column": 26,
+          "offset": 1289
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Props are declared using the ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/api/options-state#props",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "props",
+              "position": {
+                "start": {
+                  "line": 43,
+                  "column": 31,
+                  "offset": 1321
+                },
+                "end": {
+                  "line": 43,
+                  "column": 38,
+                  "offset": 1328
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 43,
+              "column": 30,
+              "offset": 1320
+            },
+            "end": {
+              "line": 43,
+              "column": 65,
+              "offset": 1355
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " option:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 43,
+          "column": 1,
+          "offset": 1291
+        },
+        "end": {
+          "line": 43,
+          "column": 73,
+          "offset": 1363
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "export default {\n  props: ['foo'],\n  created() {\n    // props are exposed on `this`\n    console.log(this.foo)\n  }\n}",
+      "position": {
+        "start": {
+          "line": 45,
+          "column": 1,
+          "offset": 1365
+        },
+        "end": {
+          "line": 53,
+          "column": 4,
+          "offset": 1490
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "position": {
+        "start": {
+          "line": 55,
+          "column": 1,
+          "offset": 1492
+        },
+        "end": {
+          "line": 55,
+          "column": 7,
+          "offset": 1498
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "In addition to declaring props using an array of strings, we can also use the object syntax:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 57,
+          "column": 1,
+          "offset": 1500
+        },
+        "end": {
+          "line": 57,
+          "column": 93,
+          "offset": 1592
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"options-api\">",
+      "position": {
+        "start": {
+          "line": 59,
+          "column": 1,
+          "offset": 1594
+        },
+        "end": {
+          "line": 59,
+          "column": 26,
+          "offset": 1619
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "export default {\n  props: {\n    title: String,\n    likes: Number\n  }\n}",
+      "position": {
+        "start": {
+          "line": 61,
+          "column": 1,
+          "offset": 1621
+        },
+        "end": {
+          "line": 68,
+          "column": 4,
+          "offset": 1701
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"composition-api\">",
+      "position": {
+        "start": {
+          "line": 70,
+          "column": 1,
+          "offset": 1703
+        },
+        "end": {
+          "line": 71,
+          "column": 30,
+          "offset": 1739
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "// in <script setup>\ndefineProps({\n  title: String,\n  likes: Number\n})",
+      "position": {
+        "start": {
+          "line": 73,
+          "column": 1,
+          "offset": 1741
+        },
+        "end": {
+          "line": 79,
+          "column": 4,
+          "offset": 1821
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "// in non-<script setup>\nexport default {\n  props: {\n    title: String,\n    likes: Number\n  }\n}",
+      "position": {
+        "start": {
+          "line": 81,
+          "column": 1,
+          "offset": 1823
+        },
+        "end": {
+          "line": 89,
+          "column": 4,
+          "offset": 1928
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "position": {
+        "start": {
+          "line": 91,
+          "column": 1,
+          "offset": 1930
+        },
+        "end": {
+          "line": 91,
+          "column": 7,
+          "offset": 1936
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "For each property in the object declaration syntax, the key is the name of the prop, while the value should be the constructor function of the expected type.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 93,
+          "column": 1,
+          "offset": 1938
+        },
+        "end": {
+          "line": 93,
+          "column": 158,
+          "offset": 2095
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "This not only documents your component, but will also warn other developers using your component in the browser console if they pass the wrong type. We will discuss more details about ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "#prop-validation",
+          "children": [
+            {
+              "type": "text",
+              "value": "prop validation",
+              "position": {
+                "start": {
+                  "line": 95,
+                  "column": 186,
+                  "offset": 2282
+                },
+                "end": {
+                  "line": 95,
+                  "column": 201,
+                  "offset": 2297
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 95,
+              "column": 185,
+              "offset": 2281
+            },
+            "end": {
+              "line": 95,
+              "column": 220,
+              "offset": 2316
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " further down this page.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 95,
+          "column": 1,
+          "offset": 2097
+        },
+        "end": {
+          "line": 95,
+          "column": 244,
+          "offset": 2340
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"options-api\">",
+      "position": {
+        "start": {
+          "line": 97,
+          "column": 1,
+          "offset": 2342
+        },
+        "end": {
+          "line": 97,
+          "column": 26,
+          "offset": 2367
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "See also: ",
+          "position": {
+            "start": {
+              "line": 99,
+              "column": 1,
+              "offset": 2369
+            },
+            "end": {
+              "line": 99,
+              "column": 11,
+              "offset": 2379
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/guide/typescript/options-api#typing-component-props",
+          "children": [
+            {
+              "type": "text",
+              "value": "Typing Component Props",
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 99,
+              "column": 11,
+              "offset": 2379
+            },
+            "end": {
+              "line": 99,
+              "column": 89,
+              "offset": 2457
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " ",
+          "position": {
+            "start": {
+              "line": 99,
+              "column": 89,
+              "offset": 2457
+            },
+            "end": {
+              "line": 99,
+              "column": 90,
+              "offset": 2458
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "<sup class=\"vt-badge ts\" />",
+          "position": {
+            "start": {
+              "line": 99,
+              "column": 90,
+              "offset": 2458
+            },
+            "end": {
+              "line": 99,
+              "column": 117,
+              "offset": 2485
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 99,
+          "column": 1,
+          "offset": 2369
+        },
+        "end": {
+          "line": 99,
+          "column": 117,
+          "offset": 2485
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "position": {
+        "start": {
+          "line": 101,
+          "column": 1,
+          "offset": 2487
+        },
+        "end": {
+          "line": 101,
+          "column": 7,
+          "offset": 2493
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"composition-api\">",
+      "position": {
+        "start": {
+          "line": 103,
+          "column": 1,
+          "offset": 2495
+        },
+        "end": {
+          "line": 103,
+          "column": 30,
+          "offset": 2524
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "If you are using TypeScript with ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<script setup>",
+          "position": {
+            "start": {
+              "line": 105,
+              "column": 34,
+              "offset": 2559
+            },
+            "end": {
+              "line": 105,
+              "column": 50,
+              "offset": 2575
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", it's also possible to declare props using pure type annotations:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 105,
+          "column": 1,
+          "offset": 2526
+        },
+        "end": {
+          "line": 105,
+          "column": 116,
+          "offset": 2641
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue",
+      "meta": null,
+      "value": "<script setup lang=\"ts\">\ndefineProps<{\n  title?: string\n  likes?: number\n}>()\n</script>",
+      "position": {
+        "start": {
+          "line": 107,
+          "column": 1,
+          "offset": 2643
+        },
+        "end": {
+          "line": 114,
+          "column": 4,
+          "offset": 2741
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "More details: ",
+          "position": {
+            "start": {
+              "line": 116,
+              "column": 1,
+              "offset": 2743
+            },
+            "end": {
+              "line": 116,
+              "column": 15,
+              "offset": 2757
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/guide/typescript/composition-api#typing-component-props",
+          "children": [
+            {
+              "type": "text",
+              "value": "Typing Component Props",
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 116,
+              "column": 15,
+              "offset": 2757
+            },
+            "end": {
+              "line": 116,
+              "column": 97,
+              "offset": 2839
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " ",
+          "position": {
+            "start": {
+              "line": 116,
+              "column": 97,
+              "offset": 2839
+            },
+            "end": {
+              "line": 116,
+              "column": 98,
+              "offset": 2840
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "<sup class=\"vt-badge ts\" />",
+          "position": {
+            "start": {
+              "line": 116,
+              "column": 98,
+              "offset": 2840
+            },
+            "end": {
+              "line": 116,
+              "column": 125,
+              "offset": 2867
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 116,
+          "column": 1,
+          "offset": 2743
+        },
+        "end": {
+          "line": 116,
+          "column": 125,
+          "offset": 2867
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "position": {
+        "start": {
+          "line": 118,
+          "column": 1,
+          "offset": 2869
+        },
+        "end": {
+          "line": 118,
+          "column": 7,
+          "offset": 2875
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"composition-api\">",
+      "position": {
+        "start": {
+          "line": 120,
+          "column": 1,
+          "offset": 2877
+        },
+        "end": {
+          "line": 120,
+          "column": 30,
+          "offset": 2906
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Reactive Props Destructure ",
+          "position": {
+            "start": {
+              "line": 122,
+              "column": 4,
+              "offset": 2911
+            },
+            "end": {
+              "line": 122,
+              "column": 31,
+              "offset": 2938
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "<sup class=\"vt-badge\" data-text=\"3.5+\" />",
+          "position": {
+            "start": {
+              "line": 122,
+              "column": 31,
+              "offset": 2938
+            },
+            "end": {
+              "line": 122,
+              "column": 72,
+              "offset": 2979
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "text",
+          "value": " ** {#reactive-props-destructure}",
+          "position": {
+            "start": {
+              "line": 122,
+              "column": 72,
+              "offset": 2979
+            },
+            "end": {
+              "line": 122,
+              "column": 107,
+              "offset": 3014
+            }
+          },
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 122,
+          "column": 1,
+          "offset": 2908
+        },
+        "end": {
+          "line": 122,
+          "column": 107,
+          "offset": 3014
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Vue's reactivity system tracks state usage based on property access. E.g. when you access ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "props.foo",
+          "position": {
+            "start": {
+              "line": 124,
+              "column": 91,
+              "offset": 3106
+            },
+            "end": {
+              "line": 124,
+              "column": 102,
+              "offset": 3117
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " in a computed getter or a watcher, the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "foo",
+          "position": {
+            "start": {
+              "line": 124,
+              "column": 142,
+              "offset": 3157
+            },
+            "end": {
+              "line": 124,
+              "column": 147,
+              "offset": 3162
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " prop gets tracked as a dependency.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 124,
+          "column": 1,
+          "offset": 3016
+        },
+        "end": {
+          "line": 124,
+          "column": 182,
+          "offset": 3197
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "So, given the following code:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 126,
+          "column": 1,
+          "offset": 3199
+        },
+        "end": {
+          "line": 126,
+          "column": 30,
+          "offset": 3228
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "const { foo } = defineProps(['foo'])\n\nwatchEffect(() => {\n  // runs only once before 3.5\n  // re-runs when the \"foo\" prop changes in 3.5+\n  console.log(foo)\n})",
+      "position": {
+        "start": {
+          "line": 128,
+          "column": 1,
+          "offset": 3230
+        },
+        "end": {
+          "line": 136,
+          "column": 4,
+          "offset": 3399
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "In version 3.4 and below, ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "foo",
+          "position": {
+            "start": {
+              "line": 138,
+              "column": 27,
+              "offset": 3427
+            },
+            "end": {
+              "line": 138,
+              "column": 32,
+              "offset": 3432
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " is an actual constant and will never change. In version 3.5 and above, Vue's compiler automatically prepends ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "props.",
+          "position": {
+            "start": {
+              "line": 138,
+              "column": 142,
+              "offset": 3542
+            },
+            "end": {
+              "line": 138,
+              "column": 150,
+              "offset": 3550
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " when code in the same ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<script setup>",
+          "position": {
+            "start": {
+              "line": 138,
+              "column": 173,
+              "offset": 3573
+            },
+            "end": {
+              "line": 138,
+              "column": 189,
+              "offset": 3589
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " block accesses variables destructured from ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "defineProps",
+          "position": {
+            "start": {
+              "line": 138,
+              "column": 233,
+              "offset": 3633
+            },
+            "end": {
+              "line": 138,
+              "column": 246,
+              "offset": 3646
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ". Therefore the code above becomes equivalent to the following:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 138,
+          "column": 1,
+          "offset": 3401
+        },
+        "end": {
+          "line": 138,
+          "column": 309,
+          "offset": 3709
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": "{5}",
+      "value": "const props = defineProps(['foo'])\n\nwatchEffect(() => {\n  // `foo` transformed to `props.foo` by the compiler\n  console.log(props.foo)\n})",
+      "position": {
+        "start": {
+          "line": 140,
+          "column": 1,
+          "offset": 3711
+        },
+        "end": {
+          "line": 147,
+          "column": 4,
+          "offset": 3862
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "In addition, you can use JavaScript's native default value syntax to declare default values for the props. This is particularly useful when using the type-based props declaration:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 149,
+          "column": 1,
+          "offset": 3864
+        },
+        "end": {
+          "line": 149,
+          "column": 180,
+          "offset": 4043
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "ts",
+      "meta": null,
+      "value": "const { foo = 'hello' } = defineProps<{ foo?: string }>()",
+      "position": {
+        "start": {
+          "line": 151,
+          "column": 1,
+          "offset": 4045
+        },
+        "end": {
+          "line": 153,
+          "column": 4,
+          "offset": 4112
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "If you prefer to have more visual distinction between destructured props and normal variables in your IDE, Vue's VSCode extension provides a setting to enable inlay-hints for destructured props.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 155,
+          "column": 1,
+          "offset": 4114
+        },
+        "end": {
+          "line": 155,
+          "column": 195,
+          "offset": 4308
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Passing Destructured Props into Functions {#passing-destructured-props-into-functions}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 157,
+          "column": 1,
+          "offset": 4310
+        },
+        "end": {
+          "line": 157,
+          "column": 91,
+          "offset": 4400
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "When we pass a destructured prop into a function, e.g.:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 159,
+          "column": 1,
+          "offset": 4402
+        },
+        "end": {
+          "line": 159,
+          "column": 56,
+          "offset": 4457
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "const { foo } = defineProps(['foo'])\n\nwatch(foo, /* ... */)",
+      "position": {
+        "start": {
+          "line": 161,
+          "column": 1,
+          "offset": 4459
+        },
+        "end": {
+          "line": 165,
+          "column": 4,
+          "offset": 4528
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "This will not work as expected because it is equivalent to ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "watch(props.foo, ...)",
+          "position": {
+            "start": {
+              "line": 167,
+              "column": 60,
+              "offset": 4589
+            },
+            "end": {
+              "line": 167,
+              "column": 83,
+              "offset": 4612
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " - we are passing a value instead of a reactive data source to ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "watch",
+          "position": {
+            "start": {
+              "line": 167,
+              "column": 146,
+              "offset": 4675
+            },
+            "end": {
+              "line": 167,
+              "column": 153,
+              "offset": 4682
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ". In fact, Vue's compiler will catch such cases and throw a warning.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 167,
+          "column": 1,
+          "offset": 4530
+        },
+        "end": {
+          "line": 167,
+          "column": 221,
+          "offset": 4750
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Similar to how we can watch a normal prop with ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "watch(() => props.foo, ...)",
+          "position": {
+            "start": {
+              "line": 169,
+              "column": 48,
+              "offset": 4799
+            },
+            "end": {
+              "line": 169,
+              "column": 77,
+              "offset": 4828
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", we can watch a destructured prop also by wrapping it in a getter:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 169,
+          "column": 1,
+          "offset": 4752
+        },
+        "end": {
+          "line": 169,
+          "column": 144,
+          "offset": 4895
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "watch(() => foo, /* ... */)",
+      "position": {
+        "start": {
+          "line": 171,
+          "column": 1,
+          "offset": 4897
+        },
+        "end": {
+          "line": 173,
+          "column": 4,
+          "offset": 4934
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "In addition, this is the recommended approach when we need to pass a destructured prop into an external function while retaining reactivity:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 175,
+          "column": 1,
+          "offset": 4936
+        },
+        "end": {
+          "line": 175,
+          "column": 141,
+          "offset": 5076
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "useComposable(() => foo)",
+      "position": {
+        "start": {
+          "line": 177,
+          "column": 1,
+          "offset": 5078
+        },
+        "end": {
+          "line": 179,
+          "column": 4,
+          "offset": 5112
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "The external function can call the getter (or normalize it with ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/api/reactivity-utilities.html#tovalue",
+          "children": [
+            {
+              "type": "text",
+              "value": "toValue",
+              "position": {
+                "start": {
+                  "line": 181,
+                  "column": 66,
+                  "offset": 5179
+                },
+                "end": {
+                  "line": 181,
+                  "column": 73,
+                  "offset": 5186
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 181,
+              "column": 65,
+              "offset": 5178
+            },
+            "end": {
+              "line": 181,
+              "column": 114,
+              "offset": 5227
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ") when it needs to track changes of the provided prop, e.g. in a computed or watcher getter.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 181,
+          "column": 1,
+          "offset": 5114
+        },
+        "end": {
+          "line": 181,
+          "column": 206,
+          "offset": 5319
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "position": {
+        "start": {
+          "line": 183,
+          "column": 1,
+          "offset": 5321
+        },
+        "end": {
+          "line": 183,
+          "column": 7,
+          "offset": 5327
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Prop Passing Details {#prop-passing-details}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 185,
+          "column": 1,
+          "offset": 5329
+        },
+        "end": {
+          "line": 185,
+          "column": 48,
+          "offset": 5376
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Prop Name Casing {#prop-name-casing}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 187,
+          "column": 1,
+          "offset": 5378
+        },
+        "end": {
+          "line": 187,
+          "column": 41,
+          "offset": 5418
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "We declare long prop names using camelCase because this avoids having to use quotes when using them as property keys, and allows us to reference them directly in template expressions because they are valid JavaScript identifiers:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 189,
+          "column": 1,
+          "offset": 5420
+        },
+        "end": {
+          "line": 189,
+          "column": 230,
+          "offset": 5649
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"composition-api\">",
+      "position": {
+        "start": {
+          "line": 191,
+          "column": 1,
+          "offset": 5651
+        },
+        "end": {
+          "line": 191,
+          "column": 30,
+          "offset": 5680
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "defineProps({\n  greetingMessage: String\n})",
+      "position": {
+        "start": {
+          "line": 193,
+          "column": 1,
+          "offset": 5682
+        },
+        "end": {
+          "line": 197,
+          "column": 4,
+          "offset": 5734
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"options-api\">",
+      "position": {
+        "start": {
+          "line": 199,
+          "column": 1,
+          "offset": 5736
+        },
+        "end": {
+          "line": 200,
+          "column": 26,
+          "offset": 5768
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "export default {\n  props: {\n    greetingMessage: String\n  }\n}",
+      "position": {
+        "start": {
+          "line": 202,
+          "column": 1,
+          "offset": 5770
+        },
+        "end": {
+          "line": 208,
+          "column": 4,
+          "offset": 5841
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "position": {
+        "start": {
+          "line": 210,
+          "column": 1,
+          "offset": 5843
+        },
+        "end": {
+          "line": 210,
+          "column": 7,
+          "offset": 5849
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<span>{{ greetingMessage }}</span>",
+      "position": {
+        "start": {
+          "line": 212,
+          "column": 1,
+          "offset": 5851
+        },
+        "end": {
+          "line": 214,
+          "column": 4,
+          "offset": 5901
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Technically, you can also use camelCase when passing props to a child component (except in ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/guide/essentials/component-basics#in-dom-template-parsing-caveats",
+          "children": [
+            {
+              "type": "text",
+              "value": "in-DOM templates",
+              "position": {
+                "start": {
+                  "line": 216,
+                  "column": 93,
+                  "offset": 5995
+                },
+                "end": {
+                  "line": 216,
+                  "column": 109,
+                  "offset": 6011
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 216,
+              "column": 92,
+              "offset": 5994
+            },
+            "end": {
+              "line": 216,
+              "column": 178,
+              "offset": 6080
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "). However, the convention is using kebab-case in all cases to align with HTML attributes:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 216,
+          "column": 1,
+          "offset": 5903
+        },
+        "end": {
+          "line": 216,
+          "column": 268,
+          "offset": 6170
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<MyComponent greeting-message=\"hello\" />",
+      "position": {
+        "start": {
+          "line": 218,
+          "column": 1,
+          "offset": 6172
+        },
+        "end": {
+          "line": 220,
+          "column": 4,
+          "offset": 6228
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "We use ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/guide/components/registration#component-name-casing",
+          "children": [
+            {
+              "type": "text",
+              "value": "PascalCase for component tags",
+              "position": {
+                "start": {
+                  "line": 222,
+                  "column": 9,
+                  "offset": 6238
+                },
+                "end": {
+                  "line": 222,
+                  "column": 38,
+                  "offset": 6267
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 222,
+              "column": 8,
+              "offset": 6237
+            },
+            "end": {
+              "line": 222,
+              "column": 93,
+              "offset": 6322
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " when possible because it improves template readability by differentiating Vue components from native elements. However, there isn't as much practical benefit in using camelCase when passing props, so we choose to follow each language's conventions.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 222,
+          "column": 1,
+          "offset": 6230
+        },
+        "end": {
+          "line": 222,
+          "column": 342,
+          "offset": 6571
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Static vs. Dynamic Props {#static-vs-dynamic-props}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 224,
+          "column": 1,
+          "offset": 6573
+        },
+        "end": {
+          "line": 224,
+          "column": 56,
+          "offset": 6628
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "So far, you've seen props passed as static values, like in:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 226,
+          "column": 1,
+          "offset": 6630
+        },
+        "end": {
+          "line": 226,
+          "column": 60,
+          "offset": 6689
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<BlogPost title=\"My journey with Vue\" />",
+      "position": {
+        "start": {
+          "line": 228,
+          "column": 1,
+          "offset": 6691
+        },
+        "end": {
+          "line": 230,
+          "column": 4,
+          "offset": 6747
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "You've also seen props assigned dynamically with ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "v-bind",
+          "position": {
+            "start": {
+              "line": 232,
+              "column": 50,
+              "offset": 6798
+            },
+            "end": {
+              "line": 232,
+              "column": 58,
+              "offset": 6806
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " or its ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": ":",
+          "position": {
+            "start": {
+              "line": 232,
+              "column": 66,
+              "offset": 6814
+            },
+            "end": {
+              "line": 232,
+              "column": 69,
+              "offset": 6817
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " shortcut, such as in:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 232,
+          "column": 1,
+          "offset": 6749
+        },
+        "end": {
+          "line": 232,
+          "column": 91,
+          "offset": 6839
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<!-- Dynamically assign the value of a variable -->\n<BlogPost :title=\"post.title\" />\n\n<!-- Dynamically assign the value of a complex expression -->\n<BlogPost :title=\"post.title + ' by ' + post.author.name\" />",
+      "position": {
+        "start": {
+          "line": 234,
+          "column": 1,
+          "offset": 6841
+        },
+        "end": {
+          "line": 240,
+          "column": 4,
+          "offset": 7065
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Passing Different Value Types {#passing-different-value-types}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 242,
+          "column": 1,
+          "offset": 7067
+        },
+        "end": {
+          "line": 242,
+          "column": 67,
+          "offset": 7133
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "In the two examples above, we happen to pass string values, but ",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "any",
+              "position": {
+                "start": {
+                  "line": 244,
+                  "column": 66,
+                  "offset": 7200
+                },
+                "end": {
+                  "line": 244,
+                  "column": 69,
+                  "offset": 7203
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 244,
+              "column": 65,
+              "offset": 7199
+            },
+            "end": {
+              "line": 244,
+              "column": 70,
+              "offset": 7204
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " type of value can be passed to a prop.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 244,
+          "column": 1,
+          "offset": 7135
+        },
+        "end": {
+          "line": 244,
+          "column": 109,
+          "offset": 7243
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 4,
+      "children": [
+        {
+          "type": "text",
+          "value": "Number {#number}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 246,
+          "column": 1,
+          "offset": 7245
+        },
+        "end": {
+          "line": 246,
+          "column": 22,
+          "offset": 7266
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<!-- Even though `42` is static, we need v-bind to tell Vue that -->\n<!-- this is a JavaScript expression rather than a string.       -->\n<BlogPost :likes=\"42\" />\n\n<!-- Dynamically assign to the value of a variable. -->\n<BlogPost :likes=\"post.likes\" />",
+      "position": {
+        "start": {
+          "line": 248,
+          "column": 1,
+          "offset": 7268
+        },
+        "end": {
+          "line": 255,
+          "column": 4,
+          "offset": 7536
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 4,
+      "children": [
+        {
+          "type": "text",
+          "value": "Boolean {#boolean}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 257,
+          "column": 1,
+          "offset": 7538
+        },
+        "end": {
+          "line": 257,
+          "column": 24,
+          "offset": 7561
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<!-- Including the prop with no value will imply `true`. -->\n<BlogPost is-published />\n\n<!-- Even though `false` is static, we need v-bind to tell Vue that -->\n<!-- this is a JavaScript expression rather than a string.          -->\n<BlogPost :is-published=\"false\" />\n\n<!-- Dynamically assign to the value of a variable. -->\n<BlogPost :is-published=\"post.isPublished\" />",
+      "position": {
+        "start": {
+          "line": 259,
+          "column": 1,
+          "offset": 7563
+        },
+        "end": {
+          "line": 269,
+          "column": 4,
+          "offset": 7948
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 4,
+      "children": [
+        {
+          "type": "text",
+          "value": "Array {#array}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 271,
+          "column": 1,
+          "offset": 7950
+        },
+        "end": {
+          "line": 271,
+          "column": 20,
+          "offset": 7969
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<!-- Even though the array is static, we need v-bind to tell Vue that -->\n<!-- this is a JavaScript expression rather than a string.            -->\n<BlogPost :comment-ids=\"[234, 266, 273]\" />\n\n<!-- Dynamically assign to the value of a variable. -->\n<BlogPost :comment-ids=\"post.commentIds\" />",
+      "position": {
+        "start": {
+          "line": 273,
+          "column": 1,
+          "offset": 7971
+        },
+        "end": {
+          "line": 280,
+          "column": 4,
+          "offset": 8279
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 4,
+      "children": [
+        {
+          "type": "text",
+          "value": "Object {#object}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 282,
+          "column": 1,
+          "offset": 8281
+        },
+        "end": {
+          "line": 282,
+          "column": 22,
+          "offset": 8302
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<!-- Even though the object is static, we need v-bind to tell Vue that -->\n<!-- this is a JavaScript expression rather than a string.             -->\n<BlogPost\n  :author=\"{\n    name: 'Veronica',\n    company: 'Veridian Dynamics'\n  }\"\n />\n\n<!-- Dynamically assign to the value of a variable. -->\n<BlogPost :author=\"post.author\" />",
+      "position": {
+        "start": {
+          "line": 284,
+          "column": 1,
+          "offset": 8304
+        },
+        "end": {
+          "line": 296,
+          "column": 4,
+          "offset": 8648
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Binding Multiple Properties Using an Object {#binding-multiple-properties-using-an-object}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 298,
+          "column": 1,
+          "offset": 8650
+        },
+        "end": {
+          "line": 298,
+          "column": 95,
+          "offset": 8744
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "If you want to pass all the properties of an object as props, you can use ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/guide/essentials/template-syntax#dynamically-binding-multiple-attributes",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "v-bind",
+              "position": {
+                "start": {
+                  "line": 300,
+                  "column": 76,
+                  "offset": 8821
+                },
+                "end": {
+                  "line": 300,
+                  "column": 84,
+                  "offset": 8829
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "text",
+              "value": " without an argument",
+              "position": {
+                "start": {
+                  "line": 300,
+                  "column": 84,
+                  "offset": 8829
+                },
+                "end": {
+                  "line": 300,
+                  "column": 104,
+                  "offset": 8849
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 300,
+              "column": 75,
+              "offset": 8820
+            },
+            "end": {
+              "line": 300,
+              "column": 180,
+              "offset": 8925
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " (",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "v-bind",
+          "position": {
+            "start": {
+              "line": 300,
+              "column": 182,
+              "offset": 8927
+            },
+            "end": {
+              "line": 300,
+              "column": 190,
+              "offset": 8935
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " instead of ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": ":prop-name",
+          "position": {
+            "start": {
+              "line": 300,
+              "column": 202,
+              "offset": 8947
+            },
+            "end": {
+              "line": 300,
+              "column": 214,
+              "offset": 8959
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "). For example, given a ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "post",
+          "position": {
+            "start": {
+              "line": 300,
+              "column": 238,
+              "offset": 8983
+            },
+            "end": {
+              "line": 300,
+              "column": 244,
+              "offset": 8989
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " object:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 300,
+          "column": 1,
+          "offset": 8746
+        },
+        "end": {
+          "line": 300,
+          "column": 252,
+          "offset": 8997
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"options-api\">",
+      "position": {
+        "start": {
+          "line": 302,
+          "column": 1,
+          "offset": 8999
+        },
+        "end": {
+          "line": 302,
+          "column": 26,
+          "offset": 9024
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "export default {\n  data() {\n    return {\n      post: {\n        id: 1,\n        title: 'My Journey with Vue'\n      }\n    }\n  }\n}",
+      "position": {
+        "start": {
+          "line": 304,
+          "column": 1,
+          "offset": 9026
+        },
+        "end": {
+          "line": 315,
+          "column": 4,
+          "offset": 9162
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"composition-api\">",
+      "position": {
+        "start": {
+          "line": 317,
+          "column": 1,
+          "offset": 9164
+        },
+        "end": {
+          "line": 318,
+          "column": 30,
+          "offset": 9200
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "const post = {\n  id: 1,\n  title: 'My Journey with Vue'\n}",
+      "position": {
+        "start": {
+          "line": 320,
+          "column": 1,
+          "offset": 9202
+        },
+        "end": {
+          "line": 325,
+          "column": 4,
+          "offset": 9268
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "position": {
+        "start": {
+          "line": 327,
+          "column": 1,
+          "offset": 9270
+        },
+        "end": {
+          "line": 327,
+          "column": 7,
+          "offset": 9276
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "The following template:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 329,
+          "column": 1,
+          "offset": 9278
+        },
+        "end": {
+          "line": 329,
+          "column": 24,
+          "offset": 9301
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<BlogPost v-bind=\"post\" />",
+      "position": {
+        "start": {
+          "line": 331,
+          "column": 1,
+          "offset": 9303
+        },
+        "end": {
+          "line": 333,
+          "column": 4,
+          "offset": 9345
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Will be equivalent to:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 335,
+          "column": 1,
+          "offset": 9347
+        },
+        "end": {
+          "line": 335,
+          "column": 23,
+          "offset": 9369
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<BlogPost :id=\"post.id\" :title=\"post.title\" />",
+      "position": {
+        "start": {
+          "line": 337,
+          "column": 1,
+          "offset": 9371
+        },
+        "end": {
+          "line": 339,
+          "column": 4,
+          "offset": 9433
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 3,
+          "children": [
+            {
+              "type": "text",
+              "value": "Merge Behavior When Combining Bindings {#merge-behavior-when-combining-bindings}",
+              "position": {
+                "start": {
+                  "line": 341,
+                  "column": 5,
+                  "offset": 9439
+                },
+                "end": {
+                  "line": 341,
+                  "column": 85,
+                  "offset": 9519
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 341,
+              "column": 1,
+              "offset": 9435
+            },
+            "end": {
+              "line": 341,
+              "column": 85,
+              "offset": 9519
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "When ",
+              "position": {
+                "start": {
+                  "line": 343,
+                  "column": 1,
+                  "offset": 9521
+                },
+                "end": {
+                  "line": 343,
+                  "column": 6,
+                  "offset": 9526
+                }
+              }
+            },
+            {
+              "type": "inlineCode",
+              "value": "v-bind",
+              "position": {
+                "start": {
+                  "line": 343,
+                  "column": 6,
+                  "offset": 9526
+                },
+                "end": {
+                  "line": 343,
+                  "column": 14,
+                  "offset": 9534
+                }
+              }
+            },
+            {
+              "type": "text",
+              "value": " is used alongside explicit bindings on the same component, Vue internally calls ",
+              "position": {
+                "start": {
+                  "line": 343,
+                  "column": 14,
+                  "offset": 9534
+                },
+                "end": {
+                  "line": 343,
+                  "column": 95,
+                  "offset": 9615
+                }
+              }
+            },
+            {
+              "type": "inlineCode",
+              "value": "mergeProps()",
+              "position": {
+                "start": {
+                  "line": 343,
+                  "column": 95,
+                  "offset": 9615
+                },
+                "end": {
+                  "line": 343,
+                  "column": 109,
+                  "offset": 9629
+                }
+              }
+            },
+            {
+              "type": "text",
+              "value": " to combine them. The merging strategy depends on the key type:",
+              "position": {
+                "start": {
+                  "line": 343,
+                  "column": 109,
+                  "offset": 9629
+                },
+                "end": {
+                  "line": 343,
+                  "column": 172,
+                  "offset": 9692
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 343,
+              "column": 1,
+              "offset": 9521
+            },
+            "end": {
+              "line": 343,
+              "column": 172,
+              "offset": 9692
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "list",
+          "ordered": false,
+          "start": null,
+          "spread": false,
+          "children": [
+            {
+              "type": "listItem",
+              "spread": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "strong",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Regular props",
+                          "position": {
+                            "start": {
+                              "line": 345,
+                              "column": 5,
+                              "offset": 9698
+                            },
+                            "end": {
+                              "line": 345,
+                              "column": 18,
+                              "offset": 9711
+                            }
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 345,
+                          "column": 3,
+                          "offset": 9696
+                        },
+                        "end": {
+                          "line": 345,
+                          "column": 20,
+                          "offset": 9713
+                        }
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": " — the last value wins:",
+                      "position": {
+                        "start": {
+                          "line": 345,
+                          "column": 20,
+                          "offset": 9713
+                        },
+                        "end": {
+                          "line": 345,
+                          "column": 43,
+                          "offset": 9736
+                        }
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 345,
+                      "column": 3,
+                      "offset": 9696
+                    },
+                    "end": {
+                      "line": 345,
+                      "column": 43,
+                      "offset": 9736
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 345,
+                  "column": 1,
+                  "offset": 9694
+                },
+                "end": {
+                  "line": 345,
+                  "column": 43,
+                  "offset": 9736
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 345,
+              "column": 1,
+              "offset": 9694
+            },
+            "end": {
+              "line": 345,
+              "column": 43,
+              "offset": 9736
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "code",
+          "lang": "vue-html",
+          "meta": null,
+          "value": "<!-- title === 'bar' -->\n<BlogPost title=\"foo\" v-bind=\"{ title: 'bar' }\" />",
+          "position": {
+            "start": {
+              "line": 347,
+              "column": 1,
+              "offset": 9738
+            },
+            "end": {
+              "line": 350,
+              "column": 4,
+              "offset": 9829
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "list",
+          "ordered": false,
+          "start": null,
+          "spread": false,
+          "children": [
+            {
+              "type": "listItem",
+              "spread": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "strong",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Event listeners",
+                          "position": {
+                            "start": {
+                              "line": 352,
+                              "column": 5,
+                              "offset": 9835
+                            },
+                            "end": {
+                              "line": 352,
+                              "column": 20,
+                              "offset": 9850
+                            }
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 352,
+                          "column": 3,
+                          "offset": 9833
+                        },
+                        "end": {
+                          "line": 352,
+                          "column": 22,
+                          "offset": 9852
+                        }
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": " — when passing listeners in a ",
+                      "position": {
+                        "start": {
+                          "line": 352,
+                          "column": 22,
+                          "offset": 9852
+                        },
+                        "end": {
+                          "line": 352,
+                          "column": 53,
+                          "offset": 9883
+                        }
+                      }
+                    },
+                    {
+                      "type": "inlineCode",
+                      "value": "v-bind",
+                      "position": {
+                        "start": {
+                          "line": 352,
+                          "column": 53,
+                          "offset": 9883
+                        },
+                        "end": {
+                          "line": 352,
+                          "column": 61,
+                          "offset": 9891
+                        }
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": " object, ",
+                      "position": {
+                        "start": {
+                          "line": 352,
+                          "column": 61,
+                          "offset": 9891
+                        },
+                        "end": {
+                          "line": 352,
+                          "column": 70,
+                          "offset": 9900
+                        }
+                      }
+                    },
+                    {
+                      "type": "link",
+                      "title": null,
+                      "url": "/guide/extras/render-function#v-on",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "use the ",
+                          "position": {
+                            "start": {
+                              "line": 352,
+                              "column": 71,
+                              "offset": 9901
+                            },
+                            "end": {
+                              "line": 352,
+                              "column": 79,
+                              "offset": 9909
+                            }
+                          }
+                        },
+                        {
+                          "type": "inlineCode",
+                          "value": "onEventName",
+                          "position": {
+                            "start": {
+                              "line": 352,
+                              "column": 79,
+                              "offset": 9909
+                            },
+                            "end": {
+                              "line": 352,
+                              "column": 92,
+                              "offset": 9922
+                            }
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "value": " key convention",
+                          "position": {
+                            "start": {
+                              "line": 352,
+                              "column": 92,
+                              "offset": 9922
+                            },
+                            "end": {
+                              "line": 352,
+                              "column": 107,
+                              "offset": 9937
+                            }
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 352,
+                          "column": 70,
+                          "offset": 9900
+                        },
+                        "end": {
+                          "line": 352,
+                          "column": 144,
+                          "offset": 9974
+                        }
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": ". All handlers for the same event will be called (see ",
+                      "position": {
+                        "start": {
+                          "line": 352,
+                          "column": 144,
+                          "offset": 9974
+                        },
+                        "end": {
+                          "line": 352,
+                          "column": 198,
+                          "offset": 10028
+                        }
+                      }
+                    },
+                    {
+                      "type": "link",
+                      "title": null,
+                      "url": "/guide/components/attrs#v-on-listener-inheritance",
+                      "children": [
+                        {
+                          "type": "inlineCode",
+                          "value": "v-on",
+                          "position": {
+                            "start": {
+                              "line": 352,
+                              "column": 199,
+                              "offset": 10029
+                            },
+                            "end": {
+                              "line": 352,
+                              "column": 205,
+                              "offset": 10035
+                            }
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "value": " Listener Inheritance",
+                          "position": {
+                            "start": {
+                              "line": 352,
+                              "column": 205,
+                              "offset": 10035
+                            },
+                            "end": {
+                              "line": 352,
+                              "column": 226,
+                              "offset": 10056
+                            }
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 352,
+                          "column": 198,
+                          "offset": 10028
+                        },
+                        "end": {
+                          "line": 352,
+                          "column": 278,
+                          "offset": 10108
+                        }
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": "):",
+                      "position": {
+                        "start": {
+                          "line": 352,
+                          "column": 278,
+                          "offset": 10108
+                        },
+                        "end": {
+                          "line": 352,
+                          "column": 280,
+                          "offset": 10110
+                        }
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 352,
+                      "column": 3,
+                      "offset": 9833
+                    },
+                    "end": {
+                      "line": 352,
+                      "column": 280,
+                      "offset": 10110
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 352,
+                  "column": 1,
+                  "offset": 9831
+                },
+                "end": {
+                  "line": 352,
+                  "column": 280,
+                  "offset": 10110
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 352,
+              "column": 1,
+              "offset": 9831
+            },
+            "end": {
+              "line": 352,
+              "column": 280,
+              "offset": 10110
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "code",
+          "lang": "vue-html",
+          "meta": null,
+          "value": "<!-- logs 1 and 2 -->\n<BlogPost @click=\"console.log(1)\" v-bind=\"{ onClick: () => console.log(2) }\" />",
+          "position": {
+            "start": {
+              "line": 354,
+              "column": 1,
+              "offset": 10112
+            },
+            "end": {
+              "line": 357,
+              "column": 4,
+              "offset": 10229
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "list",
+          "ordered": false,
+          "start": null,
+          "spread": false,
+          "children": [
+            {
+              "type": "listItem",
+              "spread": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "strong",
+                      "children": [
+                        {
+                          "type": "inlineCode",
+                          "value": "class",
+                          "position": {
+                            "start": {
+                              "line": 359,
+                              "column": 5,
+                              "offset": 10235
+                            },
+                            "end": {
+                              "line": 359,
+                              "column": 12,
+                              "offset": 10242
+                            }
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "value": " and ",
+                          "position": {
+                            "start": {
+                              "line": 359,
+                              "column": 12,
+                              "offset": 10242
+                            },
+                            "end": {
+                              "line": 359,
+                              "column": 17,
+                              "offset": 10247
+                            }
+                          }
+                        },
+                        {
+                          "type": "inlineCode",
+                          "value": "style",
+                          "position": {
+                            "start": {
+                              "line": 359,
+                              "column": 17,
+                              "offset": 10247
+                            },
+                            "end": {
+                              "line": 359,
+                              "column": 24,
+                              "offset": 10254
+                            }
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 359,
+                          "column": 3,
+                          "offset": 10233
+                        },
+                        "end": {
+                          "line": 359,
+                          "column": 26,
+                          "offset": 10256
+                        }
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": " follow a similar merge strategy (see ",
+                      "position": {
+                        "start": {
+                          "line": 359,
+                          "column": 26,
+                          "offset": 10256
+                        },
+                        "end": {
+                          "line": 359,
+                          "column": 64,
+                          "offset": 10294
+                        }
+                      }
+                    },
+                    {
+                      "type": "link",
+                      "title": null,
+                      "url": "/guide/components/attrs#class-and-style-merging",
+                      "children": [
+                        {
+                          "type": "inlineCode",
+                          "value": "class",
+                          "position": {
+                            "start": {
+                              "line": 359,
+                              "column": 65,
+                              "offset": 10295
+                            },
+                            "end": {
+                              "line": 359,
+                              "column": 72,
+                              "offset": 10302
+                            }
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "value": " and ",
+                          "position": {
+                            "start": {
+                              "line": 359,
+                              "column": 72,
+                              "offset": 10302
+                            },
+                            "end": {
+                              "line": 359,
+                              "column": 77,
+                              "offset": 10307
+                            }
+                          }
+                        },
+                        {
+                          "type": "inlineCode",
+                          "value": "style",
+                          "position": {
+                            "start": {
+                              "line": 359,
+                              "column": 77,
+                              "offset": 10307
+                            },
+                            "end": {
+                              "line": 359,
+                              "column": 84,
+                              "offset": 10314
+                            }
+                          }
+                        },
+                        {
+                          "type": "text",
+                          "value": " Merging",
+                          "position": {
+                            "start": {
+                              "line": 359,
+                              "column": 84,
+                              "offset": 10314
+                            },
+                            "end": {
+                              "line": 359,
+                              "column": 92,
+                              "offset": 10322
+                            }
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 359,
+                          "column": 64,
+                          "offset": 10294
+                        },
+                        "end": {
+                          "line": 359,
+                          "column": 142,
+                          "offset": 10372
+                        }
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": ").",
+                      "position": {
+                        "start": {
+                          "line": 359,
+                          "column": 142,
+                          "offset": 10372
+                        },
+                        "end": {
+                          "line": 359,
+                          "column": 144,
+                          "offset": 10374
+                        }
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 359,
+                      "column": 3,
+                      "offset": 10233
+                    },
+                    "end": {
+                      "line": 359,
+                      "column": 144,
+                      "offset": 10374
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 359,
+                  "column": 1,
+                  "offset": 10231
+                },
+                "end": {
+                  "line": 359,
+                  "column": 144,
+                  "offset": 10374
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 359,
+              "column": 1,
+              "offset": 10231
+            },
+            "end": {
+              "line": 359,
+              "column": 144,
+              "offset": 10374
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": ":::tip\nThe full merging rules are described in the ",
+              "position": {
+                "start": {
+                  "line": 361,
+                  "column": 1,
+                  "offset": 10376
+                },
+                "end": {
+                  "line": 362,
+                  "column": 45,
+                  "offset": 10427
+                }
+              }
+            },
+            {
+              "type": "link",
+              "title": null,
+              "url": "/api/render-function#mergeprops",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "mergeProps()",
+                  "position": {
+                    "start": {
+                      "line": 362,
+                      "column": 46,
+                      "offset": 10428
+                    },
+                    "end": {
+                      "line": 362,
+                      "column": 60,
+                      "offset": 10442
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 362,
+                  "column": 45,
+                  "offset": 10427
+                },
+                "end": {
+                  "line": 362,
+                  "column": 94,
+                  "offset": 10476
+                }
+              }
+            },
+            {
+              "type": "text",
+              "value": " API reference.\n:::",
+              "position": {
+                "start": {
+                  "line": 362,
+                  "column": 94,
+                  "offset": 10476
+                },
+                "end": {
+                  "line": 363,
+                  "column": 4,
+                  "offset": 10495
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 361,
+              "column": 1,
+              "offset": 10376
+            },
+            "end": {
+              "line": 363,
+              "column": 4,
+              "offset": 10495
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "One-Way Data Flow {#one-way-data-flow}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 365,
+          "column": 1,
+          "offset": 10497
+        },
+        "end": {
+          "line": 365,
+          "column": 42,
+          "offset": 10538
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "All props form a ",
+          "data": {}
+        },
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "one-way-down binding",
+              "position": {
+                "start": {
+                  "line": 343,
+                  "column": 20,
+                  "offset": 9497
+                },
+                "end": {
+                  "line": 343,
+                  "column": 40,
+                  "offset": 9517
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 343,
+              "column": 18,
+              "offset": 9495
+            },
+            "end": {
+              "line": 343,
+              "column": 42,
+              "offset": 9519
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " between the child property and the parent one: when the parent property updates, it will flow down to the child, but not the other way around. This prevents child components from accidentally mutating the parent's state, which can make your app's data flow harder to understand.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 367,
+          "column": 1,
+          "offset": 10540
+        },
+        "end": {
+          "line": 367,
+          "column": 321,
+          "offset": 10860
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "In addition, every time the parent component is updated, all props in the child component will be refreshed with the latest value. This means you should ",
+          "data": {}
+        },
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "not",
+              "position": {
+                "start": {
+                  "line": 345,
+                  "column": 156,
+                  "offset": 9955
+                },
+                "end": {
+                  "line": 345,
+                  "column": 159,
+                  "offset": 9958
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 345,
+              "column": 154,
+              "offset": 9953
+            },
+            "end": {
+              "line": 345,
+              "column": 161,
+              "offset": 9960
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " attempt to mutate a prop inside a child component. If you do, Vue will warn you in the console:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 369,
+          "column": 1,
+          "offset": 10862
+        },
+        "end": {
+          "line": 369,
+          "column": 257,
+          "offset": 11118
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"composition-api\">",
+      "position": {
+        "start": {
+          "line": 371,
+          "column": 1,
+          "offset": 11120
+        },
+        "end": {
+          "line": 371,
+          "column": 30,
+          "offset": 11149
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "const props = defineProps(['foo'])\n\n// ❌ warning, props are readonly!\nprops.foo = 'bar'",
+      "position": {
+        "start": {
+          "line": 373,
+          "column": 1,
+          "offset": 11151
+        },
+        "end": {
+          "line": 378,
+          "column": 4,
+          "offset": 11248
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"options-api\">",
+      "position": {
+        "start": {
+          "line": 380,
+          "column": 1,
+          "offset": 11250
+        },
+        "end": {
+          "line": 381,
+          "column": 26,
+          "offset": 11282
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "export default {\n  props: ['foo'],\n  created() {\n    // ❌ warning, props are readonly!\n    this.foo = 'bar'\n  }\n}",
+      "position": {
+        "start": {
+          "line": 383,
+          "column": 1,
+          "offset": 11284
+        },
+        "end": {
+          "line": 391,
+          "column": 4,
+          "offset": 11407
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "position": {
+        "start": {
+          "line": 393,
+          "column": 1,
+          "offset": 11409
+        },
+        "end": {
+          "line": 393,
+          "column": 7,
+          "offset": 11415
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "There are usually two cases where it's tempting to mutate a prop:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 395,
+          "column": 1,
+          "offset": 11417
+        },
+        "end": {
+          "line": 395,
+          "column": 66,
+          "offset": 11482
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 1,
+      "spread": true,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": true,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "strong",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "The prop is used to pass in an initial value; the child component wants to use it as a local data property afterwards.",
+                      "position": {
+                        "start": {
+                          "line": 373,
+                          "column": 6,
+                          "offset": 10427
+                        },
+                        "end": {
+                          "line": 373,
+                          "column": 124,
+                          "offset": 10545
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 373,
+                      "column": 4,
+                      "offset": 10425
+                    },
+                    "end": {
+                      "line": 373,
+                      "column": 126,
+                      "offset": 10547
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " In this case, it's best to define a local data property that uses the prop as its initial value:",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 397,
+                  "column": 4,
+                  "offset": 11487
+                },
+                "end": {
+                  "line": 397,
+                  "column": 223,
+                  "offset": 11706
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "html",
+              "value": "<div class=\"composition-api\">",
+              "position": {
+                "start": {
+                  "line": 399,
+                  "column": 4,
+                  "offset": 11711
+                },
+                "end": {
+                  "line": 399,
+                  "column": 33,
+                  "offset": 11740
+                }
+              },
+              "data": {
+                "diffUnchanged": true
+              },
+              "children": []
+            },
+            {
+              "type": "code",
+              "lang": "js",
+              "meta": null,
+              "value": "const props = defineProps(['initialCounter'])\n\n// counter only uses props.initialCounter as the initial value;\n// it is disconnected from future prop updates.\nconst counter = ref(props.initialCounter)",
+              "position": {
+                "start": {
+                  "line": 401,
+                  "column": 4,
+                  "offset": 11745
+                },
+                "end": {
+                  "line": 407,
+                  "column": 7,
+                  "offset": 11970
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "html",
+              "value": "</div>\n<div class=\"options-api\">",
+              "position": {
+                "start": {
+                  "line": 409,
+                  "column": 4,
+                  "offset": 11975
+                },
+                "end": {
+                  "line": 410,
+                  "column": 29,
+                  "offset": 12010
+                }
+              },
+              "data": {
+                "diffUnchanged": true
+              },
+              "children": []
+            },
+            {
+              "type": "code",
+              "lang": "js",
+              "meta": null,
+              "value": "export default {\n  props: ['initialCounter'],\n  data() {\n    return {\n      // counter only uses this.initialCounter as the initial value;\n      // it is disconnected from future prop updates.\n      counter: this.initialCounter\n    }\n  }\n}",
+              "position": {
+                "start": {
+                  "line": 412,
+                  "column": 4,
+                  "offset": 12015
+                },
+                "end": {
+                  "line": 423,
+                  "column": 7,
+                  "offset": 12297
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "html",
+              "value": "</div>",
+              "position": {
+                "start": {
+                  "line": 425,
+                  "column": 4,
+                  "offset": 12302
+                },
+                "end": {
+                  "line": 425,
+                  "column": 10,
+                  "offset": 12308
+                }
+              },
+              "data": {
+                "diffUnchanged": true
+              },
+              "children": []
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 397,
+              "column": 1,
+              "offset": 11484
+            },
+            "end": {
+              "line": 425,
+              "column": 10,
+              "offset": 12308
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": true,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "strong",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "The prop is passed in as a raw value that needs to be transformed.",
+                      "position": {
+                        "start": {
+                          "line": 403,
+                          "column": 6,
+                          "offset": 11253
+                        },
+                        "end": {
+                          "line": 403,
+                          "column": 72,
+                          "offset": 11319
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 403,
+                      "column": 4,
+                      "offset": 11251
+                    },
+                    "end": {
+                      "line": 403,
+                      "column": 74,
+                      "offset": 11321
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " In this case, it's best to define a computed property using the prop's value:",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 427,
+                  "column": 4,
+                  "offset": 12313
+                },
+                "end": {
+                  "line": 427,
+                  "column": 152,
+                  "offset": 12461
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "html",
+              "value": "<div class=\"composition-api\">",
+              "position": {
+                "start": {
+                  "line": 429,
+                  "column": 4,
+                  "offset": 12466
+                },
+                "end": {
+                  "line": 429,
+                  "column": 33,
+                  "offset": 12495
+                }
+              },
+              "data": {
+                "diffUnchanged": true
+              },
+              "children": []
+            },
+            {
+              "type": "code",
+              "lang": "js",
+              "meta": null,
+              "value": "const props = defineProps(['size'])\n\n// computed property that auto-updates when the prop changes\nconst normalizedSize = computed(() => props.size.trim().toLowerCase())",
+              "position": {
+                "start": {
+                  "line": 431,
+                  "column": 4,
+                  "offset": 12500
+                },
+                "end": {
+                  "line": 436,
+                  "column": 7,
+                  "offset": 12690
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "html",
+              "value": "</div>\n<div class=\"options-api\">",
+              "position": {
+                "start": {
+                  "line": 438,
+                  "column": 4,
+                  "offset": 12695
+                },
+                "end": {
+                  "line": 439,
+                  "column": 29,
+                  "offset": 12730
+                }
+              },
+              "data": {
+                "diffUnchanged": true
+              },
+              "children": []
+            },
+            {
+              "type": "code",
+              "lang": "js",
+              "meta": null,
+              "value": "export default {\n  props: ['size'],\n  computed: {\n    // computed property that auto-updates when the prop changes\n    normalizedSize() {\n      return this.size.trim().toLowerCase()\n    }\n  }\n}",
+              "position": {
+                "start": {
+                  "line": 441,
+                  "column": 4,
+                  "offset": 12735
+                },
+                "end": {
+                  "line": 451,
+                  "column": 7,
+                  "offset": 12968
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "html",
+              "value": "</div>",
+              "position": {
+                "start": {
+                  "line": 453,
+                  "column": 4,
+                  "offset": 12973
+                },
+                "end": {
+                  "line": 453,
+                  "column": 10,
+                  "offset": 12979
+                }
+              },
+              "data": {
+                "diffUnchanged": true
+              },
+              "children": []
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 427,
+              "column": 1,
+              "offset": 12310
+            },
+            "end": {
+              "line": 453,
+              "column": 10,
+              "offset": 12979
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 397,
+          "column": 1,
+          "offset": 11484
+        },
+        "end": {
+          "line": 453,
+          "column": 10,
+          "offset": 12979
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Mutating Object / Array Props {#mutating-object-array-props}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 455,
+          "column": 1,
+          "offset": 12981
+        },
+        "end": {
+          "line": 455,
+          "column": 65,
+          "offset": 13045
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "When objects and arrays are passed as props, while the child component cannot mutate the prop binding, it ",
+          "data": {}
+        },
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "will",
+              "position": {
+                "start": {
+                  "line": 433,
+                  "column": 109,
+                  "offset": 12093
+                },
+                "end": {
+                  "line": 433,
+                  "column": 113,
+                  "offset": 12097
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 433,
+              "column": 107,
+              "offset": 12091
+            },
+            "end": {
+              "line": 433,
+              "column": 115,
+              "offset": 12099
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " be able to mutate the object or array's nested properties. This is because in JavaScript objects and arrays are passed by reference, and it is unreasonably expensive for Vue to prevent such mutations.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 457,
+          "column": 1,
+          "offset": 13047
+        },
+        "end": {
+          "line": 457,
+          "column": 316,
+          "offset": 13362
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "The main drawback of such mutations is that it allows the child component to affect parent state in a way that isn't obvious to the parent component, potentially making it more difficult to reason about the data flow in the future. As a best practice, you should avoid such mutations unless the parent and child are tightly coupled by design. In most cases, the child should ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/guide/components/events",
+          "children": [
+            {
+              "type": "text",
+              "value": "emit an event",
+              "position": {
+                "start": {
+                  "line": 435,
+                  "column": 377,
+                  "offset": 12678
+                },
+                "end": {
+                  "line": 435,
+                  "column": 390,
+                  "offset": 12691
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 435,
+              "column": 376,
+              "offset": 12677
+            },
+            "end": {
+              "line": 435,
+              "column": 417,
+              "offset": 12718
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " to let the parent perform the mutation.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 459,
+          "column": 1,
+          "offset": 13364
+        },
+        "end": {
+          "line": 459,
+          "column": 457,
+          "offset": 13820
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Prop Validation {#prop-validation}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 461,
+          "column": 1,
+          "offset": 13822
+        },
+        "end": {
+          "line": 461,
+          "column": 38,
+          "offset": 13859
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Components can specify requirements for their props, such as the types you've already seen. If a requirement is not met, Vue will warn you in the browser's JavaScript console. This is especially useful when developing a component that is intended to be used by others.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 463,
+          "column": 1,
+          "offset": 13861
+        },
+        "end": {
+          "line": 463,
+          "column": 269,
+          "offset": 14129
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "To specify prop validations, you can provide an object with validation requirements to the ",
+          "position": {
+            "start": {
+              "line": 465,
+              "column": 1,
+              "offset": 14131
+            },
+            "end": {
+              "line": 465,
+              "column": 92,
+              "offset": 14222
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "<span class=\"composition-api\">",
+          "position": {
+            "start": {
+              "line": 465,
+              "column": 92,
+              "offset": 14222
+            },
+            "end": {
+              "line": 465,
+              "column": 122,
+              "offset": 14252
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "inlineCode",
+          "value": "defineProps()",
+          "position": {
+            "start": {
+              "line": 465,
+              "column": 122,
+              "offset": 14252
+            },
+            "end": {
+              "line": 465,
+              "column": 137,
+              "offset": 14267
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "text",
+          "value": " macro",
+          "position": {
+            "start": {
+              "line": 465,
+              "column": 137,
+              "offset": 14267
+            },
+            "end": {
+              "line": 465,
+              "column": 143,
+              "offset": 14273
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "</span>",
+          "position": {
+            "start": {
+              "line": 465,
+              "column": 143,
+              "offset": 14273
+            },
+            "end": {
+              "line": 465,
+              "column": 150,
+              "offset": 14280
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "html",
+          "value": "<span class=\"options-api\">",
+          "position": {
+            "start": {
+              "line": 465,
+              "column": 150,
+              "offset": 14280
+            },
+            "end": {
+              "line": 465,
+              "column": 176,
+              "offset": 14306
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "inlineCode",
+          "value": "props",
+          "position": {
+            "start": {
+              "line": 465,
+              "column": 176,
+              "offset": 14306
+            },
+            "end": {
+              "line": 465,
+              "column": 183,
+              "offset": 14313
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "text",
+          "value": " option",
+          "position": {
+            "start": {
+              "line": 465,
+              "column": 183,
+              "offset": 14313
+            },
+            "end": {
+              "line": 465,
+              "column": 190,
+              "offset": 14320
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "</span>",
+          "position": {
+            "start": {
+              "line": 465,
+              "column": 190,
+              "offset": 14320
+            },
+            "end": {
+              "line": 465,
+              "column": 197,
+              "offset": 14327
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "text",
+          "value": ", instead of an array of strings. For example:",
+          "position": {
+            "start": {
+              "line": 465,
+              "column": 197,
+              "offset": 14327
+            },
+            "end": {
+              "line": 465,
+              "column": 243,
+              "offset": 14373
+            }
+          },
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 465,
+          "column": 1,
+          "offset": 14131
+        },
+        "end": {
+          "line": 465,
+          "column": 243,
+          "offset": 14373
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"composition-api\">",
+      "position": {
+        "start": {
+          "line": 467,
+          "column": 1,
+          "offset": 14375
+        },
+        "end": {
+          "line": 467,
+          "column": 30,
+          "offset": 14404
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "defineProps({\n  // Basic type check\n  //  (`null` and `undefined` values will allow any type)\n  propA: Number,\n  // Multiple possible types\n  propB: [String, Number],\n  // Required string\n  propC: {\n    type: String,\n    required: true\n  },\n  // Required but nullable string\n  propD: {\n    type: [String, null],\n    required: true\n  },\n  // Number with a default value\n  propE: {\n    type: Number,\n    default: 100\n  },\n  // Object with a default value\n  propF: {\n    type: Object,\n    // Object or array defaults must be returned from\n    // a factory function. The function receives the raw\n    // props received by the component as the argument.\n    default(rawProps) {\n      return { message: 'hello' }\n    }\n  },\n  // Custom validator function\n  // full props passed as 2nd argument in 3.4+\n  propG: {\n    validator(value, props) {\n      // The value must match one of these strings\n      return ['success', 'warning', 'danger'].includes(value)\n    }\n  },\n  // Function with a default value\n  propH: {\n    type: Function,\n    // Unlike object or array default, this is not a factory\n    // function - this is a function to serve as a default value\n    default() {\n      return 'Default function'\n    }\n  }\n})",
+      "position": {
+        "start": {
+          "line": 469,
+          "column": 1,
+          "offset": 14406
+        },
+        "end": {
+          "line": 519,
+          "column": 4,
+          "offset": 15629
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": ":::tip\nCode inside the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "defineProps()",
+          "position": {
+            "start": {
+              "line": 498,
+              "column": 17,
+              "offset": 14592
+            },
+            "end": {
+              "line": 498,
+              "column": 32,
+              "offset": 14607
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " argument ",
+          "data": {}
+        },
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "cannot access other variables declared in ",
+              "position": {
+                "start": {
+                  "line": 498,
+                  "column": 44,
+                  "offset": 14619
+                },
+                "end": {
+                  "line": 498,
+                  "column": 86,
+                  "offset": 14661
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "inlineCode",
+              "value": "<script setup>",
+              "position": {
+                "start": {
+                  "line": 498,
+                  "column": 86,
+                  "offset": 14661
+                },
+                "end": {
+                  "line": 498,
+                  "column": 102,
+                  "offset": 14677
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 498,
+              "column": 42,
+              "offset": 14617
+            },
+            "end": {
+              "line": 498,
+              "column": 104,
+              "offset": 14679
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", because the entire expression is moved to an outer function scope when compiled.\n:::",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 521,
+          "column": 1,
+          "offset": 15631
+        },
+        "end": {
+          "line": 523,
+          "column": 4,
+          "offset": 15827
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"options-api\">",
+      "position": {
+        "start": {
+          "line": 525,
+          "column": 1,
+          "offset": 15829
+        },
+        "end": {
+          "line": 526,
+          "column": 26,
+          "offset": 15861
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "export default {\n  props: {\n    // Basic type check\n    //  (`null` and `undefined` values will allow any type)\n    propA: Number,\n    // Multiple possible types\n    propB: [String, Number],\n    // Required string\n    propC: {\n      type: String,\n      required: true\n    },\n    // Required but nullable string\n    propD: {\n      type: [String, null],\n      required: true\n    },\n    // Number with a default value\n    propE: {\n      type: Number,\n      default: 100\n    },\n    // Object with a default value\n    propF: {\n      type: Object,\n      // Object or array defaults must be returned from\n      // a factory function. The function receives the raw\n      // props received by the component as the argument.\n      default(rawProps) {\n        return { message: 'hello' }\n      }\n    },\n    // Custom validator function\n    // full props passed as 2nd argument in 3.4+\n    propG: {\n      validator(value, props) {\n        // The value must match one of these strings\n        return ['success', 'warning', 'danger'].includes(value)\n      }\n    },\n    // Function with a default value\n    propH: {\n      type: Function,\n      // Unlike object or array default, this is not a factory\n      // function - this is a function to serve as a default value\n      default() {\n        return 'Default function'\n      }\n    }\n  }\n}",
+      "position": {
+        "start": {
+          "line": 528,
+          "column": 1,
+          "offset": 15863
+        },
+        "end": {
+          "line": 580,
+          "column": 4,
+          "offset": 17197
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "position": {
+        "start": {
+          "line": 582,
+          "column": 1,
+          "offset": 17199
+        },
+        "end": {
+          "line": 582,
+          "column": 7,
+          "offset": 17205
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Additional details:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 584,
+          "column": 1,
+          "offset": 17207
+        },
+        "end": {
+          "line": 584,
+          "column": 20,
+          "offset": 17226
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": true,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "All props are optional by default, unless ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "required: true",
+                  "position": {
+                    "start": {
+                      "line": 562,
+                      "column": 45,
+                      "offset": 16210
+                    },
+                    "end": {
+                      "line": 562,
+                      "column": 61,
+                      "offset": 16226
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " is specified.",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 586,
+                  "column": 3,
+                  "offset": 17230
+                },
+                "end": {
+                  "line": 586,
+                  "column": 75,
+                  "offset": 17302
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 586,
+              "column": 1,
+              "offset": 17228
+            },
+            "end": {
+              "line": 586,
+              "column": 75,
+              "offset": 17302
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "An absent optional prop other than ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "Boolean",
+                  "position": {
+                    "start": {
+                      "line": 564,
+                      "column": 38,
+                      "offset": 16279
+                    },
+                    "end": {
+                      "line": 564,
+                      "column": 47,
+                      "offset": 16288
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " will have ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "undefined",
+                  "position": {
+                    "start": {
+                      "line": 564,
+                      "column": 58,
+                      "offset": 16299
+                    },
+                    "end": {
+                      "line": 564,
+                      "column": 69,
+                      "offset": 16310
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " value.",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 588,
+                  "column": 3,
+                  "offset": 17306
+                },
+                "end": {
+                  "line": 588,
+                  "column": 76,
+                  "offset": 17379
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 588,
+              "column": 1,
+              "offset": 17304
+            },
+            "end": {
+              "line": 588,
+              "column": 76,
+              "offset": 17379
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "The ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "Boolean",
+                  "position": {
+                    "start": {
+                      "line": 566,
+                      "column": 7,
+                      "offset": 16325
+                    },
+                    "end": {
+                      "line": 566,
+                      "column": 16,
+                      "offset": 16334
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " absent props will be cast to ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "false",
+                  "position": {
+                    "start": {
+                      "line": 566,
+                      "column": 46,
+                      "offset": 16364
+                    },
+                    "end": {
+                      "line": 566,
+                      "column": 53,
+                      "offset": 16371
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ". You can change this by setting a ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "default",
+                  "position": {
+                    "start": {
+                      "line": 566,
+                      "column": 88,
+                      "offset": 16406
+                    },
+                    "end": {
+                      "line": 566,
+                      "column": 97,
+                      "offset": 16415
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " for it — i.e.: ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "default: undefined",
+                  "position": {
+                    "start": {
+                      "line": 566,
+                      "column": 113,
+                      "offset": 16431
+                    },
+                    "end": {
+                      "line": 566,
+                      "column": 133,
+                      "offset": 16451
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " to behave as a non-Boolean prop.",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 590,
+                  "column": 3,
+                  "offset": 17383
+                },
+                "end": {
+                  "line": 590,
+                  "column": 166,
+                  "offset": 17546
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 590,
+              "column": 1,
+              "offset": 17381
+            },
+            "end": {
+              "line": 590,
+              "column": 166,
+              "offset": 17546
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "If a ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "default",
+                  "position": {
+                    "start": {
+                      "line": 568,
+                      "column": 8,
+                      "offset": 16493
+                    },
+                    "end": {
+                      "line": 568,
+                      "column": 17,
+                      "offset": 16502
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " value is specified, it will be used if the resolved prop value is ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "undefined",
+                  "position": {
+                    "start": {
+                      "line": 568,
+                      "column": 84,
+                      "offset": 16569
+                    },
+                    "end": {
+                      "line": 568,
+                      "column": 95,
+                      "offset": 16580
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " - this includes both when the prop is absent, or an explicit ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "undefined",
+                  "position": {
+                    "start": {
+                      "line": 568,
+                      "column": 84,
+                      "offset": 16569
+                    },
+                    "end": {
+                      "line": 568,
+                      "column": 95,
+                      "offset": 16580
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " value is passed.",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 592,
+                  "column": 3,
+                  "offset": 17550
+                },
+                "end": {
+                  "line": 592,
+                  "column": 185,
+                  "offset": 17732
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 592,
+              "column": 1,
+              "offset": 17548
+            },
+            "end": {
+              "line": 592,
+              "column": 185,
+              "offset": 17732
+            }
+          },
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 586,
+          "column": 1,
+          "offset": 17228
+        },
+        "end": {
+          "line": 592,
+          "column": 185,
+          "offset": 17732
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "When prop validation fails, Vue will produce a console warning (if using the development build).",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 594,
+          "column": 1,
+          "offset": 17734
+        },
+        "end": {
+          "line": 594,
+          "column": 97,
+          "offset": 17830
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"composition-api\">",
+      "position": {
+        "start": {
+          "line": 596,
+          "column": 1,
+          "offset": 17832
+        },
+        "end": {
+          "line": 596,
+          "column": 30,
+          "offset": 17861
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "If using ",
+          "position": {
+            "start": {
+              "line": 598,
+              "column": 1,
+              "offset": 17863
+            },
+            "end": {
+              "line": 598,
+              "column": 10,
+              "offset": 17872
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/api/sfc-script-setup#type-only-props-emit-declarations",
+          "children": [
+            {
+              "type": "text",
+              "value": "Type-based props declarations",
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 598,
+              "column": 10,
+              "offset": 17872
+            },
+            "end": {
+              "line": 598,
+              "column": 98,
+              "offset": 17960
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " ",
+          "position": {
+            "start": {
+              "line": 598,
+              "column": 98,
+              "offset": 17960
+            },
+            "end": {
+              "line": 598,
+              "column": 99,
+              "offset": 17961
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "<sup class=\"vt-badge ts\" />",
+          "position": {
+            "start": {
+              "line": 598,
+              "column": 99,
+              "offset": 17961
+            },
+            "end": {
+              "line": 598,
+              "column": 126,
+              "offset": 17988
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "text",
+          "value": ", Vue will try its best to compile the type annotations into equivalent runtime prop declarations. For example, ",
+          "position": {
+            "start": {
+              "line": 598,
+              "column": 126,
+              "offset": 17988
+            },
+            "end": {
+              "line": 598,
+              "column": 238,
+              "offset": 18100
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "defineProps<{ msg: string }>",
+          "position": {
+            "start": {
+              "line": 598,
+              "column": 238,
+              "offset": 18100
+            },
+            "end": {
+              "line": 598,
+              "column": 268,
+              "offset": 18130
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "text",
+          "value": " will be compiled into ",
+          "position": {
+            "start": {
+              "line": 598,
+              "column": 268,
+              "offset": 18130
+            },
+            "end": {
+              "line": 598,
+              "column": 291,
+              "offset": 18153
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "{ msg: { type: String, required: true }}",
+          "position": {
+            "start": {
+              "line": 598,
+              "column": 291,
+              "offset": 18153
+            },
+            "end": {
+              "line": 598,
+              "column": 333,
+              "offset": 18195
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "text",
+          "value": ".",
+          "position": {
+            "start": {
+              "line": 598,
+              "column": 333,
+              "offset": 18195
+            },
+            "end": {
+              "line": 598,
+              "column": 334,
+              "offset": 18196
+            }
+          },
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 598,
+          "column": 1,
+          "offset": 17863
+        },
+        "end": {
+          "line": 598,
+          "column": 334,
+          "offset": 18196
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"options-api\">",
+      "position": {
+        "start": {
+          "line": 600,
+          "column": 1,
+          "offset": 18198
+        },
+        "end": {
+          "line": 601,
+          "column": 26,
+          "offset": 18230
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "::: tip Note\nNote that props are validated ",
+          "data": {}
+        },
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "before",
+              "position": {
+                "start": {
+                  "line": 580,
+                  "column": 33,
+                  "offset": 17215
+                },
+                "end": {
+                  "line": 580,
+                  "column": 39,
+                  "offset": 17221
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 580,
+              "column": 31,
+              "offset": 17213
+            },
+            "end": {
+              "line": 580,
+              "column": 41,
+              "offset": 17223
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " a component instance is created, so instance properties (e.g. ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "data",
+          "position": {
+            "start": {
+              "line": 580,
+              "column": 104,
+              "offset": 17286
+            },
+            "end": {
+              "line": 580,
+              "column": 110,
+              "offset": 17292
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "computed",
+          "position": {
+            "start": {
+              "line": 580,
+              "column": 112,
+              "offset": 17294
+            },
+            "end": {
+              "line": 580,
+              "column": 122,
+              "offset": 17304
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", etc.) will not be available inside ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "default",
+          "position": {
+            "start": {
+              "line": 580,
+              "column": 159,
+              "offset": 17341
+            },
+            "end": {
+              "line": 580,
+              "column": 168,
+              "offset": 17350
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " or ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "validator",
+          "position": {
+            "start": {
+              "line": 580,
+              "column": 172,
+              "offset": 17354
+            },
+            "end": {
+              "line": 580,
+              "column": 183,
+              "offset": 17365
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " functions.\n:::",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 603,
+          "column": 1,
+          "offset": 18232
+        },
+        "end": {
+          "line": 605,
+          "column": 4,
+          "offset": 18442
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "position": {
+        "start": {
+          "line": 607,
+          "column": 1,
+          "offset": 18444
+        },
+        "end": {
+          "line": 607,
+          "column": 7,
+          "offset": 18450
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Runtime Type Checks {#runtime-type-checks}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 609,
+          "column": 1,
+          "offset": 18452
+        },
+        "end": {
+          "line": 609,
+          "column": 47,
+          "offset": 18498
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "The ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "type",
+          "position": {
+            "start": {
+              "line": 587,
+              "column": 5,
+              "offset": 17442
+            },
+            "end": {
+              "line": 587,
+              "column": 11,
+              "offset": 17448
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " can be one of the following native constructors:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 611,
+          "column": 1,
+          "offset": 18500
+        },
+        "end": {
+          "line": 611,
+          "column": 60,
+          "offset": 18559
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "String",
+                  "position": {
+                    "start": {
+                      "line": 589,
+                      "column": 3,
+                      "offset": 17501
+                    },
+                    "end": {
+                      "line": 589,
+                      "column": 11,
+                      "offset": 17509
+                    }
+                  },
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 613,
+                  "column": 3,
+                  "offset": 18563
+                },
+                "end": {
+                  "line": 613,
+                  "column": 11,
+                  "offset": 18571
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 613,
+              "column": 1,
+              "offset": 18561
+            },
+            "end": {
+              "line": 613,
+              "column": 11,
+              "offset": 18571
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "Number",
+                  "position": {
+                    "start": {
+                      "line": 590,
+                      "column": 3,
+                      "offset": 17512
+                    },
+                    "end": {
+                      "line": 590,
+                      "column": 11,
+                      "offset": 17520
+                    }
+                  },
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 614,
+                  "column": 3,
+                  "offset": 18574
+                },
+                "end": {
+                  "line": 614,
+                  "column": 11,
+                  "offset": 18582
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 614,
+              "column": 1,
+              "offset": 18572
+            },
+            "end": {
+              "line": 614,
+              "column": 11,
+              "offset": 18582
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "Boolean",
+                  "position": {
+                    "start": {
+                      "line": 591,
+                      "column": 3,
+                      "offset": 17523
+                    },
+                    "end": {
+                      "line": 591,
+                      "column": 12,
+                      "offset": 17532
+                    }
+                  },
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 615,
+                  "column": 3,
+                  "offset": 18585
+                },
+                "end": {
+                  "line": 615,
+                  "column": 12,
+                  "offset": 18594
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 615,
+              "column": 1,
+              "offset": 18583
+            },
+            "end": {
+              "line": 615,
+              "column": 12,
+              "offset": 18594
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "Array",
+                  "position": {
+                    "start": {
+                      "line": 592,
+                      "column": 3,
+                      "offset": 17535
+                    },
+                    "end": {
+                      "line": 592,
+                      "column": 10,
+                      "offset": 17542
+                    }
+                  },
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 616,
+                  "column": 3,
+                  "offset": 18597
+                },
+                "end": {
+                  "line": 616,
+                  "column": 10,
+                  "offset": 18604
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 616,
+              "column": 1,
+              "offset": 18595
+            },
+            "end": {
+              "line": 616,
+              "column": 10,
+              "offset": 18604
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "Object",
+                  "position": {
+                    "start": {
+                      "line": 593,
+                      "column": 3,
+                      "offset": 17545
+                    },
+                    "end": {
+                      "line": 593,
+                      "column": 11,
+                      "offset": 17553
+                    }
+                  },
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 617,
+                  "column": 3,
+                  "offset": 18607
+                },
+                "end": {
+                  "line": 617,
+                  "column": 11,
+                  "offset": 18615
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 617,
+              "column": 1,
+              "offset": 18605
+            },
+            "end": {
+              "line": 617,
+              "column": 11,
+              "offset": 18615
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "Date",
+                  "position": {
+                    "start": {
+                      "line": 594,
+                      "column": 3,
+                      "offset": 17556
+                    },
+                    "end": {
+                      "line": 594,
+                      "column": 9,
+                      "offset": 17562
+                    }
+                  },
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 618,
+                  "column": 3,
+                  "offset": 18618
+                },
+                "end": {
+                  "line": 618,
+                  "column": 9,
+                  "offset": 18624
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 618,
+              "column": 1,
+              "offset": 18616
+            },
+            "end": {
+              "line": 618,
+              "column": 9,
+              "offset": 18624
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "Function",
+                  "position": {
+                    "start": {
+                      "line": 595,
+                      "column": 3,
+                      "offset": 17565
+                    },
+                    "end": {
+                      "line": 595,
+                      "column": 13,
+                      "offset": 17575
+                    }
+                  },
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 619,
+                  "column": 3,
+                  "offset": 18627
+                },
+                "end": {
+                  "line": 619,
+                  "column": 13,
+                  "offset": 18637
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 619,
+              "column": 1,
+              "offset": 18625
+            },
+            "end": {
+              "line": 619,
+              "column": 13,
+              "offset": 18637
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "Symbol",
+                  "position": {
+                    "start": {
+                      "line": 596,
+                      "column": 3,
+                      "offset": 17578
+                    },
+                    "end": {
+                      "line": 596,
+                      "column": 11,
+                      "offset": 17586
+                    }
+                  },
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 620,
+                  "column": 3,
+                  "offset": 18640
+                },
+                "end": {
+                  "line": 620,
+                  "column": 11,
+                  "offset": 18648
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 620,
+              "column": 1,
+              "offset": 18638
+            },
+            "end": {
+              "line": 620,
+              "column": 11,
+              "offset": 18648
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "Error",
+                  "position": {
+                    "start": {
+                      "line": 597,
+                      "column": 3,
+                      "offset": 17589
+                    },
+                    "end": {
+                      "line": 597,
+                      "column": 10,
+                      "offset": 17596
+                    }
+                  },
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 621,
+                  "column": 3,
+                  "offset": 18651
+                },
+                "end": {
+                  "line": 621,
+                  "column": 10,
+                  "offset": 18658
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 621,
+              "column": 1,
+              "offset": 18649
+            },
+            "end": {
+              "line": 621,
+              "column": 10,
+              "offset": 18658
+            }
+          },
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 613,
+          "column": 1,
+          "offset": 18561
+        },
+        "end": {
+          "line": 621,
+          "column": 10,
+          "offset": 18658
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "In addition, ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "type",
+          "position": {
+            "start": {
+              "line": 599,
+              "column": 14,
+              "offset": 17611
+            },
+            "end": {
+              "line": 599,
+              "column": 20,
+              "offset": 17617
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " can also be a custom class or constructor function and the assertion will be made with an ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "instanceof",
+          "position": {
+            "start": {
+              "line": 599,
+              "column": 111,
+              "offset": 17708
+            },
+            "end": {
+              "line": 599,
+              "column": 123,
+              "offset": 17720
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " check. For example, given the following class:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 623,
+          "column": 1,
+          "offset": 18660
+        },
+        "end": {
+          "line": 623,
+          "column": 170,
+          "offset": 18829
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "class Person {\n  constructor(firstName, lastName) {\n    this.firstName = firstName\n    this.lastName = lastName\n  }\n}",
+      "position": {
+        "start": {
+          "line": 625,
+          "column": 1,
+          "offset": 18831
+        },
+        "end": {
+          "line": 632,
+          "column": 4,
+          "offset": 18958
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "You could use it as a prop's type:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 634,
+          "column": 1,
+          "offset": 18960
+        },
+        "end": {
+          "line": 634,
+          "column": 35,
+          "offset": 18994
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"composition-api\">",
+      "position": {
+        "start": {
+          "line": 636,
+          "column": 1,
+          "offset": 18996
+        },
+        "end": {
+          "line": 636,
+          "column": 30,
+          "offset": 19025
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "defineProps({\n  author: Person\n})",
+      "position": {
+        "start": {
+          "line": 638,
+          "column": 1,
+          "offset": 19027
+        },
+        "end": {
+          "line": 642,
+          "column": 4,
+          "offset": 19070
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"options-api\">",
+      "position": {
+        "start": {
+          "line": 644,
+          "column": 1,
+          "offset": 19072
+        },
+        "end": {
+          "line": 645,
+          "column": 26,
+          "offset": 19104
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "export default {\n  props: {\n    author: Person\n  }\n}",
+      "position": {
+        "start": {
+          "line": 647,
+          "column": 1,
+          "offset": 19106
+        },
+        "end": {
+          "line": 653,
+          "column": 4,
+          "offset": 19168
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "position": {
+        "start": {
+          "line": 655,
+          "column": 1,
+          "offset": 19170
+        },
+        "end": {
+          "line": 655,
+          "column": 7,
+          "offset": 19176
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Vue will use ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "instanceof Person",
+          "position": {
+            "start": {
+              "line": 633,
+              "column": 14,
+              "offset": 18129
+            },
+            "end": {
+              "line": 633,
+              "column": 33,
+              "offset": 18148
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " to validate whether the value of the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "author",
+          "position": {
+            "start": {
+              "line": 633,
+              "column": 71,
+              "offset": 18186
+            },
+            "end": {
+              "line": 633,
+              "column": 79,
+              "offset": 18194
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " prop is indeed an instance of the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "Person",
+          "position": {
+            "start": {
+              "line": 633,
+              "column": 114,
+              "offset": 18229
+            },
+            "end": {
+              "line": 633,
+              "column": 122,
+              "offset": 18237
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " class.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 657,
+          "column": 1,
+          "offset": 19178
+        },
+        "end": {
+          "line": 657,
+          "column": 129,
+          "offset": 19306
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Nullable Type {#nullable-type}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 659,
+          "column": 1,
+          "offset": 19308
+        },
+        "end": {
+          "line": 659,
+          "column": 35,
+          "offset": 19342
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "If the type is required but nullable, you can use the array syntax that includes ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "null",
+          "position": {
+            "start": {
+              "line": 637,
+              "column": 82,
+              "offset": 18363
+            },
+            "end": {
+              "line": 637,
+              "column": 88,
+              "offset": 18369
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ":",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 661,
+          "column": 1,
+          "offset": 19344
+        },
+        "end": {
+          "line": 661,
+          "column": 89,
+          "offset": 19432
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"composition-api\">",
+      "position": {
+        "start": {
+          "line": 663,
+          "column": 1,
+          "offset": 19434
+        },
+        "end": {
+          "line": 663,
+          "column": 30,
+          "offset": 19463
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "defineProps({\n  id: {\n    type: [String, null],\n    required: true\n  }\n})",
+      "position": {
+        "start": {
+          "line": 665,
+          "column": 1,
+          "offset": 19465
+        },
+        "end": {
+          "line": 672,
+          "column": 4,
+          "offset": 19548
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"options-api\">",
+      "position": {
+        "start": {
+          "line": 674,
+          "column": 1,
+          "offset": 19550
+        },
+        "end": {
+          "line": 675,
+          "column": 26,
+          "offset": 19582
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "export default {\n  props: {\n    id: {\n      type: [String, null],\n      required: true\n    }\n  }\n}",
+      "position": {
+        "start": {
+          "line": 677,
+          "column": 1,
+          "offset": 19584
+        },
+        "end": {
+          "line": 686,
+          "column": 4,
+          "offset": 19692
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "position": {
+        "start": {
+          "line": 688,
+          "column": 1,
+          "offset": 19694
+        },
+        "end": {
+          "line": 688,
+          "column": 7,
+          "offset": 19700
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Note that if ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "type",
+          "position": {
+            "start": {
+              "line": 666,
+              "column": 14,
+              "offset": 18653
+            },
+            "end": {
+              "line": 666,
+              "column": 20,
+              "offset": 18659
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " is just ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "null",
+          "position": {
+            "start": {
+              "line": 666,
+              "column": 29,
+              "offset": 18668
+            },
+            "end": {
+              "line": 666,
+              "column": 35,
+              "offset": 18674
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " without using the array syntax, it will allow any type.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 690,
+          "column": 1,
+          "offset": 19702
+        },
+        "end": {
+          "line": 690,
+          "column": 91,
+          "offset": 19792
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Boolean Casting {#boolean-casting}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 692,
+          "column": 1,
+          "offset": 19794
+        },
+        "end": {
+          "line": 692,
+          "column": 38,
+          "offset": 19831
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Props with ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "Boolean",
+          "position": {
+            "start": {
+              "line": 670,
+              "column": 12,
+              "offset": 18782
+            },
+            "end": {
+              "line": 670,
+              "column": 21,
+              "offset": 18791
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " type have special casting rules to mimic the behavior of native boolean attributes. Given a ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<MyComponent>",
+          "position": {
+            "start": {
+              "line": 670,
+              "column": 114,
+              "offset": 18884
+            },
+            "end": {
+              "line": 670,
+              "column": 129,
+              "offset": 18899
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " with the following declaration:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 694,
+          "column": 1,
+          "offset": 19833
+        },
+        "end": {
+          "line": 694,
+          "column": 161,
+          "offset": 19993
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"composition-api\">",
+      "position": {
+        "start": {
+          "line": 696,
+          "column": 1,
+          "offset": 19995
+        },
+        "end": {
+          "line": 696,
+          "column": 30,
+          "offset": 20024
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "defineProps({\n  disabled: Boolean\n})",
+      "position": {
+        "start": {
+          "line": 698,
+          "column": 1,
+          "offset": 20026
+        },
+        "end": {
+          "line": 702,
+          "column": 4,
+          "offset": 20072
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"options-api\">",
+      "position": {
+        "start": {
+          "line": 704,
+          "column": 1,
+          "offset": 20074
+        },
+        "end": {
+          "line": 705,
+          "column": 26,
+          "offset": 20106
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "export default {\n  props: {\n    disabled: Boolean\n  }\n}",
+      "position": {
+        "start": {
+          "line": 707,
+          "column": 1,
+          "offset": 20108
+        },
+        "end": {
+          "line": 713,
+          "column": 4,
+          "offset": 20173
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "position": {
+        "start": {
+          "line": 715,
+          "column": 1,
+          "offset": 20175
+        },
+        "end": {
+          "line": 715,
+          "column": 7,
+          "offset": 20181
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "The component can be used like this:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 717,
+          "column": 1,
+          "offset": 20183
+        },
+        "end": {
+          "line": 717,
+          "column": 37,
+          "offset": 20219
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<!-- equivalent of passing :disabled=\"true\" -->\n<MyComponent disabled />\n\n<!-- equivalent of passing :disabled=\"false\" -->\n<MyComponent />",
+      "position": {
+        "start": {
+          "line": 719,
+          "column": 1,
+          "offset": 20221
+        },
+        "end": {
+          "line": 725,
+          "column": 4,
+          "offset": 20375
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "When a prop is declared to allow multiple types, the casting rules for ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "Boolean",
+          "position": {
+            "start": {
+              "line": 703,
+              "column": 72,
+              "offset": 19386
+            },
+            "end": {
+              "line": 703,
+              "column": 81,
+              "offset": 19395
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " will also be applied. However, there is an edge when both ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "String",
+          "position": {
+            "start": {
+              "line": 703,
+              "column": 140,
+              "offset": 19454
+            },
+            "end": {
+              "line": 703,
+              "column": 148,
+              "offset": 19462
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " and ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "Boolean",
+          "position": {
+            "start": {
+              "line": 703,
+              "column": 72,
+              "offset": 19386
+            },
+            "end": {
+              "line": 703,
+              "column": 81,
+              "offset": 19395
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " are allowed - the Boolean casting rule only applies if Boolean appears before String:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 727,
+          "column": 1,
+          "offset": 20377
+        },
+        "end": {
+          "line": 727,
+          "column": 248,
+          "offset": 20624
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"composition-api\">",
+      "position": {
+        "start": {
+          "line": 729,
+          "column": 1,
+          "offset": 20626
+        },
+        "end": {
+          "line": 729,
+          "column": 30,
+          "offset": 20655
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "// disabled will be casted to true\ndefineProps({\n  disabled: [Boolean, Number]\n})\n\n// disabled will be casted to true\ndefineProps({\n  disabled: [Boolean, String]\n})\n\n// disabled will be casted to true\ndefineProps({\n  disabled: [Number, Boolean]\n})\n\n// disabled will be parsed as an empty string (disabled=\"\")\ndefineProps({\n  disabled: [String, Boolean]\n})",
+      "position": {
+        "start": {
+          "line": 731,
+          "column": 1,
+          "offset": 20657
+        },
+        "end": {
+          "line": 751,
+          "column": 4,
+          "offset": 21022
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"options-api\">",
+      "position": {
+        "start": {
+          "line": 753,
+          "column": 1,
+          "offset": 21024
+        },
+        "end": {
+          "line": 754,
+          "column": 26,
+          "offset": 21056
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "// disabled will be casted to true\nexport default {\n  props: {\n    disabled: [Boolean, Number]\n  }\n}\n\n// disabled will be casted to true\nexport default {\n  props: {\n    disabled: [Boolean, String]\n  }\n}\n\n// disabled will be casted to true\nexport default {\n  props: {\n    disabled: [Number, Boolean]\n  }\n}\n\n// disabled will be parsed as an empty string (disabled=\"\")\nexport default {\n  props: {\n    disabled: [String, Boolean]\n  }\n}",
+      "position": {
+        "start": {
+          "line": 756,
+          "column": 1,
+          "offset": 21058
+        },
+        "end": {
+          "line": 784,
+          "column": 4,
+          "offset": 21499
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "position": {
+        "start": {
+          "line": 786,
+          "column": 1,
+          "offset": 21501
+        },
+        "end": {
+          "line": 786,
+          "column": 7,
+          "offset": 21507
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    }
+  ]
+}

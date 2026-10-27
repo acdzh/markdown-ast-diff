@@ -1,0 +1,101 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+/* table */
+table { border-collapse: collapse; width: auto; margin: 1em 0; }
+th, td { border: 1px solid #d0d7de; padding: 6px 13px; }
+th { background: #f6f8fa; font-weight: 600; }
+tr:nth-child(2n) { background: #f6f8fa; }
+
+/* code */
+code { padding: 0.2em 0.4em; font-size: 85%; background: #f6f8fa; border-radius: 6px; font-family: 'SF Mono', 'Fira Code', Menlo, monospace; }
+pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background: #f6f8fa; border-radius: 6px; margin: 1em 0; }
+pre code { padding: 0; background: none; border-radius: 0; font-size: inherit; }
+
+/* blockquote */
+blockquote { padding: 0 1em; color: #656d76; border-left: 0.25em solid #d0d7de; margin: 1em 0; }
+
+/* hr */
+hr { height: 0.25em; padding: 0; margin: 24px 0; background-color: #d0d7de; border: 0; }
+
+/* headings */
+h1, h2, h3, h4, h5, h6 { margin-top: 24px; margin-bottom: 16px; font-weight: 600; line-height: 1.25; }
+h1 { font-size: 2em; padding-bottom: 0.3em; border-bottom: 1px solid #d0d7de; }
+h2 { font-size: 1.5em; padding-bottom: 0.3em; border-bottom: 1px solid #d0d7de; }
+h3 { font-size: 1.25em; }
+
+/* list */
+ul, ol { padding-left: 2em; margin: 0.5em 0; }
+li + li { margin-top: 0.25em; }
+
+/* image */
+img { max-width: 100%; }
+
+/* code diff */
+.code-diff { border-radius: 6px; overflow: hidden; margin: 1em 0; font-size: 13px; border: 1px solid #d0d7de; }
+.code-diff pre { margin: 0; padding: 0; border-radius: 0; border: none; background: #fff; }
+.code-diff .shiki { background: #fff !important; }
+.code-diff .diff-line { display: flex; line-height: 1.45; }
+.code-diff .diff-line-gutter { width: 40px; min-width: 40px; text-align: right; padding: 0 8px 0 0; color: #8b949e; font-size: 12px; user-select: none; flex-shrink: 0; }
+.code-diff .diff-line-sign { width: 20px; min-width: 20px; text-align: center; user-select: none; flex-shrink: 0; }
+.code-diff .diff-line-content { flex: 1; padding-right: 12px; white-space: pre; overflow-x: auto; }
+.code-diff .diff-line.del { background: #ffebe9; }
+.code-diff .diff-line.del .diff-line-gutter { background: #ffd7d5; color: #82071e; }
+.code-diff .diff-line.del .diff-line-sign { color: #82071e; }
+.code-diff .diff-line.ins { background: #e6ffec; }
+.code-diff .diff-line.ins .diff-line-gutter { background: #ccffd8; color: #116329; }
+.code-diff .diff-line.ins .diff-line-sign { color: #116329; }
+.code-diff .diff-line.ctx { background: #fff; }
+.code-diff .diff-line.ctx .diff-line-gutter { color: #8b949e; }
+.code-diff .diff-header { padding: 8px 12px; background: #f6f8fa; border-bottom: 1px solid #d0d7de; font-size: 12px; color: #656d76; font-family: 'SF Mono', 'Fira Code', Menlo, monospace; }
+
+ins { background-color: #e6ffec; text-decoration: none; border-radius: 2px; padding: 0 2px; }
+del { background-color: #ffebe9; text-decoration: line-through; border-radius: 2px; padding: 0 2px; }
+ins.diff-block, del.diff-block { display: block; padding-left: 10px; border-left: 3px solid; }
+ins.diff-block { border-left-color: #2cbe4e; }
+del.diff-block { border-left-color: #cb2431; }
+ins > hr, ins > pre { background-color: #e6ffec; }
+del > hr, del > pre { background-color: #ffebe9; }
+ins > table, del > table { border-collapse: collapse; }
+ins > table th, ins > table td { background-color: #e6ffec; }
+del > table th, del > table td { background-color: #ffebe9; }
+li[data-diff="ins"] { background-color: #e6ffec; border-radius: 2px; }
+li[data-diff="del"] { background-color: #ffebe9; border-radius: 2px; text-decoration: line-through; }
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:16px;font-size:14px;line-height:1.6;color:#1a1a1a;}</style></head><body><h1>家庭菜谱</h1>
+<h2>食材准备</h2>
+<p>去菜市场挑选新鲜的五花肉，选肥瘦相间、层次分明的那种，大约买一斤半（750克）就够了。好的五花肉用手指按下去能缓慢回弹，切面呈粉红色，闻起来没有任何异味。尽量选靠近肋排的那一段，这部分肥瘦比例最均匀，炖出来口感层次最丰富。千万别买那种纯白的肥膘或者全是瘦肉的部位，前者炖出来一嘴油腻，后者炖成木头渣子。</p>
+<p>再买一把小葱（约50克）、一块老姜（30克左右，要选皮色暗黄、掰开丝多的老姜）和一整头大蒜（约8瓣）。老姜的选法有讲究：表皮干皱、颜色深黄的才是真正长了足够时间的老姜，那种表皮光滑水灵的是嫩姜，去腥效果差很多。大蒜要挑蒜瓣饱满、捏起来硬实的，发芽或者发软的已经不新鲜了。</p>
+<p>调料方面需要生抽、老抽各一瓶，冰糖一小袋（黄冰糖比白冰糖好，炒出来的糖色更红亮）。如果家里没有料酒，顺路带一瓶花雕酒，去腥效果比普通料酒强三倍不止。八角两颗、桂皮一小段、香叶两片也别忘了，这三样是炖肉的灵魂伴侣。有人还喜欢加一点白胡椒粉提香，但这个看个人口味，不加也完全没问题。</p>
+<p>五花肉回家后用清水浸泡半小时去血水，中间换两次水，直到水不再发红。泡的时候水温用常温就好，千万别用热水，热水会把蛋白质提前凝固，血水反而排不出来。浸泡完毕后捞出来用厨房纸巾把表面水分吸干，这样下锅煸炒的时候不容易溅油。</p>
+<p>然后切成麻将大小的方块，大约3厘米见方，每一块都要带皮带肥带瘦。刀要磨快，钝刀切肉会把肉纤维挤碎，影响口感。切的时候找好肉的纹理方向，顺着纹理切出来的肉块炖完之后比较完整，不容易散。</p>
+<p>葱切成5厘米长的段、姜切成2毫米厚的片、蒜拍扁但不要拍碎——拍碎了炖的时候会散在汤里，捞都捞不出来。这一步不能偷懒，肉块大小直接影响最后的口感，太大不入味，太小炖完就柴了。</p>
+<p>切好的肉块冷水下锅焯一次水，水开后煮两分钟，撇去浮沫，捞出用温水冲洗干净。这一步叫"飞水"，目的是去掉血沫和杂质，让炖出来的汤汁清亮不浑浊。有人觉得焯水会损失鲜味所以跳过这步，结果就是炖出来的红烧肉表面一层灰色泡沫，卖相直接报废。</p>
+<p>焯水用的锅和炖肉用的锅最好分开，焯水锅不用洗得太干净，反正下次焯水还是一样脏。焯完水的肉块放在盘子里晾着，趁这个空档把砂锅或铸铁锅拿出来洗干净擦干。</p>
+<p>如果用砂锅，记得先用小火把锅身烘热，不然冷砂锅突然上大火容易炸裂——是真的会炸，别问我怎么知道的。铸铁锅没这个问题，冷锅热锅都能用，就是重得要命，单手端不动。不粘锅也凑合，但记得全程最小火，焖的时间多加二十分钟。铝锅就算了，长时间炖煮会有金属味。</p>
+<p>案板、菜刀、漏勺、锅铲都提前摆好，开火之后就没空翻抽屉找工具了。如果你是第一次做红烧肉，建议先把这段食材准备的步骤通读两遍，确认每样东西都到位了再开火。做菜这件事，准备工作占七成功力，真正下锅炒的时间反而是最短的。</p>
+<p>最后提一嘴：做红烧肉这天最好别安排其他活动，从买菜到吃上至少三个小时。赶时间的人建议选周末，心态放松了做出来的菜味道都会更好——这不是玄学，是因为你不着急的时候不会跳步骤、不会开大火图快，每一步都能做到位。</p>
+<p>有条件的话提前一天把五花肉买回来放冰箱冷藏室，第二天再处理。过夜冷藏之后肉质会稍微紧实一些，切起来更顺手，不会软塌塌的粘刀。但千万别放冷冻室，冻过的五花肉炖出来口感完全不一样，纤维被冰晶破坏了，嚼起来会有点渣。</p>
+<p>所有食材准备完毕之后，在灶台旁边放一卷厨房纸巾，随时擦手擦台面。做红烧肉的过程油烟比较大，灶台周围会变得黏糊糊的，边做边擦比做完再清理省力十倍。</p>
+<h2>烹饪步骤</h2>
+<p>正式开始之前，先把所有调料量好搁在小碗里备着：生抽两勺（约30毫升）、老抽一勺（约15毫升，只管上色不管调味）、冰糖15克（大约鹌鹑蛋大小一块）、花雕酒两勺。八角桂皮香叶放一个小碟子里。一次性全部量好，下锅的时候才不会手忙脚乱——翻炒的火候是以秒计算的，没空让你现找调料。</p>
+<p>如果家里有电子秤，把调料精确到克数会更好。烹饪这件事看似粗犷，但精确的调料配比才是"每次都好吃"和"偶尔好吃"之间的区别。餐厅大厨做菜看似随手一抛，其实那个"随手"已经是肌肉记忆精确到几克了。</p>
+<p>锅里不放油，直接把五花肉块冷锅下去煸炒，中小火慢慢逼出猪油。这一步大约需要八到十分钟，期间不停翻面，确保每一面都煎到微微焦黄。你会发现锅底逐渐积了一层金黄色的油，这就是五花肉自带的"天然炒菜油"，比外面买的猪油香十倍。</p>
+<p>煸炒的时候注意火候，中火偏小就行，火太大外面焦了里面还是生的。如果肉块比较多，可以分两批煸，挤在一起会出水变成"水煮肉"而不是"煎肉"了。</p>
+<p>等肉块表面微微焦黄、锅底积了一层油之后，下葱姜蒜和八角桂皮香叶爆香，翻炒到能闻到姜蒜的辛香味。这时候整个厨房应该已经飘满了肉香和香料的混合气味，隔壁邻居可能已经开始好奇你在做什么了。</p>
+<p>加入两勺生抽、一勺老抽翻炒上色，每块肉都要裹到酱油。酱油下锅的瞬间会发出"滋啦"一声，伴随一股浓烈的酱香味冲上来，这是美拉德反应正在发生，也是红烧肉香味的核心来源之一。</p>
+<p>然后下冰糖，持续翻炒直到糖融化挂在肉表面——这步叫"炒糖色"，是红烧肉好看的关键。冰糖融化的过程需要一点耐心，先是起大泡，然后变小泡，最后变成琥珀色的糖浆，这时候立刻翻炒裹匀。千万不能炒过头，糖浆从琥珀色变成深棕色就是焦了，发苦，整锅得重来。</p>
+<p>接着泼入花雕酒，酒精遇热蒸发的瞬间会带走大部分腥味，厨房里弥漫的酒香让隔壁邻居都能闻到。这一步有些人用啤酒代替花雕酒，效果也不错，啤酒的麦芽香和肉香意外地搭配。</p>
+<p>倒入没过肉块约两厘米的热水（必须是热水，冷水会让蛋白质骤然收缩变硬），大火烧开后仔细撇去浮沫，然后转最小火焖一个半小时。中途不要掀盖子，每掀一次温度就掉一截，让它安安静静地炖，你该追剧追剧去。</p>
+<p>焖炖的过程中，你可以去准备配菜——洗点青菜、蒸上米饭。用焖肉的时间做其他事情才是高效下厨的精髓，不然全程守着锅等一个半小时，人都无聊废了。</p>
+<p>一个半小时后开盖检查，用筷子戳一下肉块，能毫无阻力地穿透就说明炖好了。如果还有点硬就再焖二十分钟，别急，好菜不怕等。这时候挑出八角桂皮香叶扔掉，留在里面影响卖相。</p>
+<p>整个炖煮过程中厨房会飘着持续的肉香，这是检验成果的第一个信号——如果香味层次丰富、闻着就想流口水，说明火候和调味都到位了。</p>
+<h2>摆盘上桌</h2>
+<p>最后大火收汁，不停翻炒防止粘锅，直到汤汁浓稠挂满每一块肉。判断标准是铲子划过锅底，汤汁缓慢合拢而不是立刻流回来。整个收汁过程大约五到八分钟，火候和耐心缺一不可，心急的话一糊锅前面全白干。</p>
+<p>收汁的时候可以尝一下咸淡，如果偏淡就补一点点生抽，偏咸就加一小勺白糖中和。这是最后的调味机会，别浪费了。</p>
+<p>盛入白瓷深盘中，先用筷子把肉块码整齐——皮朝上、肥瘦层次对着食客——然后把浓汁均匀淋在肉块上面。撒上一把翠绿的葱花点缀，讲究的话再来几粒白芝麻。红白绿三色搭配，还没动筷子眼睛已经先吃了一顿。</p>
+<p>旁边可以配一碟清炒时蔬解腻，比如蒜蓉西兰花或者白灼芥蓝，绿色蔬菜和红烧肉放在一起，色彩对比强烈，食欲直接拉满。讲究的家庭还会配一小碗酸萝卜汤，酸甜口味正好中和红烧肉的浓油重酱。</p>
+<p>如果是请客，再来一盘凉拌黄瓜开胃，三道菜一汤，荤素搭配，排面拉满。</p>
+<p>配一碗刚蒸好的白米饭，浇上两勺红亮的肉汁，就是一顿让全家人抢着添饭的硬菜。米饭建议用短粒粳米，颗粒饱满又有点黏性，能兜住浓稠的汤汁不会散。长粒的泰国香米太松散，汤汁全漏到碗底去了，浪费。东北大米是最佳选择，五常大米更好，但价格也更贵。</p>
+<p>吃不完的第二天加热更好吃，因为肉已经彻底吸饱了汤汁，冷藏过夜后胶原蛋白凝固，再加热会更加软糯弹牙。这道菜有个别名叫"第二天才是巅峰"，试过的人都说不夸张。</p>
+<p>微波炉加热三分钟就行，千万别用锅重新加热，容易把收好的汁再煮散了。如果做了一大锅，分装到保鲜盒里放冷冻，一个月内随时拿出来热一下就是一顿饭，比外卖强一百倍。</p>
+<p>红烧肉这道菜看着步骤多，其实核心就三步：煸炒逼油、炒糖色上色、小火慢焖。掌握了这三步的火候和节奏，其他都是细节调整。第一次做可能不太完美，但做到第三次的时候，你会发现自己已经比大部分饭馆做得好了。</p>
+<p>最后提醒一句：做红烧肉的当天最好别穿白衣服，锅铲翻炒的时候酱汁会溅，老抽那个颜色沾上去基本洗不掉。围裙是必须的，最好再加个袖套，别问为什么这么具体——都是血泪教训。</p>
+<p>这道菜适合周末有空的时候做，从备料到上桌大约需要两个半小时。工作日赶时间的话可以用高压锅代替砂锅，焖的时间能缩短到四十分钟，口感略有损失但也能打八十分。等到你做顺手了，这就是你的拿手菜，朋友聚会、过节家宴，一锅红烧肉就能撑起半张桌子。</p></body></html>

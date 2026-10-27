@@ -1,0 +1,489 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+/* table */
+table { border-collapse: collapse; width: auto; margin: 1em 0; }
+th, td { border: 1px solid #d0d7de; padding: 6px 13px; }
+th { background: #f6f8fa; font-weight: 600; }
+tr:nth-child(2n) { background: #f6f8fa; }
+
+/* code */
+code { padding: 0.2em 0.4em; font-size: 85%; background: #f6f8fa; border-radius: 6px; font-family: 'SF Mono', 'Fira Code', Menlo, monospace; }
+pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background: #f6f8fa; border-radius: 6px; margin: 1em 0; }
+pre code { padding: 0; background: none; border-radius: 0; font-size: inherit; }
+
+/* blockquote */
+blockquote { padding: 0 1em; color: #656d76; border-left: 0.25em solid #d0d7de; margin: 1em 0; }
+
+/* hr */
+hr { height: 0.25em; padding: 0; margin: 24px 0; background-color: #d0d7de; border: 0; }
+
+/* headings */
+h1, h2, h3, h4, h5, h6 { margin-top: 24px; margin-bottom: 16px; font-weight: 600; line-height: 1.25; }
+h1 { font-size: 2em; padding-bottom: 0.3em; border-bottom: 1px solid #d0d7de; }
+h2 { font-size: 1.5em; padding-bottom: 0.3em; border-bottom: 1px solid #d0d7de; }
+h3 { font-size: 1.25em; }
+
+/* list */
+ul, ol { padding-left: 2em; margin: 0.5em 0; }
+li + li { margin-top: 0.25em; }
+
+/* image */
+img { max-width: 100%; }
+
+/* code diff */
+.code-diff { border-radius: 6px; overflow: hidden; margin: 1em 0; font-size: 13px; border: 1px solid #d0d7de; }
+.code-diff pre { margin: 0; padding: 0; border-radius: 0; border: none; background: #fff; }
+.code-diff .shiki { background: #fff !important; }
+.code-diff .diff-line { display: flex; line-height: 1.45; }
+.code-diff .diff-line-gutter { width: 40px; min-width: 40px; text-align: right; padding: 0 8px 0 0; color: #8b949e; font-size: 12px; user-select: none; flex-shrink: 0; }
+.code-diff .diff-line-sign { width: 20px; min-width: 20px; text-align: center; user-select: none; flex-shrink: 0; }
+.code-diff .diff-line-content { flex: 1; padding-right: 12px; white-space: pre; overflow-x: auto; }
+.code-diff .diff-line.del { background: #ffebe9; }
+.code-diff .diff-line.del .diff-line-gutter { background: #ffd7d5; color: #82071e; }
+.code-diff .diff-line.del .diff-line-sign { color: #82071e; }
+.code-diff .diff-line.ins { background: #e6ffec; }
+.code-diff .diff-line.ins .diff-line-gutter { background: #ccffd8; color: #116329; }
+.code-diff .diff-line.ins .diff-line-sign { color: #116329; }
+.code-diff .diff-line.ctx { background: #fff; }
+.code-diff .diff-line.ctx .diff-line-gutter { color: #8b949e; }
+.code-diff .diff-header { padding: 8px 12px; background: #f6f8fa; border-bottom: 1px solid #d0d7de; font-size: 12px; color: #656d76; font-family: 'SF Mono', 'Fira Code', Menlo, monospace; }
+
+ins { background-color: #e6ffec; text-decoration: none; border-radius: 2px; padding: 0 2px; }
+del { background-color: #ffebe9; text-decoration: line-through; border-radius: 2px; padding: 0 2px; }
+ins.diff-block, del.diff-block { display: block; padding-left: 10px; border-left: 3px solid; }
+ins.diff-block { border-left-color: #2cbe4e; }
+del.diff-block { border-left-color: #cb2431; }
+ins > hr, ins > pre { background-color: #e6ffec; }
+del > hr, del > pre { background-color: #ffebe9; }
+ins > table, del > table { border-collapse: collapse; }
+ins > table th, ins > table td { background-color: #e6ffec; }
+del > table th, del > table td { background-color: #ffebe9; }
+li[data-diff="ins"] { background-color: #e6ffec; border-radius: 2px; }
+li[data-diff="del"] { background-color: #ffebe9; border-radius: 2px; text-decoration: line-through; }
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:16px;font-size:14px;line-height:1.6;color:#1a1a1a;}</style></head><body><h1>Components Basics {#components-basics}</h1>
+<ScrimbaLink href="https://scrimba.com/links/vue-component-basics" title="Free Vue.js Components Basics Lesson" type="scrimba">
+  Watch an interactive video lesson on Scrimba
+</ScrimbaLink>
+<p>Components allow us to split the UI into independent and reusable pieces, and think about each piece in isolation. It's common for an app to be organized into a tree of nested components:</p>
+<p><img src="./images/components.png" alt="Diagram showing a component tree structure with a root component branching into multiple child and nested sub-child components"></p>
+<!-- https://www.figma.com/file/qa7WHDQRWuEZNRs7iZRZSI/components -->
+<p>This is very similar to how we nest native HTML elements, but Vue implements its own component model that allows us to encapsulate custom content and logic in each component. Vue also plays nicely with native Web Components. If you are curious about the relationship between Vue Components and native Web Components, <a href="/guide/extras/web-components">read more here</a>.</p>
+<h2>Defining a Component {#defining-a-component}</h2>
+<p>When using a build step, we typically define each Vue component in a dedicated file using the <code>.vue</code> extension - known as a <a href="/guide/scaling-up/sfc">Single-File Component</a> (SFC for short):</p>
+<div class="options-api">
+<pre><code class="language-vue"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">script</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#6F42C1">  data</span><span style="color:#24292E">() {</span></span>
+<span class="line"><span style="color:#D73A49">    return</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#24292E">      count: </span><span style="color:#005CC5">0</span></span>
+<span class="line"><span style="color:#24292E">    }</span></span>
+<span class="line"><span style="color:#24292E">  }</span></span>
+<span class="line"><span style="color:#24292E">}</span></span>
+<span class="line"><span style="color:#24292E">&#x3C;/</span><span style="color:#22863A">script</span><span style="color:#24292E">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">template</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">button</span><span style="color:#6F42C1"> @click</span><span style="color:#24292E">=</span><span style="color:#032F62">"count++"</span><span style="color:#24292E">>You clicked me {{ count }} times.&#x3C;/</span><span style="color:#22863A">button</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">&#x3C;/</span><span style="color:#22863A">template</span><span style="color:#24292E">></span></span></code></pre>
+</code></pre>
+</div>
+<div class="composition-api">
+<pre><code class="language-vue"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">script</span><span style="color:#6F42C1"> setup</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#D73A49">import</span><span style="color:#24292E"> { ref } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> 'vue'</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">const</span><span style="color:#005CC5"> count</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> ref</span><span style="color:#24292E">(</span><span style="color:#005CC5">0</span><span style="color:#24292E">)</span></span>
+<span class="line"><span style="color:#24292E">&#x3C;/</span><span style="color:#22863A">script</span><span style="color:#24292E">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">template</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">button</span><span style="color:#6F42C1"> @click</span><span style="color:#24292E">=</span><span style="color:#032F62">"count++"</span><span style="color:#24292E">>You clicked me {{ count }} times.&#x3C;/</span><span style="color:#22863A">button</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">&#x3C;/</span><span style="color:#22863A">template</span><span style="color:#24292E">></span></span></code></pre>
+</code></pre>
+</div>
+<p>When not using a build step, a Vue component can be defined as a plain JavaScript object containing Vue-specific options:</p>
+<div class="options-api">
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#6F42C1">  data</span><span style="color:#24292E">() {</span></span>
+<span class="line"><span style="color:#D73A49">    return</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#24292E">      count: </span><span style="color:#005CC5">0</span></span>
+<span class="line"><span style="color:#24292E">    }</span></span>
+<span class="line"><span style="color:#24292E">  },</span></span>
+<span class="line"><span style="color:#24292E">  template: </span><span style="color:#032F62">`</span></span>
+<span class="line"><span style="color:#032F62">    &#x3C;button @click="count++"></span></span>
+<span class="line"><span style="color:#032F62">      You clicked me {{ count }} times.</span></span>
+<span class="line"><span style="color:#032F62">    &#x3C;/button>`</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre>
+</div>
+<div class="composition-api">
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">import</span><span style="color:#24292E"> { ref } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> 'vue'</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#6F42C1">  setup</span><span style="color:#24292E">() {</span></span>
+<span class="line"><span style="color:#D73A49">    const</span><span style="color:#005CC5"> count</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> ref</span><span style="color:#24292E">(</span><span style="color:#005CC5">0</span><span style="color:#24292E">)</span></span>
+<span class="line"><span style="color:#D73A49">    return</span><span style="color:#24292E"> { count }</span></span>
+<span class="line"><span style="color:#24292E">  },</span></span>
+<span class="line"><span style="color:#24292E">  template: </span><span style="color:#032F62">`</span></span>
+<span class="line"><span style="color:#032F62">    &#x3C;button @click="count++"></span></span>
+<span class="line"><span style="color:#032F62">      You clicked me {{ count }} times.</span></span>
+<span class="line"><span style="color:#032F62">    &#x3C;/button>`</span></span>
+<span class="line"><span style="color:#6A737D">  // Can also target an in-DOM template:</span></span>
+<span class="line"><span style="color:#6A737D">  // template: '#my-template-element'</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre>
+</div>
+<p>The template is inlined as a JavaScript string here, which Vue will compile on the fly. You can also use an ID selector pointing to an element (usually native <code>&#x3C;template></code> elements) - Vue will use its content as the template source.</p>
+<p>The example above defines a single component and exports it as the default export of a <code>.js</code> file, but you can use named exports to export multiple components from the same file.</p>
+<h2>Using a Component {#using-a-component}</h2>
+<p>:::tip
+We will be using SFC syntax for the rest of this guide - the concepts around components are the same regardless of whether you are using a build step or not. The <a href="/examples/">Examples</a> section shows component usage in both scenarios.
+:::</p>
+<p>To use a child component, we need to import it in the parent component. Assuming we placed our counter component inside a file called <code>ButtonCounter.vue</code>, the component will be exposed as the file's default export:</p>
+<div class="options-api">
+<pre><code class="language-vue"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">script</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#D73A49">import</span><span style="color:#24292E"> ButtonCounter </span><span style="color:#D73A49">from</span><span style="color:#032F62"> './ButtonCounter.vue'</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#24292E">  components: {</span></span>
+<span class="line"><span style="color:#24292E">    ButtonCounter</span></span>
+<span class="line"><span style="color:#24292E">  }</span></span>
+<span class="line"><span style="color:#24292E">}</span></span>
+<span class="line"><span style="color:#24292E">&#x3C;/</span><span style="color:#22863A">script</span><span style="color:#24292E">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">template</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">h1</span><span style="color:#24292E">>Here is a child component!&#x3C;/</span><span style="color:#22863A">h1</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">ButtonCounter</span><span style="color:#24292E"> /></span></span>
+<span class="line"><span style="color:#24292E">&#x3C;/</span><span style="color:#22863A">template</span><span style="color:#24292E">></span></span></code></pre>
+</code></pre>
+<p>To expose the imported component to our template, we need to <a href="/guide/components/registration">register</a> it with the <code>components</code> option. The component will then be available as a tag using the key it is registered under.</p>
+</div>
+<div class="composition-api">
+<pre><code class="language-vue"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">script</span><span style="color:#6F42C1"> setup</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#D73A49">import</span><span style="color:#24292E"> ButtonCounter </span><span style="color:#D73A49">from</span><span style="color:#032F62"> './ButtonCounter.vue'</span></span>
+<span class="line"><span style="color:#24292E">&#x3C;/</span><span style="color:#22863A">script</span><span style="color:#24292E">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">template</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">h1</span><span style="color:#24292E">>Here is a child component!&#x3C;/</span><span style="color:#22863A">h1</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">ButtonCounter</span><span style="color:#24292E"> /></span></span>
+<span class="line"><span style="color:#24292E">&#x3C;/</span><span style="color:#22863A">template</span><span style="color:#24292E">></span></span></code></pre>
+</code></pre>
+<p>With <code>&#x3C;script setup></code>, imported components are automatically made available to the template.</p>
+</div>
+<p>It's also possible to globally register a component, making it available to all components in a given app without having to import it. The pros and cons of global vs. local registration is discussed in the dedicated <a href="/guide/components/registration">Component Registration</a> section.</p>
+<p>Components can be reused as many times as you want:</p>
+<pre><code class="language-vue-html"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">h1</span><span style="color:#24292E">>Here are many child components!&#x3C;/</span><span style="color:#22863A">h1</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#005CC5">ButtonCounter</span><span style="color:#24292E"> /></span></span>
+<span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#005CC5">ButtonCounter</span><span style="color:#24292E"> /></span></span>
+<span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#005CC5">ButtonCounter</span><span style="color:#24292E"> /></span></span></code></pre>
+</code></pre>
+<div class="options-api">
+<p><a href="https://play.vuejs.org/#eNqVUE1LxDAQ/StjLqusNHotcfHj4l8QcontLBtsJiGdiFL6301SdrEqyEJyeG9m3ps3k3gIoXlPKFqhxi7awDtN1gUfGR4Ts6cnn4gxwj56B5tGrtgyutEEoAk/6lCPe5MGhqmwnc9KhMRjuxCwFi3UrCk/JU/uGTC6MBjGglgdbnfPGBFM/s7QJ3QHO/TfxC+UzD21d72zPItU8uQrrsWvnKsT/ZW2N2wur45BI3KKdETlFlmphZsF58j/RgdQr3UJuO8G273daVFFtlstahngxSeoNezBIUzTYgPzDGwdjk1VkYvMj4jzF0nwsyQ=">Try it in the Playground</a></p>
+</div>
+<div class="composition-api">
+<p><a href="https://play.vuejs.org/#eNqVj91KAzEQhV/lmJsqlY3eSlr8ufEVhNys6ZQGNz8kE0GWfXez2SJUsdCLuZiZM9+ZM4qnGLvPQuJBqGySjYxMXOJWe+tiSIznwhz8SyieKWGfgsOqkyfTGbDSXsmFUG9rw+Ti0DPNHavD/faVEqGv5Xr/BXOwww4mVBNPnvOVklXTtKeO8qKhkj++4lb8+fL/mCMS7TEdAy6BtDfBZ65fVgA2s+L67uZMUEC9N0s8msGaj40W7Xa91qKtgbdQ0Ha0gyOM45E+TWDrKHeNIhfMr0DTN4U0me8=">Try it in the Playground</a></p>
+</div>
+<p>Notice that when clicking on the buttons, each one maintains its own, separate <code>count</code>. That's because each time you use a component, a new <strong>instance</strong> of it is created.</p>
+<p>In SFCs, it's recommended to use <code>PascalCase</code> tag names for child components to differentiate from native HTML elements. Although native HTML tag names are case-insensitive, Vue SFC is a compiled format so we are able to use case-sensitive tag names in it. We are also able to use <code>/></code> to close a tag.</p>
+<p>If you are authoring your templates directly in a DOM (e.g. as the content of a native <code>&#x3C;template></code> element), the template will be subject to the browser's native HTML parsing behavior. In such cases, you will need to use <code>kebab-case</code> and explicit closing tags for components:</p>
+<pre><code class="language-vue-html"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#6A737D">&#x3C;!-- if this template is written in the DOM --></span></span>
+<span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">button-counter</span><span style="color:#24292E">>&#x3C;/</span><span style="color:#22863A">button-counter</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">button-counter</span><span style="color:#24292E">>&#x3C;/</span><span style="color:#22863A">button-counter</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">button-counter</span><span style="color:#24292E">>&#x3C;/</span><span style="color:#22863A">button-counter</span><span style="color:#24292E">></span></span></code></pre>
+</code></pre>
+<p>See <a href="#in-dom-template-parsing-caveats">in-DOM template parsing caveats</a> for more details.</p>
+<h2>Passing Props {#passing-props}</h2>
+<p>If we are building a blog, we will likely need a component representing a blog post. We want all the blog posts to share the same visual layout, but with different content. Such a component won't be useful unless you can pass data to it, such as the title and content of the specific post we want to display. That's where props come in.</p>
+<p>Props are custom attributes you can register on a component. To pass a title to our blog post component, we must declare it in the list of props this component accepts, using the <span class="options-api"><a href="/api/options-state#props"><code>props</code></a> option</span><span class="composition-api"><a href="/api/sfc-script-setup#defineprops-defineemits"><code>defineProps</code></a> macro</span>:</p>
+<div class="options-api">
+<pre><code class="language-vue"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">script</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#24292E">  props: [</span><span style="color:#032F62">'title'</span><span style="color:#24292E">]</span></span>
+<span class="line"><span style="color:#24292E">}</span></span>
+<span class="line"><span style="color:#24292E">&#x3C;/</span><span style="color:#22863A">script</span><span style="color:#24292E">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">template</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">h4</span><span style="color:#24292E">>{{ title }}&#x3C;/</span><span style="color:#22863A">h4</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">&#x3C;/</span><span style="color:#22863A">template</span><span style="color:#24292E">></span></span></code></pre>
+</code></pre>
+<p>When a value is passed to a prop attribute, it becomes a property on that component instance. The value of that property is accessible within the template and on the component's <code>this</code> context, just like any other component property.</p>
+</div>
+<div class="composition-api">
+<pre><code class="language-vue"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">script</span><span style="color:#6F42C1"> setup</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#6F42C1">defineProps</span><span style="color:#24292E">([</span><span style="color:#032F62">'title'</span><span style="color:#24292E">])</span></span>
+<span class="line"><span style="color:#24292E">&#x3C;/</span><span style="color:#22863A">script</span><span style="color:#24292E">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">template</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">h4</span><span style="color:#24292E">>{{ title }}&#x3C;/</span><span style="color:#22863A">h4</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">&#x3C;/</span><span style="color:#22863A">template</span><span style="color:#24292E">></span></span></code></pre>
+</code></pre>
+<p><code>defineProps</code> is a compile-time macro that is only available inside <code>&#x3C;script setup></code> and does not need to be explicitly imported. Declared props are automatically exposed to the template. <code>defineProps</code> also returns an object that contains all the props passed to the component, so that we can access them in JavaScript if needed:</p>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">const</span><span style="color:#005CC5"> props</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> defineProps</span><span style="color:#24292E">([</span><span style="color:#032F62">'title'</span><span style="color:#24292E">])</span></span>
+<span class="line"><span style="color:#24292E">console.</span><span style="color:#6F42C1">log</span><span style="color:#24292E">(props.title)</span></span></code></pre>
+</code></pre>
+<p>See also: <a href="/guide/typescript/composition-api#typing-component-props">Typing Component Props</a> <sup class="vt-badge ts" /></p>
+<p>If you are not using <code>&#x3C;script setup></code>, props should be declared using the <code>props</code> option, and the props object will be passed to <code>setup()</code> as the first argument:</p>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#24292E">  props: [</span><span style="color:#032F62">'title'</span><span style="color:#24292E">],</span></span>
+<span class="line"><span style="color:#6F42C1">  setup</span><span style="color:#24292E">(</span><span style="color:#E36209">props</span><span style="color:#24292E">) {</span></span>
+<span class="line"><span style="color:#24292E">    console.</span><span style="color:#6F42C1">log</span><span style="color:#24292E">(props.title)</span></span>
+<span class="line"><span style="color:#24292E">  }</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre>
+</div>
+<p>A component can have as many props as you like and, by default, any value can be passed to any prop.</p>
+<p>Once a prop is registered, you can pass data to it as a custom attribute, like this:</p>
+<pre><code class="language-vue-html"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#005CC5">BlogPost</span><span style="color:#6F42C1"> title</span><span style="color:#24292E">=</span><span style="color:#032F62">"My journey with Vue"</span><span style="color:#24292E"> /></span></span>
+<span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#005CC5">BlogPost</span><span style="color:#6F42C1"> title</span><span style="color:#24292E">=</span><span style="color:#032F62">"Blogging with Vue"</span><span style="color:#24292E"> /></span></span>
+<span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#005CC5">BlogPost</span><span style="color:#6F42C1"> title</span><span style="color:#24292E">=</span><span style="color:#032F62">"Why Vue is so fun"</span><span style="color:#24292E"> /></span></span></code></pre>
+</code></pre>
+<p>In a typical app, however, you'll likely have an array of posts in your parent component:</p>
+<div class="options-api">
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#6A737D">  // ...</span></span>
+<span class="line"><span style="color:#6F42C1">  data</span><span style="color:#24292E">() {</span></span>
+<span class="line"><span style="color:#D73A49">    return</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#24292E">      posts: [</span></span>
+<span class="line"><span style="color:#24292E">        { id: </span><span style="color:#005CC5">1</span><span style="color:#24292E">, title: </span><span style="color:#032F62">'My journey with Vue'</span><span style="color:#24292E"> },</span></span>
+<span class="line"><span style="color:#24292E">        { id: </span><span style="color:#005CC5">2</span><span style="color:#24292E">, title: </span><span style="color:#032F62">'Blogging with Vue'</span><span style="color:#24292E"> },</span></span>
+<span class="line"><span style="color:#24292E">        { id: </span><span style="color:#005CC5">3</span><span style="color:#24292E">, title: </span><span style="color:#032F62">'Why Vue is so fun'</span><span style="color:#24292E"> }</span></span>
+<span class="line"><span style="color:#24292E">      ]</span></span>
+<span class="line"><span style="color:#24292E">    }</span></span>
+<span class="line"><span style="color:#24292E">  }</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre>
+</div>
+<div class="composition-api">
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">const</span><span style="color:#005CC5"> posts</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> ref</span><span style="color:#24292E">([</span></span>
+<span class="line"><span style="color:#24292E">  { id: </span><span style="color:#005CC5">1</span><span style="color:#24292E">, title: </span><span style="color:#032F62">'My journey with Vue'</span><span style="color:#24292E"> },</span></span>
+<span class="line"><span style="color:#24292E">  { id: </span><span style="color:#005CC5">2</span><span style="color:#24292E">, title: </span><span style="color:#032F62">'Blogging with Vue'</span><span style="color:#24292E"> },</span></span>
+<span class="line"><span style="color:#24292E">  { id: </span><span style="color:#005CC5">3</span><span style="color:#24292E">, title: </span><span style="color:#032F62">'Why Vue is so fun'</span><span style="color:#24292E"> }</span></span>
+<span class="line"><span style="color:#24292E">])</span></span></code></pre>
+</code></pre>
+</div>
+<p>Then want to render a component for each one, using <code>v-for</code>:</p>
+<pre><code class="language-vue-html"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#005CC5">BlogPost</span></span>
+<span class="line"><span style="color:#6F42C1">  v-for</span><span style="color:#24292E">=</span><span style="color:#032F62">"</span><span style="color:#24292E">post </span><span style="color:#D73A49">in</span><span style="color:#24292E"> posts</span><span style="color:#032F62">"</span></span>
+<span class="line"><span style="color:#24292E">  :</span><span style="color:#6F42C1">key</span><span style="color:#24292E">=</span><span style="color:#032F62">"</span><span style="color:#24292E">post.id</span><span style="color:#032F62">"</span></span>
+<span class="line"><span style="color:#24292E">  :</span><span style="color:#6F42C1">title</span><span style="color:#24292E">=</span><span style="color:#032F62">"</span><span style="color:#24292E">post.title</span><span style="color:#032F62">"</span></span>
+<span class="line"><span style="color:#24292E"> /></span></span></code></pre>
+</code></pre>
+<div class="options-api">
+<p><a href="https://play.vuejs.org/#eNp9UU1rhDAU/CtDLrawVfpxklRo74We2kPtQdaoaTUJ8bmtiP+9ia6uC2VBgjOZeXnz3sCejAkPnWAx4+3eSkNJqmRjtCU817p81S2hsLpBEEYL4Q1BqoBUid9Jmosi62rC4Nm9dn4lFLXxTGAt5dG482eeUXZ1vdxbQZ1VCwKM0zr3x4KBATKPcbsDSapFjOClx5d2JtHjR1KFN9fTsfbWcXdy+CZKqcqL+vuT/r3qvQqyRatRdMrpF/nn/DNhd7iPR+v8HCDRmDoj4RHxbfyUDjeFto8p8yEh1Rw2ZV4JxN+iP96FMvest8RTTws/gdmQ8HUr7ikere+yHduu62y//y3NWG38xIOpeODyXcoE8OohGYZ5VhhHHjl83sD4B3XgyGI=">Try it in the Playground</a></p>
+</div>
+<div class="composition-api">
+<p><a href="https://play.vuejs.org/#eNp9kU9PhDAUxL/KpBfWBCH+OZEuid5N9qSHrQezFKhC27RlDSF8d1tYQBP1+N78OpN5HciD1sm54yQj1J6M0A6Wu07nTIpWK+MwwPASI0qjWkQejVbpsVHVQVl30ZJ0WQRHjwFMnpT0gPZLi32w2h2DMEAUGW5iOOEaniF66vGuOiN5j0/hajx7B4zxxt5ubIiphKz+IO828qXugw5hYRXKTnqSydcrJmk61/VF/eB4q5s3x8Pk6FJjauDO16Uye0ZCBwg5d2EkkED2wfuLlogibMOTbMpf9tMwP8jpeiMfRdM1l8Tk+/F++Y6Cl0Lyg1Ha7o7R5Bn9WwSg9X0+DPMxMI409fPP1PELlVmwdQ==">Try it in the Playground</a></p>
+</div>
+<p>Notice how <a href="/api/built-in-directives#v-bind"><code>v-bind</code> syntax</a> (<code>:title="post.title"</code>) is used to pass dynamic prop values. This is especially useful when you don't know the exact content you're going to render ahead of time.</p>
+<p>That's all you need to know about props for now, but once you've finished reading this page and feel comfortable with its content, we recommend coming back later to read the full guide on <a href="/guide/components/props">Props</a>.</p>
+<h2>Listening to Events {#listening-to-events}</h2>
+<p>As we develop our <code>&#x3C;BlogPost></code> component, some features may require communicating back up to the parent. For example, we may decide to include an accessibility feature to enlarge the text of blog posts, while leaving the rest of the page at its default size.</p>
+<p>In the parent, we can support this feature by adding a <code>postFontSize</code> <span class="options-api">data property</span><span class="composition-api">ref</span>:</p>
+<div class="options-api">
+<pre><code class="language-js{6}"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span>data() {</span></span>
+<span class="line"><span>  return {</span></span>
+<span class="line"><span>    posts: [</span></span>
+<span class="line"><span>      /* ... */</span></span>
+<span class="line"><span>    ],</span></span>
+<span class="line"><span>    postFontSize: 1</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>}</span></span></code></pre>
+</code></pre>
+</div>
+<div class="composition-api">
+<pre><code class="language-js{5}"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span>const posts = ref([</span></span>
+<span class="line"><span>  /* ... */</span></span>
+<span class="line"><span>])</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>const postFontSize = ref(1)</span></span></code></pre>
+</code></pre>
+</div>
+<p>Which can be used in the template to control the font size of all blog posts:</p>
+<pre><code class="language-vue-html{1,7}"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span>&#x3C;div :style="{ fontSize: postFontSize + 'em' }"></span></span>
+<span class="line"><span>  &#x3C;BlogPost</span></span>
+<span class="line"><span>    v-for="post in posts"</span></span>
+<span class="line"><span>    :key="post.id"</span></span>
+<span class="line"><span>    :title="post.title"</span></span>
+<span class="line"><span>   /></span></span>
+<span class="line"><span>&#x3C;/div></span></span></code></pre>
+</code></pre>
+<p>Now let's add a button to the <code>&#x3C;BlogPost></code> component's template:</p>
+<pre><code class="language-vue{5}"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span>&#x3C;!-- omitting &#x3C;script> --></span></span>
+<span class="line"><span>&#x3C;template></span></span>
+<span class="line"><span>  &#x3C;div class="blog-post"></span></span>
+<span class="line"><span>    &#x3C;h4>{{ title }}&#x3C;/h4></span></span>
+<span class="line"><span>    &#x3C;button>Enlarge text&#x3C;/button></span></span>
+<span class="line"><span>  &#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/template></span></span></code></pre>
+</code></pre>
+<p>The button doesn't do anything yet - we want clicking the button to communicate to the parent that it should enlarge the text of all posts. To solve this problem, components provide a custom events system. The parent can choose to listen to any event on the child component instance with <code>v-on</code> or <code>@</code>, just as we would with a native DOM event:</p>
+<pre><code class="language-vue-html{3}"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span>&#x3C;BlogPost</span></span>
+<span class="line"><span>  ...</span></span>
+<span class="line"><span>  @enlarge-text="postFontSize += 0.1"</span></span>
+<span class="line"><span> /></span></span></code></pre>
+</code></pre>
+<p>Then the child component can emit an event on itself by calling the built-in <a href="/api/component-instance#emit"><strong><code>$emit</code></strong> method</a>, passing the name of the event:</p>
+<pre><code class="language-vue{5}"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span>&#x3C;!-- omitting &#x3C;script> --></span></span>
+<span class="line"><span>&#x3C;template></span></span>
+<span class="line"><span>  &#x3C;div class="blog-post"></span></span>
+<span class="line"><span>    &#x3C;h4>{{ title }}&#x3C;/h4></span></span>
+<span class="line"><span>    &#x3C;button @click="$emit('enlarge-text')">Enlarge text&#x3C;/button></span></span>
+<span class="line"><span>  &#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/template></span></span></code></pre>
+</code></pre>
+<p>Thanks to the <code>@enlarge-text="postFontSize += 0.1"</code> listener, the parent will receive the event and update the value of <code>postFontSize</code>.</p>
+<div class="options-api">
+<p><a href="https://play.vuejs.org/#eNqNUsFOg0AQ/ZUJMaGNbbHqidCmmujNxMRED9IDhYWuhV0CQy0S/t1ZYIEmaiRkw8y8N/vmMZVxl6aLY8EM23ByP+Mprl3Bk1RmCPexjJ5ljhBmMgFzYemEIpiuAHAFOzXQgIVeESNUKutL4gsmMLfbBPStVFTP1Bl46E2mup4xLDKhI4CUsMR+1zFABTywYTkD5BgzG8ynEj4kkVgJnxz38Eqaut5jxvXAUCIiLqI/8TcD/m1fKhTwHHIJYSEIr+HbnqikPkqBL/yLSMs23eDooNexel8pQJaksYeMIgAn4EewcyxjtnKNCsK+zbgpXILJEnW30bCIN7ZTPcd5KDNqoWjARWufa+iyfWBlV13wYJRvJtWVJhiKGyZiL4vYHNkJO8wgaQVXi6UGr51+Ndq5LBqMvhyrH9eYGePtOVu3n3YozWSqFsBsVJmt3SzhzVaYY2nm9l82+7GX5zTGjlTM1SyNmy5SeX+7rqr2r0NdOxbFXWVXIEoBGz/m/oHIF0rB5Pz6KTV6aBOgEo7Vsn51ov4GgAAf2A==">Try it in the Playground</a></p>
+</div>
+<div class="composition-api">
+<p><a href="https://play.vuejs.org/#eNp1Uk1PwkAQ/SuTxqQYgYp6ahaiJngzITHRA/UAZQor7W7TnaK16X93th8UEuHEvPdm5s3bls5Tmo4POTq+I0yYyZTAIOXpLFAySXVGUEKGEVQQZToBl6XukXqO9XahDbXc2OsAO5FlAIEKtWJByqCBqR01WFqiBLnxYTIEkhSjD+5rAV86zxQW8C1pB+88Aaphr73rtXbNVqrtBeV9r/zYFZYHacBoiHLFykB9Xgfq1NmLVvQmf7E1OGFaeE0anAMXhEkarwhtRWIjD+AbKmKcBk4JUdvtn8+6ARcTu87hLuCf6NJpSoDDKNIZj7BtIFUTUuB0tL/HomXHcnOC18d1TF305COqeJVtcUT4Q62mtzSF2/GkE8/E8b1qh8Ljw/if8I7nOkPn9En/+Ug2GEmFi0ynZrB0azOujbfB54kki5+aqumL8bING28Yr4xh+2vePrI39CnuHmZl2TwwVJXwuG6ZdU6kFTyGsQz33HyFvH5wvvyaB80bACwgvKbrYgLVH979DQc=">Try it in the Playground</a></p>
+</div>
+<p>We can optionally declare emitted events using the <span class="options-api"><a href="/api/options-state#emits"><code>emits</code></a> option</span><span class="composition-api"><a href="/api/sfc-script-setup#defineprops-defineemits"><code>defineEmits</code></a> macro</span>:</p>
+<div class="options-api">
+<pre><code class="language-vue{4}"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span>&#x3C;script></span></span>
+<span class="line"><span>export default {</span></span>
+<span class="line"><span>  props: ['title'],</span></span>
+<span class="line"><span>  emits: ['enlarge-text']</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span>&#x3C;/script></span></span></code></pre>
+</code></pre>
+</div>
+<div class="composition-api">
+<pre><code class="language-vue{3}"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span>&#x3C;script setup></span></span>
+<span class="line"><span>defineProps(['title'])</span></span>
+<span class="line"><span>defineEmits(['enlarge-text'])</span></span>
+<span class="line"><span>&#x3C;/script></span></span></code></pre>
+</code></pre>
+</div>
+<p>This documents all the events that a component emits and optionally <a href="/guide/components/events#events-validation">validates them</a>. It also allows Vue to avoid implicitly applying them as native listeners to the child component's root element.</p>
+<div class="composition-api">
+<p>Similar to <code>defineProps</code>, <code>defineEmits</code> is only usable in <code>&#x3C;script setup></code> and doesn't need to be imported. It returns an <code>emit</code> function that is equivalent to the <code>$emit</code> method. It can be used to emit events in the <code>&#x3C;script setup></code> section of a component, where <code>$emit</code> isn't directly accessible:</p>
+<pre><code class="language-vue"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">script</span><span style="color:#6F42C1"> setup</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#D73A49">const</span><span style="color:#005CC5"> emit</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> defineEmits</span><span style="color:#24292E">([</span><span style="color:#032F62">'enlarge-text'</span><span style="color:#24292E">])</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6F42C1">emit</span><span style="color:#24292E">(</span><span style="color:#032F62">'enlarge-text'</span><span style="color:#24292E">)</span></span>
+<span class="line"><span style="color:#24292E">&#x3C;/</span><span style="color:#22863A">script</span><span style="color:#24292E">></span></span></code></pre>
+</code></pre>
+<p>See also: <a href="/guide/typescript/composition-api#typing-component-emits">Typing Component Emits</a> <sup class="vt-badge ts" /></p>
+<p>If you are not using <code>&#x3C;script setup></code>, you can declare emitted events using the <code>emits</code> option. You can access the <code>emit</code> function as a property of the setup context (passed to <code>setup()</code> as the second argument):</p>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#24292E">  emits: [</span><span style="color:#032F62">'enlarge-text'</span><span style="color:#24292E">],</span></span>
+<span class="line"><span style="color:#6F42C1">  setup</span><span style="color:#24292E">(</span><span style="color:#E36209">props</span><span style="color:#24292E">, </span><span style="color:#E36209">ctx</span><span style="color:#24292E">) {</span></span>
+<span class="line"><span style="color:#24292E">    ctx.</span><span style="color:#6F42C1">emit</span><span style="color:#24292E">(</span><span style="color:#032F62">'enlarge-text'</span><span style="color:#24292E">)</span></span>
+<span class="line"><span style="color:#24292E">  }</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre>
+</div>
+<p>That's all you need to know about custom component events for now, but once you've finished reading this page and feel comfortable with its content, we recommend coming back later to read the full guide on <a href="/guide/components/events">Custom Events</a>.</p>
+<h2>Content Distribution with Slots {#content-distribution-with-slots}</h2>
+<p>Just like with HTML elements, it's often useful to be able to pass content to a component, like this:</p>
+<pre><code class="language-vue-html"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#005CC5">AlertBox</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  Something bad happened.</span></span>
+<span class="line"><span style="color:#24292E">&#x3C;/</span><span style="color:#005CC5">AlertBox</span><span style="color:#24292E">></span></span></code></pre>
+</code></pre>
+<p>Which might render something like:</p>
+<p>:::danger This is an Error for Demo Purposes
+Something bad happened.
+:::</p>
+<p>This can be achieved using Vue's custom <code>&#x3C;slot></code> element:</p>
+<pre><code class="language-vue{4}"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span>&#x3C;template></span></span>
+<span class="line"><span>  &#x3C;div class="alert-box"></span></span>
+<span class="line"><span>    &#x3C;strong>This is an Error for Demo Purposes&#x3C;/strong></span></span>
+<span class="line"><span>    &#x3C;slot /></span></span>
+<span class="line"><span>  &#x3C;/div></span></span>
+<span class="line"><span>&#x3C;/template></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>&#x3C;style scoped></span></span>
+<span class="line"><span>.alert-box {</span></span>
+<span class="line"><span>  /* ... */</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span>&#x3C;/style></span></span></code></pre>
+</code></pre>
+<p>As you'll see above, we use the <code>&#x3C;slot></code> as a placeholder where we want the content to go – and that's it. We're done!</p>
+<div class="options-api">
+<p><a href="https://play.vuejs.org/#eNpVUcFOwzAM/RUTDruwFhCaUCmThsQXcO0lbbKtIo0jx52Kpv07TreWouTynl+en52z2oWQnXqrClXGhtrA28q3XUBi2DlL/IED7Ak7WGX5RKQHq8oDVN4Oo9TYve4dwzmxDcp7bz3HAs5/LpfKyy3zuY0Atl1wmm1CXE5SQeLNX9hZPrb+ALU2cNQhWG9NNkrnLKIt89lGPahlyDTVogVAadoTNE7H+F4pnZTrGodKjUUpRyb0h+0nEdKdRL3CW7GmfNY5ZLiiMhfP/ynG0SL/OAuxwWCNMNncbVqSQyrgfrPZvCVcIxkrxFMYIKJrDZA1i8qatGl72ehLGEY6aGNkNwU8P96YWjffB8Lem/Xkvn9NR6qy+fRd14FSgopvmtQmzTT9Toq9VZdfIpa5jQ==">Try it in the Playground</a></p>
+</div>
+<div class="composition-api">
+<p><a href="https://play.vuejs.org/#eNpVUEtOwzAQvcpgFt3QBBCqUAiRisQJ2GbjxG4a4Xis8aQKqnp37PyUyqv3mZn3fBVH55JLr0Umcl9T6xi85t4VpW07h8RwNJr4Cwc4EXawS9KFiGO70ubpNBcmAmDdOSNZR8T5Yg0IoOQf7DSfW9tAJRWcpXPaapWM1nVt8ObpukY8ie29GHNzAiBX7QVqI73/LIWMzn2FQylGMcieCW1TfBMhPYSoE5zFitLVZ5BhQnkadt6nGKt5/jMafI1Oq8Ak6zW4xrEaDVIGj4fD4SPiCknpQLy4ATyaVgFptVH2JFXb+wze3DDSTioV/iaD1+eZqWT92xD2Vu2X7af3+IJ6G7/UToVigpJnTzwTO42eWDnELsTtH/wUqH4=">Try it in the Playground</a></p>
+</div>
+<p>That's all you need to know about slots for now, but once you've finished reading this page and feel comfortable with its content, we recommend coming back later to read the full guide on <a href="/guide/components/slots">Slots</a>.</p>
+<h2>Dynamic Components {#dynamic-components}</h2>
+<p>Sometimes, it's useful to dynamically switch between components, like in a tabbed interface:</p>
+<div class="options-api">
+<p><a href="https://play.vuejs.org/#eNqNVE2PmzAQ/Ssj9kArLSHbrXpwk1X31mMPvS17cIxJrICNbJMmivLfO/7AEG2jRiDkefP85sNmztlr3y8OA89ItjJMi96+VFJ0vdIWfqqOQ6NVB/midIYj5sn9Sxlrkt9b14RXzXbiMElEO5IAKsmPnljzhg6thbNDmcLdkktrSADAJ/IYlj5MXEc9Z1w8VFNLP30ed2luBy1HC4UHrVH2N90QyJ1kHnUALN1gtLeIQu6juEUMkb8H5sXHqiS+qzK1Cw3Lu76llqMFsKrFAVhLjVlXWc07VWUeR89msFbhhhAWDkWjNJIwPgjp06iy5CV7fgrOOTgKv+XoKIIgpnoGyiymSmZ1wnq9dqJweZ8p/GCtYHtUmBMdLXFitgDnc9ju68b0yxDO1WzRTEcFRLiUJsEqSw3wwi+rMpFDj0psEq5W5ax1aBp7at1y4foWzq5R0hYN7UR7ImCoNIXhWjTfnW+jdM01gaf+CEa1ooYHzvnMVWhaiwEP90t/9HBP61rILQJL3POMHw93VG+FLKzqUYx3c2yjsOaOwNeRO2B8zKHlzBKQWJNH1YHrplV/iiMBOliFILYNK5mOKdSTMviGCTyNojFdTKBoeWNT3s8f/Vpsd7cIV61gjHkXnotR6OqVkJbrQKdsv9VqkDWBh2bpnn8VXaDcHPexE4wFzsojO9eDUOSVPF+65wN/EW7sHRsi5XaFqaexn+EH9Xcpe8zG2eWG3O0/NVzUaeJMk+jGhUXlNPXulw5j8w7t2bi8X32cuf/Vv/wF/SL98A==">Open example in the Playground</a></p>
+</div>
+<div class="composition-api">
+<p><a href="https://play.vuejs.org/#eNqNVMGOmzAQ/ZURe2BXCiHbrXpwk1X31mMPvS1V5RiTWAEb2SZNhPLvHdvggLZRE6TIM/P8/N5gpk/e2nZ57HhCkrVhWrQWDLdd+1pI0bRKW/iuGg6VVg2ky9wFDp7G8g9lrIl1H80Bb5rtxfFKMcRzUA+aV3AZQKEEhWRKGgus05pL+5NuYeNwj6mTkT4VckRYujVY63GT17twC6/Fr4YjC3kp5DoPNtEgBpY3bU0txwhgXYojsJoasymSkjeqSHweK9vOWoUbXIC/Y1YpjaDH3wt39hMI6TUUSYSQAz8jArPT5Mj+nmIhC6zpAu1TZlEhmXndbBwpXH5NGL6xWrADMsyaMj1lkAzQ92E7mvYe8nCcM24xZApbL5ECiHCSnP73KyseGnvh6V/XedwS2pVjv3C1ziddxNDYc+2WS9fC8E4qJW1W0UbUZwKGSpMZrkX11dW2SpdcE3huT2BULUp44JxPSpmmpegMgU/tyadbWpZC7jCxwj0v+OfTDdU7ITOrWiTjzTS3Vei8IfB5xHZ4PmqoObMEJHryWXXkuqrVn+xEgHZWYRKbh06uLyv4iQq+oIDnkXSQiwKymlc26n75WNdit78FmLWCMeZL+GKMwlKrhLRcBzhlh51WnSwJPFQr9/zLdIZ007w/O6bR4MQe2bseBJMzer5yzwf8MtzbOzYMkNsOY0+HfoZv1d+lZJGMg8fNqdsfbbio4b77uRVv7I0Li8xxZN1PHWbeHdyTWXc/+zgw/8t/+QsROe9h">Open example in the Playground</a></p>
+</div>
+<p>The above is made possible by Vue's <code>&#x3C;component></code> element with the special <code>is</code> attribute:</p>
+<div class="options-api">
+<pre><code class="language-vue-html"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#6A737D">&#x3C;!-- Component changes when currentTab changes --></span></span>
+<span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">component</span><span style="color:#24292E"> :</span><span style="color:#6F42C1">is</span><span style="color:#24292E">=</span><span style="color:#032F62">"</span><span style="color:#24292E">currentTab</span><span style="color:#032F62">"</span><span style="color:#24292E">>&#x3C;/</span><span style="color:#22863A">component</span><span style="color:#24292E">></span></span></code></pre>
+</code></pre>
+</div>
+<div class="composition-api">
+<pre><code class="language-vue-html"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#6A737D">&#x3C;!-- Component changes when currentTab changes --></span></span>
+<span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">component</span><span style="color:#24292E"> :</span><span style="color:#6F42C1">is</span><span style="color:#24292E">=</span><span style="color:#032F62">"</span><span style="color:#24292E">tabs[currentTab]</span><span style="color:#032F62">"</span><span style="color:#24292E">>&#x3C;/</span><span style="color:#22863A">component</span><span style="color:#24292E">></span></span></code></pre>
+</code></pre>
+</div>
+<p>In the example above, the value passed to <code>:is</code> can contain either:</p>
+<ul>
+<li>the name string of a registered component, OR</li>
+<li>the actual imported component object</li>
+</ul>
+<p>You can also use the <code>is</code> attribute to create regular HTML elements.</p>
+<p>When switching between multiple components with <code>&#x3C;component :is="..."></code>, a component will be unmounted when it is switched away from. We can force the inactive components to stay "alive" with the built-in <a href="/guide/built-ins/keep-alive"><code>&#x3C;KeepAlive></code> component</a>.</p>
+<h2>in-DOM Template Parsing Caveats {#in-dom-template-parsing-caveats}</h2>
+<p>If you are writing your Vue templates directly in the DOM, Vue will have to retrieve the template string from the DOM. This leads to some caveats due to browsers' native HTML parsing behavior.</p>
+<p>:::tip
+It should be noted that the limitations discussed below only apply if you are writing your templates directly in the DOM. They do NOT apply if you are using string templates from the following sources:</p>
+<ul>
+<li>Single-File Components</li>
+<li>Inlined template strings (e.g. <code>template: '...'</code>)</li>
+<li><code>&#x3C;script type="text/x-template"></code>
+:::</li>
+</ul>
+<h3>Case Insensitivity {#case-insensitivity}</h3>
+<p>HTML tags and attribute names are case-insensitive, so browsers will interpret any uppercase characters as lowercase. That means when you’re using in-DOM templates, PascalCase component names and camelCased prop names or <code>v-on</code> event names all need to use their kebab-cased (hyphen-delimited) equivalents:</p>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#6A737D">// camelCase in JavaScript</span></span>
+<span class="line"><span style="color:#D73A49">const</span><span style="color:#005CC5"> BlogPost</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#24292E">  props: [</span><span style="color:#032F62">'postTitle'</span><span style="color:#24292E">],</span></span>
+<span class="line"><span style="color:#24292E">  emits: [</span><span style="color:#032F62">'updatePost'</span><span style="color:#24292E">],</span></span>
+<span class="line"><span style="color:#24292E">  template: </span><span style="color:#032F62">`</span></span>
+<span class="line"><span style="color:#032F62">    &#x3C;h3>{{ postTitle }}&#x3C;/h3></span></span>
+<span class="line"><span style="color:#032F62">  `</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre>
+<pre><code class="language-vue-html"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#6A737D">&#x3C;!-- kebab-case in HTML --></span></span>
+<span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">blog-post</span><span style="color:#6F42C1"> post-title</span><span style="color:#24292E">=</span><span style="color:#032F62">"hello!"</span><span style="color:#24292E"> @</span><span style="color:#6F42C1">update-post</span><span style="color:#24292E">=</span><span style="color:#032F62">"</span><span style="color:#24292E">onUpdatePost</span><span style="color:#032F62">"</span><span style="color:#24292E">>&#x3C;/</span><span style="color:#22863A">blog-post</span><span style="color:#24292E">></span></span></code></pre>
+</code></pre>
+<h3>Self Closing Tags {#self-closing-tags}</h3>
+<p>We have been using self-closing tags for components in previous code samples:</p>
+<pre><code class="language-vue-html"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#005CC5">MyComponent</span><span style="color:#24292E"> /></span></span></code></pre>
+</code></pre>
+<p>This is because Vue's template parser respects <code>/></code> as an indication to end any tag, regardless of its type.</p>
+<p>In in-DOM templates, however, we must always include explicit closing tags:</p>
+<pre><code class="language-vue-html"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">my-component</span><span style="color:#24292E">>&#x3C;/</span><span style="color:#22863A">my-component</span><span style="color:#24292E">></span></span></code></pre>
+</code></pre>
+<p>This is because the HTML spec only allows <a href="https://html.spec.whatwg.org/multipage/syntax.html#void-elements">a few specific elements</a> to omit closing tags, the most common being <code>&#x3C;input></code> and <code>&#x3C;img></code>. For all other elements, if you omit the closing tag, the native HTML parser will think you never terminated the opening tag. For example, the following snippet:</p>
+<pre><code class="language-vue-html"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">my-component</span><span style="color:#24292E"> /> </span><span style="color:#6A737D">&#x3C;!-- we intend to close the tag here... --></span></span>
+<span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">span</span><span style="color:#24292E">>hello&#x3C;/</span><span style="color:#22863A">span</span><span style="color:#24292E">></span></span></code></pre>
+</code></pre>
+<p>will be parsed as:</p>
+<pre><code class="language-vue-html"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">my-component</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">span</span><span style="color:#24292E">>hello&#x3C;/</span><span style="color:#22863A">span</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">&#x3C;/</span><span style="color:#22863A">my-component</span><span style="color:#24292E">> </span><span style="color:#6A737D">&#x3C;!-- but the browser will close it here. --></span></span></code></pre>
+</code></pre>
+<h3>Element Placement Restrictions {#element-placement-restrictions}</h3>
+<p>Some HTML elements, such as <code>&#x3C;ul></code>, <code>&#x3C;ol></code>, <code>&#x3C;table></code> and <code>&#x3C;select></code> have restrictions on what elements can appear inside them, and some elements such as <code>&#x3C;li></code>, <code>&#x3C;tr></code>, and <code>&#x3C;option></code> can only appear inside certain other elements.</p>
+<p>This will lead to issues when using components with elements that have such restrictions. For example:</p>
+<pre><code class="language-vue-html"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">table</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">blog-post-row</span><span style="color:#24292E">>&#x3C;/</span><span style="color:#22863A">blog-post-row</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">&#x3C;/</span><span style="color:#22863A">table</span><span style="color:#24292E">></span></span></code></pre>
+</code></pre>
+<p>The custom component <code>&#x3C;blog-post-row></code> will be hoisted out as invalid content, causing errors in the eventual rendered output. We can use the special <a href="/api/built-in-special-attributes#is"><code>is</code> attribute</a> as a workaround:</p>
+<pre><code class="language-vue-html"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">table</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  &#x3C;</span><span style="color:#22863A">tr</span><span style="color:#6F42C1"> is</span><span style="color:#24292E">=</span><span style="color:#032F62">"vue:blog-post-row"</span><span style="color:#24292E">>&#x3C;/</span><span style="color:#22863A">tr</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">&#x3C;/</span><span style="color:#22863A">table</span><span style="color:#24292E">></span></span></code></pre>
+</code></pre>
+<p>:::tip
+When used on native HTML elements, the value of <code>is</code> must be prefixed with <code>vue:</code> in order to be interpreted as a Vue component. This is required to avoid confusion with native <a href="https://html.spec.whatwg.org/multipage/custom-elements.html#custom-elements-customized-builtin-example">customized built-in elements</a>.
+:::</p>
+<del class="diff-block"><p>That's all you need to know about in-DOM template parsing caveats for now - and actually, the end of Vue's <em>Essentials</em>. Congratulations! There's still more to learn, but first, we recommend taking a break to play with Vue yourself - build something fun, or check out some of the <a href="/examples/">Examples</a> if you haven't already.</p></del>
+<p><del class="diff-inline">Once you feel comfortable with the knowledge you've just digested, move on with the guide to learn more about components in depth.</del><ins class="diff-inline">That's all you need to know about in-DOM template parsing caveats for now.</ins></p></body></html>

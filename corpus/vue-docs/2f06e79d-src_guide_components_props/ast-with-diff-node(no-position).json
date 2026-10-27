@@ -1,0 +1,3109 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "heading",
+      "depth": 1,
+      "children": [
+        {
+          "type": "text",
+          "value": "Props {#props}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "blockquote",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "This page assumes you've already read the ",
+              "data": {}
+            },
+            {
+              "type": "link",
+              "title": null,
+              "url": "/guide/essentials/component-basics",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Components Basics",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "text",
+              "value": ". Read that first if you are new to components.",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"options-api\">\n  <VueSchoolLink href=\"https://vueschool.io/lessons/vue-3-reusable-components-with-props\" title=\"Free Vue.js Props Lesson\"/>\n</div>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Props Declaration {#props-declaration}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Vue components require explicit props declaration so that Vue knows what external props passed to the component should be treated as fallthrough attributes (which will be discussed in ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/guide/components/attrs",
+          "children": [
+            {
+              "type": "text",
+              "value": "its dedicated section",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ").",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"composition-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "In SFCs using ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<script setup>",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", props can be declared using the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "defineProps()",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " macro:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue",
+      "meta": null,
+      "value": "<script setup>\nconst props = defineProps(['foo'])\n\nconsole.log(props.foo)\n</script>",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "In non-",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<script setup>",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " components, props are declared using the ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/api/options-state#props",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "props",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " option:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "export default {\n  props: ['foo'],\n  setup(props) {\n    // setup() receives props as the first argument.\n    console.log(props.foo)\n  }\n}",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Notice the argument passed to ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "defineProps()",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " is the same as the value provided to the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "props",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " options: the same props options API is shared between the two declaration styles.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"options-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Props are declared using the ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/api/options-state#props",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "props",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " option:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "export default {\n  props: ['foo'],\n  created() {\n    // props are exposed on `this`\n    console.log(this.foo)\n  }\n}",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "In addition to declaring props using an array of strings, we can also use the object syntax:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"options-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "export default {\n  props: {\n    title: String,\n    likes: Number\n  }\n}",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"composition-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "// in <script setup>\ndefineProps({\n  title: String,\n  likes: Number\n})",
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "// in non-<script setup>\nexport default {\n  props: {\n    title: String,\n    likes: Number\n  }\n}",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "For each property in the object declaration syntax, the key is the name of the prop, while the value should be the constructor function of the expected type.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "This not only documents your component, but will also warn other developers using your component in the browser console if they pass the wrong type. We will discuss more details about ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "#prop-validation",
+          "children": [
+            {
+              "type": "text",
+              "value": "prop validation",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " further down this page.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"options-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "See also: ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/guide/typescript/options-api#typing-component-props",
+          "children": [
+            {
+              "type": "text",
+              "value": "Typing Component Props",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " ",
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "<sup class=\"vt-badge ts\" />",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"composition-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "If you are using TypeScript with ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<script setup>",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", it's also possible to declare props using pure type annotations:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue",
+      "meta": null,
+      "value": "<script setup lang=\"ts\">\ndefineProps<{\n  title?: string\n  likes?: number\n}>()\n</script>",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "More details: ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/guide/typescript/composition-api#typing-component-props",
+          "children": [
+            {
+              "type": "text",
+              "value": "Typing Component Props",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " ",
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "<sup class=\"vt-badge ts\" />",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"composition-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Reactive Props Destructure ",
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "<sup class=\"vt-badge\" data-text=\"3.5+\" />",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "text",
+          "value": " ** {#reactive-props-destructure}",
+          "data": {}
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Vue's reactivity system tracks state usage based on property access. E.g. when you access ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "props.foo",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " in a computed getter or a watcher, the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "foo",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " prop gets tracked as a dependency.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "So, given the following code:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "const { foo } = defineProps(['foo'])\n\nwatchEffect(() => {\n  // runs only once before 3.5\n  // re-runs when the \"foo\" prop changes in 3.5+\n  console.log(foo)\n})",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "In version 3.4 and below, ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "foo",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " is an actual constant and will never change. In version 3.5 and above, Vue's compiler automatically prepends ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "props.",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " when code in the same ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<script setup>",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " block accesses variables destructured from ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "defineProps",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ". Therefore the code above becomes equivalent to the following:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": "{5}",
+      "value": "const props = defineProps(['foo'])\n\nwatchEffect(() => {\n  // `foo` transformed to `props.foo` by the compiler\n  console.log(props.foo)\n})",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "In addition, you can use JavaScript's native default value syntax to declare default values for the props. This is particularly useful when using the type-based props declaration:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "ts",
+      "meta": null,
+      "value": "const { foo = 'hello' } = defineProps<{ foo?: string }>()",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "If you prefer to have more visual distinction between destructured props and normal variables in your IDE, Vue's VSCode extension provides a setting to enable inlay-hints for destructured props.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Passing Destructured Props into Functions {#passing-destructured-props-into-functions}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "When we pass a destructured prop into a function, e.g.:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "const { foo } = defineProps(['foo'])\n\nwatch(foo, /* ... */)",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "This will not work as expected because it is equivalent to ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "watch(props.foo, ...)",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " - we are passing a value instead of a reactive data source to ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "watch",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ". In fact, Vue's compiler will catch such cases and throw a warning.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Similar to how we can watch a normal prop with ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "watch(() => props.foo, ...)",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", we can watch a destructured prop also by wrapping it in a getter:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "watch(() => foo, /* ... */)",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "In addition, this is the recommended approach when we need to pass a destructured prop into an external function while retaining reactivity:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "useComposable(() => foo)",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "The external function can call the getter (or normalize it with ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/api/reactivity-utilities.html#tovalue",
+          "children": [
+            {
+              "type": "text",
+              "value": "toValue",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ") when it needs to track changes of the provided prop, e.g. in a computed or watcher getter.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Prop Passing Details {#prop-passing-details}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Prop Name Casing {#prop-name-casing}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "We declare long prop names using camelCase because this avoids having to use quotes when using them as property keys, and allows us to reference them directly in template expressions because they are valid JavaScript identifiers:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"composition-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "defineProps({\n  greetingMessage: String\n})",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"options-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "export default {\n  props: {\n    greetingMessage: String\n  }\n}",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<span>{{ greetingMessage }}</span>",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Technically, you can also use camelCase when passing props to a child component (except in ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/guide/essentials/component-basics#in-dom-template-parsing-caveats",
+          "children": [
+            {
+              "type": "text",
+              "value": "in-DOM templates",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "). However, the convention is using kebab-case in all cases to align with HTML attributes:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<MyComponent greeting-message=\"hello\" />",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "We use ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/guide/components/registration#component-name-casing",
+          "children": [
+            {
+              "type": "text",
+              "value": "PascalCase for component tags",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " when possible because it improves template readability by differentiating Vue components from native elements. However, there isn't as much practical benefit in using camelCase when passing props, so we choose to follow each language's conventions.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Static vs. Dynamic Props {#static-vs-dynamic-props}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "So far, you've seen props passed as static values, like in:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<BlogPost title=\"My journey with Vue\" />",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "You've also seen props assigned dynamically with ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "v-bind",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " or its ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": ":",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " shortcut, such as in:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<!-- Dynamically assign the value of a variable -->\n<BlogPost :title=\"post.title\" />\n\n<!-- Dynamically assign the value of a complex expression -->\n<BlogPost :title=\"post.title + ' by ' + post.author.name\" />",
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Passing Different Value Types {#passing-different-value-types}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "In the two examples above, we happen to pass string values, but ",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "any",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " type of value can be passed to a prop.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 4,
+      "children": [
+        {
+          "type": "text",
+          "value": "Number {#number}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<!-- Even though `42` is static, we need v-bind to tell Vue that -->\n<!-- this is a JavaScript expression rather than a string.       -->\n<BlogPost :likes=\"42\" />\n\n<!-- Dynamically assign to the value of a variable. -->\n<BlogPost :likes=\"post.likes\" />",
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 4,
+      "children": [
+        {
+          "type": "text",
+          "value": "Boolean {#boolean}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<!-- Including the prop with no value will imply `true`. -->\n<BlogPost is-published />\n\n<!-- Even though `false` is static, we need v-bind to tell Vue that -->\n<!-- this is a JavaScript expression rather than a string.          -->\n<BlogPost :is-published=\"false\" />\n\n<!-- Dynamically assign to the value of a variable. -->\n<BlogPost :is-published=\"post.isPublished\" />",
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 4,
+      "children": [
+        {
+          "type": "text",
+          "value": "Array {#array}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<!-- Even though the array is static, we need v-bind to tell Vue that -->\n<!-- this is a JavaScript expression rather than a string.            -->\n<BlogPost :comment-ids=\"[234, 266, 273]\" />\n\n<!-- Dynamically assign to the value of a variable. -->\n<BlogPost :comment-ids=\"post.commentIds\" />",
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 4,
+      "children": [
+        {
+          "type": "text",
+          "value": "Object {#object}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<!-- Even though the object is static, we need v-bind to tell Vue that -->\n<!-- this is a JavaScript expression rather than a string.             -->\n<BlogPost\n  :author=\"{\n    name: 'Veronica',\n    company: 'Veridian Dynamics'\n  }\"\n />\n\n<!-- Dynamically assign to the value of a variable. -->\n<BlogPost :author=\"post.author\" />",
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Binding Multiple Properties Using an Object {#binding-multiple-properties-using-an-object}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "If you want to pass all the properties of an object as props, you can use ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/guide/essentials/template-syntax#dynamically-binding-multiple-attributes",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "v-bind",
+              "data": {}
+            },
+            {
+              "type": "text",
+              "value": " without an argument",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " (",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "v-bind",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " instead of ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": ":prop-name",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "). For example, given a ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "post",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " object:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"options-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "export default {\n  data() {\n    return {\n      post: {\n        id: 1,\n        title: 'My Journey with Vue'\n      }\n    }\n  }\n}",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"composition-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "const post = {\n  id: 1,\n  title: 'My Journey with Vue'\n}",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "The following template:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<BlogPost v-bind=\"post\" />",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Will be equivalent to:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<BlogPost :id=\"post.id\" :title=\"post.title\" />",
+      "data": {}
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 3,
+          "children": [
+            {
+              "type": "text",
+              "value": "Merge Behavior When Combining Bindings {#merge-behavior-when-combining-bindings}"
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "When "
+            },
+            {
+              "type": "inlineCode",
+              "value": "v-bind"
+            },
+            {
+              "type": "text",
+              "value": " is used alongside explicit bindings on the same component, Vue internally calls "
+            },
+            {
+              "type": "inlineCode",
+              "value": "mergeProps()"
+            },
+            {
+              "type": "text",
+              "value": " to combine them. The merging strategy depends on the key type:"
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "list",
+          "ordered": false,
+          "start": null,
+          "spread": false,
+          "children": [
+            {
+              "type": "listItem",
+              "spread": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "strong",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Regular props"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " — the last value wins:"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "code",
+          "lang": "vue-html",
+          "meta": null,
+          "value": "<!-- title === 'bar' -->\n<BlogPost title=\"foo\" v-bind=\"{ title: 'bar' }\" />",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "list",
+          "ordered": false,
+          "start": null,
+          "spread": false,
+          "children": [
+            {
+              "type": "listItem",
+              "spread": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "strong",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Event listeners"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " — when passing listeners in a "
+                    },
+                    {
+                      "type": "inlineCode",
+                      "value": "v-bind"
+                    },
+                    {
+                      "type": "text",
+                      "value": " object, "
+                    },
+                    {
+                      "type": "link",
+                      "title": null,
+                      "url": "/guide/extras/render-function#v-on",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "use the "
+                        },
+                        {
+                          "type": "inlineCode",
+                          "value": "onEventName"
+                        },
+                        {
+                          "type": "text",
+                          "value": " key convention"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": ". All handlers for the same event will be called (see "
+                    },
+                    {
+                      "type": "link",
+                      "title": null,
+                      "url": "/guide/components/attrs#v-on-listener-inheritance",
+                      "children": [
+                        {
+                          "type": "inlineCode",
+                          "value": "v-on"
+                        },
+                        {
+                          "type": "text",
+                          "value": " Listener Inheritance"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "):"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "code",
+          "lang": "vue-html",
+          "meta": null,
+          "value": "<!-- logs 1 and 2 -->\n<BlogPost @click=\"console.log(1)\" v-bind=\"{ onClick: () => console.log(2) }\" />",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "list",
+          "ordered": false,
+          "start": null,
+          "spread": false,
+          "children": [
+            {
+              "type": "listItem",
+              "spread": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "strong",
+                      "children": [
+                        {
+                          "type": "inlineCode",
+                          "value": "class"
+                        },
+                        {
+                          "type": "text",
+                          "value": " and "
+                        },
+                        {
+                          "type": "inlineCode",
+                          "value": "style"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " follow a similar merge strategy (see "
+                    },
+                    {
+                      "type": "link",
+                      "title": null,
+                      "url": "/guide/components/attrs#class-and-style-merging",
+                      "children": [
+                        {
+                          "type": "inlineCode",
+                          "value": "class"
+                        },
+                        {
+                          "type": "text",
+                          "value": " and "
+                        },
+                        {
+                          "type": "inlineCode",
+                          "value": "style"
+                        },
+                        {
+                          "type": "text",
+                          "value": " Merging"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": ")."
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": ":::tip\nThe full merging rules are described in the "
+            },
+            {
+              "type": "link",
+              "title": null,
+              "url": "/api/render-function#mergeprops",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "mergeProps()"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " API reference.\n:::"
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "One-Way Data Flow {#one-way-data-flow}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "All props form a ",
+          "data": {}
+        },
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "one-way-down binding",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " between the child property and the parent one: when the parent property updates, it will flow down to the child, but not the other way around. This prevents child components from accidentally mutating the parent's state, which can make your app's data flow harder to understand.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "In addition, every time the parent component is updated, all props in the child component will be refreshed with the latest value. This means you should ",
+          "data": {}
+        },
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "not",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " attempt to mutate a prop inside a child component. If you do, Vue will warn you in the console:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"composition-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "const props = defineProps(['foo'])\n\n// ❌ warning, props are readonly!\nprops.foo = 'bar'",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"options-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "export default {\n  props: ['foo'],\n  created() {\n    // ❌ warning, props are readonly!\n    this.foo = 'bar'\n  }\n}",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "There are usually two cases where it's tempting to mutate a prop:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 1,
+      "spread": true,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": true,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "strong",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "The prop is used to pass in an initial value; the child component wants to use it as a local data property afterwards.",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " In this case, it's best to define a local data property that uses the prop as its initial value:",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "html",
+              "value": "<div class=\"composition-api\">",
+              "data": {
+                "diffUnchanged": true
+              },
+              "children": []
+            },
+            {
+              "type": "code",
+              "lang": "js",
+              "meta": null,
+              "value": "const props = defineProps(['initialCounter'])\n\n// counter only uses props.initialCounter as the initial value;\n// it is disconnected from future prop updates.\nconst counter = ref(props.initialCounter)",
+              "data": {}
+            },
+            {
+              "type": "html",
+              "value": "</div>\n<div class=\"options-api\">",
+              "data": {
+                "diffUnchanged": true
+              },
+              "children": []
+            },
+            {
+              "type": "code",
+              "lang": "js",
+              "meta": null,
+              "value": "export default {\n  props: ['initialCounter'],\n  data() {\n    return {\n      // counter only uses this.initialCounter as the initial value;\n      // it is disconnected from future prop updates.\n      counter: this.initialCounter\n    }\n  }\n}",
+              "data": {}
+            },
+            {
+              "type": "html",
+              "value": "</div>",
+              "data": {
+                "diffUnchanged": true
+              },
+              "children": []
+            }
+          ],
+          "data": {
+            "diffUnchanged": true
+          }
+        },
+        {
+          "type": "listItem",
+          "spread": true,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "strong",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "The prop is passed in as a raw value that needs to be transformed.",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " In this case, it's best to define a computed property using the prop's value:",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "html",
+              "value": "<div class=\"composition-api\">",
+              "data": {
+                "diffUnchanged": true
+              },
+              "children": []
+            },
+            {
+              "type": "code",
+              "lang": "js",
+              "meta": null,
+              "value": "const props = defineProps(['size'])\n\n// computed property that auto-updates when the prop changes\nconst normalizedSize = computed(() => props.size.trim().toLowerCase())",
+              "data": {}
+            },
+            {
+              "type": "html",
+              "value": "</div>\n<div class=\"options-api\">",
+              "data": {
+                "diffUnchanged": true
+              },
+              "children": []
+            },
+            {
+              "type": "code",
+              "lang": "js",
+              "meta": null,
+              "value": "export default {\n  props: ['size'],\n  computed: {\n    // computed property that auto-updates when the prop changes\n    normalizedSize() {\n      return this.size.trim().toLowerCase()\n    }\n  }\n}",
+              "data": {}
+            },
+            {
+              "type": "html",
+              "value": "</div>",
+              "data": {
+                "diffUnchanged": true
+              },
+              "children": []
+            }
+          ],
+          "data": {
+            "diffUnchanged": true
+          }
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Mutating Object / Array Props {#mutating-object-array-props}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "When objects and arrays are passed as props, while the child component cannot mutate the prop binding, it ",
+          "data": {}
+        },
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "will",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " be able to mutate the object or array's nested properties. This is because in JavaScript objects and arrays are passed by reference, and it is unreasonably expensive for Vue to prevent such mutations.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "The main drawback of such mutations is that it allows the child component to affect parent state in a way that isn't obvious to the parent component, potentially making it more difficult to reason about the data flow in the future. As a best practice, you should avoid such mutations unless the parent and child are tightly coupled by design. In most cases, the child should ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/guide/components/events",
+          "children": [
+            {
+              "type": "text",
+              "value": "emit an event",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " to let the parent perform the mutation.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Prop Validation {#prop-validation}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Components can specify requirements for their props, such as the types you've already seen. If a requirement is not met, Vue will warn you in the browser's JavaScript console. This is especially useful when developing a component that is intended to be used by others.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "To specify prop validations, you can provide an object with validation requirements to the ",
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "<span class=\"composition-api\">",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "inlineCode",
+          "value": "defineProps()",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "text",
+          "value": " macro",
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "</span>",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "html",
+          "value": "<span class=\"options-api\">",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "inlineCode",
+          "value": "props",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "text",
+          "value": " option",
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "</span>",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "text",
+          "value": ", instead of an array of strings. For example:",
+          "data": {}
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"composition-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "defineProps({\n  // Basic type check\n  //  (`null` and `undefined` values will allow any type)\n  propA: Number,\n  // Multiple possible types\n  propB: [String, Number],\n  // Required string\n  propC: {\n    type: String,\n    required: true\n  },\n  // Required but nullable string\n  propD: {\n    type: [String, null],\n    required: true\n  },\n  // Number with a default value\n  propE: {\n    type: Number,\n    default: 100\n  },\n  // Object with a default value\n  propF: {\n    type: Object,\n    // Object or array defaults must be returned from\n    // a factory function. The function receives the raw\n    // props received by the component as the argument.\n    default(rawProps) {\n      return { message: 'hello' }\n    }\n  },\n  // Custom validator function\n  // full props passed as 2nd argument in 3.4+\n  propG: {\n    validator(value, props) {\n      // The value must match one of these strings\n      return ['success', 'warning', 'danger'].includes(value)\n    }\n  },\n  // Function with a default value\n  propH: {\n    type: Function,\n    // Unlike object or array default, this is not a factory\n    // function - this is a function to serve as a default value\n    default() {\n      return 'Default function'\n    }\n  }\n})",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": ":::tip\nCode inside the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "defineProps()",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " argument ",
+          "data": {}
+        },
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "cannot access other variables declared in ",
+              "data": {}
+            },
+            {
+              "type": "inlineCode",
+              "value": "<script setup>",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", because the entire expression is moved to an outer function scope when compiled.\n:::",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"options-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "export default {\n  props: {\n    // Basic type check\n    //  (`null` and `undefined` values will allow any type)\n    propA: Number,\n    // Multiple possible types\n    propB: [String, Number],\n    // Required string\n    propC: {\n      type: String,\n      required: true\n    },\n    // Required but nullable string\n    propD: {\n      type: [String, null],\n      required: true\n    },\n    // Number with a default value\n    propE: {\n      type: Number,\n      default: 100\n    },\n    // Object with a default value\n    propF: {\n      type: Object,\n      // Object or array defaults must be returned from\n      // a factory function. The function receives the raw\n      // props received by the component as the argument.\n      default(rawProps) {\n        return { message: 'hello' }\n      }\n    },\n    // Custom validator function\n    // full props passed as 2nd argument in 3.4+\n    propG: {\n      validator(value, props) {\n        // The value must match one of these strings\n        return ['success', 'warning', 'danger'].includes(value)\n      }\n    },\n    // Function with a default value\n    propH: {\n      type: Function,\n      // Unlike object or array default, this is not a factory\n      // function - this is a function to serve as a default value\n      default() {\n        return 'Default function'\n      }\n    }\n  }\n}",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Additional details:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": true,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "All props are optional by default, unless ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "required: true",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " is specified.",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "An absent optional prop other than ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "Boolean",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " will have ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "undefined",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " value.",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "The ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "Boolean",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " absent props will be cast to ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "false",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ". You can change this by setting a ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "default",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " for it — i.e.: ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "default: undefined",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " to behave as a non-Boolean prop.",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "If a ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "default",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " value is specified, it will be used if the resolved prop value is ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "undefined",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " - this includes both when the prop is absent, or an explicit ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "undefined",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " value is passed.",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "When prop validation fails, Vue will produce a console warning (if using the development build).",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"composition-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "If using ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/api/sfc-script-setup#type-only-props-emit-declarations",
+          "children": [
+            {
+              "type": "text",
+              "value": "Type-based props declarations",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " ",
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "<sup class=\"vt-badge ts\" />",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "text",
+          "value": ", Vue will try its best to compile the type annotations into equivalent runtime prop declarations. For example, ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "defineProps<{ msg: string }>",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "text",
+          "value": " will be compiled into ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "{ msg: { type: String, required: true }}",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "text",
+          "value": ".",
+          "data": {}
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"options-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "::: tip Note\nNote that props are validated ",
+          "data": {}
+        },
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "before",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " a component instance is created, so instance properties (e.g. ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "data",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "computed",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", etc.) will not be available inside ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "default",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " or ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "validator",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " functions.\n:::",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Runtime Type Checks {#runtime-type-checks}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "The ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "type",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " can be one of the following native constructors:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "String",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "Number",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "Boolean",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "Array",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "Object",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "Date",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "Function",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "Symbol",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "Error",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "In addition, ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "type",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " can also be a custom class or constructor function and the assertion will be made with an ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "instanceof",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " check. For example, given the following class:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "class Person {\n  constructor(firstName, lastName) {\n    this.firstName = firstName\n    this.lastName = lastName\n  }\n}",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "You could use it as a prop's type:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"composition-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "defineProps({\n  author: Person\n})",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"options-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "export default {\n  props: {\n    author: Person\n  }\n}",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Vue will use ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "instanceof Person",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " to validate whether the value of the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "author",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " prop is indeed an instance of the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "Person",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " class.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Nullable Type {#nullable-type}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "If the type is required but nullable, you can use the array syntax that includes ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "null",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ":",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"composition-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "defineProps({\n  id: {\n    type: [String, null],\n    required: true\n  }\n})",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"options-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "export default {\n  props: {\n    id: {\n      type: [String, null],\n      required: true\n    }\n  }\n}",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Note that if ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "type",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " is just ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "null",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " without using the array syntax, it will allow any type.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Boolean Casting {#boolean-casting}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Props with ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "Boolean",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " type have special casting rules to mimic the behavior of native boolean attributes. Given a ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<MyComponent>",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " with the following declaration:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"composition-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "defineProps({\n  disabled: Boolean\n})",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"options-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "export default {\n  props: {\n    disabled: Boolean\n  }\n}",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "The component can be used like this:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<!-- equivalent of passing :disabled=\"true\" -->\n<MyComponent disabled />\n\n<!-- equivalent of passing :disabled=\"false\" -->\n<MyComponent />",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "When a prop is declared to allow multiple types, the casting rules for ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "Boolean",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " will also be applied. However, there is an edge when both ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "String",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " and ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "Boolean",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " are allowed - the Boolean casting rule only applies if Boolean appears before String:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"composition-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "// disabled will be casted to true\ndefineProps({\n  disabled: [Boolean, Number]\n})\n\n// disabled will be casted to true\ndefineProps({\n  disabled: [Boolean, String]\n})\n\n// disabled will be casted to true\ndefineProps({\n  disabled: [Number, Boolean]\n})\n\n// disabled will be parsed as an empty string (disabled=\"\")\ndefineProps({\n  disabled: [String, Boolean]\n})",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"options-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "// disabled will be casted to true\nexport default {\n  props: {\n    disabled: [Boolean, Number]\n  }\n}\n\n// disabled will be casted to true\nexport default {\n  props: {\n    disabled: [Boolean, String]\n  }\n}\n\n// disabled will be casted to true\nexport default {\n  props: {\n    disabled: [Number, Boolean]\n  }\n}\n\n// disabled will be parsed as an empty string (disabled=\"\")\nexport default {\n  props: {\n    disabled: [String, Boolean]\n  }\n}",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    }
+  ]
+}

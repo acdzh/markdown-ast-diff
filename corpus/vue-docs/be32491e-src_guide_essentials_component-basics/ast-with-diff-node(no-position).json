@@ -1,0 +1,3038 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "heading",
+      "depth": 1,
+      "children": [
+        {
+          "type": "text",
+          "value": "Components Basics {#components-basics}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<ScrimbaLink href=\"https://scrimba.com/links/vue-component-basics\" title=\"Free Vue.js Components Basics Lesson\" type=\"scrimba\">\n  Watch an interactive video lesson on Scrimba\n</ScrimbaLink>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Components allow us to split the UI into independent and reusable pieces, and think about each piece in isolation. It's common for an app to be organized into a tree of nested components:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "image",
+          "title": null,
+          "url": "./images/components.png",
+          "alt": "Diagram showing a component tree structure with a root component branching into multiple child and nested sub-child components",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<!-- https://www.figma.com/file/qa7WHDQRWuEZNRs7iZRZSI/components -->",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "This is very similar to how we nest native HTML elements, but Vue implements its own component model that allows us to encapsulate custom content and logic in each component. Vue also plays nicely with native Web Components. If you are curious about the relationship between Vue Components and native Web Components, ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/guide/extras/web-components",
+          "children": [
+            {
+              "type": "text",
+              "value": "read more here",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ".",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Defining a Component {#defining-a-component}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "When using a build step, we typically define each Vue component in a dedicated file using the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": ".vue",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " extension - known as a ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/guide/scaling-up/sfc",
+          "children": [
+            {
+              "type": "text",
+              "value": "Single-File Component",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " (SFC for short):",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"options-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "vue",
+      "meta": null,
+      "value": "<script>\nexport default {\n  data() {\n    return {\n      count: 0\n    }\n  }\n}\n</script>\n\n<template>\n  <button @click=\"count++\">You clicked me {{ count }} times.</button>\n</template>",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"composition-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "vue",
+      "meta": null,
+      "value": "<script setup>\nimport { ref } from 'vue'\n\nconst count = ref(0)\n</script>\n\n<template>\n  <button @click=\"count++\">You clicked me {{ count }} times.</button>\n</template>",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "When not using a build step, a Vue component can be defined as a plain JavaScript object containing Vue-specific options:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"options-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "export default {\n  data() {\n    return {\n      count: 0\n    }\n  },\n  template: `\n    <button @click=\"count++\">\n      You clicked me {{ count }} times.\n    </button>`\n}",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"composition-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "import { ref } from 'vue'\n\nexport default {\n  setup() {\n    const count = ref(0)\n    return { count }\n  },\n  template: `\n    <button @click=\"count++\">\n      You clicked me {{ count }} times.\n    </button>`\n  // Can also target an in-DOM template:\n  // template: '#my-template-element'\n}",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "The template is inlined as a JavaScript string here, which Vue will compile on the fly. You can also use an ID selector pointing to an element (usually native ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<template>",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " elements) - Vue will use its content as the template source.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "The example above defines a single component and exports it as the default export of a ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": ".js",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " file, but you can use named exports to export multiple components from the same file.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Using a Component {#using-a-component}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": ":::tip\nWe will be using SFC syntax for the rest of this guide - the concepts around components are the same regardless of whether you are using a build step or not. The ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/examples/",
+          "children": [
+            {
+              "type": "text",
+              "value": "Examples",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " section shows component usage in both scenarios.\n:::",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "To use a child component, we need to import it in the parent component. Assuming we placed our counter component inside a file called ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "ButtonCounter.vue",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", the component will be exposed as the file's default export:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"options-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "vue",
+      "meta": null,
+      "value": "<script>\nimport ButtonCounter from './ButtonCounter.vue'\n\nexport default {\n  components: {\n    ButtonCounter\n  }\n}\n</script>\n\n<template>\n  <h1>Here is a child component!</h1>\n  <ButtonCounter />\n</template>",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "To expose the imported component to our template, we need to ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/guide/components/registration",
+          "children": [
+            {
+              "type": "text",
+              "value": "register",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " it with the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "components",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " option. The component will then be available as a tag using the key it is registered under.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"composition-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "vue",
+      "meta": null,
+      "value": "<script setup>\nimport ButtonCounter from './ButtonCounter.vue'\n</script>\n\n<template>\n  <h1>Here is a child component!</h1>\n  <ButtonCounter />\n</template>",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "With ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<script setup>",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", imported components are automatically made available to the template.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "It's also possible to globally register a component, making it available to all components in a given app without having to import it. The pros and cons of global vs. local registration is discussed in the dedicated ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/guide/components/registration",
+          "children": [
+            {
+              "type": "text",
+              "value": "Component Registration",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " section.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Components can be reused as many times as you want:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<h1>Here are many child components!</h1>\n<ButtonCounter />\n<ButtonCounter />\n<ButtonCounter />",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"options-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://play.vuejs.org/#eNqVUE1LxDAQ/StjLqusNHotcfHj4l8QcontLBtsJiGdiFL6301SdrEqyEJyeG9m3ps3k3gIoXlPKFqhxi7awDtN1gUfGR4Ts6cnn4gxwj56B5tGrtgyutEEoAk/6lCPe5MGhqmwnc9KhMRjuxCwFi3UrCk/JU/uGTC6MBjGglgdbnfPGBFM/s7QJ3QHO/TfxC+UzD21d72zPItU8uQrrsWvnKsT/ZW2N2wur45BI3KKdETlFlmphZsF58j/RgdQr3UJuO8G273daVFFtlstahngxSeoNezBIUzTYgPzDGwdjk1VkYvMj4jzF0nwsyQ=",
+          "children": [
+            {
+              "type": "text",
+              "value": "Try it in the Playground",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"composition-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://play.vuejs.org/#eNqVj91KAzEQhV/lmJsqlY3eSlr8ufEVhNys6ZQGNz8kE0GWfXez2SJUsdCLuZiZM9+ZM4qnGLvPQuJBqGySjYxMXOJWe+tiSIznwhz8SyieKWGfgsOqkyfTGbDSXsmFUG9rw+Ti0DPNHavD/faVEqGv5Xr/BXOwww4mVBNPnvOVklXTtKeO8qKhkj++4lb8+fL/mCMS7TEdAy6BtDfBZ65fVgA2s+L67uZMUEC9N0s8msGaj40W7Xa91qKtgbdQ0Ha0gyOM45E+TWDrKHeNIhfMr0DTN4U0me8=",
+          "children": [
+            {
+              "type": "text",
+              "value": "Try it in the Playground",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Notice that when clicking on the buttons, each one maintains its own, separate ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "count",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ". That's because each time you use a component, a new ",
+          "data": {}
+        },
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "instance",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " of it is created.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "In SFCs, it's recommended to use ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "PascalCase",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " tag names for child components to differentiate from native HTML elements. Although native HTML tag names are case-insensitive, Vue SFC is a compiled format so we are able to use case-sensitive tag names in it. We are also able to use ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "/>",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " to close a tag.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "If you are authoring your templates directly in a DOM (e.g. as the content of a native ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<template>",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " element), the template will be subject to the browser's native HTML parsing behavior. In such cases, you will need to use ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "kebab-case",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " and explicit closing tags for components:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<!-- if this template is written in the DOM -->\n<button-counter></button-counter>\n<button-counter></button-counter>\n<button-counter></button-counter>",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "See ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "#in-dom-template-parsing-caveats",
+          "children": [
+            {
+              "type": "text",
+              "value": "in-DOM template parsing caveats",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " for more details.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Passing Props {#passing-props}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "If we are building a blog, we will likely need a component representing a blog post. We want all the blog posts to share the same visual layout, but with different content. Such a component won't be useful unless you can pass data to it, such as the title and content of the specific post we want to display. That's where props come in.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Props are custom attributes you can register on a component. To pass a title to our blog post component, we must declare it in the list of props this component accepts, using the ",
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "<span class=\"options-api\">",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/api/options-state#props",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "props",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " option",
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "</span>",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "html",
+          "value": "<span class=\"composition-api\">",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/api/sfc-script-setup#defineprops-defineemits",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "defineProps",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " macro",
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "</span>",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "text",
+          "value": ":",
+          "data": {}
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"options-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "vue",
+      "meta": "[BlogPost.vue]",
+      "value": "<script>\nexport default {\n  props: ['title']\n}\n</script>\n\n<template>\n  <h4>{{ title }}</h4>\n</template>",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "When a value is passed to a prop attribute, it becomes a property on that component instance. The value of that property is accessible within the template and on the component's ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "this",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " context, just like any other component property.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"composition-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "vue",
+      "meta": "[BlogPost.vue]",
+      "value": "<script setup>\ndefineProps(['title'])\n</script>\n\n<template>\n  <h4>{{ title }}</h4>\n</template>",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "inlineCode",
+          "value": "defineProps",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " is a compile-time macro that is only available inside ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<script setup>",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " and does not need to be explicitly imported. Declared props are automatically exposed to the template. ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "defineProps",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " also returns an object that contains all the props passed to the component, so that we can access them in JavaScript if needed:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "const props = defineProps(['title'])\nconsole.log(props.title)",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "See also: ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/guide/typescript/composition-api#typing-component-props",
+          "children": [
+            {
+              "type": "text",
+              "value": "Typing Component Props",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " ",
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "<sup class=\"vt-badge ts\" />",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "If you are not using ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<script setup>",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", props should be declared using the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "props",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " option, and the props object will be passed to ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "setup()",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " as the first argument:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "export default {\n  props: ['title'],\n  setup(props) {\n    console.log(props.title)\n  }\n}",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "A component can have as many props as you like and, by default, any value can be passed to any prop.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Once a prop is registered, you can pass data to it as a custom attribute, like this:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<BlogPost title=\"My journey with Vue\" />\n<BlogPost title=\"Blogging with Vue\" />\n<BlogPost title=\"Why Vue is so fun\" />",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "In a typical app, however, you'll likely have an array of posts in your parent component:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"options-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "export default {\n  // ...\n  data() {\n    return {\n      posts: [\n        { id: 1, title: 'My journey with Vue' },\n        { id: 2, title: 'Blogging with Vue' },\n        { id: 3, title: 'Why Vue is so fun' }\n      ]\n    }\n  }\n}",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"composition-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "const posts = ref([\n  { id: 1, title: 'My journey with Vue' },\n  { id: 2, title: 'Blogging with Vue' },\n  { id: 3, title: 'Why Vue is so fun' }\n])",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Then want to render a component for each one, using ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "v-for",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ":",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<BlogPost\n  v-for=\"post in posts\"\n  :key=\"post.id\"\n  :title=\"post.title\"\n />",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"options-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://play.vuejs.org/#eNp9UU1rhDAU/CtDLrawVfpxklRo74We2kPtQdaoaTUJ8bmtiP+9ia6uC2VBgjOZeXnz3sCejAkPnWAx4+3eSkNJqmRjtCU817p81S2hsLpBEEYL4Q1BqoBUid9Jmosi62rC4Nm9dn4lFLXxTGAt5dG482eeUXZ1vdxbQZ1VCwKM0zr3x4KBATKPcbsDSapFjOClx5d2JtHjR1KFN9fTsfbWcXdy+CZKqcqL+vuT/r3qvQqyRatRdMrpF/nn/DNhd7iPR+v8HCDRmDoj4RHxbfyUDjeFto8p8yEh1Rw2ZV4JxN+iP96FMvest8RTTws/gdmQ8HUr7ikere+yHduu62y//y3NWG38xIOpeODyXcoE8OohGYZ5VhhHHjl83sD4B3XgyGI=",
+          "children": [
+            {
+              "type": "text",
+              "value": "Try it in the Playground",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"composition-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://play.vuejs.org/#eNp9kU9PhDAUxL/KpBfWBCH+OZEuid5N9qSHrQezFKhC27RlDSF8d1tYQBP1+N78OpN5HciD1sm54yQj1J6M0A6Wu07nTIpWK+MwwPASI0qjWkQejVbpsVHVQVl30ZJ0WQRHjwFMnpT0gPZLi32w2h2DMEAUGW5iOOEaniF66vGuOiN5j0/hajx7B4zxxt5ubIiphKz+IO828qXugw5hYRXKTnqSydcrJmk61/VF/eB4q5s3x8Pk6FJjauDO16Uye0ZCBwg5d2EkkED2wfuLlogibMOTbMpf9tMwP8jpeiMfRdM1l8Tk+/F++Y6Cl0Lyg1Ha7o7R5Bn9WwSg9X0+DPMxMI409fPP1PELlVmwdQ==",
+          "children": [
+            {
+              "type": "text",
+              "value": "Try it in the Playground",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Notice how ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/api/built-in-directives#v-bind",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "v-bind",
+              "data": {}
+            },
+            {
+              "type": "text",
+              "value": " syntax",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " (",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": ":title=\"post.title\"",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ") is used to pass dynamic prop values. This is especially useful when you don't know the exact content you're going to render ahead of time.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "That's all you need to know about props for now, but once you've finished reading this page and feel comfortable with its content, we recommend coming back later to read the full guide on ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/guide/components/props",
+          "children": [
+            {
+              "type": "text",
+              "value": "Props",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ".",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Listening to Events {#listening-to-events}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "As we develop our ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<BlogPost>",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " component, some features may require communicating back up to the parent. For example, we may decide to include an accessibility feature to enlarge the text of blog posts, while leaving the rest of the page at its default size.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "In the parent, we can support this feature by adding a ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "postFontSize",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "text",
+          "value": " ",
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "<span class=\"options-api\">",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "text",
+          "value": "data property",
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "</span>",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "html",
+          "value": "<span class=\"composition-api\">",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "text",
+          "value": "ref",
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "</span>",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "text",
+          "value": ":",
+          "data": {}
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"options-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js{6}",
+      "meta": null,
+      "value": "data() {\n  return {\n    posts: [\n      /* ... */\n    ],\n    postFontSize: 1\n  }\n}",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"composition-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js{5}",
+      "meta": null,
+      "value": "const posts = ref([\n  /* ... */\n])\n\nconst postFontSize = ref(1)",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Which can be used in the template to control the font size of all blog posts:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html{1,7}",
+      "meta": null,
+      "value": "<div :style=\"{ fontSize: postFontSize + 'em' }\">\n  <BlogPost\n    v-for=\"post in posts\"\n    :key=\"post.id\"\n    :title=\"post.title\"\n   />\n</div>",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Now let's add a button to the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<BlogPost>",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " component's template:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue{5}",
+      "meta": "[BlogPost.vue]",
+      "value": "<!-- omitting <script> -->\n<template>\n  <div class=\"blog-post\">\n    <h4>{{ title }}</h4>\n    <button>Enlarge text</button>\n  </div>\n</template>",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "The button doesn't do anything yet - we want clicking the button to communicate to the parent that it should enlarge the text of all posts. To solve this problem, components provide a custom events system. The parent can choose to listen to any event on the child component instance with ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "v-on",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " or ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "@",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", just as we would with a native DOM event:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html{3}",
+      "meta": null,
+      "value": "<BlogPost\n  ...\n  @enlarge-text=\"postFontSize += 0.1\"\n />",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Then the child component can emit an event on itself by calling the built-in ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/api/component-instance#emit",
+          "children": [
+            {
+              "type": "strong",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "$emit",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "text",
+              "value": " method",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", passing the name of the event:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue{5}",
+      "meta": "[BlogPost.vue]",
+      "value": "<!-- omitting <script> -->\n<template>\n  <div class=\"blog-post\">\n    <h4>{{ title }}</h4>\n    <button @click=\"$emit('enlarge-text')\">Enlarge text</button>\n  </div>\n</template>",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Thanks to the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "@enlarge-text=\"postFontSize += 0.1\"",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " listener, the parent will receive the event and update the value of ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "postFontSize",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ".",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"options-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://play.vuejs.org/#eNqNUsFOg0AQ/ZUJMaGNbbHqidCmmujNxMRED9IDhYWuhV0CQy0S/t1ZYIEmaiRkw8y8N/vmMZVxl6aLY8EM23ByP+Mprl3Bk1RmCPexjJ5ljhBmMgFzYemEIpiuAHAFOzXQgIVeESNUKutL4gsmMLfbBPStVFTP1Bl46E2mup4xLDKhI4CUsMR+1zFABTywYTkD5BgzG8ynEj4kkVgJnxz38Eqaut5jxvXAUCIiLqI/8TcD/m1fKhTwHHIJYSEIr+HbnqikPkqBL/yLSMs23eDooNexel8pQJaksYeMIgAn4EewcyxjtnKNCsK+zbgpXILJEnW30bCIN7ZTPcd5KDNqoWjARWufa+iyfWBlV13wYJRvJtWVJhiKGyZiL4vYHNkJO8wgaQVXi6UGr51+Ndq5LBqMvhyrH9eYGePtOVu3n3YozWSqFsBsVJmt3SzhzVaYY2nm9l82+7GX5zTGjlTM1SyNmy5SeX+7rqr2r0NdOxbFXWVXIEoBGz/m/oHIF0rB5Pz6KTV6aBOgEo7Vsn51ov4GgAAf2A==",
+          "children": [
+            {
+              "type": "text",
+              "value": "Try it in the Playground",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"composition-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://play.vuejs.org/#eNp1Uk1PwkAQ/SuTxqQYgYp6ahaiJngzITHRA/UAZQor7W7TnaK16X93th8UEuHEvPdm5s3bls5Tmo4POTq+I0yYyZTAIOXpLFAySXVGUEKGEVQQZToBl6XukXqO9XahDbXc2OsAO5FlAIEKtWJByqCBqR01WFqiBLnxYTIEkhSjD+5rAV86zxQW8C1pB+88Aaphr73rtXbNVqrtBeV9r/zYFZYHacBoiHLFykB9Xgfq1NmLVvQmf7E1OGFaeE0anAMXhEkarwhtRWIjD+AbKmKcBk4JUdvtn8+6ARcTu87hLuCf6NJpSoDDKNIZj7BtIFUTUuB0tL/HomXHcnOC18d1TF305COqeJVtcUT4Q62mtzSF2/GkE8/E8b1qh8Ljw/if8I7nOkPn9En/+Ug2GEmFi0ynZrB0azOujbfB54kki5+aqumL8bING28Yr4xh+2vePrI39CnuHmZl2TwwVJXwuG6ZdU6kFTyGsQz33HyFvH5wvvyaB80bACwgvKbrYgLVH979DQc=",
+          "children": [
+            {
+              "type": "text",
+              "value": "Try it in the Playground",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "We can optionally declare emitted events using the ",
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "<span class=\"options-api\">",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/api/options-state#emits",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "emits",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " option",
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "</span>",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "html",
+          "value": "<span class=\"composition-api\">",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/api/sfc-script-setup#defineprops-defineemits",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "defineEmits",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " macro",
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "</span>",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "text",
+          "value": ":",
+          "data": {}
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"options-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "vue{4}",
+      "meta": "[BlogPost.vue]",
+      "value": "<script>\nexport default {\n  props: ['title'],\n  emits: ['enlarge-text']\n}\n</script>",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"composition-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "vue{3}",
+      "meta": "[BlogPost.vue]",
+      "value": "<script setup>\ndefineProps(['title'])\ndefineEmits(['enlarge-text'])\n</script>",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "This documents all the events that a component emits and optionally ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/guide/components/events#events-validation",
+          "children": [
+            {
+              "type": "text",
+              "value": "validates them",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ". It also allows Vue to avoid implicitly applying them as native listeners to the child component's root element.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"composition-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Similar to ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "defineProps",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "defineEmits",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " is only usable in ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<script setup>",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " and doesn't need to be imported. It returns an ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "emit",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " function that is equivalent to the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "$emit",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " method. It can be used to emit events in the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<script setup>",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " section of a component, where ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "$emit",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " isn't directly accessible:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue",
+      "meta": null,
+      "value": "<script setup>\nconst emit = defineEmits(['enlarge-text'])\n\nemit('enlarge-text')\n</script>",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "See also: ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/guide/typescript/composition-api#typing-component-emits",
+          "children": [
+            {
+              "type": "text",
+              "value": "Typing Component Emits",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " ",
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "<sup class=\"vt-badge ts\" />",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "If you are not using ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<script setup>",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", you can declare emitted events using the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "emits",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " option. You can access the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "emit",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " function as a property of the setup context (passed to ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "setup()",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " as the second argument):",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "export default {\n  emits: ['enlarge-text'],\n  setup(props, ctx) {\n    ctx.emit('enlarge-text')\n  }\n}",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "That's all you need to know about custom component events for now, but once you've finished reading this page and feel comfortable with its content, we recommend coming back later to read the full guide on ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/guide/components/events",
+          "children": [
+            {
+              "type": "text",
+              "value": "Custom Events",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ".",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Content Distribution with Slots {#content-distribution-with-slots}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Just like with HTML elements, it's often useful to be able to pass content to a component, like this:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<AlertBox>\n  Something bad happened.\n</AlertBox>",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Which might render something like:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": ":::danger This is an Error for Demo Purposes\nSomething bad happened.\n:::",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "This can be achieved using Vue's custom ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<slot>",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " element:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue{4}",
+      "meta": "[AlertBox.vue]",
+      "value": "<template>\n  <div class=\"alert-box\">\n    <strong>This is an Error for Demo Purposes</strong>\n    <slot />\n  </div>\n</template>\n\n<style scoped>\n.alert-box {\n  /* ... */\n}\n</style>",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "As you'll see above, we use the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<slot>",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " as a placeholder where we want the content to go – and that's it. We're done!",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"options-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://play.vuejs.org/#eNpVUcFOwzAM/RUTDruwFhCaUCmThsQXcO0lbbKtIo0jx52Kpv07TreWouTynl+en52z2oWQnXqrClXGhtrA28q3XUBi2DlL/IED7Ak7WGX5RKQHq8oDVN4Oo9TYve4dwzmxDcp7bz3HAs5/LpfKyy3zuY0Atl1wmm1CXE5SQeLNX9hZPrb+ALU2cNQhWG9NNkrnLKIt89lGPahlyDTVogVAadoTNE7H+F4pnZTrGodKjUUpRyb0h+0nEdKdRL3CW7GmfNY5ZLiiMhfP/ynG0SL/OAuxwWCNMNncbVqSQyrgfrPZvCVcIxkrxFMYIKJrDZA1i8qatGl72ehLGEY6aGNkNwU8P96YWjffB8Lem/Xkvn9NR6qy+fRd14FSgopvmtQmzTT9Toq9VZdfIpa5jQ==",
+          "children": [
+            {
+              "type": "text",
+              "value": "Try it in the Playground",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"composition-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://play.vuejs.org/#eNpVUEtOwzAQvcpgFt3QBBCqUAiRisQJ2GbjxG4a4Xis8aQKqnp37PyUyqv3mZn3fBVH55JLr0Umcl9T6xi85t4VpW07h8RwNJr4Cwc4EXawS9KFiGO70ubpNBcmAmDdOSNZR8T5Yg0IoOQf7DSfW9tAJRWcpXPaapWM1nVt8ObpukY8ie29GHNzAiBX7QVqI73/LIWMzn2FQylGMcieCW1TfBMhPYSoE5zFitLVZ5BhQnkadt6nGKt5/jMafI1Oq8Ak6zW4xrEaDVIGj4fD4SPiCknpQLy4ATyaVgFptVH2JFXb+wze3DDSTioV/iaD1+eZqWT92xD2Vu2X7af3+IJ6G7/UToVigpJnTzwTO42eWDnELsTtH/wUqH4=",
+          "children": [
+            {
+              "type": "text",
+              "value": "Try it in the Playground",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "That's all you need to know about slots for now, but once you've finished reading this page and feel comfortable with its content, we recommend coming back later to read the full guide on ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/guide/components/slots",
+          "children": [
+            {
+              "type": "text",
+              "value": "Slots",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ".",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Dynamic Components {#dynamic-components}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Sometimes, it's useful to dynamically switch between components, like in a tabbed interface:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"options-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://play.vuejs.org/#eNqNVE2PmzAQ/Ssj9kArLSHbrXpwk1X31mMPvS17cIxJrICNbJMmivLfO/7AEG2jRiDkefP85sNmztlr3y8OA89ItjJMi96+VFJ0vdIWfqqOQ6NVB/midIYj5sn9Sxlrkt9b14RXzXbiMElEO5IAKsmPnljzhg6thbNDmcLdkktrSADAJ/IYlj5MXEc9Z1w8VFNLP30ed2luBy1HC4UHrVH2N90QyJ1kHnUALN1gtLeIQu6juEUMkb8H5sXHqiS+qzK1Cw3Lu76llqMFsKrFAVhLjVlXWc07VWUeR89msFbhhhAWDkWjNJIwPgjp06iy5CV7fgrOOTgKv+XoKIIgpnoGyiymSmZ1wnq9dqJweZ8p/GCtYHtUmBMdLXFitgDnc9ju68b0yxDO1WzRTEcFRLiUJsEqSw3wwi+rMpFDj0psEq5W5ax1aBp7at1y4foWzq5R0hYN7UR7ImCoNIXhWjTfnW+jdM01gaf+CEa1ooYHzvnMVWhaiwEP90t/9HBP61rILQJL3POMHw93VG+FLKzqUYx3c2yjsOaOwNeRO2B8zKHlzBKQWJNH1YHrplV/iiMBOliFILYNK5mOKdSTMviGCTyNojFdTKBoeWNT3s8f/Vpsd7cIV61gjHkXnotR6OqVkJbrQKdsv9VqkDWBh2bpnn8VXaDcHPexE4wFzsojO9eDUOSVPF+65wN/EW7sHRsi5XaFqaexn+EH9Xcpe8zG2eWG3O0/NVzUaeJMk+jGhUXlNPXulw5j8w7t2bi8X32cuf/Vv/wF/SL98A==",
+          "children": [
+            {
+              "type": "text",
+              "value": "Open example in the Playground",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"composition-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://play.vuejs.org/#eNqNVMGOmzAQ/ZURe2BXCiHbrXpwk1X31mMPvS1V5RiTWAEb2SZNhPLvHdvggLZRE6TIM/P8/N5gpk/e2nZ57HhCkrVhWrQWDLdd+1pI0bRKW/iuGg6VVg2ky9wFDp7G8g9lrIl1H80Bb5rtxfFKMcRzUA+aV3AZQKEEhWRKGgus05pL+5NuYeNwj6mTkT4VckRYujVY63GT17twC6/Fr4YjC3kp5DoPNtEgBpY3bU0txwhgXYojsJoasymSkjeqSHweK9vOWoUbXIC/Y1YpjaDH3wt39hMI6TUUSYSQAz8jArPT5Mj+nmIhC6zpAu1TZlEhmXndbBwpXH5NGL6xWrADMsyaMj1lkAzQ92E7mvYe8nCcM24xZApbL5ECiHCSnP73KyseGnvh6V/XedwS2pVjv3C1ziddxNDYc+2WS9fC8E4qJW1W0UbUZwKGSpMZrkX11dW2SpdcE3huT2BULUp44JxPSpmmpegMgU/tyadbWpZC7jCxwj0v+OfTDdU7ITOrWiTjzTS3Vei8IfB5xHZ4PmqoObMEJHryWXXkuqrVn+xEgHZWYRKbh06uLyv4iQq+oIDnkXSQiwKymlc26n75WNdit78FmLWCMeZL+GKMwlKrhLRcBzhlh51WnSwJPFQr9/zLdIZ007w/O6bR4MQe2bseBJMzer5yzwf8MtzbOzYMkNsOY0+HfoZv1d+lZJGMg8fNqdsfbbio4b77uRVv7I0Li8xxZN1PHWbeHdyTWXc/+zgw/8t/+QsROe9h",
+          "children": [
+            {
+              "type": "text",
+              "value": "Open example in the Playground",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "The above is made possible by Vue's ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<component>",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " element with the special ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "is",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " attribute:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"options-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<!-- Component changes when currentTab changes -->\n<component :is=\"currentTab\"></component>",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"composition-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<!-- Component changes when currentTab changes -->\n<component :is=\"tabs[currentTab]\"></component>",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "In the example above, the value passed to ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": ":is",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " can contain either:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "the name string of a registered component, OR",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "the actual imported component object",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "You can also use the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "is",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " attribute to create regular HTML elements.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "When switching between multiple components with ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<component :is=\"...\">",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", a component will be unmounted when it is switched away from. We can force the inactive components to stay \"alive\" with the built-in ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/guide/built-ins/keep-alive",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "<KeepAlive>",
+              "data": {}
+            },
+            {
+              "type": "text",
+              "value": " component",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ".",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "in-DOM Template Parsing Caveats {#in-dom-template-parsing-caveats}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "If you are writing your Vue templates directly in the DOM, Vue will have to retrieve the template string from the DOM. This leads to some caveats due to browsers' native HTML parsing behavior.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": ":::tip\nIt should be noted that the limitations discussed below only apply if you are writing your templates directly in the DOM. They do NOT apply if you are using string templates from the following sources:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Single-File Components",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Inlined template strings (e.g. ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "template: '...'",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ")",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "<script type=\"text/x-template\">",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": "\n:::",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Case Insensitivity {#case-insensitivity}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "HTML tags and attribute names are case-insensitive, so browsers will interpret any uppercase characters as lowercase. That means when you’re using in-DOM templates, PascalCase component names and camelCased prop names or ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "v-on",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " event names all need to use their kebab-cased (hyphen-delimited) equivalents:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "// camelCase in JavaScript\nconst BlogPost = {\n  props: ['postTitle'],\n  emits: ['updatePost'],\n  template: `\n    <h3>{{ postTitle }}</h3>\n  `\n}",
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<!-- kebab-case in HTML -->\n<blog-post post-title=\"hello!\" @update-post=\"onUpdatePost\"></blog-post>",
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Self Closing Tags {#self-closing-tags}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "We have been using self-closing tags for components in previous code samples:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<MyComponent />",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "This is because Vue's template parser respects ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "/>",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " as an indication to end any tag, regardless of its type.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "In in-DOM templates, however, we must always include explicit closing tags:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<my-component></my-component>",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "This is because the HTML spec only allows ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://html.spec.whatwg.org/multipage/syntax.html#void-elements",
+          "children": [
+            {
+              "type": "text",
+              "value": "a few specific elements",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " to omit closing tags, the most common being ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<input>",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " and ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<img>",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ". For all other elements, if you omit the closing tag, the native HTML parser will think you never terminated the opening tag. For example, the following snippet:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<my-component /> <!-- we intend to close the tag here... -->\n<span>hello</span>",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "will be parsed as:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<my-component>\n  <span>hello</span>\n</my-component> <!-- but the browser will close it here. -->",
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Element Placement Restrictions {#element-placement-restrictions}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Some HTML elements, such as ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<ul>",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<ol>",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<table>",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " and ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<select>",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " have restrictions on what elements can appear inside them, and some elements such as ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<li>",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<tr>",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", and ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<option>",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " can only appear inside certain other elements.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "This will lead to issues when using components with elements that have such restrictions. For example:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<table>\n  <blog-post-row></blog-post-row>\n</table>",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "The custom component ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "<blog-post-row>",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " will be hoisted out as invalid content, causing errors in the eventual rendered output. We can use the special ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/api/built-in-special-attributes#is",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "is",
+              "data": {}
+            },
+            {
+              "type": "text",
+              "value": " attribute",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " as a workaround:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "vue-html",
+      "meta": null,
+      "value": "<table>\n  <tr is=\"vue:blog-post-row\"></tr>\n</table>",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": ":::tip\nWhen used on native HTML elements, the value of ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "is",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " must be prefixed with ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "vue:",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " in order to be interpreted as a Vue component. This is required to avoid confusion with native ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://html.spec.whatwg.org/multipage/custom-elements.html#custom-elements-customized-builtin-example",
+          "children": [
+            {
+              "type": "text",
+              "value": "customized built-in elements",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ".\n:::",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "del",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "That's all you need to know about in-DOM template parsing caveats for now - and actually, the end of Vue's ",
+              "data": {}
+            },
+            {
+              "type": "emphasis",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Essentials",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "text",
+              "value": ". Congratulations! There's still more to learn, but first, we recommend taking a break to play with Vue yourself - build something fun, or check out some of the ",
+              "data": {}
+            },
+            {
+              "type": "link",
+              "title": null,
+              "url": "/examples/",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Examples",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "text",
+              "value": " if you haven't already.",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "inlineDel",
+          "children": [
+            {
+              "type": "text",
+              "value": "Once you feel comfortable with the knowledge you've just digested, move on with the guide to learn more about components in depth.",
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "inlineIns",
+          "children": [
+            {
+              "type": "text",
+              "value": "That's all you need to know about in-DOM template parsing caveats for now.",
+              "data": {}
+            }
+          ]
+        }
+      ],
+      "data": {}
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "heading",
+      "depth": 1,
+      "children": [
+        {
+          "type": "text",
+          "value": "旅行攻略",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 7,
+          "offset": 6
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "成都",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 3,
+          "column": 1,
+          "offset": 8
+        },
+        "end": {
+          "line": 3,
+          "column": 6,
+          "offset": 13
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "先吃一顿火锅，再去人民公园喝盖碗茶。",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 5,
+          "column": 1,
+          "offset": 15
+        },
+        "end": {
+          "line": 5,
+          "column": 19,
+          "offset": 33
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 2,
+          "children": [
+            {
+              "type": "text",
+              "value": "大理",
+              "position": {
+                "start": {
+                  "line": 7,
+                  "column": 4,
+                  "offset": 38
+                },
+                "end": {
+                  "line": 7,
+                  "column": 6,
+                  "offset": 40
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 7,
+              "column": 1,
+              "offset": 35
+            },
+            "end": {
+              "line": 7,
+              "column": 6,
+              "offset": 40
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "租一辆小电驴，沿着洱海环湖骑行。",
+              "position": {
+                "start": {
+                  "line": 9,
+                  "column": 1,
+                  "offset": 42
+                },
+                "end": {
+                  "line": 9,
+                  "column": 17,
+                  "offset": 58
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 9,
+              "column": 1,
+              "offset": 42
+            },
+            "end": {
+              "line": 9,
+              "column": 17,
+              "offset": 58
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "厦门",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 11,
+          "column": 1,
+          "offset": 60
+        },
+        "end": {
+          "line": 11,
+          "column": 6,
+          "offset": 65
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "鼓浪屿的小巷子才是精华所在。",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 13,
+          "column": 1,
+          "offset": 67
+        },
+        "end": {
+          "line": 13,
+          "column": 15,
+          "offset": 81
+        }
+      },
+      "data": {}
+    }
+  ]
+}

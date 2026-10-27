@@ -1,0 +1,2782 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "del",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 1,
+          "children": [
+            {
+              "type": "text",
+              "value": "表格示例",
+              "position": {
+                "start": {
+                  "line": 1,
+                  "column": 3,
+                  "offset": 2
+                },
+                "end": {
+                  "line": 1,
+                  "column": 7,
+                  "offset": 6
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 7,
+              "offset": 6
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 1,
+          "children": [
+            {
+              "type": "text",
+              "value": "表格示例（更新版）",
+              "position": {
+                "start": {
+                  "line": 1,
+                  "column": 3,
+                  "offset": 2
+                },
+                "end": {
+                  "line": 1,
+                  "column": 12,
+                  "offset": 11
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 12,
+              "offset": 11
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "简单表格",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 3,
+          "column": 1,
+          "offset": 13
+        },
+        "end": {
+          "line": 3,
+          "column": 8,
+          "offset": 20
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "table",
+      "align": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "children": [
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "姓名",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 5,
+                  "column": 1,
+                  "offset": 22
+                },
+                "end": {
+                  "line": 5,
+                  "column": 6,
+                  "offset": 27
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "年龄",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 5,
+                  "column": 6,
+                  "offset": 27
+                },
+                "end": {
+                  "line": 5,
+                  "column": 11,
+                  "offset": 32
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "职业",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 5,
+                  "column": 11,
+                  "offset": 32
+                },
+                "end": {
+                  "line": 5,
+                  "column": 16,
+                  "offset": 37
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "ins",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "部门",
+                      "position": {
+                        "start": {
+                          "line": 5,
+                          "column": 18,
+                          "offset": 39
+                        },
+                        "end": {
+                          "line": 5,
+                          "column": 20,
+                          "offset": 41
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 5,
+                      "column": 16,
+                      "offset": 37
+                    },
+                    "end": {
+                      "line": 5,
+                      "column": 22,
+                      "offset": 43
+                    }
+                  },
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 5,
+              "column": 1,
+              "offset": 22
+            },
+            "end": {
+              "line": 5,
+              "column": 22,
+              "offset": 43
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "张三",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 7,
+                  "column": 1,
+                  "offset": 74
+                },
+                "end": {
+                  "line": 7,
+                  "column": 6,
+                  "offset": 79
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "inlineDel",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "25",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "inlineIns",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "26",
+                      "data": {}
+                    }
+                  ]
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 7,
+                  "column": 6,
+                  "offset": 79
+                },
+                "end": {
+                  "line": 7,
+                  "column": 11,
+                  "offset": 84
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "inlineIns",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "高级",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "工程师",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 7,
+                  "column": 11,
+                  "offset": 84
+                },
+                "end": {
+                  "line": 7,
+                  "column": 19,
+                  "offset": 92
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "ins",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "研发部",
+                      "position": {
+                        "start": {
+                          "line": 7,
+                          "column": 21,
+                          "offset": 94
+                        },
+                        "end": {
+                          "line": 7,
+                          "column": 24,
+                          "offset": 97
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 7,
+                      "column": 19,
+                      "offset": 92
+                    },
+                    "end": {
+                      "line": 7,
+                      "column": 26,
+                      "offset": 99
+                    }
+                  },
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 7,
+              "column": 1,
+              "offset": 74
+            },
+            "end": {
+              "line": 7,
+              "column": 26,
+              "offset": 99
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "李四",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 8,
+                  "column": 1,
+                  "offset": 100
+                },
+                "end": {
+                  "line": 8,
+                  "column": 6,
+                  "offset": 105
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "30",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 8,
+                  "column": 6,
+                  "offset": 105
+                },
+                "end": {
+                  "line": 8,
+                  "column": 11,
+                  "offset": 110
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "设计师",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 8,
+                  "column": 11,
+                  "offset": 110
+                },
+                "end": {
+                  "line": 8,
+                  "column": 17,
+                  "offset": 116
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "ins",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "设计部",
+                      "position": {
+                        "start": {
+                          "line": 8,
+                          "column": 19,
+                          "offset": 118
+                        },
+                        "end": {
+                          "line": 8,
+                          "column": 22,
+                          "offset": 121
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 8,
+                      "column": 17,
+                      "offset": 116
+                    },
+                    "end": {
+                      "line": 8,
+                      "column": 24,
+                      "offset": 123
+                    }
+                  },
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 8,
+              "column": 1,
+              "offset": 100
+            },
+            "end": {
+              "line": 8,
+              "column": 24,
+              "offset": 123
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "inlineDel",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "王五",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "inlineIns",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "赵六",
+                      "data": {}
+                    }
+                  ]
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 9,
+                  "column": 1,
+                  "offset": 124
+                },
+                "end": {
+                  "line": 9,
+                  "column": 6,
+                  "offset": 129
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "inlineDel",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "28",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "inlineIns",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "32",
+                      "data": {}
+                    }
+                  ]
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 9,
+                  "column": 6,
+                  "offset": 129
+                },
+                "end": {
+                  "line": 9,
+                  "column": 11,
+                  "offset": 134
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "产品",
+                  "data": {}
+                },
+                {
+                  "type": "inlineDel",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "经理",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "inlineIns",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "总监",
+                      "data": {}
+                    }
+                  ]
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 9,
+                  "column": 11,
+                  "offset": 134
+                },
+                "end": {
+                  "line": 9,
+                  "column": 18,
+                  "offset": 141
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "ins",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "产品部",
+                      "position": {
+                        "start": {
+                          "line": 9,
+                          "column": 20,
+                          "offset": 143
+                        },
+                        "end": {
+                          "line": 9,
+                          "column": 23,
+                          "offset": 146
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 9,
+                      "column": 18,
+                      "offset": 141
+                    },
+                    "end": {
+                      "line": 9,
+                      "column": 25,
+                      "offset": 148
+                    }
+                  },
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 9,
+              "column": 1,
+              "offset": 124
+            },
+            "end": {
+              "line": 9,
+              "column": 25,
+              "offset": 148
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "ins",
+          "children": [
+            {
+              "type": "tableRow",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "王五",
+                      "position": {
+                        "start": {
+                          "line": 10,
+                          "column": 3,
+                          "offset": 151
+                        },
+                        "end": {
+                          "line": 10,
+                          "column": 5,
+                          "offset": 153
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 10,
+                      "column": 1,
+                      "offset": 149
+                    },
+                    "end": {
+                      "line": 10,
+                      "column": 6,
+                      "offset": 154
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "28",
+                      "position": {
+                        "start": {
+                          "line": 10,
+                          "column": 8,
+                          "offset": 156
+                        },
+                        "end": {
+                          "line": 10,
+                          "column": 10,
+                          "offset": 158
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 10,
+                      "column": 6,
+                      "offset": 154
+                    },
+                    "end": {
+                      "line": 10,
+                      "column": 11,
+                      "offset": 159
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "产品经理",
+                      "position": {
+                        "start": {
+                          "line": 10,
+                          "column": 13,
+                          "offset": 161
+                        },
+                        "end": {
+                          "line": 10,
+                          "column": 17,
+                          "offset": 165
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 10,
+                      "column": 11,
+                      "offset": 159
+                    },
+                    "end": {
+                      "line": 10,
+                      "column": 18,
+                      "offset": 166
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "产品部",
+                      "position": {
+                        "start": {
+                          "line": 10,
+                          "column": 20,
+                          "offset": 168
+                        },
+                        "end": {
+                          "line": 10,
+                          "column": 23,
+                          "offset": 171
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 10,
+                      "column": 18,
+                      "offset": 166
+                    },
+                    "end": {
+                      "line": 10,
+                      "column": 25,
+                      "offset": 173
+                    }
+                  },
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 10,
+                  "column": 1,
+                  "offset": 149
+                },
+                "end": {
+                  "line": 10,
+                  "column": 25,
+                  "offset": 173
+                }
+              },
+              "data": {}
+            }
+          ]
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 5,
+          "column": 1,
+          "offset": 22
+        },
+        "end": {
+          "line": 10,
+          "column": 25,
+          "offset": 173
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "对齐方式",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 12,
+          "column": 1,
+          "offset": 175
+        },
+        "end": {
+          "line": 12,
+          "column": 8,
+          "offset": 182
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "table",
+      "align": [
+        "left",
+        "center",
+        "right"
+      ],
+      "children": [
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "左对齐",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 14,
+                  "column": 1,
+                  "offset": 184
+                },
+                "end": {
+                  "line": 14,
+                  "column": 7,
+                  "offset": 190
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "居中",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 14,
+                  "column": 7,
+                  "offset": 190
+                },
+                "end": {
+                  "line": 14,
+                  "column": 12,
+                  "offset": 195
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "右对齐",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 14,
+                  "column": 12,
+                  "offset": 195
+                },
+                "end": {
+                  "line": 14,
+                  "column": 19,
+                  "offset": 202
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 14,
+              "column": 1,
+              "offset": 184
+            },
+            "end": {
+              "line": 14,
+              "column": 19,
+              "offset": 202
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          }
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "inlineIns",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "新",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "内容1",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 16,
+                  "column": 1,
+                  "offset": 230
+                },
+                "end": {
+                  "line": 16,
+                  "column": 8,
+                  "offset": 237
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "inlineIns",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "新",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "内容2",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 16,
+                  "column": 8,
+                  "offset": 237
+                },
+                "end": {
+                  "line": 16,
+                  "column": 15,
+                  "offset": 244
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "inlineIns",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "新",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "内容3",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 16,
+                  "column": 15,
+                  "offset": 244
+                },
+                "end": {
+                  "line": 16,
+                  "column": 23,
+                  "offset": 252
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 16,
+              "column": 1,
+              "offset": 230
+            },
+            "end": {
+              "line": 16,
+              "column": 23,
+              "offset": 252
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "长文本内容",
+                  "data": {}
+                },
+                {
+                  "type": "inlineIns",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "已修改",
+                      "data": {}
+                    }
+                  ]
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 17,
+                  "column": 1,
+                  "offset": 253
+                },
+                "end": {
+                  "line": 17,
+                  "column": 12,
+                  "offset": 264
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "长文本内容",
+                  "data": {}
+                },
+                {
+                  "type": "inlineIns",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "已修改",
+                      "data": {}
+                    }
+                  ]
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 17,
+                  "column": 12,
+                  "offset": 264
+                },
+                "end": {
+                  "line": 17,
+                  "column": 23,
+                  "offset": 275
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "长文本内容",
+                  "data": {}
+                },
+                {
+                  "type": "inlineIns",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "已修改",
+                      "data": {}
+                    }
+                  ]
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 17,
+                  "column": 23,
+                  "offset": 275
+                },
+                "end": {
+                  "line": 17,
+                  "column": 35,
+                  "offset": 287
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 17,
+              "column": 1,
+              "offset": 253
+            },
+            "end": {
+              "line": 17,
+              "column": 35,
+              "offset": 287
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "ins",
+          "children": [
+            {
+              "type": "tableRow",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "新增行",
+                      "position": {
+                        "start": {
+                          "line": 18,
+                          "column": 3,
+                          "offset": 290
+                        },
+                        "end": {
+                          "line": 18,
+                          "column": 6,
+                          "offset": 293
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 18,
+                      "column": 1,
+                      "offset": 288
+                    },
+                    "end": {
+                      "line": 18,
+                      "column": 7,
+                      "offset": 294
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "新增行",
+                      "position": {
+                        "start": {
+                          "line": 18,
+                          "column": 9,
+                          "offset": 296
+                        },
+                        "end": {
+                          "line": 18,
+                          "column": 12,
+                          "offset": 299
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 18,
+                      "column": 7,
+                      "offset": 294
+                    },
+                    "end": {
+                      "line": 18,
+                      "column": 13,
+                      "offset": 300
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "新增行",
+                      "position": {
+                        "start": {
+                          "line": 18,
+                          "column": 15,
+                          "offset": 302
+                        },
+                        "end": {
+                          "line": 18,
+                          "column": 18,
+                          "offset": 305
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 18,
+                      "column": 13,
+                      "offset": 300
+                    },
+                    "end": {
+                      "line": 18,
+                      "column": 20,
+                      "offset": 307
+                    }
+                  },
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 18,
+                  "column": 1,
+                  "offset": 288
+                },
+                "end": {
+                  "line": 18,
+                  "column": 20,
+                  "offset": 307
+                }
+              },
+              "data": {}
+            }
+          ]
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 14,
+          "column": 1,
+          "offset": 184
+        },
+        "end": {
+          "line": 18,
+          "column": 20,
+          "offset": 307
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "复杂表格",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 20,
+          "column": 1,
+          "offset": 309
+        },
+        "end": {
+          "line": 20,
+          "column": 8,
+          "offset": 316
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "table",
+      "align": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "children": [
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "项目",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 22,
+                  "column": 1,
+                  "offset": 318
+                },
+                "end": {
+                  "line": 22,
+                  "column": 6,
+                  "offset": 323
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Q1",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 22,
+                  "column": 6,
+                  "offset": 323
+                },
+                "end": {
+                  "line": 22,
+                  "column": 11,
+                  "offset": 328
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Q2",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 22,
+                  "column": 11,
+                  "offset": 328
+                },
+                "end": {
+                  "line": 22,
+                  "column": 16,
+                  "offset": 333
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Q3",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 22,
+                  "column": 16,
+                  "offset": 333
+                },
+                "end": {
+                  "line": 22,
+                  "column": 21,
+                  "offset": 338
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Q4",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 22,
+                  "column": 21,
+                  "offset": 338
+                },
+                "end": {
+                  "line": 22,
+                  "column": 26,
+                  "offset": 343
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "总计",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 22,
+                  "column": 26,
+                  "offset": 343
+                },
+                "end": {
+                  "line": 22,
+                  "column": 31,
+                  "offset": 348
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "ins",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "同比增长",
+                      "position": {
+                        "start": {
+                          "line": 22,
+                          "column": 33,
+                          "offset": 350
+                        },
+                        "end": {
+                          "line": 22,
+                          "column": 37,
+                          "offset": 354
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 22,
+                      "column": 31,
+                      "offset": 348
+                    },
+                    "end": {
+                      "line": 22,
+                      "column": 39,
+                      "offset": 356
+                    }
+                  },
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 22,
+              "column": 1,
+              "offset": 318
+            },
+            "end": {
+              "line": 22,
+              "column": 39,
+              "offset": 356
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "收入",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 24,
+                  "column": 1,
+                  "offset": 408
+                },
+                "end": {
+                  "line": 24,
+                  "column": 6,
+                  "offset": 413
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "inlineDel",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "10",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "inlineIns",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "12",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ",000",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 24,
+                  "column": 6,
+                  "offset": 413
+                },
+                "end": {
+                  "line": 24,
+                  "column": 15,
+                  "offset": 422
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "inlineDel",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "12",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "inlineIns",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "15",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ",000",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 24,
+                  "column": 15,
+                  "offset": 422
+                },
+                "end": {
+                  "line": 24,
+                  "column": 24,
+                  "offset": 431
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "inlineDel",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "15",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "inlineIns",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "18",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ",000",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 24,
+                  "column": 24,
+                  "offset": 431
+                },
+                "end": {
+                  "line": 24,
+                  "column": 33,
+                  "offset": 440
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "inlineDel",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "18",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "inlineIns",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "22",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ",000",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 24,
+                  "column": 33,
+                  "offset": 440
+                },
+                "end": {
+                  "line": 24,
+                  "column": 42,
+                  "offset": 449
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "inlineDel",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "55",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "inlineIns",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "67",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ",000",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 24,
+                  "column": 42,
+                  "offset": 449
+                },
+                "end": {
+                  "line": 24,
+                  "column": 51,
+                  "offset": 458
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "ins",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "21.8%",
+                      "position": {
+                        "start": {
+                          "line": 24,
+                          "column": 53,
+                          "offset": 460
+                        },
+                        "end": {
+                          "line": 24,
+                          "column": 58,
+                          "offset": 465
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 24,
+                      "column": 51,
+                      "offset": 458
+                    },
+                    "end": {
+                      "line": 24,
+                      "column": 60,
+                      "offset": 467
+                    }
+                  },
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 24,
+              "column": 1,
+              "offset": 408
+            },
+            "end": {
+              "line": 24,
+              "column": 60,
+              "offset": 467
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "支出",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 25,
+                  "column": 1,
+                  "offset": 468
+                },
+                "end": {
+                  "line": 25,
+                  "column": 6,
+                  "offset": 473
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "inlineDel",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "8",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "inlineIns",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "9",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ",000",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 25,
+                  "column": 6,
+                  "offset": 473
+                },
+                "end": {
+                  "line": 25,
+                  "column": 14,
+                  "offset": 481
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "inlineDel",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "9",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "inlineIns",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "10",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ",000",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 25,
+                  "column": 14,
+                  "offset": 481
+                },
+                "end": {
+                  "line": 25,
+                  "column": 23,
+                  "offset": 490
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "inlineDel",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "10",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "inlineIns",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "12",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ",000",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 25,
+                  "column": 23,
+                  "offset": 490
+                },
+                "end": {
+                  "line": 25,
+                  "column": 32,
+                  "offset": 499
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "inlineDel",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "12",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "inlineIns",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "14",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ",000",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 25,
+                  "column": 32,
+                  "offset": 499
+                },
+                "end": {
+                  "line": 25,
+                  "column": 41,
+                  "offset": 508
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "inlineDel",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "39",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "inlineIns",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "45",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ",000",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 25,
+                  "column": 41,
+                  "offset": 508
+                },
+                "end": {
+                  "line": 25,
+                  "column": 50,
+                  "offset": 517
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "ins",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "15.4%",
+                      "position": {
+                        "start": {
+                          "line": 25,
+                          "column": 52,
+                          "offset": 519
+                        },
+                        "end": {
+                          "line": 25,
+                          "column": 57,
+                          "offset": 524
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 25,
+                      "column": 50,
+                      "offset": 517
+                    },
+                    "end": {
+                      "line": 25,
+                      "column": 59,
+                      "offset": 526
+                    }
+                  },
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 25,
+              "column": 1,
+              "offset": 468
+            },
+            "end": {
+              "line": 25,
+              "column": 59,
+              "offset": 526
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "利润",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 26,
+                  "column": 1,
+                  "offset": 527
+                },
+                "end": {
+                  "line": 26,
+                  "column": 6,
+                  "offset": 532
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "inlineDel",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "2",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "inlineIns",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "3",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ",000",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 26,
+                  "column": 6,
+                  "offset": 532
+                },
+                "end": {
+                  "line": 26,
+                  "column": 14,
+                  "offset": 540
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "inlineDel",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "3",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "inlineIns",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "5",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ",000",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 26,
+                  "column": 14,
+                  "offset": 540
+                },
+                "end": {
+                  "line": 26,
+                  "column": 22,
+                  "offset": 548
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "inlineDel",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "5",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "inlineIns",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "6",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ",000",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 26,
+                  "column": 22,
+                  "offset": 548
+                },
+                "end": {
+                  "line": 26,
+                  "column": 30,
+                  "offset": 556
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "inlineDel",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "6",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "inlineIns",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "8",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ",000",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 26,
+                  "column": 30,
+                  "offset": 556
+                },
+                "end": {
+                  "line": 26,
+                  "column": 38,
+                  "offset": 564
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "inlineDel",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "16",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "inlineIns",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "22",
+                      "data": {}
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ",000",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 26,
+                  "column": 38,
+                  "offset": 564
+                },
+                "end": {
+                  "line": 26,
+                  "column": 47,
+                  "offset": 573
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "ins",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "37.5%",
+                      "position": {
+                        "start": {
+                          "line": 26,
+                          "column": 49,
+                          "offset": 575
+                        },
+                        "end": {
+                          "line": 26,
+                          "column": 54,
+                          "offset": 580
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 26,
+                      "column": 47,
+                      "offset": 573
+                    },
+                    "end": {
+                      "line": 26,
+                      "column": 56,
+                      "offset": 582
+                    }
+                  },
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 26,
+              "column": 1,
+              "offset": 527
+            },
+            "end": {
+              "line": 26,
+              "column": 56,
+              "offset": 582
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "ins",
+          "children": [
+            {
+              "type": "tableRow",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "税费",
+                      "position": {
+                        "start": {
+                          "line": 27,
+                          "column": 3,
+                          "offset": 585
+                        },
+                        "end": {
+                          "line": 27,
+                          "column": 5,
+                          "offset": 587
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 27,
+                      "column": 1,
+                      "offset": 583
+                    },
+                    "end": {
+                      "line": 27,
+                      "column": 6,
+                      "offset": 588
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "600",
+                      "position": {
+                        "start": {
+                          "line": 27,
+                          "column": 8,
+                          "offset": 590
+                        },
+                        "end": {
+                          "line": 27,
+                          "column": 11,
+                          "offset": 593
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 27,
+                      "column": 6,
+                      "offset": 588
+                    },
+                    "end": {
+                      "line": 27,
+                      "column": 12,
+                      "offset": 594
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "1,000",
+                      "position": {
+                        "start": {
+                          "line": 27,
+                          "column": 14,
+                          "offset": 596
+                        },
+                        "end": {
+                          "line": 27,
+                          "column": 19,
+                          "offset": 601
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 27,
+                      "column": 12,
+                      "offset": 594
+                    },
+                    "end": {
+                      "line": 27,
+                      "column": 20,
+                      "offset": 602
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "1,200",
+                      "position": {
+                        "start": {
+                          "line": 27,
+                          "column": 22,
+                          "offset": 604
+                        },
+                        "end": {
+                          "line": 27,
+                          "column": 27,
+                          "offset": 609
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 27,
+                      "column": 20,
+                      "offset": 602
+                    },
+                    "end": {
+                      "line": 27,
+                      "column": 28,
+                      "offset": 610
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "1,600",
+                      "position": {
+                        "start": {
+                          "line": 27,
+                          "column": 30,
+                          "offset": 612
+                        },
+                        "end": {
+                          "line": 27,
+                          "column": 35,
+                          "offset": 617
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 27,
+                      "column": 28,
+                      "offset": 610
+                    },
+                    "end": {
+                      "line": 27,
+                      "column": 36,
+                      "offset": 618
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "4,400",
+                      "position": {
+                        "start": {
+                          "line": 27,
+                          "column": 38,
+                          "offset": 620
+                        },
+                        "end": {
+                          "line": 27,
+                          "column": 43,
+                          "offset": 625
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 27,
+                      "column": 36,
+                      "offset": 618
+                    },
+                    "end": {
+                      "line": 27,
+                      "column": 44,
+                      "offset": 626
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "-",
+                      "position": {
+                        "start": {
+                          "line": 27,
+                          "column": 46,
+                          "offset": 628
+                        },
+                        "end": {
+                          "line": 27,
+                          "column": 47,
+                          "offset": 629
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 27,
+                      "column": 44,
+                      "offset": 626
+                    },
+                    "end": {
+                      "line": 27,
+                      "column": 49,
+                      "offset": 631
+                    }
+                  },
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 27,
+                  "column": 1,
+                  "offset": 583
+                },
+                "end": {
+                  "line": 27,
+                  "column": 49,
+                  "offset": 631
+                }
+              },
+              "data": {}
+            }
+          ]
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 22,
+          "column": 1,
+          "offset": 318
+        },
+        "end": {
+          "line": 27,
+          "column": 49,
+          "offset": 631
+        }
+      },
+      "data": {}
+    }
+  ]
+}

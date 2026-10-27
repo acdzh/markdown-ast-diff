@@ -1,0 +1,2441 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "yaml",
+      "value": "title: memo",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<Intro>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "inlineCode",
+          "value": "memo",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " lets you skip re-rendering a component when its props are unchanged.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": null,
+      "meta": null,
+      "value": "const MemoizedComponent = memo(SomeComponent, arePropsEqual?)",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</Intro>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "<Note>",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "link",
+              "title": null,
+              "url": "/learn/react-compiler",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "React Compiler",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "text",
+              "value": " automatically applies the equivalent of ",
+              "data": {}
+            },
+            {
+              "type": "inlineCode",
+              "value": "memo",
+              "data": {}
+            },
+            {
+              "type": "text",
+              "value": " to all components, reducing the need for manual memoization. You can use the compiler to handle component memoization automatically.",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "</Note>",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "html",
+      "value": "<InlineToc />",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "thematicBreak",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Reference {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "reference",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "inlineCode",
+          "value": "memo(Component, arePropsEqual?)",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "memo",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Wrap a component in ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "memo",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " to get a ",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "memoized",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " version of that component. This memoized version of your component will usually not be re-rendered when its parent component is re-rendered as long as its props have not changed. But React may still re-render it: memoization is a performance optimization, not a guarantee.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "import { memo } from 'react';\n\nconst SomeComponent = memo(function SomeComponent(props) {\n  // ...\n});",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "#usage",
+          "children": [
+            {
+              "type": "text",
+              "value": "See more examples below.",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 4,
+      "children": [
+        {
+          "type": "text",
+          "value": "Parameters {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "parameters",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": true,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "Component",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ": The component that you want to memoize. The ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "memo",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " does not modify this component, but returns a new, memoized component instead. Any valid React component, including functions and ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "/reference/react/forwardRef",
+                  "children": [
+                    {
+                      "type": "inlineCode",
+                      "value": "forwardRef",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " components, is accepted.",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "strong",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "optional",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "arePropsEqual",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ": A function that accepts two arguments: the component's previous props, and its new props. It should return ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "true",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " if the old and new props are equal: that is, if the component will render the same output and behave in the same way with the new props as with the old. Otherwise it should return ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "false",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ". Usually, you will not specify this function. By default, React will compare each prop with ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is",
+                  "children": [
+                    {
+                      "type": "inlineCode",
+                      "value": "Object.is",
+                      "data": {}
+                    },
+                    {
+                      "type": "text",
+                      "value": ".",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 4,
+      "children": [
+        {
+          "type": "text",
+          "value": "Returns {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "returns",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "inlineCode",
+          "value": "memo",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " returns a new React component. It behaves the same as the component provided to ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "memo",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " except that React will not always re-render it when its parent is being re-rendered unless its props have changed.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "thematicBreak",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Usage {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "usage",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Skipping re-rendering when props are unchanged {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "skipping-re-rendering-when-props-are-unchanged",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "React normally re-renders a component whenever its parent re-renders. With ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "memo",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", you can create a component that React will not re-render when its parent re-renders so long as its new props are the same as the old props. Such a component is said to be ",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "memoized",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ".",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "To memoize a component, wrap it in ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "memo",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " and use the value that it returns in place of your original component:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "const Greeting = memo(function Greeting({ name }) {\n  return <h1>Hello, {name}!</h1>;\n});\n\nexport default Greeting;",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "A React component should always have ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/learn/keeping-components-pure",
+          "children": [
+            {
+              "type": "text",
+              "value": "pure rendering logic.",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " This means that it must return the same output if its props, state, and context haven't changed. By using ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "memo",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", you are telling React that your component complies with this requirement, so React doesn't need to re-render as long as its props haven't changed. Even with ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "memo",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", your component will re-render if its own state changes or if a context that it's using changes.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "In this example, notice that the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "Greeting",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " component re-renders whenever ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "name",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " is changed (because that's one of its props), but not when ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "address",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " is changed (because it's not passed to ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "Greeting",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " as a prop):",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<Sandpack>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "import { memo, useState } from 'react';\n\nexport default function MyApp() {\n  const [name, setName] = useState('');\n  const [address, setAddress] = useState('');\n  return (\n    <>\n      <label>\n        Name{': '}\n        <input value={name} onChange={e => setName(e.target.value)} />\n      </label>\n      <label>\n        Address{': '}\n        <input value={address} onChange={e => setAddress(e.target.value)} />\n      </label>\n      <Greeting name={name} />\n    </>\n  );\n}\n\nconst Greeting = memo(function Greeting({ name }) {\n  console.log(\"Greeting was rendered at\", new Date().toLocaleTimeString());\n  return <h3>Hello{name && ', '}{name}!</h3>;\n});",
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "css",
+      "meta": null,
+      "value": "label {\n  display: block;\n  margin-bottom: 16px;\n}",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</Sandpack>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "html",
+      "value": "<Note>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "You should only rely on ",
+              "data": {}
+            },
+            {
+              "type": "inlineCode",
+              "value": "memo",
+              "data": {}
+            },
+            {
+              "type": "text",
+              "value": " as a performance optimization.",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " If your code doesn't work without it, find the underlying problem and fix it first. Then you may add ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "memo",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " to improve performance.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</Note>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "html",
+      "value": "<DeepDive>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "heading",
+      "depth": 4,
+      "children": [
+        {
+          "type": "text",
+          "value": "Should you add memo everywhere? {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "should-you-add-memo-everywhere",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "If your app is like this site, and most interactions are coarse (like replacing a page or an entire section), memoization is usually unnecessary. On the other hand, if your app is more like a drawing editor, and most interactions are granular (like moving shapes), then you might find memoization very helpful.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Optimizing with ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "memo",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "  is only valuable when your component re-renders often with the same exact props, and its re-rendering logic is expensive. If there is no perceptible lag when your component re-renders, ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "memo",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " is unnecessary. Keep in mind that ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "memo",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " is completely useless if the props passed to your component are ",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "always different,",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " such as if you pass an object or a plain function defined during rendering. This is why you will often need ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/reference/react/useMemo#skipping-re-rendering-of-components",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "useMemo",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " and ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/reference/react/useCallback#skipping-re-rendering-of-components",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "useCallback",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " together with ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "memo",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ".",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "There is no benefit to wrapping a component in ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "memo",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " in other cases. There is no significant harm to doing that either, so some teams choose to not think about individual cases, and memoize as much as possible. The downside of this approach is that code becomes less readable. Also, not all memoization is effective: a single value that's \"always new\" is enough to break memoization for an entire component.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "In practice, you can make a lot of memoization unnecessary by following a few principles:",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 1,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "When a component visually wraps other components, let it ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "/learn/passing-props-to-a-component#passing-jsx-as-children",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "accept JSX as children.",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " This way, when the wrapper component updates its own state, React knows that its children don't need to re-render.",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Prefer local state and don't ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "/learn/sharing-state-between-components",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "lift state up",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " any further than necessary. For example, don't keep transient state like forms and whether an item is hovered at the top of your tree or in a global state library.",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Keep your ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "/learn/keeping-components-pure",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "rendering logic pure.",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " If re-rendering a component causes a problem or produces some noticeable visual artifact, it's a bug in your component! Fix the bug instead of adding memoization.",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Avoid ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "/learn/you-might-not-need-an-effect",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "unnecessary Effects that update state.",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " Most performance problems in React apps are caused by chains of updates originating from Effects that cause your components to render over and over.",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Try to ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "/learn/removing-effect-dependencies",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "remove unnecessary dependencies from your Effects.",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " For example, instead of memoization, it's often simpler to move some object or a function inside an Effect or outside the component.",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "If a specific interaction still feels laggy, ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://legacy.reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html",
+          "children": [
+            {
+              "type": "text",
+              "value": "use the React Developer Tools profiler",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " to see which components would benefit the most from memoization, and add memoization where needed. These principles make your components easier to debug and understand, so it's good to follow them in any case. In the long term, we're researching ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://www.youtube.com/watch?v=lGEMwh32soc",
+          "children": [
+            {
+              "type": "text",
+              "value": "doing granular memoization automatically",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " to solve this once and for all.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</DeepDive>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "thematicBreak",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Updating a memoized component using state {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "updating-a-memoized-component-using-state",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Even when a component is memoized, it will still re-render when its own state changes. Memoization only has to do with props that are passed to the component from its parent.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<Sandpack>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "import { memo, useState } from 'react';\n\nexport default function MyApp() {\n  const [name, setName] = useState('');\n  const [address, setAddress] = useState('');\n  return (\n    <>\n      <label>\n        Name{': '}\n        <input value={name} onChange={e => setName(e.target.value)} />\n      </label>\n      <label>\n        Address{': '}\n        <input value={address} onChange={e => setAddress(e.target.value)} />\n      </label>\n      <Greeting name={name} />\n    </>\n  );\n}\n\nconst Greeting = memo(function Greeting({ name }) {\n  console.log('Greeting was rendered at', new Date().toLocaleTimeString());\n  const [greeting, setGreeting] = useState('Hello');\n  return (\n    <>\n      <h3>{greeting}{name && ', '}{name}!</h3>\n      <GreetingSelector value={greeting} onChange={setGreeting} />\n    </>\n  );\n});\n\nfunction GreetingSelector({ value, onChange }) {\n  return (\n    <>\n      <label>\n        <input\n          type=\"radio\"\n          checked={value === 'Hello'}\n          onChange={e => onChange('Hello')}\n        />\n        Regular greeting\n      </label>\n      <label>\n        <input\n          type=\"radio\"\n          checked={value === 'Hello and welcome'}\n          onChange={e => onChange('Hello and welcome')}\n        />\n        Enthusiastic greeting\n      </label>\n    </>\n  );\n}",
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "css",
+      "meta": null,
+      "value": "label {\n  display: block;\n  margin-bottom: 16px;\n}",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</Sandpack>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "If you set a state variable to its current value, React will skip re-rendering your component even without ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "memo",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ". You may still see your component function being called an extra time, but the result will be discarded.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "thematicBreak",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Updating a memoized component using a context {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "updating-a-memoized-component-using-a-context",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Even when a component is memoized, it will still re-render when a context that it's using changes. Memoization only has to do with props that are passed to the component from its parent.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<Sandpack>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "import { createContext, memo, useContext, useState } from 'react';\n\nconst ThemeContext = createContext(null);\n\nexport default function MyApp() {\n  const [theme, setTheme] = useState('dark');\n\n  function handleClick() {\n    setTheme(theme === 'dark' ? 'light' : 'dark');\n  }\n\n  return (\n    <ThemeContext value={theme}>\n      <button onClick={handleClick}>\n        Switch theme\n      </button>\n      <Greeting name=\"Taylor\" />\n    </ThemeContext>\n  );\n}\n\nconst Greeting = memo(function Greeting({ name }) {\n  console.log(\"Greeting was rendered at\", new Date().toLocaleTimeString());\n  const theme = useContext(ThemeContext);\n  return (\n    <h3 className={theme}>Hello, {name}!</h3>\n  );\n});",
+      "data": {
+        "diffOldContent": "import { createContext, memo, useContext, useState } from 'react';\n\nconst ThemeContext = createContext(null);\n\nexport default function MyApp() {\n  const [theme, setTheme] = useState('dark');\n\n  function handleClick() {\n    setTheme(theme === 'dark' ? 'light' : 'dark'); \n  }\n\n  return (\n    <ThemeContext value={theme}>\n      <button onClick={handleClick}>\n        Switch theme\n      </button>\n      <Greeting name=\"Taylor\" />\n    </ThemeContext>\n  );\n}\n\nconst Greeting = memo(function Greeting({ name }) {\n  console.log(\"Greeting was rendered at\", new Date().toLocaleTimeString());\n  const theme = useContext(ThemeContext);\n  return (\n    <h3 className={theme}>Hello, {name}!</h3>\n  );\n});"
+      }
+    },
+    {
+      "type": "code",
+      "lang": "css",
+      "meta": null,
+      "value": "label {\n  display: block;\n  margin-bottom: 16px;\n}\n\n.light {\n  color: black;\n  background-color: white;\n}\n\n.dark {\n  color: white;\n  background-color: black;\n}",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</Sandpack>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "To make your component re-render only when a ",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "part",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " of some context changes, split your component in two. Read what you need from the context in the outer component, and pass it down to a memoized child as a prop.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "thematicBreak",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Minimizing props changes {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "minimizing-props-changes",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "When you use ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "memo",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", your component re-renders whenever any prop is not ",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "shallowly equal",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " to what it was previously. This means that React compares every prop in your component with its previous value using the ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "Object.is",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " comparison. Note that ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "Object.is(3, 3)",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " is ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "true",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", but ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "Object.is({}, {})",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " is ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "false",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ".",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "To get the most out of ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "memo",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", minimize the times that the props change. For example, if the prop is an object, prevent the parent component from re-creating that object every time by using ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/reference/react/useMemo",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "useMemo",
+              "data": {}
+            },
+            {
+              "type": "text",
+              "value": ":",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": "{5-8}",
+      "value": "function Page() {\n  const [name, setName] = useState('Taylor');\n  const [age, setAge] = useState(42);\n\n  const person = useMemo(\n    () => ({ name, age }),\n    [name, age]\n  );\n\n  return <Profile person={person} />;\n}\n\nconst Profile = memo(function Profile({ person }) {\n  // ...\n});",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "A better way to minimize props changes is to make sure the component accepts the minimum necessary information in its props. For example, it could accept individual values instead of a whole object:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": "{4,7}",
+      "value": "function Page() {\n  const [name, setName] = useState('Taylor');\n  const [age, setAge] = useState(42);\n  return <Profile name={name} age={age} />;\n}\n\nconst Profile = memo(function Profile({ name, age }) {\n  // ...\n});",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Even individual values can sometimes be projected to ones that change less frequently. For example, here a component accepts a boolean indicating the presence of a value rather than the value itself:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": "{3}",
+      "value": "function GroupsLanding({ person }) {\n  const hasGroups = person.groups !== null;\n  return <CallToAction hasGroups={hasGroups} />;\n}\n\nconst CallToAction = memo(function CallToAction({ hasGroups }) {\n  // ...\n});",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "When you need to pass a function to memoized component, either declare it outside your component so that it never changes, or ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/reference/react/useCallback#skipping-re-rendering-of-components",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "useCallback",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " to cache its definition between re-renders.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "thematicBreak",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Specifying a custom comparison function {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "specifying-a-custom-comparison-function",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "In rare cases it may be infeasible to minimize the props changes of a memoized component. In that case, you can provide a custom comparison function, which React will use to compare the old and new props instead of using shallow equality. This function is passed as a second argument to ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "memo",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ". It should return ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "true",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " only if the new props would result in the same output as the old props; otherwise it should return ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "false",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ".",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": "{3}",
+      "value": "const Chart = memo(function Chart({ dataPoints }) {\n  // ...\n}, arePropsEqual);\n\nfunction arePropsEqual(oldProps, newProps) {\n  return (\n    oldProps.dataPoints.length === newProps.dataPoints.length &&\n    oldProps.dataPoints.every((oldPoint, index) => {\n      const newPoint = newProps.dataPoints[index];\n      return oldPoint.x === newPoint.x && oldPoint.y === newPoint.y;\n    })\n  );\n}",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "If you do this, use the Performance panel in your browser developer tools to make sure that your comparison function is actually faster than re-rendering the component. You might be surprised.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "When you do performance measurements, make sure that React is running in the production mode.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<Pitfall>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "If you provide a custom ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "arePropsEqual",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " implementation, ",
+          "data": {}
+        },
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "you must compare every prop, including functions.",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " Functions often ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures",
+          "children": [
+            {
+              "type": "text",
+              "value": "close over",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " the props and state of parent components. If you return ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "true",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " when ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "oldProps.onClick !== newProps.onClick",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", your component will keep \"seeing\" the props and state from a previous render inside its ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "onClick",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " handler, leading to very confusing bugs.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Avoid doing deep equality checks inside ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "arePropsEqual",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " unless you are 100% sure that the data structure you're working with has a known limited depth. ",
+          "data": {}
+        },
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "Deep equality checks can become incredibly slow",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " and can freeze your app for many seconds if someone changes the data structure later.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</Pitfall>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "thematicBreak",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 3,
+          "children": [
+            {
+              "type": "text",
+              "value": "Do I still need React.memo if I use React Compiler? {/"
+            },
+            {
+              "type": "emphasis",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "react-compiler-memo"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "/}"
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "When you enable "
+            },
+            {
+              "type": "link",
+              "title": null,
+              "url": "/learn/react-compiler",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "React Compiler"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ", you typically don't need "
+            },
+            {
+              "type": "inlineCode",
+              "value": "React.memo"
+            },
+            {
+              "type": "text",
+              "value": " anymore. The compiler automatically optimizes component re-rendering for you."
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "Here's how it works:"
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "strong",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Without React Compiler"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ", you need "
+            },
+            {
+              "type": "inlineCode",
+              "value": "React.memo"
+            },
+            {
+              "type": "text",
+              "value": " to prevent unnecessary re-renders:"
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "code",
+          "lang": "js",
+          "meta": null,
+          "value": "// Parent re-renders every second\nfunction Parent() {\n  const [seconds, setSeconds] = useState(0);\n\n  useEffect(() => {\n    const interval = setInterval(() => {\n      setSeconds(s => s + 1);\n    }, 1000);\n    return () => clearInterval(interval);\n  }, []);\n\n  return (\n    <>\n      <h1>Seconds: {seconds}</h1>\n      <ExpensiveChild name=\"John\" />\n    </>\n  );\n}\n\n// Without memo, this re-renders every second even though props don't change\nconst ExpensiveChild = memo(function ExpensiveChild({ name }) {\n  console.log('ExpensiveChild rendered');\n  return <div>Hello, {name}!</div>;\n});",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "strong",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "With React Compiler enabled"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ", the same optimization happens automatically:"
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "code",
+          "lang": "js",
+          "meta": null,
+          "value": "// No memo needed - compiler prevents re-renders automatically\nfunction ExpensiveChild({ name }) {\n  console.log('ExpensiveChild rendered');\n  return <div>Hello, {name}!</div>;\n}",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "Here's the key part of what the React Compiler generates:"
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "code",
+          "lang": "js",
+          "meta": "{6-12}",
+          "value": "function Parent() {\n  const $ = _c(7);\n  const [seconds, setSeconds] = useState(0);\n  // ... other code ...\n\n  let t3;\n  if ($[4] === Symbol.for(\"react.memo_cache_sentinel\")) {\n    t3 = <ExpensiveChild name=\"John\" />;\n    $[4] = t3;\n  } else {\n    t3 = $[4];\n  }\n  // ... return statement ...\n}",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "Notice the highlighted lines: The compiler wraps "
+            },
+            {
+              "type": "inlineCode",
+              "value": "<ExpensiveChild name=\"John\" />"
+            },
+            {
+              "type": "text",
+              "value": " in a cache check. Since the "
+            },
+            {
+              "type": "inlineCode",
+              "value": "name"
+            },
+            {
+              "type": "text",
+              "value": " prop is always "
+            },
+            {
+              "type": "inlineCode",
+              "value": "\"John\""
+            },
+            {
+              "type": "text",
+              "value": ", this JSX is created once and reused on every parent re-render. This is exactly what "
+            },
+            {
+              "type": "inlineCode",
+              "value": "React.memo"
+            },
+            {
+              "type": "text",
+              "value": " does - it prevents the child from re-rendering when its props haven't changed."
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "The React Compiler automatically:"
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "list",
+          "ordered": true,
+          "start": 1,
+          "spread": false,
+          "children": [
+            {
+              "type": "listItem",
+              "spread": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Tracks that the "
+                    },
+                    {
+                      "type": "inlineCode",
+                      "value": "name"
+                    },
+                    {
+                      "type": "text",
+                      "value": " prop passed to "
+                    },
+                    {
+                      "type": "inlineCode",
+                      "value": "ExpensiveChild"
+                    },
+                    {
+                      "type": "text",
+                      "value": " hasn't changed"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "spread": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Reuses the previously created JSX for "
+                    },
+                    {
+                      "type": "inlineCode",
+                      "value": "<ExpensiveChild name=\"John\" />"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "spread": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Skips re-rendering "
+                    },
+                    {
+                      "type": "inlineCode",
+                      "value": "ExpensiveChild"
+                    },
+                    {
+                      "type": "text",
+                      "value": " entirely"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "This means "
+            },
+            {
+              "type": "strong",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "you can safely remove "
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "React.memo"
+                },
+                {
+                  "type": "text",
+                  "value": " from your components when using React Compiler"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ". The compiler provides the same optimization automatically, making your code cleaner and easier to maintain."
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "<Note>",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "The compiler's optimization is actually more comprehensive than "
+            },
+            {
+              "type": "inlineCode",
+              "value": "React.memo"
+            },
+            {
+              "type": "text",
+              "value": ". It also memoizes intermediate values and expensive computations within your components, similar to combining "
+            },
+            {
+              "type": "inlineCode",
+              "value": "React.memo"
+            },
+            {
+              "type": "text",
+              "value": " with "
+            },
+            {
+              "type": "inlineCode",
+              "value": "useMemo"
+            },
+            {
+              "type": "text",
+              "value": " throughout your component tree."
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "</Note>",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "thematicBreak",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Troubleshooting {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "troubleshooting",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "My component re-renders when a prop is an object, array, or function {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "my-component-rerenders-when-a-prop-is-an-object-or-array",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "React compares old and new props by shallow equality: that is, it considers whether each new prop is reference-equal to the old prop. If you create a new object or array each time the parent is re-rendered, even if the individual elements are each the same, React will still consider it to be changed. Similarly, if you create a new function when rendering the parent component, React will consider it to have changed even if the function has the same definition. To avoid this, ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "#minimizing-props-changes",
+          "children": [
+            {
+              "type": "text",
+              "value": "simplify props or memoize props in the parent component",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ".",
+          "data": {}
+        }
+      ],
+      "data": {}
+    }
+  ]
+}

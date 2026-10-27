@@ -1,0 +1,2894 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "yaml",
+      "value": "outline: deep",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<script setup>\nimport SpreadSheet from './demos/SpreadSheet.vue'\n</script>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "heading",
+      "depth": 1,
+      "children": [
+        {
+          "type": "text",
+          "value": "Reactivity in Depth {#reactivity-in-depth}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "One of Vue’s most distinctive features is the unobtrusive reactivity system. Component state consists of reactive JavaScript objects. When you modify them, the view updates. It makes state management simple and intuitive, but it’s also important to understand how it works to avoid some common gotchas. In this section, we are going to dig into some of the lower-level details of Vue’s reactivity system.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "What is Reactivity? {#what-is-reactivity}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "This term comes up in programming quite a bit these days, but what do people mean when they say it? Reactivity is a programming paradigm that allows us to adjust to changes in a declarative manner. The canonical example that people usually show, because it’s a great one, is an Excel spreadsheet:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<SpreadSheet />",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Here cell A2 is defined via a formula of ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "= A0 + A1",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " (you can click on A2 to view or edit the formula), so the spreadsheet gives us 3. No surprises there. But if you update A0 or A1, you'll notice that A2 automagically updates too.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "JavaScript doesn’t usually work like this. If we were to write something comparable in JavaScript:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "let A0 = 1\nlet A1 = 2\nlet A2 = A0 + A1\n\nconsole.log(A2) // 3\n\nA0 = 2\nconsole.log(A2) // Still 3",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "When we mutate ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "A0",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "A2",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " does not change automatically.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "So how would we do this in JavaScript? First, in order to re-run the code that updates ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "A2",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", let's wrap it in a function:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "let A2\n\nfunction update() {\n  A2 = A0 + A1\n}",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Then, we need to define a few terms:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": true,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "The ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "update()",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " function produces a ",
+                  "data": {}
+                },
+                {
+                  "type": "strong",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "side effect",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ", or ",
+                  "data": {}
+                },
+                {
+                  "type": "strong",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "effect",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " for short, because it modifies the state of the program.",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "A0",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " and ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "A1",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " are considered ",
+                  "data": {}
+                },
+                {
+                  "type": "strong",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "dependencies",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " of the effect, as their values are used to perform the effect. The effect is said to be a ",
+                  "data": {}
+                },
+                {
+                  "type": "strong",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "subscriber",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " to its dependencies.",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "What we need is a magic function that can invoke ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "update()",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " (the ",
+          "data": {}
+        },
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "effect",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ") whenever ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "A0",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " or ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "A1",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " (the ",
+          "data": {}
+        },
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "dependencies",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ") change:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "whenDepsChange(update)",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "This ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "whenDepsChange()",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " function has the following tasks:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 1,
+      "spread": true,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Track when a variable is read. E.g. when evaluating the expression ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "A0 + A1",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ", both ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "A0",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " and ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "A1",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " are read.",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "If a variable is read when there is a currently running effect, make that effect a subscriber to that variable. E.g. because ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "A0",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " and ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "A1",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " are read when ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "update()",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " is being executed, ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "update()",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " becomes a subscriber to both ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "A0",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " and ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "A1",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " after the first call.",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Detect when a variable is mutated. E.g. when ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "A0",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " is assigned a new value, notify all its subscriber effects to re-run.",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "How Reactivity Works in Vue {#how-reactivity-works-in-vue}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "We can't really track the reading and writing of local variables like in the example. There's just no mechanism for doing that in vanilla JavaScript. What we ",
+          "data": {}
+        },
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "can",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " do though, is intercept the reading and writing of ",
+          "data": {}
+        },
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "object properties",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ".",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "There are two ways of intercepting property access in JavaScript: ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get#description",
+          "children": [
+            {
+              "type": "text",
+              "value": "getter",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " / ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set#description",
+          "children": [
+            {
+              "type": "text",
+              "value": "setters",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " and ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+          "children": [
+            {
+              "type": "text",
+              "value": "Proxies",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ". Vue 2 used getter / setters exclusively due to browser support limitations. In Vue 3, Proxies are used for reactive objects and getter / setters are used for refs. Here's some pseudo-code that illustrates how they work:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js{4,9,17,22}",
+      "meta": null,
+      "value": "function reactive(obj) {\n  return new Proxy(obj, {\n    get(target, key) {\n      track(target, key)\n      return target[key]\n    },\n    set(target, key, value) {\n      target[key] = value\n      trigger(target, key)\n    }\n  })\n}\n\nfunction ref(value) {\n  const refObject = {\n    get value() {\n      track(refObject, 'value')\n      return value\n    },\n    set value(newValue) {\n      value = newValue\n      trigger(refObject, 'value')\n    }\n  }\n  return refObject\n}",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": ":::tip\nCode snippets here and below are meant to explain the core concepts in the simplest form possible, so many details are omitted, and edge cases ignored.\n:::",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "This explains a few ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/guide/essentials/reactivity-fundamentals#limitations-of-reactive",
+          "children": [
+            {
+              "type": "text",
+              "value": "limitations of reactive objects",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " that we have discussed in the fundamentals section:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": true,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "When you assign or destructure a reactive object's property to a local variable, accessing or assigning to that variable is non-reactive because it no longer triggers the get / set proxy traps on the source object. Note this \"disconnect\" only affects the variable binding - if the variable points to a non-primitive value such as an object, mutating the object would still be reactive.",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "The returned proxy from ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "reactive()",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ", although behaving just like the original, has a different identity if we compare it to the original using the ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "===",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " operator.",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Inside ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "track()",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", we check whether there is a currently running effect. If there is one, we lookup the subscriber effects (stored in a Set) for the property being tracked, and add the effect to the Set:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "// This will be set right before an effect is about\n// to be run. We'll deal with this later.\nlet activeEffect\n\nfunction track(target, key) {\n  if (activeEffect) {\n    const effects = getSubscribersForProperty(target, key)\n    effects.add(activeEffect)\n  }\n}",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Effect subscriptions are stored in a global ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "WeakMap<target, Map<key, Set<effect>>>",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " data structure. If no subscribing effects Set was found for a property (tracked for the first time), it will be created. This is what the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "getSubscribersForProperty()",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " function does, in short. For simplicity, we will skip its details.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Inside ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "trigger()",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", we again lookup the subscriber effects for the property. But this time we invoke them instead:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "function trigger(target, key) {\n  const effects = getSubscribersForProperty(target, key)\n  effects.forEach((effect) => effect())\n}",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Now let's circle back to the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "whenDepsChange()",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " function:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "function whenDepsChange(update) {\n  const effect = () => {\n    activeEffect = effect\n    update()\n    activeEffect = null\n  }\n  effect()\n}",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "It wraps the raw ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "update",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " function in an effect that sets itself as the current active effect before running the actual update. This enables ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "track()",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " calls during the update to locate the current active effect.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "At this point, we have created an effect that automatically tracks its dependencies, and re-runs whenever a dependency changes. We call this a ",
+          "data": {}
+        },
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "Reactive Effect",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ".",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Vue provides an API that allows you to create reactive effects: ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/api/reactivity-core#watcheffect",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "watchEffect()",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ". In fact, you may have noticed that it works pretty similarly to the magical ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "whenDepsChange()",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " in the example. We can now rework the original example using actual Vue APIs:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "import { ref, watchEffect } from 'vue'\n\nconst A0 = ref(0)\nconst A1 = ref(1)\nconst A2 = ref()\n\nwatchEffect(() => {\n  // tracks A0 and A1\n  A2.value = A0.value + A1.value\n})\n\n// triggers the effect\nA0.value = 2",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Using a reactive effect to mutate a ref isn't the most interesting use case - in fact, using a computed property makes it more declarative:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "import { ref, computed } from 'vue'\n\nconst A0 = ref(0)\nconst A1 = ref(1)\nconst A2 = computed(() => A0.value + A1.value)\n\nA0.value = 2",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Internally, ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "computed",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " manages its invalidation and re-computation using a reactive effect.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "So what's an example of a common and useful reactive effect? Well, updating the DOM! We can implement simple \"reactive rendering\" like this:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "import { ref, watchEffect } from 'vue'\n\nconst count = ref(0)\n\nwatchEffect(() => {\n  document.body.innerHTML = `Count is: ${count.value}`\n})\n\n// updates the DOM\ncount.value++",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "In fact, this is pretty close to how a Vue component keeps the state and the DOM in sync - each component instance creates a reactive effect to render and update the DOM. Of course, Vue components use much more efficient ways to update the DOM than ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "innerHTML",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ". This is discussed in ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "./rendering-mechanism",
+          "children": [
+            {
+              "type": "text",
+              "value": "Rendering Mechanism",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ".",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"options-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "The ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "ref()",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "computed()",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " and ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "watchEffect()",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " APIs are all part of the Composition API. If you have only been using Options API with Vue so far, you'll notice that Composition API is closer to how Vue's reactivity system works under the hood. In fact, in Vue 3 the Options API is implemented on top of the Composition API. All property access on the component instance (",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "this",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ") triggers getter / setters for reactivity tracking, and options like ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "watch",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " and ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "computed",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " invoke their Composition API equivalents internally.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Runtime vs. Compile-time Reactivity {#runtime-vs-compile-time-reactivity}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Vue's reactivity system is primarily runtime-based: the tracking and triggering are all performed while the code is running directly in the browser. The pros of runtime reactivity are that it can work without a build step, and there are fewer edge cases. On the other hand, this makes it constrained by the syntax limitations of JavaScript, leading to the need of value containers like Vue refs.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Some frameworks, such as ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://svelte.dev/",
+          "children": [
+            {
+              "type": "text",
+              "value": "Svelte",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", choose to overcome such limitations by implementing reactivity during compilation. It analyzes and transforms the code in order to simulate reactivity. The compilation step allows the framework to alter the semantics of JavaScript itself - for example, implicitly injecting code that performs dependency analysis and effect triggering around access to locally defined variables. The downside is that such transforms require a build step, and altering JavaScript semantics is essentially creating a language that looks like JavaScript but compiles into something else.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "The Vue team did explore this direction via an experimental feature called ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/guide/extras/reactivity-transform",
+          "children": [
+            {
+              "type": "text",
+              "value": "Reactivity Transform",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", but in the end we have decided that it would not be a good fit for the project due to ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://github.com/vuejs/rfcs/discussions/369#discussioncomment-5059028",
+          "children": [
+            {
+              "type": "text",
+              "value": "the reasoning here",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ".",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Reactivity Debugging {#reactivity-debugging}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "It's great that Vue's reactivity system automatically tracks dependencies, but in some cases we may want to figure out exactly what is being tracked, or what is causing a component to re-render.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Component Debugging Hooks {#component-debugging-hooks}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "We can debug what dependencies are used during a component's render and which dependency is triggering an update using the ",
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "<span class=\"options-api\">",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "inlineCode",
+          "value": "renderTracked",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "html",
+          "value": "</span>",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "html",
+          "value": "<span class=\"composition-api\">",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "inlineCode",
+          "value": "onRenderTracked",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "html",
+          "value": "</span>",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "text",
+          "value": " and ",
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "<span class=\"options-api\">",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "inlineCode",
+          "value": "renderTriggered",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "html",
+          "value": "</span>",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "html",
+          "value": "<span class=\"composition-api\">",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "inlineCode",
+          "value": "onRenderTriggered",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "html",
+          "value": "</span>",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "text",
+          "value": " lifecycle hooks. Both hooks will receive a debugger event which contains information on the dependency in question. It is recommended to place a ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "debugger",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "text",
+          "value": " statement in the callbacks to interactively inspect the dependency:",
+          "data": {}
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "html",
+      "value": "<div class=\"composition-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "vue",
+      "meta": null,
+      "value": "<script setup>\nimport { onRenderTracked, onRenderTriggered } from 'vue'\n\nonRenderTracked((event) => {\n  debugger\n})\n\nonRenderTriggered((event) => {\n  debugger\n})\n</script>",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>\n<div class=\"options-api\">",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "export default {\n  renderTracked(event) {\n    debugger\n  },\n  renderTriggered(event) {\n    debugger\n  }\n}",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</div>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": ":::tip\nComponent debug hooks only work in development mode.\n:::",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "The debug event objects have the following type:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "html",
+          "value": "<span id=\"debugger-event\">",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        },
+        {
+          "type": "html",
+          "value": "</span>",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "code",
+      "lang": "ts",
+      "meta": null,
+      "value": "type DebuggerEvent = {\n  effect: ReactiveEffect\n  target: object\n  type:\n    | TrackOpTypes /* 'get' | 'has' | 'iterate' */\n    | TriggerOpTypes /* 'set' | 'add' | 'delete' | 'clear' */\n  key: any\n  newValue?: any\n  oldValue?: any\n  oldTarget?: Map<any, any> | Set<any>\n}",
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Computed Debugging {#computed-debugging}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "del",
+      "children": [
+        {
+          "type": "html",
+          "value": "<!-- TODO options API equivalent -->",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "<div class=\"composition-api\">",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "We can debug computed properties by passing ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "computed()",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " a second options object with ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "onTrack",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " and ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "onTrigger",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " callbacks:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "onTrack",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " will be called when a reactive property or ref is tracked as a dependency.",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "onTrigger",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " will be called when the watcher callback is triggered by the mutation of a dependency.",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Both callbacks will receive debugger events in the ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "#debugger-event",
+          "children": [
+            {
+              "type": "text",
+              "value": "same format",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " as component debug hooks:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "const plusOne = computed(() => count.value + 1, {\n  onTrack(e) {\n    // triggered when count.value is tracked as a dependency\n    debugger\n  },\n  onTrigger(e) {\n    // triggered when count.value is mutated\n    debugger\n  }\n})\n\n// access plusOne, should trigger onTrack\nconsole.log(plusOne.value)\n\n// mutate count.value, should trigger onTrigger\ncount.value++",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": ":::tip\n",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "onTrack",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " and ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "onTrigger",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " computed options only work in development mode.\n:::",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "</div>",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "<div class=\"options-api\">",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "Computed debugging options are only available via the Composition API ",
+              "data": {}
+            },
+            {
+              "type": "inlineCode",
+              "value": "computed()",
+              "data": {}
+            },
+            {
+              "type": "text",
+              "value": " function.",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "</div>",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Watcher Debugging {#watcher-debugging}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "del",
+      "children": [
+        {
+          "type": "html",
+          "value": "<!-- TODO options API equivalent -->",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "<div class=\"composition-api\">",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Similar to ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "computed()",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", watchers also support the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "onTrack",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " and ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "onTrigger",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " options:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "watch(source, callback, {\n  onTrack(e) {\n    debugger\n  },\n  onTrigger(e) {\n    debugger\n  }\n})\n\nwatchEffect(callback, {\n  onTrack(e) {\n    debugger\n  },\n  onTrigger(e) {\n    debugger\n  }\n})",
+      "data": {}
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "</div>",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "<div class=\"options-api\">",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "Watchers declared with the object syntax also support the ",
+              "data": {}
+            },
+            {
+              "type": "inlineCode",
+              "value": "onTrack",
+              "data": {}
+            },
+            {
+              "type": "text",
+              "value": " and ",
+              "data": {}
+            },
+            {
+              "type": "inlineCode",
+              "value": "onTrigger",
+              "data": {}
+            },
+            {
+              "type": "text",
+              "value": " options:",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "code",
+          "lang": "js",
+          "meta": null,
+          "value": "export default {\n  watch: {\n    source: {\n      handler() {\n        // ...\n      },\n      onTrack(e) {\n        debugger\n      },\n      onTrigger(e) {\n        debugger\n      }\n    }\n  }\n}",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "</div>",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": ":::tip\n",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "onTrack",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " and ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "onTrigger",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " watcher options only work in development mode.\n:::",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Integration with External State Systems {#integration-with-external-state-systems}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Vue's reactivity system works by deeply converting plain JavaScript objects into reactive proxies. The deep conversion can be unnecessary or sometimes unwanted when integrating with external state management systems (e.g. if an external solution also uses Proxies).",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "The general idea of integrating Vue's reactivity system with an external state management solution is to hold the external state in a ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/api/reactivity-advanced#shallowref",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "shallowRef",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ". A shallow ref is only reactive when its ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": ".value",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " property is accessed - the inner value is left intact. When the external state changes, replace the ref value to trigger updates.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Immutable Data {#immutable-data}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "If you are implementing an undo / redo feature, you likely want to take a snapshot of the application's state on every user edit. However, Vue's mutable reactivity system isn't best suited for this if the state tree is large, because serializing the entire state object on every update can be expensive in terms of both CPU and memory costs.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://en.wikipedia.org/wiki/Persistent_data_structure",
+          "children": [
+            {
+              "type": "text",
+              "value": "Immutable data structures",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " solve this by never mutating the state objects - instead, it creates new objects that share the same, unchanged parts with old ones. There are different ways of using immutable data in JavaScript, but we recommend using ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://immerjs.github.io/immer/",
+          "children": [
+            {
+              "type": "text",
+              "value": "Immer",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " with Vue because it allows you to use immutable data while keeping the more ergonomic, mutable syntax.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "We can integrate Immer with Vue via a simple composable:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "import { produce } from 'immer'\nimport { shallowRef } from 'vue'\n\nexport function useImmer(baseState) {\n  const state = shallowRef(baseState)\n  const update = (updater) => {\n    state.value = produce(state.value, updater)\n  }\n\n  return [state, update]\n}",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://play.vuejs.org/#eNp9VMFu2zAM/RXNl6ZAYnfoTlnSdRt66DBsQ7vtEuXg2YyjRpYEUU5TBPn3UZLtuE1RH2KLfCIfycfsk8/GpNsGkmkyw8IK4xiCa8wVV6I22jq2Zw3CbV2DZQe2srpmZ2km/PmMK8a4KrRCxxbCQY1j1pgyd3DrD0s27++OFh689z/0OOEkTBlPvkNuFfvbAE/Gra/UilzOko0Mh2A+ufcHwd9ij8KtWUjwMsAqlxgjcLU854qrVaMKJ7RiTleVDBRHQpWwO4/xB8xHoRg2v+oyh/MioJepT0ClvTsxhnSUi1LOsthN6iMdCGgkBacTY7NGhjd9ScG2k5W2c56M9rG6ceBPdbOWm1AxO0/a+uiZFjJHpFv7Fj10XhdSFBtyntTJkzaxf/ZtQnYguoFNJkUkmAWGs2xAm47onqT/jPWHxjjYuUkJhba57+yUSaFg4tZWN9X6Y9eIcC8ZJ1FQkzo36QNqRZILQXjroAqnXb+9LQzVD3vtnMFpljXKbKq00HWU3/X7i/QivcxKgS5aUglVXjxNAGvK8KnWZSNJWa0KDoGChzmk3L28jSVcQX1o1d1puwfgOpdSP97BqsfQxhCCK9gFTC+tXu7/coR7R71rxRWXBL2FpHOMOAAeYVGJhBvFL3s+kGKIkW5zSfKfd+RHA2u3gzZEpML9y9JS06YtAq5DLFmOMWXsjkM6rET1YjzUcSMk2J/G1/h8TKGOb8HmV7bdQbqzhmLziv0Bd3Govywg2O1x8Umvua3ARffN/Q/S1sDZDfMN5x2glo3nGGFfGlUS7QEusL0NcxWq+o03OwcKu6Ke/+fwhIb89Y3Sj3Qv0w+9xg7/AWfvyMs=",
+          "children": [
+            {
+              "type": "text",
+              "value": "Try it in the Playground",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "State Machines {#state-machines}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://en.wikipedia.org/wiki/Finite-state_machine",
+          "children": [
+            {
+              "type": "text",
+              "value": "State Machine",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " is a model for describing all the possible states an application can be in, and all the possible ways it can transition from one state to another. While it may be overkill for simple components, it can help make complex state flows more robust and manageable.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "One of the most popular state machine implementations in JavaScript is ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://xstate.js.org/",
+          "children": [
+            {
+              "type": "text",
+              "value": "XState",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ". Here's a composable that integrates with it:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "import { createMachine, interpret } from 'xstate'\nimport { shallowRef } from 'vue'\n\nexport function useMachine(options) {\n  const machine = createMachine(options)\n  const state = shallowRef(machine.initialState)\n  const service = interpret(machine)\n    .onTransition((newState) => (state.value = newState))\n    .start()\n  const send = (event) => service.send(event)\n\n  return [state, send]\n}",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://play.vuejs.org/#eNp1U81unDAQfpWRL7DSFqqqUiXEJumhyqVVpDa3ugcKZtcJjC1syEqId8/YBu/uIRcEM9/P/DGz71pn0yhYwUpTD1JbMMKO+o6j7LUaLMwwGvGrqk8SBSzQDqqHJMv7EMleTMIRgGOt0Fj4a2xlxZ5EsPkHhytuOjucbApIrDoeO5HsfQCllVVHUYlVbeW0xr2OKcCzHCwkKQAK3fP56fHx5w/irSyqbfFMgA+h0cKBHZYey45jmYfeqWv6sKLXHbnTF0D5f7RWITzUnaxfD5y5ztIkSCY7zjwKYJ5DyVlf2fokTMrZ5sbZDu6Bs6e25QwK94b0svgKyjwYkEyZR2e2Z2H8n/pK04wV0oL8KEjWJwxncTicnb23C3F2slabIs9H1K/HrFZ9HrIPX7Mv37LPuTC5xEacSfa+V83YEW+bBfleFkuW8QbqQZDEuso9rcOKQQ/CxosIHnQLkWJOVdept9+ijSA6NEJwFGePaUekAdFwr65EaRcxu9BbOKq1JDqnmzIi9oL0RRDu4p1u/ayH9schrhlimGTtOLGnjeJRAJnC56FCQ3SFaYriLWjA4Q7SsPOp6kYnEXMbldKDTW/ssCFgKiaB1kusBWT+rkLYjQiAKhkHvP2j3IqWd5iMQ+M=",
+          "children": [
+            {
+              "type": "text",
+              "value": "Try it in the Playground",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "RxJS {#rxjs}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://rxjs.dev/",
+          "children": [
+            {
+              "type": "text",
+              "value": "RxJS",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " is a library for working with asynchronous event streams. The ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://vueuse.org/",
+          "children": [
+            {
+              "type": "text",
+              "value": "VueUse",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " library provides the ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://vueuse.org/rxjs/readme.html",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "@vueuse/rxjs",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " add-on for connecting RxJS streams with Vue's reactivity system.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Connection to Signals {#connection-to-signals}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Quite a few other frameworks have introduced reactivity primitives similar to refs from Vue's Composition API, under the term \"signals\":",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://docs.solidjs.com/concepts/signals",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Solid Signals",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://angular.dev/guide/signals",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Angular Signals",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://preactjs.com/guide/v10/signals/",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Preact Signals",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://qwik.builder.io/docs/components/state/#usesignal",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Qwik Signals",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Fundamentally, signals are the same kind of reactivity primitive as Vue refs. It's a value container that provides dependency tracking on access, and side-effect triggering on mutation. This reactivity-primitive-based paradigm isn't a particularly new concept in the frontend world: it dates back to implementations like ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://knockoutjs.com/documentation/observables.html",
+          "children": [
+            {
+              "type": "text",
+              "value": "Knockout observables",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " and ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://docs.meteor.com/api/tracker.html",
+          "children": [
+            {
+              "type": "text",
+              "value": "Meteor Tracker",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " from more than a decade ago. Vue Options API and the React state management library ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://mobx.js.org/",
+          "children": [
+            {
+              "type": "text",
+              "value": "MobX",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " are also based on the same principles, but hide the primitives behind object properties.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Although not a necessary trait for something to qualify as signals, today the concept is often discussed alongside the rendering model where updates are performed through fine-grained subscriptions. Due to the use of Virtual DOM, Vue currently ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/guide/extras/rendering-mechanism#compiler-informed-virtual-dom",
+          "children": [
+            {
+              "type": "text",
+              "value": "relies on compilers to achieve similar optimizations",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ". However, we are also exploring a new Solid-inspired compilation strategy, called ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://github.com/vuejs/core-vapor",
+          "children": [
+            {
+              "type": "text",
+              "value": "Vapor Mode",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", that does not rely on Virtual DOM and takes more advantage of Vue's built-in reactivity system.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "API Design Trade-Offs {#api-design-trade-offs}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "The design of Preact and Qwik's signals are very similar to Vue's ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/api/reactivity-advanced#shallowref",
+          "children": [
+            {
+              "type": "text",
+              "value": "shallowRef",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ": all three provide a mutable interface via the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": ".value",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " property. We will focus the discussion on Solid and Angular signals.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 4,
+      "children": [
+        {
+          "type": "text",
+          "value": "Solid Signals {#solid-signals}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Solid's ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "createSignal()",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " API design emphasizes read / write segregation. Signals are exposed as a read-only getter and a separate setter:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "const [count, setCount] = createSignal(0)\n\ncount() // access the value\nsetCount(1) // update the value",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Notice how the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "count",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " signal can be passed down without the setter. This ensures that the state can never be mutated unless the setter is also explicitly exposed. Whether this safety guarantee justifies the more verbose syntax could be subject to the requirement of the project and personal taste - but in case you prefer this API style, you can easily replicate it in Vue:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "import { shallowRef, triggerRef } from 'vue'\n\nexport function createSignal(value, options) {\n  const r = shallowRef(value)\n  const get = () => r.value\n  const set = (v) => {\n    r.value = typeof v === 'function' ? v(r.value) : v\n    if (options?.equals === false) triggerRef(r)\n  }\n  return [get, set]\n}",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://play.vuejs.org/#eNpdUk1TgzAQ/Ss7uQAjgr12oNXxH+ix9IAYaDQkMV/qMPx3N6G0Uy9Msu/tvn2PTORJqcI7SrakMp1myoKh1qldI9iopLYwQadpa+krG0TLYYZeyxGSojSSs/d7E8vFh0ka0YhOCmPh0EknbB4mPYfTEeqbIelD1oiqXPRQCS+WjoojAW8A1Wmzm1A39KYZzHNVYiUib85aKeCx46z7rBuySqQe6h14uINN1pDIBWACVUcqbGwtl17EqvIiR3LyzwcmcXFuTi3n8vuF9jlYzYaBajxfMsDcomv6E/m9E51luN2NV99yR3OQKkAmgykss+SkMZerxMLEZFZ4oBYJGAA600VEryAaD6CPaJwJKwnr9ldR2WMedV1Dsi6WwB58emZlsAV/zqmH9LzfvqBfruUmNvZ4QN7VearjenP4aHwmWsABt4x/+tiImcx/z27Jqw==",
+          "children": [
+            {
+              "type": "text",
+              "value": "Try it in the Playground",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 4,
+      "children": [
+        {
+          "type": "text",
+          "value": "Angular Signals {#angular-signals}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Angular is undergoing some fundamental changes by foregoing dirty-checking and introducing its own implementation of a reactivity primitive. The Angular Signal API looks like this:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "const count = signal(0)\n\ncount() // access the value\ncount.set(1) // set new value\ncount.update((v) => v + 1) // update based on previous value",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Again, we can easily replicate the API in Vue:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "import { shallowRef } from 'vue'\n\nexport function signal(initialValue) {\n  const r = shallowRef(initialValue)\n  const s = () => r.value\n  s.set = (value) => {\n    r.value = value\n  }\n  s.update = (updater) => {\n    r.value = updater(r.value)\n  }\n  return s\n}",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://play.vuejs.org/#eNp9Ul1v0zAU/SuWX9ZCSRh7m9IKGHuAB0AD8WQJZclt6s2xLX+ESlH+O9d2krbr1Df7nnPu17k9/aR11nmgt7SwleHaEQvO6w2TvNXKONITyxtZihWpVKu9g5oMZGtUS66yvJSNF6V5lyjZk71ikslKSeuQ7qUj61G+eL+cgFr5RwGITAkXiyVZb5IAn2/IB+QWeeoHO8GPg1aL0gH+CCl215u7mJ3bW9L3s3IYihyxifMlFRpJqewL1qN3TknysRK8el4zGjNlXtdYa9GFrjryllwvGY18QrisDLQgXZTnSX8pF64zzD7pDWDghbbI5/Hoip7tFL05eLErhVD/HmB75Edpyd8zc9DUaAbso3TrZeU4tjfawSV3vBR/SuFhSfrQUXLHBMvmKqe8A8siK7lmsi5gAbJhWARiIGD9hM7BIfHSgjGaHljzlDyGF2MEPQs6g5dpcAIm8Xs+2XxODTgUn0xVYdJ5RxPhKOd4gdMsA/rgLEq3vEEHlEQPYrbgaqu5APNDh6KWUTyuZC2jcWvfYswZD6spXu2gen4l/mT3Icboz3AWpgNGZ8yVBttM8P2v77DH9wy2qvYC2RfAB7BK+NBjon32ssa2j3ix26/xsrhsftv7vQNpp6FCo4E5RD6jeE93F0Y/tHuT3URd2OLwHyXleRY=",
+          "children": [
+            {
+              "type": "text",
+              "value": "Try it in the Playground",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Compared to Vue refs, Solid and Angular's getter-based API style provide some interesting trade-offs when used in Vue components:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "()",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " is slightly less verbose than ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": ".value",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ", but updating the value is more verbose.",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "There is no ref-unwrapping: accessing values always require ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "()",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ". This makes value access consistent everywhere. This also means you can pass raw signals down as component props.",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Whether these API styles suit you is to some extent subjective. Our goal here is to demonstrate the underlying similarity and trade-offs between these different API designs. We also want to show that Vue is flexible: you are not really locked into the existing APIs. Should it be necessary, you can create your own reactivity primitive API to suit more specific needs.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+/* table */
+table { border-collapse: collapse; width: auto; margin: 1em 0; }
+th, td { border: 1px solid #d0d7de; padding: 6px 13px; }
+th { background: #f6f8fa; font-weight: 600; }
+tr:nth-child(2n) { background: #f6f8fa; }
+
+/* code */
+code { padding: 0.2em 0.4em; font-size: 85%; background: #f6f8fa; border-radius: 6px; font-family: 'SF Mono', 'Fira Code', Menlo, monospace; }
+pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background: #f6f8fa; border-radius: 6px; margin: 1em 0; }
+pre code { padding: 0; background: none; border-radius: 0; font-size: inherit; }
+
+/* blockquote */
+blockquote { padding: 0 1em; color: #656d76; border-left: 0.25em solid #d0d7de; margin: 1em 0; }
+
+/* hr */
+hr { height: 0.25em; padding: 0; margin: 24px 0; background-color: #d0d7de; border: 0; }
+
+/* headings */
+h1, h2, h3, h4, h5, h6 { margin-top: 24px; margin-bottom: 16px; font-weight: 600; line-height: 1.25; }
+h1 { font-size: 2em; padding-bottom: 0.3em; border-bottom: 1px solid #d0d7de; }
+h2 { font-size: 1.5em; padding-bottom: 0.3em; border-bottom: 1px solid #d0d7de; }
+h3 { font-size: 1.25em; }
+
+/* list */
+ul, ol { padding-left: 2em; margin: 0.5em 0; }
+li + li { margin-top: 0.25em; }
+
+/* image */
+img { max-width: 100%; }
+
+/* code diff */
+.code-diff { border-radius: 6px; overflow: hidden; margin: 1em 0; font-size: 13px; border: 1px solid #d0d7de; }
+.code-diff pre { margin: 0; padding: 0; border-radius: 0; border: none; background: #fff; }
+.code-diff .shiki { background: #fff !important; }
+.code-diff .diff-line { display: flex; line-height: 1.45; }
+.code-diff .diff-line-gutter { width: 40px; min-width: 40px; text-align: right; padding: 0 8px 0 0; color: #8b949e; font-size: 12px; user-select: none; flex-shrink: 0; }
+.code-diff .diff-line-sign { width: 20px; min-width: 20px; text-align: center; user-select: none; flex-shrink: 0; }
+.code-diff .diff-line-content { flex: 1; padding-right: 12px; white-space: pre; overflow-x: auto; }
+.code-diff .diff-line.del { background: #ffebe9; }
+.code-diff .diff-line.del .diff-line-gutter { background: #ffd7d5; color: #82071e; }
+.code-diff .diff-line.del .diff-line-sign { color: #82071e; }
+.code-diff .diff-line.ins { background: #e6ffec; }
+.code-diff .diff-line.ins .diff-line-gutter { background: #ccffd8; color: #116329; }
+.code-diff .diff-line.ins .diff-line-sign { color: #116329; }
+.code-diff .diff-line.ctx { background: #fff; }
+.code-diff .diff-line.ctx .diff-line-gutter { color: #8b949e; }
+.code-diff .diff-header { padding: 8px 12px; background: #f6f8fa; border-bottom: 1px solid #d0d7de; font-size: 12px; color: #656d76; font-family: 'SF Mono', 'Fira Code', Menlo, monospace; }
+
+ins { background-color: #e6ffec; text-decoration: none; border-radius: 2px; padding: 0 2px; }
+del { background-color: #ffebe9; text-decoration: line-through; border-radius: 2px; padding: 0 2px; }
+ins.diff-block, del.diff-block { display: block; padding-left: 10px; border-left: 3px solid; }
+ins.diff-block { border-left-color: #2cbe4e; }
+del.diff-block { border-left-color: #cb2431; }
+ins > hr, ins > pre { background-color: #e6ffec; }
+del > hr, del > pre { background-color: #ffebe9; }
+ins > table, del > table { border-collapse: collapse; }
+ins > table th, ins > table td { background-color: #e6ffec; }
+del > table th, del > table td { background-color: #ffebe9; }
+li[data-diff="ins"] { background-color: #e6ffec; border-radius: 2px; }
+li[data-diff="del"] { background-color: #ffebe9; border-radius: 2px; text-decoration: line-through; }
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:16px;font-size:14px;line-height:1.6;color:#1a1a1a;}</style></head><body><h1>Using <code>Environment</code> Instances</h1>
+<p>:::info Release Candidate
+The Environment API is generally in the release candidate phase. We'll maintain stability in the APIs between major releases to allow the ecosystem to experiment and build upon them. However, note that <a href="/changes/#considering">some specific APIs</a> are still considered experimental.</p>
+<p>We plan to stabilize these new APIs (with potential breaking changes) in a future major release once downstream projects have had time to experiment with the new features and validate them.</p>
+<p>Resources:</p>
+<ul>
+<li><a href="https://github.com/vitejs/vite/discussions/16358">Feedback discussion</a> where we are gathering feedback about the new APIs.</li>
+<li><a href="https://github.com/vitejs/vite/pull/16471">Environment API PR</a> where the new APIs were implemented and reviewed.</li>
+</ul>
+<p>Please share your feedback with us.
+:::</p>
+<h2>Accessing the Environments</h2>
+<p>During dev, the available environments in a dev server can be accessed using <code>server.environments</code>:</p>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#6A737D">// create the server, or get it from the configureServer hook</span></span>
+<span class="line"><span style="color:#D73A49">const</span><span style="color:#005CC5"> server</span><span style="color:#D73A49"> =</span><span style="color:#D73A49"> await</span><span style="color:#6F42C1"> createServer</span><span style="color:#24292E">(</span><span style="color:#6A737D">/* options */</span><span style="color:#24292E">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">const</span><span style="color:#005CC5"> clientEnvironment</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> server.environments.client</span></span>
+<span class="line"><span style="color:#24292E">clientEnvironment.</span><span style="color:#6F42C1">transformRequest</span><span style="color:#24292E">(url)</span></span>
+<span class="line"><span style="color:#24292E">console.</span><span style="color:#6F42C1">log</span><span style="color:#24292E">(server.environments.ssr.moduleGraph)</span></span></code></pre>
+</code></pre>
+<p>You can also access the current environment from plugins. See the <a href="./api-environment-plugins.md#accessing-the-current-environment-in-hooks">Environment API for Plugins</a> for more details.</p>
+<h2><code>DevEnvironment</code> class</h2>
+<p>During dev, each environment is an instance of the <code>DevEnvironment</code> class:</p>
+<pre><code class="language-ts"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">class</span><span style="color:#6F42C1"> DevEnvironment</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#6A737D">  /**</span></span>
+<span class="line"><span style="color:#6A737D">   * Unique identifier for the environment in a Vite server.</span></span>
+<span class="line"><span style="color:#6A737D">   * By default Vite exposes 'client' and 'ssr' environments.</span></span>
+<span class="line"><span style="color:#6A737D">   */</span></span>
+<span class="line"><span style="color:#E36209">  name</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span></span>
+<span class="line"><span style="color:#6A737D">  /**</span></span>
+<span class="line"><span style="color:#6A737D">   * Communication channel to send and receive messages from the</span></span>
+<span class="line"><span style="color:#6A737D">   * associated module runner in the target runtime.</span></span>
+<span class="line"><span style="color:#6A737D">   */</span></span>
+<span class="line"><span style="color:#E36209">  hot</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> NormalizedHotChannel</span></span>
+<span class="line"><span style="color:#6A737D">  /**</span></span>
+<span class="line"><span style="color:#6A737D">   * Graph of module nodes, with the imported relationship between</span></span>
+<span class="line"><span style="color:#6A737D">   * processed modules and the cached result of the processed code.</span></span>
+<span class="line"><span style="color:#6A737D">   */</span></span>
+<span class="line"><span style="color:#E36209">  moduleGraph</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> EnvironmentModuleGraph</span></span>
+<span class="line"><span style="color:#6A737D">  /**</span></span>
+<span class="line"><span style="color:#6A737D">   * Resolved plugins for this environment, including the ones</span></span>
+<span class="line"><span style="color:#6A737D">   * created using the per-environment `create` hook</span></span>
+<span class="line"><span style="color:#6A737D">   */</span></span>
+<span class="line"><span style="color:#E36209">  plugins</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> Plugin</span><span style="color:#24292E">[]</span></span>
+<span class="line"><span style="color:#6A737D">  /**</span></span>
+<span class="line"><span style="color:#6A737D">   * Allows to resolve, load, and transform code through the</span></span>
+<span class="line"><span style="color:#6A737D">   * environment plugins pipeline</span></span>
+<span class="line"><span style="color:#6A737D">   */</span></span>
+<span class="line"><span style="color:#E36209">  pluginContainer</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> EnvironmentPluginContainer</span></span>
+<span class="line"><span style="color:#6A737D">  /**</span></span>
+<span class="line"><span style="color:#6A737D">   * Resolved config options for this environment. Options at the server</span></span>
+<span class="line"><span style="color:#6A737D">   * global scope are taken as defaults for all environments, and can</span></span>
+<span class="line"><span style="color:#6A737D">   * be overridden (resolve conditions, external, optimizedDeps)</span></span>
+<span class="line"><span style="color:#6A737D">   */</span></span>
+<span class="line"><span style="color:#E36209">  config</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> ResolvedConfig</span><span style="color:#D73A49"> &#x26;</span><span style="color:#6F42C1"> ResolvedDevEnvironmentOptions</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">  constructor</span><span style="color:#24292E">(</span></span>
+<span class="line"><span style="color:#E36209">    name</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#E36209">    config</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> ResolvedConfig</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#E36209">    context</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> DevEnvironmentContext</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#24292E">  )</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">  /**</span></span>
+<span class="line"><span style="color:#6A737D">   * Resolve the URL to an id, load it, and process the code using the</span></span>
+<span class="line"><span style="color:#6A737D">   * plugins pipeline. The module graph is also updated.</span></span>
+<span class="line"><span style="color:#6A737D">   */</span></span>
+<span class="line"><span style="color:#D73A49">  async</span><span style="color:#6F42C1"> transformRequest</span><span style="color:#24292E">(</span><span style="color:#E36209">url</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span><span style="color:#24292E">)</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> Promise</span><span style="color:#24292E">&#x3C;</span><span style="color:#6F42C1">TransformResult</span><span style="color:#D73A49"> |</span><span style="color:#005CC5"> null</span><span style="color:#24292E">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">  /**</span></span>
+<span class="line"><span style="color:#6A737D">   * Register a request to be processed with low priority. This is useful</span></span>
+<span class="line"><span style="color:#6A737D">   * to avoid waterfalls. The Vite server has information about the</span></span>
+<span class="line"><span style="color:#6A737D">   * imported modules by other requests, so it can warmup the module graph</span></span>
+<span class="line"><span style="color:#6A737D">   * so the modules are already processed when they are requested.</span></span>
+<span class="line"><span style="color:#6A737D">   */</span></span>
+<span class="line"><span style="color:#D73A49">  async</span><span style="color:#6F42C1"> warmupRequest</span><span style="color:#24292E">(</span><span style="color:#E36209">url</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span><span style="color:#24292E">)</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> Promise</span><span style="color:#24292E">&#x3C;</span><span style="color:#005CC5">void</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre>
+<p>With <code>DevEnvironmentContext</code> being:</p>
+<pre><code class="language-ts"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">interface</span><span style="color:#6F42C1"> DevEnvironmentContext</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#E36209">  hot</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> boolean</span></span>
+<span class="line"><span style="color:#E36209">  transport</span><span style="color:#D73A49">?:</span><span style="color:#6F42C1"> HotChannel</span><span style="color:#D73A49"> |</span><span style="color:#6F42C1"> WebSocketServer</span></span>
+<span class="line"><span style="color:#E36209">  options</span><span style="color:#D73A49">?:</span><span style="color:#6F42C1"> EnvironmentOptions</span></span>
+<span class="line"><span style="color:#E36209">  remoteRunner</span><span style="color:#D73A49">?:</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#E36209">    inlineSourceMap</span><span style="color:#D73A49">?:</span><span style="color:#005CC5"> boolean</span></span>
+<span class="line"><span style="color:#24292E">  }</span></span>
+<span class="line"><span style="color:#E36209">  depsOptimizer</span><span style="color:#D73A49">?:</span><span style="color:#6F42C1"> DepsOptimizer</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre>
+<p>and with <code>TransformResult</code> being:</p>
+<pre><code class="language-ts"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">interface</span><span style="color:#6F42C1"> TransformResult</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#E36209">  code</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span></span>
+<span class="line"><span style="color:#E36209">  map</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> SourceMap</span><span style="color:#D73A49"> |</span><span style="color:#24292E"> { </span><span style="color:#E36209">mappings</span><span style="color:#D73A49">:</span><span style="color:#032F62"> ''</span><span style="color:#24292E"> } </span><span style="color:#D73A49">|</span><span style="color:#005CC5"> null</span></span>
+<span class="line"><span style="color:#E36209">  etag</span><span style="color:#D73A49">?:</span><span style="color:#005CC5"> string</span></span>
+<span class="line"><span style="color:#E36209">  deps</span><span style="color:#D73A49">?:</span><span style="color:#005CC5"> string</span><span style="color:#24292E">[]</span></span>
+<span class="line"><span style="color:#E36209">  dynamicDeps</span><span style="color:#D73A49">?:</span><span style="color:#005CC5"> string</span><span style="color:#24292E">[]</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre>
+<p>An environment instance in the Vite server lets you process a URL using the <code>environment.transformRequest(url)</code> method. This function will use the plugin pipeline to resolve the <code>url</code> to a module <code>id</code>, load it (reading the file from the file system or through a plugin that implements a virtual module), and then transform the code. While transforming the module, imports and other metadata will be recorded in the environment module graph by creating or updating the corresponding module node. When processing is done, the transform result is also stored in the module.</p>
+<p>:::info transformRequest naming
+We are using <code>transformRequest(url)</code> and <code>warmupRequest(url)</code> in the current version of this proposal so it is easier to discuss and understand for users used to Vite's current API. Before releasing, we can take the opportunity to review these names too. For example, it could be named <code>environment.processModule(url)</code> or <code>environment.loadModule(url)</code> taking a page from Rollup's <code>context.load(id)</code> in plugin hooks. For the moment, we think keeping the current names and delaying this discussion is better.
+:::</p>
+<h2>Separate Module Graphs</h2>
+<p>Each environment has an isolated module graph. All module graphs have the same signature, so generic algorithms can be implemented to crawl or query the graph without depending on the environment. <code>hotUpdate</code> is a good example. When a file is modified, the module graph of each environment will be used to discover the affected modules and perform HMR for each environment independently.</p>
+<p>::: info
+Vite v5 had a mixed Client and SSR module graph. Given an unprocessed or invalidated node, it isn't possible to know if it corresponds to the Client, SSR, or both environments. Module nodes have some properties prefixed, like <code>clientImportedModules</code> and <code>ssrImportedModules</code> (and <code>importedModules</code> that returns the union of both). <code>importers</code> contains all importers from both the Client and SSR environment for each module node. A module node also has <code>transformResult</code> and <code>ssrTransformResult</code>. A backward compatibility layer allows the ecosystem to migrate from the deprecated <code>server.moduleGraph</code>.
+:::</p>
+<p>Each module is represented by a <code>EnvironmentModuleNode</code> instance. Modules may be registered in the graph without yet being processed (<code>transformResult</code> would be <code>null</code> in that case). <code>importers</code> and <code>importedModules</code> are also updated after the module is processed.</p>
+<pre><code class="language-ts"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">class</span><span style="color:#6F42C1"> EnvironmentModuleNode</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#E36209">  environment</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E36209">  url</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span></span>
+<span class="line"><span style="color:#E36209">  id</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span><span style="color:#D73A49"> |</span><span style="color:#005CC5"> null</span><span style="color:#D73A49"> =</span><span style="color:#005CC5"> null</span></span>
+<span class="line"><span style="color:#E36209">  file</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span><span style="color:#D73A49"> |</span><span style="color:#005CC5"> null</span><span style="color:#D73A49"> =</span><span style="color:#005CC5"> null</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E36209">  type</span><span style="color:#D73A49">:</span><span style="color:#032F62"> 'js'</span><span style="color:#D73A49"> |</span><span style="color:#032F62"> 'css'</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E36209">  importers</span><span style="color:#D73A49"> =</span><span style="color:#D73A49"> new</span><span style="color:#6F42C1"> Set</span><span style="color:#24292E">&#x3C;</span><span style="color:#6F42C1">EnvironmentModuleNode</span><span style="color:#24292E">>()</span></span>
+<span class="line"><span style="color:#E36209">  importedModules</span><span style="color:#D73A49"> =</span><span style="color:#D73A49"> new</span><span style="color:#6F42C1"> Set</span><span style="color:#24292E">&#x3C;</span><span style="color:#6F42C1">EnvironmentModuleNode</span><span style="color:#24292E">>()</span></span>
+<span class="line"><span style="color:#E36209">  importedBindings</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> Map</span><span style="color:#24292E">&#x3C;</span><span style="color:#005CC5">string</span><span style="color:#24292E">, </span><span style="color:#6F42C1">Set</span><span style="color:#24292E">&#x3C;</span><span style="color:#005CC5">string</span><span style="color:#24292E">>> </span><span style="color:#D73A49">|</span><span style="color:#005CC5"> null</span><span style="color:#D73A49"> =</span><span style="color:#005CC5"> null</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E36209">  info</span><span style="color:#D73A49">?:</span><span style="color:#6F42C1"> ModuleInfo</span></span>
+<span class="line"><span style="color:#E36209">  meta</span><span style="color:#D73A49">?:</span><span style="color:#6F42C1"> Record</span><span style="color:#24292E">&#x3C;</span><span style="color:#005CC5">string</span><span style="color:#24292E">, </span><span style="color:#005CC5">any</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#E36209">  transformResult</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> TransformResult</span><span style="color:#D73A49"> |</span><span style="color:#005CC5"> null</span><span style="color:#D73A49"> =</span><span style="color:#005CC5"> null</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E36209">  acceptedHmrDeps</span><span style="color:#D73A49"> =</span><span style="color:#D73A49"> new</span><span style="color:#6F42C1"> Set</span><span style="color:#24292E">&#x3C;</span><span style="color:#6F42C1">EnvironmentModuleNode</span><span style="color:#24292E">>()</span></span>
+<span class="line"><span style="color:#E36209">  acceptedHmrExports</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> Set</span><span style="color:#24292E">&#x3C;</span><span style="color:#005CC5">string</span><span style="color:#24292E">> </span><span style="color:#D73A49">|</span><span style="color:#005CC5"> null</span><span style="color:#D73A49"> =</span><span style="color:#005CC5"> null</span></span>
+<span class="line"><span style="color:#E36209">  isSelfAccepting</span><span style="color:#D73A49">?:</span><span style="color:#005CC5"> boolean</span></span>
+<span class="line"><span style="color:#E36209">  lastHMRTimestamp</span><span style="color:#D73A49"> =</span><span style="color:#005CC5"> 0</span></span>
+<span class="line"><span style="color:#E36209">  lastInvalidationTimestamp</span><span style="color:#D73A49"> =</span><span style="color:#005CC5"> 0</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre>
+<p><code>environment.moduleGraph</code> is an instance of <code>EnvironmentModuleGraph</code>:</p>
+<pre><code class="language-ts"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">export</span><span style="color:#D73A49"> class</span><span style="color:#6F42C1"> EnvironmentModuleGraph</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#E36209">  environment</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E36209">  urlToModuleMap</span><span style="color:#D73A49"> =</span><span style="color:#D73A49"> new</span><span style="color:#6F42C1"> Map</span><span style="color:#24292E">&#x3C;</span><span style="color:#005CC5">string</span><span style="color:#24292E">, </span><span style="color:#6F42C1">EnvironmentModuleNode</span><span style="color:#24292E">>()</span></span>
+<span class="line"><span style="color:#E36209">  idToModuleMap</span><span style="color:#D73A49"> =</span><span style="color:#D73A49"> new</span><span style="color:#6F42C1"> Map</span><span style="color:#24292E">&#x3C;</span><span style="color:#005CC5">string</span><span style="color:#24292E">, </span><span style="color:#6F42C1">EnvironmentModuleNode</span><span style="color:#24292E">>()</span></span>
+<span class="line"><span style="color:#E36209">  etagToModuleMap</span><span style="color:#D73A49"> =</span><span style="color:#D73A49"> new</span><span style="color:#6F42C1"> Map</span><span style="color:#24292E">&#x3C;</span><span style="color:#005CC5">string</span><span style="color:#24292E">, </span><span style="color:#6F42C1">EnvironmentModuleNode</span><span style="color:#24292E">>()</span></span>
+<span class="line"><span style="color:#E36209">  fileToModulesMap</span><span style="color:#D73A49"> =</span><span style="color:#D73A49"> new</span><span style="color:#6F42C1"> Map</span><span style="color:#24292E">&#x3C;</span><span style="color:#005CC5">string</span><span style="color:#24292E">, </span><span style="color:#6F42C1">Set</span><span style="color:#24292E">&#x3C;</span><span style="color:#6F42C1">EnvironmentModuleNode</span><span style="color:#24292E">>>()</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">  constructor</span><span style="color:#24292E">(</span></span>
+<span class="line"><span style="color:#E36209">    environment</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#6F42C1">    resolveId</span><span style="color:#D73A49">:</span><span style="color:#24292E"> (</span><span style="color:#E36209">url</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span><span style="color:#24292E">) </span><span style="color:#D73A49">=></span><span style="color:#6F42C1"> Promise</span><span style="color:#24292E">&#x3C;</span><span style="color:#6F42C1">PartialResolvedId</span><span style="color:#D73A49"> |</span><span style="color:#005CC5"> null</span><span style="color:#24292E">>,</span></span>
+<span class="line"><span style="color:#24292E">  )</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">  async</span><span style="color:#6F42C1"> getModuleByUrl</span><span style="color:#24292E">(</span></span>
+<span class="line"><span style="color:#E36209">    rawUrl</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#24292E">  )</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> Promise</span><span style="color:#24292E">&#x3C;</span><span style="color:#6F42C1">EnvironmentModuleNode</span><span style="color:#D73A49"> |</span><span style="color:#005CC5"> undefined</span><span style="color:#24292E">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6F42C1">  getModuleById</span><span style="color:#24292E">(</span><span style="color:#E36209">id</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span><span style="color:#24292E">)</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> EnvironmentModuleNode</span><span style="color:#D73A49"> |</span><span style="color:#005CC5"> undefined</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6F42C1">  getModulesByFile</span><span style="color:#24292E">(</span><span style="color:#E36209">file</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span><span style="color:#24292E">)</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> Set</span><span style="color:#24292E">&#x3C;</span><span style="color:#6F42C1">EnvironmentModuleNode</span><span style="color:#24292E">> </span><span style="color:#D73A49">|</span><span style="color:#005CC5"> undefined</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6F42C1">  onFileChange</span><span style="color:#24292E">(</span><span style="color:#E36209">file</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span><span style="color:#24292E">)</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> void</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6F42C1">  onFileDelete</span><span style="color:#24292E">(</span><span style="color:#E36209">file</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span><span style="color:#24292E">)</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> void</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6F42C1">  invalidateModule</span><span style="color:#24292E">(</span></span>
+<span class="line"><span style="color:#E36209">    mod</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> EnvironmentModuleNode</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#E36209">    seen</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> Set</span><span style="color:#24292E">&#x3C;</span><span style="color:#6F42C1">EnvironmentModuleNode</span><span style="color:#24292E">> </span><span style="color:#D73A49">=</span><span style="color:#D73A49"> new</span><span style="color:#6F42C1"> Set</span><span style="color:#24292E">(),</span></span>
+<span class="line"><span style="color:#E36209">    timestamp</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> number</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> monotonicDateNow</span><span style="color:#24292E">(),</span></span>
+<span class="line"><span style="color:#E36209">    isHmr</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> boolean</span><span style="color:#D73A49"> =</span><span style="color:#005CC5"> false</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#24292E">  )</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> void</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6F42C1">  invalidateAll</span><span style="color:#24292E">()</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> void</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">  async</span><span style="color:#6F42C1"> ensureEntryFromUrl</span><span style="color:#24292E">(</span></span>
+<span class="line"><span style="color:#E36209">    rawUrl</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#E36209">    setIsSelfAccepting</span><span style="color:#D73A49"> =</span><span style="color:#005CC5"> true</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#24292E">  )</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> Promise</span><span style="color:#24292E">&#x3C;</span><span style="color:#6F42C1">EnvironmentModuleNode</span><span style="color:#24292E">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6F42C1">  createFileOnlyEntry</span><span style="color:#24292E">(</span><span style="color:#E36209">file</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span><span style="color:#24292E">)</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> EnvironmentModuleNode</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">  async</span><span style="color:#6F42C1"> resolveUrl</span><span style="color:#24292E">(</span><span style="color:#E36209">url</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span><span style="color:#24292E">)</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> Promise</span><span style="color:#24292E">&#x3C;</span><span style="color:#6F42C1">ResolvedUrl</span><span style="color:#24292E">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6F42C1">  updateModuleTransformResult</span><span style="color:#24292E">(</span></span>
+<span class="line"><span style="color:#E36209">    mod</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> EnvironmentModuleNode</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#E36209">    result</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> TransformResult</span><span style="color:#D73A49"> |</span><span style="color:#005CC5"> null</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#24292E">  )</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> void</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6F42C1">  getModuleByEtag</span><span style="color:#24292E">(</span><span style="color:#E36209">etag</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> string</span><span style="color:#24292E">)</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> EnvironmentModuleNode</span><span style="color:#D73A49"> |</span><span style="color:#005CC5"> undefined</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre></body></html>

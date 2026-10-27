@@ -1,0 +1,925 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "heading",
+      "depth": 1,
+      "children": [
+        {
+          "type": "text",
+          "value": "Using ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "Environment",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " Instances",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": ":::info Release Candidate\nThe Environment API is generally in the release candidate phase. We'll maintain stability in the APIs between major releases to allow the ecosystem to experiment and build upon them. However, note that ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/changes/#considering",
+          "children": [
+            {
+              "type": "text",
+              "value": "some specific APIs",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " are still considered experimental.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "We plan to stabilize these new APIs (with potential breaking changes) in a future major release once downstream projects have had time to experiment with the new features and validate them.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Resources:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://github.com/vitejs/vite/discussions/16358",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Feedback discussion",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " where we are gathering feedback about the new APIs.",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://github.com/vitejs/vite/pull/16471",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Environment API PR",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " where the new APIs were implemented and reviewed.",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Please share your feedback with us.\n:::",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Accessing the Environments",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "During dev, the available environments in a dev server can be accessed using ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "server.environments",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ":",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "// create the server, or get it from the configureServer hook\nconst server = await createServer(/* options */)\n\nconst clientEnvironment = server.environments.client\nclientEnvironment.transformRequest(url)\nconsole.log(server.environments.ssr.moduleGraph)",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "You can also access the current environment from plugins. See the ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "./api-environment-plugins.md#accessing-the-current-environment-in-hooks",
+          "children": [
+            {
+              "type": "text",
+              "value": "Environment API for Plugins",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " for more details.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "inlineCode",
+          "value": "DevEnvironment",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " class",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "During dev, each environment is an instance of the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "DevEnvironment",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " class:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "ts",
+      "meta": null,
+      "value": "class DevEnvironment {\n  /**\n   * Unique identifier for the environment in a Vite server.\n   * By default Vite exposes 'client' and 'ssr' environments.\n   */\n  name: string\n  /**\n   * Communication channel to send and receive messages from the\n   * associated module runner in the target runtime.\n   */\n  hot: NormalizedHotChannel\n  /**\n   * Graph of module nodes, with the imported relationship between\n   * processed modules and the cached result of the processed code.\n   */\n  moduleGraph: EnvironmentModuleGraph\n  /**\n   * Resolved plugins for this environment, including the ones\n   * created using the per-environment `create` hook\n   */\n  plugins: Plugin[]\n  /**\n   * Allows to resolve, load, and transform code through the\n   * environment plugins pipeline\n   */\n  pluginContainer: EnvironmentPluginContainer\n  /**\n   * Resolved config options for this environment. Options at the server\n   * global scope are taken as defaults for all environments, and can\n   * be overridden (resolve conditions, external, optimizedDeps)\n   */\n  config: ResolvedConfig & ResolvedDevEnvironmentOptions\n\n  constructor(\n    name: string,\n    config: ResolvedConfig,\n    context: DevEnvironmentContext,\n  )\n\n  /**\n   * Resolve the URL to an id, load it, and process the code using the\n   * plugins pipeline. The module graph is also updated.\n   */\n  async transformRequest(url: string): Promise<TransformResult | null>\n\n  /**\n   * Register a request to be processed with low priority. This is useful\n   * to avoid waterfalls. The Vite server has information about the\n   * imported modules by other requests, so it can warmup the module graph\n   * so the modules are already processed when they are requested.\n   */\n  async warmupRequest(url: string): Promise<void>\n\n  /**\n   * Called by the module runner to retrieve information about the specified\n   * module. Internally calls `transformRequest` and wraps the result in the\n   * format that the module runner understands.\n   * This method is not meant to be called manually.\n   */\n  async fetchModule(\n    id: string,\n    importer?: string,\n    options?: FetchFunctionOptions,\n  ): Promise<FetchResult>\n}",
+      "data": {
+        "diffOldContent": "class DevEnvironment {\n  /**\n   * Unique identifier for the environment in a Vite server.\n   * By default Vite exposes 'client' and 'ssr' environments.\n   */\n  name: string\n  /**\n   * Communication channel to send and receive messages from the\n   * associated module runner in the target runtime.\n   */\n  hot: NormalizedHotChannel\n  /**\n   * Graph of module nodes, with the imported relationship between\n   * processed modules and the cached result of the processed code.\n   */\n  moduleGraph: EnvironmentModuleGraph\n  /**\n   * Resolved plugins for this environment, including the ones\n   * created using the per-environment `create` hook\n   */\n  plugins: Plugin[]\n  /**\n   * Allows to resolve, load, and transform code through the\n   * environment plugins pipeline\n   */\n  pluginContainer: EnvironmentPluginContainer\n  /**\n   * Resolved config options for this environment. Options at the server\n   * global scope are taken as defaults for all environments, and can\n   * be overridden (resolve conditions, external, optimizedDeps)\n   */\n  config: ResolvedConfig & ResolvedDevEnvironmentOptions\n\n  constructor(\n    name: string,\n    config: ResolvedConfig,\n    context: DevEnvironmentContext,\n  )\n\n  /**\n   * Resolve the URL to an id, load it, and process the code using the\n   * plugins pipeline. The module graph is also updated.\n   */\n  async transformRequest(url: string): Promise<TransformResult | null>\n\n  /**\n   * Register a request to be processed with low priority. This is useful\n   * to avoid waterfalls. The Vite server has information about the\n   * imported modules by other requests, so it can warmup the module graph\n   * so the modules are already processed when they are requested.\n   */\n  async warmupRequest(url: string): Promise<void>\n}"
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "With ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "DevEnvironmentContext",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " being:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "ts",
+      "meta": null,
+      "value": "interface DevEnvironmentContext {\n  hot: boolean\n  transport?: HotChannel | WebSocketServer\n  options?: EnvironmentOptions\n  remoteRunner?: {\n    inlineSourceMap?: boolean\n  }\n  depsOptimizer?: DepsOptimizer\n}",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "and with ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "TransformResult",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " being:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "ts",
+      "meta": null,
+      "value": "interface TransformResult {\n  code: string\n  map: SourceMap | { mappings: '' } | null\n  etag?: string\n  deps?: string[]\n  dynamicDeps?: string[]\n}",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "An environment instance in the Vite server lets you process a URL using the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "environment.transformRequest(url)",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " method. This function will use the plugin pipeline to resolve the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "url",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " to a module ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "id",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", load it (reading the file from the file system or through a plugin that implements a virtual module), and then transform the code. While transforming the module, imports and other metadata will be recorded in the environment module graph by creating or updating the corresponding module node. When processing is done, the transform result is also stored in the module.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": ":::info transformRequest naming\nWe are using ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "transformRequest(url)",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " and ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "warmupRequest(url)",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " in the current version of this proposal so it is easier to discuss and understand for users used to Vite's current API. Before releasing, we can take the opportunity to review these names too. For example, it could be named ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "environment.processModule(url)",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " or ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "environment.loadModule(url)",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " taking a page from Rollup's ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "context.load(id)",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " in plugin hooks. For the moment, we think keeping the current names and delaying this discussion is better.\n:::",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Separate Module Graphs",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Each environment has an isolated module graph. All module graphs have the same signature, so generic algorithms can be implemented to crawl or query the graph without depending on the environment. ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "hotUpdate",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " is a good example. When a file is modified, the module graph of each environment will be used to discover the affected modules and perform HMR for each environment independently.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "::: info\nVite v5 had a mixed Client and SSR module graph. Given an unprocessed or invalidated node, it isn't possible to know if it corresponds to the Client, SSR, or both environments. Module nodes have some properties prefixed, like ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "clientImportedModules",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " and ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "ssrImportedModules",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " (and ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "importedModules",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " that returns the union of both). ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "importers",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " contains all importers from both the Client and SSR environment for each module node. A module node also has ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "transformResult",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " and ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "ssrTransformResult",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ". A backward compatibility layer allows the ecosystem to migrate from the deprecated ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "server.moduleGraph",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ".\n:::",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Each module is represented by a ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "EnvironmentModuleNode",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " instance. Modules may be registered in the graph without yet being processed (",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "transformResult",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " would be ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "null",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " in that case). ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "importers",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " and ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "importedModules",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " are also updated after the module is processed.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "ts",
+      "meta": null,
+      "value": "class EnvironmentModuleNode {\n  environment: string\n\n  url: string\n  id: string | null = null\n  file: string | null = null\n\n  type: 'js' | 'css'\n\n  importers = new Set<EnvironmentModuleNode>()\n  importedModules = new Set<EnvironmentModuleNode>()\n  importedBindings: Map<string, Set<string>> | null = null\n\n  info?: ModuleInfo\n  meta?: Record<string, any>\n  transformResult: TransformResult | null = null\n\n  acceptedHmrDeps = new Set<EnvironmentModuleNode>()\n  acceptedHmrExports: Set<string> | null = null\n  isSelfAccepting?: boolean\n  lastHMRTimestamp = 0\n  lastInvalidationTimestamp = 0\n}",
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "inlineCode",
+          "value": "environment.moduleGraph",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " is an instance of ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "EnvironmentModuleGraph",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ":",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "ts",
+      "meta": null,
+      "value": "export class EnvironmentModuleGraph {\n  environment: string\n\n  urlToModuleMap = new Map<string, EnvironmentModuleNode>()\n  idToModuleMap = new Map<string, EnvironmentModuleNode>()\n  etagToModuleMap = new Map<string, EnvironmentModuleNode>()\n  fileToModulesMap = new Map<string, Set<EnvironmentModuleNode>>()\n\n  constructor(\n    environment: string,\n    resolveId: (url: string) => Promise<PartialResolvedId | null>,\n  )\n\n  async getModuleByUrl(\n    rawUrl: string,\n  ): Promise<EnvironmentModuleNode | undefined>\n\n  getModuleById(id: string): EnvironmentModuleNode | undefined\n\n  getModulesByFile(file: string): Set<EnvironmentModuleNode> | undefined\n\n  onFileChange(file: string): void\n\n  onFileDelete(file: string): void\n\n  invalidateModule(\n    mod: EnvironmentModuleNode,\n    seen: Set<EnvironmentModuleNode> = new Set(),\n    timestamp: number = monotonicDateNow(),\n    isHmr: boolean = false,\n  ): void\n\n  invalidateAll(): void\n\n  async ensureEntryFromUrl(\n    rawUrl: string,\n    setIsSelfAccepting = true,\n  ): Promise<EnvironmentModuleNode>\n\n  createFileOnlyEntry(file: string): EnvironmentModuleNode\n\n  async resolveUrl(url: string): Promise<ResolvedUrl>\n\n  updateModuleTransformResult(\n    mod: EnvironmentModuleNode,\n    result: TransformResult | null,\n  ): void\n\n  getModuleByEtag(etag: string): EnvironmentModuleNode | undefined\n}",
+      "data": {}
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 2,
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "FetchResult"
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "The "
+            },
+            {
+              "type": "inlineCode",
+              "value": "environment.fetchModule"
+            },
+            {
+              "type": "text",
+              "value": " method returns a "
+            },
+            {
+              "type": "inlineCode",
+              "value": "FetchResult"
+            },
+            {
+              "type": "text",
+              "value": " that is meant to be consumed by the module runner. "
+            },
+            {
+              "type": "inlineCode",
+              "value": "FetchResult"
+            },
+            {
+              "type": "text",
+              "value": " is a union of "
+            },
+            {
+              "type": "inlineCode",
+              "value": "CachedFetchResult"
+            },
+            {
+              "type": "text",
+              "value": ", "
+            },
+            {
+              "type": "inlineCode",
+              "value": "ExternalFetchResult"
+            },
+            {
+              "type": "text",
+              "value": ", and "
+            },
+            {
+              "type": "inlineCode",
+              "value": "ViteFetchResult"
+            },
+            {
+              "type": "text",
+              "value": "."
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "CachedFetchResult"
+            },
+            {
+              "type": "text",
+              "value": " is analogous to the "
+            },
+            {
+              "type": "inlineCode",
+              "value": "304"
+            },
+            {
+              "type": "text",
+              "value": " (Not Modified) HTTP status code."
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "code",
+          "lang": "ts",
+          "meta": null,
+          "value": "export interface CachedFetchResult {\n  /**\n   * If the module is cached in the runner, this confirms\n   * it was not invalidated on the server side.\n   */\n  cache: true\n}",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "ExternalFetchResult"
+            },
+            {
+              "type": "text",
+              "value": " instructs the module runner to import the module using the "
+            },
+            {
+              "type": "inlineCode",
+              "value": "runExternalModule"
+            },
+            {
+              "type": "text",
+              "value": " method on the "
+            },
+            {
+              "type": "link",
+              "title": null,
+              "url": "/guide/api-environment-runtimes#moduleevaluator",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "ModuleEvaluator"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ". In this case, the default module evaluator will use the runtime's native "
+            },
+            {
+              "type": "inlineCode",
+              "value": "import"
+            },
+            {
+              "type": "text",
+              "value": " instead of processing the file through Vite."
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "code",
+          "lang": "ts",
+          "meta": null,
+          "value": "export interface ExternalFetchResult {\n  /**\n   * The path to the externalized module starting with file://.\n   * By default this will be imported via a dynamic \"import\"\n   * instead of being transformed by Vite and loaded with the Vite runner.\n   */\n  externalize: string\n  /**\n   * Type of the module. Used to determine if the import statement is correct.\n   * For example, if Vite needs to throw an error if a variable is not actually exported.\n   */\n  type: 'module' | 'commonjs' | 'builtin' | 'network'\n}",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "ViteFetchResult"
+            },
+            {
+              "type": "text",
+              "value": " returns information about the current module, including the "
+            },
+            {
+              "type": "inlineCode",
+              "value": "code"
+            },
+            {
+              "type": "text",
+              "value": " to execute and the module's "
+            },
+            {
+              "type": "inlineCode",
+              "value": "id"
+            },
+            {
+              "type": "text",
+              "value": ", "
+            },
+            {
+              "type": "inlineCode",
+              "value": "file"
+            },
+            {
+              "type": "text",
+              "value": ", and "
+            },
+            {
+              "type": "inlineCode",
+              "value": "url"
+            },
+            {
+              "type": "text",
+              "value": "."
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "The "
+            },
+            {
+              "type": "inlineCode",
+              "value": "invalidate"
+            },
+            {
+              "type": "text",
+              "value": " field instructs the module runner to invalidate the module before executing it again rather than serving it from cache. This is usually "
+            },
+            {
+              "type": "inlineCode",
+              "value": "true"
+            },
+            {
+              "type": "text",
+              "value": " when an HMR update was triggered."
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "code",
+          "lang": "ts",
+          "meta": null,
+          "value": "export interface ViteFetchResult {\n  /**\n   * Code that will be evaluated by the Vite runner.\n   * By default this will be wrapped in an async function.\n   */\n  code: string\n  /**\n   * File path of the module on disk.\n   * This will be resolved as import.meta.url/filename.\n   * Will be `null` for virtual modules.\n   */\n  file: string | null\n  /**\n   * Module ID in the server module graph.\n   */\n  id: string\n  /**\n   * Module URL used in the import.\n   */\n  url: string\n  /**\n   * Invalidate module on the client side.\n   */\n  invalidate: boolean\n}",
+          "data": {}
+        }
+      ]
+    }
+  ]
+}

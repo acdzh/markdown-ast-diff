@@ -1,0 +1,2817 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "yaml",
+      "value": "title: React Videos",
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<Intro>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Videos dedicated to the discussion of React and the React ecosystem.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</Intro>",
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 2,
+          "children": [
+            {
+              "type": "text",
+              "value": "React Conf 2024 {/"
+            },
+            {
+              "type": "emphasis",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "react-conf-2024"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "/}"
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "At React Conf 2024, Meta CTO "
+            },
+            {
+              "type": "link",
+              "title": null,
+              "url": "https://www.threads.net/@boztank",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Andrew \"Boz\" Bosworth"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " shared a welcome message to kick off the conference:"
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "<YouTubeIframe src=\"https://www.youtube.com/embed/T8TZQ6k4SLE?t=975s\" title=\"Boz and Seth Intro\" />",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 3,
+          "children": [
+            {
+              "type": "text",
+              "value": "React 19 Keynote {/"
+            },
+            {
+              "type": "emphasis",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "react-19-keynote"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "/}"
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "In the Day 1 keynote, we shared vision for React starting with React 19 and the React Compiler. Watch the full keynote from "
+            },
+            {
+              "type": "link",
+              "title": null,
+              "url": "https://twitter.com/en_JS",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Joe Savona"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ", "
+            },
+            {
+              "type": "link",
+              "title": null,
+              "url": "https://twitter.com/potetotes",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Lauren Tan"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ", "
+            },
+            {
+              "type": "link",
+              "title": null,
+              "url": "https://twitter.com/acdlite",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Andrew Clark"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ", "
+            },
+            {
+              "type": "link",
+              "title": null,
+              "url": "https://twitter.com/joshcstory",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Josh Story"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ", "
+            },
+            {
+              "type": "link",
+              "title": null,
+              "url": "https://twitter.com/_gsathya",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Sathya Gunasekaran"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ", and "
+            },
+            {
+              "type": "link",
+              "title": null,
+              "url": "https://twitter.com/zmofei",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Mofei Zhang"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": ":"
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "<YouTubeIframe src=\"https://www.youtube.com/embed/lyEKhv8-3n0\" title=\"YouTube video player\" />",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 3,
+          "children": [
+            {
+              "type": "text",
+              "value": "React Unpacked: A Roadmap to React 19 {/"
+            },
+            {
+              "type": "emphasis",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "react-unpacked-a-roadmap-to-react-19"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "/}"
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "React 19 introduced new features including Actions, "
+            },
+            {
+              "type": "inlineCode",
+              "value": "use()"
+            },
+            {
+              "type": "text",
+              "value": ", "
+            },
+            {
+              "type": "inlineCode",
+              "value": "useOptimistic"
+            },
+            {
+              "type": "text",
+              "value": " and more. For a deep dive on using new features in React 19, see "
+            },
+            {
+              "type": "link",
+              "title": null,
+              "url": "https://twitter.com/samselikoff",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Sam Selikoff's"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " talk:"
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "<YouTubeIframe src=\"https://www.youtube.com/embed/R0B2HsSM78s\" title=\"React Unpacked: A Roadmap to React 19\" />",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 3,
+          "children": [
+            {
+              "type": "text",
+              "value": "What's New in React 19 {/"
+            },
+            {
+              "type": "emphasis",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "whats-new-in-react-19"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "/}"
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "link",
+              "title": null,
+              "url": "https://twitter.com/lydiahallie",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Lydia Hallie"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " gave a visual deep dive of React 19's new features:"
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "<YouTubeIframe src=\"https://www.youtube.com/embed/AJOGzVygGcY\" title=\"What's New in React 19\" />",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 3,
+          "children": [
+            {
+              "type": "text",
+              "value": "React 19 Deep Dive: Coordinating HTML {/"
+            },
+            {
+              "type": "emphasis",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "react-19-deep-dive-coordinating-html"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "/}"
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "link",
+              "title": null,
+              "url": "https://twitter.com/joshcstory",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Josh Story"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " provided a deep dive on the document and resource streaming APIs in React 19:"
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "<YouTubeIframe src=\"https://www.youtube.com/embed/IBBN-s77YSI\" title=\"React 19 Deep Dive: Coordinating HTML\" />",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 3,
+          "children": [
+            {
+              "type": "text",
+              "value": "React for Two Computers {/"
+            },
+            {
+              "type": "emphasis",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "react-for-two-computers"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "/}"
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "link",
+              "title": null,
+              "url": "https://bsky.app/profile/danabra.mov",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Dan Abramov"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " imagined an alternate history where React started server-first:"
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "<YouTubeIframe src=\"https://www.youtube.com/embed/ozI4V_29fj4\" title=\"React for Two Computers\" />",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 3,
+          "children": [
+            {
+              "type": "text",
+              "value": "Forget About Memo {/"
+            },
+            {
+              "type": "emphasis",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "forget-about-memo"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "/}"
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "link",
+              "title": null,
+              "url": "https://twitter.com/potetotes",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Lauren Tan"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " gave a talk on using the React Compiler in practice:"
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "<YouTubeIframe src=\"https://www.youtube.com/embed/lvhPq5chokM\" title=\"Forget About Memo\" />",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 3,
+          "children": [
+            {
+              "type": "text",
+              "value": "React Compiler Deep Dive {/"
+            },
+            {
+              "type": "emphasis",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "react-compiler-deep-dive"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "/}"
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "link",
+              "title": null,
+              "url": "https://twitter.com/_gsathya",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Sathya Gunasekaran"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " and "
+            },
+            {
+              "type": "link",
+              "title": null,
+              "url": "https://twitter.com/zmofei",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Mofei Zhang"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " provided a deep dive on how the React Compiler works:"
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "<YouTubeIframe src=\"https://www.youtube.com/embed/uA_PVyZP7AI\" title=\"React Compiler Deep Dive\" />",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 3,
+          "children": [
+            {
+              "type": "text",
+              "value": "And more... {/"
+            },
+            {
+              "type": "emphasis",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "and-more-2024"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "/}"
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "strong",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "We also heard talks from the community on Server Components:"
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "list",
+          "ordered": false,
+          "start": null,
+          "spread": false,
+          "children": [
+            {
+              "type": "listItem",
+              "spread": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "link",
+                      "title": null,
+                      "url": "https://www.youtube.com/embed/0ckOUBiuxVY&t=25280s",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Enhancing Forms with React Server Components"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " by "
+                    },
+                    {
+                      "type": "link",
+                      "title": null,
+                      "url": "https://twitter.com/aurorascharff",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Aurora Walberg Scharff"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "spread": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "link",
+                      "title": null,
+                      "url": "https://www.youtube.com/embed/pOo7x8OiAec",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "And Now You Understand React Server Components"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " by "
+                    },
+                    {
+                      "type": "link",
+                      "title": null,
+                      "url": "https://twitter.com/kentcdodds",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Kent C. Dodds"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "spread": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "link",
+                      "title": null,
+                      "url": "https://www.youtube.com/embed/6sMANTHWtLM",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Real-time Server Components"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " by "
+                    },
+                    {
+                      "type": "link",
+                      "title": null,
+                      "url": "https://twitter.com/threepointone",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Sunil Pai"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "strong",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Talks from React frameworks using new features:"
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "list",
+          "ordered": false,
+          "start": null,
+          "spread": false,
+          "children": [
+            {
+              "type": "listItem",
+              "spread": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "link",
+                      "title": null,
+                      "url": "https://www.youtube.com/embed/ZcwA0xt8FlQ",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Vanilla React"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " by "
+                    },
+                    {
+                      "type": "link",
+                      "title": null,
+                      "url": "https://twitter.com/ryanflorence",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Ryan Florence"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "spread": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "link",
+                      "title": null,
+                      "url": "https://www.youtube.com/embed/rs9X5MjvC4s",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "React Rhythm & Blues"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " by "
+                    },
+                    {
+                      "type": "link",
+                      "title": null,
+                      "url": "https://twitter.com/leeerob",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Lee Robinson"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "spread": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "link",
+                      "title": null,
+                      "url": "https://www.youtube.com/embed/sjyY4MTECUU",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "RedwoodJS, now with React Server Components"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " by "
+                    },
+                    {
+                      "type": "link",
+                      "title": null,
+                      "url": "https://twitter.com/selfteachme",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Amy Dutton"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "spread": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "link",
+                      "title": null,
+                      "url": "https://www.youtube.com/embed/djhEgxQf3Kw",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Introducing Universal React Server Components in Expo Router"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " by "
+                    },
+                    {
+                      "type": "link",
+                      "title": null,
+                      "url": "https://twitter.com/Baconbrix",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Evan Bacon"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "strong",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "And Q&As with the React and React Native teams:"
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "list",
+          "ordered": false,
+          "start": null,
+          "spread": false,
+          "children": [
+            {
+              "type": "listItem",
+              "spread": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "link",
+                      "title": null,
+                      "url": "https://www.youtube.com/embed/T8TZQ6k4SLE&t=27518s",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "React Q&A"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " hosted by "
+                    },
+                    {
+                      "type": "link",
+                      "title": null,
+                      "url": "https://twitter.com/chantastic",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Michael Chan"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "listItem",
+              "spread": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "link",
+                      "title": null,
+                      "url": "https://www.youtube.com/embed/0ckOUBiuxVY&t=27935s",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "React Native Q&A"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " hosted by "
+                    },
+                    {
+                      "type": "link",
+                      "title": null,
+                      "url": "https://twitter.com/jamonholmgren",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Jamon Holmgren"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "You can watch all of the talks at React Conf 2024 at "
+            },
+            {
+              "type": "link",
+              "title": null,
+              "url": "https://conf2024.react.dev/talks",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "conf2024.react.dev"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "."
+            }
+          ],
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "React Conf 2021 {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "react-conf-2021",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "React 18 Keynote {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "react-18-keynote",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "In the keynote, we shared our vision for the future of React starting with React 18.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Watch the full keynote from ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://twitter.com/acdlite",
+          "children": [
+            {
+              "type": "text",
+              "value": "Andrew Clark",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://twitter.com/_jstejada",
+          "children": [
+            {
+              "type": "text",
+              "value": "Juan Tejada",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://twitter.com/potetotes",
+          "children": [
+            {
+              "type": "text",
+              "value": "Lauren Tan",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", and ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://twitter.com/rickhanlonii",
+          "children": [
+            {
+              "type": "text",
+              "value": "Rick Hanlon",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " here:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "del",
+      "children": [
+        {
+          "type": "html",
+          "value": "<YouTubeIframe src=\"https://www.youtube.com/embed/FZ0cG47msEk\" title=\"YouTube video player\" />",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "<YouTubeIframe src=\"https://www.youtube.com/embed/FZ0cG47msEk\" title=\"React 18 Keynote\" />",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "React 18 for Application Developers {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "react-18-for-application-developers",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "For a demo of upgrading to React 18, see ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://twitter.com/shrutikapoor08",
+          "children": [
+            {
+              "type": "text",
+              "value": "Shruti Kapoor",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "’s talk here:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "del",
+      "children": [
+        {
+          "type": "html",
+          "value": "<YouTubeIframe src=\"https://www.youtube.com/embed/ytudH8je5ko\" title=\"YouTube video player\" />",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "<YouTubeIframe src=\"https://www.youtube.com/embed/ytudH8je5ko\" title=\"React 18 for Application Developers\" />",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Streaming Server Rendering with Suspense {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "streaming-server-rendering-with-suspense",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "React 18 also includes improvements to server-side rendering performance using Suspense.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Streaming server rendering lets you generate HTML from React components on the server, and stream that HTML to your users. In React 18, you can use ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "Suspense",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " to break down your app into smaller independent units which can be streamed independently of each other without blocking the rest of the app. This means users will see your content sooner and be able to start interacting with it much faster.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "For a deep dive, see ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://twitter.com/shaundai",
+          "children": [
+            {
+              "type": "text",
+              "value": "Shaundai Person",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "’s talk here:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "del",
+      "children": [
+        {
+          "type": "html",
+          "value": "<YouTubeIframe src=\"https://www.youtube.com/embed/pj5N-Khihgc\" title=\"YouTube video player\" />",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "<YouTubeIframe src=\"https://www.youtube.com/embed/pj5N-Khihgc\" title=\"Streaming Server Rendering with Suspense\" />",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "The first React working group {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "the-first-react-working-group",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "For React 18, we created our first Working Group to collaborate with a panel of experts, developers, library maintainers, and educators. Together we worked to create our gradual adoption strategy and refine new APIs such as ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "useId",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "useSyncExternalStore",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", and ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "useInsertionEffect",
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ".",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "For an overview of this work, see ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://twitter.com/aakansha1216",
+          "children": [
+            {
+              "type": "text",
+              "value": "Aakansha' Doshi",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "'s talk:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "del",
+      "children": [
+        {
+          "type": "html",
+          "value": "<YouTubeIframe src=\"https://www.youtube.com/embed/qn7gRClrC9U\" title=\"YouTube video player\" />",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "<YouTubeIframe src=\"https://www.youtube.com/embed/qn7gRClrC9U\" title=\"The first React working group\" />",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "React Developer Tooling {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "react-developer-tooling",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "To support the new features in this release, we also announced the newly formed React DevTools team and a new Timeline Profiler to help developers debug their React apps.",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "For more information and a demo of new DevTools features, see ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://twitter.com/brian_d_vaughn",
+          "children": [
+            {
+              "type": "text",
+              "value": "Brian Vaughn",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "’s talk:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "del",
+      "children": [
+        {
+          "type": "html",
+          "value": "<YouTubeIframe src=\"https://www.youtube.com/embed/oxDfrke8rZg\" title=\"YouTube video player\" />",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "<YouTubeIframe src=\"https://www.youtube.com/embed/oxDfrke8rZg\" title=\"React Developer Tooling\" />",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "React without memo {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "react-without-memo",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Looking further into the future, ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://twitter.com/Huxpro",
+          "children": [
+            {
+              "type": "text",
+              "value": "Xuan Huang (黄玄)",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " shared an update from our React Labs research into an auto-memoizing compiler. Check out this talk for more information and a demo of the compiler prototype:",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "del",
+      "children": [
+        {
+          "type": "html",
+          "value": "<YouTubeIframe src=\"https://www.youtube.com/embed/lGEMwh32soc\" title=\"YouTube video player\" />",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "<YouTubeIframe src=\"https://www.youtube.com/embed/lGEMwh32soc\" title=\"React without memo\" />",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "React docs keynote {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "react-docs-keynote",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://twitter.com/rachelnabors",
+          "children": [
+            {
+              "type": "text",
+              "value": "Rachel Nabors",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " kicked off a section of talks about learning and designing with React with a keynote about our investment in React's new docs (",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/blog/2023/03/16/introducing-react-dev",
+          "children": [
+            {
+              "type": "text",
+              "value": "now shipped as react.dev",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "):",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "del",
+      "children": [
+        {
+          "type": "html",
+          "value": "<YouTubeIframe src=\"https://www.youtube.com/embed/mneDaMYOKP8\" title=\"YouTube video player\" />",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "<YouTubeIframe src=\"https://www.youtube.com/embed/mneDaMYOKP8\" title=\"React docs keynote\" />",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "And more... {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "and-more",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "We also heard talks on learning and designing with React:",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Debbie O'Brien: ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://youtu.be/-7odLW_hG7s",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Things I learnt from the new React docs",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ".",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Sarah Rainsberger: ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://youtu.be/5X-WEQflCL0",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Learning in the Browser",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ".",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Linton Ye: ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://youtu.be/7cPWmID5XAk",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "The ROI of Designing with React",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ".",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Delba de Oliveira: ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://youtu.be/zL8cz2W0z34",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Interactive playgrounds with React",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ".",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "Talks from the Relay, React Native, and PyTorch teams:",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Robert Balicki: ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://youtu.be/lhVGdErZuN4",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Re-introducing Relay",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ".",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Eric Rozell and Steven Moyes: ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://youtu.be/9L4FFrvwJwY",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "React Native Desktop",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ".",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Roman Rädle: ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://youtu.be/NLj73vrc2I8",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "On-device Machine Learning for React Native",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "And talks from the community on accessibility, tooling, and Server Components:",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Daishi Kato: ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://youtu.be/oPfSC5bQPR8",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "React 18 for External Store Libraries",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ".",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Diego Haz: ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://youtu.be/dcm8fjBfro8",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Building Accessible Components in React 18",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ".",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Tafu Nakazaki: ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://youtu.be/S4a0QlsH0pU",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Accessible Japanese Form Components with React",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ".",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Lyle Troxell: ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://youtu.be/b3l4WxipFsE",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "UI tools for artists",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ".",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Helen Lin: ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://youtu.be/HS6vIYkSNks",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Hydrogen + React 18",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ".",
+                  "data": {}
+                }
+              ]
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Older videos {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "older-videos",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "React Conf 2019 {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "react-conf-2019",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "A playlist of videos from React Conf 2019.\n",
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "<YouTubeIframe title=\"React Conf 2019\" src=\"https://www.youtube-nocookie.com/embed/playlist?list=PLPxbbTqCLbGHPxZpw4xj_Wwg8-fdNxJRh\" />",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "React Conf 2018 {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "react-conf-2018",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "A playlist of videos from React Conf 2018.\n",
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "<YouTubeIframe title=\"React Conf 2018\" src=\"https://www.youtube-nocookie.com/embed/playlist?list=PLPxbbTqCLbGE5AihOSExAa4wUM-P42EIJ\" />",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "React.js Conf 2017 {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "reactjs-conf-2017",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "A playlist of videos from React.js Conf 2017.\n",
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "<YouTubeIframe title=\"React.js Conf 2017\" src=\"https://www.youtube-nocookie.com/embed/playlist?list=PLb0IAmt7-GS3fZ46IGFirdqKTIxlws7e0\" />",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "React.js Conf 2016 {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "reactjs-conf-2016",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "A playlist of videos from React.js Conf 2016.\n",
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "<YouTubeIframe title=\"React.js Conf 2016\" src=\"https://www.youtube-nocookie.com/embed/playlist?list=PLb0IAmt7-GS0M8Q95RIc2lOM6nc77q1IY\" />",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "React.js Conf 2015 {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "reactjs-conf-2015",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "A playlist of videos from React.js Conf 2015.\n",
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "<YouTubeIframe title=\"React.js Conf 2015\" src=\"https://www.youtube-nocookie.com/embed/playlist?list=PLb0IAmt7-GS1cbw4qonlQztYV1TAW0sCr\" />",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Rethinking Best Practices {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "rethinking-best-practices",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Pete Hunt's talk at JSConf EU 2013 covers three topics: throwing out the notion of templates and building views with JavaScript, “re-rendering” your entire application when your data changes, and a lightweight implementation of the DOM and events - (2013 - 0h30m).\n",
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "<YouTubeIframe title=\"Pete Hunt: React: Rethinking Best Practices - JSConf EU 2013\" src=\"https://www.youtube-nocookie.com/embed/x7cQ3mrcKaY\" />",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Introduction to React {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "introduction-to-react",
+              "data": {}
+            }
+          ],
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Tom Occhino and Jordan Walke introduce React at Facebook Seattle - (2013 - 1h20m).\n",
+          "data": {}
+        },
+        {
+          "type": "html",
+          "value": "<YouTubeIframe title=\"Tom Occhino and Jordan Walke introduce React at Facebook Seattle\" src=\"https://www.youtube-nocookie.com/embed/XxVg_s8xAms\" />",
+          "data": {
+            "diffUnchanged": true
+          },
+          "children": []
+        }
+      ],
+      "data": {
+        "diffUnchanged": true
+      }
+    }
+  ]
+}

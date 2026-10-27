@@ -1,0 +1,71 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "heading",
+      "depth": 1,
+      "children": [
+        {
+          "type": "text",
+          "value": "火锅食材指南",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "火锅这门学问，三分在选材，七分在火候。很多人以为涮火锅就是把东西往锅里一扔等熟了捞出来，这种想法大错特错。每种食材的最佳涮煮时间精确到秒级，过了就老，早了就生，差之毫厘口感谬以千里。",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "以下是计算各类食材最佳涮煮时间的核心函数。它接收一组食材对象数组，每个对象包含名称、类型、切片厚度等属性，返回带有推荐涮煮时长和吃法提示的结果数组：",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "javascript",
+      "meta": null,
+      "value": "/**\n * 根据食材类别和物理属性，计算最佳涮煮时间\n * @param {Array} ingredients - 食材列表\n * @returns {Array} 涮煮方案列表\n */\nfunction getHotpotCookingTime(ingredients) {\n  if (!Array.isArray(ingredients)) {\n    throw new TypeError('请传入食材数组，别把菜单直接扔进来');\n  }\n\n  const output = [];\n\n  for (const item of ingredients) {\n    // 跳过信息不完整的食材\n    if (!item.name || !item.type) {\n      continue;\n    }\n\n    if (item.frozen && !item.thawed) {\n      output.push({\n        food: item.name,\n        time: -1,\n        tip: '请先解冻，冻货直接下锅会溅油',\n      });\n      continue;\n    }\n\n    let seconds = 60;\n    if (item.type === '肉片') {\n      seconds = item.sliceThick > 5 ? 90 : 30;\n    } else if (item.type === '虾滑') {\n      seconds = 120;\n    } else if (item.type === '青菜') {\n      seconds = 20;\n    } else if (item.type === '毛肚') {\n      seconds = 15;\n    } else if (item.type === '豆腐') {\n      seconds = item.firm ? 300 : 180;\n    } else if (item.type === '菌菇') {\n      seconds = 240;\n    }\n\n    const tip = seconds >= 60 ? '慢煮入味' : '七上八下';\n\n    output.push({\n      food: item.name,\n      time: seconds,\n      tip: tip,\n      dipping: item.spicy ? '干碟海椒面' : '油碟蒜泥香菜',\n      // 记录本次计算的时间戳\n      calculatedAt: Date.now(),\n    });\n  }\n\n  return output;\n}",
+      "data": {
+        "diffOldContent": "/**\n * 根据食材类别和物理属性，计算最佳涮煮时间\n * @param {Array} ingredients - 食材列表\n * @returns {Array} 涮煮方案列表\n */\nfunction getHotpotCookingTime(ingredients) {\n  if (!Array.isArray(ingredients)) {\n    throw new TypeError('请传入食材数组，别把菜单直接扔进来');\n  }\n\n  const result = [];\n\n  for (const item of ingredients) {\n    if (!item.name || !item.type) {\n      continue;\n    }\n\n    if (item.frozen && !item.thawed) {\n      result.push({\n        food: item.name,\n        time: -1,\n        tip: '请先解冻，冻货直接下锅会溅油',\n      });\n      continue;\n    }\n\n    let seconds = 60;\n    if (item.type === '肉片') {\n      seconds = item.sliceThick > 3 ? 90 : 30;\n    } else if (item.type === '虾滑') {\n      seconds = 120;\n    } else if (item.type === '青菜') {\n      seconds = 20;\n    } else if (item.type === '毛肚') {\n      seconds = 15;\n    } else if (item.type === '豆腐') {\n      seconds = item.firm ? 300 : 180;\n    } else if (item.type === '菌菇') {\n      seconds = 240;\n    }\n\n    const tip = seconds >= 60 ? '慢煮入味' : '七上八下';\n\n    result.push({\n      food: item.name,\n      time: seconds,\n      tip: tip,\n      dipping: item.spicy ? '干碟海椒面' : '油碟蒜泥香菜',\n    });\n  }\n\n  return result;\n}"
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "该函数根据食材类别和切片厚度，自动计算推荐涮煮秒数并生成吃法提示。对于冷冻但未解冻的食材会给出警告，对于豆腐和菌菇等需要长时间炖煮的食材也有专门的时间设定。",
+          "data": {}
+        }
+      ],
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "实际使用时建议配合计时器调用，把返回结果渲染成倒计时卡片，这样涮火锅的时候就不用靠经验猜了——科学涮锅，精准到秒。",
+          "data": {}
+        }
+      ],
+      "data": {}
+    }
+  ],
+  "data": {}
+}

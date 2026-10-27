@@ -1,0 +1,150 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "注意：本节内容仅供参考。",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 13,
+          "offset": 12
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "第一节正文。",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 3,
+          "column": 1,
+          "offset": 14
+        },
+        "end": {
+          "line": 3,
+          "column": 7,
+          "offset": 20
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "注意：本节内容仅供参考。",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 5,
+          "column": 1,
+          "offset": 22
+        },
+        "end": {
+          "line": 5,
+          "column": 13,
+          "offset": 34
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "补充说明：第二节有更新。",
+              "position": {
+                "start": {
+                  "line": 7,
+                  "column": 1,
+                  "offset": 36
+                },
+                "end": {
+                  "line": 7,
+                  "column": 13,
+                  "offset": 48
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 7,
+              "column": 1,
+              "offset": 36
+            },
+            "end": {
+              "line": 7,
+              "column": 13,
+              "offset": 48
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "第二节正文。",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 9,
+          "column": 1,
+          "offset": 50
+        },
+        "end": {
+          "line": 9,
+          "column": 7,
+          "offset": 56
+        }
+      },
+      "data": {}
+    }
+  ],
+  "position": {
+    "start": {
+      "line": 1,
+      "column": 1,
+      "offset": 0
+    },
+    "end": {
+      "line": 10,
+      "column": 1,
+      "offset": 57
+    }
+  },
+  "data": {}
+}

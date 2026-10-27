@@ -1,0 +1,26 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "del",
+      "children": [
+        {
+          "type": "html",
+          "value": "<div class=\"note\">\n  <p>旧的提示内容</p>\n</div>",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "<div class=\"note\">\n  <p>新的提示内容</p>\n</div>",
+          "data": {}
+        }
+      ]
+    }
+  ],
+  "data": {}
+}

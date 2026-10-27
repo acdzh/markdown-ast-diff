@@ -1,0 +1,48 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "blockquote",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "雨总会停的，但你在雨天培养出的",
+              "data": {}
+            },
+            {
+              "type": "inlineDel",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "从容",
+                  "data": {}
+                }
+              ]
+            },
+            {
+              "type": "inlineIns",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "浪漫",
+                  "data": {}
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "，会一直跟着你。",
+              "data": {}
+            }
+          ],
+          "data": {}
+        }
+      ],
+      "data": {}
+    }
+  ],
+  "data": {}
+}

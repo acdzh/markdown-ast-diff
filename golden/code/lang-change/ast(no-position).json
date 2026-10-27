@@ -1,0 +1,30 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "del",
+      "children": [
+        {
+          "type": "code",
+          "lang": "ts",
+          "meta": null,
+          "value": "const a = 1;",
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "code",
+          "lang": "js",
+          "meta": null,
+          "value": "const a = 1;",
+          "data": {}
+        }
+      ]
+    }
+  ],
+  "data": {}
+}

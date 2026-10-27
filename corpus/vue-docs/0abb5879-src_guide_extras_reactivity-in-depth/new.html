@@ -1,0 +1,455 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+/* table */
+table { border-collapse: collapse; width: auto; margin: 1em 0; }
+th, td { border: 1px solid #d0d7de; padding: 6px 13px; }
+th { background: #f6f8fa; font-weight: 600; }
+tr:nth-child(2n) { background: #f6f8fa; }
+
+/* code */
+code { padding: 0.2em 0.4em; font-size: 85%; background: #f6f8fa; border-radius: 6px; font-family: 'SF Mono', 'Fira Code', Menlo, monospace; }
+pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background: #f6f8fa; border-radius: 6px; margin: 1em 0; }
+pre code { padding: 0; background: none; border-radius: 0; font-size: inherit; }
+
+/* blockquote */
+blockquote { padding: 0 1em; color: #656d76; border-left: 0.25em solid #d0d7de; margin: 1em 0; }
+
+/* hr */
+hr { height: 0.25em; padding: 0; margin: 24px 0; background-color: #d0d7de; border: 0; }
+
+/* headings */
+h1, h2, h3, h4, h5, h6 { margin-top: 24px; margin-bottom: 16px; font-weight: 600; line-height: 1.25; }
+h1 { font-size: 2em; padding-bottom: 0.3em; border-bottom: 1px solid #d0d7de; }
+h2 { font-size: 1.5em; padding-bottom: 0.3em; border-bottom: 1px solid #d0d7de; }
+h3 { font-size: 1.25em; }
+
+/* list */
+ul, ol { padding-left: 2em; margin: 0.5em 0; }
+li + li { margin-top: 0.25em; }
+
+/* image */
+img { max-width: 100%; }
+
+/* code diff */
+.code-diff { border-radius: 6px; overflow: hidden; margin: 1em 0; font-size: 13px; border: 1px solid #d0d7de; }
+.code-diff pre { margin: 0; padding: 0; border-radius: 0; border: none; background: #fff; }
+.code-diff .shiki { background: #fff !important; }
+.code-diff .diff-line { display: flex; line-height: 1.45; }
+.code-diff .diff-line-gutter { width: 40px; min-width: 40px; text-align: right; padding: 0 8px 0 0; color: #8b949e; font-size: 12px; user-select: none; flex-shrink: 0; }
+.code-diff .diff-line-sign { width: 20px; min-width: 20px; text-align: center; user-select: none; flex-shrink: 0; }
+.code-diff .diff-line-content { flex: 1; padding-right: 12px; white-space: pre; overflow-x: auto; }
+.code-diff .diff-line.del { background: #ffebe9; }
+.code-diff .diff-line.del .diff-line-gutter { background: #ffd7d5; color: #82071e; }
+.code-diff .diff-line.del .diff-line-sign { color: #82071e; }
+.code-diff .diff-line.ins { background: #e6ffec; }
+.code-diff .diff-line.ins .diff-line-gutter { background: #ccffd8; color: #116329; }
+.code-diff .diff-line.ins .diff-line-sign { color: #116329; }
+.code-diff .diff-line.ctx { background: #fff; }
+.code-diff .diff-line.ctx .diff-line-gutter { color: #8b949e; }
+.code-diff .diff-header { padding: 8px 12px; background: #f6f8fa; border-bottom: 1px solid #d0d7de; font-size: 12px; color: #656d76; font-family: 'SF Mono', 'Fira Code', Menlo, monospace; }
+
+ins { background-color: #e6ffec; text-decoration: none; border-radius: 2px; padding: 0 2px; }
+del { background-color: #ffebe9; text-decoration: line-through; border-radius: 2px; padding: 0 2px; }
+ins.diff-block, del.diff-block { display: block; padding-left: 10px; border-left: 3px solid; }
+ins.diff-block { border-left-color: #2cbe4e; }
+del.diff-block { border-left-color: #cb2431; }
+ins > hr, ins > pre { background-color: #e6ffec; }
+del > hr, del > pre { background-color: #ffebe9; }
+ins > table, del > table { border-collapse: collapse; }
+ins > table th, ins > table td { background-color: #e6ffec; }
+del > table th, del > table td { background-color: #ffebe9; }
+li[data-diff="ins"] { background-color: #e6ffec; border-radius: 2px; }
+li[data-diff="del"] { background-color: #ffebe9; border-radius: 2px; text-decoration: line-through; }
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:16px;font-size:14px;line-height:1.6;color:#1a1a1a;}</style></head><body><script setup>
+import SpreadSheet from './demos/SpreadSheet.vue'
+</script>
+<h1>Reactivity in Depth {#reactivity-in-depth}</h1>
+<p>One of Vue’s most distinctive features is the unobtrusive reactivity system. Component state consists of reactive JavaScript objects. When you modify them, the view updates. It makes state management simple and intuitive, but it’s also important to understand how it works to avoid some common gotchas. In this section, we are going to dig into some of the lower-level details of Vue’s reactivity system.</p>
+<h2>What is Reactivity? {#what-is-reactivity}</h2>
+<p>This term comes up in programming quite a bit these days, but what do people mean when they say it? Reactivity is a programming paradigm that allows us to adjust to changes in a declarative manner. The canonical example that people usually show, because it’s a great one, is an Excel spreadsheet:</p>
+<SpreadSheet />
+<p>Here cell A2 is defined via a formula of <code>= A0 + A1</code> (you can click on A2 to view or edit the formula), so the spreadsheet gives us 3. No surprises there. But if you update A0 or A1, you'll notice that A2 automagically updates too.</p>
+<p>JavaScript doesn’t usually work like this. If we were to write something comparable in JavaScript:</p>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">let</span><span style="color:#005CC5"> A0</span><span style="color:#D73A49"> =</span><span style="color:#005CC5"> 1</span></span>
+<span class="line"><span style="color:#D73A49">let</span><span style="color:#005CC5"> A1</span><span style="color:#D73A49"> =</span><span style="color:#005CC5"> 2</span></span>
+<span class="line"><span style="color:#D73A49">let</span><span style="color:#005CC5"> A2</span><span style="color:#D73A49"> =</span><span style="color:#005CC5"> A0</span><span style="color:#D73A49"> +</span><span style="color:#005CC5"> A1</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292E">console.</span><span style="color:#6F42C1">log</span><span style="color:#24292E">(</span><span style="color:#005CC5">A2</span><span style="color:#24292E">) </span><span style="color:#6A737D">// 3</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#005CC5">A0</span><span style="color:#D73A49"> =</span><span style="color:#005CC5"> 2</span></span>
+<span class="line"><span style="color:#24292E">console.</span><span style="color:#6F42C1">log</span><span style="color:#24292E">(</span><span style="color:#005CC5">A2</span><span style="color:#24292E">) </span><span style="color:#6A737D">// Still 3</span></span></code></pre>
+</code></pre>
+<p>When we mutate <code>A0</code>, <code>A2</code> does not change automatically.</p>
+<p>So how would we do this in JavaScript? First, in order to re-run the code that updates <code>A2</code>, let's wrap it in a function:</p>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">let</span><span style="color:#005CC5"> A2</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">function</span><span style="color:#6F42C1"> update</span><span style="color:#24292E">() {</span></span>
+<span class="line"><span style="color:#005CC5">  A2</span><span style="color:#D73A49"> =</span><span style="color:#005CC5"> A0</span><span style="color:#D73A49"> +</span><span style="color:#005CC5"> A1</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre>
+<p>Then, we need to define a few terms:</p>
+<ul>
+<li>
+<p>The <code>update()</code> function produces a <strong>side effect</strong>, or <strong>effect</strong> for short, because it modifies the state of the program.</p>
+</li>
+<li>
+<p><code>A0</code> and <code>A1</code> are considered <strong>dependencies</strong> of the effect, as their values are used to perform the effect. The effect is said to be a <strong>subscriber</strong> to its dependencies.</p>
+</li>
+</ul>
+<p>What we need is a magic function that can invoke <code>update()</code> (the <strong>effect</strong>) whenever <code>A0</code> or <code>A1</code> (the <strong>dependencies</strong>) change:</p>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#6F42C1">whenDepsChange</span><span style="color:#24292E">(update)</span></span></code></pre>
+</code></pre>
+<p>This <code>whenDepsChange()</code> function has the following tasks:</p>
+<ol>
+<li>
+<p>Track when a variable is read. E.g. when evaluating the expression <code>A0 + A1</code>, both <code>A0</code> and <code>A1</code> are read.</p>
+</li>
+<li>
+<p>If a variable is read when there is a currently running effect, make that effect a subscriber to that variable. E.g. because <code>A0</code> and <code>A1</code> are read when <code>update()</code> is being executed, <code>update()</code> becomes a subscriber to both <code>A0</code> and <code>A1</code> after the first call.</p>
+</li>
+<li>
+<p>Detect when a variable is mutated. E.g. when <code>A0</code> is assigned a new value, notify all its subscriber effects to re-run.</p>
+</li>
+</ol>
+<h2>How Reactivity Works in Vue {#how-reactivity-works-in-vue}</h2>
+<p>We can't really track the reading and writing of local variables like in the example. There's just no mechanism for doing that in vanilla JavaScript. What we <strong>can</strong> do though, is intercept the reading and writing of <strong>object properties</strong>.</p>
+<p>There are two ways of intercepting property access in JavaScript: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get#description">getter</a> / <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set#description">setters</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy">Proxies</a>. Vue 2 used getter / setters exclusively due to browser support limitations. In Vue 3, Proxies are used for reactive objects and getter / setters are used for refs. Here's some pseudo-code that illustrates how they work:</p>
+<pre><code class="language-js{4,9,17,22}"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span>function reactive(obj) {</span></span>
+<span class="line"><span>  return new Proxy(obj, {</span></span>
+<span class="line"><span>    get(target, key) {</span></span>
+<span class="line"><span>      track(target, key)</span></span>
+<span class="line"><span>      return target[key]</span></span>
+<span class="line"><span>    },</span></span>
+<span class="line"><span>    set(target, key, value) {</span></span>
+<span class="line"><span>      target[key] = value</span></span>
+<span class="line"><span>      trigger(target, key)</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>  })</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>function ref(value) {</span></span>
+<span class="line"><span>  const refObject = {</span></span>
+<span class="line"><span>    get value() {</span></span>
+<span class="line"><span>      track(refObject, 'value')</span></span>
+<span class="line"><span>      return value</span></span>
+<span class="line"><span>    },</span></span>
+<span class="line"><span>    set value(newValue) {</span></span>
+<span class="line"><span>      value = newValue</span></span>
+<span class="line"><span>      trigger(refObject, 'value')</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>  return refObject</span></span>
+<span class="line"><span>}</span></span></code></pre>
+</code></pre>
+<p>:::tip
+Code snippets here and below are meant to explain the core concepts in the simplest form possible, so many details are omitted, and edge cases ignored.
+:::</p>
+<p>This explains a few <a href="/guide/essentials/reactivity-fundamentals#limitations-of-reactive">limitations of reactive objects</a> that we have discussed in the fundamentals section:</p>
+<ul>
+<li>
+<p>When you assign or destructure a reactive object's property to a local variable, accessing or assigning to that variable is non-reactive because it no longer triggers the get / set proxy traps on the source object. Note this "disconnect" only affects the variable binding - if the variable points to a non-primitive value such as an object, mutating the object would still be reactive.</p>
+</li>
+<li>
+<p>The returned proxy from <code>reactive()</code>, although behaving just like the original, has a different identity if we compare it to the original using the <code>===</code> operator.</p>
+</li>
+</ul>
+<p>Inside <code>track()</code>, we check whether there is a currently running effect. If there is one, we lookup the subscriber effects (stored in a Set) for the property being tracked, and add the effect to the Set:</p>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#6A737D">// This will be set right before an effect is about</span></span>
+<span class="line"><span style="color:#6A737D">// to be run. We'll deal with this later.</span></span>
+<span class="line"><span style="color:#D73A49">let</span><span style="color:#24292E"> activeEffect</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">function</span><span style="color:#6F42C1"> track</span><span style="color:#24292E">(</span><span style="color:#E36209">target</span><span style="color:#24292E">, </span><span style="color:#E36209">key</span><span style="color:#24292E">) {</span></span>
+<span class="line"><span style="color:#D73A49">  if</span><span style="color:#24292E"> (activeEffect) {</span></span>
+<span class="line"><span style="color:#D73A49">    const</span><span style="color:#005CC5"> effects</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> getSubscribersForProperty</span><span style="color:#24292E">(target, key)</span></span>
+<span class="line"><span style="color:#24292E">    effects.</span><span style="color:#6F42C1">add</span><span style="color:#24292E">(activeEffect)</span></span>
+<span class="line"><span style="color:#24292E">  }</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre>
+<p>Effect subscriptions are stored in a global <code>WeakMap&#x3C;target, Map&#x3C;key, Set&#x3C;effect>>></code> data structure. If no subscribing effects Set was found for a property (tracked for the first time), it will be created. This is what the <code>getSubscribersForProperty()</code> function does, in short. For simplicity, we will skip its details.</p>
+<p>Inside <code>trigger()</code>, we again lookup the subscriber effects for the property. But this time we invoke them instead:</p>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">function</span><span style="color:#6F42C1"> trigger</span><span style="color:#24292E">(</span><span style="color:#E36209">target</span><span style="color:#24292E">, </span><span style="color:#E36209">key</span><span style="color:#24292E">) {</span></span>
+<span class="line"><span style="color:#D73A49">  const</span><span style="color:#005CC5"> effects</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> getSubscribersForProperty</span><span style="color:#24292E">(target, key)</span></span>
+<span class="line"><span style="color:#24292E">  effects.</span><span style="color:#6F42C1">forEach</span><span style="color:#24292E">((</span><span style="color:#E36209">effect</span><span style="color:#24292E">) </span><span style="color:#D73A49">=></span><span style="color:#6F42C1"> effect</span><span style="color:#24292E">())</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre>
+<p>Now let's circle back to the <code>whenDepsChange()</code> function:</p>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">function</span><span style="color:#6F42C1"> whenDepsChange</span><span style="color:#24292E">(</span><span style="color:#E36209">update</span><span style="color:#24292E">) {</span></span>
+<span class="line"><span style="color:#D73A49">  const</span><span style="color:#6F42C1"> effect</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> () </span><span style="color:#D73A49">=></span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#24292E">    activeEffect </span><span style="color:#D73A49">=</span><span style="color:#24292E"> effect</span></span>
+<span class="line"><span style="color:#6F42C1">    update</span><span style="color:#24292E">()</span></span>
+<span class="line"><span style="color:#24292E">    activeEffect </span><span style="color:#D73A49">=</span><span style="color:#005CC5"> null</span></span>
+<span class="line"><span style="color:#24292E">  }</span></span>
+<span class="line"><span style="color:#6F42C1">  effect</span><span style="color:#24292E">()</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre>
+<p>It wraps the raw <code>update</code> function in an effect that sets itself as the current active effect before running the actual update. This enables <code>track()</code> calls during the update to locate the current active effect.</p>
+<p>At this point, we have created an effect that automatically tracks its dependencies, and re-runs whenever a dependency changes. We call this a <strong>Reactive Effect</strong>.</p>
+<p>Vue provides an API that allows you to create reactive effects: <a href="/api/reactivity-core#watcheffect"><code>watchEffect()</code></a>. In fact, you may have noticed that it works pretty similarly to the magical <code>whenDepsChange()</code> in the example. We can now rework the original example using actual Vue APIs:</p>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">import</span><span style="color:#24292E"> { ref, watchEffect } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> 'vue'</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">const</span><span style="color:#005CC5"> A0</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> ref</span><span style="color:#24292E">(</span><span style="color:#005CC5">0</span><span style="color:#24292E">)</span></span>
+<span class="line"><span style="color:#D73A49">const</span><span style="color:#005CC5"> A1</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> ref</span><span style="color:#24292E">(</span><span style="color:#005CC5">1</span><span style="color:#24292E">)</span></span>
+<span class="line"><span style="color:#D73A49">const</span><span style="color:#005CC5"> A2</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> ref</span><span style="color:#24292E">()</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6F42C1">watchEffect</span><span style="color:#24292E">(() </span><span style="color:#D73A49">=></span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#6A737D">  // tracks A0 and A1</span></span>
+<span class="line"><span style="color:#005CC5">  A2</span><span style="color:#24292E">.value </span><span style="color:#D73A49">=</span><span style="color:#005CC5"> A0</span><span style="color:#24292E">.value </span><span style="color:#D73A49">+</span><span style="color:#005CC5"> A1</span><span style="color:#24292E">.value</span></span>
+<span class="line"><span style="color:#24292E">})</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// triggers the effect</span></span>
+<span class="line"><span style="color:#005CC5">A0</span><span style="color:#24292E">.value </span><span style="color:#D73A49">=</span><span style="color:#005CC5"> 2</span></span></code></pre>
+</code></pre>
+<p>Using a reactive effect to mutate a ref isn't the most interesting use case - in fact, using a computed property makes it more declarative:</p>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">import</span><span style="color:#24292E"> { ref, computed } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> 'vue'</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">const</span><span style="color:#005CC5"> A0</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> ref</span><span style="color:#24292E">(</span><span style="color:#005CC5">0</span><span style="color:#24292E">)</span></span>
+<span class="line"><span style="color:#D73A49">const</span><span style="color:#005CC5"> A1</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> ref</span><span style="color:#24292E">(</span><span style="color:#005CC5">1</span><span style="color:#24292E">)</span></span>
+<span class="line"><span style="color:#D73A49">const</span><span style="color:#005CC5"> A2</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> computed</span><span style="color:#24292E">(() </span><span style="color:#D73A49">=></span><span style="color:#005CC5"> A0</span><span style="color:#24292E">.value </span><span style="color:#D73A49">+</span><span style="color:#005CC5"> A1</span><span style="color:#24292E">.value)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#005CC5">A0</span><span style="color:#24292E">.value </span><span style="color:#D73A49">=</span><span style="color:#005CC5"> 2</span></span></code></pre>
+</code></pre>
+<p>Internally, <code>computed</code> manages its invalidation and re-computation using a reactive effect.</p>
+<p>So what's an example of a common and useful reactive effect? Well, updating the DOM! We can implement simple "reactive rendering" like this:</p>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">import</span><span style="color:#24292E"> { ref, watchEffect } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> 'vue'</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">const</span><span style="color:#005CC5"> count</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> ref</span><span style="color:#24292E">(</span><span style="color:#005CC5">0</span><span style="color:#24292E">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6F42C1">watchEffect</span><span style="color:#24292E">(() </span><span style="color:#D73A49">=></span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#24292E">  document.body.innerHTML </span><span style="color:#D73A49">=</span><span style="color:#032F62"> `Count is: ${</span><span style="color:#24292E">count</span><span style="color:#032F62">.</span><span style="color:#24292E">value</span><span style="color:#032F62">}`</span></span>
+<span class="line"><span style="color:#24292E">})</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// updates the DOM</span></span>
+<span class="line"><span style="color:#24292E">count.value</span><span style="color:#D73A49">++</span></span></code></pre>
+</code></pre>
+<p>In fact, this is pretty close to how a Vue component keeps the state and the DOM in sync - each component instance creates a reactive effect to render and update the DOM. Of course, Vue components use much more efficient ways to update the DOM than <code>innerHTML</code>. This is discussed in <a href="./rendering-mechanism">Rendering Mechanism</a>.</p>
+<div class="options-api">
+<p>The <code>ref()</code>, <code>computed()</code> and <code>watchEffect()</code> APIs are all part of the Composition API. If you have only been using Options API with Vue so far, you'll notice that Composition API is closer to how Vue's reactivity system works under the hood. In fact, in Vue 3 the Options API is implemented on top of the Composition API. All property access on the component instance (<code>this</code>) triggers getter / setters for reactivity tracking, and options like <code>watch</code> and <code>computed</code> invoke their Composition API equivalents internally.</p>
+</div>
+<h2>Runtime vs. Compile-time Reactivity {#runtime-vs-compile-time-reactivity}</h2>
+<p>Vue's reactivity system is primarily runtime-based: the tracking and triggering are all performed while the code is running directly in the browser. The pros of runtime reactivity are that it can work without a build step, and there are fewer edge cases. On the other hand, this makes it constrained by the syntax limitations of JavaScript, leading to the need of value containers like Vue refs.</p>
+<p>Some frameworks, such as <a href="https://svelte.dev/">Svelte</a>, choose to overcome such limitations by implementing reactivity during compilation. It analyzes and transforms the code in order to simulate reactivity. The compilation step allows the framework to alter the semantics of JavaScript itself - for example, implicitly injecting code that performs dependency analysis and effect triggering around access to locally defined variables. The downside is that such transforms require a build step, and altering JavaScript semantics is essentially creating a language that looks like JavaScript but compiles into something else.</p>
+<p>The Vue team did explore this direction via an experimental feature called <a href="/guide/extras/reactivity-transform">Reactivity Transform</a>, but in the end we have decided that it would not be a good fit for the project due to <a href="https://github.com/vuejs/rfcs/discussions/369#discussioncomment-5059028">the reasoning here</a>.</p>
+<h2>Reactivity Debugging {#reactivity-debugging}</h2>
+<p>It's great that Vue's reactivity system automatically tracks dependencies, but in some cases we may want to figure out exactly what is being tracked, or what is causing a component to re-render.</p>
+<h3>Component Debugging Hooks {#component-debugging-hooks}</h3>
+<p>We can debug what dependencies are used during a component's render and which dependency is triggering an update using the <span class="options-api"><code>renderTracked</code></span><span class="composition-api"><code>onRenderTracked</code></span> and <span class="options-api"><code>renderTriggered</code></span><span class="composition-api"><code>onRenderTriggered</code></span> lifecycle hooks. Both hooks will receive a debugger event which contains information on the dependency in question. It is recommended to place a <code>debugger</code> statement in the callbacks to interactively inspect the dependency:</p>
+<div class="composition-api">
+<pre><code class="language-vue"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">script</span><span style="color:#6F42C1"> setup</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#D73A49">import</span><span style="color:#24292E"> { onRenderTracked, onRenderTriggered } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> 'vue'</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6F42C1">onRenderTracked</span><span style="color:#24292E">((</span><span style="color:#E36209">event</span><span style="color:#24292E">) </span><span style="color:#D73A49">=></span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#D73A49">  debugger</span></span>
+<span class="line"><span style="color:#24292E">})</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6F42C1">onRenderTriggered</span><span style="color:#24292E">((</span><span style="color:#E36209">event</span><span style="color:#24292E">) </span><span style="color:#D73A49">=></span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#D73A49">  debugger</span></span>
+<span class="line"><span style="color:#24292E">})</span></span>
+<span class="line"><span style="color:#24292E">&#x3C;/</span><span style="color:#22863A">script</span><span style="color:#24292E">></span></span></code></pre>
+</code></pre>
+</div>
+<div class="options-api">
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#6F42C1">  renderTracked</span><span style="color:#24292E">(</span><span style="color:#E36209">event</span><span style="color:#24292E">) {</span></span>
+<span class="line"><span style="color:#D73A49">    debugger</span></span>
+<span class="line"><span style="color:#24292E">  },</span></span>
+<span class="line"><span style="color:#6F42C1">  renderTriggered</span><span style="color:#24292E">(</span><span style="color:#E36209">event</span><span style="color:#24292E">) {</span></span>
+<span class="line"><span style="color:#D73A49">    debugger</span></span>
+<span class="line"><span style="color:#24292E">  }</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre>
+</div>
+<p>:::tip
+Component debug hooks only work in development mode.
+:::</p>
+<p>The debug event objects have the following type:</p>
+<p><span id="debugger-event"></span></p>
+<pre><code class="language-ts"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">type</span><span style="color:#6F42C1"> DebuggerEvent</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#E36209">  effect</span><span style="color:#D73A49">:</span><span style="color:#6F42C1"> ReactiveEffect</span></span>
+<span class="line"><span style="color:#E36209">  target</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> object</span></span>
+<span class="line"><span style="color:#E36209">  type</span><span style="color:#D73A49">:</span></span>
+<span class="line"><span style="color:#D73A49">    |</span><span style="color:#6F42C1"> TrackOpTypes</span><span style="color:#6A737D"> /* 'get' | 'has' | 'iterate' */</span></span>
+<span class="line"><span style="color:#D73A49">    |</span><span style="color:#6F42C1"> TriggerOpTypes</span><span style="color:#6A737D"> /* 'set' | 'add' | 'delete' | 'clear' */</span></span>
+<span class="line"><span style="color:#6F42C1">  key</span><span style="color:#D73A49">:</span><span style="color:#005CC5"> any</span></span>
+<span class="line"><span style="color:#6F42C1">  newValue</span><span style="color:#D73A49">?:</span><span style="color:#005CC5"> any</span></span>
+<span class="line"><span style="color:#6F42C1">  oldValue</span><span style="color:#D73A49">?:</span><span style="color:#005CC5"> any</span></span>
+<span class="line"><span style="color:#6F42C1">  oldTarget</span><span style="color:#D73A49">?:</span><span style="color:#6F42C1"> Map</span><span style="color:#24292E">&#x3C;</span><span style="color:#005CC5">any</span><span style="color:#24292E">, </span><span style="color:#005CC5">any</span><span style="color:#24292E">> </span><span style="color:#D73A49">|</span><span style="color:#6F42C1"> Set</span><span style="color:#24292E">&#x3C;</span><span style="color:#005CC5">any</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre>
+<h3>Computed Debugging {#computed-debugging}</h3>
+<div class="composition-api">
+<p>We can debug computed properties by passing <code>computed()</code> a second options object with <code>onTrack</code> and <code>onTrigger</code> callbacks:</p>
+<ul>
+<li><code>onTrack</code> will be called when a reactive property or ref is tracked as a dependency.</li>
+<li><code>onTrigger</code> will be called when the watcher callback is triggered by the mutation of a dependency.</li>
+</ul>
+<p>Both callbacks will receive debugger events in the <a href="#debugger-event">same format</a> as component debug hooks:</p>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">const</span><span style="color:#005CC5"> plusOne</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> computed</span><span style="color:#24292E">(() </span><span style="color:#D73A49">=></span><span style="color:#24292E"> count.value </span><span style="color:#D73A49">+</span><span style="color:#005CC5"> 1</span><span style="color:#24292E">, {</span></span>
+<span class="line"><span style="color:#6F42C1">  onTrack</span><span style="color:#24292E">(</span><span style="color:#E36209">e</span><span style="color:#24292E">) {</span></span>
+<span class="line"><span style="color:#6A737D">    // triggered when count.value is tracked as a dependency</span></span>
+<span class="line"><span style="color:#D73A49">    debugger</span></span>
+<span class="line"><span style="color:#24292E">  },</span></span>
+<span class="line"><span style="color:#6F42C1">  onTrigger</span><span style="color:#24292E">(</span><span style="color:#E36209">e</span><span style="color:#24292E">) {</span></span>
+<span class="line"><span style="color:#6A737D">    // triggered when count.value is mutated</span></span>
+<span class="line"><span style="color:#D73A49">    debugger</span></span>
+<span class="line"><span style="color:#24292E">  }</span></span>
+<span class="line"><span style="color:#24292E">})</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// access plusOne, should trigger onTrack</span></span>
+<span class="line"><span style="color:#24292E">console.</span><span style="color:#6F42C1">log</span><span style="color:#24292E">(plusOne.value)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// mutate count.value, should trigger onTrigger</span></span>
+<span class="line"><span style="color:#24292E">count.value</span><span style="color:#D73A49">++</span></span></code></pre>
+</code></pre>
+<p>:::tip
+<code>onTrack</code> and <code>onTrigger</code> computed options only work in development mode.
+:::</p>
+</div>
+<div class="options-api">
+<p>Computed debugging options are only available via the Composition API <code>computed()</code> function.</p>
+</div>
+<h3>Watcher Debugging {#watcher-debugging}</h3>
+<div class="composition-api">
+<p>Similar to <code>computed()</code>, watchers also support the <code>onTrack</code> and <code>onTrigger</code> options:</p>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#6F42C1">watch</span><span style="color:#24292E">(source, callback, {</span></span>
+<span class="line"><span style="color:#6F42C1">  onTrack</span><span style="color:#24292E">(</span><span style="color:#E36209">e</span><span style="color:#24292E">) {</span></span>
+<span class="line"><span style="color:#D73A49">    debugger</span></span>
+<span class="line"><span style="color:#24292E">  },</span></span>
+<span class="line"><span style="color:#6F42C1">  onTrigger</span><span style="color:#24292E">(</span><span style="color:#E36209">e</span><span style="color:#24292E">) {</span></span>
+<span class="line"><span style="color:#D73A49">    debugger</span></span>
+<span class="line"><span style="color:#24292E">  }</span></span>
+<span class="line"><span style="color:#24292E">})</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6F42C1">watchEffect</span><span style="color:#24292E">(callback, {</span></span>
+<span class="line"><span style="color:#6F42C1">  onTrack</span><span style="color:#24292E">(</span><span style="color:#E36209">e</span><span style="color:#24292E">) {</span></span>
+<span class="line"><span style="color:#D73A49">    debugger</span></span>
+<span class="line"><span style="color:#24292E">  },</span></span>
+<span class="line"><span style="color:#6F42C1">  onTrigger</span><span style="color:#24292E">(</span><span style="color:#E36209">e</span><span style="color:#24292E">) {</span></span>
+<span class="line"><span style="color:#D73A49">    debugger</span></span>
+<span class="line"><span style="color:#24292E">  }</span></span>
+<span class="line"><span style="color:#24292E">})</span></span></code></pre>
+</code></pre>
+</div>
+<div class="options-api">
+<p>Watchers declared with the object syntax also support the <code>onTrack</code> and <code>onTrigger</code> options:</p>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#24292E">  watch: {</span></span>
+<span class="line"><span style="color:#24292E">    source: {</span></span>
+<span class="line"><span style="color:#6F42C1">      handler</span><span style="color:#24292E">() {</span></span>
+<span class="line"><span style="color:#6A737D">        // ...</span></span>
+<span class="line"><span style="color:#24292E">      },</span></span>
+<span class="line"><span style="color:#6F42C1">      onTrack</span><span style="color:#24292E">(</span><span style="color:#E36209">e</span><span style="color:#24292E">) {</span></span>
+<span class="line"><span style="color:#D73A49">        debugger</span></span>
+<span class="line"><span style="color:#24292E">      },</span></span>
+<span class="line"><span style="color:#6F42C1">      onTrigger</span><span style="color:#24292E">(</span><span style="color:#E36209">e</span><span style="color:#24292E">) {</span></span>
+<span class="line"><span style="color:#D73A49">        debugger</span></span>
+<span class="line"><span style="color:#24292E">      }</span></span>
+<span class="line"><span style="color:#24292E">    }</span></span>
+<span class="line"><span style="color:#24292E">  }</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre>
+</div>
+<p>:::tip
+<code>onTrack</code> and <code>onTrigger</code> watcher options only work in development mode.
+:::</p>
+<h2>Integration with External State Systems {#integration-with-external-state-systems}</h2>
+<p>Vue's reactivity system works by deeply converting plain JavaScript objects into reactive proxies. The deep conversion can be unnecessary or sometimes unwanted when integrating with external state management systems (e.g. if an external solution also uses Proxies).</p>
+<p>The general idea of integrating Vue's reactivity system with an external state management solution is to hold the external state in a <a href="/api/reactivity-advanced#shallowref"><code>shallowRef</code></a>. A shallow ref is only reactive when its <code>.value</code> property is accessed - the inner value is left intact. When the external state changes, replace the ref value to trigger updates.</p>
+<h3>Immutable Data {#immutable-data}</h3>
+<p>If you are implementing an undo / redo feature, you likely want to take a snapshot of the application's state on every user edit. However, Vue's mutable reactivity system isn't best suited for this if the state tree is large, because serializing the entire state object on every update can be expensive in terms of both CPU and memory costs.</p>
+<p><a href="https://en.wikipedia.org/wiki/Persistent_data_structure">Immutable data structures</a> solve this by never mutating the state objects - instead, it creates new objects that share the same, unchanged parts with old ones. There are different ways of using immutable data in JavaScript, but we recommend using <a href="https://immerjs.github.io/immer/">Immer</a> with Vue because it allows you to use immutable data while keeping the more ergonomic, mutable syntax.</p>
+<p>We can integrate Immer with Vue via a simple composable:</p>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">import</span><span style="color:#24292E"> { produce } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> 'immer'</span></span>
+<span class="line"><span style="color:#D73A49">import</span><span style="color:#24292E"> { shallowRef } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> 'vue'</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">export</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> useImmer</span><span style="color:#24292E">(</span><span style="color:#E36209">baseState</span><span style="color:#24292E">) {</span></span>
+<span class="line"><span style="color:#D73A49">  const</span><span style="color:#005CC5"> state</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> shallowRef</span><span style="color:#24292E">(baseState)</span></span>
+<span class="line"><span style="color:#D73A49">  const</span><span style="color:#6F42C1"> update</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> (</span><span style="color:#E36209">updater</span><span style="color:#24292E">) </span><span style="color:#D73A49">=></span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#24292E">    state.value </span><span style="color:#D73A49">=</span><span style="color:#6F42C1"> produce</span><span style="color:#24292E">(state.value, updater)</span></span>
+<span class="line"><span style="color:#24292E">  }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">  return</span><span style="color:#24292E"> [state, update]</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre>
+<p><a href="https://play.vuejs.org/#eNp9VMFu2zAM/RXNl6ZAYnfoTlnSdRt66DBsQ7vtEuXg2YyjRpYEUU5TBPn3UZLtuE1RH2KLfCIfycfsk8/GpNsGkmkyw8IK4xiCa8wVV6I22jq2Zw3CbV2DZQe2srpmZ2km/PmMK8a4KrRCxxbCQY1j1pgyd3DrD0s27++OFh689z/0OOEkTBlPvkNuFfvbAE/Gra/UilzOko0Mh2A+ufcHwd9ij8KtWUjwMsAqlxgjcLU854qrVaMKJ7RiTleVDBRHQpWwO4/xB8xHoRg2v+oyh/MioJepT0ClvTsxhnSUi1LOsthN6iMdCGgkBacTY7NGhjd9ScG2k5W2c56M9rG6ceBPdbOWm1AxO0/a+uiZFjJHpFv7Fj10XhdSFBtyntTJkzaxf/ZtQnYguoFNJkUkmAWGs2xAm47onqT/jPWHxjjYuUkJhba57+yUSaFg4tZWN9X6Y9eIcC8ZJ1FQkzo36QNqRZILQXjroAqnXb+9LQzVD3vtnMFpljXKbKq00HWU3/X7i/QivcxKgS5aUglVXjxNAGvK8KnWZSNJWa0KDoGChzmk3L28jSVcQX1o1d1puwfgOpdSP97BqsfQxhCCK9gFTC+tXu7/coR7R71rxRWXBL2FpHOMOAAeYVGJhBvFL3s+kGKIkW5zSfKfd+RHA2u3gzZEpML9y9JS06YtAq5DLFmOMWXsjkM6rET1YjzUcSMk2J/G1/h8TKGOb8HmV7bdQbqzhmLziv0Bd3Govywg2O1x8Umvua3ARffN/Q/S1sDZDfMN5x2glo3nGGFfGlUS7QEusL0NcxWq+o03OwcKu6Ke/+fwhIb89Y3Sj3Qv0w+9xg7/AWfvyMs=">Try it in the Playground</a></p>
+<h3>State Machines {#state-machines}</h3>
+<p><a href="https://en.wikipedia.org/wiki/Finite-state_machine">State Machine</a> is a model for describing all the possible states an application can be in, and all the possible ways it can transition from one state to another. While it may be overkill for simple components, it can help make complex state flows more robust and manageable.</p>
+<p>One of the most popular state machine implementations in JavaScript is <a href="https://xstate.js.org/">XState</a>. Here's a composable that integrates with it:</p>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">import</span><span style="color:#24292E"> { createMachine, interpret } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> 'xstate'</span></span>
+<span class="line"><span style="color:#D73A49">import</span><span style="color:#24292E"> { shallowRef } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> 'vue'</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">export</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> useMachine</span><span style="color:#24292E">(</span><span style="color:#E36209">options</span><span style="color:#24292E">) {</span></span>
+<span class="line"><span style="color:#D73A49">  const</span><span style="color:#005CC5"> machine</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> createMachine</span><span style="color:#24292E">(options)</span></span>
+<span class="line"><span style="color:#D73A49">  const</span><span style="color:#005CC5"> state</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> shallowRef</span><span style="color:#24292E">(machine.initialState)</span></span>
+<span class="line"><span style="color:#D73A49">  const</span><span style="color:#005CC5"> service</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> interpret</span><span style="color:#24292E">(machine)</span></span>
+<span class="line"><span style="color:#24292E">    .</span><span style="color:#6F42C1">onTransition</span><span style="color:#24292E">((</span><span style="color:#E36209">newState</span><span style="color:#24292E">) </span><span style="color:#D73A49">=></span><span style="color:#24292E"> (state.value </span><span style="color:#D73A49">=</span><span style="color:#24292E"> newState))</span></span>
+<span class="line"><span style="color:#24292E">    .</span><span style="color:#6F42C1">start</span><span style="color:#24292E">()</span></span>
+<span class="line"><span style="color:#D73A49">  const</span><span style="color:#6F42C1"> send</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> (</span><span style="color:#E36209">event</span><span style="color:#24292E">) </span><span style="color:#D73A49">=></span><span style="color:#24292E"> service.</span><span style="color:#6F42C1">send</span><span style="color:#24292E">(event)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">  return</span><span style="color:#24292E"> [state, send]</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre>
+<p><a href="https://play.vuejs.org/#eNp1U81unDAQfpWRL7DSFqqqUiXEJumhyqVVpDa3ugcKZtcJjC1syEqId8/YBu/uIRcEM9/P/DGz71pn0yhYwUpTD1JbMMKO+o6j7LUaLMwwGvGrqk8SBSzQDqqHJMv7EMleTMIRgGOt0Fj4a2xlxZ5EsPkHhytuOjucbApIrDoeO5HsfQCllVVHUYlVbeW0xr2OKcCzHCwkKQAK3fP56fHx5w/irSyqbfFMgA+h0cKBHZYey45jmYfeqWv6sKLXHbnTF0D5f7RWITzUnaxfD5y5ztIkSCY7zjwKYJ5DyVlf2fokTMrZ5sbZDu6Bs6e25QwK94b0svgKyjwYkEyZR2e2Z2H8n/pK04wV0oL8KEjWJwxncTicnb23C3F2slabIs9H1K/HrFZ9HrIPX7Mv37LPuTC5xEacSfa+V83YEW+bBfleFkuW8QbqQZDEuso9rcOKQQ/CxosIHnQLkWJOVdept9+ijSA6NEJwFGePaUekAdFwr65EaRcxu9BbOKq1JDqnmzIi9oL0RRDu4p1u/ayH9schrhlimGTtOLGnjeJRAJnC56FCQ3SFaYriLWjA4Q7SsPOp6kYnEXMbldKDTW/ssCFgKiaB1kusBWT+rkLYjQiAKhkHvP2j3IqWd5iMQ+M=">Try it in the Playground</a></p>
+<h3>RxJS {#rxjs}</h3>
+<p><a href="https://rxjs.dev/">RxJS</a> is a library for working with asynchronous event streams. The <a href="https://vueuse.org/">VueUse</a> library provides the <a href="https://vueuse.org/rxjs/readme.html"><code>@vueuse/rxjs</code></a> add-on for connecting RxJS streams with Vue's reactivity system.</p>
+<h2>Connection to Signals {#connection-to-signals}</h2>
+<p>Quite a few other frameworks have introduced reactivity primitives similar to refs from Vue's Composition API, under the term "signals":</p>
+<ul>
+<li><a href="https://docs.solidjs.com/concepts/signals">Solid Signals</a></li>
+<li><a href="https://angular.dev/guide/signals">Angular Signals</a></li>
+<li><a href="https://preactjs.com/guide/v10/signals/">Preact Signals</a></li>
+<li><a href="https://qwik.builder.io/docs/components/state/#usesignal">Qwik Signals</a></li>
+</ul>
+<p>Fundamentally, signals are the same kind of reactivity primitive as Vue refs. It's a value container that provides dependency tracking on access, and side-effect triggering on mutation. This reactivity-primitive-based paradigm isn't a particularly new concept in the frontend world: it dates back to implementations like <a href="https://knockoutjs.com/documentation/observables.html">Knockout observables</a> and <a href="https://docs.meteor.com/api/tracker.html">Meteor Tracker</a> from more than a decade ago. Vue Options API and the React state management library <a href="https://mobx.js.org/">MobX</a> are also based on the same principles, but hide the primitives behind object properties.</p>
+<p>Although not a necessary trait for something to qualify as signals, today the concept is often discussed alongside the rendering model where updates are performed through fine-grained subscriptions. Due to the use of Virtual DOM, Vue currently <a href="/guide/extras/rendering-mechanism#compiler-informed-virtual-dom">relies on compilers to achieve similar optimizations</a>. However, we are also exploring a new Solid-inspired compilation strategy, called <a href="https://github.com/vuejs/core-vapor">Vapor Mode</a>, that does not rely on Virtual DOM and takes more advantage of Vue's built-in reactivity system.</p>
+<h3>API Design Trade-Offs {#api-design-trade-offs}</h3>
+<p>The design of Preact and Qwik's signals are very similar to Vue's <a href="/api/reactivity-advanced#shallowref">shallowRef</a>: all three provide a mutable interface via the <code>.value</code> property. We will focus the discussion on Solid and Angular signals.</p>
+<h4>Solid Signals {#solid-signals}</h4>
+<p>Solid's <code>createSignal()</code> API design emphasizes read / write segregation. Signals are exposed as a read-only getter and a separate setter:</p>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">const</span><span style="color:#24292E"> [</span><span style="color:#005CC5">count</span><span style="color:#24292E">, </span><span style="color:#005CC5">setCount</span><span style="color:#24292E">] </span><span style="color:#D73A49">=</span><span style="color:#6F42C1"> createSignal</span><span style="color:#24292E">(</span><span style="color:#005CC5">0</span><span style="color:#24292E">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6F42C1">count</span><span style="color:#24292E">() </span><span style="color:#6A737D">// access the value</span></span>
+<span class="line"><span style="color:#6F42C1">setCount</span><span style="color:#24292E">(</span><span style="color:#005CC5">1</span><span style="color:#24292E">) </span><span style="color:#6A737D">// update the value</span></span></code></pre>
+</code></pre>
+<p>Notice how the <code>count</code> signal can be passed down without the setter. This ensures that the state can never be mutated unless the setter is also explicitly exposed. Whether this safety guarantee justifies the more verbose syntax could be subject to the requirement of the project and personal taste - but in case you prefer this API style, you can easily replicate it in Vue:</p>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">import</span><span style="color:#24292E"> { shallowRef, triggerRef } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> 'vue'</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">export</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> createSignal</span><span style="color:#24292E">(</span><span style="color:#E36209">value</span><span style="color:#24292E">, </span><span style="color:#E36209">options</span><span style="color:#24292E">) {</span></span>
+<span class="line"><span style="color:#D73A49">  const</span><span style="color:#005CC5"> r</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> shallowRef</span><span style="color:#24292E">(value)</span></span>
+<span class="line"><span style="color:#D73A49">  const</span><span style="color:#6F42C1"> get</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> () </span><span style="color:#D73A49">=></span><span style="color:#24292E"> r.value</span></span>
+<span class="line"><span style="color:#D73A49">  const</span><span style="color:#6F42C1"> set</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> (</span><span style="color:#E36209">v</span><span style="color:#24292E">) </span><span style="color:#D73A49">=></span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#24292E">    r.value </span><span style="color:#D73A49">=</span><span style="color:#D73A49"> typeof</span><span style="color:#24292E"> v </span><span style="color:#D73A49">===</span><span style="color:#032F62"> 'function'</span><span style="color:#D73A49"> ?</span><span style="color:#6F42C1"> v</span><span style="color:#24292E">(r.value) </span><span style="color:#D73A49">:</span><span style="color:#24292E"> v</span></span>
+<span class="line"><span style="color:#D73A49">    if</span><span style="color:#24292E"> (options?.equals </span><span style="color:#D73A49">===</span><span style="color:#005CC5"> false</span><span style="color:#24292E">) </span><span style="color:#6F42C1">triggerRef</span><span style="color:#24292E">(r)</span></span>
+<span class="line"><span style="color:#24292E">  }</span></span>
+<span class="line"><span style="color:#D73A49">  return</span><span style="color:#24292E"> [get, set]</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre>
+<p><a href="https://play.vuejs.org/#eNpdUk1TgzAQ/Ss7uQAjgr12oNXxH+ix9IAYaDQkMV/qMPx3N6G0Uy9Msu/tvn2PTORJqcI7SrakMp1myoKh1qldI9iopLYwQadpa+krG0TLYYZeyxGSojSSs/d7E8vFh0ka0YhOCmPh0EknbB4mPYfTEeqbIelD1oiqXPRQCS+WjoojAW8A1Wmzm1A39KYZzHNVYiUib85aKeCx46z7rBuySqQe6h14uINN1pDIBWACVUcqbGwtl17EqvIiR3LyzwcmcXFuTi3n8vuF9jlYzYaBajxfMsDcomv6E/m9E51luN2NV99yR3OQKkAmgykss+SkMZerxMLEZFZ4oBYJGAA600VEryAaD6CPaJwJKwnr9ldR2WMedV1Dsi6WwB58emZlsAV/zqmH9LzfvqBfruUmNvZ4QN7VearjenP4aHwmWsABt4x/+tiImcx/z27Jqw==">Try it in the Playground</a></p>
+<h4>Angular Signals {#angular-signals}</h4>
+<p>Angular is undergoing some fundamental changes by foregoing dirty-checking and introducing its own implementation of a reactivity primitive. The Angular Signal API looks like this:</p>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">const</span><span style="color:#005CC5"> count</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> signal</span><span style="color:#24292E">(</span><span style="color:#005CC5">0</span><span style="color:#24292E">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6F42C1">count</span><span style="color:#24292E">() </span><span style="color:#6A737D">// access the value</span></span>
+<span class="line"><span style="color:#24292E">count.</span><span style="color:#6F42C1">set</span><span style="color:#24292E">(</span><span style="color:#005CC5">1</span><span style="color:#24292E">) </span><span style="color:#6A737D">// set new value</span></span>
+<span class="line"><span style="color:#24292E">count.</span><span style="color:#6F42C1">update</span><span style="color:#24292E">((</span><span style="color:#E36209">v</span><span style="color:#24292E">) </span><span style="color:#D73A49">=></span><span style="color:#24292E"> v </span><span style="color:#D73A49">+</span><span style="color:#005CC5"> 1</span><span style="color:#24292E">) </span><span style="color:#6A737D">// update based on previous value</span></span></code></pre>
+</code></pre>
+<p>Again, we can easily replicate the API in Vue:</p>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">import</span><span style="color:#24292E"> { shallowRef } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> 'vue'</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">export</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> signal</span><span style="color:#24292E">(</span><span style="color:#E36209">initialValue</span><span style="color:#24292E">) {</span></span>
+<span class="line"><span style="color:#D73A49">  const</span><span style="color:#005CC5"> r</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> shallowRef</span><span style="color:#24292E">(initialValue)</span></span>
+<span class="line"><span style="color:#D73A49">  const</span><span style="color:#6F42C1"> s</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> () </span><span style="color:#D73A49">=></span><span style="color:#24292E"> r.value</span></span>
+<span class="line"><span style="color:#24292E">  s.</span><span style="color:#6F42C1">set</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> (</span><span style="color:#E36209">value</span><span style="color:#24292E">) </span><span style="color:#D73A49">=></span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#24292E">    r.value </span><span style="color:#D73A49">=</span><span style="color:#24292E"> value</span></span>
+<span class="line"><span style="color:#24292E">  }</span></span>
+<span class="line"><span style="color:#24292E">  s.</span><span style="color:#6F42C1">update</span><span style="color:#D73A49"> =</span><span style="color:#24292E"> (</span><span style="color:#E36209">updater</span><span style="color:#24292E">) </span><span style="color:#D73A49">=></span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#24292E">    r.value </span><span style="color:#D73A49">=</span><span style="color:#6F42C1"> updater</span><span style="color:#24292E">(r.value)</span></span>
+<span class="line"><span style="color:#24292E">  }</span></span>
+<span class="line"><span style="color:#D73A49">  return</span><span style="color:#24292E"> s</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre>
+<p><a href="https://play.vuejs.org/#eNp9Ul1v0zAU/SuWX9ZCSRh7m9IKGHuAB0AD8WQJZclt6s2xLX+ESlH+O9d2krbr1Df7nnPu17k9/aR11nmgt7SwleHaEQvO6w2TvNXKONITyxtZihWpVKu9g5oMZGtUS66yvJSNF6V5lyjZk71ikslKSeuQ7qUj61G+eL+cgFr5RwGITAkXiyVZb5IAn2/IB+QWeeoHO8GPg1aL0gH+CCl215u7mJ3bW9L3s3IYihyxifMlFRpJqewL1qN3TknysRK8el4zGjNlXtdYa9GFrjryllwvGY18QrisDLQgXZTnSX8pF64zzD7pDWDghbbI5/Hoip7tFL05eLErhVD/HmB75Edpyd8zc9DUaAbso3TrZeU4tjfawSV3vBR/SuFhSfrQUXLHBMvmKqe8A8siK7lmsi5gAbJhWARiIGD9hM7BIfHSgjGaHljzlDyGF2MEPQs6g5dpcAIm8Xs+2XxODTgUn0xVYdJ5RxPhKOd4gdMsA/rgLEq3vEEHlEQPYrbgaqu5APNDh6KWUTyuZC2jcWvfYswZD6spXu2gen4l/mT3Icboz3AWpgNGZ8yVBttM8P2v77DH9wy2qvYC2RfAB7BK+NBjon32ssa2j3ix26/xsrhsftv7vQNpp6FCo4E5RD6jeE93F0Y/tHuT3URd2OLwHyXleRY=">Try it in the Playground</a></p>
+<p>Compared to Vue refs, Solid and Angular's getter-based API style provide some interesting trade-offs when used in Vue components:</p>
+<ul>
+<li><code>()</code> is slightly less verbose than <code>.value</code>, but updating the value is more verbose.</li>
+<li>There is no ref-unwrapping: accessing values always require <code>()</code>. This makes value access consistent everywhere. This also means you can pass raw signals down as component props.</li>
+</ul>
+<p>Whether these API styles suit you is to some extent subjective. Our goal here is to demonstrate the underlying similarity and trade-offs between these different API designs. We also want to show that Vue is flexible: you are not really locked into the existing APIs. Should it be necessary, you can create your own reactivity primitive API to suit more specific needs.</p></body></html>

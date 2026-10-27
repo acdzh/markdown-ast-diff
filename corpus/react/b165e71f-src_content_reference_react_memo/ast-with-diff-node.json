@@ -1,0 +1,6077 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "yaml",
+      "value": "title: memo",
+      "position": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 4,
+          "offset": 19
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<Intro>",
+      "position": {
+        "start": {
+          "line": 5,
+          "column": 1,
+          "offset": 21
+        },
+        "end": {
+          "line": 5,
+          "column": 8,
+          "offset": 28
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "inlineCode",
+          "value": "memo",
+          "position": {
+            "start": {
+              "line": 7,
+              "column": 1,
+              "offset": 30
+            },
+            "end": {
+              "line": 7,
+              "column": 7,
+              "offset": 36
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " lets you skip re-rendering a component when its props are unchanged.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 7,
+          "column": 1,
+          "offset": 30
+        },
+        "end": {
+          "line": 7,
+          "column": 76,
+          "offset": 105
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": null,
+      "meta": null,
+      "value": "const MemoizedComponent = memo(SomeComponent, arePropsEqual?)",
+      "position": {
+        "start": {
+          "line": 9,
+          "column": 1,
+          "offset": 107
+        },
+        "end": {
+          "line": 11,
+          "column": 4,
+          "offset": 176
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</Intro>",
+      "position": {
+        "start": {
+          "line": 13,
+          "column": 1,
+          "offset": 178
+        },
+        "end": {
+          "line": 13,
+          "column": 9,
+          "offset": 186
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "<Note>",
+          "position": {
+            "start": {
+              "line": 15,
+              "column": 1,
+              "offset": 188
+            },
+            "end": {
+              "line": 15,
+              "column": 7,
+              "offset": 194
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "link",
+              "title": null,
+              "url": "/learn/react-compiler",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "React Compiler",
+                  "position": {
+                    "start": {
+                      "line": 17,
+                      "column": 2,
+                      "offset": 197
+                    },
+                    "end": {
+                      "line": 17,
+                      "column": 16,
+                      "offset": 211
+                    }
+                  },
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 17,
+                  "column": 1,
+                  "offset": 196
+                },
+                "end": {
+                  "line": 17,
+                  "column": 40,
+                  "offset": 235
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "text",
+              "value": " automatically applies the equivalent of ",
+              "position": {
+                "start": {
+                  "line": 17,
+                  "column": 40,
+                  "offset": 235
+                },
+                "end": {
+                  "line": 17,
+                  "column": 81,
+                  "offset": 276
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "inlineCode",
+              "value": "memo",
+              "position": {
+                "start": {
+                  "line": 17,
+                  "column": 81,
+                  "offset": 276
+                },
+                "end": {
+                  "line": 17,
+                  "column": 87,
+                  "offset": 282
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "text",
+              "value": " to all components, reducing the need for manual memoization. You can use the compiler to handle component memoization automatically.",
+              "position": {
+                "start": {
+                  "line": 17,
+                  "column": 87,
+                  "offset": 282
+                },
+                "end": {
+                  "line": 17,
+                  "column": 220,
+                  "offset": 415
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 17,
+              "column": 1,
+              "offset": 196
+            },
+            "end": {
+              "line": 17,
+              "column": 220,
+              "offset": 415
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "</Note>",
+          "position": {
+            "start": {
+              "line": 19,
+              "column": 1,
+              "offset": 417
+            },
+            "end": {
+              "line": 19,
+              "column": 8,
+              "offset": 424
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "html",
+      "value": "<InlineToc />",
+      "position": {
+        "start": {
+          "line": 21,
+          "column": 1,
+          "offset": 426
+        },
+        "end": {
+          "line": 21,
+          "column": 14,
+          "offset": 439
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "thematicBreak",
+      "position": {
+        "start": {
+          "line": 23,
+          "column": 1,
+          "offset": 441
+        },
+        "end": {
+          "line": 23,
+          "column": 4,
+          "offset": 444
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Reference {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "reference",
+              "position": {
+                "start": {
+                  "line": 19,
+                  "column": 17,
+                  "offset": 224
+                },
+                "end": {
+                  "line": 19,
+                  "column": 26,
+                  "offset": 233
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 19,
+              "column": 16,
+              "offset": 223
+            },
+            "end": {
+              "line": 19,
+              "column": 27,
+              "offset": 234
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 25,
+          "column": 1,
+          "offset": 446
+        },
+        "end": {
+          "line": 25,
+          "column": 29,
+          "offset": 474
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "inlineCode",
+          "value": "memo(Component, arePropsEqual?)",
+          "position": {
+            "start": {
+              "line": 21,
+              "column": 5,
+              "offset": 242
+            },
+            "end": {
+              "line": 21,
+              "column": 38,
+              "offset": 275
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "memo",
+              "position": {
+                "start": {
+                  "line": 21,
+                  "column": 42,
+                  "offset": 279
+                },
+                "end": {
+                  "line": 21,
+                  "column": 46,
+                  "offset": 283
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 21,
+              "column": 41,
+              "offset": 278
+            },
+            "end": {
+              "line": 21,
+              "column": 47,
+              "offset": 284
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 27,
+          "column": 1,
+          "offset": 476
+        },
+        "end": {
+          "line": 27,
+          "column": 49,
+          "offset": 524
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Wrap a component in ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "memo",
+          "position": {
+            "start": {
+              "line": 23,
+              "column": 21,
+              "offset": 308
+            },
+            "end": {
+              "line": 23,
+              "column": 27,
+              "offset": 314
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " to get a ",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "memoized",
+              "position": {
+                "start": {
+                  "line": 23,
+                  "column": 38,
+                  "offset": 325
+                },
+                "end": {
+                  "line": 23,
+                  "column": 46,
+                  "offset": 333
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 23,
+              "column": 37,
+              "offset": 324
+            },
+            "end": {
+              "line": 23,
+              "column": 47,
+              "offset": 334
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " version of that component. This memoized version of your component will usually not be re-rendered when its parent component is re-rendered as long as its props have not changed. But React may still re-render it: memoization is a performance optimization, not a guarantee.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 29,
+          "column": 1,
+          "offset": 526
+        },
+        "end": {
+          "line": 29,
+          "column": 320,
+          "offset": 845
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "import { memo } from 'react';\n\nconst SomeComponent = memo(function SomeComponent(props) {\n  // ...\n});",
+      "position": {
+        "start": {
+          "line": 31,
+          "column": 1,
+          "offset": 847
+        },
+        "end": {
+          "line": 37,
+          "column": 4,
+          "offset": 959
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "#usage",
+          "children": [
+            {
+              "type": "text",
+              "value": "See more examples below.",
+              "position": {
+                "start": {
+                  "line": 33,
+                  "column": 2,
+                  "offset": 724
+                },
+                "end": {
+                  "line": 33,
+                  "column": 26,
+                  "offset": 748
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 33,
+              "column": 1,
+              "offset": 723
+            },
+            "end": {
+              "line": 33,
+              "column": 35,
+              "offset": 757
+            }
+          },
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 39,
+          "column": 1,
+          "offset": 961
+        },
+        "end": {
+          "line": 39,
+          "column": 35,
+          "offset": 995
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 4,
+      "children": [
+        {
+          "type": "text",
+          "value": "Parameters {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "parameters",
+              "position": {
+                "start": {
+                  "line": 35,
+                  "column": 20,
+                  "offset": 778
+                },
+                "end": {
+                  "line": 35,
+                  "column": 30,
+                  "offset": 788
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 35,
+              "column": 19,
+              "offset": 777
+            },
+            "end": {
+              "line": 35,
+              "column": 31,
+              "offset": 789
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 41,
+          "column": 1,
+          "offset": 997
+        },
+        "end": {
+          "line": 41,
+          "column": 33,
+          "offset": 1029
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": true,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "Component",
+                  "position": {
+                    "start": {
+                      "line": 37,
+                      "column": 3,
+                      "offset": 795
+                    },
+                    "end": {
+                      "line": 37,
+                      "column": 14,
+                      "offset": 806
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ": The component that you want to memoize. The ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "memo",
+                  "position": {
+                    "start": {
+                      "line": 37,
+                      "column": 60,
+                      "offset": 852
+                    },
+                    "end": {
+                      "line": 37,
+                      "column": 66,
+                      "offset": 858
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " does not modify this component, but returns a new, memoized component instead. Any valid React component, including functions and ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "/reference/react/forwardRef",
+                  "children": [
+                    {
+                      "type": "inlineCode",
+                      "value": "forwardRef",
+                      "position": {
+                        "start": {
+                          "line": 37,
+                          "column": 198,
+                          "offset": 990
+                        },
+                        "end": {
+                          "line": 37,
+                          "column": 210,
+                          "offset": 1002
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 37,
+                      "column": 197,
+                      "offset": 989
+                    },
+                    "end": {
+                      "line": 37,
+                      "column": 240,
+                      "offset": 1032
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " components, is accepted.",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 43,
+                  "column": 3,
+                  "offset": 1033
+                },
+                "end": {
+                  "line": 43,
+                  "column": 265,
+                  "offset": 1295
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 43,
+              "column": 1,
+              "offset": 1031
+            },
+            "end": {
+              "line": 43,
+              "column": 265,
+              "offset": 1295
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "strong",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "optional",
+                      "position": {
+                        "start": {
+                          "line": 39,
+                          "column": 5,
+                          "offset": 1063
+                        },
+                        "end": {
+                          "line": 39,
+                          "column": 13,
+                          "offset": 1071
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 39,
+                      "column": 3,
+                      "offset": 1061
+                    },
+                    "end": {
+                      "line": 39,
+                      "column": 15,
+                      "offset": 1073
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "arePropsEqual",
+                  "position": {
+                    "start": {
+                      "line": 39,
+                      "column": 16,
+                      "offset": 1074
+                    },
+                    "end": {
+                      "line": 39,
+                      "column": 31,
+                      "offset": 1089
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ": A function that accepts two arguments: the component's previous props, and its new props. It should return ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "true",
+                  "position": {
+                    "start": {
+                      "line": 39,
+                      "column": 140,
+                      "offset": 1198
+                    },
+                    "end": {
+                      "line": 39,
+                      "column": 146,
+                      "offset": 1204
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " if the old and new props are equal: that is, if the component will render the same output and behave in the same way with the new props as with the old. Otherwise it should return ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "false",
+                  "position": {
+                    "start": {
+                      "line": 39,
+                      "column": 327,
+                      "offset": 1385
+                    },
+                    "end": {
+                      "line": 39,
+                      "column": 334,
+                      "offset": 1392
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ". Usually, you will not specify this function. By default, React will compare each prop with ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is",
+                  "children": [
+                    {
+                      "type": "inlineCode",
+                      "value": "Object.is",
+                      "position": {
+                        "start": {
+                          "line": 39,
+                          "column": 428,
+                          "offset": 1486
+                        },
+                        "end": {
+                          "line": 39,
+                          "column": 439,
+                          "offset": 1497
+                        }
+                      },
+                      "data": {}
+                    },
+                    {
+                      "type": "text",
+                      "value": ".",
+                      "position": {
+                        "start": {
+                          "line": 39,
+                          "column": 439,
+                          "offset": 1497
+                        },
+                        "end": {
+                          "line": 39,
+                          "column": 440,
+                          "offset": 1498
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 39,
+                      "column": 427,
+                      "offset": 1485
+                    },
+                    "end": {
+                      "line": 39,
+                      "column": 533,
+                      "offset": 1591
+                    }
+                  },
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 45,
+                  "column": 3,
+                  "offset": 1299
+                },
+                "end": {
+                  "line": 45,
+                  "column": 533,
+                  "offset": 1829
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 45,
+              "column": 1,
+              "offset": 1297
+            },
+            "end": {
+              "line": 45,
+              "column": 533,
+              "offset": 1829
+            }
+          },
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 43,
+          "column": 1,
+          "offset": 1031
+        },
+        "end": {
+          "line": 45,
+          "column": 533,
+          "offset": 1829
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 4,
+      "children": [
+        {
+          "type": "text",
+          "value": "Returns {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "returns",
+              "position": {
+                "start": {
+                  "line": 41,
+                  "column": 17,
+                  "offset": 1609
+                },
+                "end": {
+                  "line": 41,
+                  "column": 24,
+                  "offset": 1616
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 41,
+              "column": 16,
+              "offset": 1608
+            },
+            "end": {
+              "line": 41,
+              "column": 25,
+              "offset": 1617
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 47,
+          "column": 1,
+          "offset": 1831
+        },
+        "end": {
+          "line": 47,
+          "column": 27,
+          "offset": 1857
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "inlineCode",
+          "value": "memo",
+          "position": {
+            "start": {
+              "line": 43,
+              "column": 1,
+              "offset": 1621
+            },
+            "end": {
+              "line": 43,
+              "column": 7,
+              "offset": 1627
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " returns a new React component. It behaves the same as the component provided to ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "memo",
+          "position": {
+            "start": {
+              "line": 43,
+              "column": 1,
+              "offset": 1621
+            },
+            "end": {
+              "line": 43,
+              "column": 7,
+              "offset": 1627
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " except that React will not always re-render it when its parent is being re-rendered unless its props have changed.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 49,
+          "column": 1,
+          "offset": 1859
+        },
+        "end": {
+          "line": 49,
+          "column": 209,
+          "offset": 2067
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "thematicBreak",
+      "position": {
+        "start": {
+          "line": 51,
+          "column": 1,
+          "offset": 2069
+        },
+        "end": {
+          "line": 51,
+          "column": 4,
+          "offset": 2072
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Usage {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "usage",
+              "position": {
+                "start": {
+                  "line": 47,
+                  "column": 13,
+                  "offset": 1848
+                },
+                "end": {
+                  "line": 47,
+                  "column": 18,
+                  "offset": 1853
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 47,
+              "column": 12,
+              "offset": 1847
+            },
+            "end": {
+              "line": 47,
+              "column": 19,
+              "offset": 1854
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 53,
+          "column": 1,
+          "offset": 2074
+        },
+        "end": {
+          "line": 53,
+          "column": 21,
+          "offset": 2094
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Skipping re-rendering when props are unchanged {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "skipping-re-rendering-when-props-are-unchanged",
+              "position": {
+                "start": {
+                  "line": 49,
+                  "column": 55,
+                  "offset": 1912
+                },
+                "end": {
+                  "line": 49,
+                  "column": 101,
+                  "offset": 1958
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 49,
+              "column": 54,
+              "offset": 1911
+            },
+            "end": {
+              "line": 49,
+              "column": 102,
+              "offset": 1959
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 55,
+          "column": 1,
+          "offset": 2096
+        },
+        "end": {
+          "line": 55,
+          "column": 104,
+          "offset": 2199
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "React normally re-renders a component whenever its parent re-renders. With ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "memo",
+          "position": {
+            "start": {
+              "line": 51,
+              "column": 76,
+              "offset": 2038
+            },
+            "end": {
+              "line": 51,
+              "column": 82,
+              "offset": 2044
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", you can create a component that React will not re-render when its parent re-renders so long as its new props are the same as the old props. Such a component is said to be ",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "memoized",
+              "position": {
+                "start": {
+                  "line": 51,
+                  "column": 256,
+                  "offset": 2218
+                },
+                "end": {
+                  "line": 51,
+                  "column": 264,
+                  "offset": 2226
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 51,
+              "column": 255,
+              "offset": 2217
+            },
+            "end": {
+              "line": 51,
+              "column": 265,
+              "offset": 2227
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ".",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 57,
+          "column": 1,
+          "offset": 2201
+        },
+        "end": {
+          "line": 57,
+          "column": 266,
+          "offset": 2466
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "To memoize a component, wrap it in ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "memo",
+          "position": {
+            "start": {
+              "line": 53,
+              "column": 36,
+              "offset": 2265
+            },
+            "end": {
+              "line": 53,
+              "column": 42,
+              "offset": 2271
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " and use the value that it returns in place of your original component:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 59,
+          "column": 1,
+          "offset": 2468
+        },
+        "end": {
+          "line": 59,
+          "column": 113,
+          "offset": 2580
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "const Greeting = memo(function Greeting({ name }) {\n  return <h1>Hello, {name}!</h1>;\n});\n\nexport default Greeting;",
+      "position": {
+        "start": {
+          "line": 61,
+          "column": 1,
+          "offset": 2582
+        },
+        "end": {
+          "line": 67,
+          "column": 4,
+          "offset": 2707
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "A React component should always have ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/learn/keeping-components-pure",
+          "children": [
+            {
+              "type": "text",
+              "value": "pure rendering logic.",
+              "position": {
+                "start": {
+                  "line": 63,
+                  "column": 39,
+                  "offset": 2509
+                },
+                "end": {
+                  "line": 63,
+                  "column": 60,
+                  "offset": 2530
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 63,
+              "column": 38,
+              "offset": 2508
+            },
+            "end": {
+              "line": 63,
+              "column": 93,
+              "offset": 2563
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " This means that it must return the same output if its props, state, and context haven't changed. By using ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "memo",
+          "position": {
+            "start": {
+              "line": 63,
+              "column": 200,
+              "offset": 2670
+            },
+            "end": {
+              "line": 63,
+              "column": 206,
+              "offset": 2676
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", you are telling React that your component complies with this requirement, so React doesn't need to re-render as long as its props haven't changed. Even with ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "memo",
+          "position": {
+            "start": {
+              "line": 63,
+              "column": 200,
+              "offset": 2670
+            },
+            "end": {
+              "line": 63,
+              "column": 206,
+              "offset": 2676
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", your component will re-render if its own state changes or if a context that it's using changes.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 69,
+          "column": 1,
+          "offset": 2709
+        },
+        "end": {
+          "line": 69,
+          "column": 468,
+          "offset": 3176
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "In this example, notice that the ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "Greeting",
+          "position": {
+            "start": {
+              "line": 65,
+              "column": 34,
+              "offset": 2973
+            },
+            "end": {
+              "line": 65,
+              "column": 44,
+              "offset": 2983
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " component re-renders whenever ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "name",
+          "position": {
+            "start": {
+              "line": 65,
+              "column": 75,
+              "offset": 3014
+            },
+            "end": {
+              "line": 65,
+              "column": 81,
+              "offset": 3020
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " is changed (because that's one of its props), but not when ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "address",
+          "position": {
+            "start": {
+              "line": 65,
+              "column": 141,
+              "offset": 3080
+            },
+            "end": {
+              "line": 65,
+              "column": 150,
+              "offset": 3089
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " is changed (because it's not passed to ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "Greeting",
+          "position": {
+            "start": {
+              "line": 65,
+              "column": 34,
+              "offset": 2973
+            },
+            "end": {
+              "line": 65,
+              "column": 44,
+              "offset": 2983
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " as a prop):",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 71,
+          "column": 1,
+          "offset": 3178
+        },
+        "end": {
+          "line": 71,
+          "column": 212,
+          "offset": 3389
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<Sandpack>",
+      "position": {
+        "start": {
+          "line": 73,
+          "column": 1,
+          "offset": 3391
+        },
+        "end": {
+          "line": 73,
+          "column": 11,
+          "offset": 3401
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "import { memo, useState } from 'react';\n\nexport default function MyApp() {\n  const [name, setName] = useState('');\n  const [address, setAddress] = useState('');\n  return (\n    <>\n      <label>\n        Name{': '}\n        <input value={name} onChange={e => setName(e.target.value)} />\n      </label>\n      <label>\n        Address{': '}\n        <input value={address} onChange={e => setAddress(e.target.value)} />\n      </label>\n      <Greeting name={name} />\n    </>\n  );\n}\n\nconst Greeting = memo(function Greeting({ name }) {\n  console.log(\"Greeting was rendered at\", new Date().toLocaleTimeString());\n  return <h3>Hello{name && ', '}{name}!</h3>;\n});",
+      "position": {
+        "start": {
+          "line": 75,
+          "column": 1,
+          "offset": 3403
+        },
+        "end": {
+          "line": 100,
+          "column": 4,
+          "offset": 4063
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "css",
+      "meta": null,
+      "value": "label {\n  display: block;\n  margin-bottom: 16px;\n}",
+      "position": {
+        "start": {
+          "line": 102,
+          "column": 1,
+          "offset": 4065
+        },
+        "end": {
+          "line": 107,
+          "column": 4,
+          "offset": 4126
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</Sandpack>",
+      "position": {
+        "start": {
+          "line": 109,
+          "column": 1,
+          "offset": 4128
+        },
+        "end": {
+          "line": 109,
+          "column": 12,
+          "offset": 4139
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "html",
+      "value": "<Note>",
+      "position": {
+        "start": {
+          "line": 111,
+          "column": 1,
+          "offset": 4141
+        },
+        "end": {
+          "line": 111,
+          "column": 7,
+          "offset": 4147
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "You should only rely on ",
+              "position": {
+                "start": {
+                  "line": 107,
+                  "column": 3,
+                  "offset": 3913
+                },
+                "end": {
+                  "line": 107,
+                  "column": 27,
+                  "offset": 3937
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "inlineCode",
+              "value": "memo",
+              "position": {
+                "start": {
+                  "line": 107,
+                  "column": 27,
+                  "offset": 3937
+                },
+                "end": {
+                  "line": 107,
+                  "column": 33,
+                  "offset": 3943
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "text",
+              "value": " as a performance optimization.",
+              "position": {
+                "start": {
+                  "line": 107,
+                  "column": 33,
+                  "offset": 3943
+                },
+                "end": {
+                  "line": 107,
+                  "column": 64,
+                  "offset": 3974
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 107,
+              "column": 1,
+              "offset": 3911
+            },
+            "end": {
+              "line": 107,
+              "column": 66,
+              "offset": 3976
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " If your code doesn't work without it, find the underlying problem and fix it first. Then you may add ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "memo",
+          "position": {
+            "start": {
+              "line": 107,
+              "column": 168,
+              "offset": 4078
+            },
+            "end": {
+              "line": 107,
+              "column": 174,
+              "offset": 4084
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " to improve performance.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 113,
+          "column": 1,
+          "offset": 4149
+        },
+        "end": {
+          "line": 113,
+          "column": 198,
+          "offset": 4346
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</Note>",
+      "position": {
+        "start": {
+          "line": 115,
+          "column": 1,
+          "offset": 4348
+        },
+        "end": {
+          "line": 115,
+          "column": 8,
+          "offset": 4355
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "html",
+      "value": "<DeepDive>",
+      "position": {
+        "start": {
+          "line": 117,
+          "column": 1,
+          "offset": 4357
+        },
+        "end": {
+          "line": 117,
+          "column": 11,
+          "offset": 4367
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "heading",
+      "depth": 4,
+      "children": [
+        {
+          "type": "text",
+          "value": "Should you add memo everywhere? {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "should-you-add-memo-everywhere",
+              "position": {
+                "start": {
+                  "line": 113,
+                  "column": 41,
+                  "offset": 4171
+                },
+                "end": {
+                  "line": 113,
+                  "column": 71,
+                  "offset": 4201
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 113,
+              "column": 40,
+              "offset": 4170
+            },
+            "end": {
+              "line": 113,
+              "column": 72,
+              "offset": 4202
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 119,
+          "column": 1,
+          "offset": 4369
+        },
+        "end": {
+          "line": 119,
+          "column": 74,
+          "offset": 4442
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "If your app is like this site, and most interactions are coarse (like replacing a page or an entire section), memoization is usually unnecessary. On the other hand, if your app is more like a drawing editor, and most interactions are granular (like moving shapes), then you might find memoization very helpful.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 121,
+          "column": 1,
+          "offset": 4444
+        },
+        "end": {
+          "line": 121,
+          "column": 311,
+          "offset": 4754
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Optimizing with ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "memo",
+          "position": {
+            "start": {
+              "line": 117,
+              "column": 17,
+              "offset": 4535
+            },
+            "end": {
+              "line": 117,
+              "column": 23,
+              "offset": 4541
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "  is only valuable when your component re-renders often with the same exact props, and its re-rendering logic is expensive. If there is no perceptible lag when your component re-renders, ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "memo",
+          "position": {
+            "start": {
+              "line": 117,
+              "column": 17,
+              "offset": 4535
+            },
+            "end": {
+              "line": 117,
+              "column": 23,
+              "offset": 4541
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " is unnecessary. Keep in mind that ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "memo",
+          "position": {
+            "start": {
+              "line": 117,
+              "column": 17,
+              "offset": 4535
+            },
+            "end": {
+              "line": 117,
+              "column": 23,
+              "offset": 4541
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " is completely useless if the props passed to your component are ",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "always different,",
+              "position": {
+                "start": {
+                  "line": 117,
+                  "column": 323,
+                  "offset": 4841
+                },
+                "end": {
+                  "line": 117,
+                  "column": 340,
+                  "offset": 4858
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 117,
+              "column": 322,
+              "offset": 4840
+            },
+            "end": {
+              "line": 117,
+              "column": 341,
+              "offset": 4859
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " such as if you pass an object or a plain function defined during rendering. This is why you will often need ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/reference/react/useMemo#skipping-re-rendering-of-components",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "useMemo",
+              "position": {
+                "start": {
+                  "line": 117,
+                  "column": 451,
+                  "offset": 4969
+                },
+                "end": {
+                  "line": 117,
+                  "column": 460,
+                  "offset": 4978
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 117,
+              "column": 450,
+              "offset": 4968
+            },
+            "end": {
+              "line": 117,
+              "column": 523,
+              "offset": 5041
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " and ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/reference/react/useCallback#skipping-re-rendering-of-components",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "useCallback",
+              "position": {
+                "start": {
+                  "line": 117,
+                  "column": 529,
+                  "offset": 5047
+                },
+                "end": {
+                  "line": 117,
+                  "column": 542,
+                  "offset": 5060
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 117,
+              "column": 528,
+              "offset": 5046
+            },
+            "end": {
+              "line": 117,
+              "column": 609,
+              "offset": 5127
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " together with ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "memo",
+          "position": {
+            "start": {
+              "line": 117,
+              "column": 17,
+              "offset": 4535
+            },
+            "end": {
+              "line": 117,
+              "column": 23,
+              "offset": 4541
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ".",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 123,
+          "column": 1,
+          "offset": 4756
+        },
+        "end": {
+          "line": 123,
+          "column": 631,
+          "offset": 5386
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "There is no benefit to wrapping a component in ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "memo",
+          "position": {
+            "start": {
+              "line": 119,
+              "column": 48,
+              "offset": 5198
+            },
+            "end": {
+              "line": 119,
+              "column": 54,
+              "offset": 5204
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " in other cases. There is no significant harm to doing that either, so some teams choose to not think about individual cases, and memoize as much as possible. The downside of this approach is that code becomes less readable. Also, not all memoization is effective: a single value that's \"always new\" is enough to break memoization for an entire component.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 125,
+          "column": 1,
+          "offset": 5388
+        },
+        "end": {
+          "line": 125,
+          "column": 409,
+          "offset": 5796
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "In practice, you can make a lot of memoization unnecessary by following a few principles:",
+              "position": {
+                "start": {
+                  "line": 121,
+                  "column": 3,
+                  "offset": 5563
+                },
+                "end": {
+                  "line": 121,
+                  "column": 92,
+                  "offset": 5652
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 121,
+              "column": 1,
+              "offset": 5561
+            },
+            "end": {
+              "line": 121,
+              "column": 94,
+              "offset": 5654
+            }
+          },
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 127,
+          "column": 1,
+          "offset": 5798
+        },
+        "end": {
+          "line": 127,
+          "column": 94,
+          "offset": 5891
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 1,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "When a component visually wraps other components, let it ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "/learn/passing-props-to-a-component#passing-jsx-as-children",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "accept JSX as children.",
+                      "position": {
+                        "start": {
+                          "line": 123,
+                          "column": 62,
+                          "offset": 5717
+                        },
+                        "end": {
+                          "line": 123,
+                          "column": 85,
+                          "offset": 5740
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 123,
+                      "column": 61,
+                      "offset": 5716
+                    },
+                    "end": {
+                      "line": 123,
+                      "column": 147,
+                      "offset": 5802
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " This way, when the wrapper component updates its own state, React knows that its children don't need to re-render.",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 129,
+                  "column": 4,
+                  "offset": 5896
+                },
+                "end": {
+                  "line": 129,
+                  "column": 262,
+                  "offset": 6154
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 129,
+              "column": 1,
+              "offset": 5893
+            },
+            "end": {
+              "line": 129,
+              "column": 262,
+              "offset": 6154
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Prefer local state and don't ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "/learn/sharing-state-between-components",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "lift state up",
+                      "position": {
+                        "start": {
+                          "line": 124,
+                          "column": 34,
+                          "offset": 5951
+                        },
+                        "end": {
+                          "line": 124,
+                          "column": 47,
+                          "offset": 5964
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 124,
+                      "column": 33,
+                      "offset": 5950
+                    },
+                    "end": {
+                      "line": 124,
+                      "column": 89,
+                      "offset": 6006
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " any further than necessary. For example, don't keep transient state like forms and whether an item is hovered at the top of your tree or in a global state library.",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 130,
+                  "column": 4,
+                  "offset": 6158
+                },
+                "end": {
+                  "line": 130,
+                  "column": 253,
+                  "offset": 6407
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 130,
+              "column": 1,
+              "offset": 6155
+            },
+            "end": {
+              "line": 130,
+              "column": 253,
+              "offset": 6407
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Keep your ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "/learn/keeping-components-pure",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "rendering logic pure.",
+                      "position": {
+                        "start": {
+                          "line": 125,
+                          "column": 15,
+                          "offset": 6185
+                        },
+                        "end": {
+                          "line": 125,
+                          "column": 36,
+                          "offset": 6206
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 125,
+                      "column": 14,
+                      "offset": 6184
+                    },
+                    "end": {
+                      "line": 125,
+                      "column": 69,
+                      "offset": 6239
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " If re-rendering a component causes a problem or produces some noticeable visual artifact, it's a bug in your component! Fix the bug instead of adding memoization.",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 131,
+                  "column": 4,
+                  "offset": 6411
+                },
+                "end": {
+                  "line": 131,
+                  "column": 232,
+                  "offset": 6639
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 131,
+              "column": 1,
+              "offset": 6408
+            },
+            "end": {
+              "line": 131,
+              "column": 232,
+              "offset": 6639
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Avoid ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "/learn/you-might-not-need-an-effect",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "unnecessary Effects that update state.",
+                      "position": {
+                        "start": {
+                          "line": 126,
+                          "column": 11,
+                          "offset": 6413
+                        },
+                        "end": {
+                          "line": 126,
+                          "column": 49,
+                          "offset": 6451
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 126,
+                      "column": 10,
+                      "offset": 6412
+                    },
+                    "end": {
+                      "line": 126,
+                      "column": 87,
+                      "offset": 6489
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " Most performance problems in React apps are caused by chains of updates originating from Effects that cause your components to render over and over.",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 132,
+                  "column": 4,
+                  "offset": 6643
+                },
+                "end": {
+                  "line": 132,
+                  "column": 236,
+                  "offset": 6875
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 132,
+              "column": 1,
+              "offset": 6640
+            },
+            "end": {
+              "line": 132,
+              "column": 236,
+              "offset": 6875
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Try to ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "/learn/removing-effect-dependencies",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "remove unnecessary dependencies from your Effects.",
+                      "position": {
+                        "start": {
+                          "line": 127,
+                          "column": 12,
+                          "offset": 6650
+                        },
+                        "end": {
+                          "line": 127,
+                          "column": 62,
+                          "offset": 6700
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 127,
+                      "column": 11,
+                      "offset": 6649
+                    },
+                    "end": {
+                      "line": 127,
+                      "column": 100,
+                      "offset": 6738
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " For example, instead of memoization, it's often simpler to move some object or a function inside an Effect or outside the component.",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 133,
+                  "column": 4,
+                  "offset": 6879
+                },
+                "end": {
+                  "line": 133,
+                  "column": 233,
+                  "offset": 7108
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 133,
+              "column": 1,
+              "offset": 6876
+            },
+            "end": {
+              "line": 133,
+              "column": 233,
+              "offset": 7108
+            }
+          },
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 129,
+          "column": 1,
+          "offset": 5893
+        },
+        "end": {
+          "line": 133,
+          "column": 233,
+          "offset": 7108
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "If a specific interaction still feels laggy, ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://legacy.reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html",
+          "children": [
+            {
+              "type": "text",
+              "value": "use the React Developer Tools profiler",
+              "position": {
+                "start": {
+                  "line": 129,
+                  "column": 47,
+                  "offset": 6919
+                },
+                "end": {
+                  "line": 129,
+                  "column": 85,
+                  "offset": 6957
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 129,
+              "column": 46,
+              "offset": 6918
+            },
+            "end": {
+              "line": 129,
+              "column": 166,
+              "offset": 7038
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " to see which components would benefit the most from memoization, and add memoization where needed. These principles make your components easier to debug and understand, so it's good to follow them in any case. In the long term, we're researching ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://www.youtube.com/watch?v=lGEMwh32soc",
+          "children": [
+            {
+              "type": "text",
+              "value": "doing granular memoization automatically",
+              "position": {
+                "start": {
+                  "line": 129,
+                  "column": 414,
+                  "offset": 7286
+                },
+                "end": {
+                  "line": 129,
+                  "column": 454,
+                  "offset": 7326
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 129,
+              "column": 413,
+              "offset": 7285
+            },
+            "end": {
+              "line": 129,
+              "column": 500,
+              "offset": 7372
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " to solve this once and for all.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 135,
+          "column": 1,
+          "offset": 7110
+        },
+        "end": {
+          "line": 135,
+          "column": 532,
+          "offset": 7641
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</DeepDive>",
+      "position": {
+        "start": {
+          "line": 137,
+          "column": 1,
+          "offset": 7643
+        },
+        "end": {
+          "line": 137,
+          "column": 12,
+          "offset": 7654
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "thematicBreak",
+      "position": {
+        "start": {
+          "line": 139,
+          "column": 1,
+          "offset": 7656
+        },
+        "end": {
+          "line": 139,
+          "column": 4,
+          "offset": 7659
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Updating a memoized component using state {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "updating-a-memoized-component-using-state",
+              "position": {
+                "start": {
+                  "line": 135,
+                  "column": 50,
+                  "offset": 7473
+                },
+                "end": {
+                  "line": 135,
+                  "column": 91,
+                  "offset": 7514
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 135,
+              "column": 49,
+              "offset": 7472
+            },
+            "end": {
+              "line": 135,
+              "column": 92,
+              "offset": 7515
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 141,
+          "column": 1,
+          "offset": 7661
+        },
+        "end": {
+          "line": 141,
+          "column": 94,
+          "offset": 7754
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Even when a component is memoized, it will still re-render when its own state changes. Memoization only has to do with props that are passed to the component from its parent.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 143,
+          "column": 1,
+          "offset": 7756
+        },
+        "end": {
+          "line": 143,
+          "column": 175,
+          "offset": 7930
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<Sandpack>",
+      "position": {
+        "start": {
+          "line": 145,
+          "column": 1,
+          "offset": 7932
+        },
+        "end": {
+          "line": 145,
+          "column": 11,
+          "offset": 7942
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "import { memo, useState } from 'react';\n\nexport default function MyApp() {\n  const [name, setName] = useState('');\n  const [address, setAddress] = useState('');\n  return (\n    <>\n      <label>\n        Name{': '}\n        <input value={name} onChange={e => setName(e.target.value)} />\n      </label>\n      <label>\n        Address{': '}\n        <input value={address} onChange={e => setAddress(e.target.value)} />\n      </label>\n      <Greeting name={name} />\n    </>\n  );\n}\n\nconst Greeting = memo(function Greeting({ name }) {\n  console.log('Greeting was rendered at', new Date().toLocaleTimeString());\n  const [greeting, setGreeting] = useState('Hello');\n  return (\n    <>\n      <h3>{greeting}{name && ', '}{name}!</h3>\n      <GreetingSelector value={greeting} onChange={setGreeting} />\n    </>\n  );\n});\n\nfunction GreetingSelector({ value, onChange }) {\n  return (\n    <>\n      <label>\n        <input\n          type=\"radio\"\n          checked={value === 'Hello'}\n          onChange={e => onChange('Hello')}\n        />\n        Regular greeting\n      </label>\n      <label>\n        <input\n          type=\"radio\"\n          checked={value === 'Hello and welcome'}\n          onChange={e => onChange('Hello and welcome')}\n        />\n        Enthusiastic greeting\n      </label>\n    </>\n  );\n}",
+      "position": {
+        "start": {
+          "line": 147,
+          "column": 1,
+          "offset": 7944
+        },
+        "end": {
+          "line": 201,
+          "column": 4,
+          "offset": 9238
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "css",
+      "meta": null,
+      "value": "label {\n  display: block;\n  margin-bottom: 16px;\n}",
+      "position": {
+        "start": {
+          "line": 203,
+          "column": 1,
+          "offset": 9240
+        },
+        "end": {
+          "line": 208,
+          "column": 4,
+          "offset": 9301
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</Sandpack>",
+      "position": {
+        "start": {
+          "line": 210,
+          "column": 1,
+          "offset": 9303
+        },
+        "end": {
+          "line": 210,
+          "column": 12,
+          "offset": 9314
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "If you set a state variable to its current value, React will skip re-rendering your component even without ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "memo",
+          "position": {
+            "start": {
+              "line": 206,
+              "column": 108,
+              "offset": 9186
+            },
+            "end": {
+              "line": 206,
+              "column": 114,
+              "offset": 9192
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ". You may still see your component function being called an extra time, but the result will be discarded.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 212,
+          "column": 1,
+          "offset": 9316
+        },
+        "end": {
+          "line": 212,
+          "column": 219,
+          "offset": 9534
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "thematicBreak",
+      "position": {
+        "start": {
+          "line": 214,
+          "column": 1,
+          "offset": 9536
+        },
+        "end": {
+          "line": 214,
+          "column": 4,
+          "offset": 9539
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Updating a memoized component using a context {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "updating-a-memoized-component-using-a-context",
+              "position": {
+                "start": {
+                  "line": 210,
+                  "column": 54,
+                  "offset": 9357
+                },
+                "end": {
+                  "line": 210,
+                  "column": 99,
+                  "offset": 9402
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 210,
+              "column": 53,
+              "offset": 9356
+            },
+            "end": {
+              "line": 210,
+              "column": 100,
+              "offset": 9403
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 216,
+          "column": 1,
+          "offset": 9541
+        },
+        "end": {
+          "line": 216,
+          "column": 102,
+          "offset": 9642
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Even when a component is memoized, it will still re-render when a context that it's using changes. Memoization only has to do with props that are passed to the component from its parent.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 218,
+          "column": 1,
+          "offset": 9644
+        },
+        "end": {
+          "line": 218,
+          "column": 187,
+          "offset": 9830
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<Sandpack>",
+      "position": {
+        "start": {
+          "line": 220,
+          "column": 1,
+          "offset": 9832
+        },
+        "end": {
+          "line": 220,
+          "column": 11,
+          "offset": 9842
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": null,
+      "value": "import { createContext, memo, useContext, useState } from 'react';\n\nconst ThemeContext = createContext(null);\n\nexport default function MyApp() {\n  const [theme, setTheme] = useState('dark');\n\n  function handleClick() {\n    setTheme(theme === 'dark' ? 'light' : 'dark');\n  }\n\n  return (\n    <ThemeContext value={theme}>\n      <button onClick={handleClick}>\n        Switch theme\n      </button>\n      <Greeting name=\"Taylor\" />\n    </ThemeContext>\n  );\n}\n\nconst Greeting = memo(function Greeting({ name }) {\n  console.log(\"Greeting was rendered at\", new Date().toLocaleTimeString());\n  const theme = useContext(ThemeContext);\n  return (\n    <h3 className={theme}>Hello, {name}!</h3>\n  );\n});",
+      "position": {
+        "start": {
+          "line": 222,
+          "column": 1,
+          "offset": 9844
+        },
+        "end": {
+          "line": 251,
+          "column": 4,
+          "offset": 10543
+        }
+      },
+      "data": {
+        "diffOldContent": "import { createContext, memo, useContext, useState } from 'react';\n\nconst ThemeContext = createContext(null);\n\nexport default function MyApp() {\n  const [theme, setTheme] = useState('dark');\n\n  function handleClick() {\n    setTheme(theme === 'dark' ? 'light' : 'dark'); \n  }\n\n  return (\n    <ThemeContext value={theme}>\n      <button onClick={handleClick}>\n        Switch theme\n      </button>\n      <Greeting name=\"Taylor\" />\n    </ThemeContext>\n  );\n}\n\nconst Greeting = memo(function Greeting({ name }) {\n  console.log(\"Greeting was rendered at\", new Date().toLocaleTimeString());\n  const theme = useContext(ThemeContext);\n  return (\n    <h3 className={theme}>Hello, {name}!</h3>\n  );\n});"
+      }
+    },
+    {
+      "type": "code",
+      "lang": "css",
+      "meta": null,
+      "value": "label {\n  display: block;\n  margin-bottom: 16px;\n}\n\n.light {\n  color: black;\n  background-color: white;\n}\n\n.dark {\n  color: white;\n  background-color: black;\n}",
+      "position": {
+        "start": {
+          "line": 253,
+          "column": 1,
+          "offset": 10545
+        },
+        "end": {
+          "line": 268,
+          "column": 4,
+          "offset": 10715
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</Sandpack>",
+      "position": {
+        "start": {
+          "line": 270,
+          "column": 1,
+          "offset": 10717
+        },
+        "end": {
+          "line": 270,
+          "column": 12,
+          "offset": 10728
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "To make your component re-render only when a ",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "part",
+              "position": {
+                "start": {
+                  "line": 266,
+                  "column": 47,
+                  "offset": 10540
+                },
+                "end": {
+                  "line": 266,
+                  "column": 51,
+                  "offset": 10544
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 266,
+              "column": 46,
+              "offset": 10539
+            },
+            "end": {
+              "line": 266,
+              "column": 52,
+              "offset": 10545
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " of some context changes, split your component in two. Read what you need from the context in the outer component, and pass it down to a memoized child as a prop.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 272,
+          "column": 1,
+          "offset": 10730
+        },
+        "end": {
+          "line": 272,
+          "column": 214,
+          "offset": 10943
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "thematicBreak",
+      "position": {
+        "start": {
+          "line": 274,
+          "column": 1,
+          "offset": 10945
+        },
+        "end": {
+          "line": 274,
+          "column": 4,
+          "offset": 10948
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Minimizing props changes {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "minimizing-props-changes",
+              "position": {
+                "start": {
+                  "line": 270,
+                  "column": 33,
+                  "offset": 10746
+                },
+                "end": {
+                  "line": 270,
+                  "column": 57,
+                  "offset": 10770
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 270,
+              "column": 32,
+              "offset": 10745
+            },
+            "end": {
+              "line": 270,
+              "column": 58,
+              "offset": 10771
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 276,
+          "column": 1,
+          "offset": 10950
+        },
+        "end": {
+          "line": 276,
+          "column": 60,
+          "offset": 11009
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "When you use ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "memo",
+          "position": {
+            "start": {
+              "line": 272,
+              "column": 14,
+              "offset": 10788
+            },
+            "end": {
+              "line": 272,
+              "column": 20,
+              "offset": 10794
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", your component re-renders whenever any prop is not ",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "shallowly equal",
+              "position": {
+                "start": {
+                  "line": 272,
+                  "column": 74,
+                  "offset": 10848
+                },
+                "end": {
+                  "line": 272,
+                  "column": 89,
+                  "offset": 10863
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 272,
+              "column": 73,
+              "offset": 10847
+            },
+            "end": {
+              "line": 272,
+              "column": 90,
+              "offset": 10864
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " to what it was previously. This means that React compares every prop in your component with its previous value using the ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "Object.is",
+              "position": {
+                "start": {
+                  "line": 272,
+                  "column": 213,
+                  "offset": 10987
+                },
+                "end": {
+                  "line": 272,
+                  "column": 224,
+                  "offset": 10998
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 272,
+              "column": 212,
+              "offset": 10986
+            },
+            "end": {
+              "line": 272,
+              "column": 317,
+              "offset": 11091
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " comparison. Note that ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "Object.is(3, 3)",
+          "position": {
+            "start": {
+              "line": 272,
+              "column": 340,
+              "offset": 11114
+            },
+            "end": {
+              "line": 272,
+              "column": 357,
+              "offset": 11131
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " is ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "true",
+          "position": {
+            "start": {
+              "line": 272,
+              "column": 361,
+              "offset": 11135
+            },
+            "end": {
+              "line": 272,
+              "column": 367,
+              "offset": 11141
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", but ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "Object.is({}, {})",
+          "position": {
+            "start": {
+              "line": 272,
+              "column": 373,
+              "offset": 11147
+            },
+            "end": {
+              "line": 272,
+              "column": 392,
+              "offset": 11166
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " is ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "false",
+          "position": {
+            "start": {
+              "line": 272,
+              "column": 396,
+              "offset": 11170
+            },
+            "end": {
+              "line": 272,
+              "column": 403,
+              "offset": 11177
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ".",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 278,
+          "column": 1,
+          "offset": 11011
+        },
+        "end": {
+          "line": 278,
+          "column": 404,
+          "offset": 11414
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "To get the most out of ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "memo",
+          "position": {
+            "start": {
+              "line": 275,
+              "column": 24,
+              "offset": 11204
+            },
+            "end": {
+              "line": 275,
+              "column": 30,
+              "offset": 11210
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", minimize the times that the props change. For example, if the prop is an object, prevent the parent component from re-creating that object every time by using ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/reference/react/useMemo",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "useMemo",
+              "position": {
+                "start": {
+                  "line": 275,
+                  "column": 192,
+                  "offset": 11372
+                },
+                "end": {
+                  "line": 275,
+                  "column": 201,
+                  "offset": 11381
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "text",
+              "value": ":",
+              "position": {
+                "start": {
+                  "line": 275,
+                  "column": 201,
+                  "offset": 11381
+                },
+                "end": {
+                  "line": 275,
+                  "column": 202,
+                  "offset": 11382
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 275,
+              "column": 191,
+              "offset": 11371
+            },
+            "end": {
+              "line": 275,
+              "column": 229,
+              "offset": 11409
+            }
+          },
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 281,
+          "column": 1,
+          "offset": 11417
+        },
+        "end": {
+          "line": 281,
+          "column": 229,
+          "offset": 11645
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": "{5-8}",
+      "value": "function Page() {\n  const [name, setName] = useState('Taylor');\n  const [age, setAge] = useState(42);\n\n  const person = useMemo(\n    () => ({ name, age }),\n    [name, age]\n  );\n\n  return <Profile person={person} />;\n}\n\nconst Profile = memo(function Profile({ person }) {\n  // ...\n});",
+      "position": {
+        "start": {
+          "line": 283,
+          "column": 1,
+          "offset": 11647
+        },
+        "end": {
+          "line": 299,
+          "column": 4,
+          "offset": 11946
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "A better way to minimize props changes is to make sure the component accepts the minimum necessary information in its props. For example, it could accept individual values instead of a whole object:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 301,
+          "column": 1,
+          "offset": 11948
+        },
+        "end": {
+          "line": 301,
+          "column": 199,
+          "offset": 12146
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": "{4,7}",
+      "value": "function Page() {\n  const [name, setName] = useState('Taylor');\n  const [age, setAge] = useState(42);\n  return <Profile name={name} age={age} />;\n}\n\nconst Profile = memo(function Profile({ name, age }) {\n  // ...\n});",
+      "position": {
+        "start": {
+          "line": 303,
+          "column": 1,
+          "offset": 12148
+        },
+        "end": {
+          "line": 313,
+          "column": 4,
+          "offset": 12380
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Even individual values can sometimes be projected to ones that change less frequently. For example, here a component accepts a boolean indicating the presence of a value rather than the value itself:",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 315,
+          "column": 1,
+          "offset": 12382
+        },
+        "end": {
+          "line": 315,
+          "column": 200,
+          "offset": 12581
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": "{3}",
+      "value": "function GroupsLanding({ person }) {\n  const hasGroups = person.groups !== null;\n  return <CallToAction hasGroups={hasGroups} />;\n}\n\nconst CallToAction = memo(function CallToAction({ hasGroups }) {\n  // ...\n});",
+      "position": {
+        "start": {
+          "line": 317,
+          "column": 1,
+          "offset": 12583
+        },
+        "end": {
+          "line": 326,
+          "column": 4,
+          "offset": 12807
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "When you need to pass a function to memoized component, either declare it outside your component so that it never changes, or ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "/reference/react/useCallback#skipping-re-rendering-of-components",
+          "children": [
+            {
+              "type": "inlineCode",
+              "value": "useCallback",
+              "position": {
+                "start": {
+                  "line": 322,
+                  "column": 128,
+                  "offset": 12700
+                },
+                "end": {
+                  "line": 322,
+                  "column": 141,
+                  "offset": 12713
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 322,
+              "column": 127,
+              "offset": 12699
+            },
+            "end": {
+              "line": 322,
+              "column": 208,
+              "offset": 12780
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " to cache its definition between re-renders.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 328,
+          "column": 1,
+          "offset": 12809
+        },
+        "end": {
+          "line": 328,
+          "column": 252,
+          "offset": 13060
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "thematicBreak",
+      "position": {
+        "start": {
+          "line": 330,
+          "column": 1,
+          "offset": 13062
+        },
+        "end": {
+          "line": 330,
+          "column": 4,
+          "offset": 13065
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "Specifying a custom comparison function {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "specifying-a-custom-comparison-function",
+              "position": {
+                "start": {
+                  "line": 326,
+                  "column": 48,
+                  "offset": 12878
+                },
+                "end": {
+                  "line": 326,
+                  "column": 87,
+                  "offset": 12917
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 326,
+              "column": 47,
+              "offset": 12877
+            },
+            "end": {
+              "line": 326,
+              "column": 88,
+              "offset": 12918
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 332,
+          "column": 1,
+          "offset": 13067
+        },
+        "end": {
+          "line": 332,
+          "column": 90,
+          "offset": 13156
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "In rare cases it may be infeasible to minimize the props changes of a memoized component. In that case, you can provide a custom comparison function, which React will use to compare the old and new props instead of using shallow equality. This function is passed as a second argument to ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "memo",
+          "position": {
+            "start": {
+              "line": 328,
+              "column": 288,
+              "offset": 13209
+            },
+            "end": {
+              "line": 328,
+              "column": 294,
+              "offset": 13215
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ". It should return ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "true",
+          "position": {
+            "start": {
+              "line": 328,
+              "column": 313,
+              "offset": 13234
+            },
+            "end": {
+              "line": 328,
+              "column": 319,
+              "offset": 13240
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " only if the new props would result in the same output as the old props; otherwise it should return ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "false",
+          "position": {
+            "start": {
+              "line": 328,
+              "column": 419,
+              "offset": 13340
+            },
+            "end": {
+              "line": 328,
+              "column": 426,
+              "offset": 13347
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ".",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 334,
+          "column": 1,
+          "offset": 13158
+        },
+        "end": {
+          "line": 334,
+          "column": 427,
+          "offset": 13584
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "code",
+      "lang": "js",
+      "meta": "{3}",
+      "value": "const Chart = memo(function Chart({ dataPoints }) {\n  // ...\n}, arePropsEqual);\n\nfunction arePropsEqual(oldProps, newProps) {\n  return (\n    oldProps.dataPoints.length === newProps.dataPoints.length &&\n    oldProps.dataPoints.every((oldPoint, index) => {\n      const newPoint = newProps.dataPoints[index];\n      return oldPoint.x === newPoint.x && oldPoint.y === newPoint.y;\n    })\n  );\n}",
+      "position": {
+        "start": {
+          "line": 336,
+          "column": 1,
+          "offset": 13586
+        },
+        "end": {
+          "line": 350,
+          "column": 4,
+          "offset": 13988
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "If you do this, use the Performance panel in your browser developer tools to make sure that your comparison function is actually faster than re-rendering the component. You might be surprised.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 352,
+          "column": 1,
+          "offset": 13990
+        },
+        "end": {
+          "line": 352,
+          "column": 193,
+          "offset": 14182
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "When you do performance measurements, make sure that React is running in the production mode.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 354,
+          "column": 1,
+          "offset": 14184
+        },
+        "end": {
+          "line": 354,
+          "column": 94,
+          "offset": 14277
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "<Pitfall>",
+      "position": {
+        "start": {
+          "line": 356,
+          "column": 1,
+          "offset": 14279
+        },
+        "end": {
+          "line": 356,
+          "column": 10,
+          "offset": 14288
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "If you provide a custom ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "arePropsEqual",
+          "position": {
+            "start": {
+              "line": 352,
+              "column": 25,
+              "offset": 14078
+            },
+            "end": {
+              "line": 352,
+              "column": 40,
+              "offset": 14093
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " implementation, ",
+          "data": {}
+        },
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "you must compare every prop, including functions.",
+              "position": {
+                "start": {
+                  "line": 352,
+                  "column": 59,
+                  "offset": 14112
+                },
+                "end": {
+                  "line": 352,
+                  "column": 108,
+                  "offset": 14161
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 352,
+              "column": 57,
+              "offset": 14110
+            },
+            "end": {
+              "line": 352,
+              "column": 110,
+              "offset": 14163
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " Functions often ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures",
+          "children": [
+            {
+              "type": "text",
+              "value": "close over",
+              "position": {
+                "start": {
+                  "line": 352,
+                  "column": 128,
+                  "offset": 14181
+                },
+                "end": {
+                  "line": 352,
+                  "column": 138,
+                  "offset": 14191
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 352,
+              "column": 127,
+              "offset": 14180
+            },
+            "end": {
+              "line": 352,
+              "column": 205,
+              "offset": 14258
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " the props and state of parent components. If you return ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "true",
+          "position": {
+            "start": {
+              "line": 352,
+              "column": 262,
+              "offset": 14315
+            },
+            "end": {
+              "line": 352,
+              "column": 268,
+              "offset": 14321
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " when ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "oldProps.onClick !== newProps.onClick",
+          "position": {
+            "start": {
+              "line": 352,
+              "column": 274,
+              "offset": 14327
+            },
+            "end": {
+              "line": 352,
+              "column": 313,
+              "offset": 14366
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ", your component will keep \"seeing\" the props and state from a previous render inside its ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "onClick",
+          "position": {
+            "start": {
+              "line": 352,
+              "column": 403,
+              "offset": 14456
+            },
+            "end": {
+              "line": 352,
+              "column": 412,
+              "offset": 14465
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " handler, leading to very confusing bugs.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 358,
+          "column": 1,
+          "offset": 14290
+        },
+        "end": {
+          "line": 358,
+          "column": 453,
+          "offset": 14742
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Avoid doing deep equality checks inside ",
+          "data": {}
+        },
+        {
+          "type": "inlineCode",
+          "value": "arePropsEqual",
+          "position": {
+            "start": {
+              "line": 354,
+              "column": 41,
+              "offset": 14548
+            },
+            "end": {
+              "line": 354,
+              "column": 56,
+              "offset": 14563
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " unless you are 100% sure that the data structure you're working with has a known limited depth. ",
+          "data": {}
+        },
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "Deep equality checks can become incredibly slow",
+              "position": {
+                "start": {
+                  "line": 354,
+                  "column": 155,
+                  "offset": 14662
+                },
+                "end": {
+                  "line": 354,
+                  "column": 202,
+                  "offset": 14709
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 354,
+              "column": 153,
+              "offset": 14660
+            },
+            "end": {
+              "line": 354,
+              "column": 204,
+              "offset": 14711
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": " and can freeze your app for many seconds if someone changes the data structure later.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 360,
+          "column": 1,
+          "offset": 14744
+        },
+        "end": {
+          "line": 360,
+          "column": 290,
+          "offset": 15033
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "html",
+      "value": "</Pitfall>",
+      "position": {
+        "start": {
+          "line": 362,
+          "column": 1,
+          "offset": 15035
+        },
+        "end": {
+          "line": 362,
+          "column": 11,
+          "offset": 15045
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "thematicBreak",
+      "position": {
+        "start": {
+          "line": 364,
+          "column": 1,
+          "offset": 15047
+        },
+        "end": {
+          "line": 364,
+          "column": 4,
+          "offset": 15050
+        }
+      },
+      "data": {
+        "diffUnchanged": true
+      },
+      "children": []
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "heading",
+          "depth": 3,
+          "children": [
+            {
+              "type": "text",
+              "value": "Do I still need React.memo if I use React Compiler? {/",
+              "position": {
+                "start": {
+                  "line": 366,
+                  "column": 5,
+                  "offset": 15056
+                },
+                "end": {
+                  "line": 366,
+                  "column": 59,
+                  "offset": 15110
+                }
+              }
+            },
+            {
+              "type": "emphasis",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "react-compiler-memo",
+                  "position": {
+                    "start": {
+                      "line": 366,
+                      "column": 60,
+                      "offset": 15111
+                    },
+                    "end": {
+                      "line": 366,
+                      "column": 79,
+                      "offset": 15130
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 366,
+                  "column": 59,
+                  "offset": 15110
+                },
+                "end": {
+                  "line": 366,
+                  "column": 80,
+                  "offset": 15131
+                }
+              }
+            },
+            {
+              "type": "text",
+              "value": "/}",
+              "position": {
+                "start": {
+                  "line": 366,
+                  "column": 80,
+                  "offset": 15131
+                },
+                "end": {
+                  "line": 366,
+                  "column": 82,
+                  "offset": 15133
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 366,
+              "column": 1,
+              "offset": 15052
+            },
+            "end": {
+              "line": 366,
+              "column": 82,
+              "offset": 15133
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "When you enable ",
+              "position": {
+                "start": {
+                  "line": 368,
+                  "column": 1,
+                  "offset": 15135
+                },
+                "end": {
+                  "line": 368,
+                  "column": 17,
+                  "offset": 15151
+                }
+              }
+            },
+            {
+              "type": "link",
+              "title": null,
+              "url": "/learn/react-compiler",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "React Compiler",
+                  "position": {
+                    "start": {
+                      "line": 368,
+                      "column": 18,
+                      "offset": 15152
+                    },
+                    "end": {
+                      "line": 368,
+                      "column": 32,
+                      "offset": 15166
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 368,
+                  "column": 17,
+                  "offset": 15151
+                },
+                "end": {
+                  "line": 368,
+                  "column": 56,
+                  "offset": 15190
+                }
+              }
+            },
+            {
+              "type": "text",
+              "value": ", you typically don't need ",
+              "position": {
+                "start": {
+                  "line": 368,
+                  "column": 56,
+                  "offset": 15190
+                },
+                "end": {
+                  "line": 368,
+                  "column": 83,
+                  "offset": 15217
+                }
+              }
+            },
+            {
+              "type": "inlineCode",
+              "value": "React.memo",
+              "position": {
+                "start": {
+                  "line": 368,
+                  "column": 83,
+                  "offset": 15217
+                },
+                "end": {
+                  "line": 368,
+                  "column": 95,
+                  "offset": 15229
+                }
+              }
+            },
+            {
+              "type": "text",
+              "value": " anymore. The compiler automatically optimizes component re-rendering for you.",
+              "position": {
+                "start": {
+                  "line": 368,
+                  "column": 95,
+                  "offset": 15229
+                },
+                "end": {
+                  "line": 368,
+                  "column": 173,
+                  "offset": 15307
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 368,
+              "column": 1,
+              "offset": 15135
+            },
+            "end": {
+              "line": 368,
+              "column": 173,
+              "offset": 15307
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "Here's how it works:",
+              "position": {
+                "start": {
+                  "line": 370,
+                  "column": 1,
+                  "offset": 15309
+                },
+                "end": {
+                  "line": 370,
+                  "column": 21,
+                  "offset": 15329
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 370,
+              "column": 1,
+              "offset": 15309
+            },
+            "end": {
+              "line": 370,
+              "column": 21,
+              "offset": 15329
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "strong",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Without React Compiler",
+                  "position": {
+                    "start": {
+                      "line": 372,
+                      "column": 3,
+                      "offset": 15333
+                    },
+                    "end": {
+                      "line": 372,
+                      "column": 25,
+                      "offset": 15355
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 372,
+                  "column": 1,
+                  "offset": 15331
+                },
+                "end": {
+                  "line": 372,
+                  "column": 27,
+                  "offset": 15357
+                }
+              }
+            },
+            {
+              "type": "text",
+              "value": ", you need ",
+              "position": {
+                "start": {
+                  "line": 372,
+                  "column": 27,
+                  "offset": 15357
+                },
+                "end": {
+                  "line": 372,
+                  "column": 38,
+                  "offset": 15368
+                }
+              }
+            },
+            {
+              "type": "inlineCode",
+              "value": "React.memo",
+              "position": {
+                "start": {
+                  "line": 372,
+                  "column": 38,
+                  "offset": 15368
+                },
+                "end": {
+                  "line": 372,
+                  "column": 50,
+                  "offset": 15380
+                }
+              }
+            },
+            {
+              "type": "text",
+              "value": " to prevent unnecessary re-renders:",
+              "position": {
+                "start": {
+                  "line": 372,
+                  "column": 50,
+                  "offset": 15380
+                },
+                "end": {
+                  "line": 372,
+                  "column": 85,
+                  "offset": 15415
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 372,
+              "column": 1,
+              "offset": 15331
+            },
+            "end": {
+              "line": 372,
+              "column": 85,
+              "offset": 15415
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "code",
+          "lang": "js",
+          "meta": null,
+          "value": "// Parent re-renders every second\nfunction Parent() {\n  const [seconds, setSeconds] = useState(0);\n\n  useEffect(() => {\n    const interval = setInterval(() => {\n      setSeconds(s => s + 1);\n    }, 1000);\n    return () => clearInterval(interval);\n  }, []);\n\n  return (\n    <>\n      <h1>Seconds: {seconds}</h1>\n      <ExpensiveChild name=\"John\" />\n    </>\n  );\n}\n\n// Without memo, this re-renders every second even though props don't change\nconst ExpensiveChild = memo(function ExpensiveChild({ name }) {\n  console.log('ExpensiveChild rendered');\n  return <div>Hello, {name}!</div>;\n});",
+          "position": {
+            "start": {
+              "line": 374,
+              "column": 1,
+              "offset": 15417
+            },
+            "end": {
+              "line": 399,
+              "column": 4,
+              "offset": 16012
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "strong",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "With React Compiler enabled",
+                  "position": {
+                    "start": {
+                      "line": 401,
+                      "column": 3,
+                      "offset": 16016
+                    },
+                    "end": {
+                      "line": 401,
+                      "column": 30,
+                      "offset": 16043
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 401,
+                  "column": 1,
+                  "offset": 16014
+                },
+                "end": {
+                  "line": 401,
+                  "column": 32,
+                  "offset": 16045
+                }
+              }
+            },
+            {
+              "type": "text",
+              "value": ", the same optimization happens automatically:",
+              "position": {
+                "start": {
+                  "line": 401,
+                  "column": 32,
+                  "offset": 16045
+                },
+                "end": {
+                  "line": 401,
+                  "column": 78,
+                  "offset": 16091
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 401,
+              "column": 1,
+              "offset": 16014
+            },
+            "end": {
+              "line": 401,
+              "column": 78,
+              "offset": 16091
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "code",
+          "lang": "js",
+          "meta": null,
+          "value": "// No memo needed - compiler prevents re-renders automatically\nfunction ExpensiveChild({ name }) {\n  console.log('ExpensiveChild rendered');\n  return <div>Hello, {name}!</div>;\n}",
+          "position": {
+            "start": {
+              "line": 403,
+              "column": 1,
+              "offset": 16093
+            },
+            "end": {
+              "line": 409,
+              "column": 4,
+              "offset": 16281
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "Here's the key part of what the React Compiler generates:",
+              "position": {
+                "start": {
+                  "line": 411,
+                  "column": 1,
+                  "offset": 16283
+                },
+                "end": {
+                  "line": 411,
+                  "column": 58,
+                  "offset": 16340
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 411,
+              "column": 1,
+              "offset": 16283
+            },
+            "end": {
+              "line": 411,
+              "column": 58,
+              "offset": 16340
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "code",
+          "lang": "js",
+          "meta": "{6-12}",
+          "value": "function Parent() {\n  const $ = _c(7);\n  const [seconds, setSeconds] = useState(0);\n  // ... other code ...\n\n  let t3;\n  if ($[4] === Symbol.for(\"react.memo_cache_sentinel\")) {\n    t3 = <ExpensiveChild name=\"John\" />;\n    $[4] = t3;\n  } else {\n    t3 = $[4];\n  }\n  // ... return statement ...\n}",
+          "position": {
+            "start": {
+              "line": 413,
+              "column": 1,
+              "offset": 16342
+            },
+            "end": {
+              "line": 428,
+              "column": 4,
+              "offset": 16653
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "Notice the highlighted lines: The compiler wraps ",
+              "position": {
+                "start": {
+                  "line": 430,
+                  "column": 1,
+                  "offset": 16655
+                },
+                "end": {
+                  "line": 430,
+                  "column": 50,
+                  "offset": 16704
+                }
+              }
+            },
+            {
+              "type": "inlineCode",
+              "value": "<ExpensiveChild name=\"John\" />",
+              "position": {
+                "start": {
+                  "line": 430,
+                  "column": 50,
+                  "offset": 16704
+                },
+                "end": {
+                  "line": 430,
+                  "column": 82,
+                  "offset": 16736
+                }
+              }
+            },
+            {
+              "type": "text",
+              "value": " in a cache check. Since the ",
+              "position": {
+                "start": {
+                  "line": 430,
+                  "column": 82,
+                  "offset": 16736
+                },
+                "end": {
+                  "line": 430,
+                  "column": 111,
+                  "offset": 16765
+                }
+              }
+            },
+            {
+              "type": "inlineCode",
+              "value": "name",
+              "position": {
+                "start": {
+                  "line": 430,
+                  "column": 111,
+                  "offset": 16765
+                },
+                "end": {
+                  "line": 430,
+                  "column": 117,
+                  "offset": 16771
+                }
+              }
+            },
+            {
+              "type": "text",
+              "value": " prop is always ",
+              "position": {
+                "start": {
+                  "line": 430,
+                  "column": 117,
+                  "offset": 16771
+                },
+                "end": {
+                  "line": 430,
+                  "column": 133,
+                  "offset": 16787
+                }
+              }
+            },
+            {
+              "type": "inlineCode",
+              "value": "\"John\"",
+              "position": {
+                "start": {
+                  "line": 430,
+                  "column": 133,
+                  "offset": 16787
+                },
+                "end": {
+                  "line": 430,
+                  "column": 141,
+                  "offset": 16795
+                }
+              }
+            },
+            {
+              "type": "text",
+              "value": ", this JSX is created once and reused on every parent re-render. This is exactly what ",
+              "position": {
+                "start": {
+                  "line": 430,
+                  "column": 141,
+                  "offset": 16795
+                },
+                "end": {
+                  "line": 430,
+                  "column": 227,
+                  "offset": 16881
+                }
+              }
+            },
+            {
+              "type": "inlineCode",
+              "value": "React.memo",
+              "position": {
+                "start": {
+                  "line": 430,
+                  "column": 227,
+                  "offset": 16881
+                },
+                "end": {
+                  "line": 430,
+                  "column": 239,
+                  "offset": 16893
+                }
+              }
+            },
+            {
+              "type": "text",
+              "value": " does - it prevents the child from re-rendering when its props haven't changed.",
+              "position": {
+                "start": {
+                  "line": 430,
+                  "column": 239,
+                  "offset": 16893
+                },
+                "end": {
+                  "line": 430,
+                  "column": 318,
+                  "offset": 16972
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 430,
+              "column": 1,
+              "offset": 16655
+            },
+            "end": {
+              "line": 430,
+              "column": 318,
+              "offset": 16972
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "The React Compiler automatically:",
+              "position": {
+                "start": {
+                  "line": 432,
+                  "column": 1,
+                  "offset": 16974
+                },
+                "end": {
+                  "line": 432,
+                  "column": 34,
+                  "offset": 17007
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 432,
+              "column": 1,
+              "offset": 16974
+            },
+            "end": {
+              "line": 432,
+              "column": 34,
+              "offset": 17007
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "list",
+          "ordered": true,
+          "start": 1,
+          "spread": false,
+          "children": [
+            {
+              "type": "listItem",
+              "spread": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Tracks that the ",
+                      "position": {
+                        "start": {
+                          "line": 433,
+                          "column": 4,
+                          "offset": 17011
+                        },
+                        "end": {
+                          "line": 433,
+                          "column": 20,
+                          "offset": 17027
+                        }
+                      }
+                    },
+                    {
+                      "type": "inlineCode",
+                      "value": "name",
+                      "position": {
+                        "start": {
+                          "line": 433,
+                          "column": 20,
+                          "offset": 17027
+                        },
+                        "end": {
+                          "line": 433,
+                          "column": 26,
+                          "offset": 17033
+                        }
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": " prop passed to ",
+                      "position": {
+                        "start": {
+                          "line": 433,
+                          "column": 26,
+                          "offset": 17033
+                        },
+                        "end": {
+                          "line": 433,
+                          "column": 42,
+                          "offset": 17049
+                        }
+                      }
+                    },
+                    {
+                      "type": "inlineCode",
+                      "value": "ExpensiveChild",
+                      "position": {
+                        "start": {
+                          "line": 433,
+                          "column": 42,
+                          "offset": 17049
+                        },
+                        "end": {
+                          "line": 433,
+                          "column": 58,
+                          "offset": 17065
+                        }
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": " hasn't changed",
+                      "position": {
+                        "start": {
+                          "line": 433,
+                          "column": 58,
+                          "offset": 17065
+                        },
+                        "end": {
+                          "line": 433,
+                          "column": 73,
+                          "offset": 17080
+                        }
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 433,
+                      "column": 4,
+                      "offset": 17011
+                    },
+                    "end": {
+                      "line": 433,
+                      "column": 73,
+                      "offset": 17080
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 433,
+                  "column": 1,
+                  "offset": 17008
+                },
+                "end": {
+                  "line": 433,
+                  "column": 73,
+                  "offset": 17080
+                }
+              }
+            },
+            {
+              "type": "listItem",
+              "spread": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Reuses the previously created JSX for ",
+                      "position": {
+                        "start": {
+                          "line": 434,
+                          "column": 4,
+                          "offset": 17084
+                        },
+                        "end": {
+                          "line": 434,
+                          "column": 42,
+                          "offset": 17122
+                        }
+                      }
+                    },
+                    {
+                      "type": "inlineCode",
+                      "value": "<ExpensiveChild name=\"John\" />",
+                      "position": {
+                        "start": {
+                          "line": 434,
+                          "column": 42,
+                          "offset": 17122
+                        },
+                        "end": {
+                          "line": 434,
+                          "column": 74,
+                          "offset": 17154
+                        }
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 434,
+                      "column": 4,
+                      "offset": 17084
+                    },
+                    "end": {
+                      "line": 434,
+                      "column": 74,
+                      "offset": 17154
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 434,
+                  "column": 1,
+                  "offset": 17081
+                },
+                "end": {
+                  "line": 434,
+                  "column": 74,
+                  "offset": 17154
+                }
+              }
+            },
+            {
+              "type": "listItem",
+              "spread": false,
+              "checked": null,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Skips re-rendering ",
+                      "position": {
+                        "start": {
+                          "line": 435,
+                          "column": 4,
+                          "offset": 17158
+                        },
+                        "end": {
+                          "line": 435,
+                          "column": 23,
+                          "offset": 17177
+                        }
+                      }
+                    },
+                    {
+                      "type": "inlineCode",
+                      "value": "ExpensiveChild",
+                      "position": {
+                        "start": {
+                          "line": 435,
+                          "column": 23,
+                          "offset": 17177
+                        },
+                        "end": {
+                          "line": 435,
+                          "column": 39,
+                          "offset": 17193
+                        }
+                      }
+                    },
+                    {
+                      "type": "text",
+                      "value": " entirely",
+                      "position": {
+                        "start": {
+                          "line": 435,
+                          "column": 39,
+                          "offset": 17193
+                        },
+                        "end": {
+                          "line": 435,
+                          "column": 48,
+                          "offset": 17202
+                        }
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 435,
+                      "column": 4,
+                      "offset": 17158
+                    },
+                    "end": {
+                      "line": 435,
+                      "column": 48,
+                      "offset": 17202
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 435,
+                  "column": 1,
+                  "offset": 17155
+                },
+                "end": {
+                  "line": 435,
+                  "column": 48,
+                  "offset": 17202
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 433,
+              "column": 1,
+              "offset": 17008
+            },
+            "end": {
+              "line": 435,
+              "column": 48,
+              "offset": 17202
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "This means ",
+              "position": {
+                "start": {
+                  "line": 437,
+                  "column": 1,
+                  "offset": 17204
+                },
+                "end": {
+                  "line": 437,
+                  "column": 12,
+                  "offset": 17215
+                }
+              }
+            },
+            {
+              "type": "strong",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "you can safely remove ",
+                  "position": {
+                    "start": {
+                      "line": 437,
+                      "column": 14,
+                      "offset": 17217
+                    },
+                    "end": {
+                      "line": 437,
+                      "column": 36,
+                      "offset": 17239
+                    }
+                  }
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "React.memo",
+                  "position": {
+                    "start": {
+                      "line": 437,
+                      "column": 36,
+                      "offset": 17239
+                    },
+                    "end": {
+                      "line": 437,
+                      "column": 48,
+                      "offset": 17251
+                    }
+                  }
+                },
+                {
+                  "type": "text",
+                  "value": " from your components when using React Compiler",
+                  "position": {
+                    "start": {
+                      "line": 437,
+                      "column": 48,
+                      "offset": 17251
+                    },
+                    "end": {
+                      "line": 437,
+                      "column": 95,
+                      "offset": 17298
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 437,
+                  "column": 12,
+                  "offset": 17215
+                },
+                "end": {
+                  "line": 437,
+                  "column": 97,
+                  "offset": 17300
+                }
+              }
+            },
+            {
+              "type": "text",
+              "value": ". The compiler provides the same optimization automatically, making your code cleaner and easier to maintain.",
+              "position": {
+                "start": {
+                  "line": 437,
+                  "column": 97,
+                  "offset": 17300
+                },
+                "end": {
+                  "line": 437,
+                  "column": 206,
+                  "offset": 17409
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 437,
+              "column": 1,
+              "offset": 17204
+            },
+            "end": {
+              "line": 437,
+              "column": 206,
+              "offset": 17409
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "<Note>",
+          "position": {
+            "start": {
+              "line": 439,
+              "column": 1,
+              "offset": 17411
+            },
+            "end": {
+              "line": 439,
+              "column": 7,
+              "offset": 17417
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "The compiler's optimization is actually more comprehensive than ",
+              "position": {
+                "start": {
+                  "line": 441,
+                  "column": 1,
+                  "offset": 17419
+                },
+                "end": {
+                  "line": 441,
+                  "column": 65,
+                  "offset": 17483
+                }
+              }
+            },
+            {
+              "type": "inlineCode",
+              "value": "React.memo",
+              "position": {
+                "start": {
+                  "line": 441,
+                  "column": 65,
+                  "offset": 17483
+                },
+                "end": {
+                  "line": 441,
+                  "column": 77,
+                  "offset": 17495
+                }
+              }
+            },
+            {
+              "type": "text",
+              "value": ". It also memoizes intermediate values and expensive computations within your components, similar to combining ",
+              "position": {
+                "start": {
+                  "line": 441,
+                  "column": 77,
+                  "offset": 17495
+                },
+                "end": {
+                  "line": 441,
+                  "column": 188,
+                  "offset": 17606
+                }
+              }
+            },
+            {
+              "type": "inlineCode",
+              "value": "React.memo",
+              "position": {
+                "start": {
+                  "line": 441,
+                  "column": 188,
+                  "offset": 17606
+                },
+                "end": {
+                  "line": 441,
+                  "column": 200,
+                  "offset": 17618
+                }
+              }
+            },
+            {
+              "type": "text",
+              "value": " with ",
+              "position": {
+                "start": {
+                  "line": 441,
+                  "column": 200,
+                  "offset": 17618
+                },
+                "end": {
+                  "line": 441,
+                  "column": 206,
+                  "offset": 17624
+                }
+              }
+            },
+            {
+              "type": "inlineCode",
+              "value": "useMemo",
+              "position": {
+                "start": {
+                  "line": 441,
+                  "column": 206,
+                  "offset": 17624
+                },
+                "end": {
+                  "line": 441,
+                  "column": 215,
+                  "offset": 17633
+                }
+              }
+            },
+            {
+              "type": "text",
+              "value": " throughout your component tree.",
+              "position": {
+                "start": {
+                  "line": 441,
+                  "column": 215,
+                  "offset": 17633
+                },
+                "end": {
+                  "line": 441,
+                  "column": 247,
+                  "offset": 17665
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 441,
+              "column": 1,
+              "offset": 17419
+            },
+            "end": {
+              "line": 441,
+              "column": 247,
+              "offset": 17665
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "html",
+          "value": "</Note>",
+          "position": {
+            "start": {
+              "line": 443,
+              "column": 1,
+              "offset": 17667
+            },
+            "end": {
+              "line": 443,
+              "column": 8,
+              "offset": 17674
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "ins",
+      "children": [
+        {
+          "type": "thematicBreak",
+          "position": {
+            "start": {
+              "line": 445,
+              "column": 1,
+              "offset": 17676
+            },
+            "end": {
+              "line": 445,
+              "column": 4,
+              "offset": 17679
+            }
+          },
+          "data": {}
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Troubleshooting {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "troubleshooting",
+              "position": {
+                "start": {
+                  "line": 360,
+                  "column": 23,
+                  "offset": 14838
+                },
+                "end": {
+                  "line": 360,
+                  "column": 38,
+                  "offset": 14853
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 360,
+              "column": 22,
+              "offset": 14837
+            },
+            "end": {
+              "line": 360,
+              "column": 39,
+              "offset": 14854
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 447,
+          "column": 1,
+          "offset": 17681
+        },
+        "end": {
+          "line": 447,
+          "column": 41,
+          "offset": 17721
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "My component re-renders when a prop is an object, array, or function {/",
+          "data": {}
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "my-component-rerenders-when-a-prop-is-an-object-or-array",
+              "position": {
+                "start": {
+                  "line": 361,
+                  "column": 77,
+                  "offset": 14933
+                },
+                "end": {
+                  "line": 361,
+                  "column": 133,
+                  "offset": 14989
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 361,
+              "column": 76,
+              "offset": 14932
+            },
+            "end": {
+              "line": 361,
+              "column": 134,
+              "offset": 14990
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": "/}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 448,
+          "column": 1,
+          "offset": 17722
+        },
+        "end": {
+          "line": 448,
+          "column": 136,
+          "offset": 17857
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "React compares old and new props by shallow equality: that is, it considers whether each new prop is reference-equal to the old prop. If you create a new object or array each time the parent is re-rendered, even if the individual elements are each the same, React will still consider it to be changed. Similarly, if you create a new function when rendering the parent component, React will consider it to have changed even if the function has the same definition. To avoid this, ",
+          "data": {}
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "#minimizing-props-changes",
+          "children": [
+            {
+              "type": "text",
+              "value": "simplify props or memoize props in the parent component",
+              "position": {
+                "start": {
+                  "line": 363,
+                  "column": 481,
+                  "offset": 15474
+                },
+                "end": {
+                  "line": 363,
+                  "column": 536,
+                  "offset": 15529
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 363,
+              "column": 480,
+              "offset": 15473
+            },
+            "end": {
+              "line": 363,
+              "column": 564,
+              "offset": 15557
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "text",
+          "value": ".",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 450,
+          "column": 1,
+          "offset": 17859
+        },
+        "end": {
+          "line": 450,
+          "column": 565,
+          "offset": 18423
+        }
+      },
+      "data": {}
+    }
+  ]
+}

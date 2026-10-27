@@ -1,0 +1,260 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+/* table */
+table { border-collapse: collapse; width: auto; margin: 1em 0; }
+th, td { border: 1px solid #d0d7de; padding: 6px 13px; }
+th { background: #f6f8fa; font-weight: 600; }
+tr:nth-child(2n) { background: #f6f8fa; }
+
+/* code */
+code { padding: 0.2em 0.4em; font-size: 85%; background: #f6f8fa; border-radius: 6px; font-family: 'SF Mono', 'Fira Code', Menlo, monospace; }
+pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background: #f6f8fa; border-radius: 6px; margin: 1em 0; }
+pre code { padding: 0; background: none; border-radius: 0; font-size: inherit; }
+
+/* blockquote */
+blockquote { padding: 0 1em; color: #656d76; border-left: 0.25em solid #d0d7de; margin: 1em 0; }
+
+/* hr */
+hr { height: 0.25em; padding: 0; margin: 24px 0; background-color: #d0d7de; border: 0; }
+
+/* headings */
+h1, h2, h3, h4, h5, h6 { margin-top: 24px; margin-bottom: 16px; font-weight: 600; line-height: 1.25; }
+h1 { font-size: 2em; padding-bottom: 0.3em; border-bottom: 1px solid #d0d7de; }
+h2 { font-size: 1.5em; padding-bottom: 0.3em; border-bottom: 1px solid #d0d7de; }
+h3 { font-size: 1.25em; }
+
+/* list */
+ul, ol { padding-left: 2em; margin: 0.5em 0; }
+li + li { margin-top: 0.25em; }
+
+/* image */
+img { max-width: 100%; }
+
+/* code diff */
+.code-diff { border-radius: 6px; overflow: hidden; margin: 1em 0; font-size: 13px; border: 1px solid #d0d7de; }
+.code-diff pre { margin: 0; padding: 0; border-radius: 0; border: none; background: #fff; }
+.code-diff .shiki { background: #fff !important; }
+.code-diff .diff-line { display: flex; line-height: 1.45; }
+.code-diff .diff-line-gutter { width: 40px; min-width: 40px; text-align: right; padding: 0 8px 0 0; color: #8b949e; font-size: 12px; user-select: none; flex-shrink: 0; }
+.code-diff .diff-line-sign { width: 20px; min-width: 20px; text-align: center; user-select: none; flex-shrink: 0; }
+.code-diff .diff-line-content { flex: 1; padding-right: 12px; white-space: pre; overflow-x: auto; }
+.code-diff .diff-line.del { background: #ffebe9; }
+.code-diff .diff-line.del .diff-line-gutter { background: #ffd7d5; color: #82071e; }
+.code-diff .diff-line.del .diff-line-sign { color: #82071e; }
+.code-diff .diff-line.ins { background: #e6ffec; }
+.code-diff .diff-line.ins .diff-line-gutter { background: #ccffd8; color: #116329; }
+.code-diff .diff-line.ins .diff-line-sign { color: #116329; }
+.code-diff .diff-line.ctx { background: #fff; }
+.code-diff .diff-line.ctx .diff-line-gutter { color: #8b949e; }
+.code-diff .diff-header { padding: 8px 12px; background: #f6f8fa; border-bottom: 1px solid #d0d7de; font-size: 12px; color: #656d76; font-family: 'SF Mono', 'Fira Code', Menlo, monospace; }
+
+ins { background-color: #e6ffec; text-decoration: none; border-radius: 2px; padding: 0 2px; }
+del { background-color: #ffebe9; text-decoration: line-through; border-radius: 2px; padding: 0 2px; }
+ins.diff-block, del.diff-block { display: block; padding-left: 10px; border-left: 3px solid; }
+ins.diff-block { border-left-color: #2cbe4e; }
+del.diff-block { border-left-color: #cb2431; }
+ins > hr, ins > pre { background-color: #e6ffec; }
+del > hr, del > pre { background-color: #ffebe9; }
+ins > table, del > table { border-collapse: collapse; }
+ins > table th, ins > table td { background-color: #e6ffec; }
+del > table th, del > table td { background-color: #ffebe9; }
+li[data-diff="ins"] { background-color: #e6ffec; border-radius: 2px; }
+li[data-diff="del"] { background-color: #ffebe9; border-radius: 2px; text-decoration: line-through; }
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:16px;font-size:14px;line-height:1.6;color:#1a1a1a;}</style></head><body><Intro>
+<p>The <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">built-in browser <code>&#x3C;img></code> component</a> lets you embed an image.</p>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">img</span><span style="color:#6F42C1"> src</span><span style="color:#D73A49">=</span><span style="color:#032F62">"photo.jpg"</span><span style="color:#6F42C1"> alt</span><span style="color:#D73A49">=</span><span style="color:#032F62">"A person walking through a park"</span><span style="color:#24292E"> /></span></span></code></pre>
+</code></pre>
+</Intro>
+<InlineToc />
+<hr>
+<h2>Reference {/<em>reference</em>/}</h2>
+<h3><code>&#x3C;img></code> {/<em>img</em>/}</h3>
+<p>To display an image, render the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img">built-in browser <code>&#x3C;img></code> component</a>.</p>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">img</span><span style="color:#6F42C1"> src</span><span style="color:#D73A49">=</span><span style="color:#032F62">"photo.jpg"</span><span style="color:#6F42C1"> alt</span><span style="color:#D73A49">=</span><span style="color:#032F62">"A person walking through a park"</span><span style="color:#24292E"> /></span></span></code></pre>
+</code></pre>
+<p><a href="#usage">See more examples below.</a></p>
+<h4>Props {/<em>props</em>/}</h4>
+<p><code>&#x3C;img></code> supports all <a href="/reference/react-dom/components/common#common-props">common element props.</a></p>
+<ul>
+<li><code>alt</code>: a string. Specifies alternative text for the image. Use an empty string for a purely decorative image.</li>
+<li><code>crossOrigin</code>: a string. Specifies the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/crossorigin">CORS policy</a> to use when fetching the image. The possible values are <code>anonymous</code> and <code>use-credentials</code>.</li>
+<li><code>decoding</code>: a string. Suggests whether the browser should wait to decode the image before presenting other content. The possible values are <code>async</code>, <code>sync</code>, and <code>auto</code> (the default).</li>
+<li><code>fetchPriority</code>: a string. Suggests a relative priority for fetching the image. The possible values are <code>high</code>, <code>low</code>, and <code>auto</code> (the default). During server rendering, <code>fetchPriority="low"</code> also prevents React from <a href="#controlling-image-preloading-during-server-rendering">automatically preloading the image.</a></li>
+<li><code>height</code>: a number or string. Specifies the rendered height of the image.</li>
+<li><code>loading</code>: a string. Specifies whether the browser should defer loading the image until it is near the viewport. The possible values are <code>eager</code> (the default) and <code>lazy</code>. Setting <code>loading="lazy"</code> prevents React from <a href="#controlling-image-preloading-during-server-rendering">automatically preloading the image.</a></li>
+<li><code>onError</code>: an <a href="/reference/react-dom/components/common#event-handler">event handler</a> function. Fires when the image fails to load.</li>
+<li><code>onLoad</code>: an <a href="/reference/react-dom/components/common#event-handler">event handler</a> function. Fires when the image finishes loading. Passing <code>onLoad</code> prevents React from <a href="#waiting-for-an-image-during-a-view-transition">waiting for the image during a client-rendered View Transition update.</a></li>
+<li><code>referrerPolicy</code>: a string. Specifies the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#referrerpolicy">referrer information</a> to send when fetching the image.</li>
+<li><code>sizes</code>: a string. Specifies the image sizes for different page layouts. Used with <code>srcSet</code>.</li>
+<li><code>src</code>: a string. Specifies the URL of the image.</li>
+<li><code>srcSet</code>: a string. Specifies one or more candidate image sources for the browser to choose from.</li>
+<li><code>useMap</code>: a string. Associates the image with a <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/map">client-side image map</a>.</li>
+<li><code>width</code>: a number or string. Specifies the rendered width of the image.</li>
+</ul>
+<h4>Caveats {/<em>caveats</em>/}</h4>
+<ul>
+<li>Do not pass an empty string to <code>src</code>. It may cause the browser to request the current page again. React warns in development and omits the attribute. To render no image, omit the <code>&#x3C;img></code> or pass <code>null</code> to <code>src</code>.</li>
+<li><code>&#x3C;img></code> cannot have children or use <code>dangerouslySetInnerHTML</code>. React throws an error if you pass either.</li>
+<li><code>fetchPriority="low"</code> does not stop React from waiting for the image to load during a client-rendered View Transition update. Use <code>loading="lazy"</code> or an <code>onLoad</code> handler to opt out of that behavior.</li>
+</ul>
+<hr>
+<h2>Usage {/<em>usage</em>/}</h2>
+<h3>Displaying an image {/<em>displaying-an-image</em>/}</h3>
+<p>Pass the image URL to <code>src</code> and a text description to <code>alt</code>:</p>
+<Sandpack>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> Profile</span><span style="color:#24292E">() {</span></span>
+<span class="line"><span style="color:#D73A49">  return</span><span style="color:#24292E"> (</span></span>
+<span class="line"><span style="color:#24292E">    &#x3C;</span><span style="color:#22863A">img</span></span>
+<span class="line"><span style="color:#6F42C1">      src</span><span style="color:#D73A49">=</span><span style="color:#032F62">"https://react.dev/images/docs/scientists/yXOvdOSs.jpg"</span></span>
+<span class="line"><span style="color:#6F42C1">      alt</span><span style="color:#D73A49">=</span><span style="color:#032F62">"Hedy Lamarr"</span></span>
+<span class="line"><span style="color:#6F42C1">      width</span><span style="color:#D73A49">=</span><span style="color:#24292E">{</span><span style="color:#005CC5">100</span><span style="color:#24292E">}</span></span>
+<span class="line"><span style="color:#6F42C1">      height</span><span style="color:#D73A49">=</span><span style="color:#24292E">{</span><span style="color:#005CC5">100</span><span style="color:#24292E">}</span></span>
+<span class="line"><span style="color:#24292E">    /></span></span>
+<span class="line"><span style="color:#24292E">  );</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre>
+<pre><code class="language-css"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#22863A">img</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#005CC5">  border-radius</span><span style="color:#24292E">: </span><span style="color:#005CC5">50</span><span style="color:#D73A49">%</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#005CC5">  object-fit</span><span style="color:#24292E">: </span><span style="color:#005CC5">cover</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre>
+</Sandpack>
+<p>Specify <code>width</code> and <code>height</code> when you know the image dimensions so the browser can reserve space before the image loads. For a decorative image, pass <code>alt=""</code> so that screen readers ignore it.</p>
+<hr>
+<h3>Controlling image preloading during server rendering {/<em>controlling-image-preloading-during-server-rendering</em>/}</h3>
+<p>During server rendering, React automatically generates a preload hint for an <code>&#x3C;img></code> by default. This can let the browser start fetching the image before it encounters the <code>&#x3C;img></code> in the rendered HTML.</p>
+<p>Add <code>loading="lazy"</code> or <code>fetchPriority="low"</code> to an image that should not receive this hint:</p>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">function</span><span style="color:#6F42C1"> ProductPage</span><span style="color:#24292E">() {</span></span>
+<span class="line"><span style="color:#D73A49">  return</span><span style="color:#24292E"> (</span></span>
+<span class="line"><span style="color:#24292E">    &#x3C;></span></span>
+<span class="line"><span style="color:#24292E">      &#x3C;</span><span style="color:#22863A">img</span><span style="color:#6F42C1"> src</span><span style="color:#D73A49">=</span><span style="color:#032F62">"hero.jpg"</span><span style="color:#6F42C1"> alt</span><span style="color:#D73A49">=</span><span style="color:#032F62">"Featured product"</span><span style="color:#24292E"> /></span></span>
+<span class="line"><span style="color:#24292E">      &#x3C;</span><span style="color:#22863A">img</span><span style="color:#6F42C1"> src</span><span style="color:#D73A49">=</span><span style="color:#032F62">"thumbnail.jpg"</span><span style="color:#6F42C1"> alt</span><span style="color:#D73A49">=</span><span style="color:#032F62">"Related product"</span><span style="color:#6F42C1"> loading</span><span style="color:#D73A49">=</span><span style="color:#032F62">"lazy"</span><span style="color:#24292E"> /></span></span>
+<span class="line"><span style="color:#24292E">      &#x3C;</span><span style="color:#22863A">img</span><span style="color:#6F42C1"> src</span><span style="color:#D73A49">=</span><span style="color:#032F62">"secondary.jpg"</span><span style="color:#6F42C1"> alt</span><span style="color:#D73A49">=</span><span style="color:#032F62">"Another product"</span><span style="color:#6F42C1"> fetchPriority</span><span style="color:#D73A49">=</span><span style="color:#032F62">"low"</span><span style="color:#24292E"> /></span></span>
+<span class="line"><span style="color:#24292E">    &#x3C;/></span></span>
+<span class="line"><span style="color:#24292E">  );</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre>
+<p>In this example, React generates a preload hint only for <code>hero.jpg</code>. Depending on the server API or framework, React may render the equivalent of this element:</p>
+<pre><code class="language-html"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#24292E">&#x3C;</span><span style="color:#22863A">link</span><span style="color:#6F42C1"> rel</span><span style="color:#24292E">=</span><span style="color:#032F62">"preload"</span><span style="color:#6F42C1"> as</span><span style="color:#24292E">=</span><span style="color:#032F62">"image"</span><span style="color:#6F42C1"> href</span><span style="color:#24292E">=</span><span style="color:#032F62">"hero.jpg"</span><span style="color:#24292E"> /></span></span></code></pre>
+</code></pre>
+<p>React may instead provide the same hint in a <code>Link</code> response header. The other two images keep their <code>loading</code> and <code>fetchPriority</code> props in the rendered HTML, but React does not generate preload hints for them. The <code>loading="lazy"</code> prop asks the browser to defer loading an image until it approaches the viewport. The <code>fetchPriority="low"</code> prop allows the image to load immediately, but tells the browser to fetch it at a lower priority.</p>
+<p>React also does not automatically preload an image when it is inside a <code>&#x3C;picture></code> or <code>&#x3C;noscript></code> element, or when its <code>src</code> or <code>srcSet</code> is a data URL.</p>
+<p>If you render an image through a framework or a component library, consult its documentation for the default behavior. React decides whether to generate an automatic preload from the props of the underlying <code>&#x3C;img></code>. For example, an image component may add <code>loading="lazy"</code> by default and provide a separate option for explicitly preloading selected images.</p>
+<p>To create an explicit preload hint, call <a href="/reference/react-dom/preload"><code>preload</code></a>.</p>
+<hr>
+<h3>Waiting for an image during a View Transition {/<em>waiting-for-an-image-during-a-view-transition</em>/}</h3>
+<p>During a <a href="/reference/react/ViewTransition"><code>&#x3C;ViewTransition></code></a> update, React waits up to 500 ms for visible images to load before starting the animation. This includes newly rendered <code>&#x3C;img></code> elements and existing images whose <code>src</code> or <code>srcSet</code> changes. Setting <code>loading="lazy"</code> or adding an <code>onLoad</code> handler opts an image out.</p>
+<p>Compare how the same image appears when a Suspense boundary reveals its content inside and outside a <code>&#x3C;ViewTransition></code>:</p>
+<Sandpack>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#D73A49">import</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#24292E">  ViewTransition,</span></span>
+<span class="line"><span style="color:#24292E">  Suspense,</span></span>
+<span class="line"><span style="color:#24292E">  use,</span></span>
+<span class="line"><span style="color:#24292E">  useState,</span></span>
+<span class="line"><span style="color:#24292E">} </span><span style="color:#D73A49">from</span><span style="color:#032F62"> 'react'</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#D73A49">import</span><span style="color:#24292E"> { fetchImageSrc } </span><span style="color:#D73A49">from</span><span style="color:#032F62"> './image.js'</span><span style="color:#24292E">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">function</span><span style="color:#6F42C1"> Profile</span><span style="color:#24292E">({ </span><span style="color:#E36209">cacheKey</span><span style="color:#24292E"> }) {</span></span>
+<span class="line"><span style="color:#D73A49">  const</span><span style="color:#005CC5"> src</span><span style="color:#D73A49"> =</span><span style="color:#6F42C1"> use</span><span style="color:#24292E">(</span><span style="color:#6F42C1">fetchImageSrc</span><span style="color:#24292E">(cacheKey));</span></span>
+<span class="line"><span style="color:#D73A49">  return</span><span style="color:#24292E"> (</span></span>
+<span class="line"><span style="color:#24292E">    &#x3C;</span><span style="color:#22863A">div</span><span style="color:#6F42C1"> className</span><span style="color:#D73A49">=</span><span style="color:#032F62">"card"</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">      &#x3C;</span><span style="color:#22863A">img</span><span style="color:#6F42C1"> src</span><span style="color:#D73A49">=</span><span style="color:#24292E">{src} </span><span style="color:#6F42C1">alt</span><span style="color:#D73A49">=</span><span style="color:#032F62">""</span><span style="color:#6F42C1"> width</span><span style="color:#D73A49">=</span><span style="color:#24292E">{</span><span style="color:#005CC5">80</span><span style="color:#24292E">} </span><span style="color:#6F42C1">height</span><span style="color:#D73A49">=</span><span style="color:#24292E">{</span><span style="color:#005CC5">80</span><span style="color:#24292E">} /></span></span>
+<span class="line"><span style="color:#24292E">      &#x3C;</span><span style="color:#22863A">p</span><span style="color:#24292E">>Jack Pope&#x3C;/</span><span style="color:#22863A">p</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">    &#x3C;/</span><span style="color:#22863A">div</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  );</span></span>
+<span class="line"><span style="color:#24292E">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">function</span><span style="color:#6F42C1"> ProfilePlaceholder</span><span style="color:#24292E">() {</span></span>
+<span class="line"><span style="color:#D73A49">  return</span><span style="color:#24292E"> (</span></span>
+<span class="line"><span style="color:#24292E">    &#x3C;</span><span style="color:#22863A">div</span><span style="color:#6F42C1"> className</span><span style="color:#D73A49">=</span><span style="color:#032F62">"card"</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">      &#x3C;</span><span style="color:#22863A">div</span><span style="color:#6F42C1"> className</span><span style="color:#D73A49">=</span><span style="color:#032F62">"avatar-placeholder"</span><span style="color:#24292E"> /></span></span>
+<span class="line"><span style="color:#24292E">      &#x3C;</span><span style="color:#22863A">p</span><span style="color:#6F42C1"> className</span><span style="color:#D73A49">=</span><span style="color:#032F62">"name-placeholder"</span><span style="color:#24292E">></span><span style="color:#005CC5">&#x26;nbsp;</span><span style="color:#24292E">&#x3C;/</span><span style="color:#22863A">p</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">    &#x3C;/</span><span style="color:#22863A">div</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">  );</span></span>
+<span class="line"><span style="color:#24292E">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">export</span><span style="color:#D73A49"> default</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> App</span><span style="color:#24292E">() {</span></span>
+<span class="line"><span style="color:#D73A49">  const</span><span style="color:#24292E"> [</span><span style="color:#005CC5">showWithTransition</span><span style="color:#24292E">, </span><span style="color:#005CC5">setShowWithTransition</span><span style="color:#24292E">] </span><span style="color:#D73A49">=</span></span>
+<span class="line"><span style="color:#6F42C1">    useState</span><span style="color:#24292E">(</span><span style="color:#005CC5">false</span><span style="color:#24292E">);</span></span>
+<span class="line"><span style="color:#D73A49">  const</span><span style="color:#24292E"> [</span><span style="color:#005CC5">showWithoutTransition</span><span style="color:#24292E">, </span><span style="color:#005CC5">setShowWithoutTransition</span><span style="color:#24292E">] </span><span style="color:#D73A49">=</span></span>
+<span class="line"><span style="color:#6F42C1">    useState</span><span style="color:#24292E">(</span><span style="color:#005CC5">false</span><span style="color:#24292E">);</span></span>
+<span class="line"><span style="color:#D73A49">  return</span><span style="color:#24292E"> (</span></span>
+<span class="line"><span style="color:#24292E">    &#x3C;></span></span>
+<span class="line"><span style="color:#24292E">      &#x3C;</span><span style="color:#22863A">button</span><span style="color:#6F42C1"> onClick</span><span style="color:#D73A49">=</span><span style="color:#24292E">{() </span><span style="color:#D73A49">=></span><span style="color:#6F42C1"> setShowWithTransition</span><span style="color:#24292E">(</span><span style="color:#005CC5">true</span><span style="color:#24292E">)}></span></span>
+<span class="line"><span style="color:#24292E">        Show profile with View Transition</span></span>
+<span class="line"><span style="color:#24292E">      &#x3C;/</span><span style="color:#22863A">button</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">      {showWithTransition </span><span style="color:#D73A49">&#x26;&#x26;</span><span style="color:#24292E"> (</span></span>
+<span class="line"><span style="color:#24292E">        &#x3C;</span><span style="color:#005CC5">ViewTransition</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">          &#x3C;</span><span style="color:#005CC5">Suspense</span><span style="color:#6F42C1"> fallback</span><span style="color:#D73A49">=</span><span style="color:#24292E">{&#x3C;</span><span style="color:#005CC5">ProfilePlaceholder</span><span style="color:#24292E"> />}></span></span>
+<span class="line"><span style="color:#24292E">            &#x3C;</span><span style="color:#005CC5">Profile</span><span style="color:#6F42C1"> cacheKey</span><span style="color:#D73A49">=</span><span style="color:#032F62">"with-transition"</span><span style="color:#24292E"> /></span></span>
+<span class="line"><span style="color:#24292E">          &#x3C;/</span><span style="color:#005CC5">Suspense</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">        &#x3C;/</span><span style="color:#005CC5">ViewTransition</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">      )}</span></span>
+<span class="line"><span style="color:#24292E">      &#x3C;</span><span style="color:#22863A">hr</span><span style="color:#24292E"> /></span></span>
+<span class="line"><span style="color:#24292E">      &#x3C;</span><span style="color:#22863A">button</span><span style="color:#6F42C1"> onClick</span><span style="color:#D73A49">=</span><span style="color:#24292E">{() </span><span style="color:#D73A49">=></span><span style="color:#6F42C1"> setShowWithoutTransition</span><span style="color:#24292E">(</span><span style="color:#005CC5">true</span><span style="color:#24292E">)}></span></span>
+<span class="line"><span style="color:#24292E">        Show profile without View Transition</span></span>
+<span class="line"><span style="color:#24292E">      &#x3C;/</span><span style="color:#22863A">button</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">      {showWithoutTransition </span><span style="color:#D73A49">&#x26;&#x26;</span><span style="color:#24292E"> (</span></span>
+<span class="line"><span style="color:#24292E">        &#x3C;</span><span style="color:#005CC5">Suspense</span><span style="color:#6F42C1"> fallback</span><span style="color:#D73A49">=</span><span style="color:#24292E">{&#x3C;</span><span style="color:#005CC5">ProfilePlaceholder</span><span style="color:#24292E"> />}></span></span>
+<span class="line"><span style="color:#24292E">          &#x3C;</span><span style="color:#005CC5">Profile</span><span style="color:#6F42C1"> cacheKey</span><span style="color:#D73A49">=</span><span style="color:#032F62">"without-transition"</span><span style="color:#24292E"> /></span></span>
+<span class="line"><span style="color:#24292E">        &#x3C;/</span><span style="color:#005CC5">Suspense</span><span style="color:#24292E">></span></span>
+<span class="line"><span style="color:#24292E">      )}</span></span>
+<span class="line"><span style="color:#24292E">    &#x3C;/></span></span>
+<span class="line"><span style="color:#24292E">  );</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre>
+<pre><code class="language-js"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#6A737D">// Normally, the caching logic would be inside a framework.</span></span>
+<span class="line"><span style="color:#D73A49">const</span><span style="color:#005CC5"> cache</span><span style="color:#D73A49"> =</span><span style="color:#D73A49"> new</span><span style="color:#6F42C1"> Map</span><span style="color:#24292E">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">export</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> fetchImageSrc</span><span style="color:#24292E">(</span><span style="color:#E36209">cacheKey</span><span style="color:#24292E">) {</span></span>
+<span class="line"><span style="color:#D73A49">  if</span><span style="color:#24292E"> (</span><span style="color:#D73A49">!</span><span style="color:#24292E">cache.</span><span style="color:#6F42C1">has</span><span style="color:#24292E">(cacheKey)) {</span></span>
+<span class="line"><span style="color:#24292E">    cache.</span><span style="color:#6F42C1">set</span><span style="color:#24292E">(cacheKey, </span><span style="color:#6F42C1">loadImageSrc</span><span style="color:#24292E">());</span></span>
+<span class="line"><span style="color:#24292E">  }</span></span>
+<span class="line"><span style="color:#D73A49">  return</span><span style="color:#24292E"> cache.</span><span style="color:#6F42C1">get</span><span style="color:#24292E">(cacheKey);</span></span>
+<span class="line"><span style="color:#24292E">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49">async</span><span style="color:#D73A49"> function</span><span style="color:#6F42C1"> loadImageSrc</span><span style="color:#24292E">() {</span></span>
+<span class="line"><span style="color:#6A737D">  // Delay the response so the Suspense fallback is visible.</span></span>
+<span class="line"><span style="color:#D73A49">  await</span><span style="color:#D73A49"> new</span><span style="color:#005CC5"> Promise</span><span style="color:#24292E">(</span><span style="color:#E36209">resolve</span><span style="color:#D73A49"> =></span><span style="color:#6F42C1"> setTimeout</span><span style="color:#24292E">(resolve, </span><span style="color:#005CC5">1000</span><span style="color:#24292E">));</span></span>
+<span class="line"><span style="color:#6A737D">  // Add a unique parameter so the image isn't cached.</span></span>
+<span class="line"><span style="color:#D73A49">  return</span><span style="color:#032F62"> 'https://react.dev/images/team/jack-pope.jpg?t='</span><span style="color:#D73A49"> +</span><span style="color:#24292E"> Date.</span><span style="color:#6F42C1">now</span><span style="color:#24292E">();</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre>
+<pre><code class="language-css"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#6F42C1">#root</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#005CC5">  min-height</span><span style="color:#24292E">: </span><span style="color:#005CC5">390</span><span style="color:#D73A49">px</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#24292E">}</span></span>
+<span class="line"><span style="color:#6F42C1">.card</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#005CC5">  margin-top</span><span style="color:#24292E">: </span><span style="color:#005CC5">1</span><span style="color:#D73A49">em</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#24292E">}</span></span>
+<span class="line"><span style="color:#6F42C1">.card</span><span style="color:#22863A"> img</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#005CC5">  display</span><span style="color:#24292E">: </span><span style="color:#005CC5">block</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#005CC5">  border-radius</span><span style="color:#24292E">: </span><span style="color:#005CC5">50</span><span style="color:#D73A49">%</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#005CC5">  background</span><span style="color:#24292E">: </span><span style="color:#005CC5">#dfe3e9</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#24292E">}</span></span>
+<span class="line"><span style="color:#6F42C1">.card</span><span style="color:#22863A"> p</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#005CC5">  font-weight</span><span style="color:#24292E">: </span><span style="color:#005CC5">bold</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#24292E">}</span></span>
+<span class="line"><span style="color:#6F42C1">.avatar-placeholder</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#005CC5">  width</span><span style="color:#24292E">: </span><span style="color:#005CC5">80</span><span style="color:#D73A49">px</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#005CC5">  height</span><span style="color:#24292E">: </span><span style="color:#005CC5">80</span><span style="color:#D73A49">px</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#005CC5">  border-radius</span><span style="color:#24292E">: </span><span style="color:#005CC5">50</span><span style="color:#D73A49">%</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#005CC5">  background</span><span style="color:#24292E">: </span><span style="color:#005CC5">#dfe3e9</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#24292E">}</span></span>
+<span class="line"><span style="color:#6F42C1">.name-placeholder</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#005CC5">  width</span><span style="color:#24292E">: </span><span style="color:#005CC5">90</span><span style="color:#D73A49">px</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#005CC5">  border-radius</span><span style="color:#24292E">: </span><span style="color:#005CC5">4</span><span style="color:#D73A49">px</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#005CC5">  background</span><span style="color:#24292E">: </span><span style="color:#005CC5">#dfe3e9</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#24292E">}</span></span>
+<span class="line"><span style="color:#22863A">hr</span><span style="color:#24292E"> {</span></span>
+<span class="line"><span style="color:#005CC5">  margin</span><span style="color:#24292E">: </span><span style="color:#005CC5">16</span><span style="color:#D73A49">px</span><span style="color:#005CC5"> 0</span><span style="color:#24292E">;</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre>
+<pre><code class="language-json"><pre class="shiki github-light" style="background-color:#fff;color:#24292e" tabindex="0"><code><span class="line"><span style="color:#24292E">{</span></span>
+<span class="line"><span style="color:#005CC5">  "dependencies"</span><span style="color:#24292E">: {</span></span>
+<span class="line"><span style="color:#005CC5">    "react"</span><span style="color:#24292E">: </span><span style="color:#032F62">"19.3.0"</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#005CC5">    "react-dom"</span><span style="color:#24292E">: </span><span style="color:#032F62">"19.3.0"</span><span style="color:#24292E">,</span></span>
+<span class="line"><span style="color:#005CC5">    "react-scripts"</span><span style="color:#24292E">: </span><span style="color:#032F62">"latest"</span></span>
+<span class="line"><span style="color:#24292E">  }</span></span>
+<span class="line"><span style="color:#24292E">}</span></span></code></pre>
+</code></pre>
+</Sandpack>
+<p>With <code>&#x3C;ViewTransition></code>, React keeps the skeleton visible for up to 500 ms while the image loads, so the card can be revealed with its image already in place. Without <code>&#x3C;ViewTransition></code>, Suspense stops showing the skeleton as soon as the Promise resolves. If the image is still loading, the card appears first and the image pops in afterward.</p></body></html>

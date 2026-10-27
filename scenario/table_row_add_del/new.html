@@ -1,0 +1,163 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+/* table */
+table { border-collapse: collapse; width: auto; margin: 1em 0; }
+th, td { border: 1px solid #d0d7de; padding: 6px 13px; }
+th { background: #f6f8fa; font-weight: 600; }
+tr:nth-child(2n) { background: #f6f8fa; }
+
+/* code */
+code { padding: 0.2em 0.4em; font-size: 85%; background: #f6f8fa; border-radius: 6px; font-family: 'SF Mono', 'Fira Code', Menlo, monospace; }
+pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background: #f6f8fa; border-radius: 6px; margin: 1em 0; }
+pre code { padding: 0; background: none; border-radius: 0; font-size: inherit; }
+
+/* blockquote */
+blockquote { padding: 0 1em; color: #656d76; border-left: 0.25em solid #d0d7de; margin: 1em 0; }
+
+/* hr */
+hr { height: 0.25em; padding: 0; margin: 24px 0; background-color: #d0d7de; border: 0; }
+
+/* headings */
+h1, h2, h3, h4, h5, h6 { margin-top: 24px; margin-bottom: 16px; font-weight: 600; line-height: 1.25; }
+h1 { font-size: 2em; padding-bottom: 0.3em; border-bottom: 1px solid #d0d7de; }
+h2 { font-size: 1.5em; padding-bottom: 0.3em; border-bottom: 1px solid #d0d7de; }
+h3 { font-size: 1.25em; }
+
+/* list */
+ul, ol { padding-left: 2em; margin: 0.5em 0; }
+li + li { margin-top: 0.25em; }
+
+/* image */
+img { max-width: 100%; }
+
+/* code diff */
+.code-diff { border-radius: 6px; overflow: hidden; margin: 1em 0; font-size: 13px; border: 1px solid #d0d7de; }
+.code-diff pre { margin: 0; padding: 0; border-radius: 0; border: none; background: #fff; }
+.code-diff .shiki { background: #fff !important; }
+.code-diff .diff-line { display: flex; line-height: 1.45; }
+.code-diff .diff-line-gutter { width: 40px; min-width: 40px; text-align: right; padding: 0 8px 0 0; color: #8b949e; font-size: 12px; user-select: none; flex-shrink: 0; }
+.code-diff .diff-line-sign { width: 20px; min-width: 20px; text-align: center; user-select: none; flex-shrink: 0; }
+.code-diff .diff-line-content { flex: 1; padding-right: 12px; white-space: pre; overflow-x: auto; }
+.code-diff .diff-line.del { background: #ffebe9; }
+.code-diff .diff-line.del .diff-line-gutter { background: #ffd7d5; color: #82071e; }
+.code-diff .diff-line.del .diff-line-sign { color: #82071e; }
+.code-diff .diff-line.ins { background: #e6ffec; }
+.code-diff .diff-line.ins .diff-line-gutter { background: #ccffd8; color: #116329; }
+.code-diff .diff-line.ins .diff-line-sign { color: #116329; }
+.code-diff .diff-line.ctx { background: #fff; }
+.code-diff .diff-line.ctx .diff-line-gutter { color: #8b949e; }
+.code-diff .diff-header { padding: 8px 12px; background: #f6f8fa; border-bottom: 1px solid #d0d7de; font-size: 12px; color: #656d76; font-family: 'SF Mono', 'Fira Code', Menlo, monospace; }
+
+ins { background-color: #e6ffec; text-decoration: none; border-radius: 2px; padding: 0 2px; }
+del { background-color: #ffebe9; text-decoration: line-through; border-radius: 2px; padding: 0 2px; }
+ins.diff-block, del.diff-block { display: block; padding-left: 10px; border-left: 3px solid; }
+ins.diff-block { border-left-color: #2cbe4e; }
+del.diff-block { border-left-color: #cb2431; }
+ins > hr, ins > pre { background-color: #e6ffec; }
+del > hr, del > pre { background-color: #ffebe9; }
+ins > table, del > table { border-collapse: collapse; }
+ins > table th, ins > table td { background-color: #e6ffec; }
+del > table th, del > table td { background-color: #ffebe9; }
+li[data-diff="ins"] { background-color: #e6ffec; border-radius: 2px; }
+li[data-diff="del"] { background-color: #ffebe9; border-radius: 2px; text-decoration: line-through; }
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:16px;font-size:14px;line-height:1.6;color:#1a1a1a;}</style></head><body><h1>周末露营装备清单</h1>
+<h2>前言</h2>
+<p>这次露营选在千岛湖边上的一个野营地，三面环水一面靠山，风景绝佳但配套设施基本为零——没有电、没有自来水、手机信号时有时无。所以装备必须自给自足，漏带一样东西就可能让整趟旅行的体验断崖式下跌。</p>
+<p>以下清单是经过三次露营踩坑后总结出来的"最小可行装备集"，每一项都是真金白银（和惨痛教训）换来的经验。装备按重要程度排序，最上面的是"忘了就回家"级别，越往下越属于"有更好、没也行"。</p>
+<p>上次去莫干山那次最惨，老张忘了带帐篷杆，三个人对着一堆帐篷布面面相觑，最后用树枝和绳子搭了个四不像，半夜塌了两次，阿伟直接睡车里了。所以这次的清单必须逐项确认、责任到人，谁负责的东西谁检查，出了问题别怪队友。</p>
+<p>再上一次去天目山也好不到哪去：小李负责的保温箱忘了提前冰冻冰袋，结果到了营地打开一看，啤酒是温的、西瓜是热的，大家只好把瓶子泡在溪水里等了一小时才勉强凉下来。这种"装备带了但没用对"的坑比"忘带"更气人。</p>
+<h2>装备列表</h2>
+<table>
+<thead>
+<tr>
+<th>装备名称</th>
+<th>数量</th>
+<th>预算（元）</th>
+<th>负责人</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>四人帐篷</td>
+<td>1</td>
+<td>580</td>
+<td>老张</td>
+<td>上次借的那顶，别忘了还</td>
+</tr>
+<tr>
+<td>折叠桌椅</td>
+<td>1套</td>
+<td>200</td>
+<td>小李</td>
+<td>自带的，不用买</td>
+</tr>
+<tr>
+<td>充气床垫</td>
+<td>3</td>
+<td>450</td>
+<td>老张</td>
+<td>充气泵别又忘带了</td>
+</tr>
+<tr>
+<td>冰箱保温箱</td>
+<td>1</td>
+<td>160</td>
+<td>小李</td>
+<td>装啤酒和西瓜用</td>
+</tr>
+<tr>
+<td>急救包</td>
+<td>1</td>
+<td>85</td>
+<td>阿伟</td>
+<td>创可贴、碘伏、防蚊液</td>
+</tr>
+<tr>
+<td>垃圾袋</td>
+<td>1卷</td>
+<td>10</td>
+<td>小李</td>
+<td>带走所有垃圾，文明露营</td>
+</tr>
+<tr>
+<td>移动电源</td>
+<td>2</td>
+<td>0</td>
+<td>各自</td>
+<td>至少20000mAh，手机续命用</td>
+</tr>
+<tr>
+<td>露营灯</td>
+<td>2</td>
+<td>90</td>
+<td>阿伟</td>
+<td>暖光款，别买那种刺眼的</td>
+</tr>
+<tr>
+<td>天幕</td>
+<td>1</td>
+<td>320</td>
+<td>老张</td>
+<td>怕晒怕雨全靠它</td>
+</tr>
+</tbody>
+</table>
+<p>预算合计大约1600元，三个人平摊每人不到550。已有装备不计入预算，实际花费会更少。老张负责大件，小李管后勤物资，阿伟搞定炊具和安全——分工明确才不会到了营地发现三个人都带了椅子但没人带锅。</p>
+<h2>食材计划</h2>
+<p>第一顿晚餐做烧烤，提前腌好鸡翅和羊肉串，到了直接上炉子。牛肉用洋葱和黑胡椒腌过夜最香，鸡翅用可乐和生抽腌四小时以上才入味。蔬菜带些玉米、茄子、韭菜，用锡纸包着烤省事又好吃。</p>
+<p>第二天早餐煮面条配午餐肉和鸡蛋，简单省事。中午如果还没撤营就做个火锅——卡式炉配小锅，底料用海底捞自热火锅那种现成的，食材头天晚上在城里买好装保鲜袋带过去。</p>
+<p>饮料方面，啤酒12罐、矿泉水一箱、可乐一箱，全部提前冻成冰块丢进保温箱。到了营地保温箱就是天然冰箱，啤酒拿出来冰凉透心，比便利店的还爽。另外带一壶凉白开泡茶用，野外喝茶看星星是露营的终极享受。</p>
+<h2>注意事项</h2>
+<ul>
+<li>出发前一天检查帐篷有没有破洞，上次老张的帐篷漏雨三个人挤一顶的惨剧不能重演</li>
+<li>气罐不能托运也不能放后备箱暴晒，走之前放到车内阴凉处</li>
+<li>充气床垫记得带充气泵，上次用嘴吹的那位现在还在被嘲笑</li>
+<li>营地没有路灯，天黑之后去上厕所全靠手电，建议提前踩点确认路线</li>
+<li>食材提前在城里买好切好装保鲜袋，到了营地直接下锅，省时间也省清洗餐具的麻烦</li>
+<li>防蚊液一定要带，湖边的蚊子个头跟轰炸机似的，不涂药出去五分钟能被咬十几个包</li>
+<li>离开营地时检查一遍有没有遗漏垃圾，野营地没有保洁阿姨，你留下的垃圾就会一直在那里</li>
+<li>车停好之后记下位置，晚上黑灯瞎火的找不到车很尴尬</li>
+</ul>
+<h2>备注</h2>
+<p>以上清单按周六出发前备齐，超预算的自己补差价。临时加购的东西在群里报备一声，避免重复购买。老张的车后备箱空间有限，大件装备优先塞，零碎的东西各自背包带。</p>
+<p>周五晚上九点前所有人把自己负责的装备拍照发群里确认，十点前统一装车。周六早上七点出发，预计十点到营地，趁上午凉快把帐篷和天幕搭好，中午开始享受。</p></body></html>

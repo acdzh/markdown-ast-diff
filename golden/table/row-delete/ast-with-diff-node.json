@@ -1,0 +1,331 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "table",
+      "align": [
+        null,
+        null
+      ],
+      "children": [
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "装备",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 1,
+                  "column": 1,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 1,
+                  "column": 6,
+                  "offset": 5
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "数量",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 1,
+                  "column": 6,
+                  "offset": 5
+                },
+                "end": {
+                  "line": 1,
+                  "column": 12,
+                  "offset": 11
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 12,
+              "offset": 11
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          }
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "帐篷",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 3,
+                  "column": 1,
+                  "offset": 26
+                },
+                "end": {
+                  "line": 3,
+                  "column": 6,
+                  "offset": 31
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "1",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 3,
+                  "column": 6,
+                  "offset": 31
+                },
+                "end": {
+                  "line": 3,
+                  "column": 11,
+                  "offset": 36
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 3,
+              "column": 1,
+              "offset": 26
+            },
+            "end": {
+              "line": 3,
+              "column": 11,
+              "offset": 36
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          }
+        },
+        {
+          "type": "del",
+          "children": [
+            {
+              "type": "tableRow",
+              "children": [
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "保温箱",
+                      "position": {
+                        "start": {
+                          "line": 4,
+                          "column": 3,
+                          "offset": 39
+                        },
+                        "end": {
+                          "line": 4,
+                          "column": 6,
+                          "offset": 42
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 4,
+                      "column": 1,
+                      "offset": 37
+                    },
+                    "end": {
+                      "line": 4,
+                      "column": 7,
+                      "offset": 43
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "1",
+                      "position": {
+                        "start": {
+                          "line": 4,
+                          "column": 9,
+                          "offset": 45
+                        },
+                        "end": {
+                          "line": 4,
+                          "column": 10,
+                          "offset": 46
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 4,
+                      "column": 7,
+                      "offset": 43
+                    },
+                    "end": {
+                      "line": 4,
+                      "column": 12,
+                      "offset": 48
+                    }
+                  },
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 4,
+                  "column": 1,
+                  "offset": 37
+                },
+                "end": {
+                  "line": 4,
+                  "column": 12,
+                  "offset": 48
+                }
+              },
+              "data": {}
+            }
+          ]
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "睡袋",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 4,
+                  "column": 1,
+                  "offset": 37
+                },
+                "end": {
+                  "line": 4,
+                  "column": 6,
+                  "offset": 42
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "3",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 4,
+                  "column": 6,
+                  "offset": 42
+                },
+                "end": {
+                  "line": 4,
+                  "column": 11,
+                  "offset": 47
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 4,
+              "column": 1,
+              "offset": 37
+            },
+            "end": {
+              "line": 4,
+              "column": 11,
+              "offset": 47
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 11,
+          "offset": 47
+        }
+      },
+      "data": {}
+    }
+  ],
+  "position": {
+    "start": {
+      "line": 1,
+      "column": 1,
+      "offset": 0
+    },
+    "end": {
+      "line": 5,
+      "column": 1,
+      "offset": 48
+    }
+  },
+  "data": {}
+}

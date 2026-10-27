@@ -1,0 +1,427 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "heading",
+      "depth": 1,
+      "children": [
+        {
+          "type": "text",
+          "value": "Custom Renderer API {#custom-renderer-api}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 45,
+          "offset": 44
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "createRenderer() {#createrenderer}",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 3,
+          "column": 1,
+          "offset": 46
+        },
+        "end": {
+          "line": 3,
+          "column": 38,
+          "offset": 83
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Creates a custom renderer. By providing platform-specific node creation and manipulation APIs, you can leverage Vue's core runtime to target non-DOM environments.",
+          "data": {}
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 5,
+          "column": 1,
+          "offset": 85
+        },
+        "end": {
+          "line": 5,
+          "column": 163,
+          "offset": 247
+        }
+      },
+      "data": {}
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": true,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": true,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "strong",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Type",
+                      "position": {
+                        "start": {
+                          "line": 7,
+                          "column": 5,
+                          "offset": 253
+                        },
+                        "end": {
+                          "line": 7,
+                          "column": 9,
+                          "offset": 257
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 7,
+                      "column": 3,
+                      "offset": 251
+                    },
+                    "end": {
+                      "line": 7,
+                      "column": 11,
+                      "offset": 259
+                    }
+                  },
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 7,
+                  "column": 3,
+                  "offset": 251
+                },
+                "end": {
+                  "line": 7,
+                  "column": 11,
+                  "offset": 259
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "code",
+              "lang": "ts",
+              "meta": null,
+              "value": "function createRenderer<HostNode, HostElement>(\n  options: RendererOptions<HostNode, HostElement>\n): Renderer<HostElement>\n\ninterface Renderer<HostElement> {\n  render: RootRenderFunction<HostElement>\n  createApp: CreateAppFunction<HostElement>\n}\n\ninterface RendererOptions<HostNode, HostElement> {\n  patchProp(\n    el: HostElement,\n    key: string,\n    prevValue: any,\n    nextValue: any,\n    namespace?: ElementNamespace,\n    parentComponent?: ComponentInternalInstance | null,\n  ): void\n  insert(el: HostNode, parent: HostElement, anchor?: HostNode | null): void\n  remove(el: HostNode): void\n  createElement(\n    type: string,\n    namespace?: ElementNamespace,\n    isCustomizedBuiltIn?: string,\n    vnodeProps?: (VNodeProps & { [key: string]: any }) | null,\n  ): HostElement\n  createText(text: string): HostNode\n  createComment(text: string): HostNode\n  setText(node: HostNode, text: string): void\n  setElementText(node: HostElement, text: string): void\n  parentNode(node: HostNode): HostElement | null\n  nextSibling(node: HostNode): HostNode | null\n  querySelector?(selector: string): HostElement | null\n  setScopeId?(el: HostElement, id: string): void\n  cloneNode?(node: HostNode): HostNode\n  insertStaticContent?(\n    content: string,\n    parent: HostElement,\n    anchor: HostNode | null,\n    namespace: ElementNamespace,\n    start?: HostNode | null,\n    end?: HostNode | null,\n  ): [HostNode, HostNode]\n}",
+              "position": {
+                "start": {
+                  "line": 9,
+                  "column": 3,
+                  "offset": 263
+                },
+                "end": {
+                  "line": 54,
+                  "column": 6,
+                  "offset": 1769
+                }
+              },
+              "data": {
+                "diffOldContent": "function createRenderer<HostNode, HostElement>(\n  options: RendererOptions<HostNode, HostElement>\n): Renderer<HostElement>\n\ninterface Renderer<HostElement> {\n  render: RootRenderFunction<HostElement>\n  createApp: CreateAppFunction<HostElement>\n}\n\ninterface RendererOptions<HostNode, HostElement> {\n  patchProp(\n    el: HostElement,\n    key: string,\n    prevValue: any,\n    nextValue: any,\n    // the rest is unused for most custom renderers\n    isSVG?: boolean,\n    prevChildren?: VNode<HostNode, HostElement>[],\n    parentComponent?: ComponentInternalInstance | null,\n    parentSuspense?: SuspenseBoundary | null,\n    unmountChildren?: UnmountChildrenFn\n  ): void\n  insert(\n    el: HostNode,\n    parent: HostElement,\n    anchor?: HostNode | null\n  ): void\n  remove(el: HostNode): void\n  createElement(\n    type: string,\n    isSVG?: boolean,\n    isCustomizedBuiltIn?: string,\n    vnodeProps?: (VNodeProps & { [key: string]: any }) | null\n  ): HostElement\n  createText(text: string): HostNode\n  createComment(text: string): HostNode\n  setText(node: HostNode, text: string): void\n  setElementText(node: HostElement, text: string): void\n  parentNode(node: HostNode): HostElement | null\n  nextSibling(node: HostNode): HostNode | null\n\n  // optional, DOM-specific\n  querySelector?(selector: string): HostElement | null\n  setScopeId?(el: HostElement, id: string): void\n  cloneNode?(node: HostNode): HostNode\n  insertStaticContent?(\n    content: string,\n    parent: HostElement,\n    anchor: HostNode | null,\n    isSVG: boolean\n  ): [HostNode, HostNode]\n}"
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 7,
+              "column": 1,
+              "offset": 249
+            },
+            "end": {
+              "line": 54,
+              "column": 6,
+              "offset": 1769
+            }
+          },
+          "data": {}
+        },
+        {
+          "type": "listItem",
+          "spread": true,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "strong",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Example",
+                      "position": {
+                        "start": {
+                          "line": 64,
+                          "column": 5,
+                          "offset": 1926
+                        },
+                        "end": {
+                          "line": 64,
+                          "column": 12,
+                          "offset": 1933
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 64,
+                      "column": 3,
+                      "offset": 1924
+                    },
+                    "end": {
+                      "line": 64,
+                      "column": 14,
+                      "offset": 1935
+                    }
+                  },
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 56,
+                  "column": 3,
+                  "offset": 1773
+                },
+                "end": {
+                  "line": 56,
+                  "column": 14,
+                  "offset": 1784
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "code",
+              "lang": "js",
+              "meta": null,
+              "value": "import { createRenderer } from '@vue/runtime-core'\n\nconst { render, createApp } = createRenderer({\n  patchProp,\n  insert,\n  remove,\n  createElement\n  // ...\n})\n\n// `render` is the low-level API\n// `createApp` returns an app instance\nexport { render, createApp }\n\n// re-export Vue core APIs\nexport * from '@vue/runtime-core'",
+              "position": {
+                "start": {
+                  "line": 58,
+                  "column": 3,
+                  "offset": 1788
+                },
+                "end": {
+                  "line": 75,
+                  "column": 6,
+                  "offset": 2149
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Vue's own ",
+                  "data": {}
+                },
+                {
+                  "type": "inlineCode",
+                  "value": "@vue/runtime-dom",
+                  "position": {
+                    "start": {
+                      "line": 85,
+                      "column": 13,
+                      "offset": 2314
+                    },
+                    "end": {
+                      "line": 85,
+                      "column": 31,
+                      "offset": 2332
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " is ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://github.com/vuejs/core/blob/main/packages/runtime-dom/src/index.ts",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "implemented using the same API",
+                      "position": {
+                        "start": {
+                          "line": 85,
+                          "column": 36,
+                          "offset": 2337
+                        },
+                        "end": {
+                          "line": 85,
+                          "column": 66,
+                          "offset": 2367
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 85,
+                      "column": 35,
+                      "offset": 2336
+                    },
+                    "end": {
+                      "line": 85,
+                      "column": 142,
+                      "offset": 2443
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": ". For a simpler implementation, check out ",
+                  "data": {}
+                },
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "https://github.com/vuejs/core/blob/main/packages/runtime-test/src/index.ts",
+                  "children": [
+                    {
+                      "type": "inlineCode",
+                      "value": "@vue/runtime-test",
+                      "position": {
+                        "start": {
+                          "line": 85,
+                          "column": 185,
+                          "offset": 2486
+                        },
+                        "end": {
+                          "line": 85,
+                          "column": 204,
+                          "offset": 2505
+                        }
+                      },
+                      "data": {}
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 85,
+                      "column": 184,
+                      "offset": 2485
+                    },
+                    "end": {
+                      "line": 85,
+                      "column": 281,
+                      "offset": 2582
+                    }
+                  },
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": " which is a private package for Vue's own unit testing.",
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 77,
+                  "column": 3,
+                  "offset": 2153
+                },
+                "end": {
+                  "line": 77,
+                  "column": 336,
+                  "offset": 2486
+                }
+              },
+              "data": {}
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 56,
+              "column": 1,
+              "offset": 1771
+            },
+            "end": {
+              "line": 77,
+              "column": 336,
+              "offset": 2486
+            }
+          },
+          "data": {
+            "diffUnchanged": true
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 7,
+          "column": 1,
+          "offset": 249
+        },
+        "end": {
+          "line": 77,
+          "column": 336,
+          "offset": 2486
+        }
+      },
+      "data": {}
+    }
+  ],
+  "position": {
+    "start": {
+      "line": 1,
+      "column": 1,
+      "offset": 0
+    },
+    "end": {
+      "line": 78,
+      "column": 1,
+      "offset": 2487
+    }
+  },
+  "data": {}
+}
