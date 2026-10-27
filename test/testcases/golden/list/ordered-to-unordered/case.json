@@ -8,6 +8,5 @@
     "ins": [
       "苹果香蕉"
     ]
-  },
-  "knownIssue": "列表 ordered 变化被静默丢弃：输出为新类型的 list 且标为 diffUnchanged（oldCorrect=false）"
+  }
 }

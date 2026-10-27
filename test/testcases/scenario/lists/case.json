@@ -1,5 +1,4 @@
 {
   "capability": "list",
-  "description": "无序/有序/任务列表的增删改：插入项、子列表插项、改项、勾选状态变化",
-  "knownIssue": "任务列表 checked 变化被静默丢弃（见 golden/list/task-toggle）"
+  "description": "无序/有序/任务列表的增删改：插入项、子列表插项、改项、勾选状态变化"
 }

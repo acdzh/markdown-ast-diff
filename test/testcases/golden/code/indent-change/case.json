@@ -6,6 +6,5 @@
       "server:"
     ],
     "maxChangedTokens": 4
-  },
-  "knownIssue": "代码块签名只取 value 前 100 字符：改动落在前 100 字符内时新旧代码块无法配对，退化为整块替换（未生成 diffOldContent）"
+  }
 }
