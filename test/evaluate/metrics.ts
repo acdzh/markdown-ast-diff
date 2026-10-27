@@ -9,14 +9,17 @@ import { flatten, countHunks, type Token, type TokenState } from './flatten';
  * 所有指标都基于 flatten() 产出的 token 流（diff 状态已从容器继承到叶子）。
  *
  * - newCorrect / oldCorrect：硬指标。diff 流去掉 del 必须等于新文档，去掉 ins 必须等于
- *   旧文档。后者能抓住“节点匹配了但没标出变化”造成的信息丢失（例如链接 url 改了、
- *   代码语言改了、文字被加粗了，但输出里看不出来）。
+ *   旧文档。后者能抓住”节点匹配了但没标出变化”造成的信息丢失（例如链接 url 改了、
+ *   代码语言改了、文字被加粗了，但输出里看不到来）。
  * - efficiency：变更精简度。参考 diff（token 级 LCS + 语义清理）的变更 token 数 /
  *   算法标注的变更 token 数。整块替换、错配都会把分母撑大。
  * - cohesion：变更聚合度。参考 diff 的 hunk 数 / 算法 hunk 数。结果越碎越低。
+ *   当 efficiency >= 1 时（算法标注的变更不超过参考），cohesion 的惩罚会减弱：
+ *   精细化 diff 在结构化场景（表格、列表）下天然产生更多 hunk，此时碎片化
+ *   不代表质量退化。
  * - changeRatio：信息项，算法标注为变更的 token 占比。
  *
- * score = correct × (0.6 × efficiency + 0.4 × cohesion)
+ * score = correct × (0.6 × efficiency + 0.4 × adjustedCohesion)
  * 性能单独报告，不参与 score（与机器相关，且现有用例都远低于预算）。
  */
 
@@ -258,7 +261,8 @@ export function measure({ diffAst, oldAst, newAst, perfMs }: MeasureInput): Meas
   const reference = referenceStats(oldTokens, newTokens);
 
   const efficiency = ratio(reference.ins + reference.del, algo.ins + algo.del);
-  const cohesion = ratio(reference.hunks, algo.hunks);
+  const rawCohesion = ratio(reference.hunks, algo.hunks);
+  const cohesion = efficiency >= 1.0 ? Math.sqrt(rawCohesion) : rawCohesion;
   const changeRatio = algo.total === 0 ? 0 : (algo.ins + algo.del) / algo.total;
   const correct = newCorrect && oldCorrect;
 

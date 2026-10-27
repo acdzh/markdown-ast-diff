@@ -1,6 +1,7 @@
 import { unified } from 'unified';
 
 import remarkGfm from 'remark-gfm';
+import remarkFrontmatter from 'remark-frontmatter';
 import remarkParse from 'remark-parse';
 import { Root } from 'mdast';
 
@@ -10,6 +11,6 @@ import { Root } from 'mdast';
  * @returns {Root} 解析后的AST
  */
 export function markdownToAst(markdownText: string): Root {
-  const processor = unified().use(remarkParse).use(remarkGfm);
+  const processor = unified().use(remarkParse).use(remarkGfm).use(remarkFrontmatter);
   return processor.parse(markdownText) as Root;
 }

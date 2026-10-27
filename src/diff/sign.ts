@@ -75,6 +75,10 @@ export function assignSigns(parentHashContext: HashContext | null, map: XMap, no
     case NodeType.LinkReference:
       weight = (node as LinkReference).label?.length ?? 0;
       break;
+    case NodeType.YAML:
+    case NodeType.TOML:
+      weight = (node as any).value?.length ?? 0;
+      break;
     default:
       break;
   }
@@ -95,12 +99,9 @@ export function assignSigns(parentHashContext: HashContext | null, map: XMap, no
   switch (node.type) {
     case NodeType.List:
       hashContext.update((node as List).ordered);
-      hashContext.update((node as List).start);
-      hashContext.update((node as List).spread);
       break;
     case NodeType.ListItem:
       hashContext.update((node as ListItem).checked);
-      hashContext.update((node as ListItem).spread);
       break;
     case NodeType.Heading:
       hashContext.update((node as Heading).depth);
@@ -129,6 +130,21 @@ export function assignSigns(parentHashContext: HashContext | null, map: XMap, no
       hashContext.update((node as Image).url);
       hashContext.update((node as Image).title);
       hashContext.update((node as Image).alt);
+      break;
+    case NodeType.Definition:
+      hashContext.update((node as any).url);
+      hashContext.update((node as any).title);
+      hashContext.update((node as any).identifier);
+      break;
+    case NodeType.FootnoteDefinition:
+      hashContext.update((node as any).identifier);
+      break;
+    case NodeType.FootnoteReference:
+      hashContext.update((node as any).identifier);
+      break;
+    case NodeType.YAML:
+    case NodeType.TOML:
+      hashContext.update((node as any).value);
       break;
     default:
       break;

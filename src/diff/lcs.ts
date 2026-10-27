@@ -1,5 +1,5 @@
 import type { Node } from 'unist';
-import { diffWords, diffChars } from 'diff';
+import { diffWords } from 'diff';
 import type { Parent, Text } from 'mdast';
 import { DiffType, IdBox, NodeType } from '../types/base';
 import { CONSTANTS } from './constants';
@@ -50,9 +50,42 @@ export function nodeLcs(nOld: Text, nNew: Text, n: Node, idBox: IdBox) {
     return;
   }
 
-  const changes = maxLen <= 100
-    ? diffChars(nOld.value, nNew.value)
-    : diffWords(nOld.value, nNew.value);
+  const changes = diffWords(nOld.value, nNew.value);
+
+  let unchangedChars = 0;
+  let changedParts = 0;
+  for (const change of changes) {
+    if (!change.added && !change.removed) {
+      unchangedChars += change.value.length;
+    } else {
+      changedParts++;
+    }
+  }
+  const unchangedRatio = unchangedChars / maxLen;
+
+  if (unchangedRatio < 0.15 || (changedParts > 6 && unchangedRatio < 0.4)) {
+    idBox.value += 1;
+    const delNode: Text = {
+      _id: idBox.value,
+      type: NodeType.Text,
+      value: nOld.value,
+      data: { diff: DiffType.Del },
+      _parent: n as Parent,
+    };
+    idBox.value += 1;
+    const insNode: Text = {
+      _id: idBox.value,
+      type: NodeType.Text,
+      value: nNew.value,
+      data: { diff: DiffType.Ins },
+      _parent: n as Parent,
+    };
+    if (!n.children) {
+      n.children = [];
+    }
+    n.children.push(delNode, insNode);
+    return;
+  }
 
   for (const change of changes) {
     idBox.value += 1;

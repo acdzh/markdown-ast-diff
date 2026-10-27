@@ -127,4 +127,56 @@ export function similarityMatchPass(xOldMap: XMap, xNewMap: XMap): void {
       matchUp(bestXOld, xOldMap, xNew, xNewMap);
     }
   }
+
+  codeBlockMatchPass(xOldMap, xNewMap);
+}
+
+function codeBlockMatchPass(xOldMap: XMap, xNewMap: XMap): void {
+  const unmatchedNewCodes: XNode[] = [];
+  for (let i = 0; i <= xNewMap.maxId; i++) {
+    const xn = xNewMap.getXNode(i);
+    if (!xn || !xn.node || xn.match) {
+      continue;
+    }
+    if (xn.node.type !== NodeType.Code) {
+      continue;
+    }
+    unmatchedNewCodes.push(xn);
+  }
+
+  for (const xNew of unmatchedNewCodes) {
+    if (xNew.match) {
+      continue;
+    }
+
+    const newCode = xNew.node! as any;
+    let bestSim = 0;
+    let bestXOld: XNode | undefined;
+
+    for (let i = 0; i <= xOldMap.maxId; i++) {
+      const xOld = xOldMap.getXNode(i);
+      if (!xOld || !xOld.node || xOld.match) {
+        continue;
+      }
+      if (xOld.node.type !== NodeType.Code) {
+        continue;
+      }
+
+      const oldCode = xOld.node as any;
+      if (oldCode.lang !== newCode.lang) {
+        continue;
+      }
+
+      const sim = computeTextSimilarity(oldCode.value, newCode.value);
+      if (sim > bestSim) {
+        bestSim = sim;
+        bestXOld = xOld;
+      }
+    }
+
+    if (bestXOld && bestSim >= 0.2) {
+      bestXOld.match = xNew.node;
+      xNew.match = bestXOld.node;
+    }
+  }
 }

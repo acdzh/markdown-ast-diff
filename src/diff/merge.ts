@@ -1,5 +1,5 @@
 import { assert } from '../lib/assert';
-import type { Text, Table } from 'mdast';
+import type { Text, Table, List, ListItem } from 'mdast';
 import type { Node, Parent } from 'unist';
 import { XMap } from '../lib/XMap';
 import { XNode } from '../lib/XNode';
@@ -27,6 +27,9 @@ function hasAnyDiff(node: Node): boolean {
   if (node.data?.diffOldContent) {
     return true;
   }
+  if (node.data?.diffProperties) {
+    return true;
+  }
   if (node.children) {
     for (const child of node.children) {
       if (hasAnyDiff(child)) {
@@ -35,6 +38,33 @@ function hasAnyDiff(node: Node): boolean {
     }
   }
   return false;
+}
+
+function detectPropertyChanges(oldNode: Node, newNode: Node): void {
+  const props: Record<string, { old: unknown; new: unknown }> = {};
+
+  if (oldNode.type === NodeType.List && newNode.type === NodeType.List) {
+    const o = oldNode as unknown as List;
+    const n = newNode as unknown as List;
+    if (o.ordered !== n.ordered) {
+      props.ordered = { old: o.ordered, new: n.ordered };
+    }
+  }
+
+  if (oldNode.type === NodeType.ListItem && newNode.type === NodeType.ListItem) {
+    const o = oldNode as unknown as ListItem;
+    const n = newNode as unknown as ListItem;
+    if (o.checked !== n.checked) {
+      props.checked = { old: o.checked, new: n.checked };
+    }
+  }
+
+  if (Object.keys(props).length > 0) {
+    if (!newNode.data) {
+      newNode.data = {};
+    }
+    newNode.data.diffProperties = props;
+  }
 }
 
 function markUnchangedIfClean(node: Node): void {
@@ -253,7 +283,9 @@ export function nodeMerge(_nOld: Node, xOldMap: XMap, _nNew: Node, xNewMap: XMap
     } else if (nNew.type === NodeType.Table && nOld.type === NodeType.Table) {
       const oldAlign = JSON.stringify((nOld as Table).align);
       const newAlign = JSON.stringify((nNew as Table).align);
-      if (oldAlign !== newAlign) {
+      const oldAlignLen = (nOld as Table).align?.length ?? 0;
+      const newAlignLen = (nNew as Table).align?.length ?? 0;
+      if (oldAlign !== newAlign && oldAlignLen === newAlignLen) {
         nn = nodeCloneTree(nOld, idBox);
         nn._parent = n;
         nn.data!.diff = DiffType.Del;
@@ -272,7 +304,8 @@ export function nodeMerge(_nOld: Node, xOldMap: XMap, _nNew: Node, xNewMap: XMap
       const newLang = (nNew as any).lang as string | undefined;
       const oldValue = (nOld as any).value as string;
       const newValue = (nNew as any).value as string;
-      if (oldLang !== newLang) {
+      const isMermaid = oldLang === 'mermaid' || newLang === 'mermaid';
+      if (oldLang !== newLang || (isMermaid && oldValue !== newValue)) {
         nn = nodeCloneTree(nOld, idBox);
         nn._parent = n;
         nn.data!.diff = DiffType.Del;
@@ -330,6 +363,7 @@ export function nodeMerge(_nOld: Node, xOldMap: XMap, _nNew: Node, xNewMap: XMap
     nOld = nOld._next;
   }
 
+  detectPropertyChanges(_nOld, n);
   markUnchangedIfClean(n);
 
   return n;

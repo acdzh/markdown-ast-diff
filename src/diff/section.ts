@@ -70,6 +70,20 @@ export function matchSections(oldSections: Section[], newSections: Section[]): S
   let oldSearchStart = 0;
   for (let j = 0; j < newSections.length; j++) {
     if (!newSections[j].headingNode) {
+      if (!newSections[j].headingText) {
+        for (let i = oldSearchStart; i < oldSections.length; i++) {
+          if (matchedOld.has(i)) {
+            continue;
+          }
+          if (!oldSections[i].headingNode && !oldSections[i].headingText) {
+            pairs.push({ old: oldSections[i], new: newSections[j] });
+            matchedOld.add(i);
+            matchedNew.add(j);
+            oldSearchStart = i + 1;
+            break;
+          }
+        }
+      }
       continue;
     }
     for (let i = oldSearchStart; i < oldSections.length; i++) {
@@ -167,44 +181,70 @@ export function sectionAwareDiff(
     return null;
   }
 
-  const matchedOldSections = new Set(pairs.map(p => p.old));
-  const matchedNewSections = new Set(pairs.map(p => p.new));
+  const indexedPairs: Array<[number, number]> = [];
+  for (const pair of pairs) {
+    const oi = oldSections.indexOf(pair.old);
+    const ni = newSections.indexOf(pair.new);
+    indexedPairs.push([oi, ni]);
+  }
+  indexedPairs.sort((a, b) => a[0] - b[0]);
 
   const resultChildren: Node[] = [];
+  let oldIdx = 0;
+  let newIdx = 0;
 
-  const pairMap = new Map<Section, Section>();
-  for (const pair of pairs) {
-    pairMap.set(pair.new, pair.old);
-  }
-
-  for (const newSection of newSections) {
-    const oldSection = pairMap.get(newSection);
-    if (oldSection) {
-      const sectionOldRoot: Root = { type: 'root', children: oldSection.nodes as Root['children'] };
-      const sectionNewRoot: Root = { type: 'root', children: newSection.nodes as Root['children'] };
-      const sectionResult = diffFn(sectionOldRoot, sectionNewRoot, options);
-      resultChildren.push(...(sectionResult.children as Node[]));
-    } else {
-      for (const node of newSection.nodes) {
-        if (!node.data) {
-          node.data = {};
-        }
-        node.data.diff = 'ins' as any;
-        resultChildren.push(node);
-      }
-    }
-  }
-
-  for (const oldSection of oldSections) {
-    if (!matchedOldSections.has(oldSection)) {
-      for (const node of oldSection.nodes) {
+  for (const [matchedOi, matchedNi] of indexedPairs) {
+    while (oldIdx < matchedOi) {
+      for (const node of oldSections[oldIdx].nodes) {
         if (!node.data) {
           node.data = {};
         }
         node.data.diff = 'del' as any;
         resultChildren.push(node);
       }
+      oldIdx++;
     }
+
+    while (newIdx < matchedNi) {
+      for (const node of newSections[newIdx].nodes) {
+        if (!node.data) {
+          node.data = {};
+        }
+        node.data.diff = 'ins' as any;
+        resultChildren.push(node);
+      }
+      newIdx++;
+    }
+
+    const sectionOldRoot: Root = { type: 'root', children: oldSections[matchedOi].nodes as Root['children'] };
+    const sectionNewRoot: Root = { type: 'root', children: newSections[matchedNi].nodes as Root['children'] };
+    const sectionResult = diffFn(sectionOldRoot, sectionNewRoot, options);
+    resultChildren.push(...(sectionResult.children as Node[]));
+
+    oldIdx = matchedOi + 1;
+    newIdx = matchedNi + 1;
+  }
+
+  while (oldIdx < oldSections.length) {
+    for (const node of oldSections[oldIdx].nodes) {
+      if (!node.data) {
+        node.data = {};
+      }
+      node.data.diff = 'del' as any;
+      resultChildren.push(node);
+    }
+    oldIdx++;
+  }
+
+  while (newIdx < newSections.length) {
+    for (const node of newSections[newIdx].nodes) {
+      if (!node.data) {
+        node.data = {};
+      }
+      node.data.diff = 'ins' as any;
+      resultChildren.push(node);
+    }
+    newIdx++;
   }
 
   return {
