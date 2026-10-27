@@ -48,9 +48,11 @@
   "dependencies": {
     "@datastructures-js/priority-queue": "^6.3.3",
     "diff": "^8.0.2",
+    "diff-match-patch": "^1.0.5",
     "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
+    "@types/diff-match-patch": "^1.0.36",
     "@types/mdast": "^4.0.4",
     "@types/node": "^20.10.0",
     "@types/react": "^18.2.15",
@@ -63,9 +65,11 @@
     "mdast-util-to-hast": "^13.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "remark-frontmatter": "^5.0.0",
     "remark-gfm": "^4.0.1",
     "remark-parse": "^11.0.0",
     "remark-stringify": "^11.0.0",
+    "shiki": "^4.5.0",
     "tsup": "^9.0.0",
     "tsx": "^4.20.3",
     "typescript": "^5.8.3",

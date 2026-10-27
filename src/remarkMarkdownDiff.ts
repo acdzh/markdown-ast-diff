@@ -29,7 +29,7 @@ export function remarkMarkdownDiff(options: Options = { }) {
     try {
       const oldRoot: Root = { type: 'root', children: tree.children.slice(0, separatorIndex) as Root['children'] };
       const newRoot: Root = { type: 'root', children: tree.children.slice(separatorIndex + 1) as Root['children'] };
-      const comp = diffMarkdownAst(oldRoot, newRoot);
+      const comp = diffMarkdownAst(oldRoot, newRoot, options);
 
       if (options.enableDiffNode) {
         transformAstWithDiffDataToAstWithDiffNode(comp);

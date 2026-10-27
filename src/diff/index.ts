@@ -3,21 +3,24 @@ import { Root } from 'mdast';
 import type { Node } from 'unist';
 import { XMap } from '../lib/XMap';
 import { XNode } from '../lib/XNode';
-import { DiffType, IdBox, NodeType } from '../types/base';
+import { DiffType, IdBox, NodeType, Options } from '../types/base';
 import { isOpaque } from '../utils/node';
 import { candidate } from './candidate';
+import { CONSTANTS } from './constants';
 import { matchDown, matchUp } from './match';
 import { nodeMerge } from './merge';
 import { nodeOptimiseBottomUp, nodeOptimiseTopDown } from './optimise';
-import { prepareHeading } from './prepares/heading';
 import { prepareListItem } from './prepares/listItem';
 import { prepareMeta } from './prepares/meta';
 import { createNodePriorityQueue } from './queue';
+import { canUseSectionAwareDiff, sectionAwareDiff } from './section';
 import { assignSigns } from './sign';
+import { similarityMatchPass } from './similarity';
+import { applyContextFolding } from './context-folding';
+import { diffNodesByChangedRanges } from './range-executor';
 
-function diff(nOld: Root, nNew: Root): Root {
+function fullDocumentDiff(nOld: Root, nNew: Root, options?: Options): Root {
   const cleanups = [
-    prepareHeading(nOld, nNew),
     prepareListItem(nOld, nNew),
     prepareMeta(nOld, nNew),
   ];
@@ -42,12 +45,18 @@ function diff(nOld: Root, nNew: Root): Root {
   const queue = createNodePriorityQueue();
   queue.enqueue(nNew);
 
+  const maxIterations = CONSTANTS.QUEUE_MAX_ITERATIONS_FACTOR * (xOldMap.maxNodes + xNewMap.maxNodes);
+  let iterations = 0;
+
   /*
    * Match-make while we have nodes in the priority queue.
    * This is guaranteed to be finite.
    * See "Phase 3", sec 5.2.
    */
   while (queue.size() > 0) {
+    if (++iterations > maxIterations) {
+      break;
+    }
     const node = queue.dequeue();
     if (!node) {
       break;
@@ -135,6 +144,7 @@ function diff(nOld: Root, nNew: Root): Root {
    * Now we need to optimise, so run a "Phase 4", sec. 5.2.
    * Our optimisation is nothing like the paper's.
    */
+  similarityMatchPass(xOldMap, xNewMap);
   nodeOptimiseTopDown(nNew);
   nodeOptimiseBottomUp(nNew, xOldMap, xNewMap);
 
@@ -153,7 +163,45 @@ function diff(nOld: Root, nNew: Root): Root {
   return comp;
 }
 
-export function diffMarkdownAst(nOld?: Root, nNew?: Root): Root {
+function diff(nOld: Root, nNew: Root, options?: Options): Root {
+  let result: Root;
+
+  if (options?.changedLineRanges) {
+    const rangeResult = diffNodesByChangedRanges(
+      nOld,
+      nNew,
+      options.changedLineRanges,
+      (old, new_, opts) => diffCore(old, new_, opts),
+      options,
+    );
+    if (rangeResult) {
+      result = rangeResult;
+    } else {
+      result = diffCore(nOld, nNew, options);
+    }
+  } else {
+    result = diffCore(nOld, nNew, options);
+  }
+
+  if (options?.contextLines !== undefined && options.contextLines !== false) {
+    result = applyContextFolding(result, options.contextLines);
+  }
+
+  return result;
+}
+
+function diffCore(nOld: Root, nNew: Root, options?: Options): Root {
+  if (canUseSectionAwareDiff(nOld, nNew)) {
+    const sectionResult = sectionAwareDiff(nOld, nNew, fullDocumentDiff, options);
+    if (sectionResult) {
+      return sectionResult;
+    }
+  }
+
+  return fullDocumentDiff(nOld, nNew, options);
+}
+
+export function diffMarkdownAst(nOld?: Root, nNew?: Root, options?: Options): Root {
   if (!nOld && !nNew) {
     return {
       type: 'root',
@@ -181,5 +229,5 @@ export function diffMarkdownAst(nOld?: Root, nNew?: Root): Root {
     return nOld;
   }
 
-  return diff(nOld as Root, nNew as Root);
+  return diff(nOld as Root, nNew as Root, options);
 }

@@ -21,13 +21,20 @@ export function isInlineElement(node: Node): boolean {
   return INLINE_TYPES.has(node.type);
 }
 
+export function isInlineOnlyChildren(node: Node): boolean {
+  if (!node.children || node.children.length === 0) {
+    return false;
+  }
+  return node.children.every(child => isInlineElement(child));
+}
+
 /*
  * If this returns non-zero, the node should be considered opaque and
  * we will not do any difference processing within it. It will still be
  * marked with weight and signature from child nodes and interior data.
  */
 export function isOpaque(node: Node): boolean {
-  return node.type === NodeType.Table || node.type === NodeType.YAML || node.type === NodeType.TOML;
+  return node.type === NodeType.YAML || node.type === NodeType.TOML;
 }
 
 /**

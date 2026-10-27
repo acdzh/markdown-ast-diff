@@ -16,6 +16,5 @@
       "第一段",
       "最后一段"
     ]
-  },
-  "knownIssue": "整段重写时旧段落内容被静默丢弃：输出只有新段落且标为 diffUnchanged，看不到任何删除（oldCorrect=false）"
+  }
 }

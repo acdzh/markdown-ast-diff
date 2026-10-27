@@ -84,7 +84,7 @@ function App(): JSX.Element {
     ));
     setDiffAst(ast);
     setDiffMarkdownText(renderAstToMarkdown(ast));
-    setDiffHtmlContent(renderAstToHtml(ast));
+    renderAstToHtml(ast).then(setDiffHtmlContent);
   }, []);
 
   useEffect(() => {
@@ -129,8 +129,7 @@ function App(): JSX.Element {
         );
 
       case 'html-preview': {
-        const srcdoc = `<!DOCTYPE html><html><head><meta charset="utf-8"><style>body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:16px;font-size:14px;line-height:1.6;color:#1a1a1a;}</style></head><body>${diffHtmlContent}</body></html>`;
-        return <iframe className="html-preview-frame" srcDoc={srcdoc} title="HTML Diff Preview" sandbox="allow-same-origin" />;
+        return <iframe className="html-preview-frame" srcDoc={diffHtmlContent} title="HTML Diff Preview" sandbox="allow-same-origin" />;
       }
 
       case 'ast-json':

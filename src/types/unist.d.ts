@@ -7,6 +7,9 @@ import 'unist';
 declare module 'unist' {
   export interface Data extends UnistData {
     diff?: DiffType;
+    diffUnchanged?: boolean;
+    diffOldContent?: string;
+    hName?: string;
     headingDiffToken?: boolean;
     backupParagraph?: MdastNode;
   }

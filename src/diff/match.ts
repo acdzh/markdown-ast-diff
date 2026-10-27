@@ -1,5 +1,5 @@
 import { assert } from '../lib/assert';
-import type { Heading, Link, ListItem } from 'mdast';
+import type { Heading, Link, ListItem, List, Table } from 'mdast';
 import type { Node } from 'unist';
 import { XMap } from '../lib/XMap';
 import { XNode } from '../lib/XNode';
@@ -33,6 +33,40 @@ export function matchEq(n1: Node, n2: Node): boolean {
         return false;
       }
       if ((n1 as ListItem).spread !== (n2 as ListItem).spread) {
+        return false;
+      }
+      break;
+    case NodeType.List:
+      if ((n1 as List).ordered !== (n2 as List).ordered) {
+        return false;
+      }
+      break;
+    case NodeType.Table: {
+      const a1 = (n1 as Table).align;
+      const a2 = (n2 as Table).align;
+      if (a1?.length === a2?.length && JSON.stringify(a1) !== JSON.stringify(a2)) {
+        return false;
+      }
+      break;
+    }
+    case NodeType.Definition:
+      if ((n1 as any).url !== (n2 as any).url) {
+        return false;
+      }
+      if ((n1 as any).title !== (n2 as any).title) {
+        return false;
+      }
+      if ((n1 as any).identifier !== (n2 as any).identifier) {
+        return false;
+      }
+      break;
+    case NodeType.FootnoteDefinition:
+      if ((n1 as any).identifier !== (n2 as any).identifier) {
+        return false;
+      }
+      break;
+    case NodeType.FootnoteReference:
+      if ((n1 as any).identifier !== (n2 as any).identifier) {
         return false;
       }
       break;
@@ -167,6 +201,13 @@ export function matchDown(
     xOld.match = undefined;
   }
 
+  if (xNew.match) {
+    assert(xNew.match._xNode);
+    assert(xNew.node === xNew.match._xNode.match);
+    xNew.match._xNode.match = undefined;
+    xNew.match = undefined;
+  }
+
   assert(!xNew.match);
   assert(!xOld.match);
 
@@ -183,19 +224,18 @@ export function matchDown(
   nOld = xOld.node.children?.[0];
   nNew = xNew.node.children?.[0];
 
-  while (nNew) {
-    assert(nOld);
+  while (nNew && nOld) {
     assert(nOld._xNode);
     assert(nNew._xNode);
-    matchDown(
-      nOld._xNode,
-      xOldMap,
-      nNew._xNode,
-      xNewMap
-    );
+    if (matchEq(nOld, nNew)) {
+      matchDown(
+        nOld._xNode,
+        xOldMap,
+        nNew._xNode,
+        xNewMap
+      );
+    }
     nOld = nOld._next;
     nNew = nNew._next;
   }
-
-  assert(!nOld);
 }

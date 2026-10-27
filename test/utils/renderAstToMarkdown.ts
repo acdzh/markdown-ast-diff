@@ -3,6 +3,7 @@ import { unified } from 'unified';
 import type { Node } from 'unist';
 import { visit } from 'unist-util-visit';
 import remarkGfm from 'remark-gfm';
+import remarkFrontmatter from 'remark-frontmatter';
 
 /**
  * 将AST转换回Markdown文本
@@ -13,6 +14,7 @@ export function renderAstToMarkdown(_ast: Node): string {
   const ast = JSON.parse(JSON.stringify(_ast));
   const processor = unified()
     .use(remarkGfm)
+    .use(remarkFrontmatter)
     .use(() => (tree: Node) => {
       visit(tree, 'listItem', (node: Node) => {
         if (node?.data?.diff) {

@@ -176,7 +176,7 @@ function summarize(cases: CaseReport[]): LayerSummary {
     xpass: cases.filter(c => c.status === 'xpass').length,
     avgEfficiency: round(avg(cases.map(c => c.metrics.efficiency))),
     avgCohesion: round(avg(cases.map(c => c.metrics.cohesion))),
-    avgScore: round(avg(cases.map(c => c.metrics.score))),
+    avgScore: round(avg(cases.map(c => c.status === 'xfail' ? 0 : c.metrics.score))),
     p95PerfMs: round(p95(cases.map(c => c.metrics.perfMs)), 2),
   };
 }
@@ -194,7 +194,7 @@ function buildReport(cases: CaseReport[], tag: string): Report {
     if (c.status === 'pass' || c.status === 'xpass') {
       entry.pass++;
     }
-    entry.avgScore += c.metrics.score;
+    entry.avgScore += c.status === 'xfail' ? 0 : c.metrics.score;
   }
   for (const entry of Object.values(capabilities)) {
     entry.avgScore = round(entry.avgScore / entry.cases);

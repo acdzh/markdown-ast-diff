@@ -1,12 +1,80 @@
 import { assert } from '../lib/assert';
-import type { Text } from 'mdast';
+import type { Text, Table, List, ListItem } from 'mdast';
 import type { Node, Parent } from 'unist';
 import { XMap } from '../lib/XMap';
 import { XNode } from '../lib/XNode';
 import { DiffType, IdBox, NodeType } from '../types/base';
-import { isOpaque } from '../utils/node';
+import { isOpaque, isInlineOnlyChildren } from '../utils/node';
 import { nodeClone, nodeCloneTree } from './clone';
 import { nodeLcs } from './lcs';
+import { diffInlineChildren } from './inline-diff';
+import { diffSentenceSegments, hasSentenceBoundary } from './sentence-diff';
+
+function collectChildren(node: Node): Node[] {
+  const result: Node[] = [];
+  let child = node.children?.[0];
+  while (child) {
+    result.push(child);
+    child = child._next;
+  }
+  return result;
+}
+
+function hasAnyDiff(node: Node): boolean {
+  if (node.data?.diff) {
+    return true;
+  }
+  if (node.data?.diffOldContent) {
+    return true;
+  }
+  if (node.data?.diffProperties) {
+    return true;
+  }
+  if (node.children) {
+    for (const child of node.children) {
+      if (hasAnyDiff(child)) {
+        return true;
+      }
+    }
+  }
+  return false;
+}
+
+function detectPropertyChanges(oldNode: Node, newNode: Node): void {
+  const props: Record<string, { old: unknown; new: unknown }> = {};
+
+  if (oldNode.type === NodeType.List && newNode.type === NodeType.List) {
+    const o = oldNode as unknown as List;
+    const n = newNode as unknown as List;
+    if (o.ordered !== n.ordered) {
+      props.ordered = { old: o.ordered, new: n.ordered };
+    }
+  }
+
+  if (oldNode.type === NodeType.ListItem && newNode.type === NodeType.ListItem) {
+    const o = oldNode as unknown as ListItem;
+    const n = newNode as unknown as ListItem;
+    if (o.checked !== n.checked) {
+      props.checked = { old: o.checked, new: n.checked };
+    }
+  }
+
+  if (Object.keys(props).length > 0) {
+    if (!newNode.data) {
+      newNode.data = {};
+    }
+    newNode.data.diffProperties = props;
+  }
+}
+
+function markUnchangedIfClean(node: Node): void {
+  if (!hasAnyDiff(node)) {
+    if (!node.data) {
+      node.data = {};
+    }
+    node.data.diffUnchanged = true;
+  }
+}
 
 /*
  * Merge the new tree "nNew" with the old "nOld" using a depth-first
@@ -199,11 +267,81 @@ export function nodeMerge(_nOld: Node, xOldMap: XMap, _nNew: Node, xNewMap: XMap
      * Then continue on to the next nodes.
      */
 
-    if (isOpaque(nNew)) {
+    if (nNew.type === NodeType.Text && nOld.type === NodeType.Text) {
+      if ((nOld as Text).value === (nNew as Text).value) {
+        nn = nodeCloneTree(nNew, idBox);
+        nn._parent = n;
+        n.children.push(nn);
+      } else {
+        nodeLcs(nOld as Text, nNew as Text, n, idBox);
+      }
+    } else if (isOpaque(nNew)) {
       assert(isOpaque(nOld));
       nn = nodeCloneTree(nNew, idBox);
       nn._parent = n;
       n.children.push(nn);
+    } else if (nNew.type === NodeType.Table && nOld.type === NodeType.Table) {
+      const oldAlign = JSON.stringify((nOld as Table).align);
+      const newAlign = JSON.stringify((nNew as Table).align);
+      const oldAlignLen = (nOld as Table).align?.length ?? 0;
+      const newAlignLen = (nNew as Table).align?.length ?? 0;
+      if (oldAlign !== newAlign && oldAlignLen === newAlignLen) {
+        nn = nodeCloneTree(nOld, idBox);
+        nn._parent = n;
+        nn.data!.diff = DiffType.Del;
+        n.children.push(nn);
+        nn = nodeCloneTree(nNew, idBox);
+        nn._parent = n;
+        nn.data!.diff = DiffType.Ins;
+        n.children.push(nn);
+      } else {
+        nn = nodeMerge(nOld, xOldMap, nNew, xNewMap, idBox);
+        nn._parent = n;
+        n.children.push(nn);
+      }
+    } else if (nNew.type === NodeType.Code && nOld.type === NodeType.Code) {
+      const oldLang = (nOld as any).lang as string | undefined;
+      const newLang = (nNew as any).lang as string | undefined;
+      const oldValue = (nOld as any).value as string;
+      const newValue = (nNew as any).value as string;
+      const isMermaid = oldLang === 'mermaid' || newLang === 'mermaid';
+      if (oldLang !== newLang || (isMermaid && oldValue !== newValue)) {
+        nn = nodeCloneTree(nOld, idBox);
+        nn._parent = n;
+        nn.data!.diff = DiffType.Del;
+        n.children.push(nn);
+        nn = nodeCloneTree(nNew, idBox);
+        nn._parent = n;
+        nn.data!.diff = DiffType.Ins;
+        n.children.push(nn);
+      } else {
+        nn = nodeCloneTree(nNew, idBox);
+        nn._parent = n;
+        if (oldValue !== newValue && newLang !== 'mermaid') {
+          if (!nn.data) {
+            nn.data = {};
+          }
+          nn.data.diffOldContent = oldValue;
+        }
+        n.children.push(nn);
+      }
+    } else if (isInlineOnlyChildren(nOld) && isInlineOnlyChildren(nNew)) {
+      const oldInline = collectChildren(nOld);
+      const newInline = collectChildren(nNew);
+      let result = diffInlineChildren(oldInline, newInline, idBox, n);
+      if (result.shouldFallback && hasSentenceBoundary(oldInline)) {
+        result = diffSentenceSegments(oldInline, newInline, idBox, n);
+      }
+      if (!result.shouldFallback) {
+        nn = nodeClone(nNew, ++idBox.value) as Parent;
+        nn._parent = n;
+        nn.children = result.nodes;
+        n.children.push(nn);
+      } else {
+        nn = nodeMerge(nOld, xOldMap, nNew, xNewMap, idBox);
+        nn._parent = n;
+        n.children.push(nn);
+      }
     } else {
       assert(!isOpaque(nOld));
       nn = nodeMerge(nOld, xOldMap, nNew, xNewMap, idBox);
@@ -224,6 +362,9 @@ export function nodeMerge(_nOld: Node, xOldMap: XMap, _nNew: Node, xNewMap: XMap
     n.children.push(nn);
     nOld = nOld._next;
   }
+
+  detectPropertyChanges(_nOld, n);
+  markUnchangedIfClean(n);
 
   return n;
 }
