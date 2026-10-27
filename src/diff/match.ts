@@ -32,6 +32,9 @@ export function matchEq(n1: Node, n2: Node): boolean {
       if ((n1 as ListItem).checked !== (n2 as ListItem).checked) {
         return false;
       }
+      if ((n1 as ListItem).spread !== (n2 as ListItem).spread) {
+        return false;
+      }
       break;
     case NodeType.List:
       if ((n1 as List).ordered !== (n2 as List).ordered) {

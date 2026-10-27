@@ -99,9 +99,12 @@ export function assignSigns(parentHashContext: HashContext | null, map: XMap, no
   switch (node.type) {
     case NodeType.List:
       hashContext.update((node as List).ordered);
+      hashContext.update((node as List).start);
+      hashContext.update((node as List).spread);
       break;
     case NodeType.ListItem:
       hashContext.update((node as ListItem).checked);
+      hashContext.update((node as ListItem).spread);
       break;
     case NodeType.Heading:
       hashContext.update((node as Heading).depth);
