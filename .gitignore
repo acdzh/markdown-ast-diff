@@ -3,3 +3,4 @@ dist
 node_modules
 reference
 .agents
+test/testcases/mr-samples
