@@ -2,17 +2,19 @@
 
 [![Build and Deploy](https://github.com/acdzh/markdown-ast-diff/actions/workflows/build-and-deploy.yml/badge.svg)](https://github.com/acdzh/markdown-ast-diff/actions/workflows/build-and-deploy.yml)
 
-基于 AST 的 Markdown 差异比较库。将两份 Markdown 文档解析为抽象语法树，通过 [BULD 算法](https://kristaps.bsd.lv/lowdown/diff.html) 精准识别新增、删除和修改的节点，产出一棵带有完整 diff 信息的 AST。
+English | [简体中文](./README.zh-CN.md)
 
-[在线预览](https://acdzh.github.io/markdown-ast-diff/) · [详细文档](./docs/usage.md)
+An AST-based Markdown diff library. It parses two Markdown documents into abstract syntax trees, uses the [BULD algorithm](https://kristaps.bsd.lv/lowdown/diff.html) to precisely identify inserted, deleted and modified nodes, and produces an AST annotated with complete diff information.
 
-## 安装
+[Live Demo](https://acdzh.github.io/markdown-ast-diff/) · [Documentation](./docs/usage.md)
+
+## Installation
 
 ```bash
 npm install markdown-ast-diff
 ```
 
-## 快速开始
+## Quick Start
 
 ```typescript
 import { unified } from 'unified';
@@ -30,34 +32,34 @@ function parse(md: string): Root {
     .parse(md) as Root;
 }
 
-const oldAst = parse('# 标题\n\n旧内容');
-const newAst = parse('# 标题\n\n新内容');
+const oldAst = parse('# Title\n\nOld content');
+const newAst = parse('# Title\n\nNew content');
 
 const diffAst = diffMarkdownAst(oldAst, newAst);
 ```
 
-结果 AST 中，每个节点通过 `data` 字段携带差异信息：
+In the resulting AST, each node carries diff information in its `data` field:
 
 ```javascript
-// 新增节点
-{ type: 'text', value: '新内容', data: { diff: 'ins' } }
+// Inserted node
+{ type: 'text', value: 'New content', data: { diff: 'ins' } }
 
-// 删除节点
-{ type: 'text', value: '旧内容', data: { diff: 'del' } }
+// Deleted node
+{ type: 'text', value: 'Old content', data: { diff: 'del' } }
 
-// 未变节点
+// Unchanged node
 { type: 'heading', data: { diffUnchanged: true }, children: [...] }
 
-// 代码块内容变化（旧内容在 diffOldContent，新内容在 value）
-{ type: 'code', value: '新代码', data: { diffOldContent: '旧代码' } }
+// Code block content changed (old content in diffOldContent, new content in value)
+{ type: 'code', value: 'new code', data: { diffOldContent: 'old code' } }
 ```
 
-也可以作为 unified/remark 插件使用：
+It can also be used as a unified/remark plugin:
 
 ```typescript
 import { remarkMarkdownDiff, REMARK_DIFF_SEPARATOR } from 'markdown-ast-diff';
 
-const markdown = `旧内容\n\n${REMARK_DIFF_SEPARATOR}\n\n新内容`;
+const markdown = `Old content\n\n${REMARK_DIFF_SEPARATOR}\n\nNew content`;
 
 const result = unified()
   .use(remarkParse)
@@ -65,30 +67,30 @@ const result = unified()
   .runSync(unified().use(remarkParse).parse(markdown), { value: markdown });
 ```
 
-## 配置项
+## Options
 
 ```typescript
 diffMarkdownAst(oldAst, newAst, {
-  enableDiffNode: true,       // 将 data.diff 属性转为 ins/del 包裹节点
-  contextLines: 3,            // 折叠未变区域，保留变更周围 3 行上下文
-  changedLineRanges: {        // 外部提供的行级变更范围（如来自 git diff）
-    from: [[10, 15]],         // 旧文档变更行
-    to: [[10, 18]],           // 新文档变更行
+  enableDiffNode: true,       // Convert data.diff attributes into ins/del wrapper nodes
+  contextLines: 3,            // Collapse unchanged regions, keeping 3 lines of context around changes
+  changedLineRanges: {        // Externally provided line-level change ranges (e.g. from git diff)
+    from: [[10, 15]],         // Changed lines in the old document
+    to: [[10, 18]],           // Changed lines in the new document
   },
 });
 ```
 
-## 开发
+## Development
 
 ```bash
-npm run dev          # 浏览器交互预览
-npm test             # 运行测试
-npm run evaluate     # 运行评测（golden + scenario + corpus）
-npm run build        # 构建（CJS + ESM + .d.ts）
+npm run dev          # Interactive browser preview
+npm test             # Run tests
+npm run evaluate     # Run evaluation (golden + scenario + corpus)
+npm run build        # Build (CJS + ESM + .d.ts)
 ```
 
-完整的 API 参考、算法流程、评测系统、开发指南见 [docs/usage.md](./docs/usage.md)。
+See [docs/usage.md](./docs/usage.md) for the full API reference, algorithm overview, evaluation system and development guide.
 
-## 许可证
+## License
 
 MIT
