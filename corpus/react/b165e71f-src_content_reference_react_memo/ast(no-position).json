@@ -1371,7 +1371,183 @@
       "meta": null,
       "value": "import { createContext, memo, useContext, useState } from 'react';\n\nconst ThemeContext = createContext(null);\n\nexport default function MyApp() {\n  const [theme, setTheme] = useState('dark');\n\n  function handleClick() {\n    setTheme(theme === 'dark' ? 'light' : 'dark');\n  }\n\n  return (\n    <ThemeContext value={theme}>\n      <button onClick={handleClick}>\n        Switch theme\n      </button>\n      <Greeting name=\"Taylor\" />\n    </ThemeContext>\n  );\n}\n\nconst Greeting = memo(function Greeting({ name }) {\n  console.log(\"Greeting was rendered at\", new Date().toLocaleTimeString());\n  const theme = useContext(ThemeContext);\n  return (\n    <h3 className={theme}>Hello, {name}!</h3>\n  );\n});",
       "data": {
-        "diffOldContent": "import { createContext, memo, useContext, useState } from 'react';\n\nconst ThemeContext = createContext(null);\n\nexport default function MyApp() {\n  const [theme, setTheme] = useState('dark');\n\n  function handleClick() {\n    setTheme(theme === 'dark' ? 'light' : 'dark'); \n  }\n\n  return (\n    <ThemeContext value={theme}>\n      <button onClick={handleClick}>\n        Switch theme\n      </button>\n      <Greeting name=\"Taylor\" />\n    </ThemeContext>\n  );\n}\n\nconst Greeting = memo(function Greeting({ name }) {\n  console.log(\"Greeting was rendered at\", new Date().toLocaleTimeString());\n  const theme = useContext(ThemeContext);\n  return (\n    <h3 className={theme}>Hello, {name}!</h3>\n  );\n});"
+        "diffOldContent": "import { createContext, memo, useContext, useState } from 'react';\n\nconst ThemeContext = createContext(null);\n\nexport default function MyApp() {\n  const [theme, setTheme] = useState('dark');\n\n  function handleClick() {\n    setTheme(theme === 'dark' ? 'light' : 'dark'); \n  }\n\n  return (\n    <ThemeContext value={theme}>\n      <button onClick={handleClick}>\n        Switch theme\n      </button>\n      <Greeting name=\"Taylor\" />\n    </ThemeContext>\n  );\n}\n\nconst Greeting = memo(function Greeting({ name }) {\n  console.log(\"Greeting was rendered at\", new Date().toLocaleTimeString());\n  const theme = useContext(ThemeContext);\n  return (\n    <h3 className={theme}>Hello, {name}!</h3>\n  );\n});",
+        "diffLines": [
+          {
+            "lineNumber": 1,
+            "oldLineNumber": 1,
+            "type": "unchanged",
+            "text": "import { createContext, memo, useContext, useState } from 'react';"
+          },
+          {
+            "lineNumber": 2,
+            "oldLineNumber": 2,
+            "type": "unchanged",
+            "text": ""
+          },
+          {
+            "lineNumber": 3,
+            "oldLineNumber": 3,
+            "type": "unchanged",
+            "text": "const ThemeContext = createContext(null);"
+          },
+          {
+            "lineNumber": 4,
+            "oldLineNumber": 4,
+            "type": "unchanged",
+            "text": ""
+          },
+          {
+            "lineNumber": 5,
+            "oldLineNumber": 5,
+            "type": "unchanged",
+            "text": "export default function MyApp() {"
+          },
+          {
+            "lineNumber": 6,
+            "oldLineNumber": 6,
+            "type": "unchanged",
+            "text": "  const [theme, setTheme] = useState('dark');"
+          },
+          {
+            "lineNumber": 7,
+            "oldLineNumber": 7,
+            "type": "unchanged",
+            "text": ""
+          },
+          {
+            "lineNumber": 8,
+            "oldLineNumber": 8,
+            "type": "unchanged",
+            "text": "  function handleClick() {"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 9,
+            "type": "del",
+            "text": "    setTheme(theme === 'dark' ? 'light' : 'dark'); "
+          },
+          {
+            "lineNumber": 9,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "    setTheme(theme === 'dark' ? 'light' : 'dark');"
+          },
+          {
+            "lineNumber": 10,
+            "oldLineNumber": 10,
+            "type": "unchanged",
+            "text": "  }"
+          },
+          {
+            "lineNumber": 11,
+            "oldLineNumber": 11,
+            "type": "unchanged",
+            "text": ""
+          },
+          {
+            "lineNumber": 12,
+            "oldLineNumber": 12,
+            "type": "unchanged",
+            "text": "  return ("
+          },
+          {
+            "lineNumber": 13,
+            "oldLineNumber": 13,
+            "type": "unchanged",
+            "text": "    <ThemeContext value={theme}>"
+          },
+          {
+            "lineNumber": 14,
+            "oldLineNumber": 14,
+            "type": "unchanged",
+            "text": "      <button onClick={handleClick}>"
+          },
+          {
+            "lineNumber": 15,
+            "oldLineNumber": 15,
+            "type": "unchanged",
+            "text": "        Switch theme"
+          },
+          {
+            "lineNumber": 16,
+            "oldLineNumber": 16,
+            "type": "unchanged",
+            "text": "      </button>"
+          },
+          {
+            "lineNumber": 17,
+            "oldLineNumber": 17,
+            "type": "unchanged",
+            "text": "      <Greeting name=\"Taylor\" />"
+          },
+          {
+            "lineNumber": 18,
+            "oldLineNumber": 18,
+            "type": "unchanged",
+            "text": "    </ThemeContext>"
+          },
+          {
+            "lineNumber": 19,
+            "oldLineNumber": 19,
+            "type": "unchanged",
+            "text": "  );"
+          },
+          {
+            "lineNumber": 20,
+            "oldLineNumber": 20,
+            "type": "unchanged",
+            "text": "}"
+          },
+          {
+            "lineNumber": 21,
+            "oldLineNumber": 21,
+            "type": "unchanged",
+            "text": ""
+          },
+          {
+            "lineNumber": 22,
+            "oldLineNumber": 22,
+            "type": "unchanged",
+            "text": "const Greeting = memo(function Greeting({ name }) {"
+          },
+          {
+            "lineNumber": 23,
+            "oldLineNumber": 23,
+            "type": "unchanged",
+            "text": "  console.log(\"Greeting was rendered at\", new Date().toLocaleTimeString());"
+          },
+          {
+            "lineNumber": 24,
+            "oldLineNumber": 24,
+            "type": "unchanged",
+            "text": "  const theme = useContext(ThemeContext);"
+          },
+          {
+            "lineNumber": 25,
+            "oldLineNumber": 25,
+            "type": "unchanged",
+            "text": "  return ("
+          },
+          {
+            "lineNumber": 26,
+            "oldLineNumber": 26,
+            "type": "unchanged",
+            "text": "    <h3 className={theme}>Hello, {name}!</h3>"
+          },
+          {
+            "lineNumber": 27,
+            "oldLineNumber": 27,
+            "type": "unchanged",
+            "text": "  );"
+          },
+          {
+            "lineNumber": 28,
+            "oldLineNumber": 28,
+            "type": "unchanged",
+            "text": "});"
+          }
+        ]
       }
     },
     {

@@ -1035,7 +1035,45 @@
           "meta": null,
           "value": "def example():\n    print(\"这是嵌入在引用中的代码块（已修改）\")\n    # 添加新的注释\n    print(\"添加了新的输出\")\n    return True",
           "data": {
-            "diffOldContent": "def example():\n    print(\"这是嵌入在引用中的代码块\")\n    return True"
+            "diffOldContent": "def example():\n    print(\"这是嵌入在引用中的代码块\")\n    return True",
+            "diffLines": [
+              {
+                "lineNumber": 1,
+                "oldLineNumber": 1,
+                "type": "unchanged",
+                "text": "def example():"
+              },
+              {
+                "lineNumber": null,
+                "oldLineNumber": 2,
+                "type": "del",
+                "text": "    print(\"这是嵌入在引用中的代码块\")"
+              },
+              {
+                "lineNumber": 2,
+                "oldLineNumber": null,
+                "type": "ins",
+                "text": "    print(\"这是嵌入在引用中的代码块（已修改）\")"
+              },
+              {
+                "lineNumber": 3,
+                "oldLineNumber": null,
+                "type": "ins",
+                "text": "    # 添加新的注释"
+              },
+              {
+                "lineNumber": 4,
+                "oldLineNumber": null,
+                "type": "ins",
+                "text": "    print(\"添加了新的输出\")"
+              },
+              {
+                "lineNumber": 5,
+                "oldLineNumber": 3,
+                "type": "unchanged",
+                "text": "    return True"
+              }
+            ]
           }
         },
         {
@@ -2933,7 +2971,129 @@
       "meta": null,
       "value": "# 这是代码块中的Markdown标题（已修改）\n\n- 这是代码块中的列表项1（已修改）\n- 这是代码块中的列表项2\n- 这是代码块中的新增列表项3\n\n> 这是代码块中的引用（已修改）\n> \n> 这是引用中的新行\n\n| 列1 | 列2 | 新增列3 |\n| --- | --- | --- |\n| 数据1 | 数据2 | 新数据 |\n| 新行数据1 | 新行数据2 | 新行数据3 |",
       "data": {
-        "diffOldContent": "# 这是代码块中的Markdown标题\n\n- 这是代码块中的列表项1\n- 这是代码块中的列表项2\n\n> 这是代码块中的引用\n\n| 列1 | 列2 |\n| --- | --- |\n| 数据1 | 数据2 |"
+        "diffOldContent": "# 这是代码块中的Markdown标题\n\n- 这是代码块中的列表项1\n- 这是代码块中的列表项2\n\n> 这是代码块中的引用\n\n| 列1 | 列2 |\n| --- | --- |\n| 数据1 | 数据2 |",
+        "diffLines": [
+          {
+            "lineNumber": null,
+            "oldLineNumber": 1,
+            "type": "del",
+            "text": "# 这是代码块中的Markdown标题"
+          },
+          {
+            "lineNumber": 1,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "# 这是代码块中的Markdown标题（已修改）"
+          },
+          {
+            "lineNumber": 2,
+            "oldLineNumber": 2,
+            "type": "unchanged",
+            "text": ""
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 3,
+            "type": "del",
+            "text": "- 这是代码块中的列表项1"
+          },
+          {
+            "lineNumber": 3,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "- 这是代码块中的列表项1（已修改）"
+          },
+          {
+            "lineNumber": 4,
+            "oldLineNumber": 4,
+            "type": "unchanged",
+            "text": "- 这是代码块中的列表项2"
+          },
+          {
+            "lineNumber": 5,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "- 这是代码块中的新增列表项3"
+          },
+          {
+            "lineNumber": 6,
+            "oldLineNumber": 5,
+            "type": "unchanged",
+            "text": ""
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 6,
+            "type": "del",
+            "text": "> 这是代码块中的引用"
+          },
+          {
+            "lineNumber": 7,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "> 这是代码块中的引用（已修改）"
+          },
+          {
+            "lineNumber": 8,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "> "
+          },
+          {
+            "lineNumber": 9,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "> 这是引用中的新行"
+          },
+          {
+            "lineNumber": 10,
+            "oldLineNumber": 7,
+            "type": "unchanged",
+            "text": ""
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 8,
+            "type": "del",
+            "text": "| 列1 | 列2 |"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 9,
+            "type": "del",
+            "text": "| --- | --- |"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 10,
+            "type": "del",
+            "text": "| 数据1 | 数据2 |"
+          },
+          {
+            "lineNumber": 11,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "| 列1 | 列2 | 新增列3 |"
+          },
+          {
+            "lineNumber": 12,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "| --- | --- | --- |"
+          },
+          {
+            "lineNumber": 13,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "| 数据1 | 数据2 | 新数据 |"
+          },
+          {
+            "lineNumber": 14,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "| 新行数据1 | 新行数据2 | 新行数据3 |"
+          }
+        ]
       }
     },
     {

@@ -7,7 +7,39 @@
       "meta": null,
       "value": "server:\n    port: 80\n    host: localhost",
       "data": {
-        "diffOldContent": "server:\n  port: 80\n  host: localhost"
+        "diffOldContent": "server:\n  port: 80\n  host: localhost",
+        "diffLines": [
+          {
+            "lineNumber": 1,
+            "oldLineNumber": 1,
+            "type": "unchanged",
+            "text": "server:"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 2,
+            "type": "del",
+            "text": "  port: 80"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 3,
+            "type": "del",
+            "text": "  host: localhost"
+          },
+          {
+            "lineNumber": 2,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "    port: 80"
+          },
+          {
+            "lineNumber": 3,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "    host: localhost"
+          }
+        ]
       }
     }
   ],

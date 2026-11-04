@@ -7,7 +7,45 @@
       "meta": null,
       "value": "import { a, b } from './a';\nconst x = a(1);\nconst y = a(2);\nconst z = a(3);\nexport { x, y, z };",
       "data": {
-        "diffOldContent": "import { a } from './a';\nconst x = a(1);\nconst y = a(2);\nconst z = a(3);\nexport { x, y, z };"
+        "diffOldContent": "import { a } from './a';\nconst x = a(1);\nconst y = a(2);\nconst z = a(3);\nexport { x, y, z };",
+        "diffLines": [
+          {
+            "lineNumber": null,
+            "oldLineNumber": 1,
+            "type": "del",
+            "text": "import { a } from './a';"
+          },
+          {
+            "lineNumber": 1,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "import { a, b } from './a';"
+          },
+          {
+            "lineNumber": 2,
+            "oldLineNumber": 2,
+            "type": "unchanged",
+            "text": "const x = a(1);"
+          },
+          {
+            "lineNumber": 3,
+            "oldLineNumber": 3,
+            "type": "unchanged",
+            "text": "const y = a(2);"
+          },
+          {
+            "lineNumber": 4,
+            "oldLineNumber": 4,
+            "type": "unchanged",
+            "text": "const z = a(3);"
+          },
+          {
+            "lineNumber": 5,
+            "oldLineNumber": 5,
+            "type": "unchanged",
+            "text": "export { x, y, z };"
+          }
+        ]
       }
     }
   ],

@@ -1177,7 +1177,45 @@
         }
       },
       "data": {
-        "diffOldContent": "这是一个缩进代码块的第一行。\n这是第二行，保持相同缩进。\n这是第三行，保持相同缩进。"
+        "diffOldContent": "这是一个缩进代码块的第一行。\n这是第二行，保持相同缩进。\n这是第三行，保持相同缩进。",
+        "diffLines": [
+          {
+            "lineNumber": 1,
+            "oldLineNumber": 1,
+            "type": "unchanged",
+            "text": "这是一个缩进代码块的第一行。"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 2,
+            "type": "del",
+            "text": "这是第二行，保持相同缩进。"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 3,
+            "type": "del",
+            "text": "这是第三行，保持相同缩进。"
+          },
+          {
+            "lineNumber": 2,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "  这是第二行，增加了缩进。"
+          },
+          {
+            "lineNumber": 3,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "    这是第三行，进一步增加了缩进。"
+          },
+          {
+            "lineNumber": 4,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "这是第四行，回到原始缩进。"
+          }
+        ]
       }
     },
     {
@@ -1222,7 +1260,63 @@
         }
       },
       "data": {
-        "diffOldContent": "这是一个围栏代码块的第一行。\n  这是第二行，有两个空格缩进。\n    这是第三行，有四个空格缩进。\n\t这是第四行，有一个制表符缩进。\n  \t这是第五行，有两个空格和一个制表符缩进。"
+        "diffOldContent": "这是一个围栏代码块的第一行。\n  这是第二行，有两个空格缩进。\n    这是第三行，有四个空格缩进。\n\t这是第四行，有一个制表符缩进。\n  \t这是第五行，有两个空格和一个制表符缩进。",
+        "diffLines": [
+          {
+            "lineNumber": 1,
+            "oldLineNumber": 1,
+            "type": "unchanged",
+            "text": "这是一个围栏代码块的第一行。"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 2,
+            "type": "del",
+            "text": "  这是第二行，有两个空格缩进。"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 3,
+            "type": "del",
+            "text": "    这是第三行，有四个空格缩进。"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 4,
+            "type": "del",
+            "text": "\t这是第四行，有一个制表符缩进。"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 5,
+            "type": "del",
+            "text": "  \t这是第五行，有两个空格和一个制表符缩进。"
+          },
+          {
+            "lineNumber": 2,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "    这是第二行，有四个空格缩进。"
+          },
+          {
+            "lineNumber": 3,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "        这是第三行，有八个空格缩进。"
+          },
+          {
+            "lineNumber": 4,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "\t\t这是第四行，有两个制表符缩进。"
+          },
+          {
+            "lineNumber": 5,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "    \t\t这是第五行，有四个空格和两个制表符缩进。"
+          }
+        ]
       }
     },
     {

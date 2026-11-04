@@ -125,7 +125,81 @@
         }
       },
       "data": {
-        "diffOldContent": "function calculateSum(a, b) {\n  return a + b;\n}\n\nconst result = calculateSum(5, 3);\nconsole.log(\"结果是:\", result);"
+        "diffOldContent": "function calculateSum(a, b) {\n  return a + b;\n}\n\nconst result = calculateSum(5, 3);\nconsole.log(\"结果是:\", result);",
+        "diffLines": [
+          {
+            "lineNumber": 1,
+            "oldLineNumber": 1,
+            "type": "unchanged",
+            "text": "function calculateSum(a, b) {"
+          },
+          {
+            "lineNumber": 2,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "  // 添加参数验证"
+          },
+          {
+            "lineNumber": 3,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "  if (typeof a !== 'number' || typeof b !== 'number') {"
+          },
+          {
+            "lineNumber": 4,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "    throw new Error('参数必须是数字');"
+          },
+          {
+            "lineNumber": 5,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "  }"
+          },
+          {
+            "lineNumber": 6,
+            "oldLineNumber": 2,
+            "type": "unchanged",
+            "text": "  return a + b;"
+          },
+          {
+            "lineNumber": 7,
+            "oldLineNumber": 3,
+            "type": "unchanged",
+            "text": "}"
+          },
+          {
+            "lineNumber": 8,
+            "oldLineNumber": 4,
+            "type": "unchanged",
+            "text": ""
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 5,
+            "type": "del",
+            "text": "const result = calculateSum(5, 3);"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 6,
+            "type": "del",
+            "text": "console.log(\"结果是:\", result);"
+          },
+          {
+            "lineNumber": 9,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "const result = calculateSum(10, 5);"
+          },
+          {
+            "lineNumber": 10,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "console.log(\"计算结果:\", result);"
+          }
+        ]
       }
     },
     {
@@ -170,7 +244,69 @@
         }
       },
       "data": {
-        "diffOldContent": "def calculate_sum(a, b):\n    return a + b\n\nresult = calculate_sum(5, 3)\nprint(\"结果是:\", result)"
+        "diffOldContent": "def calculate_sum(a, b):\n    return a + b\n\nresult = calculate_sum(5, 3)\nprint(\"结果是:\", result)",
+        "diffLines": [
+          {
+            "lineNumber": 1,
+            "oldLineNumber": 1,
+            "type": "unchanged",
+            "text": "def calculate_sum(a, b):"
+          },
+          {
+            "lineNumber": 2,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "    # 添加参数验证"
+          },
+          {
+            "lineNumber": 3,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "    if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):"
+          },
+          {
+            "lineNumber": 4,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "        raise TypeError(\"参数必须是数字\")"
+          },
+          {
+            "lineNumber": 5,
+            "oldLineNumber": 2,
+            "type": "unchanged",
+            "text": "    return a + b"
+          },
+          {
+            "lineNumber": 6,
+            "oldLineNumber": 3,
+            "type": "unchanged",
+            "text": ""
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 4,
+            "type": "del",
+            "text": "result = calculate_sum(5, 3)"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 5,
+            "type": "del",
+            "text": "print(\"结果是:\", result)"
+          },
+          {
+            "lineNumber": 7,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "result = calculate_sum(10, 5)"
+          },
+          {
+            "lineNumber": 8,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "print(f\"计算结果: {result}\")"
+          }
+        ]
       }
     },
     {
@@ -215,7 +351,159 @@
         }
       },
       "data": {
-        "diffOldContent": "<!DOCTYPE html>\n<html>\n<head>\n    <title>示例页面</title>\n</head>\n<body>\n    <h1>Hello World</h1>\n    <p>这是一个段落。</p>\n</body>\n</html>"
+        "diffOldContent": "<!DOCTYPE html>\n<html>\n<head>\n    <title>示例页面</title>\n</head>\n<body>\n    <h1>Hello World</h1>\n    <p>这是一个段落。</p>\n</body>\n</html>",
+        "diffLines": [
+          {
+            "lineNumber": 1,
+            "oldLineNumber": 1,
+            "type": "unchanged",
+            "text": "<!DOCTYPE html>"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 2,
+            "type": "del",
+            "text": "<html>"
+          },
+          {
+            "lineNumber": 2,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "<html lang=\"zh-CN\">"
+          },
+          {
+            "lineNumber": 3,
+            "oldLineNumber": 3,
+            "type": "unchanged",
+            "text": "<head>"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 4,
+            "type": "del",
+            "text": "    <title>示例页面</title>"
+          },
+          {
+            "lineNumber": 4,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "    <meta charset=\"UTF-8\">"
+          },
+          {
+            "lineNumber": 5,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">"
+          },
+          {
+            "lineNumber": 6,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "    <title>更新后的示例页面</title>"
+          },
+          {
+            "lineNumber": 7,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "    <link rel=\"stylesheet\" href=\"styles.css\">"
+          },
+          {
+            "lineNumber": 8,
+            "oldLineNumber": 5,
+            "type": "unchanged",
+            "text": "</head>"
+          },
+          {
+            "lineNumber": 9,
+            "oldLineNumber": 6,
+            "type": "unchanged",
+            "text": "<body>"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 7,
+            "type": "del",
+            "text": "    <h1>Hello World</h1>"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 8,
+            "type": "del",
+            "text": "    <p>这是一个段落。</p>"
+          },
+          {
+            "lineNumber": 10,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "    <header>"
+          },
+          {
+            "lineNumber": 11,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "        <h1>Hello World</h1>"
+          },
+          {
+            "lineNumber": 12,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "    </header>"
+          },
+          {
+            "lineNumber": 13,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "    <main>"
+          },
+          {
+            "lineNumber": 14,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "        <p>这是一个更新后的段落。</p>"
+          },
+          {
+            "lineNumber": 15,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "        <button>点击我</button>"
+          },
+          {
+            "lineNumber": 16,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "    </main>"
+          },
+          {
+            "lineNumber": 17,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "    <footer>"
+          },
+          {
+            "lineNumber": 18,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "        <p>© 2023 示例公司</p>"
+          },
+          {
+            "lineNumber": 19,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "    </footer>"
+          },
+          {
+            "lineNumber": 20,
+            "oldLineNumber": 9,
+            "type": "unchanged",
+            "text": "</body>"
+          },
+          {
+            "lineNumber": 21,
+            "oldLineNumber": 10,
+            "type": "unchanged",
+            "text": "</html>"
+          }
+        ]
       }
     }
   ]

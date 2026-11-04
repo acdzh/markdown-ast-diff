@@ -41,7 +41,375 @@
       "meta": null,
       "value": "/**\n * 根据食材类别和物理属性，计算最佳涮煮时间\n * @param {Array} ingredients - 食材列表\n * @returns {Array} 涮煮方案列表\n */\nfunction getHotpotCookingTime(ingredients) {\n  if (!Array.isArray(ingredients)) {\n    throw new TypeError('请传入食材数组，别把菜单直接扔进来');\n  }\n\n  const output = [];\n\n  for (const item of ingredients) {\n    // 跳过信息不完整的食材\n    if (!item.name || !item.type) {\n      continue;\n    }\n\n    if (item.frozen && !item.thawed) {\n      output.push({\n        food: item.name,\n        time: -1,\n        tip: '请先解冻，冻货直接下锅会溅油',\n      });\n      continue;\n    }\n\n    let seconds = 60;\n    if (item.type === '肉片') {\n      seconds = item.sliceThick > 5 ? 90 : 30;\n    } else if (item.type === '虾滑') {\n      seconds = 120;\n    } else if (item.type === '青菜') {\n      seconds = 20;\n    } else if (item.type === '毛肚') {\n      seconds = 15;\n    } else if (item.type === '豆腐') {\n      seconds = item.firm ? 300 : 180;\n    } else if (item.type === '菌菇') {\n      seconds = 240;\n    }\n\n    const tip = seconds >= 60 ? '慢煮入味' : '七上八下';\n\n    output.push({\n      food: item.name,\n      time: seconds,\n      tip: tip,\n      dipping: item.spicy ? '干碟海椒面' : '油碟蒜泥香菜',\n      // 记录本次计算的时间戳\n      calculatedAt: Date.now(),\n    });\n  }\n\n  return output;\n}",
       "data": {
-        "diffOldContent": "/**\n * 根据食材类别和物理属性，计算最佳涮煮时间\n * @param {Array} ingredients - 食材列表\n * @returns {Array} 涮煮方案列表\n */\nfunction getHotpotCookingTime(ingredients) {\n  if (!Array.isArray(ingredients)) {\n    throw new TypeError('请传入食材数组，别把菜单直接扔进来');\n  }\n\n  const result = [];\n\n  for (const item of ingredients) {\n    if (!item.name || !item.type) {\n      continue;\n    }\n\n    if (item.frozen && !item.thawed) {\n      result.push({\n        food: item.name,\n        time: -1,\n        tip: '请先解冻，冻货直接下锅会溅油',\n      });\n      continue;\n    }\n\n    let seconds = 60;\n    if (item.type === '肉片') {\n      seconds = item.sliceThick > 3 ? 90 : 30;\n    } else if (item.type === '虾滑') {\n      seconds = 120;\n    } else if (item.type === '青菜') {\n      seconds = 20;\n    } else if (item.type === '毛肚') {\n      seconds = 15;\n    } else if (item.type === '豆腐') {\n      seconds = item.firm ? 300 : 180;\n    } else if (item.type === '菌菇') {\n      seconds = 240;\n    }\n\n    const tip = seconds >= 60 ? '慢煮入味' : '七上八下';\n\n    result.push({\n      food: item.name,\n      time: seconds,\n      tip: tip,\n      dipping: item.spicy ? '干碟海椒面' : '油碟蒜泥香菜',\n    });\n  }\n\n  return result;\n}"
+        "diffOldContent": "/**\n * 根据食材类别和物理属性，计算最佳涮煮时间\n * @param {Array} ingredients - 食材列表\n * @returns {Array} 涮煮方案列表\n */\nfunction getHotpotCookingTime(ingredients) {\n  if (!Array.isArray(ingredients)) {\n    throw new TypeError('请传入食材数组，别把菜单直接扔进来');\n  }\n\n  const result = [];\n\n  for (const item of ingredients) {\n    if (!item.name || !item.type) {\n      continue;\n    }\n\n    if (item.frozen && !item.thawed) {\n      result.push({\n        food: item.name,\n        time: -1,\n        tip: '请先解冻，冻货直接下锅会溅油',\n      });\n      continue;\n    }\n\n    let seconds = 60;\n    if (item.type === '肉片') {\n      seconds = item.sliceThick > 3 ? 90 : 30;\n    } else if (item.type === '虾滑') {\n      seconds = 120;\n    } else if (item.type === '青菜') {\n      seconds = 20;\n    } else if (item.type === '毛肚') {\n      seconds = 15;\n    } else if (item.type === '豆腐') {\n      seconds = item.firm ? 300 : 180;\n    } else if (item.type === '菌菇') {\n      seconds = 240;\n    }\n\n    const tip = seconds >= 60 ? '慢煮入味' : '七上八下';\n\n    result.push({\n      food: item.name,\n      time: seconds,\n      tip: tip,\n      dipping: item.spicy ? '干碟海椒面' : '油碟蒜泥香菜',\n    });\n  }\n\n  return result;\n}",
+        "diffLines": [
+          {
+            "lineNumber": 1,
+            "oldLineNumber": 1,
+            "type": "unchanged",
+            "text": "/**"
+          },
+          {
+            "lineNumber": 2,
+            "oldLineNumber": 2,
+            "type": "unchanged",
+            "text": " * 根据食材类别和物理属性，计算最佳涮煮时间"
+          },
+          {
+            "lineNumber": 3,
+            "oldLineNumber": 3,
+            "type": "unchanged",
+            "text": " * @param {Array} ingredients - 食材列表"
+          },
+          {
+            "lineNumber": 4,
+            "oldLineNumber": 4,
+            "type": "unchanged",
+            "text": " * @returns {Array} 涮煮方案列表"
+          },
+          {
+            "lineNumber": 5,
+            "oldLineNumber": 5,
+            "type": "unchanged",
+            "text": " */"
+          },
+          {
+            "lineNumber": 6,
+            "oldLineNumber": 6,
+            "type": "unchanged",
+            "text": "function getHotpotCookingTime(ingredients) {"
+          },
+          {
+            "lineNumber": 7,
+            "oldLineNumber": 7,
+            "type": "unchanged",
+            "text": "  if (!Array.isArray(ingredients)) {"
+          },
+          {
+            "lineNumber": 8,
+            "oldLineNumber": 8,
+            "type": "unchanged",
+            "text": "    throw new TypeError('请传入食材数组，别把菜单直接扔进来');"
+          },
+          {
+            "lineNumber": 9,
+            "oldLineNumber": 9,
+            "type": "unchanged",
+            "text": "  }"
+          },
+          {
+            "lineNumber": 10,
+            "oldLineNumber": 10,
+            "type": "unchanged",
+            "text": ""
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 11,
+            "type": "del",
+            "text": "  const result = [];"
+          },
+          {
+            "lineNumber": 11,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "  const output = [];"
+          },
+          {
+            "lineNumber": 12,
+            "oldLineNumber": 12,
+            "type": "unchanged",
+            "text": ""
+          },
+          {
+            "lineNumber": 13,
+            "oldLineNumber": 13,
+            "type": "unchanged",
+            "text": "  for (const item of ingredients) {"
+          },
+          {
+            "lineNumber": 14,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "    // 跳过信息不完整的食材"
+          },
+          {
+            "lineNumber": 15,
+            "oldLineNumber": 14,
+            "type": "unchanged",
+            "text": "    if (!item.name || !item.type) {"
+          },
+          {
+            "lineNumber": 16,
+            "oldLineNumber": 15,
+            "type": "unchanged",
+            "text": "      continue;"
+          },
+          {
+            "lineNumber": 17,
+            "oldLineNumber": 16,
+            "type": "unchanged",
+            "text": "    }"
+          },
+          {
+            "lineNumber": 18,
+            "oldLineNumber": 17,
+            "type": "unchanged",
+            "text": ""
+          },
+          {
+            "lineNumber": 19,
+            "oldLineNumber": 18,
+            "type": "unchanged",
+            "text": "    if (item.frozen && !item.thawed) {"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 19,
+            "type": "del",
+            "text": "      result.push({"
+          },
+          {
+            "lineNumber": 20,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "      output.push({"
+          },
+          {
+            "lineNumber": 21,
+            "oldLineNumber": 20,
+            "type": "unchanged",
+            "text": "        food: item.name,"
+          },
+          {
+            "lineNumber": 22,
+            "oldLineNumber": 21,
+            "type": "unchanged",
+            "text": "        time: -1,"
+          },
+          {
+            "lineNumber": 23,
+            "oldLineNumber": 22,
+            "type": "unchanged",
+            "text": "        tip: '请先解冻，冻货直接下锅会溅油',"
+          },
+          {
+            "lineNumber": 24,
+            "oldLineNumber": 23,
+            "type": "unchanged",
+            "text": "      });"
+          },
+          {
+            "lineNumber": 25,
+            "oldLineNumber": 24,
+            "type": "unchanged",
+            "text": "      continue;"
+          },
+          {
+            "lineNumber": 26,
+            "oldLineNumber": 25,
+            "type": "unchanged",
+            "text": "    }"
+          },
+          {
+            "lineNumber": 27,
+            "oldLineNumber": 26,
+            "type": "unchanged",
+            "text": ""
+          },
+          {
+            "lineNumber": 28,
+            "oldLineNumber": 27,
+            "type": "unchanged",
+            "text": "    let seconds = 60;"
+          },
+          {
+            "lineNumber": 29,
+            "oldLineNumber": 28,
+            "type": "unchanged",
+            "text": "    if (item.type === '肉片') {"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 29,
+            "type": "del",
+            "text": "      seconds = item.sliceThick > 3 ? 90 : 30;"
+          },
+          {
+            "lineNumber": 30,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "      seconds = item.sliceThick > 5 ? 90 : 30;"
+          },
+          {
+            "lineNumber": 31,
+            "oldLineNumber": 30,
+            "type": "unchanged",
+            "text": "    } else if (item.type === '虾滑') {"
+          },
+          {
+            "lineNumber": 32,
+            "oldLineNumber": 31,
+            "type": "unchanged",
+            "text": "      seconds = 120;"
+          },
+          {
+            "lineNumber": 33,
+            "oldLineNumber": 32,
+            "type": "unchanged",
+            "text": "    } else if (item.type === '青菜') {"
+          },
+          {
+            "lineNumber": 34,
+            "oldLineNumber": 33,
+            "type": "unchanged",
+            "text": "      seconds = 20;"
+          },
+          {
+            "lineNumber": 35,
+            "oldLineNumber": 34,
+            "type": "unchanged",
+            "text": "    } else if (item.type === '毛肚') {"
+          },
+          {
+            "lineNumber": 36,
+            "oldLineNumber": 35,
+            "type": "unchanged",
+            "text": "      seconds = 15;"
+          },
+          {
+            "lineNumber": 37,
+            "oldLineNumber": 36,
+            "type": "unchanged",
+            "text": "    } else if (item.type === '豆腐') {"
+          },
+          {
+            "lineNumber": 38,
+            "oldLineNumber": 37,
+            "type": "unchanged",
+            "text": "      seconds = item.firm ? 300 : 180;"
+          },
+          {
+            "lineNumber": 39,
+            "oldLineNumber": 38,
+            "type": "unchanged",
+            "text": "    } else if (item.type === '菌菇') {"
+          },
+          {
+            "lineNumber": 40,
+            "oldLineNumber": 39,
+            "type": "unchanged",
+            "text": "      seconds = 240;"
+          },
+          {
+            "lineNumber": 41,
+            "oldLineNumber": 40,
+            "type": "unchanged",
+            "text": "    }"
+          },
+          {
+            "lineNumber": 42,
+            "oldLineNumber": 41,
+            "type": "unchanged",
+            "text": ""
+          },
+          {
+            "lineNumber": 43,
+            "oldLineNumber": 42,
+            "type": "unchanged",
+            "text": "    const tip = seconds >= 60 ? '慢煮入味' : '七上八下';"
+          },
+          {
+            "lineNumber": 44,
+            "oldLineNumber": 43,
+            "type": "unchanged",
+            "text": ""
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 44,
+            "type": "del",
+            "text": "    result.push({"
+          },
+          {
+            "lineNumber": 45,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "    output.push({"
+          },
+          {
+            "lineNumber": 46,
+            "oldLineNumber": 45,
+            "type": "unchanged",
+            "text": "      food: item.name,"
+          },
+          {
+            "lineNumber": 47,
+            "oldLineNumber": 46,
+            "type": "unchanged",
+            "text": "      time: seconds,"
+          },
+          {
+            "lineNumber": 48,
+            "oldLineNumber": 47,
+            "type": "unchanged",
+            "text": "      tip: tip,"
+          },
+          {
+            "lineNumber": 49,
+            "oldLineNumber": 48,
+            "type": "unchanged",
+            "text": "      dipping: item.spicy ? '干碟海椒面' : '油碟蒜泥香菜',"
+          },
+          {
+            "lineNumber": 50,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "      // 记录本次计算的时间戳"
+          },
+          {
+            "lineNumber": 51,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "      calculatedAt: Date.now(),"
+          },
+          {
+            "lineNumber": 52,
+            "oldLineNumber": 49,
+            "type": "unchanged",
+            "text": "    });"
+          },
+          {
+            "lineNumber": 53,
+            "oldLineNumber": 50,
+            "type": "unchanged",
+            "text": "  }"
+          },
+          {
+            "lineNumber": 54,
+            "oldLineNumber": 51,
+            "type": "unchanged",
+            "text": ""
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 52,
+            "type": "del",
+            "text": "  return result;"
+          },
+          {
+            "lineNumber": 55,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "  return output;"
+          },
+          {
+            "lineNumber": 56,
+            "oldLineNumber": 53,
+            "type": "unchanged",
+            "text": "}"
+          }
+        ]
       }
     },
     {

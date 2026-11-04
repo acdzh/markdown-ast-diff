@@ -7,7 +7,33 @@
       "meta": null,
       "value": "def calculate_sum(a, b):\n    if not isinstance(a, int):\n        raise TypeError(\"a must be int\")\n    return a + b",
       "data": {
-        "diffOldContent": "def calculate_sum(a, b):\n    return a + b"
+        "diffOldContent": "def calculate_sum(a, b):\n    return a + b",
+        "diffLines": [
+          {
+            "lineNumber": 1,
+            "oldLineNumber": 1,
+            "type": "unchanged",
+            "text": "def calculate_sum(a, b):"
+          },
+          {
+            "lineNumber": 2,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "    if not isinstance(a, int):"
+          },
+          {
+            "lineNumber": 3,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "        raise TypeError(\"a must be int\")"
+          },
+          {
+            "lineNumber": 4,
+            "oldLineNumber": 2,
+            "type": "unchanged",
+            "text": "    return a + b"
+          }
+        ]
       }
     }
   ],

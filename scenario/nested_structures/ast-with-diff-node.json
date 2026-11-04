@@ -5161,7 +5161,177 @@
         }
       },
       "data": {
-        "diffOldContent": "# 代码块中的 Markdown\n\n## 子标题\n\n```javascript\n// 代码块中的代码块\nfunction nestedExample() {\n  console.log('这是嵌套在 Markdown 代码块中的 JavaScript 代码块');\n}\n```\n\n- 列表项 1\n- 列表项 2\n  - 嵌套列表项"
+        "diffOldContent": "# 代码块中的 Markdown\n\n## 子标题\n\n```javascript\n// 代码块中的代码块\nfunction nestedExample() {\n  console.log('这是嵌套在 Markdown 代码块中的 JavaScript 代码块');\n}\n```\n\n- 列表项 1\n- 列表项 2\n  - 嵌套列表项",
+        "diffLines": [
+          {
+            "lineNumber": null,
+            "oldLineNumber": 1,
+            "type": "del",
+            "text": "# 代码块中的 Markdown"
+          },
+          {
+            "lineNumber": 1,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "# 代码块中的 Markdown（已修改）"
+          },
+          {
+            "lineNumber": 2,
+            "oldLineNumber": 2,
+            "type": "unchanged",
+            "text": ""
+          },
+          {
+            "lineNumber": 3,
+            "oldLineNumber": 3,
+            "type": "unchanged",
+            "text": "## 子标题"
+          },
+          {
+            "lineNumber": 4,
+            "oldLineNumber": 4,
+            "type": "unchanged",
+            "text": ""
+          },
+          {
+            "lineNumber": 5,
+            "oldLineNumber": 5,
+            "type": "unchanged",
+            "text": "```javascript"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 6,
+            "type": "del",
+            "text": "// 代码块中的代码块"
+          },
+          {
+            "lineNumber": 6,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "// 代码块中的代码块（已修改）"
+          },
+          {
+            "lineNumber": 7,
+            "oldLineNumber": 7,
+            "type": "unchanged",
+            "text": "function nestedExample() {"
+          },
+          {
+            "lineNumber": 8,
+            "oldLineNumber": 8,
+            "type": "unchanged",
+            "text": "  console.log('这是嵌套在 Markdown 代码块中的 JavaScript 代码块');"
+          },
+          {
+            "lineNumber": 9,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "  // 新增的注释"
+          },
+          {
+            "lineNumber": 10,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "  return '新增的返回值';"
+          },
+          {
+            "lineNumber": 11,
+            "oldLineNumber": 9,
+            "type": "unchanged",
+            "text": "}"
+          },
+          {
+            "lineNumber": 12,
+            "oldLineNumber": 10,
+            "type": "unchanged",
+            "text": "```"
+          },
+          {
+            "lineNumber": 13,
+            "oldLineNumber": 11,
+            "type": "unchanged",
+            "text": ""
+          },
+          {
+            "lineNumber": 14,
+            "oldLineNumber": 12,
+            "type": "unchanged",
+            "text": "- 列表项 1"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 13,
+            "type": "del",
+            "text": "- 列表项 2"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 14,
+            "type": "del",
+            "text": "  - 嵌套列表项"
+          },
+          {
+            "lineNumber": 15,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "- 列表项 2（已修改）"
+          },
+          {
+            "lineNumber": 16,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "  - 嵌套列表项"
+          },
+          {
+            "lineNumber": 17,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "  - 新增的嵌套列表项"
+          },
+          {
+            "lineNumber": 18,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": ""
+          },
+          {
+            "lineNumber": 19,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "```python"
+          },
+          {
+            "lineNumber": 20,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "# 新增的 Python 代码块"
+          },
+          {
+            "lineNumber": 21,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "def nested_function():"
+          },
+          {
+            "lineNumber": 22,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "    print(\"这是新增的 Python 代码块\")"
+          },
+          {
+            "lineNumber": 23,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "    return \"新增的返回值\""
+          },
+          {
+            "lineNumber": 24,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "```"
+          }
+        ]
       }
     },
     {
@@ -6990,7 +7160,51 @@
                     }
                   },
                   "data": {
-                    "diffOldContent": "// 嵌套在引用中的代码块\nfunction nestedInQuote() {\n  return '这是嵌套在引用中的代码';\n}"
+                    "diffOldContent": "// 嵌套在引用中的代码块\nfunction nestedInQuote() {\n  return '这是嵌套在引用中的代码';\n}",
+                    "diffLines": [
+                      {
+                        "lineNumber": null,
+                        "oldLineNumber": 1,
+                        "type": "del",
+                        "text": "// 嵌套在引用中的代码块"
+                      },
+                      {
+                        "lineNumber": 1,
+                        "oldLineNumber": null,
+                        "type": "ins",
+                        "text": "// 嵌套在引用中的代码块（已修改）"
+                      },
+                      {
+                        "lineNumber": 2,
+                        "oldLineNumber": 2,
+                        "type": "unchanged",
+                        "text": "function nestedInQuote() {"
+                      },
+                      {
+                        "lineNumber": null,
+                        "oldLineNumber": 3,
+                        "type": "del",
+                        "text": "  return '这是嵌套在引用中的代码';"
+                      },
+                      {
+                        "lineNumber": 3,
+                        "oldLineNumber": null,
+                        "type": "ins",
+                        "text": "  console.log(\"新增的日志\");"
+                      },
+                      {
+                        "lineNumber": 4,
+                        "oldLineNumber": null,
+                        "type": "ins",
+                        "text": "  return '这是嵌套在引用中的代码（已修改）';"
+                      },
+                      {
+                        "lineNumber": 5,
+                        "oldLineNumber": 4,
+                        "type": "unchanged",
+                        "text": "}"
+                      }
+                    ]
                   }
                 },
                 {

@@ -19,7 +19,57 @@
         }
       },
       "data": {
-        "diffOldContent": "function calc(items) {\n  const result = [];\n  for (const item of items) {\n    result.push(item * 2);\n  }\n  return result;\n}"
+        "diffOldContent": "function calc(items) {\n  const result = [];\n  for (const item of items) {\n    result.push(item * 2);\n  }\n  return result;\n}",
+        "diffLines": [
+          {
+            "lineNumber": 1,
+            "oldLineNumber": 1,
+            "type": "unchanged",
+            "text": "function calc(items) {"
+          },
+          {
+            "lineNumber": 2,
+            "oldLineNumber": 2,
+            "type": "unchanged",
+            "text": "  const result = [];"
+          },
+          {
+            "lineNumber": 3,
+            "oldLineNumber": 3,
+            "type": "unchanged",
+            "text": "  for (const item of items) {"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 4,
+            "type": "del",
+            "text": "    result.push(item * 2);"
+          },
+          {
+            "lineNumber": 4,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "    result.push(item * 3);"
+          },
+          {
+            "lineNumber": 5,
+            "oldLineNumber": 5,
+            "type": "unchanged",
+            "text": "  }"
+          },
+          {
+            "lineNumber": 6,
+            "oldLineNumber": 6,
+            "type": "unchanged",
+            "text": "  return result;"
+          },
+          {
+            "lineNumber": 7,
+            "oldLineNumber": 7,
+            "type": "unchanged",
+            "text": "}"
+          }
+        ]
       }
     }
   ],

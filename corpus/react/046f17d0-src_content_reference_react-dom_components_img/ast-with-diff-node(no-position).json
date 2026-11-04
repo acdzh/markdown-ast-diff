@@ -2044,7 +2044,441 @@
       "meta": null,
       "value": "import {\n  ViewTransition,\n  Suspense,\n  use,\n  useState,\n} from 'react';\nimport { fetchImageSrc } from './image.js';\n\nfunction Profile({ cacheKey }) {\n  const src = use(fetchImageSrc(cacheKey));\n  return (\n    <div className=\"card\">\n      <img src={src} alt=\"\" width={80} height={80} />\n      <p>Jack Pope</p>\n    </div>\n  );\n}\n\nfunction ProfilePlaceholder() {\n  return (\n    <div className=\"card\">\n      <div className=\"avatar-placeholder\" />\n      <p className=\"name-placeholder\">&nbsp;</p>\n    </div>\n  );\n}\n\nexport default function App() {\n  const [showWithTransition, setShowWithTransition] =\n    useState(false);\n  const [showWithoutTransition, setShowWithoutTransition] =\n    useState(false);\n  return (\n    <>\n      <button onClick={() => setShowWithTransition(true)}>\n        Show profile with View Transition\n      </button>\n      {showWithTransition && (\n        <ViewTransition>\n          <Suspense fallback={<ProfilePlaceholder />}>\n            <Profile cacheKey=\"with-transition\" />\n          </Suspense>\n        </ViewTransition>\n      )}\n      <hr />\n      <button onClick={() => setShowWithoutTransition(true)}>\n        Show profile without View Transition\n      </button>\n      {showWithoutTransition && (\n        <Suspense fallback={<ProfilePlaceholder />}>\n          <Profile cacheKey=\"without-transition\" />\n        </Suspense>\n      )}\n    </>\n  );\n}",
       "data": {
-        "diffOldContent": "import { ViewTransition, Suspense, useState, startTransition } from 'react';\nimport { freshImageUrl } from './image.js';\nimport VanillaProfile from './VanillaProfile.js';\n\nfunction Profile({ src }) {\n  return (\n    <div className=\"card\">\n      <img src={src} alt=\"Jack Pope\" width={80} height={80} />\n      <p>Jack Pope</p>\n    </div>\n  );\n}\n\nfunction ProfilePlaceholder() {\n  return (\n    <div className=\"card\">\n      <div className=\"avatar-placeholder\" />\n      <p className=\"name-placeholder\">&nbsp;</p>\n    </div>\n  );\n}\n\nexport default function App() {\n  const [src, setSrc] = useState(null);\n  return (\n    <>\n      <button\n        onClick={() => {\n          startTransition(() => {\n            setSrc(freshImageUrl());\n          });\n        }}>\n        Show profile\n      </button>\n      {src && (\n        <ViewTransition>\n          <Suspense fallback={<ProfilePlaceholder />}>\n            <Profile src={src} />\n          </Suspense>\n        </ViewTransition>\n      )}\n      <hr />\n      <VanillaProfile />\n    </>\n  );\n}"
+        "diffOldContent": "import { ViewTransition, Suspense, useState, startTransition } from 'react';\nimport { freshImageUrl } from './image.js';\nimport VanillaProfile from './VanillaProfile.js';\n\nfunction Profile({ src }) {\n  return (\n    <div className=\"card\">\n      <img src={src} alt=\"Jack Pope\" width={80} height={80} />\n      <p>Jack Pope</p>\n    </div>\n  );\n}\n\nfunction ProfilePlaceholder() {\n  return (\n    <div className=\"card\">\n      <div className=\"avatar-placeholder\" />\n      <p className=\"name-placeholder\">&nbsp;</p>\n    </div>\n  );\n}\n\nexport default function App() {\n  const [src, setSrc] = useState(null);\n  return (\n    <>\n      <button\n        onClick={() => {\n          startTransition(() => {\n            setSrc(freshImageUrl());\n          });\n        }}>\n        Show profile\n      </button>\n      {src && (\n        <ViewTransition>\n          <Suspense fallback={<ProfilePlaceholder />}>\n            <Profile src={src} />\n          </Suspense>\n        </ViewTransition>\n      )}\n      <hr />\n      <VanillaProfile />\n    </>\n  );\n}",
+        "diffLines": [
+          {
+            "lineNumber": null,
+            "oldLineNumber": 1,
+            "type": "del",
+            "text": "import { ViewTransition, Suspense, useState, startTransition } from 'react';"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 2,
+            "type": "del",
+            "text": "import { freshImageUrl } from './image.js';"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 3,
+            "type": "del",
+            "text": "import VanillaProfile from './VanillaProfile.js';"
+          },
+          {
+            "lineNumber": 1,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "import {"
+          },
+          {
+            "lineNumber": 2,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "  ViewTransition,"
+          },
+          {
+            "lineNumber": 3,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "  Suspense,"
+          },
+          {
+            "lineNumber": 4,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "  use,"
+          },
+          {
+            "lineNumber": 5,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "  useState,"
+          },
+          {
+            "lineNumber": 6,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "} from 'react';"
+          },
+          {
+            "lineNumber": 7,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "import { fetchImageSrc } from './image.js';"
+          },
+          {
+            "lineNumber": 8,
+            "oldLineNumber": 4,
+            "type": "unchanged",
+            "text": ""
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 5,
+            "type": "del",
+            "text": "function Profile({ src }) {"
+          },
+          {
+            "lineNumber": 9,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "function Profile({ cacheKey }) {"
+          },
+          {
+            "lineNumber": 10,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "  const src = use(fetchImageSrc(cacheKey));"
+          },
+          {
+            "lineNumber": 11,
+            "oldLineNumber": 6,
+            "type": "unchanged",
+            "text": "  return ("
+          },
+          {
+            "lineNumber": 12,
+            "oldLineNumber": 7,
+            "type": "unchanged",
+            "text": "    <div className=\"card\">"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 8,
+            "type": "del",
+            "text": "      <img src={src} alt=\"Jack Pope\" width={80} height={80} />"
+          },
+          {
+            "lineNumber": 13,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "      <img src={src} alt=\"\" width={80} height={80} />"
+          },
+          {
+            "lineNumber": 14,
+            "oldLineNumber": 9,
+            "type": "unchanged",
+            "text": "      <p>Jack Pope</p>"
+          },
+          {
+            "lineNumber": 15,
+            "oldLineNumber": 10,
+            "type": "unchanged",
+            "text": "    </div>"
+          },
+          {
+            "lineNumber": 16,
+            "oldLineNumber": 11,
+            "type": "unchanged",
+            "text": "  );"
+          },
+          {
+            "lineNumber": 17,
+            "oldLineNumber": 12,
+            "type": "unchanged",
+            "text": "}"
+          },
+          {
+            "lineNumber": 18,
+            "oldLineNumber": 13,
+            "type": "unchanged",
+            "text": ""
+          },
+          {
+            "lineNumber": 19,
+            "oldLineNumber": 14,
+            "type": "unchanged",
+            "text": "function ProfilePlaceholder() {"
+          },
+          {
+            "lineNumber": 20,
+            "oldLineNumber": 15,
+            "type": "unchanged",
+            "text": "  return ("
+          },
+          {
+            "lineNumber": 21,
+            "oldLineNumber": 16,
+            "type": "unchanged",
+            "text": "    <div className=\"card\">"
+          },
+          {
+            "lineNumber": 22,
+            "oldLineNumber": 17,
+            "type": "unchanged",
+            "text": "      <div className=\"avatar-placeholder\" />"
+          },
+          {
+            "lineNumber": 23,
+            "oldLineNumber": 18,
+            "type": "unchanged",
+            "text": "      <p className=\"name-placeholder\">&nbsp;</p>"
+          },
+          {
+            "lineNumber": 24,
+            "oldLineNumber": 19,
+            "type": "unchanged",
+            "text": "    </div>"
+          },
+          {
+            "lineNumber": 25,
+            "oldLineNumber": 20,
+            "type": "unchanged",
+            "text": "  );"
+          },
+          {
+            "lineNumber": 26,
+            "oldLineNumber": 21,
+            "type": "unchanged",
+            "text": "}"
+          },
+          {
+            "lineNumber": 27,
+            "oldLineNumber": 22,
+            "type": "unchanged",
+            "text": ""
+          },
+          {
+            "lineNumber": 28,
+            "oldLineNumber": 23,
+            "type": "unchanged",
+            "text": "export default function App() {"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 24,
+            "type": "del",
+            "text": "  const [src, setSrc] = useState(null);"
+          },
+          {
+            "lineNumber": 29,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "  const [showWithTransition, setShowWithTransition] ="
+          },
+          {
+            "lineNumber": 30,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "    useState(false);"
+          },
+          {
+            "lineNumber": 31,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "  const [showWithoutTransition, setShowWithoutTransition] ="
+          },
+          {
+            "lineNumber": 32,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "    useState(false);"
+          },
+          {
+            "lineNumber": 33,
+            "oldLineNumber": 25,
+            "type": "unchanged",
+            "text": "  return ("
+          },
+          {
+            "lineNumber": 34,
+            "oldLineNumber": 26,
+            "type": "unchanged",
+            "text": "    <>"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 27,
+            "type": "del",
+            "text": "      <button"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 28,
+            "type": "del",
+            "text": "        onClick={() => {"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 29,
+            "type": "del",
+            "text": "          startTransition(() => {"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 30,
+            "type": "del",
+            "text": "            setSrc(freshImageUrl());"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 31,
+            "type": "del",
+            "text": "          });"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 32,
+            "type": "del",
+            "text": "        }}>"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 33,
+            "type": "del",
+            "text": "        Show profile"
+          },
+          {
+            "lineNumber": 35,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "      <button onClick={() => setShowWithTransition(true)}>"
+          },
+          {
+            "lineNumber": 36,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "        Show profile with View Transition"
+          },
+          {
+            "lineNumber": 37,
+            "oldLineNumber": 34,
+            "type": "unchanged",
+            "text": "      </button>"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 35,
+            "type": "del",
+            "text": "      {src && ("
+          },
+          {
+            "lineNumber": 38,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "      {showWithTransition && ("
+          },
+          {
+            "lineNumber": 39,
+            "oldLineNumber": 36,
+            "type": "unchanged",
+            "text": "        <ViewTransition>"
+          },
+          {
+            "lineNumber": 40,
+            "oldLineNumber": 37,
+            "type": "unchanged",
+            "text": "          <Suspense fallback={<ProfilePlaceholder />}>"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 38,
+            "type": "del",
+            "text": "            <Profile src={src} />"
+          },
+          {
+            "lineNumber": 41,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "            <Profile cacheKey=\"with-transition\" />"
+          },
+          {
+            "lineNumber": 42,
+            "oldLineNumber": 39,
+            "type": "unchanged",
+            "text": "          </Suspense>"
+          },
+          {
+            "lineNumber": 43,
+            "oldLineNumber": 40,
+            "type": "unchanged",
+            "text": "        </ViewTransition>"
+          },
+          {
+            "lineNumber": 44,
+            "oldLineNumber": 41,
+            "type": "unchanged",
+            "text": "      )}"
+          },
+          {
+            "lineNumber": 45,
+            "oldLineNumber": 42,
+            "type": "unchanged",
+            "text": "      <hr />"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 43,
+            "type": "del",
+            "text": "      <VanillaProfile />"
+          },
+          {
+            "lineNumber": 46,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "      <button onClick={() => setShowWithoutTransition(true)}>"
+          },
+          {
+            "lineNumber": 47,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "        Show profile without View Transition"
+          },
+          {
+            "lineNumber": 48,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "      </button>"
+          },
+          {
+            "lineNumber": 49,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "      {showWithoutTransition && ("
+          },
+          {
+            "lineNumber": 50,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "        <Suspense fallback={<ProfilePlaceholder />}>"
+          },
+          {
+            "lineNumber": 51,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "          <Profile cacheKey=\"without-transition\" />"
+          },
+          {
+            "lineNumber": 52,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "        </Suspense>"
+          },
+          {
+            "lineNumber": 53,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "      )}"
+          },
+          {
+            "lineNumber": 54,
+            "oldLineNumber": 44,
+            "type": "unchanged",
+            "text": "    </>"
+          },
+          {
+            "lineNumber": 55,
+            "oldLineNumber": 45,
+            "type": "unchanged",
+            "text": "  );"
+          },
+          {
+            "lineNumber": 56,
+            "oldLineNumber": 46,
+            "type": "unchanged",
+            "text": "}"
+          }
+        ]
       }
     },
     {
@@ -2053,7 +2487,195 @@
       "meta": "src/image.js hidden",
       "value": "// Normally, the caching logic would be inside a framework.\nconst cache = new Map();\n\nexport function fetchImageSrc(cacheKey) {\n  if (!cache.has(cacheKey)) {\n    cache.set(cacheKey, loadImageSrc());\n  }\n  return cache.get(cacheKey);\n}\n\nasync function loadImageSrc() {\n  // Delay the response so the Suspense fallback is visible.\n  await new Promise(resolve => setTimeout(resolve, 1000));\n  // Add a unique parameter so the image isn't cached.\n  return 'https://react.dev/images/team/jack-pope.jpg?t=' + Date.now();\n}",
       "data": {
-        "diffOldContent": "import { useRef } from 'react';\nimport { freshImageUrl } from './image.js';\n\nexport default function VanillaProfile() {\n  const ref = useRef(null);\n  function show() {\n    ref.current.innerHTML = `<div class=\"card\">\n      <img src=\"${freshImageUrl()}\" alt=\"Jack Pope\" width=\"80\" height=\"80\" />\n      <p>Jack Pope</p>\n    </div>`;\n  }\n  return (\n    <>\n      <button onClick={show}>Show profile (direct DOM update)</button>\n      <div ref={ref} />\n    </>\n  );\n}"
+        "diffOldContent": "import { useRef } from 'react';\nimport { freshImageUrl } from './image.js';\n\nexport default function VanillaProfile() {\n  const ref = useRef(null);\n  function show() {\n    ref.current.innerHTML = `<div class=\"card\">\n      <img src=\"${freshImageUrl()}\" alt=\"Jack Pope\" width=\"80\" height=\"80\" />\n      <p>Jack Pope</p>\n    </div>`;\n  }\n  return (\n    <>\n      <button onClick={show}>Show profile (direct DOM update)</button>\n      <div ref={ref} />\n    </>\n  );\n}",
+        "diffLines": [
+          {
+            "lineNumber": null,
+            "oldLineNumber": 1,
+            "type": "del",
+            "text": "import { useRef } from 'react';"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 2,
+            "type": "del",
+            "text": "import { freshImageUrl } from './image.js';"
+          },
+          {
+            "lineNumber": 1,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "// Normally, the caching logic would be inside a framework."
+          },
+          {
+            "lineNumber": 2,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "const cache = new Map();"
+          },
+          {
+            "lineNumber": 3,
+            "oldLineNumber": 3,
+            "type": "unchanged",
+            "text": ""
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 4,
+            "type": "del",
+            "text": "export default function VanillaProfile() {"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 5,
+            "type": "del",
+            "text": "  const ref = useRef(null);"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 6,
+            "type": "del",
+            "text": "  function show() {"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 7,
+            "type": "del",
+            "text": "    ref.current.innerHTML = `<div class=\"card\">"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 8,
+            "type": "del",
+            "text": "      <img src=\"${freshImageUrl()}\" alt=\"Jack Pope\" width=\"80\" height=\"80\" />"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 9,
+            "type": "del",
+            "text": "      <p>Jack Pope</p>"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 10,
+            "type": "del",
+            "text": "    </div>`;"
+          },
+          {
+            "lineNumber": 4,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "export function fetchImageSrc(cacheKey) {"
+          },
+          {
+            "lineNumber": 5,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "  if (!cache.has(cacheKey)) {"
+          },
+          {
+            "lineNumber": 6,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "    cache.set(cacheKey, loadImageSrc());"
+          },
+          {
+            "lineNumber": 7,
+            "oldLineNumber": 11,
+            "type": "unchanged",
+            "text": "  }"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 12,
+            "type": "del",
+            "text": "  return ("
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 13,
+            "type": "del",
+            "text": "    <>"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 14,
+            "type": "del",
+            "text": "      <button onClick={show}>Show profile (direct DOM update)</button>"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 15,
+            "type": "del",
+            "text": "      <div ref={ref} />"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 16,
+            "type": "del",
+            "text": "    </>"
+          },
+          {
+            "lineNumber": null,
+            "oldLineNumber": 17,
+            "type": "del",
+            "text": "  );"
+          },
+          {
+            "lineNumber": 8,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "  return cache.get(cacheKey);"
+          },
+          {
+            "lineNumber": 9,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "}"
+          },
+          {
+            "lineNumber": 10,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": ""
+          },
+          {
+            "lineNumber": 11,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "async function loadImageSrc() {"
+          },
+          {
+            "lineNumber": 12,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "  // Delay the response so the Suspense fallback is visible."
+          },
+          {
+            "lineNumber": 13,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "  await new Promise(resolve => setTimeout(resolve, 1000));"
+          },
+          {
+            "lineNumber": 14,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "  // Add a unique parameter so the image isn't cached."
+          },
+          {
+            "lineNumber": 15,
+            "oldLineNumber": null,
+            "type": "ins",
+            "text": "  return 'https://react.dev/images/team/jack-pope.jpg?t=' + Date.now();"
+          },
+          {
+            "lineNumber": 16,
+            "oldLineNumber": 18,
+            "type": "unchanged",
+            "text": "}"
+          }
+        ]
       }
     },
     {

@@ -53,7 +53,27 @@
                 }
               },
               "data": {
-                "diffOldContent": "npm install\nnpm run build"
+                "diffOldContent": "npm install\nnpm run build",
+                "diffLines": [
+                  {
+                    "lineNumber": null,
+                    "oldLineNumber": 1,
+                    "type": "del",
+                    "text": "npm install"
+                  },
+                  {
+                    "lineNumber": 1,
+                    "oldLineNumber": null,
+                    "type": "ins",
+                    "text": "npm ci"
+                  },
+                  {
+                    "lineNumber": 2,
+                    "oldLineNumber": 2,
+                    "type": "unchanged",
+                    "text": "npm run build"
+                  }
+                ]
               }
             }
           ],
