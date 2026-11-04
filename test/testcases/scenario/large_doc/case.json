@@ -1,5 +1,4 @@
 {
   "capability": "perf",
-  "description": "约 500 行文档只改 3 处：标题版本号、一个段落里的两个数字、一个列表项里插入一句",
-  "knownIssue": "段落里两个数字的修改（1700→1800、37→39）丢失：同一句多处修改、后面还跟着不变的句子时，整段被标为 unchanged，修改丢失（见 golden/inline/multi-edit-one-sentence-cjk）"
+  "description": "约 500 行文档只改 3 处：标题版本号、一个段落里的两个数字、一个列表项里插入一句"
 }

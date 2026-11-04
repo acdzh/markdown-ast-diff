@@ -1,5 +1,4 @@
 {
   "capability": "inline",
-  "description": "约 60 行的中文影评，在三个段落里各替换 2 个字（奇妙→神奇、温暖→治愈、深刻→隽永）",
-  "knownIssue": "第一处修改（奇妙→神奇）丢失：同一句多处修改、后面还跟着不变的句子时，整段被标为 unchanged，修改丢失（见 golden/inline/multi-edit-one-sentence-cjk）"
+  "description": "约 60 行的中文影评，在三个段落里各替换 2 个字（奇妙→神奇、温暖→治愈、深刻→隽永）"
 }

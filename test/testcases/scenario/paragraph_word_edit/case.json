@@ -1,5 +1,4 @@
 {
   "capability": "inline",
-  "description": "约 100 行的观察笔记，只在一句里改了两处（两罐→三罐、清水→羊奶）",
-  "knownIssue": "两处修改全部丢失，输出与新文档完全相同：同一句多处修改、后面还跟着不变的句子时，整段被标为 unchanged，修改丢失（见 golden/inline/multi-edit-one-sentence-cjk）"
+  "description": "约 100 行的观察笔记，只在一句里改了两处（两罐→三罐、清水→羊奶）"
 }
