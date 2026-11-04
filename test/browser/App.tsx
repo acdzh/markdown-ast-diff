@@ -28,9 +28,21 @@ function CopyButton({ getText }: { getText: () => string }) {
   );
 }
 
+/** 把用例名编进 URL hash，形如 #scenario/table_diff_granularity */
+function readTestcaseFromHash(): string | null {
+  const raw = window.location.hash.replace(/^#/, '');
+  if (!raw) return null;
+  const name = decodeURIComponent(raw);
+  return testcases.some((tc) => tc.name === name) ? name : null;
+}
+
 function App(): JSX.Element {
   const [selectedTestcase, setSelectedTestcase] = useState<string>(
-    testcases.find(tc => tc.name === 'scenario/formatting')?.name ?? testcases[0]?.name ?? '',
+    () =>
+      readTestcaseFromHash() ??
+      testcases.find(tc => tc.name === 'scenario/formatting')?.name ??
+      testcases[0]?.name ??
+      '',
   );
   const [oldMarkdown, setOldMarkdown] = useState<string>('');
   const [newMarkdown, setNewMarkdown] = useState<string>('');
@@ -94,7 +106,23 @@ function App(): JSX.Element {
       setNewMarkdown(testcase.newMarkdown);
       updateDiff(testcase.oldMarkdown, testcase.newMarkdown);
     }
+    // 把当前用例写进 hash，刷新后可以直接回到同一个用例
+    if (selectedTestcase && window.location.hash !== `#${selectedTestcase}`) {
+      window.history.replaceState(null, '', `#${selectedTestcase}`);
+    }
   }, [selectedTestcase, updateDiff]);
+
+  // 支持浏览器前进 / 后退切换用例
+  useEffect(() => {
+    const onHashChange = (): void => {
+      const fromHash = readTestcaseFromHash();
+      if (fromHash && fromHash !== selectedTestcase) {
+        setSelectedTestcase(fromHash);
+      }
+    };
+    window.addEventListener('hashchange', onHashChange);
+    return () => window.removeEventListener('hashchange', onHashChange);
+  }, [selectedTestcase]);
 
   const handleOldChange = useCallback((e: ChangeEvent<HTMLTextAreaElement>) => {
     const val = e.target.value;
