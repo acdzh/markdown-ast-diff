@@ -12,15 +12,12 @@ import path from 'path';
 import type { CaseSpec } from '../evaluate/expect';
 
 const CHECKBOX = '任务列表 checked 变化被静默丢弃（见 golden/list/task-toggle）';
-const DEFINITION = '链接/图片引用定义的 url/title 变化被静默丢弃（见 golden/reference/definition-url-change）';
-const MULTI_EDIT = '同一句多处修改、后面还跟着不变的句子时，整段被标为 unchanged，修改丢失（见 golden/inline/multi-edit-one-sentence-cjk）';
 const DEEP_CHILD = '给最深层列表项新增子列表时原列表项文字丢失（见 golden/list/deep-item-add-child）';
 
 const SPECS: Record<string, CaseSpec> = {
   cjk_inline: {
     capability: 'inline',
     description: '约 60 行的中文影评，在三个段落里各替换 2 个字（奇妙→神奇、温暖→治愈、深刻→隽永）',
-    knownIssue: `第一处修改（奇妙→神奇）丢失：${MULTI_EDIT}`,
   },
   code: {
     capability: 'code',
@@ -45,7 +42,6 @@ const SPECS: Record<string, CaseSpec> = {
   heading_rename: {
     capability: 'heading',
     description: '约 80 行的菜谱，改一个二级标题（烹饪步骤→下厨指南），并在一个长句里把“热水”改成“开水”（两处）',
-    knownIssue: `“热水→开水”的修改丢失：${MULTI_EDIT}`,
   },
   headings: {
     capability: 'heading',
@@ -54,17 +50,14 @@ const SPECS: Record<string, CaseSpec> = {
   large_doc: {
     capability: 'perf',
     description: '约 500 行文档只改 3 处：标题版本号、一个段落里的两个数字、一个列表项里插入一句',
-    knownIssue: `段落里两个数字的修改（1700→1800、37→39）丢失：${MULTI_EDIT}`,
   },
   links: {
     capability: 'inline',
     description: '链接文字/url/title、引用式链接与定义、图片 alt/url 同时修改，并新增链接和段落',
-    knownIssue: DEFINITION,
   },
   lists: {
     capability: 'list',
     description: '无序/有序/任务列表的增删改：插入项、子列表插项、改项、勾选状态变化',
-    knownIssue: CHECKBOX,
   },
   mixed_content: {
     capability: 'mixed',
@@ -83,7 +76,6 @@ const SPECS: Record<string, CaseSpec> = {
   paragraph_word_edit: {
     capability: 'inline',
     description: '约 100 行的观察笔记，只在一句里改了两处（两罐→三罐、清水→羊奶）',
-    knownIssue: `两处修改全部丢失，输出与新文档完全相同：${MULTI_EDIT}`,
   },
   similar_paragraphs: {
     capability: 'block',
