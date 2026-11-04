@@ -2062,44 +2062,41 @@
               "data": {}
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "负责人",
-                      "position": {
-                        "start": {
-                          "line": 81,
-                          "column": 19,
-                          "offset": 910
-                        },
-                        "end": {
-                          "line": 81,
-                          "column": 22,
-                          "offset": 913
-                        }
-                      },
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "负责人",
                   "position": {
                     "start": {
                       "line": 81,
-                      "column": 17,
-                      "offset": 908
+                      "column": 19,
+                      "offset": 910
                     },
                     "end": {
                       "line": 81,
-                      "column": 24,
-                      "offset": 915
+                      "column": 22,
+                      "offset": 913
                     }
                   },
                   "data": {}
                 }
-              ]
+              ],
+              "position": {
+                "start": {
+                  "line": 81,
+                  "column": 17,
+                  "offset": 908
+                },
+                "end": {
+                  "line": 81,
+                  "column": 24,
+                  "offset": 915
+                }
+              },
+              "data": {
+                "diff": "ins"
+              }
             }
           ],
           "position": {
@@ -2114,7 +2111,13 @@
               "offset": 915
             }
           },
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -2189,44 +2192,41 @@
               "data": {}
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "张三",
-                      "position": {
-                        "start": {
-                          "line": 83,
-                          "column": 20,
-                          "offset": 965
-                        },
-                        "end": {
-                          "line": 83,
-                          "column": 22,
-                          "offset": 967
-                        }
-                      },
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "张三",
                   "position": {
                     "start": {
                       "line": 83,
-                      "column": 18,
-                      "offset": 963
+                      "column": 20,
+                      "offset": 965
                     },
                     "end": {
                       "line": 83,
-                      "column": 24,
-                      "offset": 969
+                      "column": 22,
+                      "offset": 967
                     }
                   },
                   "data": {}
                 }
-              ]
+              ],
+              "position": {
+                "start": {
+                  "line": 83,
+                  "column": 18,
+                  "offset": 963
+                },
+                "end": {
+                  "line": 83,
+                  "column": 24,
+                  "offset": 969
+                }
+              },
+              "data": {
+                "diff": "ins"
+              }
             }
           ],
           "position": {
@@ -2241,7 +2241,13 @@
               "offset": 969
             }
           },
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -2331,44 +2337,41 @@
               "data": {}
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "李四",
-                      "position": {
-                        "start": {
-                          "line": 84,
-                          "column": 20,
-                          "offset": 989
-                        },
-                        "end": {
-                          "line": 84,
-                          "column": 22,
-                          "offset": 991
-                        }
-                      },
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "李四",
                   "position": {
                     "start": {
                       "line": 84,
-                      "column": 18,
-                      "offset": 987
+                      "column": 20,
+                      "offset": 989
                     },
                     "end": {
                       "line": 84,
-                      "column": 24,
-                      "offset": 993
+                      "column": 22,
+                      "offset": 991
                     }
                   },
                   "data": {}
                 }
-              ]
+              ],
+              "position": {
+                "start": {
+                  "line": 84,
+                  "column": 18,
+                  "offset": 987
+                },
+                "end": {
+                  "line": 84,
+                  "column": 24,
+                  "offset": 993
+                }
+              },
+              "data": {
+                "diff": "ins"
+              }
             }
           ],
           "position": {
@@ -2383,7 +2386,13 @@
               "offset": 993
             }
           },
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -2508,44 +2517,41 @@
               "data": {}
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "王五",
-                      "position": {
-                        "start": {
-                          "line": 85,
-                          "column": 19,
-                          "offset": 1012
-                        },
-                        "end": {
-                          "line": 85,
-                          "column": 21,
-                          "offset": 1014
-                        }
-                      },
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "王五",
                   "position": {
                     "start": {
                       "line": 85,
-                      "column": 17,
-                      "offset": 1010
+                      "column": 19,
+                      "offset": 1012
                     },
                     "end": {
                       "line": 85,
-                      "column": 23,
-                      "offset": 1016
+                      "column": 21,
+                      "offset": 1014
                     }
                   },
                   "data": {}
                 }
-              ]
+              ],
+              "position": {
+                "start": {
+                  "line": 85,
+                  "column": 17,
+                  "offset": 1010
+                },
+                "end": {
+                  "line": 85,
+                  "column": 23,
+                  "offset": 1016
+                }
+              },
+              "data": {
+                "diff": "ins"
+              }
             }
           ],
           "position": {
@@ -2560,150 +2566,33 @@
               "offset": 1016
             }
           },
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null,
+            null
+          ]
         },
         {
-          "type": "ins",
+          "type": "tableRow",
           "children": [
             {
-              "type": "tableRow",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "功能 C",
-                      "position": {
-                        "start": {
-                          "line": 86,
-                          "column": 3,
-                          "offset": 1019
-                        },
-                        "end": {
-                          "line": 86,
-                          "column": 7,
-                          "offset": 1023
-                        }
-                      },
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "功能 C",
                   "position": {
                     "start": {
                       "line": 86,
-                      "column": 1,
-                      "offset": 1017
+                      "column": 3,
+                      "offset": 1019
                     },
                     "end": {
                       "line": 86,
-                      "column": 8,
-                      "offset": 1024
-                    }
-                  },
-                  "data": {}
-                },
-                {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "进行中",
-                      "position": {
-                        "start": {
-                          "line": 86,
-                          "column": 10,
-                          "offset": 1026
-                        },
-                        "end": {
-                          "line": 86,
-                          "column": 13,
-                          "offset": 1029
-                        }
-                      },
-                      "data": {}
-                    }
-                  ],
-                  "position": {
-                    "start": {
-                      "line": 86,
-                      "column": 8,
-                      "offset": 1024
-                    },
-                    "end": {
-                      "line": 86,
-                      "column": 14,
-                      "offset": 1030
-                    }
-                  },
-                  "data": {}
-                },
-                {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "低",
-                      "position": {
-                        "start": {
-                          "line": 86,
-                          "column": 16,
-                          "offset": 1032
-                        },
-                        "end": {
-                          "line": 86,
-                          "column": 17,
-                          "offset": 1033
-                        }
-                      },
-                      "data": {}
-                    }
-                  ],
-                  "position": {
-                    "start": {
-                      "line": 86,
-                      "column": 14,
-                      "offset": 1030
-                    },
-                    "end": {
-                      "line": 86,
-                      "column": 18,
-                      "offset": 1034
-                    }
-                  },
-                  "data": {}
-                },
-                {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "赵六",
-                      "position": {
-                        "start": {
-                          "line": 86,
-                          "column": 20,
-                          "offset": 1036
-                        },
-                        "end": {
-                          "line": 86,
-                          "column": 22,
-                          "offset": 1038
-                        }
-                      },
-                      "data": {}
-                    }
-                  ],
-                  "position": {
-                    "start": {
-                      "line": 86,
-                      "column": 18,
-                      "offset": 1034
-                    },
-                    "end": {
-                      "line": 86,
-                      "column": 24,
-                      "offset": 1040
+                      "column": 7,
+                      "offset": 1023
                     }
                   },
                   "data": {}
@@ -2717,12 +2606,138 @@
                 },
                 "end": {
                   "line": 86,
+                  "column": 8,
+                  "offset": 1024
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "进行中",
+                  "position": {
+                    "start": {
+                      "line": 86,
+                      "column": 10,
+                      "offset": 1026
+                    },
+                    "end": {
+                      "line": 86,
+                      "column": 13,
+                      "offset": 1029
+                    }
+                  },
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 86,
+                  "column": 8,
+                  "offset": 1024
+                },
+                "end": {
+                  "line": 86,
+                  "column": 14,
+                  "offset": 1030
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "低",
+                  "position": {
+                    "start": {
+                      "line": 86,
+                      "column": 16,
+                      "offset": 1032
+                    },
+                    "end": {
+                      "line": 86,
+                      "column": 17,
+                      "offset": 1033
+                    }
+                  },
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 86,
+                  "column": 14,
+                  "offset": 1030
+                },
+                "end": {
+                  "line": 86,
+                  "column": 18,
+                  "offset": 1034
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "赵六",
+                  "position": {
+                    "start": {
+                      "line": 86,
+                      "column": 20,
+                      "offset": 1036
+                    },
+                    "end": {
+                      "line": 86,
+                      "column": 22,
+                      "offset": 1038
+                    }
+                  },
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 86,
+                  "column": 18,
+                  "offset": 1034
+                },
+                "end": {
+                  "line": 86,
                   "column": 24,
                   "offset": 1040
                 }
               },
               "data": {}
             }
+          ],
+          "position": {
+            "start": {
+              "line": 86,
+              "column": 1,
+              "offset": 1017
+            },
+            "end": {
+              "line": 86,
+              "column": 24,
+              "offset": 1040
+            }
+          },
+          "data": {
+            "diff": "ins"
+          },
+          "align": [
+            null,
+            null,
+            null,
+            null
           ]
         }
       ],

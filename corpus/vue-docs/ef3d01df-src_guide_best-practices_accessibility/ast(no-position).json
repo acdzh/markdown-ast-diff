@@ -487,7 +487,12 @@
           ],
           "data": {
             "diffUnchanged": true
-          }
+          },
+          "align": [
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -528,7 +533,12 @@
           ],
           "data": {
             "diffUnchanged": true
-          }
+          },
+          "align": [
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -569,7 +579,12 @@
           ],
           "data": {
             "diffUnchanged": true
-          }
+          },
+          "align": [
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -610,7 +625,12 @@
           ],
           "data": {
             "diffUnchanged": true
-          }
+          },
+          "align": [
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -651,7 +671,12 @@
           ],
           "data": {
             "diffUnchanged": true
-          }
+          },
+          "align": [
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -692,7 +717,12 @@
           ],
           "data": {
             "diffUnchanged": true
-          }
+          },
+          "align": [
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -733,7 +763,12 @@
           ],
           "data": {
             "diffUnchanged": true
-          }
+          },
+          "align": [
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -774,7 +809,12 @@
           ],
           "data": {
             "diffUnchanged": true
-          }
+          },
+          "align": [
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -815,7 +855,12 @@
           ],
           "data": {
             "diffUnchanged": true
-          }
+          },
+          "align": [
+            null,
+            null,
+            null
+          ]
         }
       ],
       "data": {

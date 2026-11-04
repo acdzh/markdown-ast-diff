@@ -36,7 +36,11 @@
           ],
           "data": {
             "diffUnchanged": true
-          }
+          },
+          "align": [
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -66,39 +70,44 @@
           ],
           "data": {
             "diffUnchanged": true
-          }
+          },
+          "align": [
+            null,
+            null
+          ]
         },
         {
-          "type": "del",
+          "type": "tableRow",
           "children": [
             {
-              "type": "tableRow",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "保温箱",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "保温箱",
                   "data": {}
-                },
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "1",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "1",
                   "data": {}
                 }
               ],
               "data": {}
             }
+          ],
+          "data": {
+            "diff": "del"
+          },
+          "align": [
+            null,
+            null
           ]
         },
         {
@@ -129,7 +138,11 @@
           ],
           "data": {
             "diffUnchanged": true
-          }
+          },
+          "align": [
+            null,
+            null
+          ]
         }
       ],
       "data": {}

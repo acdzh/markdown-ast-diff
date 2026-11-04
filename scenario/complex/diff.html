@@ -117,7 +117,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;p
 <th>功能</th>
 <th>状态</th>
 <th>优先级</th>
-<th><td>负责人</td></th>
+<th data-diff="ins">负责人</th>
 </tr>
 </thead>
 <tbody>
@@ -125,26 +125,26 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;p
 <td>功能 A</td>
 <td>已完成</td>
 <td>高</td>
-<td><td>张三</td></td>
+<td data-diff="ins">张三</td>
 </tr>
 <tr>
 <td>功能 B</td>
 <td><del class="diff-inline">进行中</del><ins class="diff-inline">已完成</ins></td>
 <td>中</td>
-<td><td>李四</td></td>
+<td data-diff="ins">李四</td>
 </tr>
 <tr>
 <td>功能 <del class="diff-inline">C</del><ins class="diff-inline">D</ins></td>
 <td><del class="diff-inline">计划中</del><ins class="diff-inline">新增</ins></td>
 <td><del class="diff-inline">低</del><ins class="diff-inline">高</ins></td>
-<td><td>王五</td></td>
+<td data-diff="ins">王五</td>
 </tr>
-<ins class="diff-block"><tr>
-<th>功能 C</th>
-<th>进行中</th>
-<th>低</th>
-<th>赵六</th>
-</tr></ins>
+<tr data-diff="ins">
+<td>功能 C</td>
+<td>进行中</td>
+<td>低</td>
+<td>赵六</td>
+</tr>
 </tbody>
 </table>
 <h2>6. 引用</h2>

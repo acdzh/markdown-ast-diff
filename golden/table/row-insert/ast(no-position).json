@@ -36,7 +36,11 @@
           ],
           "data": {
             "diffUnchanged": true
-          }
+          },
+          "align": [
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -66,39 +70,44 @@
           ],
           "data": {
             "diffUnchanged": true
-          }
+          },
+          "align": [
+            null,
+            null
+          ]
         },
         {
-          "type": "ins",
+          "type": "tableRow",
           "children": [
             {
-              "type": "tableRow",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "天幕",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "天幕",
                   "data": {}
-                },
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "1",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "1",
                   "data": {}
                 }
               ],
               "data": {}
             }
+          ],
+          "data": {
+            "diff": "ins"
+          },
+          "align": [
+            null,
+            null
           ]
         },
         {
@@ -129,7 +138,11 @@
           ],
           "data": {
             "diffUnchanged": true
-          }
+          },
+          "align": [
+            null,
+            null
+          ]
         }
       ],
       "data": {}

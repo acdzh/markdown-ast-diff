@@ -958,23 +958,26 @@
               "data": {}
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "负责人",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "负责人",
                   "data": {}
                 }
-              ]
+              ],
+              "data": {
+                "diff": "ins"
+              }
             }
           ],
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -1013,23 +1016,26 @@
               "data": {}
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "张三",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "张三",
                   "data": {}
                 }
-              ]
+              ],
+              "data": {
+                "diff": "ins"
+              }
             }
           ],
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -1083,23 +1089,26 @@
               "data": {}
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "李四",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "李四",
                   "data": {}
                 }
-              ]
+              ],
+              "data": {
+                "diff": "ins"
+              }
             }
           ],
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -1188,77 +1197,83 @@
               "data": {}
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "王五",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "王五",
                   "data": {}
                 }
-              ]
+              ],
+              "data": {
+                "diff": "ins"
+              }
             }
           ],
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null,
+            null
+          ]
         },
         {
-          "type": "ins",
+          "type": "tableRow",
           "children": [
             {
-              "type": "tableRow",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "功能 C",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "功能 C",
                   "data": {}
-                },
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "进行中",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "进行中",
                   "data": {}
-                },
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "低",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "低",
                   "data": {}
-                },
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "赵六",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "赵六",
                   "data": {}
                 }
               ],
               "data": {}
             }
+          ],
+          "data": {
+            "diff": "ins"
+          },
+          "align": [
+            null,
+            null,
+            null,
+            null
           ]
         }
       ],

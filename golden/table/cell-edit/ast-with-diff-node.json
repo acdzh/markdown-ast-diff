@@ -96,7 +96,12 @@
           },
           "data": {
             "diffUnchanged": true
-          }
+          },
+          "align": [
+            null,
+            "right",
+            "right"
+          ]
         },
         {
           "type": "tableRow",
@@ -185,7 +190,12 @@
           },
           "data": {
             "diffUnchanged": true
-          }
+          },
+          "align": [
+            null,
+            "right",
+            "right"
+          ]
         },
         {
           "type": "tableRow",
@@ -287,7 +297,12 @@
               "offset": 78
             }
           },
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            "right",
+            "right"
+          ]
         },
         {
           "type": "tableRow",
@@ -376,7 +391,12 @@
           },
           "data": {
             "diffUnchanged": true
-          }
+          },
+          "align": [
+            null,
+            "right",
+            "right"
+          ]
         }
       ],
       "position": {

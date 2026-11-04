@@ -35,23 +35,25 @@
               "data": {}
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "部门",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "部门",
                   "data": {}
                 }
-              ]
+              ],
+              "data": {
+                "diff": "ins"
+              }
             }
           ],
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -79,23 +81,25 @@
               "data": {}
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "研发",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "研发",
                   "data": {}
                 }
-              ]
+              ],
+              "data": {
+                "diff": "ins"
+              }
             }
           ],
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -123,23 +127,25 @@
               "data": {}
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "设计",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "设计",
                   "data": {}
                 }
-              ]
+              ],
+              "data": {
+                "diff": "ins"
+              }
             }
           ],
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null
+          ]
         }
       ],
       "data": {}

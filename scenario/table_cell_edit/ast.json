@@ -285,7 +285,14 @@
           },
           "data": {
             "diffUnchanged": true
-          }
+          },
+          "align": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -420,7 +427,14 @@
           },
           "data": {
             "diffUnchanged": true
-          }
+          },
+          "align": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -568,7 +582,14 @@
               "offset": 494
             }
           },
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -721,7 +742,14 @@
               "offset": 528
             }
           },
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -869,7 +897,14 @@
               "offset": 562
             }
           },
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -1004,7 +1039,14 @@
           },
           "data": {
             "diffUnchanged": true
-          }
+          },
+          "align": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -1139,7 +1181,14 @@
           },
           "data": {
             "diffUnchanged": true
-          }
+          },
+          "align": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -1274,7 +1323,14 @@
           },
           "data": {
             "diffUnchanged": true
-          }
+          },
+          "align": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -1409,7 +1465,14 @@
           },
           "data": {
             "diffUnchanged": true
-          }
+          },
+          "align": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
         }
       ],
       "position": {
@@ -1708,7 +1771,14 @@
           },
           "data": {
             "diffUnchanged": true
-          }
+          },
+          "align": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -1843,7 +1913,14 @@
           },
           "data": {
             "diffUnchanged": true
-          }
+          },
+          "align": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -1978,7 +2055,14 @@
           },
           "data": {
             "diffUnchanged": true
-          }
+          },
+          "align": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -2113,7 +2197,14 @@
           },
           "data": {
             "diffUnchanged": true
-          }
+          },
+          "align": [
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
         }
       ],
       "position": {

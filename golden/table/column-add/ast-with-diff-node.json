@@ -59,44 +59,41 @@
               "data": {}
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "部门",
-                      "position": {
-                        "start": {
-                          "line": 1,
-                          "column": 13,
-                          "offset": 12
-                        },
-                        "end": {
-                          "line": 1,
-                          "column": 15,
-                          "offset": 14
-                        }
-                      },
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "部门",
                   "position": {
                     "start": {
                       "line": 1,
-                      "column": 11,
-                      "offset": 10
+                      "column": 13,
+                      "offset": 12
                     },
                     "end": {
                       "line": 1,
-                      "column": 17,
-                      "offset": 16
+                      "column": 15,
+                      "offset": 14
                     }
                   },
                   "data": {}
                 }
-              ]
+              ],
+              "position": {
+                "start": {
+                  "line": 1,
+                  "column": 11,
+                  "offset": 10
+                },
+                "end": {
+                  "line": 1,
+                  "column": 17,
+                  "offset": 16
+                }
+              },
+              "data": {
+                "diff": "ins"
+              }
             }
           ],
           "position": {
@@ -111,7 +108,12 @@
               "offset": 16
             }
           },
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -163,44 +165,41 @@
               "data": {}
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "研发",
-                      "position": {
-                        "start": {
-                          "line": 3,
-                          "column": 13,
-                          "offset": 49
-                        },
-                        "end": {
-                          "line": 3,
-                          "column": 15,
-                          "offset": 51
-                        }
-                      },
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "研发",
                   "position": {
                     "start": {
                       "line": 3,
-                      "column": 11,
-                      "offset": 47
+                      "column": 13,
+                      "offset": 49
                     },
                     "end": {
                       "line": 3,
-                      "column": 17,
-                      "offset": 53
+                      "column": 15,
+                      "offset": 51
                     }
                   },
                   "data": {}
                 }
-              ]
+              ],
+              "position": {
+                "start": {
+                  "line": 3,
+                  "column": 11,
+                  "offset": 47
+                },
+                "end": {
+                  "line": 3,
+                  "column": 17,
+                  "offset": 53
+                }
+              },
+              "data": {
+                "diff": "ins"
+              }
             }
           ],
           "position": {
@@ -215,7 +214,12 @@
               "offset": 53
             }
           },
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -267,44 +271,41 @@
               "data": {}
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "设计",
-                      "position": {
-                        "start": {
-                          "line": 4,
-                          "column": 13,
-                          "offset": 66
-                        },
-                        "end": {
-                          "line": 4,
-                          "column": 15,
-                          "offset": 68
-                        }
-                      },
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "设计",
                   "position": {
                     "start": {
                       "line": 4,
-                      "column": 11,
-                      "offset": 64
+                      "column": 13,
+                      "offset": 66
                     },
                     "end": {
                       "line": 4,
-                      "column": 17,
-                      "offset": 70
+                      "column": 15,
+                      "offset": 68
                     }
                   },
                   "data": {}
                 }
-              ]
+              ],
+              "position": {
+                "start": {
+                  "line": 4,
+                  "column": 11,
+                  "offset": 64
+                },
+                "end": {
+                  "line": 4,
+                  "column": 17,
+                  "offset": 70
+                }
+              },
+              "data": {
+                "diff": "ins"
+              }
             }
           ],
           "position": {
@@ -319,7 +320,12 @@
               "offset": 70
             }
           },
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null
+          ]
         }
       ],
       "position": {

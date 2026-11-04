@@ -969,39 +969,47 @@
               "data": {}
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "积分",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "积分",
                   "data": {}
                 }
-              ]
+              ],
+              "data": {
+                "diff": "ins"
+              }
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "等级",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "等级",
                   "data": {}
                 }
-              ]
+              ],
+              "data": {
+                "diff": "ins"
+              }
             }
           ],
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -1150,39 +1158,47 @@
               "data": {}
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "2500",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "2500",
                   "data": {}
                 }
-              ]
+              ],
+              "data": {
+                "diff": "ins"
+              }
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "黄金",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "黄金",
                   "data": {}
                 }
-              ]
+              ],
+              "data": {
+                "diff": "ins"
+              }
             }
           ],
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -1306,39 +1322,47 @@
               "data": {}
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "1800",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "1800",
                   "data": {}
                 }
-              ]
+              ],
+              "data": {
+                "diff": "ins"
+              }
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "白银",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "白银",
                   "data": {}
                 }
-              ]
+              ],
+              "data": {
+                "diff": "ins"
+              }
             }
           ],
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -1462,39 +1486,47 @@
               "data": {}
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "3200",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "3200",
                   "data": {}
                 }
-              ]
+              ],
+              "data": {
+                "diff": "ins"
+              }
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "钻石",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "钻石",
                   "data": {}
                 }
-              ]
+              ],
+              "data": {
+                "diff": "ins"
+              }
             }
           ],
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -1628,39 +1660,47 @@
               "data": {}
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "2100",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "2100",
                   "data": {}
                 }
-              ]
+              ],
+              "data": {
+                "diff": "ins"
+              }
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "黄金",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "黄金",
                   "data": {}
                 }
-              ]
+              ],
+              "data": {
+                "diff": "ins"
+              }
             }
           ],
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -1794,39 +1834,47 @@
               "data": {}
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "1950",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "1950",
                   "data": {}
                 }
-              ]
+              ],
+              "data": {
+                "diff": "ins"
+              }
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "白银",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "白银",
                   "data": {}
                 }
-              ]
+              ],
+              "data": {
+                "diff": "ins"
+              }
             }
           ],
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -1975,39 +2023,47 @@
               "data": {}
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "2300",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "2300",
                   "data": {}
                 }
-              ]
+              ],
+              "data": {
+                "diff": "ins"
+              }
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "黄金",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "黄金",
                   "data": {}
                 }
-              ]
+              ],
+              "data": {
+                "diff": "ins"
+              }
             }
           ],
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -2131,39 +2187,47 @@
               "data": {}
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "1600",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "1600",
                   "data": {}
                 }
-              ]
+              ],
+              "data": {
+                "diff": "ins"
+              }
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "白银",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "白银",
                   "data": {}
                 }
-              ]
+              ],
+              "data": {
+                "diff": "ins"
+              }
             }
           ],
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -2302,39 +2366,47 @@
               "data": {}
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "1400",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "1400",
                   "data": {}
                 }
-              ]
+              ],
+              "data": {
+                "diff": "ins"
+              }
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "青铜",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "青铜",
                   "data": {}
                 }
-              ]
+              ],
+              "data": {
+                "diff": "ins"
+              }
             }
           ],
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -2468,39 +2540,47 @@
               "data": {}
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "2700",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "2700",
                   "data": {}
                 }
-              ]
+              ],
+              "data": {
+                "diff": "ins"
+              }
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "黄金",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "黄金",
                   "data": {}
                 }
-              ]
+              ],
+              "data": {
+                "diff": "ins"
+              }
             }
           ],
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -2639,332 +2719,128 @@
               "data": {}
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "2200",
-                      "data": {}
-                    }
-                  ],
-                  "data": {}
-                }
-              ]
-            },
-            {
-              "type": "ins",
-              "children": [
-                {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "黄金",
-                      "data": {}
-                    }
-                  ],
-                  "data": {}
-                }
-              ]
-            }
-          ],
-          "data": {}
-        },
-        {
-          "type": "ins",
-          "children": [
-            {
-              "type": "tableRow",
-              "children": [
-                {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "011",
-                      "data": {}
-                    }
-                  ],
-                  "data": {}
-                },
-                {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "刘十三",
-                      "data": {}
-                    }
-                  ],
-                  "data": {}
-                },
-                {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "26",
-                      "data": {}
-                    }
-                  ],
-                  "data": {}
-                },
-                {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "初级开发工程师",
-                      "data": {}
-                    }
-                  ],
-                  "data": {}
-                },
-                {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "天津市和平区南京路",
-                      "data": {}
-                    }
-                  ],
-                  "data": {}
-                },
-                {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "13900139001",
-                      "data": {}
-                    }
-                  ],
-                  "data": {}
-                },
-                {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "link",
-                      "title": null,
-                      "url": "mailto:liushisan@example.com",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "liushisan@example.com",
-                          "data": {}
-                        }
-                      ],
-                      "data": {}
-                    }
-                  ],
-                  "data": {}
-                },
-                {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "2021-01-15",
-                      "data": {}
-                    }
-                  ],
-                  "data": {}
-                },
-                {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "2023-05-16",
-                      "data": {}
-                    }
-                  ],
-                  "data": {}
-                },
-                {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "活跃",
-                      "data": {}
-                    }
-                  ],
-                  "data": {}
-                },
-                {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "800",
-                      "data": {}
-                    }
-                  ],
-                  "data": {}
-                },
-                {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "青铜",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "2200",
                   "data": {}
                 }
               ],
-              "data": {}
+              "data": {
+                "diff": "ins"
+              }
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "黄金",
+                  "data": {}
+                }
+              ],
+              "data": {
+                "diff": "ins"
+              }
             }
+          ],
+          "data": {},
+          "align": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
           ]
         },
         {
-          "type": "ins",
+          "type": "tableRow",
           "children": [
             {
-              "type": "tableRow",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
+                  "type": "text",
+                  "value": "011",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "刘十三",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "26",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "初级开发工程师",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "天津市和平区南京路",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "13900139001",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "mailto:liushisan@example.com",
                   "children": [
                     {
                       "type": "text",
-                      "value": "012",
-                      "data": {}
-                    }
-                  ],
-                  "data": {}
-                },
-                {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "陈十四",
-                      "data": {}
-                    }
-                  ],
-                  "data": {}
-                },
-                {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "38",
-                      "data": {}
-                    }
-                  ],
-                  "data": {}
-                },
-                {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "架构师",
-                      "data": {}
-                    }
-                  ],
-                  "data": {}
-                },
-                {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "苏州市工业园区星湖街",
-                      "data": {}
-                    }
-                  ],
-                  "data": {}
-                },
-                {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "13800138001",
-                      "data": {}
-                    }
-                  ],
-                  "data": {}
-                },
-                {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "link",
-                      "title": null,
-                      "url": "mailto:chenshisi@example.com",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "chenshisi@example.com",
-                          "data": {}
-                        }
-                      ],
-                      "data": {}
-                    }
-                  ],
-                  "data": {}
-                },
-                {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "2021-02-20",
-                      "data": {}
-                    }
-                  ],
-                  "data": {}
-                },
-                {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "2023-05-17",
-                      "data": {}
-                    }
-                  ],
-                  "data": {}
-                },
-                {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "活跃",
-                      "data": {}
-                    }
-                  ],
-                  "data": {}
-                },
-                {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "3500",
-                      "data": {}
-                    }
-                  ],
-                  "data": {}
-                },
-                {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "钻石",
+                      "value": "liushisan@example.com",
                       "data": {}
                     }
                   ],
@@ -2972,7 +2848,241 @@
                 }
               ],
               "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "2021-01-15",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "2023-05-16",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "活跃",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "800",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "青铜",
+                  "data": {}
+                }
+              ],
+              "data": {}
             }
+          ],
+          "data": {
+            "diff": "ins"
+          },
+          "align": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "012",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "陈十四",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "38",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "架构师",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "苏州市工业园区星湖街",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "13800138001",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "link",
+                  "title": null,
+                  "url": "mailto:chenshisi@example.com",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "chenshisi@example.com",
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "2021-02-20",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "2023-05-17",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "活跃",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "3500",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "钻石",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {
+            "diff": "ins"
+          },
+          "align": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
           ]
         }
       ],

@@ -36,39 +36,44 @@
           ],
           "data": {
             "diffUnchanged": true
-          }
+          },
+          "align": [
+            null,
+            null
+          ]
         },
         {
-          "type": "del",
+          "type": "tableRow",
           "children": [
             {
-              "type": "tableRow",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "A",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "A",
                   "data": {}
-                },
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "张三",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "张三",
                   "data": {}
                 }
               ],
               "data": {}
             }
+          ],
+          "data": {
+            "diff": "del"
+          },
+          "align": [
+            null,
+            null
           ]
         },
         {
@@ -99,39 +104,44 @@
           ],
           "data": {
             "diffUnchanged": true
-          }
+          },
+          "align": [
+            null,
+            null
+          ]
         },
         {
-          "type": "ins",
+          "type": "tableRow",
           "children": [
             {
-              "type": "tableRow",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "A",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "A",
                   "data": {}
-                },
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "张三",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "张三",
                   "data": {}
                 }
               ],
               "data": {}
             }
+          ],
+          "data": {
+            "diff": "ins"
+          },
+          "align": [
+            null,
+            null
           ]
         },
         {
@@ -162,7 +172,11 @@
           ],
           "data": {
             "diffUnchanged": true
-          }
+          },
+          "align": [
+            null,
+            null
+          ]
         }
       ],
       "data": {}

@@ -281,23 +281,26 @@
                       "data": {}
                     },
                     {
-                      "type": "ins",
+                      "type": "tableCell",
                       "children": [
                         {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "新增列4",
-                              "data": {}
-                            }
-                          ],
+                          "type": "text",
+                          "value": "新增列4",
                           "data": {}
                         }
-                      ]
+                      ],
+                      "data": {
+                        "diff": "ins"
+                      }
                     }
                   ],
-                  "data": {}
+                  "data": {},
+                  "align": [
+                    null,
+                    null,
+                    null,
+                    null
+                  ]
                 },
                 {
                   "type": "tableRow",
@@ -336,23 +339,26 @@
                       "data": {}
                     },
                     {
-                      "type": "ins",
+                      "type": "tableCell",
                       "children": [
                         {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "新数据A",
-                              "data": {}
-                            }
-                          ],
+                          "type": "text",
+                          "value": "新数据A",
                           "data": {}
                         }
-                      ]
+                      ],
+                      "data": {
+                        "diff": "ins"
+                      }
                     }
                   ],
-                  "data": {}
+                  "data": {},
+                  "align": [
+                    null,
+                    null,
+                    null,
+                    null
+                  ]
                 },
                 {
                   "type": "tableRow",
@@ -391,77 +397,83 @@
                       "data": {}
                     },
                     {
-                      "type": "ins",
+                      "type": "tableCell",
                       "children": [
                         {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "新数据B",
-                              "data": {}
-                            }
-                          ],
+                          "type": "text",
+                          "value": "新数据B",
                           "data": {}
                         }
-                      ]
+                      ],
+                      "data": {
+                        "diff": "ins"
+                      }
                     }
                   ],
-                  "data": {}
+                  "data": {},
+                  "align": [
+                    null,
+                    null,
+                    null,
+                    null
+                  ]
                 },
                 {
-                  "type": "ins",
+                  "type": "tableRow",
                   "children": [
                     {
-                      "type": "tableRow",
+                      "type": "tableCell",
                       "children": [
                         {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "新行数据1",
-                              "data": {}
-                            }
-                          ],
+                          "type": "text",
+                          "value": "新行数据1",
                           "data": {}
-                        },
+                        }
+                      ],
+                      "data": {}
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
                         {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "新行数据2",
-                              "data": {}
-                            }
-                          ],
+                          "type": "text",
+                          "value": "新行数据2",
                           "data": {}
-                        },
+                        }
+                      ],
+                      "data": {}
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
                         {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "新行数据3",
-                              "data": {}
-                            }
-                          ],
+                          "type": "text",
+                          "value": "新行数据3",
                           "data": {}
-                        },
+                        }
+                      ],
+                      "data": {}
+                    },
+                    {
+                      "type": "tableCell",
+                      "children": [
                         {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "新数据C",
-                              "data": {}
-                            }
-                          ],
+                          "type": "text",
+                          "value": "新数据C",
                           "data": {}
                         }
                       ],
                       "data": {}
                     }
+                  ],
+                  "data": {
+                    "diff": "ins"
+                  },
+                  "align": [
+                    null,
+                    null,
+                    null,
+                    null
                   ]
                 }
               ],
@@ -1329,23 +1341,26 @@
                   "data": {}
                 },
                 {
-                  "type": "ins",
+                  "type": "tableCell",
                   "children": [
                     {
-                      "type": "tableCell",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "新增列4",
-                          "data": {}
-                        }
-                      ],
+                      "type": "text",
+                      "value": "新增列4",
                       "data": {}
                     }
-                  ]
+                  ],
+                  "data": {
+                    "diff": "ins"
+                  }
                 }
               ],
-              "data": {}
+              "data": {},
+              "align": [
+                null,
+                null,
+                null,
+                null
+              ]
             },
             {
               "type": "tableRow",
@@ -1384,23 +1399,26 @@
                   "data": {}
                 },
                 {
-                  "type": "ins",
+                  "type": "tableCell",
                   "children": [
                     {
-                      "type": "tableCell",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "新数据X",
-                          "data": {}
-                        }
-                      ],
+                      "type": "text",
+                      "value": "新数据X",
                       "data": {}
                     }
-                  ]
+                  ],
+                  "data": {
+                    "diff": "ins"
+                  }
                 }
               ],
-              "data": {}
+              "data": {},
+              "align": [
+                null,
+                null,
+                null,
+                null
+              ]
             },
             {
               "type": "tableRow",
@@ -1439,77 +1457,83 @@
                   "data": {}
                 },
                 {
-                  "type": "ins",
+                  "type": "tableCell",
                   "children": [
                     {
-                      "type": "tableCell",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "新数据Y",
-                          "data": {}
-                        }
-                      ],
+                      "type": "text",
+                      "value": "新数据Y",
                       "data": {}
                     }
-                  ]
+                  ],
+                  "data": {
+                    "diff": "ins"
+                  }
                 }
               ],
-              "data": {}
+              "data": {},
+              "align": [
+                null,
+                null,
+                null,
+                null
+              ]
             },
             {
-              "type": "ins",
+              "type": "tableRow",
               "children": [
                 {
-                  "type": "tableRow",
+                  "type": "tableCell",
                   "children": [
                     {
-                      "type": "tableCell",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "新行数据A",
-                          "data": {}
-                        }
-                      ],
+                      "type": "text",
+                      "value": "新行数据A",
                       "data": {}
-                    },
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
                     {
-                      "type": "tableCell",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "新行数据B",
-                          "data": {}
-                        }
-                      ],
+                      "type": "text",
+                      "value": "新行数据B",
                       "data": {}
-                    },
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
                     {
-                      "type": "tableCell",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "新行数据C",
-                          "data": {}
-                        }
-                      ],
+                      "type": "text",
+                      "value": "新行数据C",
                       "data": {}
-                    },
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
                     {
-                      "type": "tableCell",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "新数据Z",
-                          "data": {}
-                        }
-                      ],
+                      "type": "text",
+                      "value": "新数据Z",
                       "data": {}
                     }
                   ],
                   "data": {}
                 }
+              ],
+              "data": {
+                "diff": "ins"
+              },
+              "align": [
+                null,
+                null,
+                null,
+                null
               ]
             }
           ],
@@ -1851,23 +1875,26 @@
               "data": {}
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "新增列",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "新增列",
                   "data": {}
                 }
-              ]
+              ],
+              "data": {
+                "diff": "ins"
+              }
             }
           ],
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -1987,23 +2014,26 @@
               "data": {}
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "新单元格",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "新单元格",
                   "data": {}
                 }
-              ]
+              ],
+              "data": {
+                "diff": "ins"
+              }
             }
           ],
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -2082,23 +2112,26 @@
               "data": {}
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "新单元格",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "新单元格",
                   "data": {}
                 }
-              ]
+              ],
+              "data": {
+                "diff": "ins"
+              }
             }
           ],
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -2242,96 +2275,71 @@
               "data": {}
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "新单元格",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "新单元格",
                   "data": {}
                 }
-              ]
+              ],
+              "data": {
+                "diff": "ins"
+              }
             }
           ],
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null,
+            null
+          ]
         },
         {
-          "type": "ins",
+          "type": "tableRow",
           "children": [
             {
-              "type": "tableRow",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
+                  "type": "text",
+                  "value": "新增行",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "包含",
+                  "data": {}
+                },
+                {
+                  "type": "strong",
                   "children": [
                     {
                       "type": "text",
-                      "value": "新增行",
+                      "value": "格式化",
                       "data": {}
                     }
                   ],
                   "data": {}
                 },
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "包含",
-                      "data": {}
-                    },
-                    {
-                      "type": "strong",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "格式化",
-                          "data": {}
-                        }
-                      ],
-                      "data": {}
-                    },
-                    {
-                      "type": "text",
-                      "value": "的",
-                      "data": {}
-                    },
-                    {
-                      "type": "emphasis",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "文本",
-                          "data": {}
-                        }
-                      ],
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "的",
                   "data": {}
                 },
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "inlineCode",
-                      "value": "const newRow = true;",
-                      "data": {}
-                    }
-                  ],
-                  "data": {}
-                },
-                {
-                  "type": "tableCell",
+                  "type": "emphasis",
                   "children": [
                     {
                       "type": "text",
-                      "value": "新单元格",
+                      "value": "文本",
                       "data": {}
                     }
                   ],
@@ -2339,7 +2347,38 @@
                 }
               ],
               "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "inlineCode",
+                  "value": "const newRow = true;",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "新单元格",
+                  "data": {}
+                }
+              ],
+              "data": {}
             }
+          ],
+          "data": {
+            "diff": "ins"
+          },
+          "align": [
+            null,
+            null,
+            null,
+            null
           ]
         }
       ],
@@ -2403,23 +2442,26 @@
               "data": {}
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "新增列",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "新增列",
                   "data": {}
                 }
-              ]
+              ],
+              "data": {
+                "diff": "ins"
+              }
             }
           ],
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -2572,23 +2614,26 @@
               "data": {}
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "新单元格",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "新单元格",
                   "data": {}
                 }
-              ]
+              ],
+              "data": {
+                "diff": "ins"
+              }
             }
           ],
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -2741,112 +2786,118 @@
               "data": {}
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "新单元格",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "新单元格",
                   "data": {}
                 }
-              ]
+              ],
+              "data": {
+                "diff": "ins"
+              }
             }
           ],
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null,
+            null
+          ]
         },
         {
-          "type": "ins",
+          "type": "tableRow",
           "children": [
             {
-              "type": "tableRow",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "新增类型",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "新增类型",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "html",
+                  "value": "<ul>",
                   "data": {}
                 },
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "html",
-                      "value": "<ul>",
-                      "data": {}
-                    },
-                    {
-                      "type": "html",
-                      "value": "<li>",
-                      "data": {}
-                    },
-                    {
-                      "type": "text",
-                      "value": "新列表项A",
-                      "data": {}
-                    },
-                    {
-                      "type": "html",
-                      "value": "</li>",
-                      "data": {}
-                    },
-                    {
-                      "type": "html",
-                      "value": "<li>",
-                      "data": {}
-                    },
-                    {
-                      "type": "text",
-                      "value": "新列表项B",
-                      "data": {}
-                    },
-                    {
-                      "type": "html",
-                      "value": "</li>",
-                      "data": {}
-                    },
-                    {
-                      "type": "html",
-                      "value": "</ul>",
-                      "data": {}
-                    }
-                  ],
+                  "type": "html",
+                  "value": "<li>",
                   "data": {}
                 },
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "新备注",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "新列表项A",
                   "data": {}
                 },
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "新单元格",
-                      "data": {}
-                    }
-                  ],
+                  "type": "html",
+                  "value": "</li>",
+                  "data": {}
+                },
+                {
+                  "type": "html",
+                  "value": "<li>",
+                  "data": {}
+                },
+                {
+                  "type": "text",
+                  "value": "新列表项B",
+                  "data": {}
+                },
+                {
+                  "type": "html",
+                  "value": "</li>",
+                  "data": {}
+                },
+                {
+                  "type": "html",
+                  "value": "</ul>",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "新备注",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "新单元格",
                   "data": {}
                 }
               ],
               "data": {}
             }
+          ],
+          "data": {
+            "diff": "ins"
+          },
+          "align": [
+            null,
+            null,
+            null,
+            null
           ]
         }
       ],
@@ -3108,23 +3159,25 @@
                                       "data": {}
                                     },
                                     {
-                                      "type": "ins",
+                                      "type": "tableCell",
                                       "children": [
                                         {
-                                          "type": "tableCell",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "value": "新增列3",
-                                              "data": {}
-                                            }
-                                          ],
+                                          "type": "text",
+                                          "value": "新增列3",
                                           "data": {}
                                         }
-                                      ]
+                                      ],
+                                      "data": {
+                                        "diff": "ins"
+                                      }
                                     }
                                   ],
-                                  "data": {}
+                                  "data": {},
+                                  "align": [
+                                    null,
+                                    null,
+                                    null
+                                  ]
                                 },
                                 {
                                   "type": "tableRow",
@@ -3152,66 +3205,70 @@
                                       "data": {}
                                     },
                                     {
-                                      "type": "ins",
+                                      "type": "tableCell",
                                       "children": [
                                         {
-                                          "type": "tableCell",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "value": "新数据X",
-                                              "data": {}
-                                            }
-                                          ],
+                                          "type": "text",
+                                          "value": "新数据X",
                                           "data": {}
                                         }
-                                      ]
+                                      ],
+                                      "data": {
+                                        "diff": "ins"
+                                      }
                                     }
                                   ],
-                                  "data": {}
+                                  "data": {},
+                                  "align": [
+                                    null,
+                                    null,
+                                    null
+                                  ]
                                 },
                                 {
-                                  "type": "ins",
+                                  "type": "tableRow",
                                   "children": [
                                     {
-                                      "type": "tableRow",
+                                      "type": "tableCell",
                                       "children": [
                                         {
-                                          "type": "tableCell",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "value": "新行数据A",
-                                              "data": {}
-                                            }
-                                          ],
+                                          "type": "text",
+                                          "value": "新行数据A",
                                           "data": {}
-                                        },
+                                        }
+                                      ],
+                                      "data": {}
+                                    },
+                                    {
+                                      "type": "tableCell",
+                                      "children": [
                                         {
-                                          "type": "tableCell",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "value": "新行数据B",
-                                              "data": {}
-                                            }
-                                          ],
+                                          "type": "text",
+                                          "value": "新行数据B",
                                           "data": {}
-                                        },
+                                        }
+                                      ],
+                                      "data": {}
+                                    },
+                                    {
+                                      "type": "tableCell",
+                                      "children": [
                                         {
-                                          "type": "tableCell",
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "value": "新数据Y",
-                                              "data": {}
-                                            }
-                                          ],
+                                          "type": "text",
+                                          "value": "新数据Y",
                                           "data": {}
                                         }
                                       ],
                                       "data": {}
                                     }
+                                  ],
+                                  "data": {
+                                    "diff": "ins"
+                                  },
+                                  "align": [
+                                    null,
+                                    null,
+                                    null
                                   ]
                                 }
                               ],
@@ -3474,23 +3531,25 @@
                   "data": {}
                 },
                 {
-                  "type": "ins",
+                  "type": "tableCell",
                   "children": [
                     {
-                      "type": "tableCell",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "新增列3",
-                          "data": {}
-                        }
-                      ],
+                      "type": "text",
+                      "value": "新增列3",
                       "data": {}
                     }
-                  ]
+                  ],
+                  "data": {
+                    "diff": "ins"
+                  }
                 }
               ],
-              "data": {}
+              "data": {},
+              "align": [
+                null,
+                null,
+                null
+              ]
             },
             {
               "type": "tableRow",
@@ -3518,23 +3577,25 @@
                   "data": {}
                 },
                 {
-                  "type": "ins",
+                  "type": "tableCell",
                   "children": [
                     {
-                      "type": "tableCell",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "新数据P",
-                          "data": {}
-                        }
-                      ],
+                      "type": "text",
+                      "value": "新数据P",
                       "data": {}
                     }
-                  ]
+                  ],
+                  "data": {
+                    "diff": "ins"
+                  }
                 }
               ],
-              "data": {}
+              "data": {},
+              "align": [
+                null,
+                null,
+                null
+              ]
             },
             {
               "type": "tableRow",
@@ -3562,66 +3623,70 @@
                   "data": {}
                 },
                 {
-                  "type": "ins",
+                  "type": "tableCell",
                   "children": [
                     {
-                      "type": "tableCell",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "新数据Q",
-                          "data": {}
-                        }
-                      ],
+                      "type": "text",
+                      "value": "新数据Q",
                       "data": {}
                     }
-                  ]
+                  ],
+                  "data": {
+                    "diff": "ins"
+                  }
                 }
               ],
-              "data": {}
+              "data": {},
+              "align": [
+                null,
+                null,
+                null
+              ]
             },
             {
-              "type": "ins",
+              "type": "tableRow",
               "children": [
                 {
-                  "type": "tableRow",
+                  "type": "tableCell",
                   "children": [
                     {
-                      "type": "tableCell",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "新行数据X",
-                          "data": {}
-                        }
-                      ],
+                      "type": "text",
+                      "value": "新行数据X",
                       "data": {}
-                    },
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
                     {
-                      "type": "tableCell",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "新行数据Y",
-                          "data": {}
-                        }
-                      ],
+                      "type": "text",
+                      "value": "新行数据Y",
                       "data": {}
-                    },
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "type": "tableCell",
+                  "children": [
                     {
-                      "type": "tableCell",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "新数据R",
-                          "data": {}
-                        }
-                      ],
+                      "type": "text",
+                      "value": "新数据R",
                       "data": {}
                     }
                   ],
                   "data": {}
                 }
+              ],
+              "data": {
+                "diff": "ins"
+              },
+              "align": [
+                null,
+                null,
+                null
               ]
             }
           ],
@@ -4373,6 +4438,11 @@
                                 }
                               ]
                             }
+                          ],
+                          "align": [
+                            null,
+                            null,
+                            null
                           ]
                         },
                         {
@@ -4405,6 +4475,11 @@
                                 }
                               ]
                             }
+                          ],
+                          "align": [
+                            null,
+                            null,
+                            null
                           ]
                         }
                       ]

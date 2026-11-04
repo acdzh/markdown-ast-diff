@@ -2234,23 +2234,25 @@
               "data": {}
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "新增列",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "新增列",
                   "data": {}
                 }
-              ]
+              ],
+              "data": {
+                "diff": "ins"
+              }
             }
           ],
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -2278,23 +2280,25 @@
               "data": {}
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "新值 1",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "新值 1",
                   "data": {}
                 }
-              ]
+              ],
+              "data": {
+                "diff": "ins"
+              }
             }
           ],
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -2803,23 +2807,25 @@
               "data": {}
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "新值 2",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "新值 2",
                   "data": {}
                 }
-              ]
+              ],
+              "data": {
+                "diff": "ins"
+              }
             }
           ],
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -2857,66 +2863,70 @@
               "data": {}
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "新值 3",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "新值 3",
                   "data": {}
                 }
-              ]
+              ],
+              "data": {
+                "diff": "ins"
+              }
             }
           ],
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null
+          ]
         },
         {
-          "type": "ins",
+          "type": "tableRow",
           "children": [
             {
-              "type": "tableRow",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "新增行",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "新增行",
                   "data": {}
-                },
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "新增内容",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "新增内容",
                   "data": {}
-                },
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "新值 4",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "新值 4",
                   "data": {}
                 }
               ],
               "data": {}
             }
+          ],
+          "data": {
+            "diff": "ins"
+          },
+          "align": [
+            null,
+            null,
+            null
           ]
         }
       ],

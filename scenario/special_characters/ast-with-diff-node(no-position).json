@@ -1402,7 +1402,12 @@
           ],
           "data": {
             "diffUnchanged": true
-          }
+          },
+          "align": [
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -1443,7 +1448,12 @@
           ],
           "data": {
             "diffUnchanged": true
-          }
+          },
+          "align": [
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -1492,7 +1502,12 @@
               "data": {}
             }
           ],
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -1541,7 +1556,12 @@
               "data": {}
             }
           ],
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -1590,94 +1610,103 @@
               "data": {}
             }
           ],
-          "data": {}
-        },
-        {
-          "type": "ins",
-          "children": [
-            {
-              "type": "tableRow",
-              "children": [
-                {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "货币符号",
-                      "data": {}
-                    }
-                  ],
-                  "data": {}
-                },
-                {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "$ € £ ¥ ₿",
-                      "data": {}
-                    }
-                  ],
-                  "data": {}
-                },
-                {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "全球货币",
-                      "data": {}
-                    }
-                  ],
-                  "data": {}
-                }
-              ],
-              "data": {}
-            }
+          "data": {},
+          "align": [
+            null,
+            null,
+            null
           ]
         },
         {
-          "type": "ins",
+          "type": "tableRow",
           "children": [
             {
-              "type": "tableRow",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "上下标",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "货币符号",
                   "data": {}
-                },
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "x² y³ a₁ b₂",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "$ € £ ¥ ₿",
                   "data": {}
-                },
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "数学表示法",
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "全球货币",
                   "data": {}
                 }
               ],
               "data": {}
             }
+          ],
+          "data": {
+            "diff": "ins"
+          },
+          "align": [
+            null,
+            null,
+            null
+          ]
+        },
+        {
+          "type": "tableRow",
+          "children": [
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "上下标",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "x² y³ a₁ b₂",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "数学表示法",
+                  "data": {}
+                }
+              ],
+              "data": {}
+            }
+          ],
+          "data": {
+            "diff": "ins"
+          },
+          "align": [
+            null,
+            null,
+            null
           ]
         }
       ],

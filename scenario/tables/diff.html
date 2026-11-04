@@ -68,7 +68,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;p
 <th>姓名</th>
 <th>年龄</th>
 <th>职业</th>
-<th><td>部门</td></th>
+<th data-diff="ins">部门</th>
 </tr>
 </thead>
 <tbody>
@@ -76,26 +76,26 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;p
 <td>张三</td>
 <td><del class="diff-inline">25</del><ins class="diff-inline">26</ins></td>
 <td><ins class="diff-inline">高级</ins>工程师</td>
-<td><td>研发部</td></td>
+<td data-diff="ins">研发部</td>
 </tr>
 <tr>
 <td>李四</td>
 <td>30</td>
 <td>设计师</td>
-<td><td>设计部</td></td>
+<td data-diff="ins">设计部</td>
 </tr>
 <tr>
 <td><del class="diff-inline">王五</del><ins class="diff-inline">赵六</ins></td>
 <td><del class="diff-inline">28</del><ins class="diff-inline">32</ins></td>
 <td>产品<del class="diff-inline">经理</del><ins class="diff-inline">总监</ins></td>
-<td><td>产品部</td></td>
+<td data-diff="ins">产品部</td>
 </tr>
-<ins class="diff-block"><tr>
-<th>王五</th>
-<th>28</th>
-<th>产品经理</th>
-<th>产品部</th>
-</tr></ins>
+<tr data-diff="ins">
+<td>王五</td>
+<td>28</td>
+<td>产品经理</td>
+<td>产品部</td>
+</tr>
 </tbody>
 </table>
 <h2>对齐方式</h2>
@@ -118,11 +118,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;p
 <td align="center">长文本内容<ins class="diff-inline">已修改</ins></td>
 <td align="right">长文本内容<ins class="diff-inline">已修改</ins></td>
 </tr>
-<ins class="diff-block"><tr>
-<th>新增行</th>
-<th>新增行</th>
-<th>新增行</th>
-</tr></ins>
+<tr data-diff="ins">
+<td align="left">新增行</td>
+<td align="center">新增行</td>
+<td align="right">新增行</td>
+</tr>
 </tbody>
 </table>
 <h2>复杂表格</h2>
@@ -135,7 +135,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;p
 <th>Q3</th>
 <th>Q4</th>
 <th>总计</th>
-<th><td>同比增长</td></th>
+<th data-diff="ins">同比增长</th>
 </tr>
 </thead>
 <tbody>
@@ -146,7 +146,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;p
 <td><del class="diff-inline">15</del><ins class="diff-inline">18</ins>,000</td>
 <td><del class="diff-inline">18</del><ins class="diff-inline">22</ins>,000</td>
 <td><del class="diff-inline">55</del><ins class="diff-inline">67</ins>,000</td>
-<td><td>21.8%</td></td>
+<td data-diff="ins">21.8%</td>
 </tr>
 <tr>
 <td>支出</td>
@@ -155,7 +155,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;p
 <td><del class="diff-inline">10</del><ins class="diff-inline">12</ins>,000</td>
 <td><del class="diff-inline">12</del><ins class="diff-inline">14</ins>,000</td>
 <td><del class="diff-inline">39</del><ins class="diff-inline">45</ins>,000</td>
-<td><td>15.4%</td></td>
+<td data-diff="ins">15.4%</td>
 </tr>
 <tr>
 <td>利润</td>
@@ -164,16 +164,16 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;p
 <td><del class="diff-inline">5</del><ins class="diff-inline">6</ins>,000</td>
 <td><del class="diff-inline">6</del><ins class="diff-inline">8</ins>,000</td>
 <td><del class="diff-inline">16</del><ins class="diff-inline">22</ins>,000</td>
-<td><td>37.5%</td></td>
+<td data-diff="ins">37.5%</td>
 </tr>
-<ins class="diff-block"><tr>
-<th>税费</th>
-<th>600</th>
-<th>1,000</th>
-<th>1,200</th>
-<th>1,600</th>
-<th>4,400</th>
-<th>-</th>
-</tr></ins>
+<tr data-diff="ins">
+<td>税费</td>
+<td>600</td>
+<td>1,000</td>
+<td>1,200</td>
+<td>1,600</td>
+<td>4,400</td>
+<td>-</td>
+</tr>
 </tbody>
 </table></body></html>

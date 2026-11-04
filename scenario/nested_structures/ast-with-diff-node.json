@@ -5246,44 +5246,41 @@
               "data": {}
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "新增列",
-                      "position": {
-                        "start": {
-                          "line": 145,
-                          "column": 15,
-                          "offset": 1949
-                        },
-                        "end": {
-                          "line": 145,
-                          "column": 18,
-                          "offset": 1952
-                        }
-                      },
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "新增列",
                   "position": {
                     "start": {
                       "line": 145,
-                      "column": 13,
-                      "offset": 1947
+                      "column": 15,
+                      "offset": 1949
                     },
                     "end": {
                       "line": 145,
-                      "column": 20,
-                      "offset": 1954
+                      "column": 18,
+                      "offset": 1952
                     }
                   },
                   "data": {}
                 }
-              ]
+              ],
+              "position": {
+                "start": {
+                  "line": 145,
+                  "column": 13,
+                  "offset": 1947
+                },
+                "end": {
+                  "line": 145,
+                  "column": 20,
+                  "offset": 1954
+                }
+              },
+              "data": {
+                "diff": "ins"
+              }
             }
           ],
           "position": {
@@ -5298,7 +5295,12 @@
               "offset": 1954
             }
           },
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -5350,44 +5352,41 @@
               "data": {}
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "新值 1",
-                      "position": {
-                        "start": {
-                          "line": 147,
-                          "column": 16,
-                          "offset": 1990
-                        },
-                        "end": {
-                          "line": 147,
-                          "column": 20,
-                          "offset": 1994
-                        }
-                      },
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "新值 1",
                   "position": {
                     "start": {
                       "line": 147,
-                      "column": 14,
-                      "offset": 1988
+                      "column": 16,
+                      "offset": 1990
                     },
                     "end": {
                       "line": 147,
-                      "column": 22,
-                      "offset": 1996
+                      "column": 20,
+                      "offset": 1994
                     }
                   },
                   "data": {}
                 }
-              ]
+              ],
+              "position": {
+                "start": {
+                  "line": 147,
+                  "column": 14,
+                  "offset": 1988
+                },
+                "end": {
+                  "line": 147,
+                  "column": 22,
+                  "offset": 1996
+                }
+              },
+              "data": {
+                "diff": "ins"
+              }
             }
           ],
           "position": {
@@ -5402,7 +5401,12 @@
               "offset": 1996
             }
           },
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -6547,44 +6551,41 @@
               "data": {}
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "新值 2",
-                      "position": {
-                        "start": {
-                          "line": 148,
-                          "column": 215,
-                          "offset": 2211
-                        },
-                        "end": {
-                          "line": 148,
-                          "column": 219,
-                          "offset": 2215
-                        }
-                      },
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "新值 2",
                   "position": {
                     "start": {
                       "line": 148,
-                      "column": 213,
-                      "offset": 2209
+                      "column": 215,
+                      "offset": 2211
                     },
                     "end": {
                       "line": 148,
-                      "column": 221,
-                      "offset": 2217
+                      "column": 219,
+                      "offset": 2215
                     }
                   },
                   "data": {}
                 }
-              ]
+              ],
+              "position": {
+                "start": {
+                  "line": 148,
+                  "column": 213,
+                  "offset": 2209
+                },
+                "end": {
+                  "line": 148,
+                  "column": 221,
+                  "offset": 2217
+                }
+              },
+              "data": {
+                "diff": "ins"
+              }
             }
           ],
           "position": {
@@ -6599,7 +6600,12 @@
               "offset": 2217
             }
           },
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null
+          ]
         },
         {
           "type": "tableRow",
@@ -6661,44 +6667,41 @@
               "data": {}
             },
             {
-              "type": "ins",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "新值 3",
-                      "position": {
-                        "start": {
-                          "line": 149,
-                          "column": 21,
-                          "offset": 2238
-                        },
-                        "end": {
-                          "line": 149,
-                          "column": 25,
-                          "offset": 2242
-                        }
-                      },
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "新值 3",
                   "position": {
                     "start": {
                       "line": 149,
-                      "column": 19,
-                      "offset": 2236
+                      "column": 21,
+                      "offset": 2238
                     },
                     "end": {
                       "line": 149,
-                      "column": 27,
-                      "offset": 2244
+                      "column": 25,
+                      "offset": 2242
                     }
                   },
                   "data": {}
                 }
-              ]
+              ],
+              "position": {
+                "start": {
+                  "line": 149,
+                  "column": 19,
+                  "offset": 2236
+                },
+                "end": {
+                  "line": 149,
+                  "column": 27,
+                  "offset": 2244
+                }
+              },
+              "data": {
+                "diff": "ins"
+              }
             }
           ],
           "position": {
@@ -6713,115 +6716,32 @@
               "offset": 2244
             }
           },
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            null,
+            null
+          ]
         },
         {
-          "type": "ins",
+          "type": "tableRow",
           "children": [
             {
-              "type": "tableRow",
+              "type": "tableCell",
               "children": [
                 {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "新增行",
-                      "position": {
-                        "start": {
-                          "line": 150,
-                          "column": 3,
-                          "offset": 2247
-                        },
-                        "end": {
-                          "line": 150,
-                          "column": 6,
-                          "offset": 2250
-                        }
-                      },
-                      "data": {}
-                    }
-                  ],
+                  "type": "text",
+                  "value": "新增行",
                   "position": {
                     "start": {
                       "line": 150,
-                      "column": 1,
-                      "offset": 2245
+                      "column": 3,
+                      "offset": 2247
                     },
                     "end": {
                       "line": 150,
-                      "column": 7,
-                      "offset": 2251
-                    }
-                  },
-                  "data": {}
-                },
-                {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "新增内容",
-                      "position": {
-                        "start": {
-                          "line": 150,
-                          "column": 9,
-                          "offset": 2253
-                        },
-                        "end": {
-                          "line": 150,
-                          "column": 13,
-                          "offset": 2257
-                        }
-                      },
-                      "data": {}
-                    }
-                  ],
-                  "position": {
-                    "start": {
-                      "line": 150,
-                      "column": 7,
-                      "offset": 2251
-                    },
-                    "end": {
-                      "line": 150,
-                      "column": 14,
-                      "offset": 2258
-                    }
-                  },
-                  "data": {}
-                },
-                {
-                  "type": "tableCell",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "新值 4",
-                      "position": {
-                        "start": {
-                          "line": 150,
-                          "column": 16,
-                          "offset": 2260
-                        },
-                        "end": {
-                          "line": 150,
-                          "column": 20,
-                          "offset": 2264
-                        }
-                      },
-                      "data": {}
-                    }
-                  ],
-                  "position": {
-                    "start": {
-                      "line": 150,
-                      "column": 14,
-                      "offset": 2258
-                    },
-                    "end": {
-                      "line": 150,
-                      "column": 22,
-                      "offset": 2266
+                      "column": 6,
+                      "offset": 2250
                     }
                   },
                   "data": {}
@@ -6835,12 +6755,102 @@
                 },
                 "end": {
                   "line": 150,
+                  "column": 7,
+                  "offset": 2251
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "新增内容",
+                  "position": {
+                    "start": {
+                      "line": 150,
+                      "column": 9,
+                      "offset": 2253
+                    },
+                    "end": {
+                      "line": 150,
+                      "column": 13,
+                      "offset": 2257
+                    }
+                  },
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 150,
+                  "column": 7,
+                  "offset": 2251
+                },
+                "end": {
+                  "line": 150,
+                  "column": 14,
+                  "offset": 2258
+                }
+              },
+              "data": {}
+            },
+            {
+              "type": "tableCell",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "新值 4",
+                  "position": {
+                    "start": {
+                      "line": 150,
+                      "column": 16,
+                      "offset": 2260
+                    },
+                    "end": {
+                      "line": 150,
+                      "column": 20,
+                      "offset": 2264
+                    }
+                  },
+                  "data": {}
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 150,
+                  "column": 14,
+                  "offset": 2258
+                },
+                "end": {
+                  "line": 150,
                   "column": 22,
                   "offset": 2266
                 }
               },
               "data": {}
             }
+          ],
+          "position": {
+            "start": {
+              "line": 150,
+              "column": 1,
+              "offset": 2245
+            },
+            "end": {
+              "line": 150,
+              "column": 22,
+              "offset": 2266
+            }
+          },
+          "data": {
+            "diff": "ins"
+          },
+          "align": [
+            null,
+            null,
+            null
           ]
         }
       ],

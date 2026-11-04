@@ -313,30 +313,30 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;p
 <tr>
 <th>外部表格</th>
 <th>描述</th>
-<th><td>新增列</td></th>
+<th data-diff="ins">新增列</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>行 1</td>
 <td>普通内容</td>
-<td><td>新值 1</td></td>
+<td data-diff="ins">新值 1</td>
 </tr>
 <tr>
 <td>行 2</td>
 <td><table><tr><th>嵌套表格</th><th>值</th><th><del class="diff-block"><tr></del><ins class="diff-inline">新增列</ins></th><ins class="diff-block"></tr></ins><del class="diff-inline">嵌套行 1</del><tr><td><del class="diff-inline">100</del><ins class="diff-inline">嵌套行 1</ins></td><td><del class="diff-block"><tr></del><ins class="diff-inline">100</ins></td><ins class="diff-block"><td></ins><ins class="diff-inline">新值 A</ins><del class="diff-inline">嵌套行 2</del><del class="diff-block"></td></del></td><ins class="diff-block"></tr></ins><del class="diff-inline">200</del><tr><td><ins class="diff-inline">嵌套行 2</ins><ins class="diff-block"></td></ins><ins class="diff-block"><td></ins><ins class="diff-inline">200</ins><ins class="diff-block"></td></ins><ins class="diff-block"><td></ins><ins class="diff-inline">新值 B</ins><ins class="diff-block"></td></ins><ins class="diff-block"></tr></ins><ins class="diff-block"><tr></ins><ins class="diff-block"><td></ins><ins class="diff-inline">新增嵌套行</ins><ins class="diff-block"></td></ins><ins class="diff-block"><td></ins><ins class="diff-inline">300</ins><ins class="diff-block"></td></ins><ins class="diff-block"><td></ins><ins class="diff-inline">新值 C</ins><ins class="diff-block"></td></ins><ins class="diff-block"></tr></ins></table></td>
-<td><td>新值 2</td></td>
+<td data-diff="ins">新值 2</td>
 </tr>
 <tr>
 <td>行 3</td>
 <td>普通内容<ins class="diff-inline">（已修改）</ins></td>
-<td><td>新值 3</td></td>
+<td data-diff="ins">新值 3</td>
 </tr>
-<ins class="diff-block"><tr>
-<th>新增行</th>
-<th>新增内容</th>
-<th>新值 4</th>
-</tr></ins>
+<tr data-diff="ins">
+<td>新增行</td>
+<td>新增内容</td>
+<td>新值 4</td>
+</tr>
 </tbody>
 </table>
 <h2>5. 混合嵌套结构</h2>

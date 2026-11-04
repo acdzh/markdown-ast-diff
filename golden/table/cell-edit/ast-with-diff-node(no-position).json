@@ -48,7 +48,12 @@
           ],
           "data": {
             "diffUnchanged": true
-          }
+          },
+          "align": [
+            null,
+            "right",
+            "right"
+          ]
         },
         {
           "type": "tableRow",
@@ -89,7 +94,12 @@
           ],
           "data": {
             "diffUnchanged": true
-          }
+          },
+          "align": [
+            null,
+            "right",
+            "right"
+          ]
         },
         {
           "type": "tableRow",
@@ -143,7 +153,12 @@
               "data": {}
             }
           ],
-          "data": {}
+          "data": {},
+          "align": [
+            null,
+            "right",
+            "right"
+          ]
         },
         {
           "type": "tableRow",
@@ -184,7 +199,12 @@
           ],
           "data": {
             "diffUnchanged": true
-          }
+          },
+          "align": [
+            null,
+            "right",
+            "right"
+          ]
         }
       ],
       "data": {}

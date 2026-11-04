@@ -89,7 +89,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;p
 <th>列1</th>
 <th>列2</th>
 <th>列3</th>
-<th><td>新增列4</td></th>
+<th data-diff="ins">新增列4</th>
 </tr>
 </thead>
 <tbody>
@@ -97,20 +97,20 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;p
 <td>数据1</td>
 <td>数据2</td>
 <td>数据3</td>
-<td><td>新数据A</td></td>
+<td data-diff="ins">新数据A</td>
 </tr>
 <tr>
 <td>数据4</td>
 <td>数据5</td>
 <td>数据6</td>
-<td><td>新数据B</td></td>
+<td data-diff="ins">新数据B</td>
 </tr>
-<ins class="diff-block"><tr>
-<th>新行数据1</th>
-<th>新行数据2</th>
-<th>新行数据3</th>
-<th>新数据C</th>
-</tr></ins>
+<tr data-diff="ins">
+<td>新行数据1</td>
+<td>新行数据2</td>
+<td>新行数据3</td>
+<td>新数据C</td>
+</tr>
 </tbody>
 </table>
 </li>
@@ -208,7 +208,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;p
 <th>列1</th>
 <th>列2</th>
 <th>列3</th>
-<th><td>新增列4</td></th>
+<th data-diff="ins">新增列4</th>
 </tr>
 </thead>
 <tbody>
@@ -216,20 +216,20 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;p
 <td>数据1</td>
 <td>数据2</td>
 <td>数据3</td>
-<td><td>新数据X</td></td>
+<td data-diff="ins">新数据X</td>
 </tr>
 <tr>
 <td>数据4</td>
 <td>数据5</td>
 <td>数据6</td>
-<td><td>新数据Y</td></td>
+<td data-diff="ins">新数据Y</td>
 </tr>
-<ins class="diff-block"><tr>
-<th>新行数据A</th>
-<th>新行数据B</th>
-<th>新行数据C</th>
-<th>新数据Z</th>
-</tr></ins>
+<tr data-diff="ins">
+<td>新行数据A</td>
+<td>新行数据B</td>
+<td>新行数据C</td>
+<td>新数据Z</td>
+</tr>
 </tbody>
 </table>
 <p>这是引用的最后一行。</p>
@@ -267,7 +267,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;p
 <th>标题</th>
 <th>描述</th>
 <th>示例</th>
-<th><td>新增列</td></th>
+<th data-diff="ins">新增列</th>
 </tr>
 </thead>
 <tbody>
@@ -275,26 +275,26 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;p
 <td>粗体和斜体</td>
 <td>文本可以<strong>加粗</strong>或<em>倾斜</em><ins class="diff-inline">或</ins><ins class="diff-inline"><em><strong>加粗倾斜</strong></em></ins></td>
 <td><strong>重要信息</strong>和<em>补充说明</em></td>
-<td><td>新单元格</td></td>
+<td data-diff="ins">新单元格</td>
 </tr>
 <tr>
 <td>代码</td>
 <td>可以包含<code>行内代码</code><ins class="diff-inline">和</ins><ins class="diff-inline"><code>多个代码片段</code></ins></td>
 <td><del class="diff-inline"><code>const x = 10;</code></del><ins class="diff-inline"><code>const x = 100;</code></ins></td>
-<td><td>新单元格</td></td>
+<td data-diff="ins">新单元格</td>
 </tr>
 <tr>
 <td>链接</td>
 <td>可以包含<del class="diff-inline"><a href="https://example.com">链接</a></del><ins class="diff-inline"><a href="https://example.org">链接</a></ins><ins class="diff-inline">和</ins><ins class="diff-inline"><a href="https://example.com/new">多个链接</a></ins></td>
 <td>点击<del class="diff-inline"><a href="https://example.com">这里</a></del><ins class="diff-inline"><a href="https://example.org">这里</a></ins>查看详情</td>
-<td><td>新单元格</td></td>
+<td data-diff="ins">新单元格</td>
 </tr>
-<ins class="diff-block"><tr>
-<th>新增行</th>
-<th>包含<strong>格式化</strong>的<em>文本</em></th>
-<th><code>const newRow = true;</code></th>
-<th>新单元格</th>
-</tr></ins>
+<tr data-diff="ins">
+<td>新增行</td>
+<td>包含<strong>格式化</strong>的<em>文本</em></td>
+<td><code>const newRow = true;</code></td>
+<td>新单元格</td>
+</tr>
 </tbody>
 </table>
 <h3>3.2 表格中的列表</h3>
@@ -304,7 +304,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;p
 <th>类型</th>
 <th>内容</th>
 <th>备注</th>
-<th><td>新增列</td></th>
+<th data-diff="ins">新增列</th>
 </tr>
 </thead>
 <tbody>
@@ -312,20 +312,20 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;p
 <td>无序列表</td>
 <td><ul><li>项目1<ins class="diff-inline">（已修改）</ins></li><li>项目2</li><li>项目3</li><li><ins class="diff-inline">新增项目4</ins><ins class="diff-block"></li></ins><ins class="diff-block"></ul></ins></td>
 <td>使用HTML标签</td>
-<td><td>新单元格</td></td>
+<td data-diff="ins">新单元格</td>
 </tr>
 <tr>
 <td>有序列表</td>
 <td><ol><li>第一步<ins class="diff-inline">（已修改）</ins></li><li>第二步</li><li>第三步</li><li><ins class="diff-inline">新增第四步</ins><ins class="diff-block"></li></ins><ins class="diff-block"></ol></ins></td>
 <td>使用HTML标签</td>
-<td><td>新单元格</td></td>
+<td data-diff="ins">新单元格</td>
 </tr>
-<ins class="diff-block"><tr>
-<th>新增类型</th>
-<th><ul><li>新列表项A</li><li>新列表项B</li></ul></th>
-<th>新备注</th>
-<th>新单元格</th>
-</tr></ins>
+<tr data-diff="ins">
+<td>新增类型</td>
+<td><ul><li>新列表项A</li><li>新列表项B</li></ul></td>
+<td>新备注</td>
+<td>新单元格</td>
+</tr>
 </tbody>
 </table>
 <h2>4. 代码块中的特殊情况</h2>
@@ -354,20 +354,20 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;p
 <tr>
 <th>列1</th>
 <th>列2</th>
-<th><td>新增列3</td></th>
+<th data-diff="ins">新增列3</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>嵌套数据1</td>
 <td>嵌套数据2</td>
-<td><td>新数据X</td></td>
+<td data-diff="ins">新数据X</td>
 </tr>
-<ins class="diff-block"><tr>
-<th>新行数据A</th>
-<th>新行数据B</th>
-<th>新数据Y</th>
-</tr></ins>
+<tr data-diff="ins">
+<td>新行数据A</td>
+<td>新行数据B</td>
+<td>新数据Y</td>
+</tr>
 </tbody>
 </table>
 </li>
@@ -402,25 +402,25 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;p
 <tr>
 <th>列1</th>
 <th>列2</th>
-<th><td>新增列3</td></th>
+<th data-diff="ins">新增列3</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>数据1</td>
 <td>数据2</td>
-<td><td>新数据P</td></td>
+<td data-diff="ins">新数据P</td>
 </tr>
 <tr>
 <td>数据3</td>
 <td>数据4</td>
-<td><td>新数据Q</td></td>
+<td data-diff="ins">新数据Q</td>
 </tr>
-<ins class="diff-block"><tr>
-<th>新行数据X</th>
-<th>新行数据Y</th>
-<th>新数据R</th>
-</tr></ins>
+<tr data-diff="ins">
+<td>新行数据X</td>
+<td>新行数据Y</td>
+<td>新数据R</td>
+</tr>
 </tbody>
 </table>
 <p>引用中的列表：</p>
