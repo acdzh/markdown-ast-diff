@@ -6,6 +6,7 @@ import { XNode } from '../lib/XNode';
 import { DiffType, IdBox, NodeType } from '../types/base';
 import { isOpaque, isInlineOnlyChildren } from '../utils/node';
 import { nodeClone, nodeCloneTree } from './clone';
+import { diffCodeLines } from './code-lines';
 import { nodeLcs } from './lcs';
 import { diffInlineChildren } from './inline-diff';
 import { diffSentenceSegments, hasSentenceBoundary } from './sentence-diff';
@@ -322,6 +323,12 @@ export function nodeMerge(_nOld: Node, xOldMap: XMap, _nNew: Node, xNewMap: XMap
             nn.data = {};
           }
           nn.data.diffOldContent = oldValue;
+          // 行级差异必须在 merge 阶段写入：
+          // similarity 阶段写会被 nodeCloneTree(nNew) 覆盖，这里才是最终归属。
+          const lines = diffCodeLines(oldValue, newValue);
+          if (lines.some((l) => l.type !== 'unchanged')) {
+            nn.data.diffLines = lines;
+          }
         }
         n.children.push(nn);
       }
