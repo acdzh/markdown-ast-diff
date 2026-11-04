@@ -9,8 +9,9 @@ type NodeWithAlign = Node & { align?: unknown[] };
 function cellPlainText(cell: Node): string {
   let text = '';
   const walk = (node: Node): void => {
-    if (typeof (node as { value?: unknown }).value === 'string') {
-      text += (node as { value: string }).value;
+    const value = (node as unknown as { value?: unknown }).value;
+    if (typeof value === 'string') {
+      text += value;
     }
     (node.children as Node[] | undefined)?.forEach(walk);
   };
