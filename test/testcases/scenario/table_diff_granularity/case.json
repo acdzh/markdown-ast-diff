@@ -1,0 +1,4 @@
+{
+  "capability": "table",
+  "description": "同一文档覆盖表格 diff 三种粒度：单元格内字符级（inlineIns/inlineDel）、整格替换（tableCell 带 data.diff）、行增删（tableRow 带 data.diff）"
+}

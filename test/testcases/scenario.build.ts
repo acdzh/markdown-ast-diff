@@ -101,6 +101,11 @@ const SPECS: Record<string, CaseSpec> = {
     capability: 'table',
     description: '表格里改 3 个单元格的数字，其余不变',
   },
+  table_diff_granularity: {
+    capability: 'table',
+    description:
+      '同一文档覆盖表格 diff 三种粒度：单元格内字符级（inlineIns/inlineDel）、整格替换（tableCell 带 data.diff）、行增删（tableRow 带 data.diff）',
+  },
   table_row_add_del: {
     capability: 'table',
     description: '表格删 1 行、改 1 个单元格、插 2 行',
